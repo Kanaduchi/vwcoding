@@ -1,0 +1,125 @@
+## Комфорт
+
+### Работа стеклоподъёмников при выключенном зажигании
+
+	Блок 09 → адаптация →
+	> (13)-Acces control 2-Freigabenachlauf FH bei Tueroeffnen abbrechen → активировать 
+	→ Применить
+
+> логин-пароль 31347
+
+> При выключенном зажигании стеклоподъемники продолжают работать, открыли закрыли дверь стеклоподъемники выключаются.
+
+### Сервисное положение дворников
+
+	Блок 09  → адаптация →
+	> Service position → вводим нужное значение 
+	→ Применить
+	> Alternative position 2 (позиция дворников при выключенном зажигании)
+	→ Применить
+
+> логин-пароль 31347
+
+> Service position: по умолчанию 166.505329 градусов, меняем в меньшую сторону.
+
+### Дотирка капель – Лобовое стекло
+
+	Блок 09 → адаптация →
+	> Front_wiper Traenenwischen Front Status Активируем и сохраняем
+	либо
+	> Подсистема 1 в длинном кодировании подсистемы 1 в байт 2 активировать бит 5.
+	→ Применить
+	
+> логин-пароль 31347
+
+### Тест стрелок
+
+	Блок 17 → кодир-длин.кодир → 
+	> 01 Байт → бит 0 
+	→ Применить
+
+> логин-пароль 20103
+
+> Для сохранения настроек необходимо выключить зажигание, открыть дверь, закрыть дверь, включить зажигание
+
+### Деактивация звукового оповещения о включенном зажигании при открытии двери
+
+	Блок 17 → адаптация → 
+	> Ignition active message; trigger → выбираем «No display (tbd)» 
+	→ Применить
+
+> логин-пароль 20103
+
+> Есть 3 значения: No display (tbd), Driver door, All doors.
+
+### Остаток в баках
+
+	Блок 17 → адаптация →  
+	> Volume to be replenished. Поменять с "No display" на "Display"
+	→ Применить
+
+> логин-пароль 20103
+
+### Смена скина приборной панели
+
+	Блок 17 → адаптация →  
+	> Tube_version → Variante 2
+	Новое значение: variant_4
+	→ Применить
+
+> логин-пароль 20103
+
+### Деактивация AM диапазона в магнитоле
+
+	Блок 5F → Кодирование → Длинное кодирование
+	> byte_14_AM_disable -> активировано
+	(14 Байт → бит 01 → включить (было «00» стало «02»))
+	→ Применить
+
+> логин-пароль 20103
+
+### Цветовые профили
+
+	Блок 09 → Адаптация
+	Освещение салона 2-го поколения
+	Mittelkonsolenbeleuchtung mehrfarbig:
+	Старое значение: не акт.
+	Новое значение: акт.
+	Освещение салона, конфигурация фонарей
+	Ambient_Farbliste_HMI:
+	Старое значение: не акт.
+	Новое значение: акт.
+	Ambientelicht Farbliste
+	Старое значение у всех: 0
+	Rotwert Farbe 1: 217
+	Gruenwert Farbe 1: 221
+	Blauwert Farbe 1: 235
+	Rotwert Farbe 2: 169
+	Gruenwert Farbe 2: 169
+	Blauwert Farbe 2: 169
+	Rotwert Farbe 3: 253
+	Gruenwert Farbe 3: 108
+	Blauwert Farbe 3: 55
+	Rotwert Farbe 4: 242
+	Gruenwert Farbe 4: 0
+	Blauwert Farbe 4: 40
+	Rotwert Farbe 5: 254
+	Gruenwert Farbe 5: 88
+	Blauwert Farbe 5: 240
+	Rotwert Farbe 6: 124
+	Gruenwert Farbe 6: 63
+	Blauwert Farbe 6: 190
+	Rotwert Farbe 7: 0
+	Gruenwert Farbe 7: 102
+	Blauwert Farbe 7: 255
+	Rotwert Farbe 8: 0
+	Gruenwert Farbe 8: 204
+	Blauwert Farbe 8: 255
+	Rotwert Farbe 9: 0
+	Gruenwert Farbe 9: 204
+	Blauwert Farbe 9: 0
+	Rotwert Farbe 10: 136
+	Gruenwert Farbe 10: 255
+	Blauwert Farbe 10: 57
+
+> логин-пароль 31347

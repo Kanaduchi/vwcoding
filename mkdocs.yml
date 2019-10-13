@@ -1,0 +1,7 @@
+site_name: Кодирование MQB платформы
+nav:
+    - Безопасность: security.md
+    - Освещение: lights.md
+    - Комфорт: comfort.md
+    - Климат: climate.md
+    - Звук: sound.md
