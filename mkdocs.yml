@@ -5,6 +5,7 @@ nav:
     - Комфорт: comfort.md
     - Климат: climate.md
     - Звук: sound.md
+    - Движение и ассистенты: drive.md
 theme:
   name: mkdocs
   highlightjs: false
