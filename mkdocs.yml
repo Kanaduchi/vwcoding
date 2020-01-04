@@ -4,8 +4,13 @@ nav:
     - Освещение: lights.md
     - Комфорт: comfort.md
     - Климат: climate.md
+    - Омыватель фар: wash.md
     - Звук: sound.md
     - Движение и ассистенты: drive.md
+    - Ассистенты: assistents.md
+    - Шины: tires.md
+
 theme:
   name: mkdocs
   highlightjs: false
+  include_nav: false
