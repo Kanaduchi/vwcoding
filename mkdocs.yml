@@ -1,4 +1,16 @@
-site_name: Кодирование MQB платформы
+# Project information
+site_name: 'Кодирование MQB платформы'
+site_description: 'Основные настройки MQB платформы'
+site_author: 'Andrey Topchiy'
+site_url: 'https://squidfunk.github.io/mkdocs-material/'
+
+# Repository
+repo_name: 'Kanaduchi/mqb'
+repo_url: 'https://github.com/Kanaduchi/mqb'
+
+# Copyright
+copyright: 'Copyright &copy; 2020 - Andrey Topchiy'
+
 nav:
   - Безопасность: security.md
   - Освещение: lights.md
@@ -14,7 +26,7 @@ theme:
   name: null
   custom_dir: 'material'
   highlightjs: false
-  language: en
+  language: ru
   palette:
   font:
     text: Roboto
@@ -23,3 +35,7 @@ theme:
     icon: "\uE80C"
   feature:
     tabs: true
+
+markdown_extensions:
+    - toc:
+        baselevel: 2
