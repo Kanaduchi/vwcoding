@@ -13,4 +13,4 @@ nav:
 theme:
   name: mkdocs
   highlightjs: false
-  include_nav: false
+  extra_css: [extra.css]

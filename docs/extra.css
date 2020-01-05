@@ -1,0 +1,4 @@
+.bs-sidebar.affix { /* csslint allow: adjoining-classes */
+        position: fixed; /* Undo the static from mobile first approach */
+        top: 180px;
+    }
