@@ -17,7 +17,7 @@ python:
   version: 3.7
   install:
     - method: pip
-      requirements: docs/requirements.txt
+      requirements: mkdocs-material/requirements.txt
       path: .
     - method: setuptools
       path: package
