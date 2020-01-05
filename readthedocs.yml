@@ -14,10 +14,13 @@ formats: all
 
 # Optionally set the version of Python and requirements required to build your docs
 python:
-  version: 3.7
-  install:
-    - method: pip
-      requirements: mkdocs-material/requirements.txt
-      path: .
-    - method: setuptools
-      path: package
+   version: 3.7
+   install:
+      - requirements: mkdocs-material/requirements.txt
+      - method: pip
+        path: .
+        extra_requirements:
+            - mkdocs-material
+      - method: setuptools
+        path: another/package
+   system_packages: true
