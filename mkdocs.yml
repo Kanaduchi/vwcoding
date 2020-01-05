@@ -6,6 +6,7 @@ site_author: 'Andrey Topchiy'
 # Repository
 repo_name: 'Kanaduchi/mqb'
 repo_url: 'https://github.com/Kanaduchi/mqb'
+edit_uri: ""
 
 # Copyright
 copyright: 'Copyright &copy; 2020 - Andrey Topchiy'
