@@ -11,5 +11,6 @@ nav:
   - Шины: tires.md
 
 theme:
-  name: 'material'
+  name: null
+  theme_dir: 'material'
   highlightjs: false
