@@ -10,7 +10,6 @@ nav:
   - Ассистенты: assistents.md
   - Шины: tires.md
 
-theme:
-  name: null
-  theme_dir: 'material'
+theme: null
+theme_dir: 'material'
   highlightjs: false
