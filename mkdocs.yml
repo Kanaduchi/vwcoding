@@ -11,5 +11,15 @@ nav:
   - Шины: tires.md
 
 theme:
+  name: null
   custom_dir: 'material'
   highlightjs: false
+  language: en
+  palette:
+  font:
+    text: Roboto
+    code: Roboto Mono
+  logo:
+    icon: "\uE80C"
+  feature:
+    tabs: true
