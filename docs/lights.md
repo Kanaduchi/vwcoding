@@ -7,8 +7,9 @@
     > Helligkeitsgrenze_Licht__einschalten - с 1200 на 400 (200 поправил что бы ещё позже включался)
     > Helligkeitsgrenze_Licht_ausschalten - с 2200 на 600 (400 поправил что бы ещё позже включался)
     
-    > Assistance light functions
-    > Lichtsensorempfindlichkeit - по умолчанию – "normal", ставим - "non sensitive"
+    ODIS E
+    > IDE08786-ENG115724 -- Assistance light functions - Lichtsensorempfindlichkeit 
+    по умолчанию – "normal", ставим - "non sensitive"
 	→ Применить
 	
 > логин-пароль 31347
@@ -20,8 +21,8 @@
 ### Плавное включение и выключение освещения в салоне
     
     Блок 09 → адаптация →
-	> Suchbeleuchtung_allgemein-KL58
-	> Einschalten mit Rampe → Active
+	> Suchbeleuchtung_allgemein
+	> KL58 Einschalten mit Rampe → Active
 	→ Применить
 	
 > логин-пароль 31347
@@ -30,26 +31,26 @@
 
 	Блок 09 → адаптация →
 	> Ausenlicht_Blinker
-	> driveng light and parking lightZahl der aktivern Sheinwerfer Auf 2 limitieren
+	> driveng light and parking light
+	Zahl der aktivern Sheinwerfer Auf 2 limitieren
 	> aktiv
 	→ Применить
+	
+> логин-пароль 31347	
+	
+### Активация ПТФ совместно с ДХО.
 
-    Аналог:
-	> Aussenlicht_Front
-	> Zahl der aktiven Scheinwerfer auf 2 limitieren
-	> in Betrieb lassen поменять на limitieren
-	→ Применить
-
-	Дополнительные кодировки:
 	Блок 09 → адаптация → 
 	> Leuchte12NL LB45
 	> Dimming direction CD 12 — maximum
-	> Dimmwert CD 12 – 110
-	> Lichtfunktion С 12 — Lichthupe generell
-	> Leuchte13NL RB5 —
+	> Dimmwert CD 12 – 0 -> 110
+	> Lichtfunktion С 12 — Lichthupe generell (было [VO]_Nebellicht rechts)
+	→ Применить
+	
+	> Leuchte13NL RB5
 	> Dimming direction CD 13 — maximum
-	> Dimmwert CD 13 – 110
-	> Lichtfunktion С 13 — Lichthupe generell
+	> Dimmwert CD 13 – 0 -> 110
+	> Lichtfunktion С 13 — Lichthupe generell (было [VO]_Nebellicht rechts)
 	→ Применить
 	
 > логин-пароль 31347
@@ -130,8 +131,8 @@
 ### Включение задних габаритов в режиме только ДХО
 
 	Блок 09 → адаптация →
-	> (6) Tagfahrlicht
-	> Dauerfahrlicht aktiviert zusaetzlich Standlicht auswählen
+	> Aussenlicht_front
+	> Tagfahrlicht Dauerfahrlicht aktiviert zusaetzlich Standlicht
 	→ активировать
 	→ Применить
 
@@ -140,7 +141,7 @@
 ### Отключение ДХО в положении 0 на переключателе света
 
 	Блок 09 → адаптация →
-	> (10) Aussenlicht_Front
+	> Aussenlicht_Front
 	> Tagfahrlicht nur in Schalterstellung AUTO
 	→ активировать
 	→ Применить
@@ -150,8 +151,8 @@
 ### Пункт меню настроек "Дневной свет", чтоб отключать ДХО только по необходимости
 
 	Блок 09 → адаптация →
-	> (10) Aussenlicht_Front
-	> Aktivierung durch BAP oder Bedienfolge moeglich
+	> Aussenlicht_Front
+	> Tagfahrlicht aktivierung durch BAP oder Bedienfolge moeglich
 	→ активировать
 	→ Применить
 
@@ -160,9 +161,11 @@
 ### Светодиоды в ПТФ
 
 	Блок 09 → адаптация →
-	> [VO]_Leuchte12NL LB45 → выбираем → [LO]_Lasttyp 12 → выбираем в поле "ввод данных" → [VO_6-LED Lichtmodul]
+	> [VO]_Leuchte12NL LB45 → 
+	> [LO]_Lasttyp 12 → [VO_6-LED Lichtmodul]
 	→ Применить
-	> [VO]_Leuchte13NL RB5 → выбираем → [LO]_Lasttyp 13 → выбираем в поле "ввод данных" [VO_6-LED Lichtmodul]
+	> [VO]_Leuchte13NL RB5 → 
+	> [LO]_Lasttyp 13 → [VO_6-LED Lichtmodul]
 	→ Применить
 
 	Уменьшение яркости светодиодов:
@@ -195,9 +198,16 @@
 
 ### Система освещения поворотов (CORNER)
 
+    Блок 09 → логин-пароль  31347 → адаптация →
+    (3)-… (Static AFS) → вводим значение «0»
+    (4)-… (Static AFS) → вводим значение «50»
+    По умолчанию у меня стояло 30км/час заменил на 50
+
 	Блок 09 → адаптация →
-	> Leuchte 12NL LB45-Lichtfunktion B 12 → Abblendlicht links
-	> Leuchte 13NL RB5-Lichtfunktion B 13 → Abblendlicht rechts
+	> Leuchte12NL LB45
+	> Lichtfunktion B 12 → Abbieglicht links (было nicht aktiv)
+	> Leuchte13NL RB5
+	> Lichtfunktion B 13 → Abbieglicht rechts (было nicht aktiv)
 	→ Применить
 
 > логин-пароль 31347

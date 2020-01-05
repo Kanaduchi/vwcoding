@@ -8,6 +8,9 @@
     Старое значение: 10
     Новое значение: 0
     
+    Аналог:
+    [VO]_Scheinwerferreinigunglage -> неактив
+    
     → Применить
 
     Cрабатывание после долго удержания рычага омывания стекла
@@ -35,7 +38,9 @@
 ### Работа стеклоподъёмников при выключенном зажигании
 
 	Блок 09 → адаптация
-	> (13)-Acces control 2-Freigabenachlauf FH bei Tueroeffnen abbrechen → активировать
+	> ZV Komfort (Acces control)
+	> Freigabenachlauf FH bei Tueroeffnen abbrechen
+	→ меняем Activ на NotActiv
 	
 	→ Применить
 
@@ -52,8 +57,8 @@
 	
 	→ Применить
 	
-	Для Skoda (меню в магнитоле)
-    > Windshield wiper
+	Меню в магнитоле
+    > Front wiper
     > Menuesteuerung Frontwischer — active
     
     → Применить
@@ -65,9 +70,8 @@
 ### Дотирка капель – Лобовое стекло
 
 	Блок 09 → адаптация
-	> Front_wiper Traenenwischen Front Status Активируем и сохраняем
-	либо
-	> Подсистема 1 в длинном кодировании подсистемы 1 в байт 2 активировать бит 5.
+	> Front_wiper 
+	> Traenenwischen Front Status → активировать
 	
 	→ Применить
 
@@ -76,8 +80,10 @@
 ### Работа заднего дворника во время дождя
 
     Блок 09 → адаптация
-    > Heckwischer
+    > Heckwischersteuerung
     > Automatisches Heckwischen  → активировать
+    
+    IDE02711-ENG116690-Rear Window Wiper-Automatisches Heckwischen
 
 	→ Применить
 

@@ -2,10 +2,13 @@
 
 ### Тест стрелок
 
-	Блок 17 → кодир-длин.кодир →
-	> 01 Байт → бит 0
+	Блок 17 → адаптация →
+	> Staging / indicator_celebration / Демонстрация
+	выбираем «active»
 	
 	→ Применить
+	
+	ODIS E: 17: [LN]_scenering: yes
 
 > логин-пароль 20103
 
@@ -15,7 +18,7 @@
 ### Деактивация звукового оповещения о включенном зажигании при открытии двери
 
 	Блок 17 → адаптация →
-	> Ignition active message; trigger
+	> Ignition active message; trigger (Сообщение Поджиг активен, пиропатрон)
 	выбираем «No display (tbd)»
 	
 	→ Применить
@@ -24,50 +27,7 @@
 
 !!! note "Важно"
     Есть 3 значения: No display (tbd), Driver door, All doors.
-
-### Звуковое сопровождение при открытии/закрытии центрального замка
-
-	Блок 9 → Адаптация
-    > канал: Ответные сигналы - Akustische Rueckmeldung entriegeln (открытие авто)
-    Старое значение: не акт.
-    Новое значение: акт.
     
-    > канал: Ответные сигналы - Akustische Rueckmeldung verriegeln (закрытие авто)
-    Старое значение: не акт.
-    Новое значение: акт.
-    
-    > канал: Ответные сигналы - Menuesteuerung akustische Rueckmeldung
-    Старое значение: не акт.
-    Новое значение: акт.
-    
-    > канал: Ответные сигналы - Akustische Rueckmeldung global
-    Старое значение: не акт.
-    Новое значение: акт.
-    
-    > канал: Ответные сигналы - Akustische Rueckmeldung Signalhorn
-    Старое значение: не акт.
-    Новое значение: акт.
-
-	→ Применить
-
-> логин-пароль 31347
-
-### Закрытие багажника по однократному нажатию кнопки пульта/в салоне
-
-    Блок 9 → Адаптация    
-    > (3)-Activation using rear lid opening button in remote key - Touch function for closing
-    Set — not active
-    > (4)-Activation using rear lid opening button in remote key - Tap function for closing
-    Set — active
-    > (3)-Activation using rear lid remote unlocking switch - Touch function for closing
-    Set — not active
-    > (4)-Activation using rear lid remote unlocking switch - Tap function for closing
-    Set — active
-    
-    → Применить
-
-> логин-пароль 31347
-
 ### Остаток в баках
 
 	Блок 17 → адаптация →  
@@ -75,6 +35,8 @@
 	Поменять с "No display" на "Display"
 	
 	→ Применить
+	
+	ODIS E: 006: 0017 -> [IDE04848] Объем, который необходимо заправить -> Да
 
 > логин-пароль 20103
 
@@ -83,6 +45,9 @@
 	Блок 17 → адаптация →  
 	> Tube_version → Variante 2
 	Новое значение: variant_4
+	
+	> Отображение на дисплее
+	Заменить исполнение_1 на исполнение_3 - включение "золота"
 	
 	→ Применить
 
@@ -95,21 +60,29 @@
 	(14 Байт → бит 01 → включить (было «00» стало «02»))
 	
 	→ Применить
+	
+	ODIS E: 5F -> кодирование -> [LO]_byte_14_AM_disable: ативировать
 
 > логин-пароль 20103
 
 ### Цветовые профили
 
 	Блок 09 → Адаптация
-	Освещение салона 2-го поколения
-	Mittelkonsolenbeleuchtung mehrfarbig:
+	> Освещение салона 2-го поколения
+	> Mittelkonsolenbeleuchtung mehrfarbig:
 	Старое значение: не акт.
 	Новое значение: акт.
-	Освещение салона, конфигурация фонарей
-	Ambient_Farbliste_HMI:
+	
+	→ Применить
+	
+	> Освещение салона, конфигурация фонарей
+	> Ambient_Farbliste_HMI:
 	Старое значение: не акт.
 	Новое значение: акт.
-	Ambientelicht Farbliste
+	
+	→ Применить
+	
+	> Ambientelicht Farbliste (Эстетическая подсветка)
 	Старое значение у всех: 0
 	Rotwert Farbe 1: 217
 	Gruenwert Farbe 1: 221
@@ -190,3 +163,14 @@
     Новое значение: ставите нужное значение в секундах
 
     → Применить
+    
+### Воспроизведение видео в движении через MirrorLink
+
+    ODIS E
+    
+    Блок 007: 005F
+    > [VO]_nhtsa_properties
+    > ... no_video_playback
+    Включить
+
+    
