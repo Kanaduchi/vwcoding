@@ -18,7 +18,6 @@ python:
    install:
       - requirements: mkdocs-material/requirements.txt
       - method: pip
-        path:
         extra_requirements:
             - mkdocs-material
       - method: setuptools
