@@ -2,7 +2,6 @@
 site_name: 'Кодирование MQB платформы'
 site_description: 'Основные настройки MQB платформы'
 site_author: 'Andrey Topchiy'
-site_url: 'https://squidfunk.github.io/mkdocs-material/'
 
 # Repository
 repo_name: 'Kanaduchi/mqb'
@@ -35,7 +34,3 @@ theme:
     icon: "\uE80C"
   feature:
     tabs: true
-
-markdown_extensions:
-    - toc:
-        baselevel: 2
