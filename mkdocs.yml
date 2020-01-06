@@ -31,8 +31,7 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  logo:
-    logo: 'material/assets/images/icons/xcode.svg'
+  logo: 'vw.svg'
   feature:
     tabs: true
 
