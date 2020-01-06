@@ -32,7 +32,7 @@ theme:
     text: Roboto
     code: Roboto Mono
   logo:
-    icon: "\uE80C"
+    logo: 'material/assets/images/icons/xcode.svg'
   feature:
     tabs: true
 
