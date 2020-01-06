@@ -2,7 +2,7 @@
 
 ### Регулировка Датчика Освещённости
 
-    Блок 09 → адаптация → 
+    Блок 09 → Адаптация 
     > Датчик Освещённости
     > Helligkeitsgrenze_Licht__einschalten - с 1200 на 400 (200 поправил что бы ещё позже включался)
     > Helligkeitsgrenze_Licht_ausschalten - с 2200 на 600 (400 поправил что бы ещё позже включался)
@@ -20,7 +20,7 @@
 
 ### Плавное включение и выключение освещения в салоне
     
-    Блок 09 → адаптация →
+    Блок 09 → Адаптация
 	> Suchbeleuchtung_allgemein
 	> KL58 Einschalten mit Rampe → Active
 	→ Применить
@@ -29,7 +29,7 @@
 
 ### Перемигивание дальнего света и ПТФ (стробоскоп)
 
-	Блок 09 → адаптация →
+	Блок 09 → Адаптация
 	> Ausenlicht_Blinker
 	> driveng light and parking light
 	Zahl der aktivern Sheinwerfer Auf 2 limitieren
@@ -40,7 +40,7 @@
 	
 ### Активация ПТФ совместно с ДХО.
 
-	Блок 09 → адаптация → 
+	Блок 09 → Адаптация 
 	> Leuchte12NL LB45
 	> Dimming direction CD 12 — maximum
 	> Dimmwert CD 12 – 0 -> 110
@@ -57,7 +57,7 @@
 
 ### Отключение освещения салона при открытии багажника
 
-	Блок 09 → адаптация →
+	Блок 09 → Адаптация
 	> Освещение салона 2го поколения - Innenlicht bei offenem Hechdeckei einschalten
 	> Не акт.
 	→ Применить
@@ -66,7 +66,7 @@
 
 ### Изменение количества мигания поворотника в режиме обгона или перестроения
 
-	Блок 09 → адаптация →
+	Блок 09 → Адаптация
 	> Ausenlicht_Blinker
 	> Komfortblinken Blinkzyklen
 	> (2)-Turn signal control → «3» выставляем нужное количество «5»
@@ -76,7 +76,7 @@
 
 ### Отключение ДХО при поднятом ручном тормозе
 
-	Блок 09 → адаптация →
+	Блок 09 → Адаптация
 	> Aussenlicht_Front
 	> Tagfahrlicht Dauerfahrlicht bei Handbremse abschalten
 	> активировать
@@ -86,7 +86,7 @@
 
 ### Американский стиль поворотников (горят постоянно с ДХО в в пол-накала)
 
-    Блок 09 → адаптация →
+    Блок 09 → Адаптация
     
     > (9)-Leuchte 0BLK VL B36 Lichtfunktion D0 
     > Not Active > меняем на > Standlicht allgemein (Schlusslicht, Positionslicht, Begrenzungslicht) 
@@ -112,7 +112,7 @@
 
 ### Перемигивание поворотников с ДХО
 
-	Блок 09 → адаптация →
+	Блок 09 → Адаптация
 	> Leuchte2SL VLB10-Lichtfunktion G 2 → выбираем → Blinken links aktiv (Hellphase)
 	→ Применить
 	> Leuchte2SL VLB10-Dimmwert GH 2 → вводим значение «0»
@@ -130,7 +130,7 @@
 
 ### Включение задних габаритов в режиме только ДХО
 
-	Блок 09 → адаптация →
+	Блок 09 → Адаптация
 	> Aussenlicht_front
 	> Tagfahrlicht Dauerfahrlicht aktiviert zusaetzlich Standlicht
 	→ активировать
@@ -140,7 +140,7 @@
 
 ### Отключение ДХО в положении 0 на переключателе света
 
-	Блок 09 → адаптация →
+	Блок 09 → Адаптация
 	> Aussenlicht_Front
 	> Tagfahrlicht nur in Schalterstellung AUTO
 	→ активировать
@@ -150,7 +150,7 @@
 
 ### Пункт меню настроек "Дневной свет", чтоб отключать ДХО только по необходимости
 
-	Блок 09 → адаптация →
+	Блок 09 → Адаптация
 	> Aussenlicht_Front
 	> Tagfahrlicht aktivierung durch BAP oder Bedienfolge moeglich
 	→ активировать
@@ -160,7 +160,7 @@
 
 ### Светодиоды в ПТФ
 
-	Блок 09 → адаптация →
+	Блок 09 → Адаптация
 	> [VO]_Leuchte12NL LB45 → 
 	> [LO]_Lasttyp 12 → [VO_6-LED Lichtmodul]
 	→ Применить
@@ -178,7 +178,7 @@
 
 ### Автоматическое провожание, а не морганием дальним перед выходом из машины
 
-	Блок 09 → адаптация → 
+	Блок 09 → Адаптация 
 	> Aussenlicht_uebergreifend
 	> Coming Home Verbaustatus и ставим значение Авто. И конечно применяем изменения.
 	> можно увеличить время свечения в пункте Menueeinstellung Cominghome там уже на свой вкус ставите значение.
@@ -188,22 +188,17 @@
 
 ### Пульсация кнопки Старт-Стоп Engine
 
-	Блок В7 Kessy Безопасный доступ → адаптация → 
+	Блок В7 Kessy Безопасный доступ → Адаптация 
 	> DeveloperCoding Search lights
 	> ZAT_illumination_concept_mybeat_clamp58xt: [VN]_activated
 	> ZAT_illumination_modus_mybeat_clamp58xt: [VN]_activated
 	→ Применить
 
-> логин-пароль 31347
+> логин-пароль 20103
 
 ### Система освещения поворотов (CORNER)
 
-    Блок 09 → логин-пароль  31347 → адаптация →
-    (3)-… (Static AFS) → вводим значение «0»
-    (4)-… (Static AFS) → вводим значение «50»
-    По умолчанию у меня стояло 30км/час заменил на 50
-
-	Блок 09 → адаптация →
+	Блок 09 → Адаптация
 	> Leuchte12NL LB45
 	> Lichtfunktion B 12 → Abbieglicht links (было nicht aktiv)
 	> Leuchte13NL RB5
@@ -213,7 +208,7 @@
 > логин-пароль 31347
 
 ### Включение задних габаритов постоянно с ДХО – Буквы «F» горят всегда (для 3D Led)
-    Блок 09 → адаптация →
+    Блок 09 → Адаптация
     > Leuchte23SL HLC10
     > Lichtfunktion C 23:
     Старое значение: nicht aktiv
