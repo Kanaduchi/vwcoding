@@ -91,7 +91,7 @@
     Байт 3 → бит 7: Drive_pmode_selection, 0=MMI menu ACC / 1=Driving profile selection → снимаем галочку  
     Выход    
     Сохранить   
-    ![Screenshot](../images/acc.gif)
+    ![Screenshot](../images/acc.jpg)
 
 > логин-пароль 20103 
 
