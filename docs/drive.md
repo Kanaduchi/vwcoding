@@ -86,7 +86,7 @@
     → Применить
     
 ??? note "Кодирование в VSDS"
-    13  
+    13 - Адаптивный
     Кодирование - 07 → Длинное кодирование  
     Байт 3 → бит 7: Drive_pmode_selection, 0=MMI menu ACC / 1=Driving profile selection → снимаем галочку  
     Выход    
