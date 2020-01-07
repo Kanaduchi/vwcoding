@@ -120,10 +120,6 @@
     
 ### Off Road Display
 
-!!! warning
-    На Тигуанах второго поколения работает в информационно командных системах Composition Media 6", Discover Media, Discover Pro и НЕ работает в Composition Media 8".
-  
-  
     Блок 5F → Адаптация
     > Car_Function_Adaptations_Gen2
     > menu_display_compass -> "active" (default not active)
@@ -139,6 +135,9 @@
     > бит 02 → включить (было "02" 00000010, стало "06" 00000110)
     → Применить (с перезагрузкой блока)
     
+!!! warning
+    На Тигуанах второго поколения работает в информационно командных системах Composition Media 6", Discover Media, Discover Pro и НЕ работает в Composition Media 8".
+
 ??? note "Кодирование в VSDS"
     5F - MMI / RNS  
     Кодирование - 07 → Длинное кодирование  
