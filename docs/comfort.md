@@ -20,7 +20,7 @@
     Байт 1 → Бит 0: (Gauge test/ Needle Sweep / Staging) → ставим галочку  
     Выход  
     Сохранить  
-    ![Screenshot](images\staging.jpg)
+    ![Screenshot](../images/staging.jpg)
   
 ### Остаток в баках
    
@@ -144,6 +144,7 @@
 	→ Применить
 	
 ??? note "Расширенные цвета"
+    Блок 09 → Адаптация
     > Ambientelicht Farbliste / Эстетическая подсветка, перечень цветов  
     Rotwert Farbe 1: 128  
     Gruenwert Farbe 1: 0  
