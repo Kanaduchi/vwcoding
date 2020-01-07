@@ -11,11 +11,6 @@ edit_uri: 'https://github.com/Kanaduchi/mqb/edit/1com/docs/'
 # Copyright
 copyright: 'Copyright &copy; 2020 - Andrey Topchiy'
 
-extra_css:
-  - 'css/app.css'
-extra_javascript:
-  - 'js/script.js'
-
 nav:
   - Безопасность: security.md
   - Освещение: lights.md
@@ -57,9 +52,6 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.critic
   - pymdownx.details
-  - pymdownx.emoji:
-      emoji_index: !!python/name:pymdownx.emoji.twemoji
-      emoji_generator: !!python/name:pymdownx.emoji.to_svg
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.magiclink:
