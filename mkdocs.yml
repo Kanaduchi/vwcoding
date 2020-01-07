@@ -11,6 +11,11 @@ edit_uri: 'https://github.com/Kanaduchi/mqb/edit/1com/docs/'
 # Copyright
 copyright: 'Copyright &copy; 2020 - Andrey Topchiy'
 
+extra_css:
+  - 'css/app.css'
+extra_javascript:
+  - 'js/script.js'
+
 nav:
   - Безопасность: security.md
   - Освещение: lights.md
@@ -21,6 +26,7 @@ nav:
   - Движение: drive.md
   - Ассистенты: assistents.md
   - Шины: tires.md
+  - ODIS E: odis-e.md
 
 theme:
   name: null
@@ -34,6 +40,9 @@ theme:
   logo: 'vw.svg'
   feature:
     tabs: true
+  # 404 page
+  static_templates:
+    - 404.html
 
 markdown_extensions:
   - markdown.extensions.admonition
