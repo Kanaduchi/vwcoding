@@ -17,7 +17,7 @@
     Байт 1 → Бит 1: byte_14_AM_disable  → ставим галочку  
     Выход  
     Сохранить  
-    ![Screenshot](images\am_radio.jpg)
+    ![Screenshot](../images/am_radio.jpg)
 
 ### Улучшение звучания
 

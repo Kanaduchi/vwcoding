@@ -46,7 +46,7 @@
     Байт 10 → Бит 4: Display "Volume to be Replenished" → ставим галочку  
     Выход  
     Сохранить  
-    ![Screenshot](images\refill.jpg)
+    ![Screenshot](../images/refill.jpg)
     
 ### Таймер круга
 
@@ -66,7 +66,7 @@
     Байт 1 → Бит 3: Lap Timer active → ставим галочку  
     Выход  
     Сохранить  
-    ![Screenshot](images\lap.png)    
+    ![Screenshot](../images/lap.png)    
 
 ### Смена скина приборной панели
 
