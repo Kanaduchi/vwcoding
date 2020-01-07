@@ -122,7 +122,8 @@
 
 !!! warning
     На Тигуанах второго поколения работает в информационно командных системах Composition Media 6", Discover Media, Discover Pro и НЕ работает в Composition Media 8".
-
+  
+  
     Блок 5F → Адаптация
     > Car_Function_Adaptations_Gen2
     > menu_display_compass -> "active" (default not active)
