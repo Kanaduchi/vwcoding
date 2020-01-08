@@ -110,3 +110,18 @@
     [VN]_Lane_assist_warning_intensity: 
     [LN]_Lane_assist_warning_intensity: [VN]_Selection_over_menu
 
+### Активация системы распознавания дорожных знаков (При наличии ассистента движения по полосе)
+
+    Блок 17
+    — входим в раздел Кодирование и выбираем "длинное кодирование"
+    — в байте 5 — 2 бит ставим значение 1
+    — нажимаем "Сохранить".
+    Блок А5
+    — входим в раздел Кодирование и выбираем "длинное кодирование"
+    — в байте 16 — 4 бит ставим значение 1
+    — нажимаем "Сохранить".
+    Блок 5F
+    — заходим в раздел Адаптация
+    — находим канал "ENG122227-ENG117636-Car_Function_Adaptations_Gen2-menu_display_road_sign_identification" и меняем в нем значение на "active". Нажимаем "Сохранить".
+    — находим канал "Car_Function_Adaptations_Gen2-road_sign_identification_over_threshhold_high" и меняем в нем значение на "active". Нажимаем "Сохранить".
+    — находим канал "Car_Function_List_Gen2-traffic_sign_recognition_0x21" и меняем в нем значение на "active". Нажимаем "Сохранить".

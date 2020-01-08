@@ -62,11 +62,8 @@
 
 ### Работа заднего дворника во время дождя
 
-!!! warning
-    Данное кодирование почему-то присутствует не на всех машинах
-
     Блок 09 → Адаптация
-    > Heckwischersteuerung (Rear Wiper)
+    > Heckwischersteuerung (Rear Wiper / Задний стеклоочиститель)
     > Automatisches Heckwischen  → активировать
     > Einzelansteuerung Heckintervallwischen Zeitintervall 1
     Поменять с 7s на 15s
@@ -74,5 +71,8 @@
 	
 	ODIS E:
 	IDE02711-ENG116690-Rear Window Wiper-Automatisches Heckwischen
+	
+!!! warning
+    Данное кодирование почему-то присутствует не на всех машинах
 
 > логин-пароль 31347
