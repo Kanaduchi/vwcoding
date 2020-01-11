@@ -32,7 +32,7 @@
 ```
 Control Unit 13 (Adaptive Cruise Control) → Adaptation 
 > Overtaking_right_prevention (Vermeidung für unzulässigen Überholvorgang)
-> Установить Deactivated [Default: Dctivated]
+> Установить Deactivated [Default: Activated]
 → Применить
 ```
     
@@ -42,7 +42,7 @@ Control Unit 13 (Adaptive Cruise Control) → Adaptation
 
 	Блок 3-ABS/ESP → Адаптация
 	> Anpassung des Dynamischen Anfahrassistenten
-	> IDE04871-Динамический ассистент трогания / Dynamischer Anfahrassistent
+	> IDE04871-Динамический ассистент трогания (Dynamischer Anfahrassistent)
 	> По умолчанию: нормально
 	> Новое значение: рано (Früh)
 	→ Применить
