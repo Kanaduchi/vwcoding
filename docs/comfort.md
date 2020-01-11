@@ -66,7 +66,7 @@
     Байт 1 → Бит 3: Lap Timer active → ставим галочку  
     Выход  
     Сохранить  
-    ![Screenshot](../images/lap.png)    
+    ![Screenshot](../images/staging.jpg) 
 
 ### Смена скина приборной панели
 
