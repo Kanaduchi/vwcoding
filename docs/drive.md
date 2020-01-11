@@ -26,9 +26,15 @@
 
 ### Обгон справа
 
-    Control Unit 13 (Adaptive Cruise Control) → Adaptation 
-    > Overtaking_right_prevention / Vermeidung für unzulässigen Überholvorgang
-    > activated [Default: Deactivated]
+!!! tip ""
+    По умолчанию система ACC тормозит автомобиль, если на полосе слева едет медленный автомобиль (даже при пустой дороге).
+
+```
+Control Unit 13 (Adaptive Cruise Control) → Adaptation 
+> Overtaking_right_prevention (Vermeidung für unzulässigen Überholvorgang)
+> Установить Deactivated [Default: Dctivated]
+→ Применить
+```
     
 > логин-пароль 20103
 
