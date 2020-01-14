@@ -17,14 +17,19 @@
     Байт 1 → Бит 1: byte_14_AM_disable  → ставим галочку  
     Выход  
     Сохранить  
-    ![Screenshot](../images/am_radio.jpg)
+    ![Screenshot](../images/am_radio.jpg) 
 
 ### Улучшение звучания
 
-	Блок 5F → Кодирование
-	> [LO]_byte_11_Sound_System
-	Выбираем [VO]_Sound_System_no_Allocation или [VO]_Sound_System_Internal 
-	→ Применить (с перезагрузкой блока)
+!!! tip ""
+    По ощущениям, басы и вокал стали звучать четче
+
+```
+Блок 5F → Кодирование
+> [LO]_byte_11_Sound_System
+Выбираем [VO]_Sound_System_no_Allocation или [VO]_Sound_System_Internal 
+→ Применить (с перезагрузкой блока)
+```
 
 > логин-пароль 20103 
 
@@ -38,9 +43,20 @@
 
 ### Повышение чувствительности микрофона
 
-	Блок 5F → Адаптация
-	> Microfone sensivity (Mikrofonempfindlichtkeit)
-	> 2Db
-	→ Применить 
+!!! tip ""
+    Речь водителя при звонке из автомобиля стало слышно четче
+
+```
+Блок 5F → Адаптация
+> Microfone sensivity (Mikrofonempfindlichtkeit)
+> От 2-х до 10Db
+→ Применить 
+```
 
 > логин-пароль 20103 
+
+??? note "Кодирование в OBD11"
+    5F Блок Электронная информационная система → Адаптация  
+    > Чувствительность микрофона  
+    Старое значение: 0 Дб  
+    Новое значение: 10 Дб

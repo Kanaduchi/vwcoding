@@ -24,11 +24,16 @@
     Варианты: 3C88D7, 3С88D2
 
 ### Плавное включение и выключение освещения в салоне
+
+!!! tip ""
+    Подсветка всех кнопок в салоне загорается и гаснет плавно, смотрится очень естественно и красиво. 
     
-    Блок 09 → Адаптация
-	> Suchbeleuchtung_allgemein
-	> KL58 Einschalten mit Rampe → Active
-	→ Применить
+```
+Блок 09 → Адаптация
+> Suchbeleuchtung_allgemein
+> KL58 Einschalten mit Rampe → Active
+→ Применить
+```
 	
 > логин-пароль 31347
 
@@ -55,18 +60,24 @@
 
 > логин-пароль 31347
 
-### Перемигивание дальнего света и ПТФ (стробоскоп)
+### Перемигивание дальнего света и ПТФ при включенных ПТФ (стробоскоп)
 
 	Блок 09 → Адаптация
-	> Ausenlicht_Blinker
-	> driveng light and parking light
-	Zahl der aktivern Sheinwerfer Auf 2 limitieren
-	> aktiv
+	> Aussenlicht_Front (Driving light and parking light)
+	> Zahl der aktivern Sheinwerfer Auf 2 limitieren
+	Старое значение: in Betrieb lassen  
+    Новое значение: limitieren  
 	→ Применить
 	
 > логин-пароль 31347	
+
+??? note "Кодирование в OBD11"
+    09 Блок управления бортовой сети → Безопасный доступ (Логин: 31347) → Адаптация   
+    > Aussenlicht_Front - Zahl der aktiven Scheinwerfer auf 2 limitieren  
+    Старое значение: in Betrieb lassen  
+    Новое значение: limitieren  
 	
-### Активация ПТФ совместно с ДХО.
+### Перемигивание дальнего света и ПТФ при выключенных ПТФ (стробоскоп)
 
 	Блок 09 → Адаптация 
 	> Leuchte12NL LB45
@@ -85,10 +96,15 @@
 
 ### Отключение освещения салона при открытии багажника
 
-	Блок 09 → Адаптация
-	> Освещение салона 2го поколения - Innenlicht bei offenem Hechdeckei einschalten
-	> Не акт.
-	→ Применить
+!!! tip ""
+    Изначально при открытии крышки багажника загорался свет не только в нем, но и в салоне
+
+```
+Блок 09 → Адаптация
+> Освещение салона 2го поколения - Innenlicht bei offenem Hechdeckei einschalten
+> Не акт.
+→ Применить
+```
 
 > логин-пароль 31347
 
@@ -138,6 +154,23 @@
     
 > логин-пароль 31347
 
+### Затемнение  ДХО  при  включении  поворотника: (Audi Style)
+
+	> Leuchte2SL VLB10-Lichtfunktion G 2 → выбираем → Blinken links aktiv (Hellphase)
+	→ Применить
+	> Leuchte2SL VLB10-Dimmwert GH 2 → вводим значение «35»
+	→ Применить
+	> Leuchte2SL VLB10-Dimming Direction GH 2 → выбираем → minimize
+	→ Применить
+	> Leuchte3SL VRB21-Lichtfunktion G 3 → выбираем → Blinken rechts aktiv (Hellphase)
+	→ Применить
+	> Leuchte3SL VRB21-Dimmwert GH 3 → вводим значение «35»
+	→ Применить
+	> Leuchte3SL VRB21-Dimming Direction GH 3 → выбираем → minimize
+	→ Применить
+    
+> логин-пароль 31347 
+
 ### Перемигивание поворотников с ДХО
 
 	Блок 09 → Адаптация
@@ -155,6 +188,91 @@
 	→ Применить
 
 > логин-пароль 31347
+
+### Перемигивание задних габаритов и поворотников
+
+!!! tip ""
+    Задние габариты, при включении поворотника отключаются, при отключении загораются обратно (каждый цикл мигания поворотника)
+    
+```
+Блок 09 → Адаптация
+> Leuchte16BLK SLB35BLK SL KC9
+Lichtfunktion G 16 — от not active до Blinken rechts Hellphase
+> Leuchte16SL HLC10
+Dimming Direction GH 1 — от maximize до minimize
+   
+> Leuchte17TFL R BLK SRB3TFL R BLK SR KC3
+Lichtfunktion G 17 — от not active до Blinken links Hellphase
+> Leuchte17SL HLC10
+Dimming Direction GH 17 — от maximize до minimize
+   
+> Leuchte23SL HLC10
+Lichtfunktion G 23 — от not active до Blinken links Hellphase
+Dimming Direction GH 23 — от maximize до minimize
+    
+> Leuchte24SL HRA65
+Lichtfunktion G 24 — от not active до Blinken rechts Hellphase
+Dimming Direction GH 24 — от maximize до minimize
+``` 
+
+> логин-пароль 31347    
+
+### Перемигивание  ламп  заднего  хода  с поворотниками при включении задней скорости и аварийки
+
+	Блок 09 → Адаптация 
+    > Leuchte 28RFL LC11 
+    Lichtfunktion C → Active → меняем на → Blinken Links Hellphase
+    Lichtfunktion D → остается → Not Active
+    Dimmwert СD → остается «0»
+    Dimming Direction CD → maximize → меняем на → minimize
+    → Применить
+
+    > Leuchte 29RFL RA64 
+    Lichtfunktion C → Active → меняем на → Blinken Rechts Hellphase
+    Lichtfunktion D → остается → Not Active
+    Dimmwert СD → остается «0»
+    Dimming Direction CD → maximize → меняем на → minimize
+    → Применить
+    
+> логин-пароль 31347  
+
+### Включение задних габаритов постоянно с ДХО – Буквы «F» горят всегда (для 3D Led)
+
+    Блок 09 → Адаптация
+    > Leuchte23SL HLC10 (левый фонарь)
+    > Lichtfunktion C 23:
+    Старое значение: nicht aktiv
+    Новое значение: Tagfahrlicht
+    > Dimmwert CD 23:
+    Старое значение: 0
+    Новое значение: 127
+    
+    > Leuchte24SL HRA65 (правый фонарь)
+    > Lichtfunktion C 24:
+    Старое значение: nicht aktiv
+    Новое значение: Tagfahrlicht
+    > Dimmwert CD 24:
+    Старое значение: 0
+    Новое значение: 127
+    
+    > Leuchte16BLK SLB35BLK SL KC9
+    > Lichtfunktion C 16:
+    Старое значение: nicht aktiv
+    Новое значение: Tagfahrlicht
+    > Dimmwert CD 16:
+    Старое значение: 0
+    Новое значение: 127
+    
+    > Leuchte17TFL R BLK SRB3TFL R BLK SR KC3
+    > Lichtfunktion C 17:
+    Старое значение: nicht aktiv
+    Новое значение: Tagfahrlicht
+    > Dimmwert CD 17:
+    Старое значение: 0
+    Новое значение: 127
+    → Применить
+
+> логин-пароль 31347  
 
 ### Включение задних габаритов в режиме только ДХО
 
@@ -244,36 +362,16 @@
 
 > логин-пароль 31347
 
-### Включение задних габаритов постоянно с ДХО – Буквы «F» горят всегда (для 3D Led)
-    Блок 09 → Адаптация
-    > Leuchte23SL HLC10
-    > Lichtfunktion C 23:
-    Старое значение: nicht aktiv
-    Новое значение: Tagfahrlicht
-    > Dimmwert CD 23:
-    Старое значение: 0
-    Новое значение: 127
-    > Leuchte24SL HRA65
-    > Lichtfunktion C 24:
-    Старое значение: nicht aktiv
-    Новое значение: Tagfahrlicht
-    > Dimmwert CD 24:
-    Старое значение: 0
-    Новое значение: 127
-    > Leuchte16BLK SLB35BLK SL KC9
-    > Lichtfunktion C 16:
-    Старое значение: nicht aktiv
-    Новое значение: Tagfahrlicht
-    > Dimmwert CD 16:
-    Старое значение: 0
-    Новое значение: 127
-    > Leuchte17TFL R BLK SRB3TFL R BLK SR KC3
-    > Lichtfunktion C 17:
-    Старое значение: nicht aktiv
-    Новое значение: Tagfahrlicht
-    > Dimmwert CD 17:
-    Старое значение: 0
-    Новое значение: 127
-    → Применить
+### Подсветка в зеркалах при круговом обзоре
 
-> логин-пароль 31347
+    Блок 09 → Адаптация
+    > Aussenlicht_uebergreifend - Umfeldleuchte als Manoevrierleuchte
+    Старое значение: не акт.
+    Новое значение: акт.
+    
+> логин-пароль 31347    
+
+    Блок 6С → Кодирование
+    Manoeuvre_Light
+    Старое значение: выкл.
+    Новое значение: вкл.
