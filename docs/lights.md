@@ -111,7 +111,7 @@
 ### Изменение количества мигания поворотника в режиме обгона или перестроения
 
 	Блок 09 → Адаптация
-	> Ausenlicht_Blinker
+	> Aussenlicht_Blinker
 	> Komfortblinken Blinkzyklen
 	> (2)-Turn signal control → «3» выставляем нужное количество «5»
 	→ Применить
@@ -284,6 +284,17 @@ Dimming Direction GH 24 — от maximize до minimize
 
 > логин-пароль 31347
 
+### Отключение оповещения
+
+    Блок 09 → Адаптация
+    > Aussenlicht_uebergreifend
+    > Aussenlicht_uebergreifend - Fahrlichtwarnung_Hinweis_Konfig
+    Старое значение: Hinweis_in_LDS-Stellung_Null_und_SL
+    Новое значение: kein_Hinweis
+    → Применить
+
+> логин-пароль 31347
+
 ### Отключение ДХО в положении 0 на переключателе света
 
 	Блок 09 → Адаптация
@@ -335,8 +346,9 @@ Dimming Direction GH 24 — от maximize до minimize
 ### Активация передних ПТФ при включении заднего хода
 
 	Блок 09 → Адаптация 
-	> Static AFS light
-	> Bei Rueckwaertsfahrt выставляем в double sided
+	> Система статического адаптивного освещения (Static AFS light)
+	> Bei Rueckwaertsfahrt
+	Выставляем в double sided (С обеих сторон)
 	→ Применить
 
 > логин-пароль 31347
@@ -359,6 +371,14 @@ Dimming Direction GH 24 — от maximize до minimize
 	> Leuchte13NL RB5
 	> Lichtfunktion B 13 → Abbieglicht rechts (было nicht aktiv)
 	→ Применить
+	
+Изменение скорости включения освещения поворотов
+
+    Блок 09 → Адаптация
+    > Система статического адаптивного освещения
+    > Untere Geschwindigkeitsschwelle - 0 км\ч
+    > Obere Geschwindigkeitsschwelle - 50 км\ч
+    → Применить
 
 > логин-пароль 31347
 
