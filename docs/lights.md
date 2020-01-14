@@ -118,16 +118,6 @@
 
 > логин-пароль 31347
 
-### Отключение ДХО при поднятом ручном тормозе
-
-	Блок 09 → Адаптация
-	> Aussenlicht_Front
-	> Tagfahrlicht Dauerfahrlicht bei Handbremse abschalten
-	> активировать
-	→ Применить
-
-> логин-пароль 31347
-
 ### Американский стиль поворотников (горят постоянно с ДХО в в пол-накала)
 
     Блок 09 → Адаптация
@@ -274,6 +264,17 @@ Dimming Direction GH 24 — от maximize до minimize
 
 > логин-пароль 31347  
 
+### Отключение оповещения о ближнем свете фар / ДХО
+
+    Блок 09 → Адаптация
+    > Aussenlicht_uebergreifend
+    > Aussenlicht_uebergreifend - Fahrlichtwarnung_Hinweis_Konfig
+    Старое значение: Hinweis_in_LDS-Stellung_Null_und_SL
+    Новое значение: kein_Hinweis
+    → Применить
+
+> логин-пароль 31347
+
 ### Включение задних габаритов в режиме только ДХО
 
 	Блок 09 → Адаптация
@@ -284,14 +285,13 @@ Dimming Direction GH 24 — от maximize до minimize
 
 > логин-пароль 31347
 
-### Отключение оповещения
+### Отключение ДХО при поднятом ручном тормозе
 
-    Блок 09 → Адаптация
-    > Aussenlicht_uebergreifend
-    > Aussenlicht_uebergreifend - Fahrlichtwarnung_Hinweis_Konfig
-    Старое значение: Hinweis_in_LDS-Stellung_Null_und_SL
-    Новое значение: kein_Hinweis
-    → Применить
+	Блок 09 → Адаптация
+	> Aussenlicht_Front
+	> Tagfahrlicht Dauerfahrlicht bei Handbremse abschalten
+	> активировать
+	→ Применить
 
 > логин-пароль 31347
 
