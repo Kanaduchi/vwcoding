@@ -13,7 +13,9 @@ copyright: 'Copyright &copy; 2020 - Andrey Topchiy'
 
 nav:
   - Безопасность: security.md
-  - Освещение: lights.md
+  - Освещение:
+    - Фары:  lights.md
+    - Подсветка салона: esteticLights.md
   - Комфорт: comfort.md
   - Климат: climate.md
   - Омыватель фар: wash.md
@@ -34,7 +36,7 @@ theme:
     code: Roboto Mono
   logo: 'vw.svg'
   feature:
-    tabs: true
+    tabs: false
   # 404 page
   static_templates:
     - 404.html

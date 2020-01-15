@@ -98,6 +98,7 @@ ODIS E: 006: 0017 -> [IDE04848] Объем, который необходимо 
         05 — E-Golf
         06 — R-Line
         07 — Golf R
+    → Применить (с перезагрузкой блока)
 
 Логотип музыкальной системы
 
@@ -105,6 +106,7 @@ ODIS E: 006: 0017 -> [IDE04848] Объем, который необходимо 
     > EGN117919 (по умолчанию стоит 00 00) - меняем на
         00 11 — fender premium audio system
         00 1E — dynaudio
+    → Применить 
 
 ### Изменение картинки меню ГУ с перелистывания на плитку
 
@@ -120,152 +122,6 @@ ODIS E: 006: 0017 -> [IDE04848] Объем, который необходимо 
     Байт 17 → меняем Skin_1 на Skin_5  
     Выход  
     Сохранить  
-
-### Цветовые профили
-
-	Блок 09 → Адаптация
-	> Освещение салона 2-го поколения
-	> Mittelkonsolenbeleuchtung mehrfarbig:
-	Старое значение: не акт.
-	Новое значение: акт.
-	→ Применить
-	
-	> Освещение салона, конфигурация фонарей
-	> Ambientemenue mit globalem aus → акт.
-	> Ambientemenue mit alle Zonen → акт.
-	> Ambient_Farbliste_HMI → акт.
-	→ Применить
-	
-	> Ambientelicht Farbliste (Эстетическая подсветка)
-	Старое значение у всех: 0
-	Rotwert Farbe 1: 217
-	Gruenwert Farbe 1: 221
-	Blauwert Farbe 1: 235
-	Rotwert Farbe 2: 169
-	Gruenwert Farbe 2: 169
-	Blauwert Farbe 2: 169
-	Rotwert Farbe 3: 253
-	Gruenwert Farbe 3: 108
-	Blauwert Farbe 3: 55
-	Rotwert Farbe 4: 242
-	Gruenwert Farbe 4: 0
-	Blauwert Farbe 4: 40
-	Rotwert Farbe 5: 254
-	Gruenwert Farbe 5: 88
-	Blauwert Farbe 5: 240
-	Rotwert Farbe 6: 124
-	Gruenwert Farbe 6: 63
-	Blauwert Farbe 6: 190
-	Rotwert Farbe 7: 0
-	Gruenwert Farbe 7: 102
-	Blauwert Farbe 7: 255
-	Rotwert Farbe 8: 0
-	Gruenwert Farbe 8: 204
-	Blauwert Farbe 8: 255
-	Rotwert Farbe 9: 0
-	Gruenwert Farbe 9: 204
-	Blauwert Farbe 9: 0
-	Rotwert Farbe 10: 136
-	Gruenwert Farbe 10: 255
-	Blauwert Farbe 10: 57
-	→ Применить
-	
-??? note "Расширенные цвета"
-    Блок 09 → Адаптация
-    > Ambientelicht Farbliste / Эстетическая подсветка, перечень цветов  
-    Rotwert Farbe 1: 128  
-    Gruenwert Farbe 1: 0  
-    Blauwert Farbe 1: 0  
-    Rotwert Farbe 2: 121  
-    Gruenwert Farbe 2: 61  
-    Blauwert Farbe 2: 0  
-    Rotwert Farbe 3: 255  
-    Gruenwert Farbe 3: 64  
-    Blauwert Farbe 3: 0  
-    Rotwert Farbe 4: 255  
-    Gruenwert Farbe 4: 128  
-    Blauwert Farbe 4: 0  
-    Rotwert Farbe 5: 255  
-    Gruenwert Farbe 5: 191  
-    Blauwert Farbe 5: 0  
-    Rotwert Farbe 6: 255  
-    Gruenwert Farbe 6: 255  
-    Blauwert Farbe 6: 0  
-    Rotwert Farbe 7: 218  
-    Gruenwert Farbe 7: 165  
-    Blauwert Farbe 7: 32  
-    Rotwert Farbe 8: 166  
-    Gruenwert Farbe 8: 241  
-    Blauwert Farbe 8: 10  
-    Rotwert Farbe 9: 191  
-    Gruenwert Farbe 9: 255  
-    Blauwert Farbe 9: 0  
-    Rotwert Farbe 10: 128  
-    Gruenwert Farbe 10: 255  
-    Blauwert Farbe 10: 0  
-    > Ambience_lightning_color_list_2  
-    Rotwert Farbe 11: 64  
-    Gruenwert Farbe 11: 255  
-    Blauwert Farbe 11: 0  
-    Rotwert Farbe 12: 0  
-    Gruenwert Farbe 12: 255  
-    Blauwert Farbe 12: 0  
-    Rotwert Farbe 13: 0  
-    Gruenwert Farbe 13: 255  
-    Blauwert Farbe 13: 64  
-    Rotwert Farbe 14: 0  
-    Gruenwert Farbe 14: 255  
-    Blauwert Farbe 14: 128  
-    Rotwert Farbe 15: 0  
-    Gruenwert Farbe 15: 255  
-    Blauwert Farbe 15: 191  
-    Rotwert Farbe 16: 0  
-    Gruenwert Farbe 16: 255  
-    Blauwert Farbe 16: 255  
-    Rotwert Farbe 17: 0  
-    Gruenwert Farbe 17: 191  
-    Blauwert Farbe 17: 255  
-    Rotwert Farbe 18: 0  
-    Gruenwert Farbe 18: 128  
-    Blauwert Farbe 18: 255  
-    Rotwert Farbe 19: 0  
-    Gruenwert Farbe 19: 64  
-    Blauwert Farbe 19: 255  
-    Rotwert Farbe 20: 0  
-    Gruenwert Farbe 20: 0  
-    Blauwert Farbe 20: 255  
-    Rotwert Farbe 21: 64  
-    Gruenwert Farbe 21: 0  
-    Blauwert Farbe 21: 255  
-    Rotwert Farbe 22: 128  
-    Gruenwert Farbe 22: 0  
-    Blauwert Farbe 22: 255  
-    Rotwert Farbe 23: 191  
-    Gruenwert Farbe 23: 0  
-    Blauwert Farbe 23: 255  
-    Rotwert Farbe 24: 255  
-    Gruenwert Farbe 24: 0   
-    Blauwert Farbe 24: 255  
-    Rotwert Farbe 25: 255  
-    Gruenwert Farbe 25: 0  
-    Blauwert Farbe 25: 191  
-    Rotwert Farbe 26: 255  
-    Gruenwert Farbe 26: 0  
-    Blauwert Farbe 26: 128  
-    Rotwert Farbe 27: 255  
-    Gruenwert Farbe 27: 0  
-    Blauwert Farbe 27: 64  
-    Rotwert Farbe 28: 255  
-    Gruenwert Farbe 28: 0  
-    Blauwert Farbe 28: 0  
-    Rotwert Farbe 29: 255  
-    Gruenwert Farbe 29: 255  
-    Blauwert Farbe 29: 255  
-    Rotwert Farbe 30: 159  
-    Gruenwert Farbe 30: 159  
-    Blauwert Farbe 30: 159  
-
-> логин-пароль 31347
 
 ### Деактивация звукового оповещения о включенном зажигании при открытии двери
 
@@ -351,13 +207,40 @@ ODIS E: 006: 0017 -> [IDE04848] Объем, который необходимо 
 ### Комфортная посадка
 
 !!! tip ""
-    При посадке сидение водителя переводится в нижнее положение
+    Функция Easy Entry — легкая посадка, сиденье отъезжает после выключения зажигания и открытия двери и подъезжает при включении
     
-```Блок 36 - Блок Регулировка сиденья водителя → Кодирование
-    > Easy_Entry_front
-    Старое значение: не акт.
-    Новое значение: акт.
 ```
+Блок 36 - Блок Регулировка сиденья водителя → Кодирование
+> Байт 3 бит 1 включить (Easy_Entry_front)
+> Байт 9 бит 6 включить (Easy_Entry_over_MMI)
+→ Применить (с перезагрузкой блока)
+```
+
+```
+Блок 5F → Адаптация
+
+> Car_Function_Adaptations_Gen2
+>> menu_display_seat_configuration — Актив
+>> menu_display_seat_configuration_over_threshold_high — Актив
+→ Применить 
+
+> Car_Function_List_BAP_Gen2
+>> driver_seat_0x10 — Актив
+>> driver_seat_0x10_msg_bus — Шина Комфорт
+→ Применить 
+```
+
+??? note "Для пассажирского сидения (если имеет регулировки)"
+    ```
+    Блок 36 - Блок Регулировка сиденья водителя → Кодирование
+    > Байт 6 бит 4 (easyentry_enable_passenger_over_driver_MMI)
+    
+    Блок 5F → Адаптация
+    > Car_Function_List_BAP_Gen2
+    >> Passenger_Seat_0x10 — Актив
+    >> Passenger_Seat_0x10_msg_bus — Шина Комфорт
+    → Применить 
+    ```
 
 ### Открытие и закрытие люка при удерживании кнопок на брелке
 
