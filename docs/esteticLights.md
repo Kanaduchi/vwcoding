@@ -2,7 +2,8 @@
 
 ### Готовые файлы для ODIS-E
 
-+ [ODIS_E шкала на 30 цветов для машин без RGB для 09 блока (адаптации)](../odis-files/09 - Заливка 30 цветов.zip)
++ [ODIS_E шкала на 30 цветов для машин без RGB для 09 блока (адаптации)](../odis-files/09 - Шкала на 30 цветов.PRE)
++ [ODIS_E Привязка профилей движения для 09 блока (адаптации)](../odis-files/09 - Привязка профилей движения.PRE)
 
 ### Плавное включение и выключение освещения в салоне
 
@@ -87,6 +88,8 @@
 
 ### Выбор цвета в зависимости от профиля движения
 
+Меню эстетической подсветки
+
     Блок 5F → Адаптация
     > Car_Function_Adaptations_Gen2
     >> Menu_display_ambient_illumination — Включ
@@ -104,13 +107,15 @@
     >> Ambience_light_colorlist_default — 1
     >> Ambiente_Fahrprofil_Individual — 7
     >> Ambiente_Farbwahl_FPA_waehlbare_Kopplung — active
-    >> Ambiente_Farbwahl_FPA_waehlbare_ Kopplung _Status_hmi_default — сопряжены (coupled)
+    >> Ambiente_Farbwahl_FPA_waehlbare_Kopplung_Status_hmi_default — сопряжены (coupled)
 	→ Применить
 	
     > Освещение салона 2 го поколения: конфигурация фонарей
     >> Mittleconsolebeleschtung mehrfarbig — акт.
+    либо, если первого нет, то
+    >> Cockpitbeleuchtung mehrfarbig — акт.
     → Применить
-
+    
     Блок 19 → Кодирование
     > FPA_Funktion_AMB — включить
     → Применить (с перезагрузкой блока)
