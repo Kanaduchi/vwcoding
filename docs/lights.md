@@ -1,5 +1,21 @@
 # Свет
 
+### Расшифровка каналов задних фонарей
+Leuchte16BLK SLB35BLK SL KC9 > Indicator rear left (inside) (LED rear lights)  
+Leuchte17TFL R BLK SRB3TFL R BLK SR KC3 > Indicator rear right (inside) (LED rear lights)  
+Leuchte18BLK HLA60 > Indicator rear left (outside) (taillights)  
+Leuchte19BLK HRC31 > Indicator rear right (outside) (taillights)  
+Leuchte20BR LA71 > Parking light / brake light, rear left (tail lights)  
+Leuchte21BR RC8 > Parking light / brake light, rear right (tail lights)  
+Leuchte22BR MA57 > Brake light, rear center (third stop light)  
+Leuchte23SL HLC10 > Parking light, rear left inside (taillights)  
+Leuchte24SL HRA65 > Parking light, rear right inside (taillights)  
+Leuchte25KZL HA59 > License plate light  
+Leuchte26NSL LA72 > Rear fog light Rear left inside (taillights)  
+Leuchte27NSL RC6 > Stand lights behind both inside (LED taillights)  
+Leuchte28RFL LC11 > Reversing light, rear left inside (taillights)  
+Leuchte29RFL RA64 > Reversing light, rear right inside (taillights)  
+
 ### Регулировка Датчика Освещённости
 
     Блок 09 → Адаптация 
