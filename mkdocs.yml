@@ -14,9 +14,13 @@ copyright: 'Copyright &copy; 2020 - Andrey Topchiy'
 nav:
   - Безопасность: security.md
   - Освещение:
-    - Фары:  lights.md
+    - Передние фары:  headLights.md
+    - Задние фары: rearLights.md
     - Подсветка салона: esteticLights.md
-  - Комфорт: comfort.md
+  - Комфорт:
+    - Приборная панель: AID.md
+    - Головное устройство: headDevice.md
+    - Зеркала, стеклоподъемники, сидения: comfort.md
   - Климат: climate.md
   - Омыватель фар: wash.md
   - Звук: sound.md

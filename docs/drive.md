@@ -277,6 +277,8 @@ Control Unit 13 (Adaptive Cruise Control) → Adaptation
     
 ### Off Road Display
 
+    ![Screenshot](../images/offroad.jpg)
+
     Блок 5F → Адаптация
     > Car_Function_Adaptations_Gen2
     > menu_display_compass -> "active" (default not active)

@@ -88,7 +88,14 @@
 
 ### Выбор цвета в зависимости от профиля движения
 
+!!! warning ""
+    Установленный гейт должен иметь версию софта не ниже 4344 или 5344 и иметь индекс Q и выше
+
 Меню эстетической подсветки
+    
+    Блок 19 → Кодирование
+    > FPA_Funktion_AMB — включить
+    → Применить (с перезагрузкой блока)
 
     Блок 5F → Адаптация
     > Car_Function_Adaptations_Gen2
@@ -104,6 +111,7 @@
 	>> Ambientemenue mit globalem aus — акт.
     >> Ambientemenue mit alle Zonen — акт.
     >> Ambient_Farbliste_HMI — акт.
+    
     >> Ambience_light_colorlist_default — 1
     >> Ambiente_Fahrprofil_Individual — 7
     >> Ambiente_Farbwahl_FPA_waehlbare_Kopplung — active
@@ -115,10 +123,6 @@
     либо, если первого нет, то
     >> Cockpitbeleuchtung mehrfarbig — акт.
     → Применить
-    
-    Блок 19 → Кодирование
-    > FPA_Funktion_AMB — включить
-    → Применить (с перезагрузкой блока)
     
 Профили движения
 
