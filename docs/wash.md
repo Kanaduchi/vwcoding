@@ -70,8 +70,6 @@ Cрабатывание после долгого удержания рычаг�
     Блок 09 → Адаптация
     > Задний стеклоочиститель (Rear Wiper / Heckwischersteuerung)
     > Automatisches Heckwischen  → активировать
-    > Einzelansteuerung Heckintervallwischen Zeitintervall 1
-    Поменять с 7s на 15s
 	→ Применить
 	
 	ODIS E:

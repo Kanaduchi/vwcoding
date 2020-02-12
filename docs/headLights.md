@@ -20,7 +20,7 @@
     Blinken rechts Hellphase — работает при загорании правого поворотника  
     Blinken rechts Dunkelphase — работает при притухании правого поворотника  
     Blinken links aktiv (beide Phase) — работает постоянно при работе левого поворотника  
-    Blinken rechts aktiv (beide Phase) — постоянно при работе правого поворотника  
+    Blinken rechts aktiv (beide Phase) — постоянно постоянно при работе правого поворотника  
     Standlicht allgemein (Schlusslicht, Positionslicht, Begrenzungslicht) — горит в режиме габаритов  
     Parklicht links (beidseitiges Parklicht aktiviert li & re) — горит в режиме парковочного огня левый (зажигание выкл.)  
     Parklicht rechts — горит в режиме парковочного огня правый (зажигание выкл.)  
@@ -50,16 +50,6 @@
 
 ### Регулировка Датчика Освещённости
 
-    Блок 09 → Адаптация 
-    > Датчик Освещённости
-    > Helligkeitsgrenze_Licht__einschalten - с 1200 на 400 (200 поправил что бы ещё позже включался)
-    > Helligkeitsgrenze_Licht_ausschalten - с 2200 на 600 (400 поправил что бы ещё позже включался)
-    
-    ODIS E
-    > IDE08786-ENG115724 -- Assistance light functions - Lichtsensorempfindlichkeit 
-    по умолчанию – "normal", ставим - "non sensitive"
-	→ Применить
-	
 	Блок 09 → Кодирование → подблок RLНS
 	3СА8DD — фары включаются не так поздно, где то при 1200lx
     3CA8D7 — фары включаются совсем поздно, при 800lx
@@ -71,9 +61,6 @@
     Кодирование - 07 → подблок RLНS
     > Меняем байты 0 и 2 что бы получилось 3С А8 D7. 
     > Просто нажать на значение и вбить новое, так проще, но можно и биты самому поставить в нулевом 2,3,4,5 биты а во втором — 0,1,2,4,6,7
-
-!!! tip
-    Варианты: 3C88D7, 3С88D2
 
 ### Маневровый свет от зеркал при парковке
 
@@ -200,22 +187,27 @@
 
 ### Американский стиль поворотников (горят постоянно с ДХО в в пол-накала)
 
-    Блок 09 → Адаптация
-   
-    > Leuchte 0BLK VL B36 
-    >> Lichtfunktion D0 → меняем на Standlicht allgemein (Schlusslicht, Positionslicht, Begrenzungslicht) 
-    >> Dimmwert CD0 → значение «0» меняем на «30» 
-    >> Lichtfunktion E0 → меняем на Blinken Links Dunkelphase
-    >> Dimming Direction EF0 → maximize меняем на minimize
-    → Применить
-    
-    > Leuchte 1BLK VRB20
-    >> Lichtfunktion D1 → меняем на Standlicht allgemein (Schlusslicht, Positionslicht, Begrenzungslicht)
-    >> Dimmwert CD1 → значение «0» меняем на «30»
-    >> Lichtfunktion E1 → меняем на Blinken Links Dunkelphase
-    >> Dimming Direction EF1 → maximize меняем на minimize
-    → Применить
-    
+!!! note ""
+    Актуально для автомобилей с поворотниками, в которых стоят лампы накаливания
+
+```
+Блок 09 → Адаптация
+> Leuchte0BLK VLB36 
+>> Lichtfunktion D0 → меняем на Standlicht allgemein (Schlusslicht, Positionslicht, Begrenzungslicht) 
+>> Dimmwert CD0 → значение «0» меняем на «30» 
+>> Lichtfunktion E0 → меняем на Blinken Links Dunkelphase
+>> Dimming Direction EF0 → maximize меняем на minimize
+→ Применить
+```
+```
+> Leuchte1BLK VRB20
+>> Lichtfunktion D1 → меняем на Standlicht allgemein (Schlusslicht, Positionslicht, Begrenzungslicht)
+>> Dimmwert CD1 → значение «0» меняем на «30»
+>> Lichtfunktion E1 → меняем на Blinken Rechts Dunkelphase
+>> Dimming Direction EF1 → maximize меняем на minimize
+ → Применить
+```
+
 > логин-пароль 31347
 
 ### Перемигивание поворотников с ДХО
@@ -224,13 +216,13 @@
 Блок 09 → Адаптация
 
 > Leuchte2SL VLB10
->> Lichtfunktion G 2 → выбираем Blinken links (Hellphase)
+>> Lichtfunktion G 2 → выбираем Blinken links Hellphase
 >> Dimmwert GH 2 → вводим значение «0»
 >> Dimming Direction GH 2 → выбираем minimize
 → Применить
 
 > Leuchte3SL VRB21
->> Lichtfunktion G 3 → выбираем Blinken rechts (Hellphase)
+>> Lichtfunktion G 3 → выбираем Blinken rechts Hellphase
 >> Dimmwert GH 3 → вводим значение «0»
 >> Dimming Direction GH 3 → выбираем minimize
 → Применить
@@ -327,9 +319,9 @@
 
 	Блок 09 → Адаптация
 	> Leuchte12NL LB45
-	> Lichtfunktion E 12 → Abbieglicht links (было nicht aktiv)
+	> Lichtfunktion D 12 → Abbieglicht links (было nicht aktiv)
 	> Leuchte13NL RB5
-	> Lichtfunktion E 13 → Abbieglicht rechts (было nicht aktiv)
+	> Lichtfunktion D 13 → Abbieglicht rechts (было nicht aktiv)
 	→ Применить
 	
 Изменение скорости включения освещения поворотов
