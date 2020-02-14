@@ -1,53 +1,5 @@
-# Свет
-
-??? tip "Расшифровка каналов передних фонарей"
-    Leuchte0BLK VLB36 — Левый передний поворотник  
-    Leuchte1BLK VRB20 — Правый передний поворотник  
-    Leuchte2SL VLB10 — Левый передний габарит  
-    Leuchte3SL VRB21 — Правый передний габарит  
-    Leuchte4TFL LB44 — Левый передний ДХО  
-    Leuchte5TFL RB32 — Правый передний ДХО  
-    Leuchte6ABL LC5 — Левый ближний свет  
-    Leuchte7ABL RB1 — Правый ближний свет  
-    Leuchte8FL LB39 — Левый дальний свет  
-    Leuchte9FL RB2 — Правый дальний свет  
-    Leuchte12NL LB45 — Левая передняя ПТФ  
-    Leuchte13NL RB5 — Правая передняя ПТФ  
-    
-??? tip "Параметры применяемые для функций освещения"
-    Blinken links Hellphase — работает при загорании левого поворотника  
-    Blinken links Dunkelphase — работает при притухании левого поворотника  
-    Blinken rechts Hellphase — работает при загорании правого поворотника  
-    Blinken rechts Dunkelphase — работает при притухании правого поворотника  
-    Blinken links aktiv (beide Phase) — работает постоянно при работе левого поворотника  
-    Blinken rechts aktiv (beide Phase) — постоянно постоянно при работе правого поворотника  
-    Standlicht allgemein (Schlusslicht, Positionslicht, Begrenzungslicht) — горит в режиме габаритов  
-    Parklicht links (beidseitiges Parklicht aktiviert li & re) — горит в режиме парковочного огня левый (зажигание выкл.)  
-    Parklicht rechts — горит в режиме парковочного огня правый (зажигание выкл.)  
-    Abblendlichts links — горит при ближнем левом огне  
-    Abblendlicht rechts — горит при ближнем правом огне  
-    Fernlicht links — горит при дальнем левом огне  
-    Fernlicht rechts — горит при дальнем правом огне  
-    Lichthupe generell — включается при моргании дальним  
-    Nebellicht links — горит при включении левого птф  
-    Nebellicht rechts — горит при включении правого птф  
-    Tagfahrlicht — горит при ДХО  
-    Bremslicht — горит при нажатии на тормоз  
-    Rueckfahrlicht — горит при включенной задней передаче  
-    Nebelschlusslicht — горит при включении заднего птф  
-    Heckdeckel offen — загорается при открытии багажника  
-    Heckdeckel geschlossen — загорается при закрытии багажника  
-    Dimmung klemme 58xs — регулируется яркость регулятором из салона  
-    Innenlicht — внутреннее освещение, плавно включается при открытии двери  
-    Kofferraumlicht — горит при включении света в багажнике (при открытом багажнике)  
-    Fussraumlicht — освещение для ног  
-    Tuerausstiegslicht vorn links — загорается при открытии передней левой двери  
-    Tuerausstiegslicht vorn rechts — загорается при открытии передней правой двери  
-    Tuerausstiegslicht hinten links — загорается при открытии задней левой двери  
-    Tuerausstiegslicht hinten rechts — загорается при открытии задней правой двери  
-    Tuerausstiegslichtv links — загорается при открытии двери с левой стороны  
-    Tuerausstiegslichtv rechts — загорается при открытии двери с правой стороны  
-
+# Передние фары
+  
 ### Регулировка Датчика Освещённости
 
 	Блок 09 → Кодирование → подблок RLНS
@@ -210,7 +162,31 @@
 
 > логин-пароль 31347
 
-### Перемигивание поворотников с ДХО
+### Перемигивание поворотников с ДХО (Audi style) для FULL LED фар
+
+```
+Блок 09 → Адаптация
+
+> Leuchte6ABL LC5
+>> Lichtfunktion C 2 → выбираем Blinken links Hellphase
+>> Dimmwert CD 2 → вводим значение «0»
+>> Dimming Direction CD 2 → выбираем minimize
+→ Применить
+
+> Leuchte7ABL RB1
+>> Lichtfunktion G 3 → выбираем Blinken rechts Hellphase
+>> Dimmwert GH 3 → вводим значение «0»
+>> Dimming Direction GH 3 → выбираем minimize
+→ Применить
+```
+
+> логин-пароль 31347
+
+!!! tip "Audi Style"
+    Используется функция Blinken links aktiv (beide Phase).  
+    Dimmwert → вводим значение от 20 до 35  
+
+### Перемигивание поворотников с ДХО (для обычных фар)
 
 ```
 Блок 09 → Адаптация

@@ -1,56 +1,5 @@
-# Свет
-
-??? tip "Расшифровка каналов задних фонарей"
-    Leuchte16BLK SLB35BLK SL KC9 > Левый габарит (только для 3D LED)   
-    Leuchte17TFL R BLK SRB3TFL R BLK SR KC3 > Правый габарит (только для 3D LED)  
-    Leuchte18BLK HLA60 > Задний левый указатель поворота 
-    Leuchte19BLK HRC31 > Задний правый указатель поворота  
-    Leuchte20BR LA71 > Тормозной сигнал левый (для обычных фар: левый габаритный огонь + стоп-сигнал на крыле) 
-    Leuchte21BR RC8 > Тормозной сигнал правый (для обычных фар: правый габаритный огонь + стоп-сигнал на крыле)  
-    Leuchte22BR MA57 > Центральный стоп сигнал  
-    Leuchte23SL HLC10 > Левый задний габарит (на задней двери)
-    Leuchte24SL HRA65 > Правый задний габарит (на задней двери)
-    Leuchte25KZL HA59 > Подсветка номерного знака  
-    Leuchte26NSL LA72 > Левая задняя ПТФ  
-    Leuchte27NSL RC6 > Внутренняя секция стоп-сигнала на крышке (для 3D LED) или Правая задняя ПТФ (для обычных фонарей)  
-    Leuchte28RFL LC11 > Левый задний ход (только для 3D LED)
-    Leuchte29RFL RA64 > Правый задний ход
-    Leuchte30FR LC72 — Освещение ног
-    
-??? tip "Параметры применяемые для функций освещения"
-    Blinken links Hellphase — работает при загорании левого поворотника  
-    Blinken links Dunkelphase — работает при притухании левого поворотника  
-    Blinken rechts Hellphase — работает при загорании правого поворотника  
-    Blinken rechts Dunkelphase — работает при притухании правого поворотника  
-    Blinken links aktiv (beide Phase) — работает постоянно при работе левого поворотника  
-    Blinken rechts aktiv (beide Phase) — постоянно при работе правого поворотника  
-    Standlicht allgemein (Schlusslicht, Positionslicht, Begrenzungslicht) — горит в режиме габаритов  
-    Parklicht links (beidseitiges Parklicht aktiviert li & re) — горит в режиме парковочного огня левый (зажигание выкл.)  
-    Parklicht rechts — горит в режиме парковочного огня правый (зажигание выкл.)  
-    Abblendlichts links — горит при ближнем левом огне  
-    Abblendlicht rechts — горит при ближнем правом огне  
-    Fernlicht links — горит при дальнем левом огне  
-    Fernlicht rechts — горит при дальнем правом огне  
-    Lichthupe generell — включается при моргании дальним  
-    Nebellicht links — горит при включении левого птф  
-    Nebellicht rechts — горит при включении правого птф  
-    Tagfahrlicht (Daytime Running Lights) — горит при ДХО  
-    Bremslicht — горит при нажатии на тормоз  
-    Rueckfahrlicht — горит при включенной задней передаче  
-    Nebelschlusslicht — горит при включении заднего птф  
-    Heckdeckel offen — загорается при открытии багажника  
-    Heckdeckel geschlossen — загорается при закрытии багажника  
-    Dimmung klemme 58xs — регулируется яркость регулятором из салона  
-    Innenlicht — внутреннее освещение, плавно включается при открытии двери  
-    Kofferraumlicht — горит при включении света в багажнике (при открытом багажнике)  
-    Fussraumlicht — освещение для ног  
-    Tuerausstiegslicht vorn links — загорается при открытии передней левой двери  
-    Tuerausstiegslicht vorn rechts — загорается при открытии передней правой двери  
-    Tuerausstiegslicht hinten links — загорается при открытии задней левой двери  
-    Tuerausstiegslicht hinten rechts — загорается при открытии задней правой двери  
-    Tuerausstiegslichtv links — загорается при открытии двери с левой стороны  
-    Tuerausstiegslichtv rechts — загорается при открытии двери с правой стороны  
-
+# Задние фары
+  
 ### Световая индикация при резком (аварийном) торможении
  
     Блок 09 → Кодирование
@@ -230,6 +179,22 @@
 >> Dimmwert EF 21 → 60
 → Применить
 ```
+
+Leuchte23SL HLC10
+Lichtfunktion Е 23:
+Старое значение: nicht aktiv
+Новое значение: Rear lid open
+Dimming Direction EF 23:
+Старое значение: maximize
+Новое значение: minimize
+Нажать применить.
+Leuchte24SL HLC10
+Lichtfunktion Е 24:
+Старое значение: nicht aktiv
+Новое значение: Rear lid open
+Dimming Direction EF 24:
+Старое значение: maximize
+Новое значение: minimize
 
 > логин-пароль 31347
 
