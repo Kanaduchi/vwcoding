@@ -96,9 +96,9 @@ Leuchte9FL RB2 - [Leuchte][9][FL] [R][B2]
     | Innenlicht | внутреннее освещение, плавно включается при открытии двери |
     | Kofferraumlicht | горит при включении света в багажнике (при открытом багажнике) |
     | Fussraumlicht | освещение для ног |
-    | Ambientelicht 1 | Ambient lighting 1 | 
-    | Ambientelicht 2 | Ambient lighting 2 |
-    | Ambientelicht 3 | Ambient lighting 3 |
+    | Ambientelicht 1 | освещение центральной консоли 1 | 
+    | Ambientelicht 2 | освещение центральной консоли 2 |
+    | Ambientelicht 3 | освещение дверей 3 |
     | Ambientelicht 4 | Ambient lighting 4 |
     | Ambientelicht 5 | Ambient lighting 5 |
     | Umfeldbeleuchtung | Ambient lighting |
@@ -158,46 +158,48 @@ Leuchte9FL RB2 - [Leuchte][9][FL] [R][B2]
 У каждой лампы можно указать её тип - Lasttypen
 
 ??? note "Возможные варианты ламп и их номер"
-    1	LED Tagfahrlichtmodul Versorgung  
-    2	Shutter; Diagnosesensierung für "LED low"  
-    3	Xenon Abblendlicht  
-    4	LED Tagfahrlichtmodul Signal  
-    5	LED Abblendlicht  
-    6	LED Lichtmodul  
-    7	Reserved_07  
-    8	allgemeine Glühlampe 12W  
-    9	allgemeine Glühlampe 27W; auch H15  
-    10	allgemeine Scheinwerfer  
-    11	Abblendlicht  
-    12	Blinkleuchten  
-    13	Bremsleuchten  
-    14	kombinierte Blink- Bremsleuchten  
-    15	allgemeine Glühlampe 6W; auch H6W  
-    16	2* 3W  
-    17	4* 3W  
-    18	2* 5W  
-    19	3* 5W  
-    20	4* 5W  
-    21	2* 13W Blinker  
-    22	2* 16W Blinker  
-    23	allgemeine Scheinwerfer  
-    24	2* 5W KZL + LED Sidemarker  
-    25	allgemeine Glühlampe innen- oder Außenlicht  
-    32	allgemeine LED bis 12W  
-    33	LED-Modul Blinkleuchten  
-    34	LED Bremsleuchten  
-    35	kombinierte LED Blink-Bremsleuchten  
-    36	LED Kleinleistung  
-    37	allgemeine LED bis 12W  
-    38	LED Blinkleuchten  
-    39	LED Bremsleuchten  
-    40	allgemeine LED  
-    41	LED Kleinleistung  
-    42	LED dritte Bremsleuchte  
-    43	allgemeine LED  
-    44	LED Fußraum- oder -Innenleuchte  
-    45	allgemeine LED bis 6W  
-    46	LED Kleinleistung  
+    | Номер типа лампы | Описание типа лампы |
+    |------------------|------------------|
+    | 1 | LED Tagfahrlichtmodul Versorgung   |
+    | 2 | Shutter; Diagnosesensierung für "LED low"   |
+    | 3 | Xenon Abblendlicht   |
+    | 4 | LED Tagfahrlichtmodul Signal   |
+    | 5 | LED Abblendlicht   |
+    | 6 | LED Lichtmodul   |
+    | 7 | Reserved_07   |
+    | 8 | allgemeine Glühlampe 12W   |
+    | 9 | allgemeine Glühlampe 27W; auch H15   |
+    | 10 | allgemeine Scheinwerfer   |
+    | 11 | Abblendlicht   |
+    | 12 | Blinkleuchten   |
+    | 13 | Bremsleuchten   |
+    | 14 | kombinierte Blink- Bremsleuchten   |
+    | 15 | allgemeine Glühlampe 6W; auch H6W   |
+    | 16 | 2* 3W   |
+    | 17 | 4* 3W   |
+    | 18 | 2* 5W   |
+    | 19 | 3* 5W   |
+    | 20 | 4* 5W   |
+    | 21 | 2* 13W Blinker   |
+    | 22 | 2* 16W Blinker   |
+    | 23 | allgemeine Scheinwerfer   |
+    | 24 | 2* 5W KZL + LED Sidemarker   |
+    | 25 | allgemeine Glühlampe innen- oder Außenlicht   |
+    | 32 | allgemeine LED bis 12W   |
+    | 33 | LED-Modul Blinkleuchten   |
+    | 34 | LED Bremsleuchten   |
+    | 35 | kombinierte LED Blink-Bremsleuchten   |
+    | 36 | LED Kleinleistung   |
+    | 37 | allgemeine LED bis 12W   |
+    | 38 | LED Blinkleuchten   |
+    | 39 | LED Bremsleuchten   |
+    | 40 | allgemeine LED   |
+    | 41 | LED Kleinleistung   |
+    | 42 | LED dritte Bremsleuchte   |
+    | 43 | allgemeine LED   |
+    | 44 | LED Fußraum- oder -Innenleuchte   |
+    | 45 | allgemeine LED bis 6W   |
+    | 46 | LED Kleinleistung  |
 
 ### Яркость
 

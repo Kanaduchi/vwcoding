@@ -180,21 +180,21 @@
 → Применить
 ```
 
-Leuchte23SL HLC10
-Lichtfunktion Е 23:
-Старое значение: nicht aktiv
-Новое значение: Rear lid open
-Dimming Direction EF 23:
-Старое значение: maximize
-Новое значение: minimize
-Нажать применить.
-Leuchte24SL HLC10
-Lichtfunktion Е 24:
-Старое значение: nicht aktiv
-Новое значение: Rear lid open
-Dimming Direction EF 24:
-Старое значение: maximize
-Новое значение: minimize
+Отключение фонарей на крышке багажника при её открытии:
+```
+Блок 09 → Адаптация
+>> Leuchte23SL HLC10
+>> Lichtfunktion G 23 → Rear lid open (было nicht aktiv)
+>> Dimming Direction GH 23 → minimize
+→ Применить
+```
+```
+Блок 09 → Адаптация
+>> Leuchte24SL HLC10
+>> Lichtfunktion G 24 → Rear lid open (было nicht aktiv)
+>> Dimming Direction GH 24 → minimize
+→ Применить
+```
 
 > логин-пароль 31347
 
