@@ -8,7 +8,7 @@
 У разных машин (Tiguan, Skoda, Golf, Passat) могут быть разные привязки ламп к каналам.  
 Например, таблица для Tiguan 2 (2017-):
     
-| Названия ламп                                 | LED                                       | TOP LED                      |
+| Названия ламп                                 | BASIS LED                                 | MID LED                      |
 | --------------------------------------------- |:-----------------------------------------:| ----------------------------:|
 | Leuchte0BLK VLB36 / Leuchte1BLK VRB20         | Левый / Правый указатель поворота         |                              |
 | Leuchte2SL VLB10 / Leuchte3SL VRB21           | Левый / Правый управление ДХО             |                              |
@@ -32,7 +32,12 @@
 | Leuchte23SL HLC10 / Leuchte24SL HRA65                                        | Левый / Правый габаритный огонь на задней двери               | Левый/Правый габаритный огонь на задней двери      |
 | Leuchte25KZL HA59                                                            | Подсветка номера                                              | Подсветка номера                                   |
 | Leuchte26NSL LA72 / Leuchte27NSL RC6                                         | Левый ПТФ / Пусто                                             | Левый ПТФ/ Cтоп-сигнал на крышке                   |
-| Leuchte28RFL LC11 / Leuchte29RFL RA64                                        | пусто / Правый задний ход                                     | Левый / Правый задний ход                          |
+| Leuhte28RFL LC11 / Leuchte29RFL RA64                                        | пусто / Правый задний ход                                     | Левый / Правый задний ход                          |
+    
+### Список других ламп
+
+Leuchte 35 LED Warnblinktaster C48 - кнопка аварийной сигнализации    
+Leuchte30FR LC72 - освещение ног в салоне
     
 ### Расшифровка каналов
 
@@ -52,8 +57,10 @@ Leuchte9FL RB2 - [Leuchte][9][FL] [R][B2]
     
     | Название функции | Описание функции |
     |------------------|------------------|
-    | nicht aktiv       | не включено  |
-    | aktiv 100% 	    | всегда включено  |
+    | nicht aktiv          | не включено  |
+    | nicht_definiert_4c   | всегда работает с 30% яркостью, а при включении аварийной сигнализации чередуется между 50% и 100% яркости |
+    | nicht_definiert_с4   | при включении аварийной сигнализации чередуется между 50% и 100% яркости |
+    | aktiv 100% 	       | всегда включено  |
     | Blinken links Hellphase | работает при загорании левого поворотника |
     | Blinken links Dunkelphase | работает при притухании левого поворотника |
     | Blinken rechts Hellphase | работает при загорании правого поворотника |
@@ -92,7 +99,9 @@ Leuchte9FL RB2 - [Leuchte][9][FL] [R][B2]
     | Klemme 30G | Terminal 30G |
     | Dimmung klemme 58xs | регулируется яркость регулятором из салона |
     | Dimmung Klemme 58xt | Dimming terminal 58xt |
+    | Dimmung Klemme 58xd | (Terminal 58xd dimmer)Terminal 58xd dimmer |
     | Klemme 15 mit Nachlauf bis Fahrzeugstillstand | Terminal 15 with a lag after vehicle standstill |
+    | Klemme 15 ohne Nachlauf| Terminal 15 without running |
     | Innenlicht | внутреннее освещение, плавно включается при открытии двери |
     | Kofferraumlicht | горит при включении света в багажнике (при открытом багажнике) |
     | Fussraumlicht | освещение для ног |
@@ -110,20 +119,18 @@ Leuchte9FL RB2 - [Leuchte][9][FL] [R][B2]
     | Tuerausstiegslichtv rechts | загорается при открытии двери с правой стороны |
     | Fahrzeug mit Automatik Start-Stopp ist im Stopp-Modu(s) | Vehicle with automatic start-stop is in stop Modu (s) |
     | Klemme 75 Variante a_vfzg | Terminal 75 variant a_vfzg  |
-    | beidseitiges Dauerparklicht | Both sides permanent parking light |
     | Klemme 75 Variante vfzg | Terminal 75 variant vfzg  |
-    | Blinken links aktiv (beide Phasen);Auf- und Abdimmend mit p_t_blinken_rampe | Flashing left active (both phases);Dimming up and down with p_t_ flash ramp |
-    | Blinken rechts aktiv (beide Phasen);  Auf- und Abdimmend mit p_t_blinken_rampe | Flashing right active (both phases);Dimming up and down with p_t_ flash ramp |
+    | beidseitiges Dauerparklicht | Both sides permanent parking light |
+    | Blinken links aktiv (beide Phasen); Auf- und Abdimmend mit p_t_blinken_rampe | Flashing left active (both phases);Dimming up and down with p_t_ flash ramp |
+    | Blinken rechts aktiv (beide Phasen); Auf- und Abdimmend mit p_t_blinken_rampe | Flashing right active (both phases);Dimming up and down with p_t_ flash ramp |
     | Schlusslicht aktiv ohne Bremslicht aktiv;ist deaktiviert;wenn Bremslicht aktiv ist !!! | Taillight active  without stop light; disabled if the brake light is active !!! |
     | Aktive Blinkfunktion hat ein auf 1 gesetztes zugeordnetes Bit in pa_dynamisch_blinken | Active flashing function Bit1 is set t associated in pa_ dynamic_flash  |
-    | Motorraumlicht| Engine compartment light |
+    | Motorraumlicht| Загорается при открытие моторного отсека (капота) |
     | Fahrzeug ist nicht fahrbereit (Motor läuft nicht; Elektroantrieb nicht aktiv o.ä.) | Vehicle is not roadworthy (electric drive not active or similar, engine is not running) |
     | Handbremse ist angezogen| Hand brake is applied |
-    | Klemme 15 ohne Nachlauf| Terminal 15 without running |
     | Debug-Lichtfunktion (in Anlehnung an CCP) | Debug light function (based on CCP) |
     | Debug-Lichtfunktion Fehlerspeicher | Debug light function error memory |
     | Versorgungsbedarf der LCM Module | Supply requirements of the LCM modules |
-    | Terminal 58xd dimmer | Terminal 58xd dimmer |
     | Zuschaltung Trennrelais für 2. Batterie | Switching cut-off relay for 2nd battery |
     
 ### Цепочки групп
@@ -228,10 +235,14 @@ Leuchte9FL RB2 - [Leuchte][9][FL] [R][B2]
 1. Находим нужные фары: Leuchte12NL LB45 для левой стороны и Leuchte13NL RB5 для правой.
 2. Находим свободную группу функций освещения. В нашем случае это CD
 3. Задаем функции для левой фары:  
-    > Lichtfunktion C 12 -> Lichthupe generell (включается при моргании дальним)  
-    > Dimming direction CD 12 -> maximum  (увеличение яркости)  
-    > Dimmwert CD 12 – 0 -> 100  
-4. Задаем функции для правой фары:  
-    > Lichtfunktion C 13 -> Lichthupe generell (включается при моргании дальним)   
-    > Dimming direction CD 13 -> maximum  (увеличение яркости)  
-    > Dimmwert CD 13 – 0 -> 100  
+```
+Lichtfunktion C 12 -> Lichthupe generell (включается при моргании дальним)  
+Dimming direction CD 12 -> maximum  (увеличение яркости)  
+Dimmwert CD 12 – 0 -> 100
+```  
+4. Задаем функции для правой фары: 
+``` 
+Lichtfunktion C 13 -> Lichthupe generell (включается при моргании дальним)   
+Dimming direction CD 13 -> maximum  (увеличение яркости)  
+Dimmwert CD 13 – 0 -> 100  
+```

@@ -277,26 +277,32 @@ Control Unit 13 (Adaptive Cruise Control) → Adaptation
     
 ### Off Road Display
 
-    ![Screenshot](../images/offroad.jpg)
-
-    Блок 5F → Адаптация
-    > Car_Function_Adaptations_Gen2
-    > menu_display_compass -> "active" (default not active)
-    > menu_display_compass_over_threshold_high -> "active" (default not active) 
-    → Применить  
-    
-    > Car_Function_List_BAP_Gen2
-    > compass_0x15 "active" (default not active)
-    → Применить 
-    
-    Блок 5F → Кодирование
-    > 24 байт (Navigation System)
-    > бит 02 → включить (было "02" 00000010, стало "06" 00000110)
-    → Применить (с перезагрузкой блока)
+![Screenshot](../images/offroad.jpg)
     
 !!! warning
-    На Тигуанах второго поколения работает в информационно командных системах Composition Media 6", Discover Media, Discover Pro и НЕ работает в Composition Media 8".
+    На Тигуанах второго поколения работает в информационно командных системах Composition Media 6", Discover Media, Discover Pro без кодирования в 5F блоке.  
 
+```
+Блок 5F → Адаптация
+> Car_Function_Adaptations_Gen2
+> menu_display_compass -> "active" (default not active)
+> menu_display_compass_over_threshold_high -> "active" (default not active) 
+→ Применить  
+  
+> Car_Function_List_BAP_Gen2
+> compass_0x15 "active" (default not active)
+→ Применить 
+``` 
+
+!!! note ""
+    Для Composition Media 8" необходимо выполнить кодировку 5F блока
+```
+Блок 5F → Кодирование
+> 24 байт (Navigation System)
+> бит 02 → включить (было "02" 00000010, стало "06" 00000110)
+→ Применить (с перезагрузкой блока)
+```
+    
 ??? note "Кодирование в VCDS"
     5F - MMI / RNS  
     Кодирование - 07 → Длинное кодирование  
