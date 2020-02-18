@@ -48,6 +48,7 @@ theme:
     - 404.html
 
 markdown_extensions:
+  - meta
   - markdown.extensions.admonition
   - markdown.extensions.def_list
   - markdown.extensions.footnotes
