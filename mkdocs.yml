@@ -14,9 +14,9 @@ copyright: 'Copyright &copy; 2020 - Andrey Topchiy'
 nav:
   - Безопасность: security.md
   - Освещение:
-    - Кодирование фар: codingLights.md
-    - Передние фары:  headLights.md
-    - Задние фары: rearLights.md
+    - Кодирование фонарей: codingLights.md
+    - Передние фонари:  headLights.md
+    - Задние фонари: rearLights.md
     - Подсветка салона: esteticLights.md
   - Комфорт:
     - Приборная панель: AID.md
