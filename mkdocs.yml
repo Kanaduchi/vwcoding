@@ -13,24 +13,25 @@ edit_uri: 'https://github.com/Kanaduchi/mqb/edit/1com/docs/'
 copyright: 'Copyright &copy; 2020 - Andrey Topchiy'
 
 nav:
+  - Ассистенты: assistents.md
   - Безопасность: security.md
+  - Движение: drive.md
+  - Звук: sound.md
+  - Климат: climate.md
+  - Комфорт:
+    - Приборная панель: AID.md
+    - Головное устройство: headDevice.md
+    - Зеркала, стеклоподъемники, сидения: comfort.md
+  - Омыватель фар: wash.md
   - Освещение:
     - Кодирование фонарей: codingLights.md
     - Передние фонари:  headLights.md
     - Задние фонари: rearLights.md
     - Подсветка салона: esteticLights.md
-  - Комфорт:
-    - Приборная панель: AID.md
-    - Головное устройство: headDevice.md
-    - Зеркала, стеклоподъемники, сидения: comfort.md
-  - Климат: climate.md
-  - Омыватель фар: wash.md
-  - Звук: sound.md
-  - Движение: drive.md
-  - Ассистенты: assistents.md
   - Шины: tires.md
   - ODIS E: odis-e.md
   - Поддержать проект: https://money.yandex.ru/to/4100110582992748/50
+  - История изменений: history.md
 
 theme:
   name: null
@@ -47,6 +48,10 @@ theme:
   # 404 page
   static_templates:
     - 404.html
+
+extra:
+  search:
+    language: 'en, ru'
 
 markdown_extensions:
   - meta

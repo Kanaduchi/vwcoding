@@ -279,7 +279,7 @@ Control Unit 13 (Adaptive Cruise Control) → Adaptation
 
 ![Screenshot](../images/offroad.jpg)
     
-!!! warning
+!!! note ""
     На Тигуанах второго поколения работает в информационно командных системах Composition Media 6", Discover Media, Discover Pro без кодирования в 5F блоке.  
 
 ```
@@ -287,6 +287,7 @@ Control Unit 13 (Adaptive Cruise Control) → Adaptation
 > Car_Function_Adaptations_Gen2
 > menu_display_compass -> "active" (default not active)
 > menu_display_compass_over_threshold_high -> "active" (default not active) 
+> menu_display_compass_clamp_15_off  -> "active" (default not active)
 → Применить  
   
 > Car_Function_List_BAP_Gen2
@@ -294,7 +295,7 @@ Control Unit 13 (Adaptive Cruise Control) → Adaptation
 → Применить 
 ``` 
 
-!!! note ""
+!!! warning ""
     Для Composition Media 8" необходимо выполнить кодировку 5F блока
 ```
 Блок 5F → Кодирование
