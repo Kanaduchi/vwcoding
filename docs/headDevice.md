@@ -80,3 +80,42 @@
     > display_configuration_0x45 → activate
     > display_configuration_0x45_msg_bus → CAN_Comfort
     → Применить 
+    
+### Off Road Display
+
+![Screenshot](../images/offroad.jpg)
+    
+!!! note ""
+    На Тигуанах второго поколения работает в информационно командных системах Composition Media 6", Discover Media, Discover Pro без кодирования в 5F блоке.  
+
+```
+Блок 5F → Адаптация
+> Car_Function_Adaptations_Gen2
+> menu_display_compass -> "active" (default not active)
+> menu_display_compass_over_threshold_high -> "active" (default not active) 
+> menu_display_compass_clamp_15_off  -> "active" (default not active)
+→ Применить  
+  
+> Car_Function_List_BAP_Gen2
+> compass_0x15 "active" (default not active)
+→ Применить 
+``` 
+
+!!! warning ""
+    Для Composition Media 8" необходимо выполнить кодировку 5F блока
+```
+Блок 5F → Кодирование
+> 24 байт (Navigation System)
+> бит 02 → включить (было "02" 00000010, стало "06" 00000110)
+→ Применить (с перезагрузкой блока)
+```
+    
+??? note "Кодирование в VCDS"
+    5F - MMI / RNS  
+    Кодирование - 07 → Длинное кодирование  
+    Байт 24 → Бит 2: (Navigation System) → ставим галочку  
+    либо правим двоичное значение - было "02" 00000010, стало "06" 00000110  
+    Выход  
+    Сохранить  
+    
+> логин-пароль 20103    
