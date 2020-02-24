@@ -1,3 +1,4 @@
+disqus: https-mqb-readthedocs-io
 # Активация ассистентов
 
 ### Описание 

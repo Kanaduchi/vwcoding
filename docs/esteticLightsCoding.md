@@ -5,6 +5,87 @@ disqus: https-mqb-readthedocs-io
     За помощь в создании данной инструкции выражаю благодарность [Вячеславу](https://www.drive2.ru/users/slavian116)   
     Если вы заметили неточность, просьба сообщить о ней в комментариях внизу страницы или написать [Вячеславу](https://www.drive2.ru/users/slavian116) через личные сообщения на Drive2
 
+## Общая информация
+
+??? tip "Список обозначения зон регулировки яркости"  
+    innenlicht - внутренне освещение салона  
+    fussraum - ноги  
+    tueren - дверь  
+    cockpit - передняя панель (ниша беспроводной зарядки)
+    miko - центральная консоль  
+    dach - крышка  
+    
+??? tip "Список существующих фонарей"
+    Ambiente_Applikationsleisten_in_Tuertafel - подсветка дверной панели 
+    Ambiente_Lautsprecher - подсветка динамиков  
+    Ambiente_Applikationsleisten_in_Instrumententafel - подсветка ниши беспроводной зарядки    
+    Cockpitbeleuchtung - подсветка передней консоли  
+    Mittelkonsolenbeleuchtung - подсветка ниши беспроводной зарядки  
+    Dachbeleuchtung - подсветка крыши  
+    Panoramaschiebedachbeleuchtung - подсветка панорамы    
+    Fussraumbeleuchtung - подсветка ног  
+
+## Задержка включения внутренного освещения
+
+Кодировки в 9 блоке позволяют реализовать возможность последовательного включения света в салоне.  
+
+За это отвечают следующие параметры:
+```
+Блок 09 → Адаптация
+> Освещение салона, параметры / Interior_light_parameter
+>> p_t_verzoegerung_einstieg_innenlicht:	0,0 [UN]_s
+>> p_t_verzoegerung_ausstieg_innenlicht:	0,0 [UN]_s
+>> p_t_verzoegerung_oeffnen_innenlicht:	0,0 [UN]_s
+>> p_t_verzoegerung_entriegelt_innenlicht:	0,0 [UN]_s
+>> p_t_verzoegerung_schliessen_innenlicht:	0,0 [UN]_s
+>> p_t_verzoegerung_schluessel_ab_innenlicht:	0,0 [UN]_s
+>> p_t_verzoegerung_verriegelt_innenlicht:	0,0 [UN]_s
+>> p_t_verzoegerung_einstieg_tueren:	0,0 [UN]_s
+>> p_t_verzoegerung_ausstieg_tueren:	0,0 [UN]_s
+>> p_t_verzoegerung_oeffnen_tueren:	0,0 [UN]_s
+>> p_t_verzoegerung_entriegelt_tueren:	0,0 [UN]_s
+>> p_t_verzoegerung_schliessen_tueren:	0,0 [UN]_s
+>> p_t_verzoegerung_schluessel_ab_tueren:	0,0 [UN]_s
+>> p_t_verzoegerung_verriegelt_tueren:	0,0 [UN]_s
+>> p_t_verzoegerung_einstieg_fussraum:	0,0 [UN]_s
+>> p_t_verzoegerung_ausstieg_fussraum:	0,0 [UN]_s
+>> p_t_verzoegerung_oeffnen_fussraum:	0,0 [UN]_s
+>> p_t_verzoegerung_entriegelt_fussraum:	0,0 [UN]_s
+>> p_t_verzoegerung_schliessen_fussraum:	0,0 [UN]_s
+>> p_t_verzoegerung_schluessel_ab_fussraum:	0,0 [UN]_s
+>> p_t_verzoegerung_verriegelt_fussraum:	0,0 [UN]_s
+>> p_t_verzoegerung_einstieg_cockpit:	0,0 [UN]_s
+>> p_t_verzoegerung_ausstieg_cockpit:	0,0 [UN]_s
+>> p_t_verzoegerung_oeffnen_cockpit:	0,0 [UN]_s
+>> p_t_verzoegerung_entriegelt_cockpit:	0,0 [UN]_s
+>> p_t_verzoegerung_schliessen_cockpit:	0,0 [UN]_s
+>> p_t_verzoegerung_schluessel_ab_cockpit:	0,0 [UN]_s
+>> p_t_verzoegerung_verriegelt_cockpit:	0,0 [UN]_s
+>> p_t_verzoegerung_einstieg_miko:	0,0 [UN]_s
+>> p_t_verzoegerung_ausstieg_miko:	0,0 [UN]_s
+>> p_t_verzoegerung_oeffnen_miko:	0,0 [UN]_s
+>> p_t_verzoegerung_entriegelt_miko:	0,0 [UN]_s
+>> p_t_verzoegerung_schliessen_miko:	0,0 [UN]_s
+>> p_t_verzoegerung_schluessel_ab_miko:	0,0 [UN]_s
+>> p_t_verzoegerung_verriegelt_miko:	0,0 [UN]_s
+>> p_t_verzoegerung_einstieg_dach:	0,0 [UN]_s
+>> p_t_verzoegerung_ausstieg_dach:	0,0 [UN]_s
+>> p_t_verzoegerung_oeffnen_dach:	0,0 [UN]_s
+>> p_t_verzoegerung_entriegelt_dach:	0,0 [UN]_s
+>> p_t_verzoegerung_schliessen_dach:	0,0 [UN]_s
+>> p_t_verzoegerung_schluessel_ab_dach:	0,0 [UN]_s
+>> p_t_verzoegerung_verriegelt_dach:	0,0 [UN]_s
+```
+
+Например, при открытии двери сначала включается подсветка ног, а только потом потолок.
+```Блок 09 → Адаптация
+> Освещение салона, параметры / Interior_light_parameter
+>> p_t_verzoegerung_einstieg_fussraum:	0,0 [UN]_s
+>> p_t_verzoegerung_einstieg_tueren:	2,2 [UN]_s
+>> p_t_verzoegerung_einstieg_dach:	    0,4 [UN]_s
+→ Применить
+```
+
 ## Установка дополнительных ламп освещения салона
 
 !!! note ""
@@ -17,16 +98,6 @@ disqus: https-mqb-readthedocs-io
 !!! warning ""
     Данные кодировки возможны только через OBD11 или ODIS    
     
-??? tip "Список существующих фонарей"
-    Ambiente_Applikationsleisten_in_Tuertafel - подсветка дверной панели 
-    Ambiente_Lautsprecher - подсветка динамиков  
-    Ambiente_Applikationsleisten_in_Instrumententafel - подсветка ниши беспроводной зарядки    
-    Cockpitbeleuchtung - подсветка передней консоли  
-    Mittelkonsolenbeleuchtung - подсветка ниши беспроводной зарядки  
-    Dachbeleuchtung - подсветка крыши  
-    Panoramaschiebedachbeleuchtung - подсветка панорамы    
-    Fussraumbeleuchtung - подсветка ног  
-
 ### Прорисовка "солнышек" в меню Эстетической подсветки
 
 За активацию дополнительных зон в меню Эстетической подстветки в 9 блоке отвечают 3 параметра адаптации:

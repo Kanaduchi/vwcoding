@@ -1,3 +1,4 @@
+disqus: https-mqb-readthedocs-io
 # Работа с ODIS ENGINEERING
 
 ### Загрузка нужного профиля машины

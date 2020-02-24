@@ -1,3 +1,4 @@
+disqus: https-mqb-readthedocs-io
 # Звук
 
 ### Улучшение звучания

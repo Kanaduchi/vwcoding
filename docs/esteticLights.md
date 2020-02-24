@@ -1,3 +1,4 @@
+disqus: https-mqb-readthedocs-io
 # Освещение салона
 
 ### Готовые файлы для ODIS-E
