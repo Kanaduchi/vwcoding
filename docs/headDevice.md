@@ -3,12 +3,20 @@ disqus: https-mqb-readthedocs-io
 
 ### Деактивация AM диапазона в магнитоле
 
-	Блок 5F → Кодирование
-	> [LO]_byte_14_AM_disable
-	выбираем «Вкл»
-	→ Применить (с перезагрузкой блока)
-	
-	ODIS E: 5F -> кодирование -> [LO]_byte_14_AM_disable: ативировать
+![Screenshot](../images/fm.jpg)
+
+Результат: слева внизу вместо ненужного "переключателя" AM/FM появляется иконка настройки радиостанций вручную
+
+```
+Блок 5F → Кодирование
+> [LO]_byte_14_AM_disable
+выбираем «Вкл»
+→ Применить (с перезагрузкой блока)
+```
+
+```
+ODIS E: 5F -> кодирование -> [LO]_byte_14_AM_disable: ативировать
+```
 
 > логин-пароль 20103
 
@@ -63,13 +71,6 @@ disqus: https-mqb-readthedocs-io
     > [VO]_nhtsa_properties
     > ... no_video_playback
     Включить
-
-### 3D Area View для камеры заднего вида
-
-    Блок 6C - Система камеры заднего вида → Кодирование
-    > 3D_Presentation
-    Старое значение: выкл.
-    Новое значение: вкл.    
     
 ### Меню в магнитоле для настройки приборной панели
 
@@ -119,4 +120,44 @@ disqus: https-mqb-readthedocs-io
     Выход  
     Сохранить  
     
-> логин-пароль 20103    
+> логин-пароль 20103 
+
+### Режим автошкола
+
+!!! tip ""
+    После адаптации необходимо перезагрузить магнитолу
+    
+```
+Блок 5F → Адаптация
+>> Car_Function_Adaptations_Gen2
+> menu_display_driving_school - не активир.меняем на активир.
+> menu_display_driving_school_over_threshold_high - не активир меняем на активир.
+>> Car_Function_List_CAN_Gen2
+>> Driving_school - недоступ. меняем на доступен
+→ Применить
+```
+
+### Включение персонализации
+
+```
+Блок 17 → Кодирование  
+> Байт 10 - Персонализация
+выбираем «Вкл»
+→ Применить
+```
+
+> логин-пароль 20103
+
+```
+Блок 09 → Адаптация
+> Персонализация / Personalisierung
+>> Personalisierung_Profilfunkion → profiles_active
+>> Profil_Variante → Konto (v. 2.x)
+>> Personalisierung_aktiv → Active
+>> Aktivierungsoption_im_HMI-Menue_sichtbar → Active
+>> Benutzerkontenverwaltung_in_HMI-Menue_sichtbar → Active
+>> Personalisierungsfunktionen_in_HMI-Menue_sichtbar → Active
+>> PSO_FSG_Setup2_Bit_1 → Active
+>> PSO_FSG_Setup2_Bit_2 → Active
+→ Применить
+```

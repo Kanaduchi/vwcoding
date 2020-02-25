@@ -222,6 +222,8 @@ disqus: https-mqb-readthedocs-io
 
 ### Пункт меню настроек "Дневной свет", чтоб отключать ДХО только по необходимости
 
+![Screenshot](../images/daylight.jpg)
+
 	Блок 09 → Адаптация
 	> Aussenlicht_Front
 	> Tagfahrlicht aktivierung durch BAP oder Bedienfolge moeglich
@@ -229,6 +231,8 @@ disqus: https-mqb-readthedocs-io
 	→ Применить
 
 > логин-пароль 31347
+
+В меню настройки освещения, появляется пункт "дневные ходовые огни":
 
 ### Светодиоды в ПТФ
 

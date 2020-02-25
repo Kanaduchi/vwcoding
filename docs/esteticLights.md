@@ -15,7 +15,7 @@ disqus: https-mqb-readthedocs-io
 ```
 Блок 09 → Адаптация
 > Suchbeleuchtung_allgemein
-> KL58 Einschalten mit Rampe → Active
+>> KL58 Einschalten mit Rampe → Active
 → Применить
 ```
 	
@@ -26,8 +26,8 @@ disqus: https-mqb-readthedocs-io
 ```
 Блок В7 Kessy Безопасный доступ → Адаптация 
 > DeveloperCoding Search lights
-> ZAT_illumination_concept_mybeat_clamp58xt: [VN]_activated
-> ZAT_illumination_modus_mybeat_clamp58xt: [VN]_activated
+>> ZAT_illumination_concept_mybeat_clamp58xt: [VN]_activated
+>> ZAT_illumination_modus_mybeat_clamp58xt: [VN]_activated
 → Применить
 ```
 
