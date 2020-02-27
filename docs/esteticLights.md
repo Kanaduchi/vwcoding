@@ -95,7 +95,7 @@ disqus: https-mqb-readthedocs-io
 ```
 Блок 09 → Адаптация
 > Освещение салона, параметры / Interior_light_parameter
->> p_ambientelicht_verbauinformation_HMI2 → активировать бит 2
+>> p_ambientelicht_verbauinformation_HMI2 → 100
 → Применить
 ```  
 
