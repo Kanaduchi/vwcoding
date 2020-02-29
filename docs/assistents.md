@@ -163,12 +163,15 @@ HCA - Указание блоку рулевого управления о на�
 Включаем в меню новые функции
 ```    
 Блок 5F (мультимедия) → Адаптация 
-> [VO]_Car_Function_List_BAP_Gen2: [LO]_LDW_HCA_0x19:  activated
-> [VO]_Car_Function_List_BAP_Gen2: [LO]_traffic_sign_recognition_0x21: activated
-> [VO]_Car_Function_Adaptations_Gen2: [LO]_menu_display_Lane_Departure_Warning: activated;
-> [VO]_Car_Function_Adaptations_Gen2: [LO]_menu_display_Lane_Departure_Warning_over_threshol d_high: activated;
-> [VO]_Car_Function_Adaptations_Gen2: [LO]_menu_display_road_sign_identification: activated;
-> [VO]_Car_Function_Adaptations_Gen2: [LO]_menu_display_road_sign_identification_over_thresh old_high: activated.
+> Car_Function_List_BAP_Gen2
+>> LDW_HCA_0x19:  activated
+>> traffic_sign_recognition_0x21: activated
+>> traffic_sign_recognition_0x21_msg_bus: [VN]_CAN_Extended
+> Car_Function_Adaptations_Gen2
+>> menu_display_Lane_Departure_Warning: activated;
+>> menu_display_Lane_Departure_Warning_over_threshol d_high: activated;
+>> menu_display_road_sign_identification: activated;
+>> menu_display_road_sign_identification_over_thresh old_high: activated.
 ```
 
 Даем указание блоку проекции (если есть)
