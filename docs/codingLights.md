@@ -57,6 +57,61 @@ Leuchte9FL RB2 - [Leuchte][9][FL] [R][B2]
 [R] - расположение - rechts (справа)/links (слева)  
 [B2] - Контакт на BCM (разъём В, пин 2)
 
+### Тип ламп
+
+У каждой лампы можно указать её тип - Lasttypen
+
+??? note "Возможные варианты ламп и их номер"
+    | Номер типа лампы | Описание типа лампы |
+    |------------------|------------------|
+    | 1 | LED Tagfahrlichtmodul Versorgung   |
+    | 2 | Shutter; Diagnosesensierung für "LED low"   |
+    | 3 | Xenon Abblendlicht   |
+    | 4 | LED Tagfahrlichtmodul Signal   |
+    | 5 | LED Abblendlicht   |
+    | 6 | LED Lichtmodul   |
+    | 7 | Reserved_07   |
+    | 8 | allgemeine Glühlampe 12W   |
+    | 9 | allgemeine Glühlampe 27W; auch H15   |
+    | 10 | allgemeine Scheinwerfer   |
+    | 11 | Abblendlicht   |
+    | 12 | Blinkleuchten   |
+    | 13 | Bremsleuchten   |
+    | 14 | kombinierte Blink- Bremsleuchten   |
+    | 15 | allgemeine Glühlampe 6W; auch H6W   |
+    | 16 | 2* 3W   |
+    | 17 | 4* 3W   |
+    | 18 | 2* 5W   |
+    | 19 | 3* 5W   |
+    | 20 | 4* 5W   |
+    | 21 | 2* 13W Blinker   |
+    | 22 | 2* 16W Blinker   |
+    | 23 | allgemeine Scheinwerfer   |
+    | 24 | 2* 5W KZL + LED Sidemarker   |
+    | 25 | allgemeine Glühlampe innen- oder Außenlicht   |
+    | 32 | allgemeine LED bis 12W   |
+    | 33 | LED-Modul Blinkleuchten   |
+    | 34 | LED Bremsleuchten   |
+    | 35 | kombinierte LED Blink-Bremsleuchten   |
+    | 36 | LED Kleinleistung   |
+    | 37 | allgemeine LED bis 12W   |
+    | 38 | LED Blinkleuchten   |
+    | 39 | LED Bremsleuchten   |
+    | 40 | allgemeine LED   |
+    | 41 | LED Kleinleistung   |
+    | 42 | LED dritte Bremsleuchte   |
+    | 43 | allgemeine LED   |
+    | 44 | LED Fußraum- oder -Innenleuchte   |
+    | 45 | allgemeine LED bis 6W   |
+    | 46 | LED Kleinleistung  |
+
+
+### 
+
+Lampendefektbitposition и Fehlerort mittleres Byte DTC-DFCC — два поля с указанием битов, используемых для проверки наличия и работоспособности ламп.
+
+Это диагностическая информация, которая передается по BAP шине
+
 ### Функции освещения
 
 ??? note "73 функции"
@@ -142,6 +197,17 @@ Leuchte9FL RB2 - [Leuchte][9][FL] [R][B2]
 ### Цепочки групп
 
 Каждая лампа делится на максимум 8 функций, 4 значения яркости и 4 направления яркости.  
+
+Lichtfunktion A, B, C, D, E, F, G, H — функции лампы в бортовой сети. Включаются при наступлении некоего события извне.  
+
+В каждом канале есть четыре пары - АВ СD EF GH, то есть всего в одном канале можно прописать восемь функций.   
+А так же же каждой паре можно выставить свою цепочку работы.  
+
+Чем выше группа освещения, тем важнее функция: GH > EF > CD > AB. Возникновение нового события перекрывает текущее, функция H имеет наивысший приоритет.
+
+Если мигающая функция закодирована в группах AB и CD, а противотуманная фара закодирована как функция E, 
+сигнал поворота на соответствующей стороне будет гореть постоянно, даже если вы мигаете, когда включена противотуманная фара!
+
 В каждой группе функций есть опция яркости и направление изменения яркости.
 
 Например, 
@@ -154,65 +220,9 @@ Leuchte9FL RB2 - [Leuchte][9][FL] [R][B2]
 
 Это означает, что для функций освещения C и D можно установить только одно направление изменения яркости и только одно значение изменения яркости.  
 
-В каждом канале есть четыре пары - АВ СD EF GH, то есть всего в одном канале можно прописать шесть функций.   
-А так же же каждой паре можно выставить свою цепочку работы.  
-
-Чем выше группа освещения, тем важнее функция: GH > EF > CD > AB.
-
-Если мигающая функция закодирована в группах AB и CD, а противотуманная фара закодирована как функция E, 
-сигнал поворота на соответствующей стороне будет гореть постоянно, даже если вы мигаете, когда включена противотуманная фара!
-
 Группа функций освещения AB не имеет направления регулировки яркости, так как свет в обычном положении выключен.  
-Вместо этого есть «Light control HD AB» - HD обозначает крышку багажника и может кодироваться как «Always» и «only_if_closed».  
+Вместо этого есть «Lichtansteuerung HD AB» - HD обозначает крышку багажника и может кодироваться как «Always» и «only_if_closed».  
 Поэтому, если вы хотите обратиться к источнику света только тогда, когда крышка багажника закрыта, то там должен быть закодирован «only_if_closed».
-
-### Тип ламп
-
-У каждой лампы можно указать её тип - Lasttypen
-
-??? note "Возможные варианты ламп и их номер"
-    | Номер типа лампы | Описание типа лампы |
-    |------------------|------------------|
-    | 1 | LED Tagfahrlichtmodul Versorgung   |
-    | 2 | Shutter; Diagnosesensierung für "LED low"   |
-    | 3 | Xenon Abblendlicht   |
-    | 4 | LED Tagfahrlichtmodul Signal   |
-    | 5 | LED Abblendlicht   |
-    | 6 | LED Lichtmodul   |
-    | 7 | Reserved_07   |
-    | 8 | allgemeine Glühlampe 12W   |
-    | 9 | allgemeine Glühlampe 27W; auch H15   |
-    | 10 | allgemeine Scheinwerfer   |
-    | 11 | Abblendlicht   |
-    | 12 | Blinkleuchten   |
-    | 13 | Bremsleuchten   |
-    | 14 | kombinierte Blink- Bremsleuchten   |
-    | 15 | allgemeine Glühlampe 6W; auch H6W   |
-    | 16 | 2* 3W   |
-    | 17 | 4* 3W   |
-    | 18 | 2* 5W   |
-    | 19 | 3* 5W   |
-    | 20 | 4* 5W   |
-    | 21 | 2* 13W Blinker   |
-    | 22 | 2* 16W Blinker   |
-    | 23 | allgemeine Scheinwerfer   |
-    | 24 | 2* 5W KZL + LED Sidemarker   |
-    | 25 | allgemeine Glühlampe innen- oder Außenlicht   |
-    | 32 | allgemeine LED bis 12W   |
-    | 33 | LED-Modul Blinkleuchten   |
-    | 34 | LED Bremsleuchten   |
-    | 35 | kombinierte LED Blink-Bremsleuchten   |
-    | 36 | LED Kleinleistung   |
-    | 37 | allgemeine LED bis 12W   |
-    | 38 | LED Blinkleuchten   |
-    | 39 | LED Bremsleuchten   |
-    | 40 | allgemeine LED   |
-    | 41 | LED Kleinleistung   |
-    | 42 | LED dritte Bremsleuchte   |
-    | 43 | allgemeine LED   |
-    | 44 | LED Fußraum- oder -Innenleuchte   |
-    | 45 | allgemeine LED bis 6W   |
-    | 46 | LED Kleinleistung  |
 
 ### Яркость
 
@@ -220,6 +230,11 @@ Leuchte9FL RB2 - [Leuchte][9][FL] [R][B2]
 
 Для галогенных ламп регулировка осуществляется в диапазоне от 0 до 100.  
 Для диодов регулировка осуществляется в диапазонеот 0 до 127.  
+
+При установке значения 127 — они перестают реагировать на диммирование в интерфейсе, работает только вкл/выкл.  
+При установке значения 126 — верхний предел яркости выше, и диммирование сохраняется.
+
+Значения выше 127 для этого поля не принимаются. В отличие от всех остальных, оно — 7 битное, блок обнуляет восьмой бит.
 
 !!! warning ""
     Не все диоды поддаются регулировки яркости.   

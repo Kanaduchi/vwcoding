@@ -98,61 +98,39 @@ p_helligkeit_Fzg_geschlossen_schluessel_ab_
 
 ## Задержка включения внутренного освещения
 
-Кодировки в 9 блоке позволяют реализовать возможность последовательного включения света в салоне.  
+Кодировки в 9 блоке позволяют реализовать возможность последовательного включения света в салоне. 
 
 За это отвечают следующие параметры:
 ```
 Блок 09 → Адаптация
 > Освещение салона, параметры / Interior_light_parameter
->> p_t_verzoegerung_einstieg_innenlicht:	0,0 [UN]_s
->> p_t_verzoegerung_ausstieg_innenlicht:	0,0 [UN]_s
->> p_t_verzoegerung_oeffnen_innenlicht:	0,0 [UN]_s
->> p_t_verzoegerung_entriegelt_innenlicht:	0,0 [UN]_s
->> p_t_verzoegerung_schliessen_innenlicht:	0,0 [UN]_s
->> p_t_verzoegerung_schluessel_ab_innenlicht:	0,0 [UN]_s
->> p_t_verzoegerung_verriegelt_innenlicht:	0,0 [UN]_s
->> p_t_verzoegerung_einstieg_tueren:	0,0 [UN]_s
->> p_t_verzoegerung_ausstieg_tueren:	0,0 [UN]_s
->> p_t_verzoegerung_oeffnen_tueren:	0,0 [UN]_s
->> p_t_verzoegerung_entriegelt_tueren:	0,0 [UN]_s
->> p_t_verzoegerung_schliessen_tueren:	0,0 [UN]_s
->> p_t_verzoegerung_schluessel_ab_tueren:	0,0 [UN]_s
->> p_t_verzoegerung_verriegelt_tueren:	0,0 [UN]_s
->> p_t_verzoegerung_einstieg_fussraum:	0,0 [UN]_s
->> p_t_verzoegerung_ausstieg_fussraum:	0,0 [UN]_s
->> p_t_verzoegerung_oeffnen_fussraum:	0,0 [UN]_s
->> p_t_verzoegerung_entriegelt_fussraum:	0,0 [UN]_s
->> p_t_verzoegerung_schliessen_fussraum:	0,0 [UN]_s
->> p_t_verzoegerung_schluessel_ab_fussraum:	0,0 [UN]_s
->> p_t_verzoegerung_verriegelt_fussraum:	0,0 [UN]_s
->> p_t_verzoegerung_einstieg_cockpit:	0,0 [UN]_s
->> p_t_verzoegerung_ausstieg_cockpit:	0,0 [UN]_s
->> p_t_verzoegerung_oeffnen_cockpit:	0,0 [UN]_s
->> p_t_verzoegerung_entriegelt_cockpit:	0,0 [UN]_s
->> p_t_verzoegerung_schliessen_cockpit:	0,0 [UN]_s
->> p_t_verzoegerung_schluessel_ab_cockpit:	0,0 [UN]_s
->> p_t_verzoegerung_verriegelt_cockpit:	0,0 [UN]_s
->> p_t_verzoegerung_einstieg_miko:	0,0 [UN]_s
->> p_t_verzoegerung_ausstieg_miko:	0,0 [UN]_s
->> p_t_verzoegerung_oeffnen_miko:	0,0 [UN]_s
->> p_t_verzoegerung_entriegelt_miko:	0,0 [UN]_s
->> p_t_verzoegerung_schliessen_miko:	0,0 [UN]_s
->> p_t_verzoegerung_schluessel_ab_miko:	0,0 [UN]_s
->> p_t_verzoegerung_verriegelt_miko:	0,0 [UN]_s
->> p_t_verzoegerung_einstieg_dach:	0,0 [UN]_s
->> p_t_verzoegerung_ausstieg_dach:	0,0 [UN]_s
->> p_t_verzoegerung_oeffnen_dach:	0,0 [UN]_s
->> p_t_verzoegerung_entriegelt_dach:	0,0 [UN]_s
->> p_t_verzoegerung_schliessen_dach:	0,0 [UN]_s
->> p_t_verzoegerung_schluessel_ab_dach:	0,0 [UN]_s
->> p_t_verzoegerung_verriegelt_dach:	0,0 [UN]_s
+>> p_t verzoegerung einstieg innenlicht — задержка включения внутреннего освещения при входе, зажигание выключено
+>> p_t verzoegerung ausstieg innenlicht — задержка включения внутреннего освещения при выходе, зажигание выключено
+>> p_t verzoegerung oeffnen innenlicht — задержка включения внутреннего освещения при открытии двери, зажигание включено
+>> p_t verzoegerung entriegelt innenlicht — задержка включения внутреннего освещение при разблокировки центрального замка
+>> p_t verzoegerung schliessen innenlicht — задержка выключения внутреннего освещения при закрытии двери, зажигание включено
+>> p_t verzoegerung schluessel ab innenlicht — задержка выключения внутреннего освещения при включении зажигания
+>> p_t verzoegerung verriegelt innenlicht — задержка выключения внутреннего освещения при блокировки центрального замка
 ```
+Всего по 7 функций на каждый фонарь. Все остальные фонари аналогичны внутреннему освещению (плафону потолка).
 
-Например, при открытии двери сначала включается подсветка ног, а только потом потолок.
+Например, 
+Включение для ламп двери ставим 0.8с, внутреннего освещения ставим 1.6с.  
+Посветка ног остается так же и загорается первой, потом двери потом потолок.
 ```Блок 09 → Адаптация
 > Освещение салона, параметры / Interior_light_parameter
->> p_t_verzoegerung_einstieg_fussraum:	0,0 [UN]_s
->> p_t_verzoegerung_einstieg_tueren:	2,2 [UN]_s
->> p_t_verzoegerung_einstieg_dach:	    0,4 [UN]_s
+>> p_t_verzoegerung_einstieg_fussraum:	    0,0 [UN]_s
+>> p_t_verzoegerung_einstieg_tueren:	    0.8 [UN]_s
+>> p_t_verzoegerung_einstieg_innenlicht:    1,6 [UN]_s
+→ Применить
+```
+
+Выключения для дверей ставим так же 0.8с, для ног стаим 1.6с.   
+Свет с внутреннего освещения тухнет первым. Потом двери и потом только ноги.
+```Блок 09 → Адаптация
+> Освещение салона, параметры / Interior_light_parameter
+>> p_t_verzoegerung_ausstieg_fussraum:	    1,6 [UN]_s
+>> p_t_verzoegerung_ausstieg_tueren:	    0.8 [UN]_s
+>> p_t_verzoegerung_ausstieg_innenlicht:    0,0 [UN]_s
 → Применить
 ```

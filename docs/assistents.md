@@ -171,6 +171,7 @@ HCA - Указание блоку рулевого управления о на�
 > [VO]_Car_Function_Adaptations_Gen2: [LO]_menu_display_road_sign_identification_over_thresh old_high: activated.
 ```
 
+Даем указание блоку проекции (если есть)
 ```
 Блок 82 → Кодирование 
 > Road_sign_detection:  available
