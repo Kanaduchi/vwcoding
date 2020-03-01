@@ -36,9 +36,9 @@ Sign Assist — Ассистент распознавания дорожных �
 ```
 Блок 17 (комбинация приборов/ActiveInfoDisplay)  → Кодирование
 > Lane_assist: yes
- (Байт 04: бит 6 -> активировать ([LN]_Lane_assist: [VN]_no -> [VN]_yes))
+ (Байт 04: бит 6 -> активировать (Lane_assist: no -> yes))
 > Lane_assist_BAP: yes.
- (Байт 11: бит 1 -> активировать ([LN]_Lane_assist_BAP: [VN]_no -> [VN]_yes))
+ (Байт 11: бит 1 -> активировать (Lane_assist_BAP: no -> yes))
 ```
 
 Конфигурация камеры ассистентов
@@ -63,16 +63,17 @@ HCA - Указание блоку рулевого управления о на�
 Блок 44 (усилитель рулевого) → Кодирование
 Ассистент движения по полосе, связ. с усилителем рул. управления
 > heading_control_assist: active
- (Байт 03: бит 1 -> активировать ([LN]_heading_control_assist: [VN]_not active -> [VN]_active))
+ (Байт 03: бит 1 -> активировать (heading_control_assist: not active -> active))
 ```
 
 Включаем в меню новые функции
 ```    
 Блок 5F (мультимедия) → Адаптация 
-> [VO]_Car_Function_List_BAP_Gen2: [LO]_LDW_HCA_0x19:  activated
-> [VO]_Car_Function_Adaptations_Gen2: [LO]_menu_display_Lane_Departure_Warning: activated;
-> [VO]_Car_Function_Adaptations_Gen2: [LO]_menu_display_Lane_Departure_Warning_over_threshol d_high: activated;
-→ Применить 
+> Car_Function_List_BAP_Gen2
+>> LDW_HCA_0x19:  activated
+> Car_Function_Adaptations_Gen2
+>> menu_display_Lane_Departure_Warning: activated;
+>> menu_display_Lane_Departure_Warning_over_threshol d_high: activated;
 ```
 
 Указание блоку парковочного ассистента о наличии Line Assist (У кого PLA 12 Датчиков)
@@ -92,14 +93,14 @@ HCA - Указание блоку рулевого управления о на�
 ```
 Блок 08 → Кодирование
 > Camera heating: installed
-(Байт 08: бит 0 -> активировать ([LN]_Camera heating: [VN]_not installed -> [VN]_installed))
+(Байт 08: бит 0 -> активировать (Camera heating: not installed -> installed))
 ```
 
 Указание блоку, что, установлена камера
 ```
 Блок 13 (адаптивный круиз) → Кодирование
 > Front_camera: installed
- (Байт 03: бит 6 -> активировать ([LO]_Front_camera: [VN]_not_installed -> [VN]_installed))
+ (Байт 03: бит 6 -> активировать (>> Front_camera: not_installed -> installed))
 ```
 
 Изменение типа ассистента дальнего света с простого на MDF - маскируемый или неослепляющий дальний.Добавляем ассистент в меню
@@ -107,25 +108,25 @@ HCA - Указание блоку рулевого управления о на�
 Блок 09 (бортовая сеть) → Адаптации
 >> Fernlicht_assistent
 > Erweiterte_Fernlichtsteuerung: AFS, FLA, Fernlicht ueber AFS → AFS, FLA, Fernlicht (GLW,MDF)
-> Menuesteuerung Fernlichtassistent: not available -> [VN]_available
+> Menuesteuerung Fernlichtassistent: not available -> available
 ```
 
 Включаем отображение Line Assist и дорожных знаков на приборной панели
 ```
 Блок 17 (комбинация приборов/ActiveInfoDisplay)  → Кодирование
 > Lane_assist: yes
- (Байт 04: бит 6 -> активировать ([LN]_Lane_assist: [VN]_no -> [VN]_yes))
+ (Байт 04: бит 6 -> активировать (Lane_assist: no -> yes))
 > traffic_sign_display: yes.
- (Байт 05: бит 2 -> активировать ([LN]_traffic_sign_display: [VN]_no -> [VN]_yes))
+ (Байт 05: бит 2 -> активировать (traffic_sign_display: no -> yes))
 > Lane_assist_BAP: yes.
- (Байт 11: бит 1 -> активировать ([LN]_Lane_assist_BAP: [VN]_no -> [VN]_yes))
+ (Байт 11: бит 1 -> активировать (Lane_assist_BAP: no -> yes))
 ```
 
 Активация установленных блоков. Нужно добавить-A5 (передние датчики вспомогательных систем) и убрать блок 20
 ```
 Блок 19 (гейтвэй) → Кодирование
-> [VN]_Gateway_Component_List: [LN]_Node_0x30: [VN]_coded -> [VN]_not_coded; 
-> [VN]_Gateway_Component_List: [LN]_Node_0x4F: [VN]_not_coded -> [VN]_coded. 
+> Gateway_Component_List: Node_0x30:coded -> not_coded; 
+> Gateway_Component_List: Node_0x4F: not_coded -> coded. 
 ```
 
 HCA - Указание блоку рулевого управления о наличии Line Assist
@@ -133,13 +134,13 @@ HCA - Указание блоку рулевого управления о на�
 Блок 44 (усилитель рулевого) → Кодирование
 Ассистент движения по полосе, связ. с усилителем рул. управления
 > heading_control_assist: active
- (Байт 03: бит 1 -> активировать ([LN]_heading_control_assist: [VN]_not active -> [VN]_active))
+ (Байт 03: бит 1 -> активировать (heading_control_assist: not active -> active))
 ```
 
 ```
 Блок 4B (многофункциональный модуль) → Кодирование 
 > mdf_activation: enabled
- (Байт 10: бит 6 -> активировать ([LO]_mdf_activation: [VN]_not_enabled -> [VN]_enabled))
+ (Байт 10: бит 6 -> активировать (>> mdf_activation: not_enabled -> enabled))
 > headlamp_coding_word: 1
 ```
 
@@ -166,7 +167,7 @@ HCA - Указание блоку рулевого управления о на�
 > Car_Function_List_BAP_Gen2
 >> LDW_HCA_0x19:  activated
 >> traffic_sign_recognition_0x21: activated
->> traffic_sign_recognition_0x21_msg_bus: [VN]_CAN_Extended
+>> traffic_sign_recognition_0x21_msg_bus: CAN_Extended (Дополнительная шина данных)
 > Car_Function_Adaptations_Gen2
 >> menu_display_Lane_Departure_Warning: activated;
 >> menu_display_Lane_Departure_Warning_over_threshol d_high: activated;
@@ -185,49 +186,49 @@ HCA - Указание блоку рулевого управления о на�
 Можно использовать готовое кодирование: 0003070600000401002200448050A10098000E200040
 ```
 Блок A5 (камера ассистентов) → Кодирование 
-[LO]_Brand: [VO]_VW
-[LO]_Class: [VO]_A
-[LO]_Generation: [VO]_Generation_7
-[LO]_Bodystyle: [VO]_Suv
-[LO]_Expansion: [VO]_Not_coded
-[LO]_Production_region: [VO]_EU
-[LO]_Country_variant: [VO]_Europe
-[LO]_Chassis: [VO]_Steel_springs
-[LO]_Steering_bar: [VO]_Not_coded
-[LO]_Windshield: [VO]_Heat_protecting_glass
-[LO]_Traffic_side: [VO]_Right_traffic
-[LO]_PSD_Version: [VO]_PSD_15
-[LO]_Navigation: [VO]_MIB_High
-[LO]_AAG: [VO]_Coded для фаркопа !
-[LO]_SWA: [VO]_Coded
-[LO]_ACC: [VO]_Coded
-[LO]_Pedestrian_break: [VO]_Not_coded
-[LO]_Blind_spot_detection: [VO]_Not_coded
-[LO]_Rain_light_sensor: [VO]_Coded
-[LO]_Main_unit: [VO]_enabled
-[LO]_PLA: [VO]_Coded
-[LO]_ESP: [VO]_Coded
-[LN]_Lan_assist_system_mode: [VN]_Steering_wheel_vibration active
-[LO]_Personalized_key: [VO]_Version_1.x
-[LO]_Networking_variant: [VO]_MQB
-[LO]_Radar_interface: [VO]_Coded
-[LO]_Perso_HC: [VO]_Last_setting
-[LO]_Point_of_intervention: [VN]_early_setting_over_menu
-[LO]_LaneAssist_AGW_output: [VO]_disabled
-[LO]_Lane_assist_off_text: [VO]_disabled
-[LO]_Emergency_Assist: [VO]_EA_Variant_2
-[LO]_VZE: [VO]_coded
-[LO]_HC_mob_line: [VO]_Not_coded
-[LO]_HC: [VO]_Coded
-[LO]_FCWP_default_on_prewarning: [VO]_last_mode
-[LO]_FCWP_delivery_status_prewarning: [VO]_off
-[LO]_FCWP_extended_prewarning_settings: [VO]_Not_coded
-[LO]_FCWP_warning_indicator: [VO]_Not_coded
-[LO]_FCWP: [VO]_Not_coded
-[LO]_FLA_Additional_High_Beam: [VO]_no_Additional_High_Beam
-[LO]_FLA_Headinglight_type: [VO]_LED
-[LO]_Mains_frequency: [VO]_50_Hz
-[LO]_AFS_coding_Light_Assist: [VO]_Dynamic_Light_Assist
+>> Brand: [VO]_VW
+>> Class: [VO]_A
+>> Generation: [VO]_Generation_7
+>> Bodystyle: [VO]_Suv
+>> Expansion: [VO]_Not_coded
+>> Production_region: [VO]_EU
+>> Country_variant: [VO]_Europe
+>> Chassis: [VO]_Steel_springs
+>> Steering_bar: [VO]_Not_coded
+>> Windshield: [VO]_Heat_protecting_glass
+>> Traffic_side: [VO]_Right_traffic
+>> PSD_Version: [VO]_PSD_15
+>> Navigation: [VO]_MIB_High
+>> AAG: [VO]_Coded для фаркопа !
+>> SWA: [VO]_Coded
+>> ACC: [VO]_Coded
+>> Pedestrian_break: [VO]_Not_coded
+>> Blind_spot_detection: [VO]_Not_coded
+>> Rain_light_sensor: [VO]_Coded
+>> Main_unit: [VO]_enabled
+>> PLA: [VO]_Coded
+>> ESP: [VO]_Coded
+>> Lan_assist_system_mode: Steering_wheel_vibration active
+>> Personalized_key: [VO]_Version_1.x
+>> Networking_variant: [VO]_MQB
+>> Radar_interface: [VO]_Coded
+>> Perso_HC: [VO]_Last_setting
+>> Point_of_intervention: early_setting_over_menu
+>> LaneAssist_AGW_output: [VO]_disabled
+>> Lane_assist_off_text: [VO]_disabled
+>> Emergency_Assist: [VO]_EA_Variant_2
+>> VZE: [VO]_coded
+>> HC_mob_line: [VO]_Not_coded
+>> HC: [VO]_Coded
+>> FCWP_default_on_prewarning: [VO]_last_mode
+>> FCWP_delivery_status_prewarning: [VO]_off
+>> FCWP_extended_prewarning_settings: [VO]_Not_coded
+>> FCWP_warning_indicator: [VO]_Not_coded
+>> FCWP: [VO]_Not_coded
+>> FLA_Additional_High_Beam: [VO]_no_Additional_High_Beam
+>> FLA_Headinglight_type: [VO]_LED
+>> Mains_frequency: [VO]_50_Hz
+>> AFS_coding_Light_Assist: [VO]_Dynamic_Light_Assist
 ```
 
 ```
