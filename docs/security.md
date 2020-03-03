@@ -99,8 +99,8 @@ disqus: https-mqb-readthedocs-io
 
 ```
 Блок 09 → Адаптация
-> Interior_Monitoring_Sensitivity
->> sensitivity → 70% (по умолчанию 100%)
+> Охранная сигнализация, охрана салона/ Interior_Monitoring_Sensitivity
+>> Чувствительность / sensitivity → 70% (по умолчанию 100%)
 → Применить
 ```
 
