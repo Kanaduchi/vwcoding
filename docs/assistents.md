@@ -186,54 +186,54 @@ HCA - Указание блоку рулевого управления о на�
 Можно использовать готовое кодирование: 0003070600000401002200448050A10098000E200040
 ```
 Блок A5 (камера ассистентов) → Кодирование 
->> Brand: [VO]_VW
->> Class: [VO]_A
->> Generation: [VO]_Generation_7
->> Bodystyle: [VO]_Suv
->> Expansion: [VO]_Not_coded
->> Production_region: [VO]_EU
->> Country_variant: [VO]_Europe
->> Chassis: [VO]_Steel_springs
->> Steering_bar: [VO]_Not_coded
->> Windshield: [VO]_Heat_protecting_glass
->> Traffic_side: [VO]_Right_traffic
->> PSD_Version: [VO]_PSD_15
->> Navigation: [VO]_MIB_High
->> AAG: [VO]_Coded для фаркопа !
->> SWA: [VO]_Coded
->> ACC: [VO]_Coded
->> Pedestrian_break: [VO]_Not_coded
->> Blind_spot_detection: [VO]_Not_coded
->> Rain_light_sensor: [VO]_Coded
->> Main_unit: [VO]_enabled
->> PLA: [VO]_Coded
->> ESP: [VO]_Coded
+>> Brand: VW
+>> Class: A
+>> Generation: Generation_7
+>> Bodystyle: Suv
+>> Expansion: Not_coded
+>> Production_region: EU
+>> Country_variant: Europe
+>> Chassis: Steel_springs
+>> Steering_bar: Not_coded
+>> Windshield: Heat_protecting_glass
+>> Traffic_side: Right_traffic
+>> PSD_Version: PSD_15
+>> Navigation: MIB_High
+>> AAG: Coded (для фаркопа)
+>> SWA: Coded
+>> ACC: Coded
+>> Pedestrian_break: Not_coded
+>> Blind_spot_detection: Not_coded
+>> Rain_light_sensor: Coded
+>> Main_unit: enabled
+>> PLA: Coded
+>> ESP: Coded
 >> Lan_assist_system_mode: Steering_wheel_vibration active
->> Personalized_key: [VO]_Version_1.x
->> Networking_variant: [VO]_MQB
->> Radar_interface: [VO]_Coded
->> Perso_HC: [VO]_Last_setting
+>> Personalized_key: Version_1.x
+>> Networking_variant: MQB
+>> Radar_interface: Coded
+>> Perso_HC: Last_setting
 >> Point_of_intervention: early_setting_over_menu
->> LaneAssist_AGW_output: [VO]_disabled
->> Lane_assist_off_text: [VO]_disabled
->> Emergency_Assist: [VO]_EA_Variant_2
->> VZE: [VO]_coded
->> HC_mob_line: [VO]_Not_coded
->> HC: [VO]_Coded
->> FCWP_default_on_prewarning: [VO]_last_mode
->> FCWP_delivery_status_prewarning: [VO]_off
->> FCWP_extended_prewarning_settings: [VO]_Not_coded
->> FCWP_warning_indicator: [VO]_Not_coded
->> FCWP: [VO]_Not_coded
->> FLA_Additional_High_Beam: [VO]_no_Additional_High_Beam
->> FLA_Headinglight_type: [VO]_LED
->> Mains_frequency: [VO]_50_Hz
->> AFS_coding_Light_Assist: [VO]_Dynamic_Light_Assist
+>> LaneAssist_AGW_output: disabled
+>> Lane_assist_off_text: disabled
+>> Emergency_Assist: EA_Variant_2
+>> Traffic Sign Recognition (TSR/VZE): coded
+>> HC_mob_line: Not_coded
+>> HC: Coded
+>> FCWP_default_on_prewarning: last_mode
+>> FCWP_delivery_status_prewarning: off
+>> FCWP_extended_prewarning_settings: Not_coded
+>> FCWP_warning_indicator: Not_coded
+>> FCWP: Not_coded
+>> FLA_Additional_High_Beam: no_Additional_High_Beam
+>> FLA_Headinglight_type: LED
+>> Mains_frequency: 50_Hz
+>> AFS_coding_Light_Assist: Dynamic_Light_Assist
 ```
 
 ```
 Блок A5 (камера ассистентов) → Адаптация 
-> Road_sign_recognition_fusion_mode: Road Sign Detection
+> Road_sign_recognition_fusion_mode (Распознавание дорожных знаков: режим Fusion): Road Sign Detection
 > Lan_assist_system_mode (Состояние включение ассистента движение по полосе) - Selection_over_menu  
 > Lane_assist_warning_intensity (Интенсивность предупреждений ассистента движения по полосе) - Selection_over_menu 
 > BAP personalization (Персонализация ВАР) - не активна 
