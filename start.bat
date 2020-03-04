@@ -1,2 +1,0 @@
-@echo off
-mkdocs serve
