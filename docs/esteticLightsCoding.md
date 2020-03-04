@@ -117,7 +117,8 @@ p_helligkeit_Fzg_geschlossen_schluessel_ab_
 Например, 
 Включение для ламп двери ставим 0.8с, внутреннего освещения ставим 1.6с.  
 Посветка ног остается так же и загорается первой, потом двери потом потолок.
-```Блок 09 → Адаптация
+```
+Блок 09 → Адаптация
 > Освещение салона, параметры / Interior_light_parameter
 >> p_t_verzoegerung_einstieg_fussraum:	    0,0 [UN]_s
 >> p_t_verzoegerung_einstieg_tueren:	    0.8 [UN]_s
@@ -127,7 +128,8 @@ p_helligkeit_Fzg_geschlossen_schluessel_ab_
 
 Выключения для дверей ставим так же 0.8с, для ног стаим 1.6с.   
 Свет с внутреннего освещения тухнет первым. Потом двери и потом только ноги.
-```Блок 09 → Адаптация
+```
+Блок 09 → Адаптация
 > Освещение салона, параметры / Interior_light_parameter
 >> p_t_verzoegerung_ausstieg_fussraum:	    1,6 [UN]_s
 >> p_t_verzoegerung_ausstieg_tueren:	    0.8 [UN]_s
