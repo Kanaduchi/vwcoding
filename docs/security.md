@@ -162,23 +162,23 @@ disqus: https-mqb-readthedocs-io
 
 	Блок 9 → Адаптация
 	> Ответные сигналы
-    > Akustische Rueckmeldung entriegeln (открытие авто)
+    >> Akustische Rueckmeldung entriegeln (открытие авто)
     Старое значение: не акт.
     Новое значение: акт.
     
-    > Akustische Rueckmeldung verriegeln (закрытие авто)
+    >> Akustische Rueckmeldung verriegeln (закрытие авто)
     Старое значение: не акт.
     Новое значение: акт.
     
-    > Menuesteuerung akustische Rueckmeldung
+    >> Menuesteuerung akustische Rueckmeldung
     Старое значение: не акт.
     Новое значение: акт.
     
-    > Akustische Rueckmeldung global
+    >> Akustische Rueckmeldung global
     Старое значение: не акт.
     Новое значение: акт.
     
-    > Akustische Rueckmeldung Signalhorn
+    >> Akustische Rueckmeldung Signalhorn
     Старое значение: не акт.
     Новое значение: акт.
     

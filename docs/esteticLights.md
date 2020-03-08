@@ -175,12 +175,13 @@ disqus: https-mqb-readthedocs-io
     → Применить 
     
     Блок 09 → Адаптация
-	> Освещение салона 2-го поколения
+	> Освещение салона, конфигурация фонарей
 	>> Ambientemenue mit globalem aus — акт.
     >> Ambientemenue mit alle Zonen — акт.
     >> Ambient_Farbliste_HMI — акт.
-    
     >> Ambience_light_colorlist_default — 1
+    
+    Освещение салона 2-го поколения
     >> Ambiente_Fahrprofil_Individual — 7
     >> Ambiente_Farbwahl_FPA_waehlbare_Kopplung — active
     >> Ambiente_Farbwahl_FPA_waehlbare_Kopplung_Status_hmi_default — сопряжены (coupled)
