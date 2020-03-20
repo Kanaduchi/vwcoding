@@ -1,12 +1,6 @@
 disqus: https-mqb-readthedocs-io
 # Освещение салона
 
-### Готовые файлы для ODIS-E
-
-+ [ODIS_E шкала на 30 цветов для машин без RGB для 09 блока (адаптации)](../odis-files/09 - Шкала на 30 цветов.PRE)
-+ [ODIS_E шкала на 30 цветов для машин c RGB подсветкой для 09 блока (адаптации)](../odis-files/09 - LIN RGB.PRE)
-+ [ODIS_E Привязка профилей движения для 09 блока (адаптации)](../odis-files/09 - Привязка профилей движения.PRE)
-
 ### Плавное включение и выключение освещения в салоне
 
 !!! tip ""
@@ -101,6 +95,9 @@ disqus: https-mqb-readthedocs-io
 
 ### Цветовые профили
 
++ [ODIS_E шкала на 30 цветов для машин без RGB для 09 блока (адаптации)](../odis-files/09 - Шкала на 30 цветов.PRE)    
++ [ODIS_E шкала на 10 цветов для машин без RGB для 09 блока (адаптации)](../odis-files/09 - Шкала на 9 цветов.PRE)
+
 	Блок 09 → Адаптация
 	> Освещение салона 2-го поколения
 	>> Mittelkonsolenbeleuchtung mehrfarbig:
@@ -151,10 +148,13 @@ disqus: https-mqb-readthedocs-io
 ??? note "Расширенные цвета"
     Расширеные цвета задаются в адаптации 9 блока: 
     > Ambience_lightning_color_list_2
-
+    
 > логин-пароль 31347
 
 ### Выбор цвета в зависимости от профиля движения
+
++ [ODIS_E Кодирование 19 блока](../odis-files/19 - (кодировка) FPA AMB.PRE)
++ [ODIS_E Привязка профилей движения для 09 блока (адаптации)](../odis-files/09 - Привязка профилей движения.PRE)
 
 !!! warning ""
     Установленный гейт должен иметь версию софта не ниже 4344 или 5344 и иметь индекс Q и выше
@@ -188,8 +188,7 @@ disqus: https-mqb-readthedocs-io
 	→ Применить
 	
     > Освещение салона 2 го поколения: конфигурация фонарей
-    >> Mittleconsolebeleschtung mehrfarbig — акт.
-    либо, если первого нет, то
+    >> Mittelkonsolenbeleuchtung mehrfarbig — акт.
     >> Cockpitbeleuchtung mehrfarbig — акт.
     → Применить
     
@@ -229,7 +228,7 @@ disqus: https-mqb-readthedocs-io
 
 Скорость переключения профилей
 ```
-Блок 09 → Адаптация
+Блок 19 → Адаптация
 > Driving Profile Selection Parameter 
 >> Driving Profile Selection Toogle Time Adaptation — вместо 2000 мс ставим 0
 → Применить

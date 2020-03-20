@@ -3,7 +3,7 @@
 <Parameter name="Easy_Entry_front" value="active"/>
 <Parameter name="Func_key_memory_personalization" value="Personalization_active"/>
 <Parameter name="easy_entry_front_over_MMI" value="active"/>
-<Parameter name="automatic_ func_key_memory_over_MMI" value="active"/>
+<Parameter name="automatic_func_key_memory_over_MMI" value="active"/>
 <Parameter name="Personalization_1_1_or_2_0" value="Personalization_1_1"/>
 </CodingEntry>
 </PresetCoding>
