@@ -1,6 +1,6 @@
 # Project information
-site_name: 'Кодирование MQB платформы'
-site_description: 'Основные настройки MQB платформы'
+site_name: 'Кодирование автомобилей VAG'
+site_description: 'Основные настройки различных палтформ концерна VAG'
 site_author: 'Andrey Topchiy'
 site_url: 'https://mqb.readthedocs.io'
 
@@ -13,24 +13,30 @@ edit_uri: 'https://github.com/Kanaduchi/mqb/edit/1com/docs/'
 copyright: 'Copyright &copy; 2020 - Andrey Topchiy'
 
 nav:
-  - Ассистенты водителя: assistents.md
-  - Системы активной безопасности: active_systems.md
-  - Движение и управление: drive.md
-  - Парковка и маневрирование: parking.md
-  - Эстетическая подсветка:
-    - Общие настройки: esteticLights.md
-    - Кодирование: esteticLightsCoding.md
-  - Зеркала и стеклоочистители: wash.md
-  - Отпирание и запирание: security.md
-  - Освещение:
-    - Кодирование фонарей: codingLights.md
-    - Передние фонари:  headLights.md
-    - Задние фонари: rearLights.md
-  - Звук: sound.md
-  - Климат: climate.md
-  - Приборная панель: AID.md
-  - Головное устройство: headDevice.md
-  - Шины: tires.md
+  - Главная страница: index.md
+  - Кодирование платформы PQ26:
+    - Общая информация: PQ26/index.md
+    - Управление освещением: PQ26/lights.md
+  - Кодирование платформы MQB:
+    - Общая информация: MQB/index.md
+    - Ассистенты водителя: MQB/assistents.md
+    - Системы активной безопасности: MQB/active_systems.md
+    - Движение и управление: MQB/drive.md
+    - Парковка и маневрирование: MQB/parking.md
+    - Эстетическая подсветка:
+      - Общие настройки: MQB/esteticLights.md
+      - Кодирование: MQB/esteticLightsCoding.md
+    - Зеркала и стеклоочистители: MQB/wash.md
+    - Отпирание и запирание: MQB/security.md
+    - Освещение:
+      - Кодирование фонарей: MQB/codingLights.md
+      - Передние фонари:  MQB/headLights.md
+      - Задние фонари: MQB/rearLights.md
+    - Звук: MQB/sound.md
+    - Климат: MQB/climate.md
+    - Приборная панель: MQB/AID.md
+    - Головное устройство: MQB/headDevice.md
+    - Шины: MQB/tires.md
   - ODIS E: odis-e.md
   - Кодирование байтов и битов: bytes.md
   - История изменений: history.md
@@ -47,7 +53,7 @@ theme:
     code: Roboto Mono
   logo: 'vw.svg'
   feature:
-    tabs: false
+    tabs: true
   # 404 page
   static_templates:
     - 404.html
