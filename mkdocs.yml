@@ -20,6 +20,7 @@ nav:
     - Управление освещением: PQ26/lights.md
     - Стеклоочистители / Датчик дождя и света: PQ26/wash.md
     - Климат / Обогрев зеркал и стекол: PQ26/climate.md
+    - Двери, стекла, цз, брелок и штатная сигнализация: PQ26/security.md
   - Кодирование платформы MQB: MQB/index.md
   - Кодирование платформы MQB:
     - Общая информация: MQB/index.md
@@ -48,6 +49,7 @@ nav:
 
 theme:
   name: null
+  favicon: 'vw.png'
   custom_dir: 'material'
   highlightjs: false
   language: ru
@@ -55,12 +57,15 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  logo: 'vw.svg'
+  logo: 'vw.png'
   feature:
     tabs: true
   # 404 page
   static_templates:
     - 404.html
+
+extra_css:
+  - 'custom.css'
 
 extra:
   search:
