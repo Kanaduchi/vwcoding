@@ -14,9 +14,12 @@ copyright: 'Copyright &copy; 2020 - Andrey Topchiy'
 
 nav:
   - Главная страница: index.md
+  - Кодирование платформы PQ26: PQ26/index.md
   - Кодирование платформы PQ26:
     - Общая информация: PQ26/index.md
     - Управление освещением: PQ26/lights.md
+    - Стеклоочистители / Датчик дождя и света: PQ26/wash.md
+  - Кодирование платформы MQB: MQB/index.md
   - Кодирование платформы MQB:
     - Общая информация: MQB/index.md
     - Ассистенты водителя: MQB/assistents.md
