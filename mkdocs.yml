@@ -73,10 +73,6 @@ extra:
   search:
     language: 'en, ru'
 
-plugins:
-    - pdf-export:
-        combined: true
-
 markdown_extensions:
   - meta
   - markdown.extensions.admonition
