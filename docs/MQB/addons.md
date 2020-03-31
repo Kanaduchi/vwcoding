@@ -181,3 +181,77 @@ GW_Enable_CAN_Timeout_DTC - Sound System → Enabled
 > Байт 1 - Бит 3 (Пассивный выход для двери сзади справа отключен) → Снять выбор
 → Применить
 ```
+
+### Side Assist
+
+!!! note ""
+    Существуют 2 типа радаров. С 2020 года поставляются радары, с которых не надо снимать защиту компонентов и делать калибровку
+
+```
+Блок 19 → Список оборудования
+> 3C (Система смены полосы движения) → установлено
+> CF (Система смены полосы движения) → установлено
+> Gateway_Component_List - Node_0x4E → coded
+> Gateway_Component_List - Node_0x8A → coded
+→ Применить
+```
+Кодирование приборной панели
+```
+Блок 17 → Кодирование
+> Lane_change_assistant → yes
+> Lane_change_assistant_BAP → yes
+→ Применить (с перезагрузкой блока)
+```
+Кодирование адаптивного круиз
+```
+Блок 13 → Кодирование
+> Control_module_for_lane_assistance → installed
+> Lane_change_support → activated
+→ Применить (с перезагрузкой блока)
+```
+Кодирование ABS
+```
+Блок 03 → Кодирование
+> Байт 29 → активировать бит 7 (1ХХХХХХХ)
+→ Применить (с перезагрузкой блока)
+```
+Кодирование ГУ
+```
+Блок 5F → Кодирование
+[VO]_Car_Function_List_BAP_Gen2: [LO]_SWA_0x1A → activated
+Ю Car_Function_List_BAP_Gen2 - SWA_0x1A_msg_bus → Дополнительная шина данных
+[VO]_Car_Function_Adaptations_Gen2: [LO]_menu_display_lane_assistant → activated
+[VO]_Car_Function_Adaptations_Gen2: [LO]_menu_display_lane_assistant_over_threshold_high → activated
+```
+
+Кодирование системы кругового обзора (если есть)
+```
+БлокБлок 6C → Кодирование
+[LO]_equipment_RTA → installed
+→ Применить (с перезагрузкой блока)
+```
+Парковочный ассистент
+```
+БлокБлок 76 → Кодирование
+[LN]_Rear_Cross_Traffic - Alert → mit RCTA
+→ Применить (с перезагрузкой блока)
+```
+Камера асситентов (если есть)
+```
+БлокБлок A5 → Кодирование
+[LO]_SWA → Coded
+→ Применить (с перезагрузкой блока)
+```
+Ассистент смены полосы движения
+```
+БлокБлок 3C → Кодирование
+[LO]_Pre_Sense → without_Pre_Sense
+[LO]_Rear_Cross_Traffic_Alert → with_RCTA
+[LO]_ECU for draw bar → no ECU for draw bar
+[LO]_steering → left-hand drive
+[LO]_Rear_Axle_Steering → without_Rear_Axle_Steering
+[LO]_Lane_Departure_Warning_System → with_Lane_Departure_Warning_System
+[LO]_Front_Sensors_Driver_Assistance_System → with_Front_Sensors_Driver_Assistance_System
+[LO]_Diagnosis_RCTA → tone_via_PLA
+→ Применить (с перезагрузкой блока)
+```
