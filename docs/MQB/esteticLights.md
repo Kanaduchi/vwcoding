@@ -76,7 +76,7 @@ disqus: https-mqb-readthedocs-io
 | 7 | Пусто   |
 
 Пример кодирования - активация "солнышка" и визуализации подсветки потолка
-![Screenshot](../images/dach.PNG)
+![Screenshot](../images/MQB/dach.png)
 ```
 Блок 09 → Адаптация
 > Освещение салона, параметры / Interior_light_parameter
@@ -85,7 +85,7 @@ disqus: https-mqb-readthedocs-io
 ```
 
 Пример кодирования - активация визуализации подсветки ручек
-![Screenshot](../images/door.png)
+![Screenshot](../images/MQB/door.png)
 ```
 Блок 09 → Адаптация
 > Освещение салона, параметры / Interior_light_parameter

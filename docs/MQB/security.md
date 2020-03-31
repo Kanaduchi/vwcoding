@@ -125,8 +125,7 @@ disqus: https-mqb-readthedocs-io
     
 ```
 Блок 09 → Адаптация
-> Central Locking - Selective (Single) Door Locking
-> активировать (1)
+> Central Locking - Selective (Single) Door Locking → активировать
 → Применить
 ```
 
@@ -144,9 +143,7 @@ disqus: https-mqb-readthedocs-io
 
 ```
 Блок 09 → Адаптация
-> ZV allgemein
-(1)-Access control-Funk bei Klemme 15 ein 
-> активировать
+> ZV allgemein (Access control) - Funk bei Klemme 15 ein → активировать
 → Применить
 ```
 
@@ -157,7 +154,37 @@ disqus: https-mqb-readthedocs-io
     > ZV allgemein - Funk bei Klemme 15 ein:  
     Старое значение: не активир.  
     Новое значение: активир.  
+    
+### Ручки Kessy работают при включенном зажигании
+```
+Блок В7 → Кодирование
+> Terminal 15 characteristics of passive entry exit function
+>> Оригинальное значение - Function only allowed for terminal 15 off
+>> Новое значение - Function only allowed for terminal 15 on or off
+→ Применить
+```
 
+??? note "Кодирование в VCDS"
+    Блок В7   
+    Кодирование - 07 → Длинное кодирование -> разрешить ASAM данные  
+    Байт 0 → Бит 4 (Terminal 15 characteristics of passive entry exit function) → ставим галочку  
+    Выход  
+    Сохранить  
+    
+### Автоматическая постановка на охрану при захлопывании водительской двери
+```
+Блок В7 → Кодирование
+> Locking for door slamming active → активировать
+→ Применить
+```
+
+??? note "Кодирование в VCDS"
+    Блок В7   
+    Кодирование - 07 → Длинное кодирование -> разрешить ASAM данные  
+    Байт 1 → Бит 4 (Блокировка двери хлопком включена) → ставим галочку  
+    Выход  
+    Сохранить  
+    
 ### Звуковое сопровождение при открытии/закрытии центрального замка
 
 	Блок 9 → Адаптация

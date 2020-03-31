@@ -71,7 +71,7 @@ disqus: https-mqb-readthedocs-io
     Байт 29 → заменить на «05» (даёт меню ESC ВКЛ, ASR выкл, ESC выкл.)  
     Выход   
     Сохранить   
-    ![Screenshot](../images/esc.png)
+    ![Screenshot](../images/MQB/esc.png)
     
 !!! warning
     На машинах 2016-17г возможна установка 31-байтных блоков ABS.  
@@ -110,7 +110,7 @@ Control Unit 13 (Adaptive Cruise Control) → Adaptation
     2 Байт → 5 Бит: Overtaking_right_prevention - выключить  
     Выход   
     Сохранить   
-    ![Screenshot](../images/overtake.PNG)
+    ![Screenshot](../images/MQB/overtake.png)
     
 ### Активация выбора режима работы Адаптивного Круиз Контроля (АСС), независимо от выбранного Профиля езды
 
@@ -124,7 +124,7 @@ Control Unit 13 (Adaptive Cruise Control) → Adaptation
     Байт 3 → бит 7: Drive_pmode_selection, 0=MMI menu ACC / 1=Driving profile selection → снимаем галочку  
     Выход    
     Сохранить   
-    ![Screenshot](../images/acc.PNG)
+    ![Screenshot](../images/MQB/acc.png)
 
 > логин-пароль 20103 
 
@@ -147,7 +147,7 @@ Control Unit 13 (Adaptive Cruise Control) → Adaptation
     Байт 17 → Бит 3: Электронная блокировка дифференциала (расширенная) → ставим галочку   
     Выход  
     Сохранить  
-    ![Screenshot](../images/xds1.gif)
+    ![Screenshot](../images/MQB/xds1.gif)
     
 !!! tip
     Поставил на max и попробывал в сравнении с strong, по ощущениям притормаживание внутреннего (в повороте) колеса в strong происходит на большей скорости и с большим выворотом руля чем в режиме maximum. 

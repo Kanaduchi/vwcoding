@@ -22,7 +22,7 @@ ODIS E: AC Automat -> MAS06416 -> Включ.
     Если нет 6 бита, можно изменить только сам код - вместо значения 00001110 поставить значение 01001110  
     Выход  
     Сохранить  
-    ![Screenshot](../images/climate.jpg)    
+    ![Screenshot](../images/MQB/climate.jpg)    
     
 ??? note "Кодирование в OBD11"   
     08 Электроника отопителя и климатической установки → Длинное кодирование  
@@ -83,7 +83,7 @@ ODIS E: AC Automat -> MAS06416 -> Включ.
     Если выбора битов нет, то можно поменять значение самого байта: 14 (по датчику в руле) или 18 (по наружней температуре)  
     Выход    
     Сохранить    
-    ![Screenshot](../images/wheel.PNG)    
+    ![Screenshot](../images/MQB/wheel.png)    
 
 ### Подогрев зеркал вместе с задним стеклом
 
@@ -103,7 +103,7 @@ ODIS E: AC Automat -> MAS06416 -> Включ.
     Байт 15 → Бит 3: Mirror Heating ON while Rear Window Heater ON  
     Выход  
     Сохранить  
-    ![Screenshot](../images/rear.jpg)  
+    ![Screenshot](../images/MQB/rear.jpg)  
 
 ### Увеличение времени обогрева заднего стекла
 

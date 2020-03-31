@@ -17,7 +17,7 @@ disqus: https-mqb-readthedocs-io
     Байт 16 → 2 бит: предупреждение об экстренном торможении через указатели поворотов (аварийной сигнализацией) → включить  
     Выход   
     Сохранить  
-    ![Screenshot](../images/signals.jpg)    
+    ![Screenshot](../images/MQB/signals.jpg)    
     
 !!! warning
     нельзя одновременно включать 2 параметра
@@ -133,7 +133,7 @@ disqus: https-mqb-readthedocs-io
 
 ### Включение секций задних габаритов для BASIS фонарей
 
-![Screenshot](../images/basicPTF.PNG)
+![Screenshot](../images/MQB/basicPTF.png)
 
 Фонарь на крышке левый
 ```
@@ -201,7 +201,7 @@ disqus: https-mqb-readthedocs-io
 
 ### Задние ПТФ на основе стоп-сигналов
 
-![Screenshot](../images/newPTF.PNG)
+![Screenshot](../images/MQB/newPTF.png)
 
 Отключаем основную ПТФ
 ```

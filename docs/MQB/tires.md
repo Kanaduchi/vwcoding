@@ -47,10 +47,10 @@ disqus: https-mqb-readthedocs-io
 
 > Diagnostic function - Write Data Record
 
-![Screenshot](../images/odis-e-tires.png) 
+![Screenshot](../images/MQB/odis-e-tires.png) 
 
 После загрузки данных меню настроек будет выглядить так:
-![Screenshot](../images/tires.jpg) 
+![Screenshot](../images/MQB/tires.jpg) 
     
 !!! warning
     После записи машина на некоторое время станет новогодней ёлкой - будут ошибки и отказы по всем блокам.   
@@ -58,7 +58,7 @@ disqus: https-mqb-readthedocs-io
     
 ### Косвенный контроль давления в шинах
 
-![Screenshot](../images/analog_tires.png) 
+![Screenshot](../images/MQB/analog_tires.png) 
 
 Активация в блоке ABS
 ```

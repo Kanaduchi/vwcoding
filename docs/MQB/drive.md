@@ -33,7 +33,7 @@
     1 - включено, 0 - выключено   
     Выход   
     Сохранить   
-    ![Screenshot](../images/staging.jpg)
+    ![Screenshot](../images/MQB/staging.jpg)
     
 ### Мягкое трогание с Autohold
 
@@ -79,7 +79,7 @@
     Байт 0 → биты 0, 1: Галочку ставим, с остальных битов снимаем  
     Выход   
     Сохранить   
-    ![Screenshot](../images/pedal.png)
+    ![Screenshot](../images/MQB/pedal.png)
 
 !!! tip
     Наиболее полный эффект будет после адаптации ДСГ-7.

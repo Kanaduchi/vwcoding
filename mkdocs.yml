@@ -17,14 +17,22 @@ nav:
   - Кодирование платформы PQ26: PQ26/index.md
   - Кодирование платформы PQ26:
     - Общая информация: PQ26/index.md
-    - Управление освещением: PQ26/lights.md
+    - Освещение:
+      - Управление освещением: PQ26/lights.md
+      - Нестандартные световые решения: PQ26/extraLights.md
+      - Обозначения ламп: PQ26/codingLights.md
+      - Обозначения ламп c картинками: PQ26/codingLightsPictures.md
+      - Установка светодиодов: PQ26/setLED.md
     - Стеклоочистители / Датчик дождя и света: PQ26/wash.md
     - Климат / Обогрев зеркал и стекол: PQ26/climate.md
     - Двери, стекла, цз, брелок и штатная сигнализация: PQ26/security.md
-    - Панель приборов: PQ26/instrPanel.md
+    - Панель приборов:
+      - Общие кодировки: PQ26/instrPanel.md
+      - Кривые подсветки панели приборов: PQ26/instrPanelCoding.md
     - Тормоза и шины: PQ26/brakes.md
     - Динамика и управление: PQ26/drive.md
     - Мультимедиа: PQ26/multimedia.md
+    - Дооснащение: PQ26/addons.md
   - Кодирование платформы MQB: MQB/index.md
   - Кодирование платформы MQB:
     - Общая информация: MQB/index.md
@@ -46,6 +54,7 @@ nav:
     - Приборная панель: MQB/AID.md
     - Головное устройство: MQB/headDevice.md
     - Шины: MQB/tires.md
+    - Дооснащение: MQB/addons.md
   - ODIS E: odis-e.md
   - Кодирование байтов и битов: bytes.md
   - История изменений: history.md

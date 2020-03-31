@@ -41,7 +41,7 @@ disqus: https-mqb-readthedocs-io
     Байт 8 → 2 бит: Manoeuvre_Light → включить  
     Выход   
     Сохранить  
-    ![Screenshot](../images/Manoeuvre_Light.jpg)    
+    ![Screenshot](../images/MQB/Manoeuvre_Light.jpg)    
 
 ### Включение ПТФ при включении дальнего света
 
@@ -222,7 +222,7 @@ disqus: https-mqb-readthedocs-io
 
 ### Пункт меню настроек "Дневной свет", чтоб отключать ДХО только по необходимости
 
-![Screenshot](../images/daylight.jpg)
+![Screenshot](../images/MQB/daylight.jpg)
 
 	Блок 09 → Адаптация
 	> Aussenlicht_Front

@@ -28,7 +28,7 @@ ODIS E: 006: 0017 → [LN]_scenering → yes
     Байт 1 → Бит 0: (Gauge test/ Needle Sweep / Staging) → ставим галочку  
     Выход  
     Сохранить  
-    ![Screenshot](../images/staging.jpg)
+    ![Screenshot](../images/MQB/staging.jpg)
   
 ### Остаток в баках
 
@@ -57,7 +57,7 @@ ODIS E: 006: 0017 -> [IDE04848] Объем, который необходимо 
     Байт 10 → Бит 4: Display "Volume to be Replenished" → ставим галочку  
     Выход  
     Сохранить  
-    ![Screenshot](../images/refill.jpg)
+    ![Screenshot](../images/MQB/refill.jpg)
     
 ### Таймер круга
 
@@ -79,7 +79,7 @@ ODIS E: 006: 0017 -> [IDE04848] Объем, который необходимо 
     Байт 1 → Бит 3: Lap Timer active → ставим галочку  
     Выход  
     Сохранить  
-    ![Screenshot](../images/staging.jpg) 
+    ![Screenshot](../images/MQB/staging.jpg) 
     
 ### Отображение мгновенного расхода
 
@@ -166,7 +166,7 @@ ODIS E: 006: 0017 -> [IDE04848] Объем, который необходимо 
     Байт 3 → Бит 0-2: Исполнение 3
     Выход  
     Сохранить  
-    ![Screenshot](../images/speed.png)
+    ![Screenshot](../images/MQB/speed.png)
 
 ### Смена вида отображаемого автомобиля
 
@@ -184,7 +184,7 @@ ODIS E: 006: 0017 -> [IDE04848] Объем, который необходимо 
 ### Смена скина приборной панели
 
 Вариант 1 - Стандартная схема
-![Screenshot](../images/AID-themes/StandartTheme.jpg)
+![Screenshot](../images/MQB/AID-themes/StandartTheme.jpg)
 ```
 Блок 17 → Адаптация  
 > Tube_version - варианты 0, 5, 6, 7, 8, 9
@@ -192,7 +192,7 @@ ODIS E: 006: 0017 -> [IDE04848] Объем, который необходимо 
 ```
 
 Вариант 2 - Стандартная схема c большим количеством точек
-![Screenshot](../images/AID-themes/StandartThemeMoreDots.jpg)
+![Screenshot](../images/MQB/AID-themes/StandartThemeMoreDots.jpg)
 ```
 Блок 17 → Адаптация  
 > Tube_version - вариант 1
@@ -200,7 +200,7 @@ ODIS E: 006: 0017 -> [IDE04848] Объем, который необходимо 
 ```
 
 Вариант 3 - Alltrack тема
-![Screenshot](../images/AID-themes/AllTrackTheme.jpg)
+![Screenshot](../images/MQB/AID-themes/AllTrackTheme.jpg)
 ```
 Блок 17 → Адаптация  
 > Tube_version - вариант 2
@@ -208,7 +208,7 @@ ODIS E: 006: 0017 -> [IDE04848] Объем, который необходимо 
 ```
 
 Вариант 4 - GTI / GTD тема
-![Screenshot](../images/AID-themes/GTITheme.jpg)
+![Screenshot](../images/MQB/AID-themes/GTITheme.jpg)
 ```
 Блок 17 → Адаптация  
 > Tube_version - вариант 3
@@ -216,7 +216,7 @@ ODIS E: 006: 0017 -> [IDE04848] Объем, который необходимо 
 ```
 
 Вариант 5 - R-line тема
-![Screenshot](../images/AID-themes/RTheme.jpg)
+![Screenshot](../images/MQB/AID-themes/RTheme.jpg)
 ```
 Блок 17 → Адаптация  
 > Tube_version - вариант 4
@@ -227,7 +227,7 @@ ODIS E: 006: 0017 -> [IDE04848] Объем, который необходимо 
 ```
 
 Вариант 6 - R-line тема со логотипом R-line внизу приборной панели
-![Screenshot](../images/AID-themes/RThemeWithLogo.jpg)
+![Screenshot](../images/MQB/AID-themes/RThemeWithLogo.jpg)
 ```
 Блок 17 → Адаптация  
 > Tube_version - вариант 4
