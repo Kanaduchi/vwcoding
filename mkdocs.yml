@@ -14,9 +14,9 @@ copyright: 'Copyright &copy; 2020 - Andrey Topchiy'
 
 nav:
   - Главная страница: index.md
-  - Кодирование платформы PQ26: PQ26/index.md
-  - Кодирование платформы PQ26:
-    - Общая информация: PQ26/index.md
+  - Платформа PQ26: PQ26/main.md
+  - Платформа PQ26:
+    - Общая информация: PQ26/main.md
     - Освещение:
       - Управление освещением: PQ26/lights.md
       - Нестандартные световые решения: PQ26/extraLights.md
@@ -34,9 +34,9 @@ nav:
     - Мультимедиа: PQ26/multimedia.md
     - Дооснащение: PQ26/addons.md
     - Словарь немецких терминов: PQ26/german.md
-  - Кодирование платформы MQB: MQB/index.md
-  - Кодирование платформы MQB:
-    - Общая информация: MQB/index.md
+  - Платформа MQB: MQB/main.md
+  - Платформа MQB:
+    - Общая информация: MQB/main.md
     - Ассистенты водителя: MQB/assistents.md
     - Системы активной безопасности: MQB/active_systems.md
     - Движение и управление: MQB/drive.md

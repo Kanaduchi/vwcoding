@@ -1,3 +1,16 @@
 .md-header-nav__title {
   padding-top: 3px;
 }
+
+.md-nav__item:hover {
+  background-color: rgba(63, 81, 181, 0.1);
+}
+
+.md-nav__item--nested {
+  background: none !important;
+}
+
+.md-tabs__item:hover {
+  background: #5564C3;
+  border-bottom: 3px solid #fff;
+}
