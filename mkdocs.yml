@@ -85,6 +85,9 @@ extra:
   search:
     language: 'en, ru'
 
+plugins:
+    - mkpdfs
+
 markdown_extensions:
   - meta
   - markdown.extensions.admonition
