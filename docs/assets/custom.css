@@ -1,0 +1,29 @@
+.md-header-nav__title {
+  padding-top: 3px;
+  padding-left: 0px;
+}
+
+.md-nav__item:hover {
+  background-color: rgba(63, 81, 181, 0.1);
+}
+
+.md-nav__item--nested {
+  background: none !important;
+}
+
+.md-tabs__item:hover {
+  background: #5564C3;
+  border-bottom: 4px solid #fff;
+  transform: scaleY(1);
+}
+
+.md-tabs__item--active {
+  border-bottom: 4px solid #fff;
+  color: inherit;
+  opacity: 1;
+}
+
+.md-header-nav__button.md-logo img {
+  width: 32px !important;
+  height: 32px !important;
+}

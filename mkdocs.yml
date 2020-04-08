@@ -1,60 +1,95 @@
 # Project information
-site_name: 'Кодирование MQB платформы'
-site_description: 'Основные настройки MQB платформы'
-site_author: 'Andrey Topchiy'
-site_url: 'https://mqb.readthedocs.io'
+site_name: Кодирование автомобилей VAG
+site_description: Основные настройки различных палтформ концерна VAG
+site_author: Andrey Topchiy
+site_url: http://www.vwcoding.ru
 
 # Repository
-repo_name: 'Kanaduchi/mqb'
-repo_url: 'https://github.com/Kanaduchi/mqb'
-edit_uri: 'https://github.com/Kanaduchi/mqb/edit/1com/docs/'
+repo_name: Kanaduchi/mqb
+repo_url: https://github.com/Kanaduchi/mqb
+edit_uri: https://github.com/Kanaduchi/mqb/edit/1com/docs/
 
 # Copyright
-copyright: 'Copyright &copy; 2020 - Andrey Topchiy'
+copyright: Copyright &copy; 2020 - Andrey Topchiy
+
+# Main directory
+docs_dir: docs/
 
 nav:
-  - Ассистенты водителя: assistents.md
-  - Системы активной безопасности: active_systems.md
-  - Движение и управление: drive.md
-  - Парковка и маневрирование: parking.md
-  - Эстетическая подсветка:
-    - Общие настройки: esteticLights.md
-    - Кодирование: esteticLightsCoding.md
-  - Зеркала и стеклоочистители: wash.md
-  - Отпирание и запирание: security.md
-  - Освещение:
-    - Кодирование фонарей: codingLights.md
-    - Передние фонари:  headLights.md
-    - Задние фонари: rearLights.md
-  - Звук: sound.md
-  - Климат: climate.md
-  - Приборная панель: AID.md
-  - Головное устройство: headDevice.md
-  - Шины: tires.md
-  - ODIS E: odis-e.md
+  - Главная страница: index.md
+  - Платформа MQB: MQB/main.md
+  - Платформа MQB:
+    - Общая информация: MQB/main.md
+    - Ассистенты водителя: MQB/assistents.md
+    - Системы активной безопасности: MQB/active_systems.md
+    - Движение и управление: MQB/drive.md
+    - Парковка и маневрирование: MQB/parking.md
+    - Эстетическая подсветка:
+      - Общие настройки: MQB/esteticLights.md
+      - Кодирование: MQB/esteticLightsCoding.md
+    - Зеркала и стеклоочистители: MQB/wash.md
+    - Отпирание и запирание: MQB/security.md
+    - Освещение:
+      - Кодирование фонарей: MQB/codingLights.md
+      - Передние фонари:  MQB/headLights.md
+      - Задние фонари: MQB/rearLights.md
+    - Звук: MQB/sound.md
+    - Климат: MQB/climate.md
+    - Приборная панель: MQB/AID.md
+    - Головное устройство: MQB/headDevice.md
+    - Шины: MQB/tires.md
+    - Дооснащение: MQB/addons.md
+  - Платформа PQ26: PQ26/main.md
+  - Платформа PQ26:
+    - Общая информация: PQ26/main.md
+    - Освещение:
+      - Управление освещением: PQ26/lights.md
+      - Нестандартные световые решения: PQ26/extraLights.md
+      - Обозначения ламп: PQ26/codingLights.md
+      - Обозначения ламп c картинками: PQ26/codingLightsPictures.md
+      - Установка светодиодов: PQ26/setLED.md
+    - Стеклоочистители / Датчик дождя и света: PQ26/wash.md
+    - Климат / Обогрев зеркал и стекол: PQ26/climate.md
+    - Двери, стекла, цз, брелок и штатная сигнализация: PQ26/security.md
+    - Панель приборов:
+      - Общие кодировки: PQ26/instrPanel.md
+      - Кривые подсветки панели приборов: PQ26/instrPanelCoding.md
+    - Тормоза и шины: PQ26/brakes.md
+    - Динамика и управление: PQ26/drive.md
+    - Мультимедиа: PQ26/multimedia.md
+    - Дооснащение: PQ26/addons.md
+    - Словарь немецких терминов: PQ26/german.md
+  - Инструкция ODIS E: odis-e.md
   - Кодирование байтов и битов: bytes.md
   - История изменений: history.md
   - Поддержать проект: https://money.yandex.ru/to/4100110582992748/50
 
 theme:
-  name: null
-  custom_dir: 'material'
+  name: material
+  custom_dir: overrides
+  favicon: assets/logo.png
   highlightjs: false
   language: ru
-  palette:
   font:
     text: Roboto
     code: Roboto Mono
-  logo: 'vw.svg'
-  feature:
-    tabs: false
+  logo: assets/logo.png
+  features:
+    - tabs
+    #- instant
   # 404 page
   static_templates:
     - 404.html
 
-extra:
-  search:
-    language: 'en, ru'
+extra_css:
+  - assets/custom.css
+
+plugins:
+  - search:
+      lang:
+        - en
+        - de
+        - ru
 
 markdown_extensions:
   - meta

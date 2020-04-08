@@ -19,7 +19,7 @@ disqus: https-mqb-readthedocs-io
 
 В неё можно внести 16-ричную hex кодировку определенного блока. Программа сама разобъет кодировку на байты, и в нужном байте уже включить нужный бит.
 
-![Screenshot](../images/lcode.PNG) 
+![Screenshot](./images/lcode.png) 
 
 
 
