@@ -13,11 +13,12 @@
 
 .md-tabs__item:hover {
   background: #5564C3;
-  border-bottom: 3px solid #fff;
+  border-bottom: 4px solid #fff;
+  transform: scaleY(1);
 }
 
 .md-tabs__item--active {
-  border-bottom: 3px solid #fff;
+  border-bottom: 4px solid #fff;
   color: inherit;
   opacity: 1;
 }
