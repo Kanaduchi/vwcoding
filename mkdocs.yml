@@ -1,39 +1,22 @@
 # Project information
-site_name: 'Кодирование автомобилей VAG'
-site_description: 'Основные настройки различных палтформ концерна VAG'
-site_author: 'Andrey Topchiy'
-site_url: 'http://www.vwcoding.ru/'
+site_name: Кодирование автомобилей VAG
+site_description: Основные настройки различных палтформ концерна VAG
+site_author: Andrey Topchiy
+site_url: http://www.vwcoding.ru
 
 # Repository
-repo_name: 'Kanaduchi/mqb'
-repo_url: 'https://github.com/Kanaduchi/mqb'
-edit_uri: 'https://github.com/Kanaduchi/mqb/edit/1com/docs/'
+repo_name: Kanaduchi/mqb
+repo_url: https://github.com/Kanaduchi/mqb
+edit_uri: https://github.com/Kanaduchi/mqb/edit/1com/docs/
 
 # Copyright
-copyright: 'Copyright &copy; 2020 - Andrey Topchiy'
+copyright: Copyright &copy; 2020 - Andrey Topchiy
+
+# Main directory
+docs_dir: docs/
 
 nav:
   - Главная страница: index.md
-  - Платформа PQ26: PQ26/main.md
-  - Платформа PQ26:
-    - Общая информация: PQ26/main.md
-    - Освещение:
-      - Управление освещением: PQ26/lights.md
-      - Нестандартные световые решения: PQ26/extraLights.md
-      - Обозначения ламп: PQ26/codingLights.md
-      - Обозначения ламп c картинками: PQ26/codingLightsPictures.md
-      - Установка светодиодов: PQ26/setLED.md
-    - Стеклоочистители / Датчик дождя и света: PQ26/wash.md
-    - Климат / Обогрев зеркал и стекол: PQ26/climate.md
-    - Двери, стекла, цз, брелок и штатная сигнализация: PQ26/security.md
-    - Панель приборов:
-      - Общие кодировки: PQ26/instrPanel.md
-      - Кривые подсветки панели приборов: PQ26/instrPanelCoding.md
-    - Тормоза и шины: PQ26/brakes.md
-    - Динамика и управление: PQ26/drive.md
-    - Мультимедиа: PQ26/multimedia.md
-    - Дооснащение: PQ26/addons.md
-    - Словарь немецких терминов: PQ26/german.md
   - Платформа MQB: MQB/main.md
   - Платформа MQB:
     - Общая информация: MQB/main.md
@@ -56,34 +39,57 @@ nav:
     - Головное устройство: MQB/headDevice.md
     - Шины: MQB/tires.md
     - Дооснащение: MQB/addons.md
+  - Платформа PQ26: PQ26/main.md
+  - Платформа PQ26:
+    - Общая информация: PQ26/main.md
+    - Освещение:
+      - Управление освещением: PQ26/lights.md
+      - Нестандартные световые решения: PQ26/extraLights.md
+      - Обозначения ламп: PQ26/codingLights.md
+      - Обозначения ламп c картинками: PQ26/codingLightsPictures.md
+      - Установка светодиодов: PQ26/setLED.md
+    - Стеклоочистители / Датчик дождя и света: PQ26/wash.md
+    - Климат / Обогрев зеркал и стекол: PQ26/climate.md
+    - Двери, стекла, цз, брелок и штатная сигнализация: PQ26/security.md
+    - Панель приборов:
+      - Общие кодировки: PQ26/instrPanel.md
+      - Кривые подсветки панели приборов: PQ26/instrPanelCoding.md
+    - Тормоза и шины: PQ26/brakes.md
+    - Динамика и управление: PQ26/drive.md
+    - Мультимедиа: PQ26/multimedia.md
+    - Дооснащение: PQ26/addons.md
+    - Словарь немецких терминов: PQ26/german.md
   - Инструкция ODIS E: odis-e.md
   - Кодирование байтов и битов: bytes.md
   - История изменений: history.md
   - Поддержать проект: https://money.yandex.ru/to/4100110582992748/50
 
 theme:
-  name: null
-  favicon: 'vw.png'
-  custom_dir: 'material'
+  name: material
+  custom_dir: overrides
+  favicon: assets/logo.png
   highlightjs: false
   language: ru
-  palette:
   font:
     text: Roboto
     code: Roboto Mono
-  logo: 'vw.png'
-  feature:
-    tabs: true
+  logo: assets/logo.png
+  features:
+    - tabs
+    #- instant
   # 404 page
   static_templates:
     - 404.html
 
 extra_css:
-  - 'custom.css'
+  - assets/custom.css
 
-extra:
-  search:
-    language: 'en, ru'
+plugins:
+  - search:
+      lang:
+        - en
+        - de
+        - ru
 
 markdown_extensions:
   - meta
