@@ -37,7 +37,9 @@ nav:
     - Климат: MQB/climate.md
     - Приборная панель: MQB/AID.md
     - Головное устройство: MQB/headDevice.md
-    - Шины: MQB/tires.md
+    - Шины:
+      - Общие кодировки: MQB/tires.md
+      - Генератор параметрии: MQB/tiresCoding.md
     - Дооснащение: MQB/addons.md
   - Платформа PQ26: PQ26/main.md
   - Платформа PQ26:
