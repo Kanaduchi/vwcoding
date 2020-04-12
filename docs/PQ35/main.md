@@ -6,11 +6,11 @@
 
 !!! tip "Оффоайн версия с диагностической информацией"
     Оффлайн версия содержит в себе раздел, посвещенный диагностике неисправностей   
-    Данный файл был собран пользователем [RiHard](https://www.drive2.ru/users/rihard/) для сообщества «КОДИРОВКИ VAG» на [DRIVE2.RU](https://www.drive2.ru/communities/3868/)
+    Данный файл был создан пользователем [RiHard](https://www.drive2.ru/users/rihard/) для сообщества «КОДИРОВКИ VAG» на [DRIVE2.RU](https://www.drive2.ru/communities/3868/)
     [Скачать](PQ35.pdf)   
 
 !!! tip "Оффлайн версия для Tiguan 1st generation"
-    Данный файл был собран пользователем [savafso](https://www.drive2.ru/users/savafso) для сообщества «КОДИРОВКИ VAG» на [DRIVE2.RU](https://www.drive2.ru/communities/3868/)
+    Данный файл был создан пользователем [savafso](https://www.drive2.ru/users/savafso) для сообщества «КОДИРОВКИ VAG» на [DRIVE2.RU](https://www.drive2.ru/communities/3868/)
     [Скачать](PQ35_Tiguan.pdf)    
     
 ### Инструкция
