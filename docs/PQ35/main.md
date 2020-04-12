@@ -1,3 +1,4 @@
+disqus: https-mqb-readthedocs-io
 # Кодирование платформы PQ35
 
 !!! note "Важная информация"
