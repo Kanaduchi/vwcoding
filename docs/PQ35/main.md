@@ -11,7 +11,7 @@
 
 !!! tip "Оффлайн версия для Tiguan 1st generation"
     Данный файл был собран пользователем [savafso](https://www.drive2.ru/users/savafso) для сообщества «КОДИРОВКИ VAG» на [DRIVE2.RU](https://www.drive2.ru/communities/3868/)
-    [Скачать](PQ26_Tiguan.pdf)    
+    [Скачать](PQ35_Tiguan.pdf)    
     
 ### Инструкция
 **В: Что нужно для применения данных кодировок?**  
