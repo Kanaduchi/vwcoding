@@ -61,9 +61,24 @@ nav:
     - Мультимедиа: PQ26/multimedia.md
     - Дооснащение: PQ26/addons.md
     - Словарь немецких терминов: PQ26/german.md
+  - Платформа PQ35: PQ35/main.md
+  - Платформа PQ35:
+      - Общая информация: PQ35/main.md
+      - Управление и динамика: PQ35/drive.md
+      - Свет: PQ35/lights.md
+      - Мультимедиа: PQ35/multimedia.md
+      - Комфорт: PQ35/comfort.md
+      - Прочие функции: PQ35/other.md
+      - Кодировки Tiguan 1st Gen:
+          - Управление и динамика: PQ35/Tiguan/drive.md
+          - Комфорт: PQ35/Tiguan/comfort.md
+          - Свет: PQ35/Tiguan/lights.md
+          - Приборная панель: PQ35/Tiguan/instrPanel.md
+          - Мультимедиа: PQ35/Tiguan/multimedia.md
   - Инструкция ODIS E: odis-e.md
   - Кодирование байтов и битов: bytes.md
   - История изменений: history.md
+  - Обратная связь: questions.md
   - Поддержать проект: https://money.yandex.ru/to/4100110582992748/50
 
 theme:

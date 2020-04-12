@@ -1,4 +1,6 @@
+disqus: https-mqb-readthedocs-io
 # Кодирование платформы PQ26
+
 !!! note "Важная информация"
     1. Кодировки проверялись в основной своей массе на Skoda Rapid 16 и 17 м.г.  
     2. Если пункт помечен, как «необходимо проверить», значит более чем об одном успешном применении кодировки не известно.  
@@ -6,9 +8,9 @@
     4. Если кодировка подходит только для машин 19 м.г., это указано в названии настройки.  
 
 !!! tip "Оффоайн версия"
-    Данный файл был предоставлен пользователем [prog-san](https://www.drive2.ru/users/prog-san)   
-    [Скачать](PQ26.pdf)
-    
+    Данный файл был создан пользователем [prog-san](https://www.drive2.ru/users/prog-san) для сообщества «КОДИРОВКИ VAG» на [DRIVE2.RU](https://www.drive2.ru/communities/3868/)    
+    <button class="pure-material-button-contained" type="button" id="generate" onclick="window.location.href = '../PQ26.pdf';">Скачать (pdf)</button>
+       
 ### Автомобили на этой платформе
 A06 (PQ26)  
 Škoda Fabia Mk3 (NJ)  
