@@ -7,12 +7,12 @@ disqus: https-mqb-readthedocs-io
 
 !!! tip "Оффоайн версия с диагностической информацией"
     Оффлайн версия содержит в себе раздел, посвещенный диагностике неисправностей   
-    Данный файл был создан пользователем [RiHard](https://www.drive2.ru/users/rihard/) для сообщества «КОДИРОВКИ VAG» на [DRIVE2.RU](https://www.drive2.ru/communities/3868/)
-    [Скачать](PQ35.pdf)   
+    Данный файл был создан пользователем [RiHard](https://www.drive2.ru/users/rihard/) для сообщества «КОДИРОВКИ VAG» на [DRIVE2.RU](https://www.drive2.ru/communities/3868/)  
+    <button class="pure-material-button-contained" type="button" id="generate" onclick="window.location.href = '../PQ35.pdf';">Скачать (pdf)</button>
 
 !!! tip "Оффлайн версия для Tiguan 1st generation"
-    Данный файл был создан пользователем [savafso](https://www.drive2.ru/users/savafso) для сообщества «КОДИРОВКИ VAG» на [DRIVE2.RU](https://www.drive2.ru/communities/3868/)
-    [Скачать](PQ35_Tiguan.pdf)    
+    Данный файл был создан пользователем [savafso](https://www.drive2.ru/users/savafso) для сообщества «КОДИРОВКИ VAG» на [DRIVE2.RU](https://www.drive2.ru/communities/3868/)  
+    <button class="pure-material-button-contained" type="button" id="generate" onclick="window.location.href = '../PQ35_Tiguan.pdf';">Скачать (pdf)</button>
     
 ### Инструкция
 **В: Что нужно для применения данных кодировок?**  

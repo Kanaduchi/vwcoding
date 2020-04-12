@@ -8,8 +8,8 @@ disqus: https-mqb-readthedocs-io
     4. Если кодировка подходит только для машин 19 м.г., это указано в названии настройки.  
 
 !!! tip "Оффоайн версия"
-    Данный файл был создан пользователем [prog-san](https://www.drive2.ru/users/prog-san) для сообщества «КОДИРОВКИ VAG» на [DRIVE2.RU](https://www.drive2.ru/communities/3868/)
-    [Скачать](PQ26.pdf)
+    Данный файл был создан пользователем [prog-san](https://www.drive2.ru/users/prog-san) для сообщества «КОДИРОВКИ VAG» на [DRIVE2.RU](https://www.drive2.ru/communities/3868/)    
+    <button class="pure-material-button-contained" type="button" id="generate" onclick="window.location.href = '../PQ26.pdf';">Скачать (pdf)</button>
        
 ### Автомобили на этой платформе
 A06 (PQ26)  
