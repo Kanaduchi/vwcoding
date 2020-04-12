@@ -9,7 +9,7 @@ disqus: https-mqb-readthedocs-io
 	> Новое значение: сильно (strong)
 	→ Применить
 	
-> логин-пароль: 20103 или 40304
+> логин-пароль: 40304
 
 ### TSC (Traction Control System / Компенсация увода вбок)
 
