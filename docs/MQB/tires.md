@@ -63,7 +63,7 @@ disqus: https-mqb-readthedocs-io
 Активация в блоке ABS
 ```
 Блок 03 → Кодирование
-> Байт 27 → включаем биты 4 и 5 (1-й вариант) или биты 4,5,6 (2-й вариант) 
+> Байт 27 → включаем биты 4,5 (1-й вариант) или биты 4,5,6 (2-й вариант - для парк-пилота) 
 > Байт 28 → включаем бит 7
 → Применить (с перезагрузкой блока)
 ```
@@ -71,8 +71,7 @@ disqus: https-mqb-readthedocs-io
 Активация отображения на приборной панели
 ```
 Блок 17 → Кодирование  
-> Байт 4 → включаем бит 0
-(Индикатор контроля давления в шинах)
+> Байт 4 → включаем бит 0 - Indirect Tire Pressure Monitoring System(TPMS) installed (Индикатор контроля давления в шинах)
 → Применить (с перезагрузкой блока)
 ```
 
@@ -86,7 +85,7 @@ disqus: https-mqb-readthedocs-io
 
 > Car_Function_List_BAP_Gen2
 >> tire_pressure_system_0x07 → activate
->> tire_pressure_system_0x07_msg_bus → CAN_Comfort
+>> tire_pressure_system_0x07_msg_bus → CAN_Comfort (возможно Suspension_data_bus)
 → Применить 
 ```
 
