@@ -77,7 +77,7 @@ p_helligkeit_Tueren_geschlossen_HD_zu_zuendung_aus_
 p_helligkeit_Tueren_geschlossen_schluessel_ab_
 p_helligkeit_Fzg_geschlossen_schluessel_ab_
 ```
-Все значения можно к примеру взять из уже имеющегося канала, например, подсветка ног: tueren
+Все значения можно к примеру взять из уже имеющегося канала, например, подсветка ног: fussraum
 
 Яркость плафонов по умолчанию
 ```
