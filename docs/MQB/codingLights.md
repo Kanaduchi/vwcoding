@@ -7,11 +7,13 @@ disqus: https-mqb-readthedocs-io
 !!!tip ""    
     Если вы заметили неточность, просьба сообщить о ней в комментариях внизу страницы или написать [Вячеславу](https://www.drive2.ru/users/slavian116) через личные сообщения на Drive2
 
-### Список каналов передних фонарей
+### Схема работы каналов освещения
 
-У разных машин (Tiguan, Skoda, Golf, Passat) могут быть разные привязки ламп к каналам.  
+![Screenshot](../images/MQB/light_scheme.jpg)
 
-Например, таблица для Tiguan 2 (2017-)   
+У разных машин (Tiguan, Skoda, Golf, Passat) могут быть разные привязки ламп к каналам. 
+
+### Список каналов передних фонарей VW Tiguan 2
 
 | Названия ламп                                 | BASIS LED                                 | MID LED                      |
 | --------------------------------------------- |:-----------------------------------------:| ----------------------------:|
@@ -23,11 +25,7 @@ disqus: https-mqb-readthedocs-io
 | Leuchte10SHUTTER LB23 / Leuchte11SHUTTER RB22 | Левый / Правый диагностика блажнего света |  Питание модуля / Пусто      |
 | Leuchte12NL LB45 / Leuchte13NL RB5            | Левый / Правый ПТФ                        |  Левый / Правый ПТФ          |
 
-### Список каналов задних фонарей
-
-У разных машин (Tiguan, Skoda, Golf, Passat) могут быть разные привязки ламп к каналам.  
-
-Например, таблица для Tiguan 2 (2017-)   
+### Список каналов задних фонарей VW Tiguan 2
 
 | Названия ламп                                                                | BASIS                                                         | HIGH                                               |
 | ---------------------------------------------------------------------------- |:-------------------------------------------------------------:| --------------------------------------------------:|
@@ -56,6 +54,22 @@ Leuchte9FL RB2 - [Leuchte][9][FL] [R][B2]
 [FL] - обозначение функции лампы (часто может не совпадать с реальностью)  
 [R] - расположение - rechts (справа)/links (слева)  
 [B2] - Контакт на BCM (разъём В, пин 2)
+
+| Аббревиатура функции лампы | Немецкое название              | Русское название      |
+|:--------------------------:|:------------------------------:|:---------------------:|
+| ABL                        | <span style="font-weight:bold">A</span>b<span style="font-weight:bold">b</span>lend<span style="font-weight:bold">l</span>icht       | Ближний свет          |
+| AMBL                       | <span style="font-weight:bold">Amb</span>iente<span style="font-weight:bold">l</span>icht          | Атмосферная подсветка |
+| BLK                        | <span style="font-weight:bold">Bl</span>in<span style="font-weight:bold">k</span>en                | Поворотник            |
+| BR                         | <span style="font-weight:bold">Br</span>emslicht                 | Стоп-сигнал           |
+| FL                         | <span style="font-weight:bold">F</span>ern<span style="font-weight:bold">l</span>icht              | Дальний свет          |
+| FR                         | <span style="font-weight:bold">F</span>uss<span style="font-weight:bold">r</span>aumlicht          | Подсветка ног         |
+| HD                         | <span style="font-weight:bold">H</span>eck<span style="font-weight:bold">d</span>eckel             | Крышка багажника      |
+| KZL                        | <span style="font-weight:bold">K</span>enn<span style="font-weight:bold">z</span>eichen<span style="font-weight:bold">l</span>euchte | Подсветка номера      |
+| NL                         | <span style="font-weight:bold">N</span>ebel<span style="font-weight:bold">l</span>icht             | ПТФ спереди           |
+| NSL                        | <span style="font-weight:bold">N</span>ebel<span style="font-weight:bold">s</span>chluss<span style="font-weight:bold">l</span>icht  | ПТФ сзади             |
+| RFL                        | <span style="font-weight:bold">R</span>ueck<span style="font-weight:bold">f</span>ahr<span style="font-weight:bold">l</span>icht     | Задний ход            |
+| SL                         | <span style="font-weight:bold">S</span>tand<span style="font-weight:bold">l</span>icht             | Габариты              |
+| TFL                        | <span style="font-weight:bold">T</span>ag<span style="font-weight:bold">f</span>ahr<span style="font-weight:bold">l</span>icht       | ДХО                   |
 
 ### Тип ламп
 
