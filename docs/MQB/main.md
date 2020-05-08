@@ -1,5 +1,10 @@
 ## Кодирование платформы MQB
 
+!!! tip "Оффоайн версия для Skoda Octavia A7"
+    Данный файл был создан пользователем [SunLionn](https://www.drive2.ru/users/sunlionn) для сообщества «КОДИРОВКИ VAG» на [DRIVE2.RU](https://www.drive2.ru/communities/3868/)    
+    <button class="pure-material-button-contained" type="button" id="generate" onclick="window.location.href = '../MQB - Skoda Octavia A7 - v1.118.8.pdf';">Скачать (pdf)</button>
+       
+
 ### Блоки автомобиля и коды доступа:
 
     > Блок 01 - Двигатель - код: 27971
