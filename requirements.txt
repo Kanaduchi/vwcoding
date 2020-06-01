@@ -1,3 +1,2 @@
 # Direct dependencies
-markdown>=3.2.1
 mkdocs-material>=5.2.2
