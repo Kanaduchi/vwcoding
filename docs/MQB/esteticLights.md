@@ -97,7 +97,7 @@ disqus: https-mqb-readthedocs-io
 ![Screenshot](../images/MQB/door.png)
 ```
 Блок 09 → Адаптация
-> Освещение салона, параметры / Interior_light_parameter
+> Interior_light_parameter / Освещение салона, параметры
 >> p_ambientelicht_verbauinformation_HMI2 → 100
 → Применить
 ```  
@@ -107,52 +107,66 @@ disqus: https-mqb-readthedocs-io
 + [ODIS_E шкала на 30 цветов для машин без RGB для 09 блока (адаптации)](../odis-files/09 - Шкала на 30 цветов.PRE)    
 + [ODIS_E шкала на 10 цветов для машин без RGB для 09 блока (адаптации)](../odis-files/09 - Шкала на 9 цветов.PRE)
 
-	Блок 09 → Адаптация
-	> Освещение салона 2-го поколения
-	>> Mittelkonsolenbeleuchtung mehrfarbig:
-	Старое значение: не акт.
-	Новое значение: акт.
+```
+Блок 09 → Адаптация
+> Interior_light_2nd_generation / Освещение салона 2-го поколения
+>> Mittelkonsolenbeleuchtung mehrfarbig:
+Старое значение: не акт.
+Новое значение: акт.
+→ Применить
+```
+
+```	
+> Interior_light_lamp_configuration / Освещение салона, конфигурация фонарей
+>> Ambientemenue mit globalem aus → акт.
+>> Ambientemenue mit alle Zonen → акт.
+>> Ambient_Farbliste_HMI → акт.
+→ Применить
+```
+
+```
+> Ambience_lightning_color_list / Ambientelicht Farbliste / Эстетическая подсветка
+Старое значение у всех: 0
+— Rotwert Farbe 1- 217
+— Gruenwert Farbe 1- 221
+— Blauwert Farbe 1 — 235
+— Rotwert Farbe 2 — 255
+— Gruenwert Farbe 2 — 172
+— Blauwert Farbe 2 — 5
+— Rotwert Farbe 3 — 253
+— Gruenwert Farbe 3 — 108
+— Blauwert Farbe 3 — 55
+— Rotwert Farbe 4 — 222
+— Gruenwert Farbe 4 — 70
+— Blauwert Farbe 4 — 20
+— Rotwert Farbe 5 — 252
+— Gruenwert Farbe 5 — 116
+— Blauwert Farbe 5 — 240
+— Rotwert Farbe 6 — 132
+— Gruenwert Farbe 6 — 76
+— Blauwert Farbe 6 — 222
+— Rotwert Farbe 7 — 0
+— Gruenwert Farbe 7 — 102
+— Blauwert Farbe 7 — 225
+— Rotwert Farbe 8 — 1
+— Gruenwert Farbe 8 — 192
+— Blauwert Farbe 8 — 255
+— Rotwert Farbe 9 — 0
+— Gruenwert Farbe 9 — 204
+— Blauwert Farbe 9 — 0
+— Rotwert Farbe 10 — 182
+— Gruenwert Farbe 10 — 255
+— Blauwert Farbe 10 — 57
 	→ Применить
-	
-	> Освещение салона, конфигурация фонарей
-	>> Ambientemenue mit globalem aus → акт.
-	>> Ambientemenue mit alle Zonen → акт.
-	>> Ambient_Farbliste_HMI → акт.
-	→ Применить
-	
-	> Ambientelicht Farbliste (Эстетическая подсветка)
-	Старое значение у всех: 0
-    — Rotwert Farbe 1- 217
-    — Gruenwert Farbe 1- 221
-    — Blauwert Farbe 1 — 235
-    — Rotwert Farbe 2 — 255
-    — Gruenwert Farbe 2 — 172
-    — Blauwert Farbe 2 — 5
-    — Rotwert Farbe 3 — 253
-    — Gruenwert Farbe 3 — 108
-    — Blauwert Farbe 3 — 55
-    — Rotwert Farbe 4 — 222
-    — Gruenwert Farbe 4 — 70
-    — Blauwert Farbe 4 — 20
-    — Rotwert Farbe 5 — 252
-    — Gruenwert Farbe 5 — 116
-    — Blauwert Farbe 5 — 240
-    — Rotwert Farbe 6 — 132
-    — Gruenwert Farbe 6 — 76
-    — Blauwert Farbe 6 — 222
-    — Rotwert Farbe 7 — 0
-    — Gruenwert Farbe 7 — 102
-    — Blauwert Farbe 7 — 225
-    — Rotwert Farbe 8 — 1
-    — Gruenwert Farbe 8 — 192
-    — Blauwert Farbe 8 — 255
-    — Rotwert Farbe 9 — 0
-    — Gruenwert Farbe 9 — 204
-    — Blauwert Farbe 9 — 0
-    — Rotwert Farbe 10 — 182
-    — Gruenwert Farbe 10 — 255
-    — Blauwert Farbe 10 — 57
-	→ Применить
+```
+
+??? tip "Что это за цифры?"
+    > Rotwert Farbe 1: 217
+    > Gruenwert Farbe 1: 221
+    > Blauwert Farbe 1: 235
+    
+    Это цвета в формате RGB для шкалы выбора цвета. 
+    Можно перед адаптацией составить свой список желаемых цветов, используя калькулятор цвета (например, https://www.colorspire.com/rgb-color-wheel)
 	
 ??? note "Расширенные цвета"
     Расширеные цвета задаются в адаптации 9 блока: 
@@ -169,38 +183,43 @@ disqus: https-mqb-readthedocs-io
     Установленный гейт должен иметь версию софта не ниже 4344 или 5344 и иметь индекс Q и выше
 
 Меню эстетической подсветки
-    
-    Блок 19 → Кодирование
-    > FPA_Funktion_AMB — включить
-    → Применить (с перезагрузкой блока)
 
-    Блок 5F → Адаптация
-    > Car_Function_Adaptations_Gen2
-    >> Menu_display_ambient_illumination — Включ
-    >> Menu_display_ambient_illumination_clamp_15_off — не активир.
-    >> Menu_display_ambient_illumination_over_threshold_high — Включ.
-    >> Menu_display_ambient_illumination_standstill — не активир.
-    >> Menu_display_ambient_illumination_after_disclaimer — не активир.
-    → Применить 
-    
-    Блок 09 → Адаптация
-	> Освещение салона, конфигурация фонарей
-	>> Ambientemenue mit globalem aus — акт.
-    >> Ambientemenue mit alle Zonen — акт.
-    >> Ambient_Farbliste_HMI — акт.
-    >> Ambience_light_colorlist_default — 1
-    
-    Освещение салона 2-го поколения
-    >> Ambiente_Fahrprofil_Individual — 7
-    >> Ambiente_Farbwahl_FPA_waehlbare_Kopplung — active
-    >> Ambiente_Farbwahl_FPA_waehlbare_Kopplung_Status_hmi_default — сопряжены (coupled)
-	→ Применить
-	
-    > Освещение салона 2 го поколения: конфигурация фонарей
-    >> Mittelkonsolenbeleuchtung mehrfarbig — акт.
-    >> Cockpitbeleuchtung mehrfarbig — акт.
-    → Применить
-    
+```
+Блок 19 → Кодирование
+> FPA_Funktion_AMB — включить
+→ Применить (с перезагрузкой блока)
+```
+
+```
+Блок 5F → Адаптация
+> Car_Function_Adaptations_Gen2
+>> Menu_display_ambient_illumination — Включ
+>> Menu_display_ambient_illumination_clamp_15_off — не активир.
+>> Menu_display_ambient_illumination_over_threshold_high — Включ.
+>> Menu_display_ambient_illumination_standstill — не активир.
+>> Menu_display_ambient_illumination_after_disclaimer — не активир.
+→ Применить 
+```
+
+```
+Блок 09 → Адаптация
+> Interior_light_lamp_configuration / Освещение салона, конфигурация фонарей
+>> Ambientemenue mit globalem aus — акт.
+>> Ambientemenue mit alle Zonen — акт.
+>> Ambient_Farbliste_HMI — акт.
+>> Ambience_light_colorlist_default — 1 (или 0)
+>> Farbwahl ueber HMI — не акт.
+>> Farbwahl ueber Fahrprofil — не акт.
+→ Применить
+
+> Interior_light_2nd_generation / Освещение салона 2-го поколения
+>> Ambiente_Fahrprofil_Individual — 7
+>> Ambiente_Farbwahl_FPA_waehlbare_Kopplung — active
+>> Ambiente_Farbwahl_FPA_waehlbare_Kopplung_Status_hmi_default — сопряжены (coupled)
+>> Mittelkonsolenbeleuchtung mehrfarbig — акт.
+→ Применить
+```
+
 Профили движения
 
 !!! tip "Расшифровка профилей"

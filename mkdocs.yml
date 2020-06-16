@@ -102,6 +102,9 @@ extra_css:
   - assets/custom.css
 
 plugins:
+  - pdf-export:
+      theme_handler_path: material.py
+      enabled_if_env: ENABLE_PDF_EXPORT
   - search:
       lang:
         - en
