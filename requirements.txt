@@ -1,3 +1,4 @@
 # Direct dependencies
-mkdocs-material>=5.3.0
 mkdocs-pdf-export-plugin>=0.5.6
+mkdocs-material>=5.3.0
+
