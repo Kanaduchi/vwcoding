@@ -1,4 +1,4 @@
 ---
 template: ./tiresGenerator.html
-title: Material for MkDocs
+title: Генератор параметрии шин
 ---
