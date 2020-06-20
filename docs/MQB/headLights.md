@@ -8,7 +8,7 @@ disqus: https-mqb-readthedocs-io
 >> подблок RLНS:
 > 3СА8DD — фары включаются не так поздно, где то при 1200lx
 > 3CA8D7 — фары включаются совсем поздно, при 800lx
-```	
+```
 > логин-пароль 31347
 
 ??? note "Кодирование в VCDS"
@@ -27,7 +27,9 @@ disqus: https-mqb-readthedocs-io
 > Aussenlicht_uebergreifend 
 >> Umfeldleuchte_als_Manoevrierleuchte → Активировано 
 → Применить
-    
+```
+
+```
 Блок 6C → Кодирование
 > Manoeuvre_Light
 Старое значение: выкл.
