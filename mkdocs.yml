@@ -127,7 +127,6 @@ plugins:
         - de
         - ru
   - pdf-export:
-      theme_handler_path: pdf_export.py
       enabled_if_env: ENABLE_PDF_EXPORT
 
 markdown_extensions:
