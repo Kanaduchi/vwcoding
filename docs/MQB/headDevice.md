@@ -2,67 +2,75 @@ disqus: https-mqb-readthedocs-io
 # Головное устройство
 
 ### Деактивация AM диапазона в магнитоле
-
+Слева внизу вместо ненужного "переключателя" AM/FM появляется иконка настройки радиостанций вручную
 ![Screenshot](../images/MQB/fm.jpg)
 
-Результат: слева внизу вместо ненужного "переключателя" AM/FM появляется иконка настройки радиостанций вручную
+=== "Кодирование в ODIS"
+    ```
+    Блок 5F → Кодирование
+    > [LO]_byte_14_AM_disable
+    выбираем «Вкл»
+    → Применить (с перезагрузкой блока)
+    ```
+    ```
+    ODIS E: 5F -> кодирование -> [LO]_byte_14_AM_disable: ативировать
+    ```
 
-```
-Блок 5F → Кодирование
-> [LO]_byte_14_AM_disable
-выбираем «Вкл»
-→ Применить (с перезагрузкой блока)
-```
-
-```
-ODIS E: 5F -> кодирование -> [LO]_byte_14_AM_disable: ативировать
-```
-
-> логин-пароль 20103
-
-??? note "Кодирование в VCDS"
+=== "Кодирование в VCDS"
+    ```
     5F - MMI / RNS  
     Кодирование - 07 → Длинное кодирование  
     Байт 1 → Бит 1: byte_14_AM_disable  → ставим галочку  
     Выход  
-    Сохранить  
+    Сохранить
+    ```
     ![Screenshot](../images/MQB/am_radio.jpg) 
+    
+> логин-пароль 20103
 
 ### Заставка ГУ
 
-    Блок 5F → Кодирование
-    > 18 байт - меняем 00 на
-        01 — Hybrid
-        02 — GTD
-        03 — GTI
-        04 — BlueMotion
-        05 — E-Golf
-        06 — R-Line
-        07 — Golf R
-    → Применить (с перезагрузкой блока)
+```
+Блок 5F → Кодирование
+> 18 байт - меняем 00 на
+    01 — Hybrid
+    02 — GTD
+    03 — GTI
+    04 — BlueMotion
+    05 — E-Golf
+    06 — R-Line
+    07 — Golf R
+→ Применить (с перезагрузкой блока)
+```
 
 Логотип музыкальной системы
-
-    Блок 5F → Адаптация
-    > Startup_screen_sticker_hmi (по умолчанию стоит 0000) - меняем на
-        1 — fender premium audio system
-        2 — dynaudio
-    → Применить 
+```
+Блок 5F → Адаптация
+> Startup_screen_sticker_hmi (по умолчанию стоит 0000) - меняем на
+    1 — fender premium audio system
+    2 — dynaudio
+→ Применить 
+```
 
 ### Изменение картинки меню ГУ с перелистывания на плитку
 
+=== "Кодирование в ODIS"
+	```
 	Блок 5F → Кодирование
     > [LO]_byte_17_Skinning
     Старое значение: Skin_1
     Новое значение: Skin_5
     → Применить (с перезагрузкой блока)
+    ```
     
-??? note "Кодирование в VCDS"
+=== "Кодирование в VCDS"
+    ```
     5F - MMI / RNS  
     Кодирование - 07 → Длинное кодирование  
     Байт 17 → меняем Skin_1 на Skin_5  
     Выход  
     Сохранить  
+    ```
 
 ### Воспроизведение видео в движении через MirrorLink
 
@@ -80,13 +88,15 @@ ODIS E
 ### Меню в магнитоле для настройки приборной панели
 
 !!! tip ""
-    Проверено для Skoda Octavia
+    Проверено для Skoda Octavia  
 
-    Блок 5F → Адаптация
-    >> Car_function_list_bap_gen2_extended
-    > display_configuration_0x45 → activate
-    > display_configuration_0x45_msg_bus → CAN_Comfort
-    → Применить 
+```
+Блок 5F → Адаптация
+>> Car_function_list_bap_gen2_extended
+> display_configuration_0x45 → activate
+> display_configuration_0x45_msg_bus → CAN_Comfort
+→ Применить 
+```
     
 ### Off Road Display
 
@@ -102,29 +112,33 @@ ODIS E
 > menu_display_compass_over_threshold_high -> "active" (default not active) 
 > menu_display_compass_clamp_15_off  -> "active" (default not active)
 → Применить  
-  
+    
 > Car_Function_List_BAP_Gen2
 > compass_0x15 "active" (default not active)
 → Применить 
 ``` 
-
+    
 !!! warning ""
     Для Composition Media 8" необходимо выполнить кодировку 5F блока.   
     После кодирования в блоке будет висеть нестираемая ошибка, никак не влияющая на функциональность
-```
-Блок 5F → Кодирование
-> 24 байт (Navigation System)
-> бит 02 → включить (было "02" 00000010, стало "06" 00000110)
-→ Применить (с перезагрузкой блока)
-```
     
-??? note "Кодирование в VCDS"
+=== "Кодирование в ODIS"
+    ```
+    Блок 5F → Кодирование
+    > 24 байт (Navigation System)
+    > бит 02 → включить (было "02" 00000010, стало "06" 00000110)
+    → Применить (с перезагрузкой блока)
+    ```
+    
+=== "Кодирование в VCDS"
+    ```
     5F - MMI / RNS  
     Кодирование - 07 → Длинное кодирование  
     Байт 24 → Бит 2: (Navigation System) → ставим галочку  
     либо правим двоичное значение - было "02" 00000010, стало "06" 00000110  
     Выход  
-    Сохранить  
+    Сохранить
+    ```  
     
 > логин-пароль 20103 
 
@@ -167,3 +181,33 @@ ODIS E
 >> PSO_FSG_Setup2_Bit_2 → Active
 → Применить
 ```
+
+> логин-пароль 31347
+
+### Использование глонасс антенны для навигации и компаса
+
+!!! warning ""
+    Только для Discover Pro / Discover Media
+    
+```
+Блок 5F → Адаптация
+> Navigation_GNSS_Receiver_Setting:
+>> default_hw_reception: [VN]_not_activated
+>> gps: [VN]_not_activated (было activated)
+>> galileo: [VN]_not_activated
+>> glonass: [VN]_not_activated
+>> compass: [VN]_not_activated
+>> external_gps_1: [VN]_activated (было not_activated)
+>> external_gps_2: [VN]_not_activated
+→ Применить
+```
+
+```
+Блок 75 → Адаптация
+> GPS: [VO]_internal_GPS_output_on_CAN
+> Navigation_Type: [VO]_Type_2
+>> Gnss_data_rate:
+> Data Rate: 5 [UN]_Hz (было 1)
+→ Применить
+```
+
