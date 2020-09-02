@@ -1,10 +1,11 @@
-{#-
-  This file was automatically generated - do not edit
--#}
+<!-- Home page -->
 {% if nav_item.is_homepage or nav_item.url == "index.html" %}
   <li class="md-tabs__item">
     {% if not page.ancestors | length and nav | selectattr("url", page.url) %}
-      <a href="{{ nav_item.url | url }}" class="md-tabs__link md-tabs__link--active">
+      <a 
+        href="{{ nav_item.url | url }}" 
+        class="md-tabs__link md-tabs__link--active"
+      >
         {{ nav_item.title }}
       </a>
     {% else %}
@@ -13,24 +14,44 @@
       </a>
     {% endif %}
   </li>
+
+<!-- Main navigation item with nested items -->
 {% elif nav_item.children and nav_item.children | length > 0 %}
   {% set title = title | default(nav_item.title) %}
+
+  <!-- Recurse, if the first item has nested items -->
   {% if (nav_item.children | first).children %}
     {% set nav_item = nav_item.children | first %}
     {% include "partials/tabs-item.html" %}
+
+  <!-- Render item -->
   {% else %}
     {% if nav_item.active %}
         <li class="md-tabs__item md-tabs__item--active">
-          <a href="{{ (nav_item.children | first).url | url }}" class="md-tabs__link md-tabs__link--active">
+          <a
+            href="{{ (nav_item.children | first).url | url }}"
+            class="md-tabs__link md-tabs__link--active"
+          >
             {{ title }}
           </a>
         </li>
     {% else %}
         <li class="md-tabs__item">
-          <a href="{{ (nav_item.children | first).url | url }}" class="md-tabs__link">
+          <a
+            href="{{ (nav_item.children | first).url | url }}"
+            class="md-tabs__link"
+          >
             {{ title }}
           </a>
         </li>
     {% endif %}
   {% endif %}
+
+<!-- Main navigation item with external link -->
+{% elif nav_item.url.startswith("http") %}
+  <li class="md-tabs__item">
+    <a href="{{ nav_item.url | url }}" class="md-tabs__link">
+      {{ nav_item.title }}
+    </a>
+  </li>
 {% endif %}
