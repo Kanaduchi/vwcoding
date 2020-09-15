@@ -11,9 +11,8 @@ env:
 # Jobs to run
 jobs:
 
-  # Build and deploy documentation site
-  deploy:
-    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
+  # Build documentation
+  build:
     runs-on: ubuntu-latest
     steps:
 
@@ -32,10 +31,7 @@ jobs:
           pip install \
             mkdocs-minify-plugin>=0.3 \
             mkdocs-redirects>=1.0
-
-      # Deploy documentation
-      - name: Deploy documents
-        env:
-          ENABLE_PDF_EXPORT: 1
+      # Build documentation
+      - name: Build documents
         run: |
-          mkdocs gh-deploy --force
+          mkdocs build --clean
