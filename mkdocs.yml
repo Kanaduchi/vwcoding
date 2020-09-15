@@ -7,12 +7,12 @@ site_url: http://www.vwcoding.ru
 # Hot news
 hot_news_date: 04.09.2020
 hot_news: >
-  1. Добавлена <a href="../MQB/assistents/#_3"><u>параметрия</u></a> для камеры ассистентов с прошивкой L <br>
+  1. Добавлена <a href="../MQB/assistants/#_3"><u>параметрия</u></a> для камеры ассистентов с прошивкой L <br>
 
 # Repository
 repo_name: Kanaduchi/vwcoding
 repo_url: https://github.com/Kanaduchi/vwcoding
-edit_uri: https://github.com/Kanaduchi/vwcoding/edit/1com/docs/
+edit_uri: https://github.com/Kanaduchi/vwcoding/edit/master/docs/
 
 # Copyright
 copyright: Copyright &copy; 2020 - Andrey Topchiy
@@ -25,7 +25,7 @@ nav:
   - Платформа MQB: MQB/main.md
   - Платформа MQB:
       - Общая информация: MQB/main.md
-      - Ассистенты водителя: MQB/assistents.md
+      - Ассистенты водителя: MQB/assistants.md
       - Системы активной безопасности: MQB/active_systems.md
       - Движение и управление: MQB/drive.md
       - Парковка и маневрирование: MQB/parking.md
@@ -49,7 +49,7 @@ nav:
   - Платформа MLB-Evo: MLB-Evo/main.md
   - Платформа MLB-Evo:
       - Общая информация: MLB-Evo/main.md
-      - Ассистенты водителя: MLB-Evo/assistents.md
+      - Ассистенты водителя: MLB-Evo/assistants.md
       - Безопасность. Отпирание и запирание: MLB-Evo/security.md
       - Комфорт: MLB-Evo/comfort.md
       - Освещение: MLB-Evo/lights.md

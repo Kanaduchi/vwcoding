@@ -1,6 +1,14 @@
 disqus: https-mqb-readthedocs-io
 # Головное устройство
 
+### Смена скина автомобиля
+[LO]_byte_0_brand _VW
+[LO]_byte_1_Car_Class 3
+[LO]_byte_1_Car_Generation 7
+[LO]_byte_2_Car_Derivate 6
+[LO]_byte_2_Car_Derivate_Supplement 0
+
+
 ### Деактивация AM диапазона в магнитоле
 Слева внизу вместо ненужного "переключателя" AM/FM появляется иконка настройки радиостанций вручную
 ![Screenshot](../images/MQB/fm.jpg)
