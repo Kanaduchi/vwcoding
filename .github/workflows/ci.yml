@@ -1,6 +1,7 @@
 name: ci
 on:
   - push
+  - pull_request
 
 # Environment
 env:
@@ -10,6 +11,32 @@ env:
 
 # Jobs to run
 jobs:
+
+  # Build documentation
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+      # Checkout source form GitHub
+      - uses: actions/checkout@v2
+
+      # Install Python runtime and dependencies
+      - uses: actions/setup-python@v1
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      # Install theme and dependencies
+      - run: |
+          pip install -r requirements.txt
+          pip install .
+          pip install \
+            mkdocs-minify-plugin>=0.3 \
+            mkdocs-redirects>=1.0
+
+      # Build documentation
+      - name: Build documents
+        run: |
+          mkdocs build --clean
 
   # Build and deploy documentation site
   deploy:
@@ -33,8 +60,7 @@ jobs:
             mkdocs-minify-plugin>=0.3 \
             mkdocs-redirects>=1.0
 
-      # Build documentation
+      # Deploy documentation
       - name: Deploy documents
         run: |
           mkdocs gh-deploy --force
-          mkdocs --version

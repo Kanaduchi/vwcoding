@@ -1,0 +1,30 @@
+{
+  "name": "vwcoding",
+  "version": "1.0.0",
+  "description": "VW Codings",
+  "keywords": [
+    "vw",
+    "documentation",
+    "coding",
+    "mqb",
+    "mlb",
+    "pq35",
+    "pq26"
+  ],
+  "homepage": "https://github.com/Kanaduchi/vwcoding/",
+  "bugs": {
+    "url": "https://github.com/Kanaduchi/vwcoding/issues",
+    "email": "kanaduch@gmail.com"
+  },
+  "license": "MIT",
+  "private": true,
+  "author": {
+    "name": "Andrey Topchiy",
+    "email": "kanaduch@gmail.com"
+  },
+  "contributors": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kanaduchi/vwcoding.git"
+  }
+}
