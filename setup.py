@@ -1,14 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import json
 from setuptools import setup
 
-def get_description():
-    """Get long description."""
-
-    with open("README.md", 'r') as f:
-        desc = f.read()
-    return desc
+# Load package.json contents
+with open("package.json") as data:
+    package = json.load(data)
 
 with open("requirements.txt") as data:
     install_requires = [
@@ -16,17 +14,21 @@ with open("requirements.txt") as data:
         if line and not line.startswith("#")
     ]
 
+# Load README contents
+with open("README.md", encoding="utf-8") as data:
+    long_description = data.read()
+
 setup(
-    name='mqb',
-    version='1.0',
-    url='https://github.com/Kanaduchi/mqb',
-    license='MIT',
-    description='VW Coding',
-    long_description='VW Coding',
-    long_description_content_type='text/markdown',
-    author='kanaduchi',
-    author_email='kanaduch@gmail.com',
-    keywords='coding',
+    name=package["name"],
+    version=package["version"],
+    url=package["homepage"],
+    license=package["license"],
+    description=package["description"],
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    author=package["author"]["name"],
+    author_email=package["author"]["email"],
+    keywords=package["keywords"],
     include_package_data=True,
     install_requires=install_requires,
     classifiers=[
