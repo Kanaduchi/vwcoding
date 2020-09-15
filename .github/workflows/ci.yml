@@ -61,8 +61,8 @@ jobs:
             mkdocs-redirects>=1.0
 
       # Deploy documentation
-      - env:
-          ENABLE_PDF_EXPORT: true
       - name: Deploy documents
+        env:
+          ENABLE_PDF_EXPORT: true
         run: |
           mkdocs gh-deploy --force
