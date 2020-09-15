@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from setuptools import setup, find_packages
+from setuptools import setup
 
 def get_description():
     """Get long description."""
@@ -10,26 +10,24 @@ def get_description():
         desc = f.read()
     return desc
 
-
 with open("requirements.txt") as data:
     install_requires = [
         line for line in data.read().split("\n")
-            if line and not line.startswith("#")
+        if line and not line.startswith("#")
     ]
-
 
 setup(
     name='mqb',
-    version = package["version"],
-    url = package["homepage"],
-    license = package["license"],
-    description = package["description"],
-    long_description = long_description,
-    long_description_content_type = "text/markdown",
-    author = package["author"]["name"],
-    author_email = package["author"]["email"],
-    keywords = package["keywords"],
-    include_package_data = True,
+    version='1.0',
+    url='https://github.com/Kanaduchi/mqb',
+    license='MIT',
+    description='VW Coding',
+    long_description='VW Coding',
+    long_description_content_type='text/markdown',
+    author='kanaduchi',
+    author_email='kanaduch@gmail.com',
+    keywords='coding',
+    include_package_data=True,
     install_requires=install_requires,
     classifiers=[
         "Development Status :: 5 - Production/Stable",
