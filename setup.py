@@ -31,7 +31,6 @@ setup(
     keywords = package["keywords"],
     include_package_data = True,
     install_requires=install_requires,
-    license='MIT License',
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Environment :: Web Environment",
