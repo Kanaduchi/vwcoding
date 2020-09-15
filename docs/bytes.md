@@ -12,7 +12,7 @@ disqus: https-mqb-readthedocs-io
 
 Для быстрого редактирования битов существует программа LCode
 
-![Screenshot](./images/lcode.png) 
+![Screenshot](../images/lcode.png) 
 
 <button class="pure-material-button-contained" type="button" id="generate" onclick="window.location.href = '../LCode.exe';">Скачать</button>
 
