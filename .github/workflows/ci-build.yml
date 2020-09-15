@@ -1,8 +1,8 @@
 name: build
 on:
-  - push:
+  push:
       branches:
-        - beta
+        - master
 
 # Environment
 env:
