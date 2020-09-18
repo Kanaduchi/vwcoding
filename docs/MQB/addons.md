@@ -154,6 +154,11 @@ GW_Enable_CAN_Timeout_DTC - Sound System → Enabled
 ```
 Настройка ГУ
 ```
+Блок 5F → Кодирование
+> Байт 19 - 4 бит (byte_19_Rear_View_Low) → Выключить (not activated)
+→ Применить
+```
+```
 Блок 5F → Адаптация
 > Car_Function_List_BAP_Gen2 - VPS_0x0B → Активирован
 > Car_Function_List_BAP_Gen2 - VPS_0x0B_msg_bus  → Databus заменить на Infotainment
@@ -219,7 +224,7 @@ GW_Enable_CAN_Timeout_DTC - Sound System → Enabled
 ```
 Блок 5F → Кодирование
 [VO]_Car_Function_List_BAP_Gen2: [LO]_SWA_0x1A → activated
-Ю Car_Function_List_BAP_Gen2 - SWA_0x1A_msg_bus → Дополнительная шина данных
+Car_Function_List_BAP_Gen2 - SWA_0x1A_msg_bus → Дополнительная шина данных (CAN_Extended)
 [VO]_Car_Function_Adaptations_Gen2: [LO]_menu_display_lane_assistant → activated
 [VO]_Car_Function_Adaptations_Gen2: [LO]_menu_display_lane_assistant_over_threshold_high → activated
 ```
