@@ -5,9 +5,10 @@ site_author: Andrey Topchiy
 site_url: http://www.vwcoding.ru
 
 # Hot news
-hot_news_date: 18.09.2020
+hot_news_date: 19.09.2020
 hot_news: >
-  1. Добавлена <a href="../MQB/assistants/#_3"><u>параметрия</u></a> для камеры ассистентов с прошивкой L <br>
+  1. Настройка режима Fusion для камеры ассистентов <br>
+  2. Отключение скачка громкости при старте магнитолы
 
 # Repository
 repo_name: Kanaduchi/vwcoding

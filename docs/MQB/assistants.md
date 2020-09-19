@@ -156,6 +156,8 @@ HCA - Указание блоку рулевого управления о на�
 Изменение типа ассистента дальнего света с простого на MDF - маскируемый или неослепляющий дальний.Добавляем ассистент в меню
 ```
 Блок 09 (бортовая сеть) → Адаптации
+>> Außenlicht_Blinker 
+> Warnblinken_durch_Fahrerassistenz -> available
 >> Fernlicht_assistent
 > Erweiterte_Fernlichtsteuerung: AFS, FLA, Fernlicht ueber AFS → AFS, FLA, Fernlicht (GLW,MDF)
 > Menuesteuerung Fernlichtassistent: not available -> available
@@ -273,6 +275,7 @@ HCA - Указание блоку рулевого управления о на�
 >> Main_unit: enabled
 >> PLA: Coded
 >> ESP: Coded
+>> Personalize_VZE:	Not_Coded
 >> Lan_assist_system_mode: Steering_wheel_vibration active
 >> Personalized_key: Version_1.x
 >> Networking_variant: MQB
@@ -294,6 +297,7 @@ HCA - Указание блоку рулевого управления о на�
 >> FLA_Headinglight_type: LED
 >> Mains_frequency: 50_Hz
 >> AFS_coding_Light_Assist: Dynamic_Light_Assist
+>> HC_LONGPRESS: Not_Coded
 → Применить 
 ```
 
@@ -307,3 +311,27 @@ HCA - Указание блоку рулевого управления о на�
 → Применить 
 ```
 > логин-пароль 20103
+
+### Чтение дорожных знаков (Fusion Mode)
+Существует возможность добавить на головное устройство отображение дорожных знаков из базы навигации (Sat Nav Speed Limits),  
+а на AID (Virtual Cockpit) — отображение знаков с камеры ассистентов.  
+ 
+Если вдруг камера в засаде, то можно на всякий случай скинуть скорость до того значения, которое имеет наименьшее значение.   
+
+![Screenshot](../images/MQB/VZA.png)
+
+```    
+Блок 5F (мультимедия) → Адаптация 
+> Car_Function_List_BAP_Gen2
+>> traffic_sign_recognition_0x21: deactivated
+→ Применить 
+> Car_Function_Adaptations_Gen2
+>> menu_display_road_sign_identification: deactivated;
+>> menu_display_road_sign_identification_over_threshold_high: deactivated.
+→ Применить 
+```
+
+```    
+Блок 5F (мультимедия) → Кодирование
+>> byte_24_vza: активировать
+```
