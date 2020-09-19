@@ -156,6 +156,8 @@ HCA - Указание блоку рулевого управления о на�
 Изменение типа ассистента дальнего света с простого на MDF - маскируемый или неослепляющий дальний.Добавляем ассистент в меню
 ```
 Блок 09 (бортовая сеть) → Адаптации
+>> Außenlicht_Blinker 
+> Warnblinken_durch_Fahrerassistenz -> available
 >> Fernlicht_assistent
 > Erweiterte_Fernlichtsteuerung: AFS, FLA, Fernlicht ueber AFS → AFS, FLA, Fernlicht (GLW,MDF)
 > Menuesteuerung Fernlichtassistent: not available -> available
@@ -273,6 +275,7 @@ HCA - Указание блоку рулевого управления о на�
 >> Main_unit: enabled
 >> PLA: Coded
 >> ESP: Coded
+>> Personalize_VZE:	Not_Coded
 >> Lan_assist_system_mode: Steering_wheel_vibration active
 >> Personalized_key: Version_1.x
 >> Networking_variant: MQB
@@ -294,6 +297,7 @@ HCA - Указание блоку рулевого управления о на�
 >> FLA_Headinglight_type: LED
 >> Mains_frequency: 50_Hz
 >> AFS_coding_Light_Assist: Dynamic_Light_Assist
+>> HC_LONGPRESS: Not_Coded
 → Применить 
 ```
 
