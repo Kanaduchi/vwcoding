@@ -15,6 +15,13 @@ disqus: https-mqb-readthedocs-io
     > Установить Deactivated [Default: Activated]
     → Применить
     ```
+=== "Кодирование в OBD11"
+    ```
+    Блок 13 (Адаптивный круиз контроль) → Безопасный доступ → Логин-пароль 20103
+    > Длинное кодирование
+    > Overtaking_right_prevention → Установить Deactivated [Default: Activated]
+    → Применить
+    ```
 === "Кодирование в VCDS" 
     ```
     13 Блок Adaptive Cruise Control  
@@ -34,7 +41,6 @@ disqus: https-mqb-readthedocs-io
     > Drive_pmode_selection - Меню MMI Адаптивный круиз контроль (ACC)
     → Применить
     ```
-
 === "Кодирование в VCDS" 
     ```
     13 Блок Adaptive Cruise Control  
@@ -171,7 +177,6 @@ disqus: https-mqb-readthedocs-io
     Блок 03 → Кодирование
     > 17 байт - поставить галочку в 3-м бите 17 байта
     ```
-    
 === "Кодирование в VCDS" 
     ```
     03 Блок ABS  
