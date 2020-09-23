@@ -12,14 +12,8 @@ disqus: https-mqb-readthedocs-io
 
 Для быстрого редактирования битов существует программа LCode
 
-![Screenshot](../images/lcode.png) 
+![Screenshot](./images/lcode.png) 
 
-<button class="pure-material-button-contained" type="button" id="generate" onclick="window.location.href = '../LCode.exe';">Скачать</button>
+<a class="pure-material-button-contained" href="../images/LCode.exe">СКАЧАТЬ</a>
 
 В неё можно внести 16-ричную hex кодировку определенного блока. Программа сама разобъет кодировку на байты, и в нужном байте уже включить нужный бит.
-
-
-
-
-
-
