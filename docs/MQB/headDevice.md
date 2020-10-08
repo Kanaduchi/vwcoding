@@ -37,7 +37,7 @@ disqus: https-mqb-readthedocs-io
     → Применить (с перезагрузкой блока)
     ```
     ```
-    ODIS E: 5F -> кодирование -> [LO]_byte_14_AM_disable: ативировать
+    ODIS E: 5F → кодирование → [LO]_byte_14_AM_disable: ативировать
     ```
 
 === "Кодирование в VCDS"
@@ -132,9 +132,9 @@ ODIS E
 ```
 Блок 5F → Адаптация
 > Car_Function_Adaptations_Gen2
-> menu_display_compass -> "active" (default not active)
-> menu_display_compass_over_threshold_high -> "active" (default not active) 
-> menu_display_compass_clamp_15_off  -> "active" (default not active)
+> menu_display_compass → "active" (default not active)
+> menu_display_compass_over_threshold_high → "active" (default not active) 
+> menu_display_compass_clamp_15_off  → "active" (default not active)
 → Применить  
     
 > Car_Function_List_BAP_Gen2

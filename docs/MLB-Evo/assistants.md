@@ -31,7 +31,7 @@ HCA - Указание блоку рулевого управления о на�
 Блок 44 (усилитель рулевого) → Кодирование
 Ассистент движения по полосе, связ. с усилителем рул. управления
 > Heading Control Assistant: active
- (Байт 03 - бит 1 → активировать (heading_control_assist: not active -> active))
+ (Байт 03 - бит 1 → активировать (heading_control_assist: not active → active))
 → Применить 
 ```
 
@@ -52,7 +52,7 @@ HCA - Указание блоку рулевого управления о на�
 
 ```
 Блок A5 (камера ассистентов) → Адаптация 
-> Lane_departure_warning_on_state → On (старое значение - Old value: Selection_over_menu_default_on)
+> Lane_departure_warning_on_state → Selection_over_menu_default_on
 → Применить 
 > Personalisation_for_lane_departure_warning
 >> TT_activated_not_activated → activated изменить на last_setting

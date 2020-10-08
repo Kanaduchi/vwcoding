@@ -12,7 +12,7 @@ disqus: https-mqb-readthedocs-io
 → Применить (с перезагрузкой блока)
 ```
 ```
-ODIS E: 5F -> кодирование -> [LO]_byte_14_AM_disable: ативировать
+ODIS E: 5F → кодирование → [LO]_byte_14_AM_disable: ативировать
 ```
 
 > логин-пароль 20103

@@ -123,9 +123,9 @@ disqus: https-mqb-readthedocs-io
 ```
 Блок 09 → Адаптация 
 > Leuchte12NL LB45
->> Dimming direction CD 12 -> maximum
->> Dimmwert CD 12 – 0 -> 110
->> Lichtfunktion C 12 -> Lichthupe generell (было Nebellicht rechts)
+>> Dimming direction CD 12 → maximum
+>> Dimmwert CD 12 – 0 → 110
+>> Lichtfunktion C 12 → Lichthupe generell (было Nebellicht rechts)
 → Применить
 ```
 
@@ -133,9 +133,9 @@ disqus: https-mqb-readthedocs-io
 ```
 Блок 09 → Адаптация 
 > Leuchte13NL RB5
->> Dimming direction CD 13 -> maximum
->> Dimmwert CD 13 – 0 -> 110
->> Lichtfunktion C 13 -> Lichthupe generell (было Nebellicht rechts)
+>> Dimming direction CD 13 → maximum
+>> Dimmwert CD 13 – 0 → 110
+>> Lichtfunktion C 13 → Lichthupe generell (было Nebellicht rechts)
 → Применить
 ```
 	
