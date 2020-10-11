@@ -14,6 +14,6 @@ disqus: https-mqb-readthedocs-io
 
 ![Screenshot](./images/lcode.png) 
 
-<a class="pure-material-button-contained" href="../images/LCode.exe">СКАЧАТЬ</a>
+<a class="pure-material-button-contained" href="https://github.com/Kanaduchi/vwcoding/raw/master/LCode.exe">СКАЧАТЬ</a>
 
 В неё можно внести 16-ричную hex кодировку определенного блока. Программа сама разобъет кодировку на байты, и в нужном байте уже включить нужный бит.
