@@ -5,10 +5,9 @@ site_author: Andrey Topchiy
 site_url: http://www.vwcoding.ru
 
 # Hot news
-hot_news_date: 19.09.2020
+hot_news_date: 08.10.2020
 hot_news: >
-  1. Настройка режима Fusion для камеры ассистентов <br>
-  2. Отключение скачка громкости при старте магнитолы
+  1. Добавлена кодировка подсветки перекрестков при приближении к ним <br>
 
 # Repository
 repo_name: Kanaduchi/vwcoding
@@ -109,7 +108,7 @@ theme:
     code: Roboto Mono
   logo: assets/logo.png
   features:
-    - tabs
+    - navigation.tabs
     #- instant
   # 404 page
   static_templates:
