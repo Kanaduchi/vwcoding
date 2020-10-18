@@ -5,12 +5,12 @@ disqus: https-mqb-readthedocs-io
 
 ```
 Блок 52 → Кодирование
-> Байт 1 → бит 5 (mirror_lowering_with_rear_gear) → Выбрать
+> Байт 1 → бит 5 (turn_off_front_light_with_folded_mirror) - active -> not_active
 ```
 
 ```
 Блок 42 → Кодирование
-> Байт 1 → бит 5 (mirror_lowering_with_rear_gear) → Выбрать
+> Байт 1 → бит 5 (turn_off_front_light_with_folded_mirror) - active -> not_active
 ```
 
 ### Опускание правого зеркала при движении задним ходом (если не активировано с завода)
