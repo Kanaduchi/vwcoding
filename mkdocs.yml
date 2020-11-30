@@ -5,9 +5,9 @@ site_author: Andrey Topchiy
 site_url: http://www.vwcoding.ru
 
 # Hot news
-hot_news_date: 24.10.2020
+hot_news_date: 30.11.2020
 hot_news: >
-  1. Добавлена кодировка подсветки перекрестков при приближении к ним <br>
+  1. <a href='https://vwcoding.ru/MQB/wash'>Активация подогрева зеркал вместе с включением обогрева заднего стекла</a><br>
 
 # Repository
 repo_name: Kanaduchi/vwcoding
