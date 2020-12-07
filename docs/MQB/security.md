@@ -274,7 +274,7 @@ disqus: https-mqb-readthedocs-io
 → Применить
 ```
 
-## Комфортная посадка
+## Комфортная посадка для водительского места
 
 !!! tip ""
     Функция Easy Entry — легкая посадка, сиденье отъезжает после выключения зажигания и открытия двери и подъезжает при включении
@@ -300,12 +300,28 @@ disqus: https-mqb-readthedocs-io
 → Применить 
 ```
 
-??? note "Для пассажирского сидения (если имеет регулировки)"
-    Блок 36 - Блок Регулировка сиденья водителя → Кодирование  
-    > Байт 6 бит 4 (easyentry_enable_passenger_over_driver_MMI)  
-    Блок 5F → Адаптация  
-    > Car_Function_List_BAP_Gen2  
-    >> Passenger_Seat_0x10 — Актив  
-    >> Passenger_Seat_0x10_msg_bus — Шина Комфорт  
-    → Применить 
+## Комфортная посадка для пассажира
 
+!!! tip ""
+    Функция Easy Entry — легкая посадка, сиденье отъезжает после выключения зажигания и открытия двери и подъезжает при включении
+    
+```
+Блок 6 - Блок Регулировка сиденья пассажира → Кодирование
+> Байт 3 бит 1 включить (Easy_Entry_front)
+> Байт 9 бит 6 включить (EasyEntry_Enable_Passenger_over_DriverMMI)
+→ Применить (с перезагрузкой блока)
+```
+
+```
+Блок 5F → Адаптация
+
+> Car_Function_Adaptations_Gen2
+>> menu_display_seat_configuration — Актив
+>> menu_display_seat_configuration_over_threshold_high — Актив
+→ Применить 
+
+> Car_Function_List_BAP_Gen2
+>> Passenger_Seat_0x20 — Актив  
+>> Passenger_Seat_0x20_msg_bus — Шина Комфорт  
+→ Применить 
+```
