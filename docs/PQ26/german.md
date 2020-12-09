@@ -34,7 +34,7 @@
 * kontrollleuchte — индикатор
 * Komfortbedienung — функции комфорта
 * Lichthupe — вспышка
-* Lichtwarnungsverhalten — поведение предупреждния о забытом включенном свете
+* Lichtwarnungsverhalten — поведение предупреждения о забытом включенном свете
 * Menuesteuerung — управление с помощью меню
 * Nachwischen - протирать
 * Nebelschlusslicht — задние противотуманные фонари

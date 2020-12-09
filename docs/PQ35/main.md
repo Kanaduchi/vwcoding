@@ -5,8 +5,8 @@ disqus: https-mqb-readthedocs-io
     1. Кодировки проверялись на SKODA OCTAVIA A5FL
     2. Кодировки для Tiguan 1st generation имеют ряд отличий и вынесены отдельный раздел
 
-!!! tip "Оффоайн версия с диагностической информацией"
-    Оффлайн версия содержит в себе раздел, посвещенный диагностике неисправностей   
+!!! tip "Оффлайн версия с диагностической информацией"
+    Оффлайн версия содержит в себе раздел, просвещенный диагностике неисправностей   
     Данный файл был создан пользователем [RiHard](https://www.drive2.ru/users/rihard/) для сообщества «КОДИРОВКИ VAG» на [DRIVE2.RU](https://www.drive2.ru/communities/3868/)  
     <button class="pure-material-button-contained" type="button" id="generate" onclick="window.location.href = '../PQ35.pdf';">Скачать (pdf)</button>
 

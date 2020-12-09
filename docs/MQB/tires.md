@@ -49,7 +49,7 @@ disqus: https-mqb-readthedocs-io
 
 ![Screenshot](../images/MQB/odis-e-tires.png) 
 
-После загрузки данных меню настроек будет выглядить так:
+После загрузки данных меню настроек будет выглядеть так:
 ![Screenshot](../images/MQB/tires.jpg) 
     
 !!! warning
