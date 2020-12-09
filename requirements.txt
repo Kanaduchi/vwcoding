@@ -30,6 +30,5 @@ soupsieve==2.0.1
 tinycss2==1.1.0
 tornado==6.1
 tqdm==4.54.1
-vwcoding==1.0.0
 WeasyPrint==52.2
 webencodings==0.5.1
