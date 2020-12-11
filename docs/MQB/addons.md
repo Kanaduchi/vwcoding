@@ -1,5 +1,179 @@
 # Дооснащение
 
+### Сенсорная панель климата
+
+```
+Блок 08 → Кодирование
+> Climate_style поменять с display на Anzeige Front und Heck
+→ Применить (с перезагрузкой блока)
+```
+```
+Блок 08 → Адаптация
+> Detection_time_tap:
+>> par_Detection_time_tap: 600 [UN]_ms
+> Detection_time_hold:
+>> par_Detection_time_hold: 600 [UN]_ms
+> Off_time_neighbor_key_during_sliding:
+>> par_Off_time_neighbor_key_during_sliding: 400 [UN]_ms
+> Sensitivity_touch:
+>> par_Sensitivity_touch: 0
+> Steps_temp_slider:
+>> par_Steps_temp_slider: [VN]_8
+> Step_size_temp_slider:
+>> par_Step_size_temp_slider: > 0.5°C
+> 22_degree_jump_temp_slider:
+>> par_22_degree_jump_temp_slider: [VN]_not_active
+> Flick_function_temp_slider:
+>> par_Flick_function_temp_slider: [VN]_not_active
+> Profile_selection_touch:
+>> par_Profile_selection_touch: 0
+> dimming_characteristic_new_1:
+>> X1: 0
+>> Y1: 16 [UN]_0
+>> X2: 10
+>> Y2: 16 [UN]_0
+>> X3: 50
+>> Y3: 60 [UN]_0
+>> X4: 100
+>> Y4: 125 [UN]_0
+>> X5: 150
+>> Y5: 500 [UN]_0
+>> X6: 253
+>> Y6: 1,000 [UN]_0
+> dimming_characteristic_new_2:
+>> X1: 0
+>> Y1: 0 [UN]_0
+>> X2: 10
+>> Y2: 100 [UN]_0
+>> X3: 25
+>> Y3: 250 [UN]_0
+>> X4: 50
+>> Y4: 500 [UN]_0
+>> X5: 75
+>> Y5: 750 [UN]_0
+>> X6: 100
+>> Y6: 1,000 [UN]_0
+> dimming_characteristic_new_3:
+>> X1: 0
+>> Y1: 6 [UN]_0
+>> X2: 10
+>> Y2: 6 [UN]_0
+>> X3: 50
+>> Y3: 12 [UN]_0
+>> X4: 100
+>> Y4: 25 [UN]_0
+>> X5: 150
+>> Y5: 100 [UN]_0
+>> X6: 253
+>> Y6: 300 [UN]_0
+> dimming_characteristic_new_4:
+>> X1: 0
+>> Y1: 20 [UN]_0
+>> X2: 10
+>> Y2: 20 [UN]_0
+>> X3: 50
+>> Y3: 60 [UN]_0
+>> X4: 100
+>> Y4: 120 [UN]_0
+>> X5: 150
+>> Y5: 800 [UN]_0
+>> X6: 253
+>> Y6: 1,000 [UN]_0
+> dimming_characteristic_new_5:
+>> X1: 0
+>> Y1: 10 [UN]_0
+>> X2: 10
+>> Y2: 10 [UN]_0
+>> X3: 50
+>> Y3: 50 [UN]_0
+>> X4: 100
+>> Y4: 100 [UN]_0
+>> X5: 150
+>> Y5: 1,000 [UN]_0
+>> X6: 253
+>> Y6: 1,000 [UN]_0
+> dimming_characteristic_new_6:
+>> X1: 0
+>> Y1: 4 [UN]_0
+>> X2: 10
+>> Y2: 4 [UN]_0
+>> X3: 50
+>> Y3: 15 [UN]_0
+>> X4: 100
+>> Y4: 30 [UN]_0
+>> X5: 150
+>> Y5: 600 [UN]_0
+>> X6: 253
+>> Y6: 1,000 [UN]_0
+> dimming_characteristic_new_7:
+>> X1: 0
+>> Y1: 20 [UN]_0
+>> X2: 10
+>> Y2: 20 [UN]_0
+>> X3: 50
+>> Y3: 50 [UN]_0
+>> X4: 100
+>> Y4: 100 [UN]_0
+>> X5: 150
+>> Y5: 800 [UN]_0
+>> X6: 253
+>> Y6: 1,000 [UN]_0
+> dimming_characteristic_new_8:
+>> X1: 0
+>> Y1: 8 [UN]_0
+>> X2: 10
+>> Y2: 8 [UN]_0
+>> X3: 50
+>> Y3: 20 [UN]_0
+>> X4: 100
+>> Y4: 25 [UN]_0
+>> X5: 150
+>> Y5: 600 [UN]_0
+>> X6: 253
+>> Y6: 1,000 [UN]_0
+> dimming_characteristic_new_9:
+>> X1: 0
+>> Y1: 14 [UN]_0
+>> X2: 10
+>> Y2: 14 [UN]_0
+>> X3: 50
+>> Y3: 32 [UN]_0
+>> X4: 100
+>> Y4: 41 [UN]_0
+>> X5: 150
+>> Y5: 800 [UN]_0
+>> X6: 253
+>> Y6: 1,000 [UN]_0
+> dimming_characteristic_new_10:
+>> X1: 0
+>> Y1: 10 [UN]_0
+>> X2: 10
+>> Y2: 10 [UN]_0
+>> X3: 50
+>> Y3: 25 [UN]_0
+>> X4: 100
+>> Y4: 50 [UN]_0
+>> X5: 150
+>> Y5: 800 [UN]_0
+>> X6: 253
+>> Y6: 1,000 [UN]_0
+> damping_dimming_characteristic_01:
+>> PWM_Daempfung_Aufdimmen: 0.2 [UN]_s
+>> PWM_Daempfung_Abdimmen: 0.1 [UN]_s
+> damping_dimming_characteristic_02:
+>> PWM_Daempfung_Aufdimmen: 0.2 [UN]_s
+>> PWM_Daempfung_Abdimmen: 0.1 [UN]_s
+> damping_dimming_characteristic_03:
+>> PWM_Daempfung_Aufdimmen: 0.2 [UN]_s
+>> PWM_Daempfung_Abdimmen: 0.1 [UN]_s
+> damping_dimming_characteristic_04:
+>> PWM_Daempfung_Aufdimmen: 0.2 [UN]_s
+>> PWM_Daempfung_Abdimmen: 0.1 [UN]_s
+> Sun_sensor_supplier_differentiation:
+>> par_Sun_sensor_supplier_differentiation: [VN]_none
+→ Применить
+```
+
 ### Датчик влажности
 
 Датчик 3Q0907643 ставится вместо штатного датчика грязного воздуха   
@@ -239,41 +413,41 @@ GW_Enable_CAN_Timeout_DTC - Sound System → Enabled
 Кодирование ГУ
 ```
 Блок 5F → Кодирование
-[VO]_Car_Function_List_BAP_Gen2: [LO]_SWA_0x1A → activated
-Car_Function_List_BAP_Gen2 - SWA_0x1A_msg_bus → Дополнительная шина данных (CAN_Extended)
-[VO]_Car_Function_Adaptations_Gen2: [LO]_menu_display_lane_assistant → activated
-[VO]_Car_Function_Adaptations_Gen2: [LO]_menu_display_lane_assistant_over_threshold_high → activated
+> Car_Function_List_BAP_Gen2 - SWA_0x1A → activated
+> Car_Function_List_BAP_Gen2 - SWA_0x1A_msg_bus → Дополнительная шина данных (CAN_Extended)
+> Car_Function_Adaptations_Gen2 - menu_display_lane_assistant → activated
+> Car_Function_Adaptations_Gen2 - menu_display_lane_assistant_over_threshold_high → activated
 ```
 
 Кодирование системы кругового обзора (если есть)
 ```
 БлокБлок 6C → Кодирование
-[LO]_equipment_RTA → installed
+> equipment_RTA → installed
 → Применить (с перезагрузкой блока)
 ```
 Парковочный ассистент
 ```
 БлокБлок 76 → Кодирование
-[LN]_Rear_Cross_Traffic - Alert → mit RCTA
+> Rear_Cross_Traffic - Alert → mit RCTA
 → Применить (с перезагрузкой блока)
 ```
 Камера ассистентов (если есть)
 ```
 БлокБлок A5 → Кодирование
-[LO]_SWA → Coded
+> SWA → Coded
 → Применить (с перезагрузкой блока)
 ```
 Ассистент смены полосы движения
 ```
 БлокБлок 3C → Кодирование
-[LO]_Pre_Sense → without_Pre_Sense
-[LO]_Rear_Cross_Traffic_Alert → with_RCTA
-[LO]_ECU for draw bar → no ECU for draw bar
-[LO]_steering → left-hand drive
-[LO]_Rear_Axle_Steering → without_Rear_Axle_Steering
-[LO]_Lane_Departure_Warning_System → with_Lane_Departure_Warning_System
-[LO]_Front_Sensors_Driver_Assistance_System → with_Front_Sensors_Driver_Assistance_System
-[LO]_Diagnosis_RCTA → tone_via_PLA
+> Pre_Sense → without_Pre_Sense
+> Rear_Cross_Traffic_Alert → with_RCTA
+> ECU for draw bar → no ECU for draw bar
+> steering → left-hand drive
+> Rear_Axle_Steering → without_Rear_Axle_Steering
+> Lane_Departure_Warning_System → with_Lane_Departure_Warning_System
+> Front_Sensors_Driver_Assistance_System → with_Front_Sensors_Driver_Assistance_System
+> Diagnosis_RCTA → tone_via_PLA
 → Применить (с перезагрузкой блока)
 ```
 
