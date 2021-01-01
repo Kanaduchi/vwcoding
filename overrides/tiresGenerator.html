@@ -412,32 +412,32 @@
           html += "            <tr>";
 
           if (index == 11)
-            html += "              <th colspan=\"3\">Tire set Individual</th>";
+            html += "              <th colspan=\"3\">Индивидуальная настройка давления в шинах</th>";
           else
-            html += "              <th colspan=\"3\">Tire set #" + index + "</th>";
+            html += "              <th colspan=\"3\">Настройка давления в шинах #" + index + "</th>";
 
           html += "            </tr>";
           html += "            <tr>";
-          html += "              <td>Name</td>";
+          html += "              <td>Имя</td>";
           html += "              <td colspan=\"2\"><input id=\"t" + index + "name\" style=\"width: 100%;\"></td>";
           html += "            </tr>";
           html += "            <tr>";
-          html += "              <td bgcolor=\"#dce9f9\"><b>Situation</b></td>";
-          html += "              <td bgcolor=\"#dce9f9\"><b>Front</b></td>";
-          html += "              <td bgcolor=\"#dce9f9\"><b>Rear</b></td>";
+          html += "              <td bgcolor=\"#dce9f9\"><b>Тип загрузки машины</b></td>";
+          html += "              <td bgcolor=\"#dce9f9\"><b>Передние колеса</b></td>";
+          html += "              <td bgcolor=\"#dce9f9\"><b>Задние колеса</b></td>";
           html += "            </tr>";
           html += "            <tr>";
-          html += "              <td>Fully loaded</td>";
+          html += "              <td>Полная загрузка</td>";
           html += "              <td>" + generatePD("t" + index + "pff") + "</td>";
           html += "              <td>" + generatePD("t" + index + "prf") + "</td>";
           html += "            </tr>";
           html += "            <tr>";
-          html += "              <td>Standard</td>";
+          html += "              <td>Стандартная загрузка</td>";
           html += "              <td>" + generatePD("t" + index + "pfp") + "</td>";
           html += "              <td>" + generatePD("t" + index + "prp") + "</td>";
           html += "            </tr>";
           html += "            <tr id=\"trcomfort" + index + "\">";
-          html += "              <td>Comfort</td>";
+          html += "              <td>Комфортная загрузка</td>";
           html += "              <td>" + generatePD("t" + index + "pfc") + "</td>";
           html += "              <td>" + generatePD("t" + index + "prc") + "</td>";
           html += "            </tr>";
@@ -467,7 +467,7 @@
       ];
 
       function loadConfig() {
-        var result = window.prompt("Load configuration\n\nPlease enter configuration code, created earlier with this tool.", "");
+        var result = window.prompt("Восстановление конфигурации\n\nПожалуйста введите код, созданный ранее в данном приложении", "");
 
         if (result == null)
           return;
@@ -483,7 +483,7 @@
 
           if (data[0] == "configVersion") {
             if (data[1] != configVersion) {
-              window.alert("Configuration was created using an incompatible version of this tool and can not be restored.\n\nCreator version: " + data[1] + "\nThis version: " + configVersion);
+              window.alert("Введенный код конфигурации не может может быть восстановлен\n\nВерсия создания: " + data[1] + "\nТекущая версия " + configVersion);
               return;
             }
           } else if (data[0].charAt(0) == '@')
@@ -505,21 +505,21 @@
             code += configFields[index] + "=" + document.getElementById(configFields[index]).value + "&";
         }
 
-        var result = window.prompt("Save configuration\n\nPlease backup the configuration code below, it can be used to restore the current configuration at a later point in time.", window.btoa(code));
+        var result = window.prompt("Сохранить настройки\n\nПожалуйста, сохраните код, приведённый ниже. Он может быть использован для восстановления настроек в любое время.", window.btoa(code));
       }
     </script>
   <section class="tx-container">
     <form>
       <table class="bordered">
         <tr>
-          <th>Settings</th>
+          <th>Настройки</th>
           <th>
-            <button class="pure-material-button-contained" type="button" onclick="loadConfig();">Load config</button>
-            <button class="pure-material-button-contained" type="button" onclick="saveConfig();">Save config</button>
+            <button class="pure-material-button-contained" type="button" onclick="loadConfig();">Загрузить настройки</button>
+            <button class="pure-material-button-contained" type="button" onclick="saveConfig();">Сохранить настройки</button>
           </th>
         </tr>
         <tr>
-          <td>Dataset type</td>
+          <td>Тип параметрии</td>
           <td>
             <select id="docType" size="1">
               <option value="vcp">VCP</option>
@@ -540,7 +540,7 @@
           </td>
         </tr>
         <tr>
-          <td>Number of tire sets</td>
+          <td>Количество настроек для давления в шинах</td>
           <td>
             <select id="numTireSets" size="1" onchange="updateTireSets()">
               <option>1</option>
@@ -557,13 +557,13 @@
           </td>
         </tr>
         <tr>
-          <td>Enable individual tire set</td>
+          <td>Индивидуальная настройка давления в шинах</td>
           <td>
             <input type="checkbox" id="enableIndividual" onchange="updateTireSets()">
           </td>
         </tr>
         <tr>
-          <td>Enable comfort pressure</td>
+          <td>Комфортное значение давления в шинах</td>
           <td>
             <input type="checkbox" id="enableComfort" onchange="updateTireSets()">
           </td>
@@ -572,13 +572,13 @@
 	  <br>
       <div id="tireSetList"></div>
       <div id="buttons">
-        <button class="pure-material-button-contained" type="button" id="generate" onclick="doGenerate();">Generate dataset</button>
-        <button class="pure-material-button-contained" type="button" id="generateDl" onclick="doGenerateDl();">Generate & download dataset</button>
+        <button class="pure-material-button-contained" type="button" id="generate" onclick="doGenerate();">Сгенерировать параметрию</button>
+        <button class="pure-material-button-contained" type="button" id="generateDl" onclick="doGenerateDl();">Сгенерировать и скачать параметрию</button>
         <br><br>
       </div>
       <table class="bordered">
         <tr>
-          <th>Dataset</th>
+          <th>Параметрия</th>
         </tr>
         <tr>
           <td><textarea id="dataset" rows="25" style="width: 100%;font-family: Courier New, Courier, monospace;"></textarea></td>

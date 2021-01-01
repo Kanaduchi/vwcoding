@@ -20,9 +20,90 @@ copyright: Copyright &copy; 2020 - Andrey Topchiy
 # Main directory
 docs_dir: docs/
 
+theme:
+  name: material
+  custom_dir: overrides
+  favicon: assets/logo.png
+  palette:
+    scheme: preference
+  highlightjs: false
+  language: ru
+  font:
+    text: Roboto
+    code: Roboto Mono
+  logo: assets/logo.png
+  features:
+    - navigation.tabs
+    - navigation.expand
+  # 404 page
+  static_templates:
+    - 404.html
+
+extra_css:
+  - assets/custom.css
+
+plugins:
+  - search:
+      lang:
+        - en
+        - de
+        - ru
+  - pdf-export:
+      enabled_if_env: ENABLE_PDF_EXPORT
+
+markdown_extensions:
+  - admonition
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
 nav:
-  - Главная страница: index.md
-  - Платформа MQB: MQB/main.md
+  - Общая информация:
+      - Кодирование автомобилей VAG: index.md
+      - Платформа MQB: MQB/main.md
+      - Платформа MLB-Evo: MLB-Evo/main.md
+      - Платформа PQ26: PQ26/main.md
+      - Платформа PQ35: PQ35/main.md
+      - Инструкция ODIS E: odis-e.md
+      - Кодирование байтов и битов: bytes.md
+      - История изменений: history.md
+      - Обратная связь: questions.md
+      - Поддержать проект: https://money.yandex.ru/to/4100110582992748/50
   - Платформа MQB:
       - Общая информация: MQB/main.md
       - Ассистенты водителя: MQB/assistants.md
@@ -46,7 +127,6 @@ nav:
           - Общие кодировки: MQB/tires.md
           - Генератор параметрии: MQB/tiresCoding.md
       - Дооснащение: MQB/addons.md
-  - Платформа MLB-Evo: MLB-Evo/main.md
   - Платформа MLB-Evo:
       - Общая информация: MLB-Evo/main.md
       - Ассистенты водителя: MLB-Evo/assistants.md
@@ -55,7 +135,6 @@ nav:
       - Освещение: MLB-Evo/lights.md
       - Приборная панель: MLB-Evo/AID.md
       - Головное устройство: MLB-Evo/headDevice.md
-  - Платформа PQ26: PQ26/main.md
   - Платформа PQ26:
       - Общая информация: PQ26/main.md
       - Освещение:
@@ -75,7 +154,6 @@ nav:
       - Мультимедиа: PQ26/multimedia.md
       - Дооснащение: PQ26/addons.md
       - Словарь немецких терминов: PQ26/german.md
-  - Платформа PQ35: PQ35/main.md
   - Платформа PQ35:
       - Общая информация: PQ35/main.md
       - Управление и динамика: PQ35/drive.md
@@ -89,68 +167,4 @@ nav:
           - Свет: PQ35/Tiguan/lights.md
           - Приборная панель: PQ35/Tiguan/instrPanel.md
           - Мультимедиа: PQ35/Tiguan/multimedia.md
-  - Инструкция ODIS E: odis-e.md
-  - Кодирование байтов и битов: bytes.md
-  - История изменений: history.md
-  - Обратная связь: questions.md
   - Поддержать проект: https://money.yandex.ru/to/4100110582992748/50
-
-theme:
-  name: material
-  custom_dir: overrides
-  favicon: assets/logo.png
-  palette:
-    scheme: preference
-  highlightjs: false
-  language: ru
-  font:
-    text: Roboto
-    code: Roboto Mono
-  logo: assets/logo.png
-  features:
-    - navigation.tabs
-    #- instant
-  # 404 page
-  static_templates:
-    - 404.html
-
-extra_css:
-  - assets/custom.css
-
-plugins:
-  - search:
-      lang:
-        - en
-        - de
-        - ru
-  - pdf-export:
-      enabled_if_env: ENABLE_PDF_EXPORT
-
-markdown_extensions:
-  - meta
-  - markdown.extensions.admonition
-  - markdown.extensions.def_list
-  - markdown.extensions.footnotes
-  - markdown.extensions.meta
-  - markdown.extensions.toc:
-      slugify: !!python/name:pymdownx.slugs.uslugify
-      permalink: true
-  - pymdownx.arithmatex
-  - pymdownx.betterem:
-      smart_enable: all
-  - pymdownx.caret
-  - pymdownx.critic
-  - pymdownx.details
-  - pymdownx.inlinehilite
-  - pymdownx.keys
-  - pymdownx.magiclink:
-      repo_url_shorthand: true
-      user: squidfunk
-      repo: mkdocs-material
-  - pymdownx.mark
-  - pymdownx.smartsymbols
-  - pymdownx.superfences
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - pymdownx.tilde
-  - pymdownx.tabbed
