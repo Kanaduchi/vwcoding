@@ -1,3 +1,16 @@
+---
+hide:
+  - toc
+disqus: https-mqb-readthedocs-io
+---
+
+<style>
+  .md-typeset h1,
+  .md-content__button {
+    display: none;
+  }
+</style>
+
 ## Кодирование платформы MQB
 
 !!! tip "Оффлайн версия для Skoda Octavia A7"

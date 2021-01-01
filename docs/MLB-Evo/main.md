@@ -1,4 +1,17 @@
-# Кодирование платформы MLB-Evo
+---
+hide:
+  - toc
+disqus: https-mqb-readthedocs-io
+---
+
+<style>
+  .md-typeset h1,
+  .md-content__button {
+    display: none;
+  }
+</style>
+
+## Кодирование платформы MLB-Evo
 
 !!! note "Важная информация"
     При кодировании MLB-Evo платформы необходимо выполнить следующие условия для снятия защиты от записи в блоки:  

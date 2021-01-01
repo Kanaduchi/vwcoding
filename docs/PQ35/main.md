@@ -1,5 +1,17 @@
+---
+hide:
+  - toc
 disqus: https-mqb-readthedocs-io
-# Кодирование платформы PQ35
+---
+
+<style>
+  .md-typeset h1,
+  .md-content__button {
+    display: none;
+  }
+</style>
+
+## Кодирование платформы PQ35
 
 !!! note "Важная информация"
     1. Кодировки проверялись на SKODA OCTAVIA A5FL
