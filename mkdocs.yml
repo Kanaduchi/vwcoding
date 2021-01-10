@@ -5,9 +5,10 @@ site_author: Andrey Topchiy
 site_url: http://www.vwcoding.ru
 
 # Hot news
-hot_news_date: 30.11.2020
+hot_news_date: 10.01.2021
 hot_news: >
-  1. <a href='https://vwcoding.ru/MQB/wash'>Активация подогрева зеркал вместе с включением обогрева заднего стекла</a><br>
+  1. <a href='https://vwcoding.ru/longCoding'>Online калькулятор длинного кодирования</a><br>
+  2. <a href='https://vwcoding.ru/MQB/wash'>Активация подогрева зеркал вместе с включением обогрева заднего стекла</a><br>
 
 # Repository
 repo_name: Kanaduchi/vwcoding
@@ -15,7 +16,7 @@ repo_url: https://github.com/Kanaduchi/vwcoding
 edit_uri: https://github.com/Kanaduchi/vwcoding/edit/master/docs/
 
 # Copyright
-copyright: Copyright &copy; 2020 - Andrey Topchiy
+copyright: Copyright &copy; 2021 - Andrey Topchiy
 
 # Main directory
 docs_dir: docs/
@@ -35,9 +36,6 @@ theme:
   features:
     - navigation.tabs
     - navigation.expand
-  # 404 page
-  static_templates:
-    - 404.html
 
 extra_css:
   - assets/custom.css
@@ -100,7 +98,7 @@ nav:
       - Платформа PQ26: PQ26/main.md
       - Платформа PQ35: PQ35/main.md
       - Инструкция ODIS E: odis-e.md
-      - Кодирование байтов и битов: bytes.md
+      - Калькулятор длинного кодирования: longCoding.md
       - История изменений: history.md
       - Обратная связь: questions.md
       - Поддержать проект: https://money.yandex.ru/to/4100110582992748/50
