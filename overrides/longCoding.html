@@ -1,0 +1,472 @@
+<style>
+   table {
+   *border-collapse: collapse; /* IE7 and lower */
+   border-spacing: 0;
+   width: 100%;
+   }
+   .bitTable {
+   padding: 0px;
+   width: auto;
+   }
+   .bordered {
+   border: solid #ccc 1px;
+   -moz-border-radius: 6px;
+   -webkit-border-radius: 6px;
+   border-radius: 6px;
+   -webkit-box-shadow: 0 1px 1px #ccc;
+   -moz-box-shadow: 0 1px 1px #ccc;
+   box-shadow: 0 1px 1px #ccc;
+   }
+   .bordered tr:hover {
+   -o-transition: all 0.1s ease-in-out;
+   -webkit-transition: all 0.1s ease-in-out;
+   -moz-transition: all 0.1s ease-in-out;
+   -ms-transition: all 0.1s ease-in-out;
+   transition: all 0.1s ease-in-out;
+   }
+   .bordered td, .bordered th {
+   border-left: 1px solid #ccc;
+   border-top: 1px solid #ccc;
+   padding: 10px;
+   text-align: left;
+   }
+   .bordered th {
+   background-color: #3F51B5;
+   background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+   background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+   background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+   background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+   background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+   background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+   -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+   -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;
+   box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+   border-top: none;
+   text-shadow: 0 1px 0 rgba(255,255,255,.5);
+   }
+   .bordered td:first-child, .bordered th:first-child {
+   border-left: none;
+   }
+   .bordered th:first-child {
+   -moz-border-radius: 6px 0 0 0;
+   -webkit-border-radius: 6px 0 0 0;
+   border-radius: 6px 0 0 0;
+   }
+   .bordered th:last-child {
+   -moz-border-radius: 0 6px 0 0;
+   -webkit-border-radius: 0 6px 0 0;
+   border-radius: 0 6px 0 0;
+   }
+   .bordered th:only-child{
+   -moz-border-radius: 6px 6px 0 0;
+   -webkit-border-radius: 6px 6px 0 0;
+   border-radius: 6px 6px 0 0;
+   }
+   .bordered tr:last-child td:first-child {
+   -moz-border-radius: 0 0 0 6px;
+   -webkit-border-radius: 0 0 0 6px;
+   border-radius: 0 0 0 6px;
+   }
+   .bordered tr:last-child td:last-child {
+   -moz-border-radius: 0 0 6px 0;
+   -webkit-border-radius: 0 0 6px 0;
+   border-radius: 0 0 6px 0;
+   }
+   .bytes {
+   padding: 0px !important;
+   text-align: center !important;
+   }
+   .fillBytes {
+   background: #4051b5;
+   padding: 0px !important;
+   text-align: center !important;
+   }
+   .inputBytes {
+   background: #4051b5;
+   color: #ffff00;
+   text-align: center;
+   }
+   .byteSelected {
+   color:#ffff00;
+   background-color:#4051b5;
+   text-align: center;
+   }
+   .byteNotSelected {
+   color: #00ff00;
+   background-color:#4051b5;
+   text-align: center;
+   }
+</style>
+<script language="JavaScript">
+var curSelectedByte = -1;
+var defaultByteSize = 30;
+
+function checkOrig() {
+    var filter = /^[A-F0-9]+$/
+    var orig = document.getElementById("origCode").value;
+
+    orig = orig.toUpperCase();
+    document.getElementById("origCode").value = orig;
+
+    if (orig.length % 2 == 0) {
+        if (orig.match(filter)) {
+            fillBytes();
+            if (curSelectedByte >= 0) {
+                selByte(curSelectedByte);
+            }
+            return true;
+        } else {
+            alert("Кодировка содержит неверные символы. Поддерживаются только только латинские буквы A-F и цифры 0-9.");
+            clearFields();
+        }
+    } else {
+        alert("Неверное значение. Кодировка должна содержать четное количество символов.");
+        clearFields();
+    }
+    return false;
+}
+
+function trim(str) {
+    return str.replace(/^\s*|\s*$/g, "");
+}
+
+function initArray() {
+    this.length = initArray.arguments.length;
+    for (var i = 0; i < this.length; i++) {
+        this[i] = initArray.arguments[i];
+    }
+}
+
+function from10toradix(value, radix) {
+    var retval = '';
+    var ConvArray = new initArray(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F');
+    var intnum;
+    var tmpnum;
+    var i = 0;
+
+    intnum = parseInt(value, 10);
+    if (isNaN(intnum)) {
+        retval = 'NaN';
+    } else {
+        while (intnum > 0.9) {
+            i++;
+            tmpnum = intnum;
+
+            // concat ret string with new digit
+            retval = ConvArray[tmpnum % radix] + retval;
+            intnum = Math.floor(tmpnum / radix);
+            if (i > 100) {
+                // break infinite loops
+                retval = 'NaN';
+                break;
+            }
+        }
+    }
+    return retval;
+}
+
+function calculateByteIdFromNumber(num) {
+    var byteId = num;
+    if (num < 10) {
+        byteId = "0" + num;
+    }
+    return byteId;
+}
+
+function fillBytes() {
+    var orig = document.getElementById("origCode").value;
+    var newNum = orig.toString().match(/.{1,2}/g)
+
+    if (newNum.length > defaultByteSize) {
+        defaultByteSize = newNum.length;
+    }
+
+    createByteDescription(defaultByteSize);
+    createBitDescription();
+
+    for (var i = 0; i < newNum.length; i++) {
+        document.getElementById("byte" + calculateByteIdFromNumber(i)).value = newNum[i];
+    }
+
+
+    document.getElementById("calcCode").value = orig;
+
+    //Select 0 byte by default
+    curSelectedByte = 0;
+}
+
+function addLeadingZeros(binVal) {
+    var anz;
+    var retString = binVal;
+
+    anz = 8 - binVal.length;
+    for (var i = 0; i < anz; i++) {
+        retString = "0" + retString;
+    }
+    return retString;
+}
+
+function fillDezAndBits(dez, bin) {
+    for (var i = 0; i < 8; i++) {
+        document.getElementById("bit" + i).value = bin.substr(7 - i, 1);
+    }
+}
+
+function fillBitCheckBoxes(dez, bin) {
+    for (var i = 0; i < 8; i++) {
+        if (bin.substr(i, 1) == 0)
+            document.getElementById("setModifiedBits" + (7 - i)).checked = false;
+        else
+            document.getElementById("setModifiedBits" + (7 - i)).checked = true;
+    }
+}
+
+function selByte(noByte) {
+
+    document.getElementById("Byte").innerHTML = "(Byte " + noByte + ")";
+
+    var bitValueHex = "";
+    var bitValueBin;
+    var fullBitString = "";
+    var startPos = noByte * 2;
+
+    curSelectedByte = noByte;
+
+    bitValueHex = document.getElementById("calcCode").value.substr(startPos, 2);
+
+    if (bitValueHex == "") {
+        //Clean bits and buttons
+        clearBits();
+        for (var i = 0; i < 8; i++) {
+            document.getElementById("bit" + i).value = "0";
+        }
+        return false;
+    }
+
+    // hex2bin conversion
+    dezVal = parseInt(bitValueHex, 16);
+    bitValueBin = from10toradix(dezVal, 2);
+    fullBitString = addLeadingZeros(bitValueBin);
+
+    fillDezAndBits(dezVal, fullBitString);
+    fillBitCheckBoxes(dezVal, fullBitString);
+
+    toggleSelectedByteColor(noByte);
+}
+
+function chgBit(no) {
+    if (document.getElementById("setModifiedBits" + no).checked){
+        document.getElementById("bit" + no).value = "1";
+    } else {
+        document.getElementById("bit" + no).value = "0";
+    }
+
+    setBits();
+}
+
+function resetCalcCode() {
+    var tmpVal = "";
+    for (var i = 0; i < defaultByteSize; i++) {
+        tmpVal += document.getElementById("byte" + calculateByteIdFromNumber(i)).value;
+    }
+    document.getElementById("calcCode").value = trim(tmpVal);
+}
+
+function resetByteHex(hexVal) {
+    document.getElementById("byte" + calculateByteIdFromNumber(curSelectedByte)).value = hexVal;
+    resetCalcCode();
+}
+
+
+function setBits() {
+    var tmpBitStr = "";
+    for (var i = 7; i >= 0; i--) {
+        tmpBitStr += document.getElementById("bit" + i).value;
+    }
+
+    var tmpVal;
+    var hexValue;
+
+    if (tmpBitStr == "") {
+        return false;
+    } else {
+        tmpVal = parseInt(tmpBitStr, 2);
+        hexValue = from10toradix(tmpVal, 16)
+
+        if (hexValue.length == 1) {
+            hexValue = "0" + hexValue;
+        } else if (hexValue.length < 1) {
+            hexValue = "00";
+        }
+
+        resetByteHex(hexValue);
+        selByte(curSelectedByte);
+        return true;
+    }
+}
+
+function clearBits() {
+    //Clear bits fields
+    for (var i = 0; i < 8; i++) {
+        document.getElementById("bit" + i).value = "";
+    }
+
+    //Clear checkboxes
+    for (var i = 0; i < 8; i++) {
+        document.getElementById("setModifiedBits" + i).checked = false;
+    }
+}
+
+function clearFields() {
+
+    curSelectedByte = -1;
+
+    document.getElementById("calcCode").value = "";
+    document.getElementById("Byte").innerHTML = "";
+
+    //Clear bytes fields
+    for (var i = 0; i < defaultByteSize; i++) {
+        document.getElementById("byte" + calculateByteIdFromNumber(i)).value = "";
+    }
+
+    clearBits();
+    document.getElementById("calcCode").value = "";
+    defaultByteSize = 30;
+}
+
+function clearAll() {
+    document.getElementById("origCode").value = "";
+    clearFields();
+}
+
+function toggleSelectedByteColor(noByte) {
+    for (i = 0; i < defaultByteSize; i++) {
+        if (i != noByte) {
+            document.getElementById('byte' + calculateByteIdFromNumber(i)).className = 'byteNotSelected';
+        } else {
+            document.getElementById('byte' + calculateByteIdFromNumber(i)).className = 'byteSelected';
+        }
+    }
+}
+
+function selectAll(ctrl) {
+    ctrl.focus();
+    ctrl.select();
+}
+
+function isBinary(event) {
+    var charCode = (event.which) ? event.which : event.keyCode
+    //0 = 48, 1 = 49
+    if (charCode == 48 || charCode == 49 || charCode == 13) {
+        if (charCode == 13)
+            setBits();
+        return true;
+    } else
+        return false;
+}
+
+function createByteDescription(countOfBytes) {
+    var bytesPerLine = 30;
+    var html = "<table class=\"bordered\">";
+    html += "<tr>";
+    html += "<th colspan=\"" + countOfBytes + "\">Байты</th>"
+    html += "</tr>";
+
+    //Lines can be several
+    for (var line = 0; line < Math.ceil(countOfBytes/bytesPerLine); line++){
+        html += "<tr>";
+        for (var i = 0; i < bytesPerLine; i++) {
+            var current = bytesPerLine * line + i;
+            html += "<td width=\"20\" class=\"bytes\" nowrap>" + calculateByteIdFromNumber(current) + "</td>";
+        }
+        html += "</tr><tr>";
+        for (var i = 0; i < bytesPerLine; i++) {
+            var current = bytesPerLine * line + i;
+            var byteName = calculateByteIdFromNumber(current);
+            html += "<td class=\"fillBytes\">";
+            html += "<input type=\"text\" name=\"byte" + byteName + "\" id=\"byte" + byteName + "\" value=\"\" size=\"1\"";
+            html += " onClick=\"selByte(" + byteName + ");\"";
+            html += " class=\"byteNotSelected\" readonly></td>";
+        }
+        html += "<tr>";
+    }
+
+    html += "</table>";
+    document.getElementById("bytesDescription").innerHTML = html;
+}
+
+function createBitDescription() {
+    var html = "<table class=\"bordered\">";
+    html += "<tr>";
+    html += "   <th>";
+    html += "      Биты <div id=\"Byte\" name=\"Byte\" style=\"display: inline;\"></div>";
+    html += "   </th>";
+    html += "</tr>";
+    html += "<tr>";
+    html += "   <td>";
+    html += "      <table class=\"bordered\">";
+    html += "      <tr>";
+
+    for (var i = 7; i >= 0; i--) {
+        html += "<td class=\"bytes\" nowrap>" + i + "</td>";
+    }
+
+    html += "      </tr>";
+    html += "      <tr>";
+
+    for (var i = 7; i >= 0; i--) {
+        html += "<td class=\"fillBytes\"><input type=\"text\" name=\"bit" + i + "\" id=\"bit" + i + "\" value=\"\" size=\"1\"";
+        html += " class=\"inputBytes\"";
+        html += " onKeyDown=\"return isBinary(event)\" onClick=\"selectAll(this)\"";
+        html += " onBlur=\"setBits()\"></td>";
+    }
+
+    html += "</tr></table><br>";
+
+    for (var i = 0; i < 8; i++) {
+        html += "<input type=\"checkbox\" value=\"\" name=\"setModifiedBits" + i + "\" id=\"setModifiedBits" + i + "\" onClick=\"chgBit(" + i + ");\"> Bit " + i + "<br>";
+    }
+
+    html += "</td></tr>";
+    html += "</table>";
+
+    document.getElementById("bitDescription").innerHTML = html;
+}
+</script>
+<form name="coding" id="coding">
+   <table class="bordered">
+      <tr>
+         <th colspan="2">Калькулятор длинного кодирования</th>
+      </tr>
+      <tr>
+         <td colspan="1" nowrap>Оригинальный код:&nbsp;</td>
+         <td colspan="1" nowrap>
+            <input type="text" id="origCode" name="origCode" value="" onChange="checkOrig()"
+               style="height: 25px; width: 440px; color: #ffff00; font-weight: bold; background-color:#4051b5;">&nbsp;&nbsp;
+            <button class="pure-material-button-contained" type="button" name="enterOrig" onClick="checkOrig()">
+            Загрузить
+            </button>
+            <button class="pure-material-button-contained" type="button" name="btnClearAll" id="idClearAll"
+               onClick="clearAll();">Очистить
+            </button>
+         </td>
+      </tr>
+      <tr>
+         <td colspan="1" nowrap>Модифицированный код:&nbsp;</td>
+         <td colspan="1" nowrap>
+            <input type="text" id="calcCode" name="calcCode" value=""
+               style="height: 25px; width: 440px; color: #FF3333; font-weight: bold; background-color:#4051b5;"
+               readonly>
+         </td>
+      </tr>
+      <tr>
+         <td colspan="1" nowrap>Расшифровка битов:&nbsp;</td>
+          <td colspan="1" nowrap><select name="langBits" id="langBits" disabled><option value="none">Недоступно</option></select>
+         </td>
+      </tr>
+   </table>
+   </br>
+   <div id="bytesDescription"></div>
+   </br>
+    <div id="bitDescription"></div>
+</form>
