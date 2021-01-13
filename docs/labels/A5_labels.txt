@@ -1,0 +1,41 @@
+00,0-7,Brand, 00 - Volkswagen; 01 - Volkswagen_N; 02 - Skoda; 03 - Seat; 04 - Audi; FF - not coded; 05 - Bentley; 06 - Lamborghini; 07 - Bugatti; 08 - Porshe; 09 - Quattro; FF - not coded
+01,0-7,Class, 00 - A000; 01 - A00; 02 - A0; 03 - A; 04 - B; 05 - C; 06 - D; 07 - E; 08 - E+; 09 - Other; FF - not coded
+02,0-7,Generation, 00 - not coded; 01 - Generation 1; 02 - Generation 2; 03 - Generation 3; 04 - Generation 4; 05 - Generation 5; 06 - Generation 6; 07 - Generation 7; 08 - Generation 8; 09 - Generation 9
+03,0-7,Bodystyle, 00 - Sportback; 01 - Sedan; 02 - Vagon; 03 - Hatchback; 04 - Coupe; 05 - Convertible; 06 - SUV; 07 - Pick-up; 08 - MPV; 09 - Other; FF - not coded
+04,0-7,Expansion, 00 - Not coded; 01 - Specifically wheelbase; 02 - Different front/rear; 03 - Roof variant; 04 - Cross/Allroad; 05 - Perfomance variant1; 06 - Perfomance variant2; 07 - Alternative drive; 08 - Other;
+05,0-7,Production region, 00 - EU; 07 - Russia; 09 - Ukraine; FF - not coded
+06,0-7,Country variant, 00 - not coded; 01 - Other World; 02 - USA (NAR); 04 - Europe
+07,0-7,Chassis, 00 - not coded; 01 - Standart steel springs; 02 - Soft pneumatic suspension; 05 - DCC/MR suspension
+08,0,Dynamic steering bar
+09,1-4,Windshield, 00 - not coded; 02 - Heat protecting glass; 04 - Glass without heating; 06 - Atermal protecting glass
+09,5,Traffic side, 20 - Right traffic
+10,0-3,PSD Version, 00 - not coded; 01 - PSD 1.2; 02 - PSD 1.4; 03 - PSD 1.5 
+10,4-7,Navigation, 00 - not coded; 10 - MIB Standart; 20 - MIB High; 30 - MMI 3G
+11,0,Trailer connect device (AAG)
+11,1,Line assitant (SWA/LCA/Side Assist)
+11,2,Adaptive Cruise Control (ACC)
+11,3,Pedestrian break
+11,4,Blind spot detection
+11,6,Rain light sensor
+12,0,Main unit
+12,6,Parking assistant (PLA)
+12,7,Electronic stability control (ESP)
+13,1,Personalize VZE
+13,2,Lan assist system mode: Selection over menu
+13,3-5,Personalized key, 00 - not coded; 08 - version 0.1; 10 - version 1.x; 18 - Reserve 1; 20 - Reserve 2
+13,6-7,Networking variant, 00 - not coded; 40 - MQB; 80 - PQ
+14,0,ACC Radar interface by CAN bus
+14,2-3,Perso HC, 08 - Last setting
+14,5-7,Point of intervention, 00 - Early; 40 - Late; 80 - Early (via Menu); A0 - Late (via Menu)
+16,0,LaneAssist AGW output
+16,1,LaneAssist off text
+16,2-3,Emergency Assist, 00 - not coded; 04 - EA Variant 1; 08 - EA Variant2
+16,4,Traffic Sign Recognition (TSR/VZE)
+16,6,Heading Control Assist (HCA/Mobility active)
+16,7,Heading Control Assist (HCA/Lane Assist)
+18,1,FCWP default on prewarning - last mode
+18,2-3,FCWP, 0C - Pedestrian Recognition Delivery Condition for Pre-Warning: OFF
+19,0-3,FLA Additional High Beam, 00 - not coded; 01 - Halogen; 02 - Xenon; 03 - LED; 04 - Laser
+19,4-7,FLA Headinglight type, 00 - Halogen; 10 - Xenon; 20 - LED; 30 - Laser
+21,5-7,Light Assist (AFS), 00 - not coded; 20 - High beam assist (HBA); 40 - Dynamic Light Asisst (DLA); 60 - Adaptive HeadLight Range Control; 80 - Matrixbeam
+22,7,HC LONGPRESS (only for Audi cars)
