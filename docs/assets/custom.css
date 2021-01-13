@@ -40,7 +40,7 @@
     border-radius: 4px;
     padding: 0 16px;
     min-width: 64px;
-    height: 36px;
+    height: 30px;
     vertical-align: middle;
     text-align: center;
     text-overflow: ellipsis;
@@ -51,7 +51,7 @@
     font-family: var(--pure-material-font, "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system);
     font-size: 14px;
     font-weight: 500;
-    line-height: 36px;
+    line-height: 30px;
     overflow: hidden;
     outline: none;
     cursor: pointer;

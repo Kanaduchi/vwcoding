@@ -103,9 +103,15 @@ var defaultByteSize = 30;
 var labelsFromFile;
 
 function init() {
+
    //Read variables and put them to fields
    const urlParams = new URLSearchParams(window.location.search);
 
+   //Load bytes and bits
+   createByteDescription(defaultByteSize);
+   createBitDescription();
+
+   //Read parameters
    const codeParam = urlParams.get('code');
    const labelParam = urlParams.get('label');
    if (labelParam != null) {
@@ -117,15 +123,25 @@ function init() {
    }
 }
 
+function activateFields() {
+   document.getElementById("loading").style.display = "none";
+   document.getElementById("bitDescription").style.display = "block";
+}
+
 function checkOrig() {
     var filter = /^[A-F0-9]+$/
     var orig = document.getElementById("origCode").value;
-
     orig = orig.toUpperCase();
     document.getElementById("origCode").value = orig;
 
+    //Hide bits after load new set of bytes
+    document.getElementById("bitDescription").style.display = "none";
+
     if (orig.length % 2 == 0) {
         if (orig.match(filter)) {
+            //Show loader
+            document.getElementById("loading").style.display = "inline-block";
+            //Add bytes to table
             fillBytes();
             //Load from label file
             if (document.getElementById("langBits").value != "none"){
@@ -134,7 +150,7 @@ function checkOrig() {
                  .then(text => labelsFromFile = text.split("\n"))
                  .then(() => selByte(0));
             } else {
-                selByte(0);
+                selByte(curSelectedByte);
             }
             return true;
         } else {
@@ -157,6 +173,15 @@ function initArray() {
     for (var i = 0; i < this.length; i++) {
         this[i] = initArray.arguments[i];
     }
+}
+
+function hexToBin(value){
+    var bitValueBin;
+
+    dezVal = parseInt(value, 16);
+    bitValueBin = from10toradix(dezVal, 2);
+
+    return addLeadingZeros(bitValueBin);
 }
 
 function from10toradix(value, radix) {
@@ -199,17 +224,19 @@ function fillBytes() {
     var orig = document.getElementById("origCode").value;
     var newNum = orig.toString().match(/.{1,2}/g)
 
+    //Set new length
     if (newNum.length > defaultByteSize) {
         defaultByteSize = newNum.length;
+        //Recreate byte table with new size
+        createByteDescription(defaultByteSize);
     }
 
-    createByteDescription(defaultByteSize);
-    createBitDescription();
-
+    //Fill bytes to table
     for (var i = 0; i < newNum.length; i++) {
         document.getElementById("byte" + calculateByteIdFromNumber(i)).value = newNum[i];
     }
 
+    //Fill calculated field
     document.getElementById("calcCode").value = orig;
 
     //Select 0 byte by default
@@ -320,29 +347,19 @@ function fillBitCheckBoxes(bin, reduced) {
          }
        });
     }
+    activateFields();
 }
 
 function setByte(ctrl, byteName) {
     //Check value
     var regexp = /^[0-9a-fA-F]+$/;
     if(regexp.test(ctrl.value)) {
-      resetCalcCode();
-      selByte(byteName);
     } else {
       alert(ctrl.value + ' - неверный формат введенного значения!');
       ctrl.value = '00';
-      resetCalcCode();
-      selByte(byteName);
     }
-}
-
-function hexToBin(value){
-    var bitValueBin;
-
-    dezVal = parseInt(value, 16);
-    bitValueBin = from10toradix(dezVal, 2);
-
-    return addLeadingZeros(bitValueBin);
+    resetCalcCode();
+    selByte(byteName);
 }
 
 function selByte(noByte) {
@@ -479,8 +496,15 @@ function clearFields() {
 }
 
 function clearAll() {
-    document.getElementById("origCode").value = "";
+    labelsFromFile = null;
     clearFields();
+    document.getElementById("origCode").value = "";
+    document.getElementById("bitDescription").style.display = "none";
+    document.getElementById("langBits").value = "none";
+}
+
+function clearLabels() {
+    labelsFromFile = null;
 }
 
 function toggleSelectedByteColor(noByte) {
@@ -591,6 +615,7 @@ function createBitDescription() {
             <td colspan="1" nowrap>
                <input type="text" id="origCode" name="origCode" value=""
                   style="height: 25px; width: 440px; color: #ffff00; font-weight: bold; background-color:#4051b5;">&nbsp;&nbsp;
+               <div id="loading" style="display: none;"><img style="vertical-align: bottom;" width="24" src="../images/loading.gif">&nbsp;&nbsp;</div>
                <button class="pure-material-button-contained" type="button" name="enterOrig" onClick="checkOrig()">
                Загрузить
                </button>
@@ -609,13 +634,15 @@ function createBitDescription() {
          </tr>
          <tr>
             <td colspan="1" nowrap>Расшифровка битов:&nbsp;</td>
-             <td colspan="1" nowrap><select name="langBits" id="langBits"><option value="none">Блок не выбран</option><option value="A5">Блок A5</option></select>
+             <td colspan="1" nowrap>
+                <select name="langBits" id="langBits" onchange="clearLabels()">
+                   <option value="none">Блок не выбран</option>
+                   <option value="A5">Блок A5</option>
+                </select>
             </td>
          </tr>
       </table>
-      </br>
-      <div id="bytesDescription"></div>
-      </br>
-       <div id="bitDescription"></div>
+      <div style ="margin-top: 20px;" id="bytesDescription"></div>
+      <div style ="margin-top: 20px; display:none;" id="bitDescription"></div>
    </form>
 </body>
