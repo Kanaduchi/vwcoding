@@ -100,6 +100,22 @@
 <script language="JavaScript">
 var curSelectedByte = -1;
 var defaultByteSize = 30;
+var labelsFromFile;
+
+function init() {
+   //Read variables and put them to fields
+   const urlParams = new URLSearchParams(window.location.search);
+
+   const codeParam = urlParams.get('code');
+   const labelParam = urlParams.get('label');
+   if (labelParam != null) {
+      document.getElementById("langBits").value = labelParam;
+   }
+   if (codeParam != null) {
+      document.getElementById("origCode").value = codeParam;
+      checkOrig();
+   }
+}
 
 function checkOrig() {
     var filter = /^[A-F0-9]+$/
@@ -111,8 +127,14 @@ function checkOrig() {
     if (orig.length % 2 == 0) {
         if (orig.match(filter)) {
             fillBytes();
-            if (curSelectedByte >= 0) {
-                selByte(curSelectedByte);
+            //Load from label file
+            if (document.getElementById("langBits").value != "none"){
+               fetch('../labels/' + document.getElementById("langBits").value + '_labels.txt')
+                 .then(response => response.text())
+                 .then(text => labelsFromFile = text.split("\n"))
+                 .then(() => selByte(0));
+            } else {
+                selByte(0);
             }
             return true;
         } else {
@@ -188,7 +210,6 @@ function fillBytes() {
         document.getElementById("byte" + calculateByteIdFromNumber(i)).value = newNum[i];
     }
 
-
     document.getElementById("calcCode").value = orig;
 
     //Select 0 byte by default
@@ -206,27 +227,129 @@ function addLeadingZeros(binVal) {
     return retString;
 }
 
-function fillDezAndBits(dez, bin) {
+function fillDezAndBits(bin) {
     for (var i = 0; i < 8; i++) {
         document.getElementById("bit" + i).value = bin.substr(7 - i, 1);
     }
 }
 
-function fillBitCheckBoxes(dez, bin) {
+function comparingOfBits(bin1, bin2) {
+   //return if values are equal
+   if (bin1 == bin2) {
+      return true;
+   }
+
+   //Convert values to arrays and check by digits
+   let bin1a = bin1.split('').map(Number);
+   let bin2a = bin2.split('').map(Number);
+
+   let equal = false;
+   for (var i = 0; i < bin2a.length; i++) {
+      if (bin2a[i] == 1){
+         if (bin2a[i] == bin1a[i]) {
+            equal = true;
+         } else {
+            return false;
+         }
+      }
+   }
+
+   return equal;
+}
+
+function calculateBitValue(binOld, binNew) {
+   //return if values are equal
+   if (binNew == binOld) {
+      return binNew;
+   }
+
+   let binNewAr = binNew.split('').map(Number);
+   let binOldAr = binOld.split('').map(Number);
+
+   for (var i = 0; i < binNewAr.length; i++) {
+      if (binNewAr[i] != binOldAr[i]) {
+        if (binNewAr[i] == 0)
+            document.getElementById("setModifiedBits" + (7 - i)).checked = false;
+        else
+            document.getElementById("setModifiedBits" + (7 - i)).checked = true;
+        chgBit(7 - i);
+      }
+   }
+}
+
+function fillBitCheckBoxes(bin, reduced) {
     for (var i = 0; i < 8; i++) {
         if (bin.substr(i, 1) == 0)
             document.getElementById("setModifiedBits" + (7 - i)).checked = false;
         else
             document.getElementById("setModifiedBits" + (7 - i)).checked = true;
     }
+
+    //fill values
+    if (reduced != null) {
+       reduced.forEach(function(label) {
+         if (!isNaN(label.bit)) {
+            document.getElementById("setModifiedBitsLabel" + label.bit).innerHTML = " " + label.description;
+         } else {
+            //Create select box
+            var selectElement = document.createElement("select");
+            selectElement.id = "select" + label.bit;
+            var variants = label.variants.split(';');
+            for (var i = 0; i < variants.length; i++)
+            {
+               var variant = variants[i].split('-');
+               var currentOption = comparingOfBits(bin, hexToBin(trim(variant[0])));
+               var option = new Option (trim(variants[i]), trim(variant[0]), currentOption, currentOption);
+               selectElement.options[selectElement.options.length] = option;
+            }
+            document.getElementById("bitVariants").innerHTML = document.getElementById("bitVariants").innerHTML + label.description + " (биты " + label.bit + "): ";
+            document.getElementById("bitVariants").appendChild (selectElement);
+            document.getElementById("bitVariants").innerHTML = document.getElementById("bitVariants").innerHTML + "<br><br>";
+
+            let previous;
+            document.addEventListener('click', (event) => {
+               if (event.target && event.target.id == "select" + label.bit) {
+                  previous = event.target.value;
+               }
+            });
+            document.addEventListener('change', (event) => {
+               if (event.target && event.target.id == "select" + label.bit && previous != event.target.value) {
+                   calculateBitValue(hexToBin(previous), hexToBin(event.target.value));
+               }
+            });
+         }
+       });
+    }
+}
+
+function setByte(ctrl, byteName) {
+    //Check value
+    var regexp = /^[0-9a-fA-F]+$/;
+    if(regexp.test(ctrl.value)) {
+      resetCalcCode();
+      selByte(byteName);
+    } else {
+      alert(ctrl.value + ' - неверный формат введенного значения!');
+      ctrl.value = '00';
+      resetCalcCode();
+      selByte(byteName);
+    }
+}
+
+function hexToBin(value){
+    var bitValueBin;
+
+    dezVal = parseInt(value, 16);
+    bitValueBin = from10toradix(dezVal, 2);
+
+    return addLeadingZeros(bitValueBin);
 }
 
 function selByte(noByte) {
 
-    document.getElementById("Byte").innerHTML = "(Byte " + noByte + ")";
+    document.getElementById("Byte").innerHTML = "(Байт " + noByte + ")";
 
     var bitValueHex = "";
-    var bitValueBin;
     var fullBitString = "";
     var startPos = noByte * 2;
 
@@ -244,12 +367,29 @@ function selByte(noByte) {
     }
 
     // hex2bin conversion
-    dezVal = parseInt(bitValueHex, 16);
-    bitValueBin = from10toradix(dezVal, 2);
-    fullBitString = addLeadingZeros(bitValueBin);
+    fullBitString = hexToBin(bitValueHex);
 
-    fillDezAndBits(dezVal, fullBitString);
-    fillBitCheckBoxes(dezVal, fullBitString);
+    //Find labels
+    if (labelsFromFile != null) {
+        var reduced = labelsFromFile.reduce(function(filtered, option) {
+          let opt = option.split(',');
+          if (opt[0] == noByte) {
+             var labelValue = { byte: opt[0], bit: opt[1], description: opt[2], variants: opt[3] }
+             filtered.push(labelValue);
+          }
+          return filtered;
+       }, []);
+    }
+
+    //Reset all labels in checkboxes
+    document.getElementById("bitVariants").innerHTML = "";
+    for (var i = 0; i < 8; i++) {
+        document.getElementById("setModifiedBitsLabel" + i).innerHTML = " Bit " + i;
+    }
+
+    //Set new values
+    fillDezAndBits(fullBitString);
+    fillBitCheckBoxes(fullBitString, reduced);
 
     toggleSelectedByteColor(noByte);
 }
@@ -315,13 +455,17 @@ function clearBits() {
     for (var i = 0; i < 8; i++) {
         document.getElementById("setModifiedBits" + i).checked = false;
     }
+
+    //Reset all labels in checkboxes
+    for (var i = 0; i < 8; i++) {
+        document.getElementById("setModifiedBitsLabel" + i).innerHTML = " Bit " + i;
+    }
+    document.getElementById("bitVariants").innerHTML = "";
 }
 
 function clearFields() {
 
     curSelectedByte = -1;
-
-    document.getElementById("calcCode").value = "";
     document.getElementById("Byte").innerHTML = "";
 
     //Clear bytes fields
@@ -385,8 +529,8 @@ function createByteDescription(countOfBytes) {
             var byteName = calculateByteIdFromNumber(current);
             html += "<td class=\"fillBytes\">";
             html += "<input type=\"text\" name=\"byte" + byteName + "\" id=\"byte" + byteName + "\" value=\"\" size=\"1\"";
-            html += " onClick=\"selByte(" + byteName + ");\"";
-            html += " class=\"byteNotSelected\" readonly></td>";
+            html += " onClick=\"selByte(" + byteName + ")\" onChange=\"setByte(this, " + byteName + ")\"";
+            html += " class=\"byteNotSelected\"></td>";
         }
         html += "<tr>";
     }
@@ -396,14 +540,14 @@ function createByteDescription(countOfBytes) {
 }
 
 function createBitDescription() {
-    var html = "<table class=\"bordered\">";
-    html += "<tr>";
-    html += "   <th>";
+    var html = "<table class=\"bordered\" style=\"table-layout: fixed;\">";
+    html += "<tr colspan=2>";
+    html += "   <th colspan=2>";
     html += "      Биты <div id=\"Byte\" name=\"Byte\" style=\"display: inline;\"></div>";
     html += "   </th>";
     html += "</tr>";
-    html += "<tr>";
-    html += "   <td>";
+    html += "<tr colspan=2>";
+    html += "   <td colspan=2>";
     html += "      <table class=\"bordered\">";
     html += "      <tr>";
 
@@ -421,52 +565,57 @@ function createBitDescription() {
         html += " onBlur=\"setBits()\"></td>";
     }
 
-    html += "</tr></table><br>";
+    html += "</tr></table></td></tr>";
+    html += "<tr colspan=2><td>";
 
     for (var i = 0; i < 8; i++) {
-        html += "<input type=\"checkbox\" value=\"\" name=\"setModifiedBits" + i + "\" id=\"setModifiedBits" + i + "\" onClick=\"chgBit(" + i + ");\"> Bit " + i + "<br>";
+        html += "<input type=\"checkbox\" value=\"\" name=\"setModifiedBits" + i + "\" id=\"setModifiedBits" + i + "\" onClick=\"chgBit(" + i + ");\">";
+        html += "<label for=\"setModifiedBits" + i + "\" id=\"setModifiedBitsLabel" + i + "\"> Bit " + i + "</label><br>";
     }
 
-    html += "</td></tr>";
+    html += "</td><td><div id=\"bitVariants\"></div></td>";
+    html += "</tr>";
     html += "</table>";
 
     document.getElementById("bitDescription").innerHTML = html;
 }
 </script>
-<form name="coding" id="coding">
-   <table class="bordered">
-      <tr>
-         <th colspan="2">Калькулятор длинного кодирования</th>
-      </tr>
-      <tr>
-         <td colspan="1" nowrap>Оригинальный код:&nbsp;</td>
-         <td colspan="1" nowrap>
-            <input type="text" id="origCode" name="origCode" value="" onChange="checkOrig()"
-               style="height: 25px; width: 440px; color: #ffff00; font-weight: bold; background-color:#4051b5;">&nbsp;&nbsp;
-            <button class="pure-material-button-contained" type="button" name="enterOrig" onClick="checkOrig()">
-            Загрузить
-            </button>
-            <button class="pure-material-button-contained" type="button" name="btnClearAll" id="idClearAll"
-               onClick="clearAll();">Очистить
-            </button>
-         </td>
-      </tr>
-      <tr>
-         <td colspan="1" nowrap>Модифицированный код:&nbsp;</td>
-         <td colspan="1" nowrap>
-            <input type="text" id="calcCode" name="calcCode" value=""
-               style="height: 25px; width: 440px; color: #FF3333; font-weight: bold; background-color:#4051b5;"
-               readonly>
-         </td>
-      </tr>
-      <tr>
-         <td colspan="1" nowrap>Расшифровка битов:&nbsp;</td>
-          <td colspan="1" nowrap><select name="langBits" id="langBits" disabled><option value="none">Недоступно</option></select>
-         </td>
-      </tr>
-   </table>
-   </br>
-   <div id="bytesDescription"></div>
-   </br>
-    <div id="bitDescription"></div>
-</form>
+<body onload="init()">
+   <form name="coding" id="coding">
+      <table class="bordered">
+         <tr>
+            <th colspan="2">Калькулятор длинного кодирования</th>
+         </tr>
+         <tr>
+            <td colspan="1" nowrap>Оригинальный код:&nbsp;</td>
+            <td colspan="1" nowrap>
+               <input type="text" id="origCode" name="origCode" value=""
+                  style="height: 25px; width: 440px; color: #ffff00; font-weight: bold; background-color:#4051b5;">&nbsp;&nbsp;
+               <button class="pure-material-button-contained" type="button" name="enterOrig" onClick="checkOrig()">
+               Загрузить
+               </button>
+               <button class="pure-material-button-contained" type="button" name="btnClearAll" id="idClearAll"
+                  onClick="clearAll();">Очистить
+               </button>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1" nowrap>Модифицированный код:&nbsp;</td>
+            <td colspan="1" nowrap>
+               <input type="text" id="calcCode" name="calcCode" value=""
+                  style="height: 25px; width: 440px; color: #FF3333; font-weight: bold; background-color:#4051b5;"
+                  readonly>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1" nowrap>Расшифровка битов:&nbsp;</td>
+             <td colspan="1" nowrap><select name="langBits" id="langBits"><option value="none">Блок не выбран</option><option value="A5">Блок A5</option></select>
+            </td>
+         </tr>
+      </table>
+      </br>
+      <div id="bytesDescription"></div>
+      </br>
+       <div id="bitDescription"></div>
+   </form>
+</body>
