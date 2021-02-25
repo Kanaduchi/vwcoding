@@ -1,6 +1,13 @@
 disqus: https-mqb-readthedocs-io
 # Головное устройство
 
+### Расшифровка кодировок
+
+menu_display_xxx_clamp_15_off - работа при выкл зажигании  
+menu_display_xxx_over_threshold_high - работа в движении  
+menu_display_xxx_standstill - работа в режиме ожидания  
+menu_display_xxx_after_disclaimer - работа после какой-то фигни  
+
 ### Смена скина автомобиля
 Иногда при замене ГУ на другой, бывает что на нем установлен профиль другого автомобиля VW.   
 
@@ -98,16 +105,16 @@ disqus: https-mqb-readthedocs-io
 
 ### Воспроизведение видео в движении через MirrorLink
 
-!!! warning
-    Данный метод работает только на ГУ Discover Pro. Для всех остальных устройств необходимо загружать дополнительно специальный ZDC контейнер
-
-ODIS E
+Для Discover PRO
 ``` 
 Блок 007: 005F
 > nhtsa_properties
 > Nhtsa_limitation_switches_for_androidauto_no_video_playback
 Включить
 ```
+
+Для всех остальных устройств необходимо загружать дополнительно специальный ZDC контейнер или параметрию  
+[(Параметрия для ODIS)](../firmwares/5F_3Q0035864C_V03935274HX_VIM_MIM.xml)
     
 ### Меню в магнитоле для настройки приборной панели
 
