@@ -5,13 +5,12 @@ disqus: https-mqb-readthedocs-io
 ---
 
 <style>
-  .md-typeset h1,
   .md-content__button {
     display: none;
   }
 </style>
 
-## Кодирование платформы MQB
+# Кодирование платформы MQB
 
 !!! tip "Оффлайн версия для Skoda Octavia A7"
     Данный файл был создан пользователем [SunLionn](https://www.drive2.ru/users/sunlionn) для сообщества «КОДИРОВКИ VAG» на [DRIVE2.RU](https://www.drive2.ru/communities/3868/)    
