@@ -5,13 +5,12 @@ disqus: https-mqb-readthedocs-io
 ---
 
 <style>
-  .md-typeset h1,
   .md-content__button {
     display: none;
   }
 </style>
 
-## Кодирование платформы PQ26
+# Кодирование платформы PQ26
 
 !!! note "Важная информация"
     1. Кодировки проверялись в основной своей массе на Skoda Rapid 16 и 17 м.г.  

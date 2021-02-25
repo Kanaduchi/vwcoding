@@ -6,6 +6,10 @@
   max-width: 1440px;
 }
 
+.md-typeset ul {
+    display: block;
+}
+
 .md-header-nav__title {
     padding-top: 1px;
     padding-left: 0px;
@@ -138,6 +142,10 @@
 
 .pure-material-button-contained:disabled::after {
     opacity: 0;
+}
+
+.md-typeset .admonition {
+    margin-top: 0 !important;
 }
 
 //New admonition give-money

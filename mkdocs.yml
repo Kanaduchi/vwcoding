@@ -1,6 +1,6 @@
 # Project information
 site_name: Кодирование автомобилей VAG
-site_description: Основные настройки различных платформ концерна VAG
+site_description: Основные кодировки и адаптации платформ концерна VAG. Прошивки и параметрии
 site_author: Andrey Topchiy
 site_url: http://www.vwcoding.ru
 
@@ -16,7 +16,7 @@ repo_url: https://github.com/Kanaduchi/vwcoding
 edit_uri: https://github.com/Kanaduchi/vwcoding/edit/master/docs/
 
 # Copyright
-copyright: Copyright &copy; 2021 - Andrey Topchiy
+copyright: Copyright &copy; 2021 - Andrey Topchiy (info@vwcoding.ru)
 
 # Main directory
 docs_dir: docs/
@@ -101,9 +101,9 @@ nav:
       - Калькулятор длинного кодирования: longCoding.md
       - История изменений: history.md
       - Обратная связь: questions.md
-      - Поддержать проект: https://money.yandex.ru/to/4100110582992748/50
+      - Поддержать проект: https://yoomoney.ru/to/4100110582992748/100
   - Платформа MQB:
-      - Общая информация: MQB/main.md
+      - Информация: MQB/main.md
       - Ассистенты водителя: MQB/assistants.md
       - Системы активной безопасности: MQB/active_systems.md
       - Движение и управление: MQB/drive.md
@@ -126,7 +126,7 @@ nav:
           - Генератор параметрии: MQB/tiresCoding.md
       - Дооснащение: MQB/addons.md
   - Платформа MLB-Evo:
-      - Общая информация: MLB-Evo/main.md
+      - Информация: MLB-Evo/main.md
       - Ассистенты водителя: MLB-Evo/assistants.md
       - Безопасность. Отпирание и запирание: MLB-Evo/security.md
       - Комфорт: MLB-Evo/comfort.md
@@ -134,7 +134,7 @@ nav:
       - Приборная панель: MLB-Evo/AID.md
       - Головное устройство: MLB-Evo/headDevice.md
   - Платформа PQ26:
-      - Общая информация: PQ26/main.md
+      - Информация: PQ26/main.md
       - Освещение:
           - Управление освещением: PQ26/lights.md
           - Нестандартные световые решения: PQ26/extraLights.md
@@ -153,7 +153,7 @@ nav:
       - Дооснащение: PQ26/addons.md
       - Словарь немецких терминов: PQ26/german.md
   - Платформа PQ35:
-      - Общая информация: PQ35/main.md
+      - Информация: PQ35/main.md
       - Управление и динамика: PQ35/drive.md
       - Свет: PQ35/lights.md
       - Мультимедиа: PQ35/multimedia.md
@@ -165,4 +165,4 @@ nav:
           - Свет: PQ35/Tiguan/lights.md
           - Приборная панель: PQ35/Tiguan/instrPanel.md
           - Мультимедиа: PQ35/Tiguan/multimedia.md
-  - Поддержать проект: https://money.yandex.ru/to/4100110582992748/50
+  - Поддержать проект: https://yoomoney.ru/to/4100110582992748/100
