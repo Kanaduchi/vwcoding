@@ -6,7 +6,8 @@
 
 !!! give-money inline end "Помощь проекту"
     Если вам понравился этот проект и вы хотели бы его поддержать для дальнейшего развития, то вы можете это сделать 
-    с помощью Яндекс-перевода ([Перейти к оплате](https://yoomoney.ru/to/4100110582992748/100))  
+    с помощью Яндекс-перевода  
+    <iframe src="https://yoomoney.ru/quickpay/button-widget?targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0%20vwcoding.ru&default-sum=100&button-text=11&yoomoney-payment-type=on&button-size=s&button-color=orange&successURL=vwcoding.ru&quickpay=small&account=4100110582992748&" width="127" height="25" frameborder="0" allowtransparency="true" scrolling="no"></iframe>  
     или карты Сбербанка  
     (4276 7200 1356 7419)
 
