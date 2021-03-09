@@ -104,7 +104,9 @@ nav:
       - Поддержать проект: https://yoomoney.ru/to/4100110582992748/100
   - Платформа MQB:
       - Информация: MQB/main.md
-      - Ассистенты водителя: MQB/assistants.md
+      - Ассистенты водителя:
+          - Описание и кодировки: MQB/assistants.md
+          - Прошивки для камеры ассистентов: MQB/camAssistFirmwares.md
       - Системы активной безопасности: MQB/active_systems.md
       - Движение и управление: MQB/drive.md
       - Парковка и маневрирование: MQB/parking.md
