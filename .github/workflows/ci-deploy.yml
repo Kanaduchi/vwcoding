@@ -23,8 +23,6 @@ jobs:
     steps:
       - name: Checkout master branch
         uses: actions/checkout@v2.3.4
-        with:
-          persist-credentials: false
           
       - name: Install Python runtime and dependencies
         uses: actions/setup-python@v1
@@ -42,6 +40,6 @@ jobs:
       - name: Deploy documents
         env:
           ENABLE_PDF_EXPORT: 1
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           mkdocs gh-deploy --clean
