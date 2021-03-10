@@ -36,8 +36,9 @@ jobs:
             mkdocs-minify-plugin>=0.3 \
             mkdocs-redirects>=1.0
 
-      - name: Deploy documents
+      - name: Deploy
         env:
           ENABLE_PDF_EXPORT: 1
-        run: |
-          mkdocs gh-deploy --force
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
