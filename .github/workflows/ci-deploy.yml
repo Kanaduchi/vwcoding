@@ -33,16 +33,15 @@ jobs:
 
       - name: Install theme and dependencies
         run: |
-          pip install nltk==3.4.5 
           pip install -r requirements.txt
           pip install .
           pip install \
             mkdocs-minify-plugin>=0.3 \
             mkdocs-redirects>=1.0
 
-      - name: Deploy
-        uses: mhausenblas/mkdocs-deploy-gh-pages@master
+      - name: Deploy documents
         env:
           ENABLE_PDF_EXPORT: 1
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          CUSTOM_DOMAIN: vwcoding.ru
+        run: |
+          mkdocs gh-deploy --clean
