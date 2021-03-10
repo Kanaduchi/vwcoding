@@ -33,12 +33,19 @@ jobs:
 
       - name: Install theme and dependencies
         run: |
+          pip install nltk==3.4.5 
           pip install -r requirements.txt
           pip install .
           pip install \
             mkdocs-minify-plugin>=0.3 \
             mkdocs-redirects>=1.0
 
+      - name: Deploy documents
+        env:
+          ENABLE_PDF_EXPORT: 1
+        run: |
+          mkdocs gh-deploy --force
+          
       - name: Deploy
         uses: mhausenblas/mkdocs-deploy-gh-pages@master
         env:
