@@ -15,7 +15,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-
       - name: Checkout source form GitHub
         uses: actions/checkout@v2
         with:
