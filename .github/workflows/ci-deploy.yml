@@ -42,4 +42,4 @@ jobs:
           ENABLE_PDF_EXPORT: 1
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          mkdocs gh-deploy --clean
+          mkdocs gh-deploy --clean --force
