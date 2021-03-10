@@ -40,9 +40,8 @@ jobs:
             mkdocs-redirects>=1.0
 
       - name: Deploy
+        uses: mhausenblas/mkdocs-deploy-gh-pages@master
         env:
           ENABLE_PDF_EXPORT: 1
-        uses: mhausenblas/mkdocs-deploy-gh-pages@master
-        with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           CUSTOM_DOMAIN: vwcoding.ru
