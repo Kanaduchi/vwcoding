@@ -142,7 +142,7 @@ Lampendefektbitposition и Fehlerort mittleres Byte DTC-DFCC — два поля
     | Blinken rechts Hellphase | работает при загорании правого поворотника |
     | Blinken rechts Dunkelphase | работает при притухании правого поворотника |
     | Blinken links aktiv (beide Phase) | работает постоянно при работе левого поворотника |
-    | Blinken rechts aktiv (beide Phase) | постоянно постоянно при работе правого поворотника |
+    | Blinken rechts aktiv (beide Phase) | работает постоянно при работе правого поворотника |
     | Standlicht allgemein (Schlusslicht, Positionslicht, Begrenzungslicht) | горит в режиме габаритов |
     | Parklicht links (beidseitiges Parklicht aktiviert li & re) | горит в режиме парковочного огня левый (зажигание выкл.) |
     | Parklicht rechts | горит в режиме парковочного огня правый (зажигание выкл.) |
