@@ -22,6 +22,24 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 → Применить 
 ```
 
+### Возможность одновременного подключения двух телефонов по bluetooth
+
+```
+Блок 5F → Адаптация
+> function_configuration_phone:
+>> Support_second_phone: [VO]_none -> меняем
+>> Support_for_response_and_hold: [VN]_off -> on
+>> Dtmf_without_active_call: [VN]_off -> on
+>> _user_menu_three_way_calling: [VN]_not_installed -> installed
+→ Применить 
+```
+
+```
+Блок 17 → Кодирование  
+> telephone2_BAP - no -> yes
+→ Применить
+```
+
 ### Отключение скачка громкости при старте магнитолы
 Иногда при включении ГУ громкость включается намного сильнее, чем она была задана при выключении машины.
 
@@ -106,11 +124,16 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 ### Воспроизведение видео в движении через MirrorLink
 
 Для Discover PRO
-``` 
-Блок 007: 005F
-> nhtsa_properties
-> Nhtsa_limitation_switches_for_androidauto_no_video_playback
-Включить
+
+```
+Блок 5F → Адаптация
+> nhtsa_properties:
+>> nhtsa_limitation_switches_for_carplay_no_softKeyboard: [VN]_activated -> _not_activated (CarPlay, возможность вызова клавиатуры в движении)
+>> nhtsa_limitation_switches_for_androidauto_limit_displayed_message_length: [VN]_activated -> _not_activated (AA,отключение ограничения длины выводимого сообщения в движении)
+>> nhtsa_limitation_switches_for_androidauto_no_setup_configuration: [VN]_activated -> _not_activated (AA, возможность заходить в настройки в движении)
+>> nhtsa_limitation_switches_for_androidauto_no_text_input: [VN]_activated -> _not_activated (AA, отключение запрета ввода текста в движении)
+>> nhtsa_limitation_switches_for_androidauto_no_video_playback: [VN]_activated -> _not_activated (АА, возможность проигрывать видео в движении)
+→ Применить 
 ```
 
 Для всех остальных устройств необходимо загружать дополнительно специальный ZDC контейнер или параметрию  

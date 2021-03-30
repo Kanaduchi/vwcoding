@@ -5,10 +5,9 @@ site_author: Andrey Topchiy
 site_url: http://www.vwcoding.ru
 
 # Hot news
-hot_news_date: 23.03.2021
+hot_news_date: 30.03.2021
 hot_news: >
-  1. <a href='https://vwcoding.ru/MQB/headDevice'>Параметрия для активации Видео в Движении</a><br>
-  2. <a href='https://vwcoding.ru/longCoding'>Online калькулятор длинного кодирования</a><br>
+  1. <a href='https://vwcoding.ru/MQB/headDevice'>Установка и кодирование RGB подсветки салона</a><br>
 
 # Repository
 repo_name: Kanaduchi/vwcoding
@@ -16,7 +15,7 @@ repo_url: https://github.com/Kanaduchi/vwcoding
 edit_uri: https://github.com/Kanaduchi/vwcoding/edit/master/docs/
 
 # Copyright
-copyright: Copyright &copy; 2021 - Andrey Topchiy (info@vwcoding.ru)
+copyright: Copyright &copy; 2021 - vwcoding.ru (info@vwcoding.ru)
 
 # Main directory
 docs_dir: docs/
@@ -26,7 +25,22 @@ theme:
   custom_dir: overrides
   favicon: assets/logo.png
   palette:
-    scheme: preference
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Тёмная сторона
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Светлая сторона
   highlightjs: false
   language: ru
   font:
@@ -36,6 +50,7 @@ theme:
   features:
     - navigation.tabs
     - navigation.expand
+    - navigation.top
 
 extra_css:
   - assets/custom.css
@@ -113,6 +128,7 @@ nav:
       - Эстетическая подсветка:
           - Общие настройки: MQB/esteticLights.md
           - Кодирование: MQB/esteticLightsCoding.md
+          - Установка RGB подсветки: MQB/esteticLightsCodingRGB.md
       - Зеркала и стеклоочистители: MQB/wash.md
       - Отпирание и запирание: MQB/security.md
       - Освещение:
@@ -167,4 +183,5 @@ nav:
           - Свет: PQ35/Tiguan/lights.md
           - Приборная панель: PQ35/Tiguan/instrPanel.md
           - Мультимедиа: PQ35/Tiguan/multimedia.md
+  - Калькулятор длинного кодирования: longCoding.md
   - Поддержать проект: https://yoomoney.ru/to/4100110582992748/100
