@@ -21,7 +21,7 @@ ODIS E: 5F → кодирование → [LO]_byte_14_AM_disable: ативир�
 
 ```
 Блок 5F → Адаптация
->> Конфигурация
+> Конфигурация
 >> Apple_DIO_Wireless → Акт.
 >> Google_GAL_Wireless → Акт.
 >> wlan_5ghz_switch → Акт.
@@ -34,7 +34,7 @@ ODIS E: 5F → кодирование → [LO]_byte_14_AM_disable: ативир�
 
 ```
 Блок 5F → Адаптация
->> Speed
+> Speed
 >> testmode_video_speed_off → 255.
 → Применить
 ```
@@ -43,3 +43,21 @@ ODIS E: 5F → кодирование → [LO]_byte_14_AM_disable: ативир�
 
 !!! note ""
     Необходимо использовать development mode  
+
+### Возможность звонков с сим-карты
+
+!!! note ""
+    Для автомобилей, оборудованных слотом под сим-карту возможность звонить с этой симки
+
+```
+5F → Адаптация
+> [VN]_Vehicle_configuration:
+>> [LO]_Phone_module_operation_mode: data_only → voice_and_data
+>> [LO]_Support_for_response_and_hold: VN]_off → on
+>> [LO]_Support_of_threeway_calling: off → on
+>> [LO]_sim_data_only_sms_support: on → off
+>> [LN]_Internal_SIM_card_usage: Never → Always
+→ Применить
+```
+
+> логин-пароль 20103 
