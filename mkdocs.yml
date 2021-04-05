@@ -5,9 +5,12 @@ site_author: Andrey Topchiy
 site_url: http://www.vwcoding.ru
 
 # Hot news
-hot_news_date: 30.03.2021
+hot_news_date: 04.04.2021
+hot_news_title: Установка RGB подсветки салона
 hot_news: >
   1. <a href='https://vwcoding.ru/MQB/headDevice'>Установка и кодирование RGB подсветки салона</a><br>
+  2. Обновление кодировок MLB-Evo<br>
+  3. Новый раздел? посвященный программам и адаптерам для кодирования
 
 # Repository
 repo_name: Kanaduchi/vwcoding
@@ -113,7 +116,9 @@ nav:
       - Платформа PQ26: PQ26/main.md
       - Платформа PQ35: PQ35/main.md
       - Калькулятор длинного кодирования: longCoding.md
-      - Инструменты для кодирования: programs.md
+      - Инструменты и адаптеры:
+          - Список инструментов: programs.md
+          - Инструкция ODIS E: odis-e.md
       - История изменений: history.md
       - Обратная связь: questions.md
       - Поддержать проект: https://yoomoney.ru/to/4100110582992748/100
@@ -186,7 +191,4 @@ nav:
           - Приборная панель: PQ35/Tiguan/instrPanel.md
           - Мультимедиа: PQ35/Tiguan/multimedia.md
   - Калькулятор длинного кодирования: longCoding.md
-  - Инструменты для кодирования:
-          - Список инструментов: programs.md
-          - Инструкция ODIS E: odis-e.md
   - Поддержать проект: https://yoomoney.ru/to/4100110582992748/100
