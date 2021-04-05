@@ -112,8 +112,8 @@ nav:
       - Платформа MLB-Evo: MLB-Evo/main.md
       - Платформа PQ26: PQ26/main.md
       - Платформа PQ35: PQ35/main.md
-      - Инструкция ODIS E: odis-e.md
       - Калькулятор длинного кодирования: longCoding.md
+      - Инструменты для кодирования: programs.md
       - История изменений: history.md
       - Обратная связь: questions.md
       - Поддержать проект: https://yoomoney.ru/to/4100110582992748/100
@@ -146,8 +146,10 @@ nav:
   - Платформа MLB-Evo:
       - Информация: MLB-Evo/main.md
       - Ассистенты водителя: MLB-Evo/assistants.md
+      - Движение и управление: MLB-Evo/drive.md
       - Безопасность. Отпирание и запирание: MLB-Evo/security.md
       - Комфорт: MLB-Evo/comfort.md
+      - Климат: MLB-Evo/climate.md
       - Освещение: MLB-Evo/lights.md
       - Приборная панель: MLB-Evo/AID.md
       - Головное устройство: MLB-Evo/headDevice.md
@@ -184,4 +186,7 @@ nav:
           - Приборная панель: PQ35/Tiguan/instrPanel.md
           - Мультимедиа: PQ35/Tiguan/multimedia.md
   - Калькулятор длинного кодирования: longCoding.md
+  - Инструменты для кодирования:
+          - Список инструментов: programs.md
+          - Инструкция ODIS E: odis-e.md
   - Поддержать проект: https://yoomoney.ru/to/4100110582992748/100

@@ -294,7 +294,7 @@ disqus: https-mqb-readthedocs-io
 ```
 Блок 36 - Блок Регулировка сиденья водителя → Кодирование
 > Байт 3 бит 1 включить (Easy_Entry_front)
-> Байт 9 бит 6 включить (Easy_Entry_over_MMI)
+> Байт 9 бит 6 включить (Easy_Entry_front_over_MMI)
 → Применить (с перезагрузкой блока)
 ```
 
@@ -326,7 +326,7 @@ disqus: https-mqb-readthedocs-io
 ```
 Блок 6 - Блок Регулировка сиденья пассажира → Кодирование
 > Байт 3 бит 1 включить (Easy_Entry_front)
-> Байт 9 бит 6 включить (Easy_Entry_over_MMI)
+> Байт 9 бит 6 включить (Easy_entry_front_over_MMI)
 > Байт 9 бит 4 включить (EasyEntry_Enable_Passenger_over_DriverMMI)
 → Применить (с перезагрузкой блока)
 ```
