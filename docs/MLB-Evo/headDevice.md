@@ -51,12 +51,31 @@ ODIS E: 5F → кодирование → [LO]_byte_14_AM_disable: ативир�
 
 ```
 5F → Адаптация
-> [VN]_Vehicle_configuration:
->> [LO]_Phone_module_operation_mode: data_only → voice_and_data
->> [LO]_Support_for_response_and_hold: VN]_off → on
->> [LO]_Support_of_threeway_calling: off → on
->> [LO]_sim_data_only_sms_support: on → off
->> [LN]_Internal_SIM_card_usage: Never → Always
+> Vehicle_configuration
+>> Phone_module_operation_mode: data_only → voice_and_data
+>> Support_for_response_and_hold: off → on
+>> Support_of_threeway_calling: off → on
+>> sim_data_only_sms_support: on → off
+>> Internal_SIM_card_usage: Never → Always
+→ Применить
+```
+
+> логин-пароль 20103 
+
+### Возможность подключения bluetooth-наушников к мультимедиа системе
+
+```
+5F → Кодирование
+byte_16_Bluetooth_Headphones: off
+→ Применить
+```
+
+### Отключение блокировки части функций в MMI во время движения
+
+```
+5F → Адаптация
+> Vehicle_configuration
+>> unblock_functions_while_piloted_driving: blocked
 → Применить
 ```
 

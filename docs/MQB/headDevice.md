@@ -45,7 +45,7 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 
 ```
 Блок 5F → Адаптация
-> Car_Function_List_BAP_Gen2
+> Adjustment_fm_tuner_mono_stereo
 >> l_hf_stereo_lower_threshold → 20 [UN]_dBµV (было 37 [UN]_dBµV)
 → Применить 
 ```
