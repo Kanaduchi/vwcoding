@@ -25,3 +25,12 @@ disqus: https-mqb-readthedocs-io
 >> MMI_display_time_during_rear_zone_adjustment: 10 s → ...
 → Применить
 ```
+
+### Настройка длительности работы предпускового подогревателя
+
+```
+Блок 08 → Адаптация
+> Auxiliary heating run on time:
+>> Auxiliary_heating_run_on_time: 10 [UN]_min
+→ Применить
+```

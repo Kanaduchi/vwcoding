@@ -47,62 +47,31 @@ disqus: https-mqb-readthedocs-io
     >> Dimming Direction CD → maximize → меняем на → minimize
     → Применить
     
-> логин-пароль 31347  
+> логин-пароль 31347
 
-### Включение задних габаритов постоянно с ДХО – Буквы «F» горят всегда для HIGH фонарей
-
-    Блок 09 → Адаптация
-    
-    > Leuchte23SL HLC10 (левый фонарь)
-    >> Lichtfunktion C 23:
-    Старое значение: nicht aktiv
-    Новое значение: Tagfahrlicht
-    >> Dimmwert CD 23:
-    Старое значение: 0
-    Новое значение: 127
-    
-    > Leuchte24SL HRA65 (правый фонарь)
-    >> Lichtfunktion C 24:
-    Старое значение: nicht aktiv
-    Новое значение: Tagfahrlicht
-    >> Dimmwert CD 24:
-    Старое значение: 0
-    Новое значение: 127
-    
-    > Leuchte16BLK SLB35BLK SL KC9
-    >> Lichtfunktion C 16:
-    Старое значение: nicht aktiv
-    Новое значение: Tagfahrlicht
-    >> Dimmwert CD 16:
-    Старое значение: 0
-    Новое значение: 127
-    
-    > Leuchte17TFL R BLK SRB3TFL R BLK SR KC3
-    >> Lichtfunktion C 17:
-    Старое значение: nicht aktiv
-    Новое значение: Tagfahrlicht
-    >> Dimmwert CD 17:
-    Старое значение: 0
-    Новое значение: 127
-    → Применить
-
-> логин-пароль 31347  
-
-### Включение задних габаритов в режиме только ДХО
+### Включение задних габаритов в режиме только ДХО - Буквы «F» горят всегда для HIGH фонарей
 
 !!! warning ""
-    В интернете полно советов по кодировке: 
-    Tagfahrlicht — Dauerfahrlicht aktiviert zusaetzlich Standlicht auswählen  
+    В интернете полно советов по заданию функции Tagfahrlicht.  
     Она некорректна!
 
 ```
 Блок 09 → Адаптация
 > Leuchte23SL HLC10 (левый фонарь)
->> Lichtfunktion D 23 → Daytime running lights (было nicht aktiv)
-Новое значение: Daytime running lights
+>> Lichtfunktion D 23 → (Dauerfahrlicht) Daytime running lights (было nicht aktiv)
+>> Dimmwert CD 23: 0 -> 127
     
 > Leuchte24SL HRA65 (правый фонарь)
->> Lichtfunktion D 24 → Daytime running lights (было nicht aktiv)
+>> Lichtfunktion D 24 → (Dauerfahrlicht) Daytime running lights (было nicht aktiv)
+>> Dimmwert CD 23: 0 -> 127
+
+> Leuchte16BLK SLB35BLK SL KC9 (левый фонарь на крыле)
+>> Lichtfunktion D 16 → (Dauerfahrlicht) Daytime running lights (было nicht aktiv)
+>> Dimmwert CD 16: 0 -> 127
+    
+> Leuchte17TFL R BLK SRB3TFL R BLK SR KC3 (левый фонарь на крыле)
+>> Lichtfunktion C 17 → (Dauerfahrlicht) Daytime running lights (было nicht aktiv)
+>> Dimmwert CD 17: 0 -> 127
 → Применить
 ```
 

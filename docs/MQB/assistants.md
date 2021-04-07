@@ -145,7 +145,7 @@ Lane Assist с адаптивным ведением по полосе — ис�
 Изменение типа ассистента дальнего света с простого на MDF - маскируемый или неослепляющий дальний. Добавляем ассистент в меню
 ```
 Блок 09 (бортовая сеть) → Адаптации
->> Außenlicht_Blinker 
+>> Aussenlicht_Blinker 
 > Warnblinken_durch_Fahrerassistenz → available
 >> Fernlicht_assistent
 > Erweiterte_Fernlichtsteuerung: AFS, FLA, Fernlicht ueber AFS → AFS, FLA, Fernlicht (GLW,MDF)
