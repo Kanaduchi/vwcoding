@@ -40,8 +40,8 @@ iframe[src*="ads-iframe"] {
 }
 
 .md-header__button.md-logo img {
-    width: 32px !important;
-    height: 32px !important;
+    width: auto !important;
+    height: 43px !important;
 }
 
 .pure-material-button-contained {
