@@ -5,12 +5,10 @@ site_author: Andrey Topchiy
 site_url: http://www.vwcoding.ru
 
 # Hot news
-hot_news_date: 04.04.2021
-hot_news_title: Установка RGB подсветки салона
+hot_news_date: 20.04.2021
+hot_news_title: Параметрия электронного усилителя голоса
 hot_news: >
-  1. <a href='https://vwcoding.ru/MQB/headDevice'>Установка и кодирование RGB подсветки салона</a><br>
-  2. Обновление кодировок MLB-Evo<br>
-  3. Новый раздел? посвященный программам и адаптерам для кодирования
+  1. <a href='https://vwcoding.ru/MQB/headDevice'>Параметрия электронного усилителя голоса</a><br>
 
 # Repository
 repo_name: Kanaduchi/vwcoding
