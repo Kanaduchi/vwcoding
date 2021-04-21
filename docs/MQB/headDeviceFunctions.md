@@ -19,6 +19,9 @@ disqus: https-mqb-readthedocs-io
 //Файл должен находиться в папке https://github.com/Kanaduchi/vwcoding/tree/new_codings/docs/firmwares
 [(Название ссылки для скачивания)](../firmwares/имя файла)
 
+//Изображение
+![Screenshot](../images/MQB/имя файла)
+
 ```
 Блок XX → Адаптация
 > Корневой раздел адаптации
