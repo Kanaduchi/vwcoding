@@ -228,10 +228,10 @@ SWAP файлы. Данные коды содержат в себе все су�
 
 | Тип     | Ссылка |
 |---------|------------------|
-| STD2    | [(SWAP)](../firmwares/SWAP/SWaP) |
-| PQ STD2 | [(SWAP)](../firmwares/SWAP/STD2/SWaP) |
-| NAV     | [(SWAP)](../firmwares/SWAP/Nav/SWaP) |
-| PLUS    | [(SWAP)](../firmwares/SWAP/Plus/SWaP) |
+| STD2    | [(SWAP)](../firmwares/SWAP/SWaP.zip) |
+| PQ STD2 | [(SWAP)](../firmwares/SWAP/STD2/SWaP.zip) |
+| NAV     | [(SWAP)](../firmwares/SWAP/Nav/SWaP.zip) |
+| PLUS    | [(SWAP)](../firmwares/SWAP/Plus/SWaP.zip) |
 
 Для загрузки SWAP кода необходимо взять нужный файл, а так же созданный на предыдущем шаге FEC файл и загрузить в корень флешки.
 
@@ -264,7 +264,7 @@ FINISHED — You can now remove SD Card
 cd / && mount -uw /sdc1/
 ```
 
-6. Запускаем скрипт Патч FEC кодов [(MST2_backup.sh)](../firmwares/MST2_fec.sh)   
+6. Запускаем скрипт Патч FEC кодов [(MST2_fec.sh)](../firmwares/MST2_fec.sh)   
 ```
 cd / && /sdc1/MST2_fec.sh
 ```
