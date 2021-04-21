@@ -174,12 +174,80 @@ umount= размонтировать путь монтирования
 -V= индикатор выполнения
 -w= права чтения / записи (при монтировании) 
 ```
+
 ### Перед установкой патча важно сделать резервную копию! 
 Для удобства 3 скрипта:
 1. Бэкап.[(MST2_backup.sh)](..images/MQB/MIBII/MST2_backup.sh)
 2. Патч SWAP [(MST2_patch.sh)](..images/MQB/MIBII/MST2_patch.sh)
 3. Патч FEC кодов[(MST2_backup.sh)](..images/MQB/MIBII/MST2_fec.sh)
 4. SWAP магнитолыдля магнитолы с НАВИ он другой...
+На флешку скиньте их просто в корень...
+
+
+1.Делаем бекап MIBII. 
+Вставьте (пустую) SD-карту в слот 1 и выполните следующие команды через Putty. 
+Монтирумем SD карту...
+cd / && mount -uw /sdc1/
+далее запускаем скрипт на выполнения создании полной копии магнитолы.
+cd / && /sdc1/MST2_backup.sh
+
+```
+Должны увидеть:
+# MST2_backup.sh
+ROOT access — OK
+Making backup dir on SD Card — OK
+mkdir: /sdc1/backup: File exists
+SWaP *.fec files backup — OK
+backup /ffs/etc/* — OK
+cp: Can't create FIFO file (/sdc1/backup/script.fifo)
+delphibin.ifs backup — OK
+InstallationManager backup — OK
+SWaP engine backup — OK
+cp: Dest (/sdc1/mst2_patch.sh) must be a dir to copy dirs or multiple files to it.
+profile backup — OK
+MHConfig.cfg backup — OK
+fs0 backup — OK
+Saving unit info to file — OK
+emmc serial numbler — SAVED
+FINISHED — You can now remove SD Card
+```
+
+2. После выполнения бекапа, на флешке в папке pg есть файл *.fec он как раз нам и нужен...
+с помощью [(M2DFGX16)](..images/MQB/MIBII/M2DFGX16.rar) MIB2 Delphi FEC Generator XTR3M3 
+патчим наш fec, а именно отмечаем все пукнты которые вам нужны и сохраняем патченный fec файл.. 
+только не затрите файл в бекапе...
+```
+помните: например.. если у вас с заводы активироване коды апп конект,  мирролинк и т.д.,
+и когда вы будете патчить файл fec и их не отметите, то после заливки в магнитолу их у Вас не будет.
+Если у Вас магнитола буз навигации то отмечайте все пункты, а навигацию нет...
+
+```
+
+M2DFGX16.rar
+
+
+
+# mst2_patch.sh
+ROOT access — ok
+SWaP patch — ok
+cp: Copying /sdc1/SWaP to /home/mmc0t177_tmp/apps/bin/SWaP
+100.00% (734/734 kbytes, 3883 kb/s)
+FINISHED — You can now remove SD Card
+
+# mst2_fec.sh
+ROOT access — ok
+*.FEC installation — ok
+mkdir: /home/mmc0t180_tmp: File exists
+FINISHED — You can now remove SD Card
+
+
+
+
+
+
+
+
+
 
 
 
