@@ -143,7 +143,6 @@ nav:
       - Приборная панель: MQB/AID.md
       - Головное устройство:
         - Общие кодировки: MQB/headDevice.md
-        - SWAP коды и параметрии: MQB/headDeviceFunctions.md
       - Шины:
           - Общие кодировки: MQB/tires.md
           - Генератор параметрии: MQB/tiresCoding.md
