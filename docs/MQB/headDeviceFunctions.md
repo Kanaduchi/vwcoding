@@ -15,7 +15,7 @@
 5. Прошивка магнитолы.
 6. SWAP магнитолы
 
-1. Как распознать модуль Delphi?
+Как распознать модуль Delphi?
 Модули Delphi - это всегда стандартные устройства, а не устройства высокого уровня.
 Соответственно, Delphi Unit всегда является Discover Media, а не Discover Pro.
 Все модули Delphi являются устройствами Discover Media, но не все устройства Discover Media являются модулями Delphi!
@@ -49,14 +49,6 @@ D = Delphi Краткая версия модуля
 
 1. SD Card
 2. Прошивка
-```
-Прошивки для Г.У., в частности Composition Media
-mibsolution.eu
-Логин: guest
-Пароль: guest
-MQB_Solution -> MST2-DELPHI -> Firmware -> VW -> EU -> MST2_EU_VW_P0891D_MU0891.7z
-Спасибо Sash153 с Драйв2 за наводку
-```
 3. Активируйте инженерное меню.
  
  ```
