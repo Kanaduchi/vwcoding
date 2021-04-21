@@ -148,6 +148,7 @@ D = Delphi Краткая версия модуля
 ![Screenshot](../images/MQB/MIBII/12.jpg)
 
 Как только появится приветствие, можно будет вводить команды. 
+
 ![Screenshot](../images/MQB/MIBII/13.jpg)
 
 ```
