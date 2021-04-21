@@ -295,3 +295,6 @@ FINISHED — You can now remove SD Card
     cp -VRf /sdc1/*.fec /Persistence/SWaP/pg/   
   
     После ввода команд обязательна полная перезагрузка.
+
+!!! warning 
+    После всех действий обязательно проверьте работоспособность ГУ
