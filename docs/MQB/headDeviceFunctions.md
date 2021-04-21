@@ -177,19 +177,19 @@ umount= размонтировать путь монтирования
 
 ### Перед установкой патча важно сделать резервную копию! 
 Для удобства 3 скрипта:
-1. Бэкап.[(MST2_backup.sh)](..images/MQB/MIBII/MST2_backup.sh)
-2. Патч SWAP [(MST2_patch.sh)](..images/MQB/MIBII/MST2_patch.sh)
-3. Патч FEC кодов[(MST2_backup.sh)](..images/MQB/MIBII/MST2_fec.sh)
+1. Бэкап.[(MST2_backup.sh)](../images/MQB/MIBII/MST2_backup.sh)
+2. Патч SWAP [(MST2_patch.sh)](../images/MQB/MIBII/MST2_patch.sh)
+3. Патч FEC кодов[(MST2_backup.sh)](../images/MQB/MIBII/MST2_fec.sh)
 4. SWAP магнитолыдля магнитолы с НАВИ он другой...
 На флешку скиньте их просто в корень...
 
 
-1.Делаем бекап MIBII. 
+1. Делаем бекап MIBII. 
 
 Вставьте (пустую) SD-карту в слот 1 и выполните следующие команды через Putty. 
 Монтирумем SD карту...
 cd / && mount -uw /sdc1/
-далее запускаем скрипт на выполнения создании полной копии магнитолы.
+далее запускаем скрипт.
 cd / && /sdc1/MST2_backup.sh
 
 ```
@@ -221,28 +221,43 @@ FINISHED — You can now remove SD Card
 помните: например.. если у вас с заводы активироване коды апп конект,  мирролинк и т.д.,
 и когда вы будете патчить файл fec и их не отметите, то после заливки в магнитолу их у Вас не будет.
 Если у Вас магнитола буз навигации то отмечайте все пункты, а навигацию нет...
+```
+3. Качаем SWAP [(SWAP)](../images/MQB/MIBII/MST2_EU_VW_P0891D.zip)
+Берем SWAP файл и патченный нами фалй fec кидаем в корень влешки...
+и в PUTTY запускаем 
+
+Монтирумем SD карту...
+cd / && mount -uw /sdc1/
+далее запускаем скрипт.
+cd / && /sdc1/MST2_patch.sh
 
 ```
-
-M2DFGX16.rar
-
-
-
+Должны увидеть:
 # mst2_patch.sh
 ROOT access — ok
 SWaP patch — ok
 cp: Copying /sdc1/SWaP to /home/mmc0t177_tmp/apps/bin/SWaP
 100.00% (734/734 kbytes, 3883 kb/s)
 FINISHED — You can now remove SD Card
+```
+Перезагружаем магнитолу долгим нажатием на кнопку включения.. ОБЯЗАТЕЛЬНО!!!!
 
-# mst2_fec.sh
+4. PUTTY 
+Монтирумем SD карту...
+cd / && mount -uw /sdc1/
+далее запускаем скрипт.
+cd / && /sdc1/MST2_fec.sh
+
+```
+Должны увидеть:
+# MST2_fec.sh
 ROOT access — ok
 *.FEC installation — ok
 mkdir: /home/mmc0t180_tmp: File exists
 FINISHED — You can now remove SD Card
+```
 
-
-
+Перезагружаем магнитолу долгим нажатием на кнопку включения.. ОБЯЗАТЕЛЬНО!!!!
 
 
 
