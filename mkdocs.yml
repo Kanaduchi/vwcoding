@@ -141,7 +141,9 @@ nav:
       - Звук: MQB/sound.md
       - Климат: MQB/climate.md
       - Приборная панель: MQB/AID.md
-      - Головное устройство: MQB/headDevice.md
+      - Головное устройство:
+        - Общие кодировки: MQB/headDevice.md
+        - SWAP коды и параметрии: MQB/headDeviceFunctions.md
       - Шины:
           - Общие кодировки: MQB/tires.md
           - Генератор параметрии: MQB/tiresCoding.md
