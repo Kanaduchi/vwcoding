@@ -155,9 +155,9 @@ umount - размонтировать путь монтирования
 ```
 
 Для удобства 3 скрипта (для запуска их необходимо поместить на корень флешки)
-1. Бэкап [(MST2_backup.sh)](../firmwares/MST2_backup.sh)
+1. Бэкап [(MST2_backup.sh)](../firmwares/MST2_backup.sh)  
 2. Патч FEC кодов [(MST2_fec.sh)](../firmwares/MST2_fec.sh)  
-3. Патч SWAP [(MST2_patch.sh)](../firmwares/MST2_patch.sh)
+3. Патч SWAP [(MST2_patch.sh)](../firmwares/MST2_patch.sh)  
    
 ### Резервная копия MIBII
 
