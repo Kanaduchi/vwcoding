@@ -8,22 +8,12 @@
       }
 
       .bordered {
-        border: solid #ccc 1px;
         -moz-border-radius: 6px;
         -webkit-border-radius: 6px;
         border-radius: 6px;
         -webkit-box-shadow: 0 1px 1px #ccc;
         -moz-box-shadow: 0 1px 1px #ccc;
         box-shadow: 0 1px 1px #ccc;
-      }
-
-      .bordered tr:hover {
-        background: #fbf8e9;
-        -o-transition: all 0.1s ease-in-out;
-        -webkit-transition: all 0.1s ease-in-out;
-        -moz-transition: all 0.1s ease-in-out;
-        -ms-transition: all 0.1s ease-in-out;
-        transition: all 0.1s ease-in-out;
       }
 
       .bordered td, .bordered th {
@@ -33,23 +23,19 @@
         text-align: left;
       }
 
+      .sub {
+        background-color: #3F51B5;
+        color: #FFFFFF;
+      }
+
       .bordered th {
         background-color: #3F51B5;
-        background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
-        background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
-        background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
-        background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
-        background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
-        background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+        color: #FFFFFF;
         -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
         -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;
         box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
         border-top: none;
         text-shadow: 0 1px 0 rgba(255,255,255,.5);
-      }
-
-      .bordered td:first-child, .bordered th:first-child {
-        border-left: none;
       }
 
       .bordered th:first-child {
@@ -419,12 +405,12 @@
           html += "            </tr>";
           html += "            <tr>";
           html += "              <td>Имя</td>";
-          html += "              <td colspan=\"2\"><input id=\"t" + index + "name\" style=\"width: 100%;\"></td>";
+          html += "              <td colspan=\"2\"><input id=\"t" + index + "name\" style=\"height: 25px; color: #ffff00; font-weight: bold; background-color:#4051b5; width: 100%;\"></td>";
           html += "            </tr>";
           html += "            <tr>";
-          html += "              <td bgcolor=\"#dce9f9\"><b>Тип загрузки машины</b></td>";
-          html += "              <td bgcolor=\"#dce9f9\"><b>Передние колеса</b></td>";
-          html += "              <td bgcolor=\"#dce9f9\"><b>Задние колеса</b></td>";
+          html += "              <td class=\"sub\"><b>Тип загрузки машины</b></td>";
+          html += "              <td class=\"sub\"><b>Передние колеса</b></td>";
+          html += "              <td class=\"sub\"><b>Задние колеса</b></td>";
           html += "            </tr>";
           html += "            <tr>";
           html += "              <td>Полная загрузка</td>";
