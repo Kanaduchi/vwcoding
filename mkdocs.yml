@@ -24,7 +24,7 @@ docs_dir: docs/
 theme:
   name: material
   custom_dir: overrides
-  favicon: assets/logo.png
+  favicon: assets/icon.png
   palette:
     # Light mode
     - media: "(prefers-color-scheme: light)"
