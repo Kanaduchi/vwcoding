@@ -6,9 +6,9 @@ site_url: http://www.vwcoding.ru
 
 # Hot news
 hot_news_date: 22.04.2021
-hot_news_title: SWaP коды для ГУ! Параметрия электронного усилителя голоса
+hot_news_title: SWaP коды и параметрия для ГУ!
 hot_news: >
-  1. <a href='https://vwcoding.ru/MQB/headDeviceFunctions'>SWAP коды и параметрии для ГУ (F5 блок)</a><br>
+  1. <a href='https://vwcoding.ru/MQB/headDeviceFunctions'>SWAP коды и параметрия для ГУ (F5 блок)</a><br>
 
 # Repository
 repo_name: Kanaduchi/vwcoding
