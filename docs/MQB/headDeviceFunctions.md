@@ -254,7 +254,7 @@ cd / && /sdc1/MST2_patch.sh
 ROOT access — ok
 SWaP patch — ok
 cp: Copying /sdc1/SWaP to /home/mmc0t177_tmp/apps/bin/SWaP
-100.00% (734/734 kbytes, 3883 kb/s)
+100.00% (xxx/xxx kbytes, xxxx kb/s)
 FINISHED — You can now remove SD Card
 ```
 
@@ -298,4 +298,5 @@ FINISHED — You can now remove SD Card
     После ввода команд обязательна полная перезагрузка.
 
 !!! warning 
-    После всех действий обязательно проверьте работоспособность ГУ
+    После всех действий обязательно проверьте работоспособность ГУ.  
+    Проверьте сканером на наличие ошибок, и удалите их если появились.
