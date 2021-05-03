@@ -6,10 +6,11 @@ site_url: http://www.vwcoding.ru
 
 # Hot news
 hot_news_date: 03.05.2021
-hot_news_title: SWaP коды и параметрия для ГУ!
+hot_news_title: SWaP для ACC и pACC!
 hot_news: >
-  1. <a href='https://vwcoding.ru/MQB/headDeviceFunctions'>SWAP коды и параметрия для ГУ CM и DM (F5 блок)</a><br>
-  2. <a href='https://vwcoding.ru/MQB/headDeviceFunctions'>SWAP коды и параметрия для ГУ PRO (F5 блок)</a><br>
+  1. <a href='https://vwcoding.ru/MQB/pACC'>SWaP для ACC и pACC!</a><br>
+  2. <a href='https://vwcoding.ru/MQB/headDeviceFunctions'>SWAP коды и параметрия для ГУ CM и DM (F5 блок)</a><br>
+  3. <a href='https://vwcoding.ru/MQB/headDeviceFunctionsPro'>SWAP коды и параметрия для ГУ PRO (F5 блок)</a><br>
 # Repository
 repo_name: Kanaduchi/vwcoding
 repo_url: https://github.com/Kanaduchi/vwcoding
@@ -123,6 +124,7 @@ nav:
   - Платформа MQB:
       - Информация: MQB/main.md
       - Ассистенты водителя:
+          - Активация ACC и pACC (SWAP): MQB/pACC.md
           - Описание и кодировки: MQB/assistants.md
           - Прошивки для камеры ассистентов: MQB/camAssistFirmwares.md
       - Системы активной безопасности: MQB/active_systems.md
