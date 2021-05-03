@@ -1,3 +1,4 @@
+disqus: https-mqb-readthedocs-io
 # Активация ACC и pACC (SWAP)
 
 !!! warning ""
