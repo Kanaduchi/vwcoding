@@ -115,7 +115,7 @@ D = Delphi Краткая версия модуля
   
 Если все настроено правильно, вы можете сказать по логину QNX Neutrino, что он работает.  
 
-Для входа в Delphi Units требуется только пользователь «root».
+Для входа в Delphi Units Login:root. Пароль не нужен. Нажимайте энтер..
 ![Screenshot](../images/MQB/MIBII/12.jpg)
   
 Как только появится приветствие, можно будет вводить команды.  
@@ -230,6 +230,18 @@ cd / && mount -uw /sdc1/
 ```
 
 2. Запускаем скрипт [(MST2_patch.sh)](../firmwares/MST2_patch.sh)  
+Иногда срипты не выполняются, и выдает ошибку.. тогда в ручную...
+```
+cd / && mount -uw /sdc1/
+umount -f /extbin
+mkdir /home/mmc0t177_tmp
+mount -t qnx6 /dev/mmc0t177 /home/mmc0t177_tmp
+cp -VRf /sdc1/SWaP /home/mmc0t177_tmp/apps/bin/
+chmod 777 /home/mmc0t177_tmp/apps/bin/SWaP
+umount -f /home/mmc0t177_tmp
+rm -R /home/mmc0t177_tmp
+```
+
 ```
 cd / && /sdc1/MST2_patch.sh
 ```
