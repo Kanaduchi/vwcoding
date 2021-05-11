@@ -230,17 +230,6 @@ cd / && mount -uw /sdc1/
 ```
 
 2. Запускаем скрипт [(MST2_patch.sh)](../firmwares/MST2_patch.sh)  
-Иногда срипты не выполняются, и выдает ошибку.. тогда в ручную...
-```
-cd / && mount -uw /sdc1/
-umount -f /extbin
-mkdir /home/mmc0t177_tmp
-mount -t qnx6 /dev/mmc0t177 /home/mmc0t177_tmp
-cp -VRf /sdc1/SWaP /home/mmc0t177_tmp/apps/bin/
-chmod 777 /home/mmc0t177_tmp/apps/bin/SWaP
-umount -f /home/mmc0t177_tmp
-rm -R /home/mmc0t177_tmp
-```
 
 ```
 cd / && /sdc1/MST2_patch.sh
@@ -254,6 +243,17 @@ SWaP patch — ok
 cp: Copying /sdc1/SWaP to /home/mmc0t177_tmp/apps/bin/SWaP
 100.00% (xxx/xxx kbytes, xxxx kb/s)
 FINISHED — You can now remove SD Card
+```
+Иногда скрипт не выполняется, и выдает ошибку.. тогда в ручную...
+```
+cd / && mount -uw /sdc1/
+umount -f /extbin
+mkdir /home/mmc0t177_tmp
+mount -t qnx6 /dev/mmc0t177 /home/mmc0t177_tmp
+cp -VRf /sdc1/SWaP /home/mmc0t177_tmp/apps/bin/
+chmod 777 /home/mmc0t177_tmp/apps/bin/SWaP
+umount -f /home/mmc0t177_tmp
+rm -R /home/mmc0t177_tmp
 ```
 
 4. Перезагружаем магнитолу долгим нажатием на кнопку включения — ОБЯЗАТЕЛЬНО!!!!  
