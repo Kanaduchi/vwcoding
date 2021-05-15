@@ -5,12 +5,13 @@ site_author: Andrey Topchiy
 site_url: http://www.vwcoding.ru
 
 # Hot news
-hot_news_date: 03.05.2021
+hot_news_date: 14.05.2021
 hot_news_title: SWaP для ACC и pACC!
 hot_news: >
-  1. <a href='https://vwcoding.ru/MQB/pACC'>SWaP для ACC и pACC!</a><br>
-  2. <a href='https://vwcoding.ru/MQB/headDeviceFunctions'>SWAP коды и параметрия для ГУ CM и DM (F5 блок)</a><br>
-  3. <a href='https://vwcoding.ru/MQB/headDeviceFunctionsPro'>SWAP коды и параметрия для ГУ PRO (F5 блок)</a><br>
+  1. <a href='https://vwcoding.ru/MQB/pACC'>SWaP для ACC и pACC</a><br>
+  2. <a href='https://vwcoding.ru/MQB/headDeviceTMC'>Активация TMC</a><br>
+  3. <a href='https://vwcoding.ru/MQB/headDeviceFunctions'>SWAP коды и параметрия для ГУ CM и DM (F5 блок)</a><br>
+  4. <a href='https://vwcoding.ru/MQB/headDeviceFunctionsPro'>SWAP коды и параметрия для ГУ PRO (F5 блок)</a><br>
 # Repository
 repo_name: Kanaduchi/vwcoding
 repo_url: https://github.com/Kanaduchi/vwcoding
@@ -145,6 +146,7 @@ nav:
       - Приборная панель: MQB/AID.md
       - Головное устройство:
         - Общие кодировки: MQB/headDevice.md
+        - Активация TMC: MQB/headDeviceTMC.md
         - SWAP коды для CM и DM: MQB/headDeviceFunctions.md
         - Снятие защиты и SWAP для Pro: MQB/headDeviceFunctionsPro.md
       - Шины:
