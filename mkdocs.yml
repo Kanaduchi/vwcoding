@@ -66,6 +66,7 @@ plugins:
         - ru
   - pdf-export:
       enabled_if_env: ENABLE_PDF_EXPORT
+  - print-site
 
 markdown_extensions:
   - admonition
