@@ -118,9 +118,10 @@ pACC (Predictive ACC) — это адаптивный круиз-контрол�
 Настройка блока адаптивного круиз-контроля
 ```
 Блок 13 → Кодирование
-> Automatic_driveaway_by_pretrigger → activated
-> Automatic_driveaway_after_short_stop → activated
-> Driveaway_by_triggerleaver → activated
+> Automatic_driveaway_by_pretrigger → activated  
+> Automatic_driveaway_after_short_stop → activated  
+> Driveaway_by_triggerleaver → activated  
+> Pretriggertime_reduction → deactivated (увеличение времени ожидания при остановке до 10 секунд)  
 > FPK_functions → installed
 → Применить (с перезагрузкой блока)
 ```
