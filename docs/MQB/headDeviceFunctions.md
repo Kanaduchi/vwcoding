@@ -1,5 +1,5 @@
 disqus: https-mqb-readthedocs-io
-# SWAP коды и параметрии для Composition Media и Discover Media
+# SWaP коды и параметрии для Composition Media и Discover Media
 
 !!! warning 
     ВСЕ, ЧТО ВЫ БУДЕТЕ ДЕЛАТЬ — ВЫ БУДЕТЕ ДЕЛАТЬ ТОЛЬКО ПОД СВОЮ ОТВЕТСТВЕННОСТЬ! ЕСЛИ НЕТ УВЕРЕННОСТИ — НЕ НАЧИНАЙТЕ!
@@ -13,7 +13,7 @@ disqus: https-mqb-readthedocs-io
 или https://aliexpress.ru/item/32969701309.html?spm=a2g0s.9042311.0.0.3b9d33edZKppDb&sku_id=12000018080745527   
 работает без танцев с бубном, так сказать из посылки или другое устройство с чипом ASIX 88772
 2. Прошивка магнитолы  
-3. SWAP магнитолы
+3. SWaP магнитолы
 
 ### Информация о ГУ
 
@@ -144,7 +144,7 @@ umount - размонтировать путь монтирования
 Для удобства 3 скрипта (для запуска их необходимо поместить на корень флешки)  
 1. Бэкап [(MST2_backup.sh)](../firmwares/MST2_backup.sh)  
 2. Патч FEC кодов [(MST2_fec.sh)](../firmwares/MST2_fec.sh)  
-3. Патч SWAP [(MST2_patch.sh)](../firmwares/MST2_patch.sh)  
+3. Патч SWaP [(MST2_patch.sh)](../firmwares/MST2_patch.sh)  
    
 ### Резервная копия MIBII
 
@@ -209,18 +209,18 @@ FINISHED — You can now remove SD Card
     fsc15 = "00070200" # SDS for Nav  
     fsc16 = "00070400" # Digital Voice Enhancement  
 
-### Активация SWAP кодов 
+### Активация SWaP кодов 
 
-SWAP файлы. Данные коды содержат в себе все существующие SWAP коды для ГУ  
+SWaP файлы. Данные коды содержат в себе все существующие SWaP коды для ГУ  
 
 | Тип     | Ссылка |
 |---------|------------------|
-| STD2    | [(SWAP)](../firmwares/SWAP/SWaP.zip) |
-| PQ STD2 | [(SWAP)](../firmwares/SWAP/STD2/SWaP.zip) |
-| NAV     | [(SWAP)](../firmwares/SWAP/Nav/SWaP.zip) |
-| PLUS    | [(SWAP)](../firmwares/SWAP/Plus/SWaP.zip) |
+| STD2    | [(SWaP)](../firmwares/SWAP/SWaP.zip) |
+| PQ STD2 | [(SWaP)](../firmwares/SWAP/STD2/SWaP.zip) |
+| NAV     | [(SWaP)](../firmwares/SWAP/Nav/SWaP.zip) |
+| PLUS    | [(SWaP)](../firmwares/SWAP/Plus/SWaP.zip) |
 
-Для загрузки SWAP кода необходимо взять нужный файл, а так же созданный на предыдущем шаге FEC файл и загрузить в корень флешки.
+Для загрузки SWaP кода необходимо взять нужный файл, а так же созданный на предыдущем шаге FEC файл и загрузить в корень флешки.
 
 Вставьте SD-карту в слот 1 и выполните следующие команды через Putty:
 
@@ -278,7 +278,7 @@ FINISHED — You can now remove SD Card
 8. Перезагружаем магнитолу долгим нажатием на кнопку включения — ОБЯЗАТЕЛЬНО!!!!  
 
 !!! note ""
-    Если по каким либо причинам не получилось, значит Вам не подошел SWAP файл, пробуйте другой SWAP
+    Если по каким либо причинам не получилось, значит Вам не подошел SWaP файл, пробуйте другой SWaP
 
 !!! warning ""
     Может случиться так, что файлы FEC все еще находятся в буфере в устройстве и все еще доступны после перезагрузки.  
