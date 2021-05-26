@@ -10,8 +10,8 @@ hot_news_title: SWaP для ACC и pACC!
 hot_news: >
   1. <a href='https://vwcoding.ru/MQB/pACC'>SWaP для ACC и pACC</a><br>
   2. <a href='https://vwcoding.ru/MQB/headDeviceTMC'>Активация TMC</a><br>
-  3. <a href='https://vwcoding.ru/MQB/headDeviceFunctions'>SWAP коды и параметрия для ГУ CM и DM (F5 блок)</a><br>
-  4. <a href='https://vwcoding.ru/MQB/headDeviceFunctionsPro'>SWAP коды и параметрия для ГУ PRO (F5 блок)</a><br>
+  3. <a href='https://vwcoding.ru/MQB/headDeviceFunctions'>SWaP коды и параметрия для ГУ CM и DM (F5 блок)</a><br>
+  4. <a href='https://vwcoding.ru/MQB/headDeviceFunctionsPro'>SWaP коды и параметрия для ГУ PRO (F5 блок)</a><br>
 # Repository
 repo_name: Kanaduchi/vwcoding
 repo_url: https://github.com/Kanaduchi/vwcoding
@@ -127,7 +127,7 @@ nav:
   - Платформа MQB:
       - Информация: MQB/main.md
       - Ассистенты водителя:
-          - Активация ACC и pACC (SWAP): MQB/pACC.md
+          - Активация ACC и pACC (SWaP): MQB/pACC.md
           - Описание и кодировки: MQB/assistants.md
           - Прошивки для камеры ассистентов: MQB/camAssistFirmwares.md
       - Системы активной безопасности: MQB/active_systems.md
@@ -149,8 +149,8 @@ nav:
       - Головное устройство:
         - Общие кодировки: MQB/headDevice.md
         - Активация TMC: MQB/headDeviceTMC.md
-        - SWAP коды для CM и DM: MQB/headDeviceFunctions.md
-        - Снятие защиты и SWAP для Pro: MQB/headDeviceFunctionsPro.md
+        - SWaP коды для CM и DM: MQB/headDeviceFunctions.md
+        - Снятие защиты и SWaP для Pro: MQB/headDeviceFunctionsPro.md
       - Шины:
           - Общие кодировки: MQB/tires.md
           - Генератор параметрии: MQB/tiresCoding.md

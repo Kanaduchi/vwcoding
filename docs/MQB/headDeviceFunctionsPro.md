@@ -1,5 +1,5 @@
 disqus: https-mqb-readthedocs-io
-# Снятие Component Protection и SWAP коды для Discover Pro
+# Снятие Component Protection и SWaP коды для Discover Pro
 
 !!! warning 
     ВСЕ, ЧТО ВЫ БУДЕТЕ ДЕЛАТЬ — ВЫ БУДЕТЕ ДЕЛАТЬ ТОЛЬКО ПОД СВОЮ ОТВЕТСТВЕННОСТЬ! ЕСЛИ НЕТ УВЕРЕННОСТИ — НЕ НАЧИНАЙТЕ!  

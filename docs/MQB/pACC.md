@@ -1,10 +1,10 @@
 disqus: https-mqb-readthedocs-io
-# Активация ACC и pACC (SWAP)
+# Активация ACC и pACC (SWaP)
 
 !!! warning ""
     Все действия вы делаете на свой страх и риск! Мы не несем ответственность за испорченное оборудование.
   
-Архив с генератором SWAP, прошивками и параметриями можно скачать [тут](../firmwares/accGenerator.zip)  
+Архив с генератором SWaP, прошивками и параметриями можно скачать [тут](../firmwares/accGenerator.zip)  
 
 pACC (Predictive ACC) — это адаптивный круиз-контроль, который может автоматически устанавливать скорость движения с помощью картографических данных (прогнозируемых данных, PSD) и распознаваемых дорожных знаков.  
 
@@ -12,15 +12,15 @@ pACC (Predictive ACC) — это адаптивный круиз-контрол�
     10009001	MRR-Paket 1: ACClow (Basis-ACC) + FrontAssist inkl. CityANB  
     10009002	MRR-Paket 2: ACClow (ACC FTS) + FrontAssist inkl. CityANB   
     10009003	MRR-Paket 3: ACClow (ACC S&G) + FrontAssist inkl. CityANB   
-    10009004	MRR-Paket 4: FrontAssist inkl. CityANB (ohne ACC)   
-    10009005	MRR-Paket 5: CityANB (ohne ACC)   
+    10009004	MRR-Paket 4: FrontAssist inkl. CityANB (без ACC)   
+    10009005	MRR-Paket 5: CityANB (без ACC)   
     10009006	MRR-Paket 6: ACChigh (Basis-ACC) + FrontAssist inkl. CityANB   
     10009007	MRR-Paket 7: ACChigh (ACC FTS) + FrontAssist inkl. CityANB    
     10009008	MRR-Paket 8: ACChigh (ACC S&G) + FrontAssist inkl. CityANB   
     10009101	ACC-Funktionserweiterungs-Paket "predictiveACC"   
-    10009102	ACC-Funktionserweiterungs-Paket "StauAssistent"   
-    10009103	ACC-Funktionserweiterungs-Paket "predictiveACC&StauAssistent"   
-    10009201	AWV-Auspraegung "AWV1,2 - Warnung nur visuell&auditiv"   
+    10009102	ACC-Funktionserweiterungs-Paket "StauAssistent" (Ассистент пробок)  
+    10009103	ACC-Funktionserweiterungs-Paket "predictiveACC & StauAssistent"   
+    10009201	AWV-Auspraegung "AWV1,2 - Warnung nur visuell & auditiv" (предупреждение только визуальное и слуховое)    
     10009202	AWV-Auspraegung "AWV1,2"   
     10009203	AWV-Auspraegung "AWV1,2,3"   
     10009204	AWV-Auspraegung "AWV1,2,3, vFGS   
@@ -29,17 +29,17 @@ pACC (Predictive ACC) — это адаптивный круиз-контрол�
     10009301	AWV-Funktionserweiterungs-Paket "EmergencyAssist"   
     10009302	AWV-Funktionserweiterungs-Paket "Abbiegeassistent"   
     10009303	AWV-Funktionserweiterungs-Paket "AWV-Gegenverkehr"   
-    10009304	AWV-Funktionserweiterungs-Paket "Abbiegeassistent&AWV-Gegenverkehr"   
-    10009305	AWV-Funktionserweiterungs-Paket "EmergencyAssist&AWV-Gegenverkehr"   
-    10009306	AWV-Funktionserweiterungs-Paket "EmergencyAssist&Abbiegeassistent"   
-    10009307	AWV-Funktionserweiterungs-Paket "EmergencyAssist&Abbiegeassistent&AWV-Gegenverkehr"   
+    10009304	AWV-Funktionserweiterungs-Paket "Abbiegeassistent & AWV-Gegenverkehr"   
+    10009305	AWV-Funktionserweiterungs-Paket "EmergencyAssist & AWV-Gegenverkehr"   
+    10009306	AWV-Funktionserweiterungs-Paket "EmergencyAssist & Abbiegeassistent"   
+    10009307	AWV-Funktionserweiterungs-Paket "EmergencyAssist & Abbiegeassistent & AWV-Gegenverkehr"   
     10009500	Verkehrszeichenerkennung (VZE)  
     10009600	Vorrausschauender Fussgaengerschutz (VFS) - FCWP    
   
     FGS = Fußgängerschutz (Pedestrian Protection)  
     RFS = Radfahrer-Schutz (Bicycle Protection)  
 
-### Структура SWAP кода
+### Структура SWaP кода
 
 ![Screenshot](../images/MQB/swap_info.jpeg)  
 
@@ -61,7 +61,10 @@ pACC (Predictive ACC) — это адаптивный круиз-контрол�
 Номер детали АО: 2Q0907572B  
 ```
 
-### Прошивка и генерация SWAP кода
+### Прошивка и генерация SWaP кода
+
+!!! warning ""
+    Для прошивки необходим ODIS Engineering 12 версии. Более ранние версии могут выдавать ошибку при прошивке - "Не распознаны варианты"  
 
 1. Принудительно на радаре активировать защиту компонентов через ODIS Online  
 
@@ -74,25 +77,37 @@ pACC (Predictive ACC) — это адаптивный круиз-контрол�
 
 3. Снять защиту компонентов через ODIS Online  
 
-4. Для генерирования SWaP кодов понадобится VCRN (Vehicle Component Registration Number).  
-Данный код можно вытянуть из измеряемых величин 13 блока через ODIS E (measurement function) или OBD11 (control unit -> Live Data -> Individualization characteristic)  
+4. Для генерирования SWaP кодов понадобится VCRN (Vehicle Component Registration Number). Данный код можно вытянуть из измеряемых величин 13 блока:  
+```
+003 — Измеряемые величины → индивидуализирующий признак (VCRN) 
+``` 
    
 5. Выбор нужных FEC кодов  
-Они зависят от того, зависит от того какие свапы поддерживает сам радар. Данные коды можно найти в измеряемых величинах:  
+Они зависят от того, зависит от того какие свапы поддерживает сам радар.  
+```
+003 — Измеряемые величины → Список всех функций SWaP
+```
    
 ![Screenshot](../images/MQB/swap_avail.jpeg)     
 
-Например, радар 3qf907561d поддерживает: 10009008 10009100 10009204 10009300  
+Например, радар 3qf907561d поддерживает: 10009000 10009100 10009200 10009300
 ```
-10009008 - ACC High 210 & stop and go & fts  
-10009204 - front assist  
-10009100 - pre acc  
-10009300
+10009008 — ACC High 210 & stop and go & fts  
+10009205 — front assist  
+10009103 — pre acc  
+10009307
 ```
 
-6. С помощью утилиты afcg.exe сгенерировать SWAP код. Для генерации кода понадобится ввести: VIN, VCRN (из 3 шага) и набор FEC кодов через пробел     
+6. С помощью утилиты afcg.exe сгенерировать SWaP код. Для генерации кода понадобится ввести: VIN, VCRN (из 3 шага) и набор FEC кодов через пробел     
 
-7. Полученный SWAP код необходимо ввести в адаптации 13 блока (Передача кода разблокировки функции SWAP)  
+7. Полученный SWaP код необходимо ввести в адаптации 13 блока (Передача кода разблокировки функции SWaP):  
+```
+> 009 — Диагностический сеанс → Режим при сходе с конвейера (EOL)  
+> 008 — Право доступа → код 20103  
+> 007 — Адаптации - Передача кода разблокировки функции SWaP → Ввод сгенерированного кода в поле "Ввод данных"  
+> 005 — Базовая установка UDS → Разблокировка функции SWaP  
+> 003 — Измеряемые величины → Статус всех функций SWaP
+```
    
 8. Установка обычной прошивки, не X в соответствии с таблицей   
 
