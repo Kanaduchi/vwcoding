@@ -5,9 +5,10 @@ site_author: Andrey Topchiy
 site_url: http://www.vwcoding.ru
 
 # Hot news
-hot_news_date: 25.05.2021
-hot_news_title: SWaP для ACC и pACC!
+hot_news_date: 28.05.2021
+hot_news_title: SWaP, TMC, динамические поворотники
 hot_news: >
+  1. <a href='https://vwcoding.ru/MQB/rearLights'>Задних динамические поворотники для Tiguan 2021 с фарами IQ Light</a>
   1. <a href='https://vwcoding.ru/MQB/pACC'>SWaP для ACC и pACC</a><br>
   2. <a href='https://vwcoding.ru/MQB/headDeviceTMC'>Активация TMC</a><br>
   3. <a href='https://vwcoding.ru/MQB/headDeviceFunctions'>SWaP коды и параметрия для ГУ CM и DM (F5 блок)</a><br>
