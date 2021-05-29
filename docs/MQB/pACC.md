@@ -8,7 +8,7 @@ disqus: https-mqb-readthedocs-io
 
 pACC (Predictive ACC) — это адаптивный круиз-контроль, который может автоматически устанавливать скорость движения с помощью картографических данных (прогнозируемых данных, PSD) и распознаваемых дорожных знаков.  
 
-??? tip "Функциональные FEC коды"
+??? tip "Функциональные FEC коды для 2Q0/3QF/5Q0/5QF радаров"
     10009001	MRR-Paket 1: ACClow (Basis-ACC) + FrontAssist inkl. CityANB  
     10009002	MRR-Paket 2: ACClow (ACC FTS) + FrontAssist inkl. CityANB   
     10009003	MRR-Paket 3: ACClow (ACC S&G) + FrontAssist inkl. CityANB   
@@ -24,7 +24,7 @@ pACC (Predictive ACC) — это адаптивный круиз-контрол�
     10009202	AWV-Auspraegung "AWV1,2"   
     10009203	AWV-Auspraegung "AWV1,2,3"   
     10009204	AWV-Auspraegung "AWV1,2,3, vFGS   
-    10009205	AWV-Auspraegung „AWV1,2,3, vFGS, vRFS“  
+    10009205	AWV-Auspraegung "AWV1,2,3, vFGS, vRFS“  
     10009300	AWV-Funktionserweiterungs-Paket "Elektronische Parkbremse"  
     10009301	AWV-Funktionserweiterungs-Paket "EmergencyAssist"   
     10009302	AWV-Funktionserweiterungs-Paket "Abbiegeassistent"   
@@ -38,6 +38,39 @@ pACC (Predictive ACC) — это адаптивный круиз-контрол�
   
     FGS = Fußgängerschutz (Pedestrian Protection)  
     RFS = Radfahrer-Schutz (Bicycle Protection)  
+
+??? tip "Функциональные FEC коды для 3Q0 радаров"
+    10003100	MRR-Paket 1: ACClow (Basis-ACC) + FrontAssist inkl. CityANB  
+    10003200	MRR-Paket 2: ACClow (ACC FTS) + FrontAssist inkl. CityANB  
+    10003300	MRR-Paket 3: ACClow (ACC S&G) + FrontAssist inkl. CityANB  
+    10003400	MRR-Paket 4: FrontAssist inkl. CityANB (ohne ACC)  
+    10003500	MRR-Paket 5: CityANB (ohne ACC)  
+    10003600	MRR-Paket 6: ACChigh (Basis-ACC) + FrontAssist inkl. CityANB  
+    10003700	MRR-Paket 7: ACChigh (ACC FTS) + FrontAssist inkl. CityANB  
+    10003800	MRR-Paket 8: ACChigh (ACC S&G) + FrontAssist inkl. CityANB  
+    10003900	MRR-Paket 9: ACChigh konservativ (Basis-ACC) + FrontAssist inkl. CityANB  
+    10003A00	MRR-Paket 10: ACChigh konservativ (ACC FTS) + FrontAssist inkl. CityANB  
+    10003B00	MRR-Paket 11: ACChigh konservativ (ACC S&G) + FrontAssist inkl. CityANB  
+    10004000	zFAS AreaView3  
+    10004100	zFAS Bildverarbeitung AV3/IPA  
+    10004200	zFAS Anhaenger-Rangier-Assistent  
+    10004300	zFAS Aktionsgenerierung Warnen  
+    10004600	zFAS AWC Ladeplattenerkennung  
+    10005000	Personalisierung  
+    10006100	ACC-Funktionserweiterungs-Paket "predictiveACC"  
+    10006200	ACC-Funktionserweiterungs-Paket "StauAssistent"  
+    10006300	ACC-Funktionserweiterungs-Paket "predictiveACC&StauAssistent"  
+    10007100	AWV-Auspraegung "AWV1,2 – Warnung nur visuell&auditiv"  
+    10007200	AWV-Auspraegung "AWV1,2"  
+    10007300	AWV-Auspraegung "AWV1,2,3"  
+    10007400	AWV-Auspraegung "AWV1,2,3, vFGS  
+    10008100	AWV-Funktionserweiterungs-Paket "EmergencyAssist"  
+    10008200	AWV-Funktionserweiterungs-Paket "Abbiegeassistent"  
+    10008300	AWV-Funktionserweiterungs-Paket "AWV-Gegenverkehr"  
+    10008400	AWV-Funktionserweiterungs-Paket "Abbiegeassistent&AWV-Gegenverkehr"  
+    10008500	AWV-Funktionserweiterungs-Paket "EmergencyAssist&AWV-Gegenverkehr"  
+    10008600	AWV-Funktionserweiterungs-Paket "EmergencyAssist&Abbiegeassistent"  
+    10008700	AWV-Funktionserweiterungs-Paket "EmergencyAssist&Abbiegeassistent&AWV-Gegenverkehr"  
 
 ### Структура SWaP кода
 
@@ -83,7 +116,7 @@ pACC (Predictive ACC) — это адаптивный круиз-контрол�
 ``` 
    
 5. Выбор нужных FEC кодов  
-Они зависят от того, зависит от того какие свапы поддерживает сам радар.  
+Максимально - 4 штуки. Они зависят от того, зависит от того какие свапы поддерживает сам радар.  
 ```
 003 — Измеряемые величины → Список всех функций SWaP
 ```
@@ -91,8 +124,8 @@ pACC (Predictive ACC) — это адаптивный круиз-контрол�
 Например, радар 3qf907561d поддерживает: 10009000 10009100 10009200 10009300  
 ```
 10009008 — ACC High 210 & stop and go & fts  
-10009205 — front assist  
-10009103 — pre acc  
+10009204 — front assist  
+10009101 — pre acc  
 10009307
 ```
 
@@ -123,6 +156,17 @@ pACC (Predictive ACC) — это адаптивный круиз-контрол�
 ```
 Блок 03 → Кодирование
 > Байт 24 — Бит 3 → вкл. 
+→ Применить (с перезагрузкой блока)
+```
+Сохранение номеров выбранных FEC кодов  
+В FSID группы необходимо по порядку прописать последние цифры выбранных FEC кодов (1 — 90, 2 — 91, 3 — 92, 4 — 93)  
+Например, выбраны FEC коды: 10009008, 10009101, 10009204, 10009307  
+```
+Блок 13 → Кодирование
+> SWaP_FSID_group_1: 8
+> SWaP_FSID_group_2: 1
+> SWaP_FSID_group_3: 4
+> SWaP_FSID_group_4: 7
 → Применить (с перезагрузкой блока)
 ```
 Настройка блока адаптивного круиз-контроля
