@@ -1,5 +1,5 @@
 disqus: https-mqb-readthedocs-io
-# Активация ассистентов
+# Кодирование камеры ассистентов
 
 ### Описание 
 
@@ -318,7 +318,7 @@ HCA - Указание блоку рулевого управления о на�
 >> Personalized_key: Version_1.x
 >> Networking_variant: MQB
 >> Radar_interface: Coded
->> Perso_HC: Last_setting
+>> Perso_HC: Last_setting //Запоминание выбранного режима при выключении зажигания
 >> Point_of_intervention: early_setting_over_menu
 >> LaneAssist_AGW_output: disabled
 >> Lane_assist_off_text: disabled

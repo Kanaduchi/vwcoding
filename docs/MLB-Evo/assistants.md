@@ -119,3 +119,11 @@ Corresponding value adjust default: 00100111
 > central_locking_system_emergency_assist → active
 → Применить 
 ```
+
+### Отображение ассистентов на проекции на лобовое стекло
+```
+Блок 82 → Кодирование
+> Road sign detection: not available → available (отображение дорожных знаков)
+> Lane Departure Warning: not available → available (отображение Lane Assist)
+→ Применить 
+```

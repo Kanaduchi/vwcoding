@@ -14,6 +14,40 @@ ODIS E: 006: 0017 → [LN]_refuel_volume: yes
 
 > логин-пароль 20103
 
+### Отключение звукового и визуального предупреждения, если при заведенном автомобиле ключ оказался вне салона
+```   
+Блок 17 → Кодирование  
+> Leaving_warning → no
+→ Применить (с перезагрузкой блока)
+```
+
+### Добавление промежуточных шкал на спидометр
+```   
+Блок 17 → Кодирование  
+> Tachometer_erweiterte_Skalenteilung → yes
+→ Применить (с перезагрузкой блока)
+```
+
+### Отображение замера ускорения
+```   
+Блок 17 → Адаптации  
+> Displayable_content_configuration
+>> Drag_indicator: no_display → readout
+→ Применить
+```
+
+### Отображение на проекционном дисплее
+```
+Блок 82 → Кодирование
+> Navigation System: not available → available (Отображение указаний навигационной системы)
+> Laptimer_activated: not available → available (Отображение запущенного таймера круга)
+> clock: not available → available (Отображение текущего времени)
+> Telephone: not available → available (Отображение входящего звонка)
+> speedlimiter: not available → available (Отображение включенного лимитера)
+> predictive_efficiency_assistant: not available → available (Отображение указаний эко-ассистента)
+→ Применить
+```
+
 ### Тест стрелок
 
 ```

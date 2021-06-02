@@ -1,14 +1,14 @@
 # Project information
 site_name: Кодирование автомобилей VAG
-site_description: Основные кодировки и адаптации платформ концерна VAG. Прошивки и параметрии
+site_description: Основные кодировки и адаптации платформ концерна VAG. Прошивки и параметрии. SWaP коды
 site_author: Andrey Topchiy
 site_url: http://www.vwcoding.ru
 
 # Hot news
-hot_news_date: 28.05.2021
+hot_news_date: 02.06.2021
 hot_news_title: SWaP, TMC, динамические поворотники
 hot_news: >
-  1. <a href='https://vwcoding.ru/MQB/rearLights'>Задних динамические поворотники для Tiguan 2021 с фарами IQ Light</a><br>
+  1. <a href='https://vwcoding.ru/MQB/rearLights'>Задние динамические поворотники для Tiguan 2021 с фарами IQ Light</a><br>
   1. <a href='https://vwcoding.ru/MQB/pACC'>SWaP для ACC и pACC</a><br>
   2. <a href='https://vwcoding.ru/MQB/headDeviceTMC'>Активация TMC</a><br>
   3. <a href='https://vwcoding.ru/MQB/headDeviceFunctions'>SWaP коды и параметрия для ГУ CM и DM (F5 блок)</a><br>
@@ -69,6 +69,7 @@ plugins:
       enabled_if_env: ENABLE_PDF_EXPORT
   - print-site:
       add_to_navigation: false
+      enumerate_headings: true
 
 markdown_extensions:
   - admonition
@@ -128,15 +129,16 @@ nav:
   - Платформа MQB:
       - Информация: MQB/main.md
       - Ассистенты водителя:
-          - Активация ACC и pACC (SWaP): MQB/pACC.md
-          - Описание и кодировки: MQB/assistants.md
-          - Прошивки для камеры ассистентов: MQB/camAssistFirmwares.md
+          - SWaP для ACC и pACC: MQB/pACC.md
+          - Кодирование ACC: MQB/ACC_coding.md
+          - Кодирование камеры ассистентов: MQB/assistants.md
+          - Прошивки камеры ассистентов: MQB/camAssistFirmwares.md
       - Системы активной безопасности: MQB/active_systems.md
       - Движение и управление: MQB/drive.md
       - Парковка и маневрирование: MQB/parking.md
       - Эстетическая подсветка:
-          - Общие настройки: MQB/esteticLights.md
-          - Кодирование: MQB/esteticLightsCoding.md
+          - Кодирование подсветки: MQB/esteticLights.md
+          - Кодирование зон освещения: MQB/esteticLightsCoding.md
           - Установка RGB подсветки: MQB/esteticLightsCodingRGB.md
       - Зеркала и стеклоочистители: MQB/wash.md
       - Отпирание и запирание: MQB/security.md
@@ -148,12 +150,12 @@ nav:
       - Климат: MQB/climate.md
       - Приборная панель: MQB/AID.md
       - Головное устройство:
-        - Общие кодировки: MQB/headDevice.md
+        - Кодирование: MQB/headDevice.md
         - Активация TMC: MQB/headDeviceTMC.md
         - SWaP коды для CM и DM: MQB/headDeviceFunctions.md
         - Снятие защиты и SWaP для Pro: MQB/headDeviceFunctionsPro.md
       - Шины:
-          - Общие кодировки: MQB/tires.md
+          - Кодирование: MQB/tires.md
           - Генератор параметрии: MQB/tiresCoding.md
       - Дооснащение: MQB/addons.md
   - Платформа MLB-Evo:
@@ -178,7 +180,7 @@ nav:
       - Климат / Обогрев зеркал и стекол: PQ26/climate.md
       - Двери, стекла, цз, брелок и штатная сигнализация: PQ26/security.md
       - Панель приборов:
-          - Общие кодировки: PQ26/instrPanel.md
+          - Кодирование: PQ26/instrPanel.md
           - Кривые подсветки панели приборов: PQ26/instrPanelCoding.md
       - Тормоза и шины: PQ26/brakes.md
       - Динамика и управление: PQ26/drive.md
@@ -192,7 +194,7 @@ nav:
       - Мультимедиа: PQ35/multimedia.md
       - Комфорт: PQ35/comfort.md
       - Прочие функции: PQ35/other.md
-      - Кодировки Tiguan 1st Gen:
+      - Кодирование Tiguan 1st Gen:
           - Управление и динамика: PQ35/Tiguan/drive.md
           - Комфорт: PQ35/Tiguan/comfort.md
           - Свет: PQ35/Tiguan/lights.md
