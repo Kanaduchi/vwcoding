@@ -80,3 +80,14 @@ byte_16_Bluetooth_Headphones: off
 ```
 
 > логин-пароль 20103 
+
+### Отключение экрана выбора пользователя
+```
+Блок 5F - адаптации
+> menu_IAA_PSO_over_threshold_high: activated → not_activated
+> menu_IAA_PSO_clamp_15_off: activated → not_activated
+> menu_IAA_PSO: activated → not_activated
+→ Применить
+```
+
+> логин-пароль 20103 
