@@ -36,6 +36,8 @@ ODIS E: 006: 0017 → [LN]_refuel_volume: yes
 → Применить
 ```
 
+![Screenshot](../images/MLB/drag_info.jpeg) 
+
 ### Отображение на проекционном дисплее
 ```
 Блок 82 → Кодирование
