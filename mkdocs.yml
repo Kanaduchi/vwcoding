@@ -129,9 +129,9 @@ nav:
   - Платформа MQB:
       - Информация: MQB/main.md
       - Ассистенты водителя:
-          - SWaP для ACC и pACC: MQB/pACC.md
+          - Активация ACC и pACC: MQB/pACC.md
           - Кодирование ACC: MQB/ACC_coding.md
-          - Кодирование камеры ассистентов: MQB/assistants.md
+          - Кодирование 3Q0/3QD* камеры: MQB/assistants.md
           - Прошивки камеры ассистентов: MQB/camAssistFirmwares.md
       - Системы активной безопасности: MQB/active_systems.md
       - Движение и управление: MQB/drive.md
