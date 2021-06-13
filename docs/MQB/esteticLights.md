@@ -20,8 +20,8 @@ disqus: https-mqb-readthedocs-io
 ```
 Блок В7 Kessy Безопасный доступ → Адаптация 
 > DeveloperCoding Search lights
->> ZAT_illumination_concept_mybeat_clamp58xt: [VN]_activated
->> ZAT_illumination_modus_mybeat_clamp58xt: [VN]_activated
+>> ZAT_illumination_concept_mybeat_clamp58xt: activated
+>> ZAT_illumination_modus_mybeat_clamp58xt: activated
 → Применить
 ```
 

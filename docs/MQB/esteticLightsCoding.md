@@ -203,9 +203,9 @@ p_helligkeit_Fzg_geschlossen_schluessel_ab_
 ```
 Блок 09 → Адаптация
 > Освещение салона, параметры / Interior_light_parameter
->> p_t_verzoegerung_einstieg_fussraum:	    0,0 [UN]_s
->> p_t_verzoegerung_einstieg_tueren:	    0.8 [UN]_s
->> p_t_verzoegerung_einstieg_innenlicht:    1,6 [UN]_s
+>> p_t_verzoegerung_einstieg_fussraum:	    0,0 s
+>> p_t_verzoegerung_einstieg_tueren:	    0.8 s
+>> p_t_verzoegerung_einstieg_innenlicht:    1,6 s
 → Применить
 ```
 
@@ -214,8 +214,8 @@ p_helligkeit_Fzg_geschlossen_schluessel_ab_
 ```
 Блок 09 → Адаптация
 > Освещение салона, параметры / Interior_light_parameter
->> p_t_verzoegerung_ausstieg_fussraum:	    1,6 [UN]_s
->> p_t_verzoegerung_ausstieg_tueren:	    0.8 [UN]_s
->> p_t_verzoegerung_ausstieg_innenlicht:    0,0 [UN]_s
+>> p_t_verzoegerung_ausstieg_fussraum:	    1,6 s
+>> p_t_verzoegerung_ausstieg_tueren:	    0.8 s
+>> p_t_verzoegerung_ausstieg_innenlicht:    0,0 s
 → Применить
 ```

@@ -121,6 +121,7 @@ Corresponding value adjust default: 00100111
 ```
 
 ### Отображение ассистентов на проекции на лобовое стекло
+:octicons-verified-24: Audi
 ```
 Блок 82 → Кодирование
 > Road sign detection: not available → available (отображение дорожных знаков)

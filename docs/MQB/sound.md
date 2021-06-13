@@ -10,8 +10,8 @@ disqus: https-mqb-readthedocs-io
 === "Кодирование в ODIS"   
     ```
     Блок 5F → Кодирование
-    > [LO]_byte_11_Sound_System
-    Выбираем [VO]_Sound_System_no_Allocation или [VO]_Sound_System_Internal 
+    > byte_11_Sound_System
+    Выбираем Sound_System_no_Allocation или Sound_System_Internal 
     → Применить (с перезагрузкой блока)
     ```
 
@@ -19,7 +19,7 @@ disqus: https-mqb-readthedocs-io
     ```
     5F - MMI / RNS  
     Кодирование - 07 → Длинное кодирование  
-    Байт 11 → Выбираем [VO]_Sound_System_no_Allocation или [VO]_Sound_System_Internal либо  
+    Байт 11 → Выбираем Sound_System_no_Allocation или Sound_System_Internal либо  
     заменить 01 бит на 04 бит  
     Выход  
     Сохранить  

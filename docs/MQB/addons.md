@@ -10,8 +10,8 @@
 5. Проводка  
 
 Схема подключения:  
-1 пин камера А5 (R242) ---> 6 пин радара АСС (J428)  
-7 пин камера А5 (R242) ---> 5 пин радара АСС (J428)  
+1 пин камера А5 (R242) --→ 6 пин радара АСС (J428)  
+7 пин камера А5 (R242) --→ 5 пин радара АСС (J428)  
 6 пин — "+"  
 5 пин — "-"  
 2 пин — Can extended low - 8 пин в разъеме зеркала  
@@ -33,168 +33,168 @@
 ```
 ```
 Блок 08 → Адаптация
-> Detection_time_tap:
->> par_Detection_time_tap: 600 [UN]_ms
-> Detection_time_hold:
->> par_Detection_time_hold: 600 [UN]_ms
-> Off_time_neighbor_key_during_sliding:
->> par_Off_time_neighbor_key_during_sliding: 400 [UN]_ms
-> Sensitivity_touch:
+> Detection_time_tap
+>> par_Detection_time_tap: 600 ms
+> Detection_time_hold
+>> par_Detection_time_hold: 600 ms
+> Off_time_neighbor_key_during_sliding
+>> par_Off_time_neighbor_key_during_sliding: 400 ms
+> Sensitivity_touch
 >> par_Sensitivity_touch: 0
-> Steps_temp_slider:
->> par_Steps_temp_slider: [VN]_8
-> Step_size_temp_slider:
+> Steps_temp_slider
+>> par_Steps_temp_slider: 8
+> Step_size_temp_slider
 >> par_Step_size_temp_slider: > 0.5°C
-> 22_degree_jump_temp_slider:
->> par_22_degree_jump_temp_slider: [VN]_not_active
-> Flick_function_temp_slider:
->> par_Flick_function_temp_slider: [VN]_not_active
-> Profile_selection_touch:
+> 22_degree_jump_temp_slider
+>> par_22_degree_jump_temp_slider: not_active
+> Flick_function_temp_slider
+>> par_Flick_function_temp_slider: not_active
+> Profile_selection_touch
 >> par_Profile_selection_touch: 0
-> dimming_characteristic_new_1:
+> dimming_characteristic_new_1
 >> X1: 0
->> Y1: 16 [UN]_0
+>> Y1: 16
 >> X2: 10
->> Y2: 16 [UN]_0
+>> Y2: 16
 >> X3: 50
->> Y3: 60 [UN]_0
+>> Y3: 60
 >> X4: 100
->> Y4: 125 [UN]_0
+>> Y4: 125
 >> X5: 150
->> Y5: 500 [UN]_0
+>> Y5: 500
 >> X6: 253
->> Y6: 1,000 [UN]_0
-> dimming_characteristic_new_2:
+>> Y6: 1,000
+> dimming_characteristic_new_2
 >> X1: 0
->> Y1: 0 [UN]_0
+>> Y1: 0
 >> X2: 10
->> Y2: 100 [UN]_0
+>> Y2: 100
 >> X3: 25
->> Y3: 250 [UN]_0
+>> Y3: 250
 >> X4: 50
->> Y4: 500 [UN]_0
+>> Y4: 500
 >> X5: 75
->> Y5: 750 [UN]_0
+>> Y5: 750
 >> X6: 100
->> Y6: 1,000 [UN]_0
-> dimming_characteristic_new_3:
+>> Y6: 1,000
+> dimming_characteristic_new_3
 >> X1: 0
->> Y1: 6 [UN]_0
+>> Y1: 6
 >> X2: 10
->> Y2: 6 [UN]_0
+>> Y2: 6
 >> X3: 50
->> Y3: 12 [UN]_0
+>> Y3: 12
 >> X4: 100
->> Y4: 25 [UN]_0
+>> Y4: 25
 >> X5: 150
->> Y5: 100 [UN]_0
+>> Y5: 100
 >> X6: 253
->> Y6: 300 [UN]_0
-> dimming_characteristic_new_4:
+>> Y6: 300
+> dimming_characteristic_new_4
 >> X1: 0
->> Y1: 20 [UN]_0
+>> Y1: 20
 >> X2: 10
->> Y2: 20 [UN]_0
+>> Y2: 20
 >> X3: 50
->> Y3: 60 [UN]_0
+>> Y3: 60
 >> X4: 100
->> Y4: 120 [UN]_0
+>> Y4: 120
 >> X5: 150
->> Y5: 800 [UN]_0
+>> Y5: 800
 >> X6: 253
->> Y6: 1,000 [UN]_0
-> dimming_characteristic_new_5:
+>> Y6: 1,000
+> dimming_characteristic_new_5
 >> X1: 0
->> Y1: 10 [UN]_0
+>> Y1: 10
 >> X2: 10
->> Y2: 10 [UN]_0
+>> Y2: 10
 >> X3: 50
->> Y3: 50 [UN]_0
+>> Y3: 50
 >> X4: 100
->> Y4: 100 [UN]_0
+>> Y4: 100
 >> X5: 150
->> Y5: 1,000 [UN]_0
+>> Y5: 1,000
 >> X6: 253
->> Y6: 1,000 [UN]_0
-> dimming_characteristic_new_6:
+>> Y6: 1,000
+> dimming_characteristic_new_6
 >> X1: 0
->> Y1: 4 [UN]_0
+>> Y1: 4
 >> X2: 10
->> Y2: 4 [UN]_0
+>> Y2: 4
 >> X3: 50
->> Y3: 15 [UN]_0
+>> Y3: 15
 >> X4: 100
->> Y4: 30 [UN]_0
+>> Y4: 30
 >> X5: 150
->> Y5: 600 [UN]_0
+>> Y5: 600
 >> X6: 253
->> Y6: 1,000 [UN]_0
-> dimming_characteristic_new_7:
+>> Y6: 1,000
+> dimming_characteristic_new_7
 >> X1: 0
->> Y1: 20 [UN]_0
+>> Y1: 20
 >> X2: 10
->> Y2: 20 [UN]_0
+>> Y2: 20
 >> X3: 50
->> Y3: 50 [UN]_0
+>> Y3: 50
 >> X4: 100
->> Y4: 100 [UN]_0
+>> Y4: 100
 >> X5: 150
->> Y5: 800 [UN]_0
+>> Y5: 800
 >> X6: 253
->> Y6: 1,000 [UN]_0
-> dimming_characteristic_new_8:
+>> Y6: 1,000
+> dimming_characteristic_new_8
 >> X1: 0
->> Y1: 8 [UN]_0
+>> Y1: 8 
 >> X2: 10
->> Y2: 8 [UN]_0
+>> Y2: 8 
 >> X3: 50
->> Y3: 20 [UN]_0
+>> Y3: 20 
 >> X4: 100
->> Y4: 25 [UN]_0
+>> Y4: 25 
 >> X5: 150
->> Y5: 600 [UN]_0
+>> Y5: 600 
 >> X6: 253
->> Y6: 1,000 [UN]_0
-> dimming_characteristic_new_9:
+>> Y6: 1,000 
+> dimming_characteristic_new_9
 >> X1: 0
->> Y1: 14 [UN]_0
+>> Y1: 14 
 >> X2: 10
->> Y2: 14 [UN]_0
+>> Y2: 14 
 >> X3: 50
->> Y3: 32 [UN]_0
+>> Y3: 32 
 >> X4: 100
->> Y4: 41 [UN]_0
+>> Y4: 41 
 >> X5: 150
->> Y5: 800 [UN]_0
+>> Y5: 800 
 >> X6: 253
->> Y6: 1,000 [UN]_0
-> dimming_characteristic_new_10:
+>> Y6: 1,000 
+> dimming_characteristic_new_10
 >> X1: 0
->> Y1: 10 [UN]_0
+>> Y1: 10 
 >> X2: 10
->> Y2: 10 [UN]_0
+>> Y2: 10 
 >> X3: 50
->> Y3: 25 [UN]_0
+>> Y3: 25 
 >> X4: 100
->> Y4: 50 [UN]_0
+>> Y4: 50 
 >> X5: 150
->> Y5: 800 [UN]_0
+>> Y5: 800 
 >> X6: 253
->> Y6: 1,000 [UN]_0
-> damping_dimming_characteristic_01:
->> PWM_Daempfung_Aufdimmen: 0.2 [UN]_s
->> PWM_Daempfung_Abdimmen: 0.1 [UN]_s
-> damping_dimming_characteristic_02:
->> PWM_Daempfung_Aufdimmen: 0.2 [UN]_s
->> PWM_Daempfung_Abdimmen: 0.1 [UN]_s
-> damping_dimming_characteristic_03:
->> PWM_Daempfung_Aufdimmen: 0.2 [UN]_s
->> PWM_Daempfung_Abdimmen: 0.1 [UN]_s
-> damping_dimming_characteristic_04:
->> PWM_Daempfung_Aufdimmen: 0.2 [UN]_s
->> PWM_Daempfung_Abdimmen: 0.1 [UN]_s
-> Sun_sensor_supplier_differentiation:
->> par_Sun_sensor_supplier_differentiation: [VN]_none
+>> Y6: 1,000 
+> damping_dimming_characteristic_01
+>> PWM_Daempfung_Aufdimmen: 0.2 s
+>> PWM_Daempfung_Abdimmen: 0.1 s
+> damping_dimming_characteristic_02
+>> PWM_Daempfung_Aufdimmen: 0.2 s
+>> PWM_Daempfung_Abdimmen: 0.1 s
+> damping_dimming_characteristic_03
+>> PWM_Daempfung_Aufdimmen: 0.2 s
+>> PWM_Daempfung_Abdimmen: 0.1 s
+> damping_dimming_characteristic_04
+>> PWM_Daempfung_Aufdimmen: 0.2 s
+>> PWM_Daempfung_Abdimmen: 0.1 s
+> Sun_sensor_supplier_differentiation
+>> par_Sun_sensor_supplier_differentiation: none
 → Применить
 ```
 

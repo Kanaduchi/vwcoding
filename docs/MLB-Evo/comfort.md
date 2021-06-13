@@ -94,3 +94,11 @@ disqus: https-mqb-readthedocs-io
 > Байт 0 бит 3 → включить 
 → Применить (с перезагрузкой блока)
 ```
+
+### Открытие (сдвиг, вместо приподнимания) люка при удержании кнопки на брелке
+:octicons-verified-24: Audi
+```
+Блок CA → адаптация
+> Control_unit_for_sun_roof_convenience_functions
+>> Convenience_opening_target_attitude: Tilting_position → sliding
+```

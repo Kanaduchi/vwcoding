@@ -164,8 +164,8 @@ disqus: https-mqb-readthedocs-io
 ```
 Блок 09 → Адаптация
 > Обогрев стекла
-— Heckscheibenheizung Zeitwert: с «320 с» на «640 с»
-— Abschalttemperatur fuer Heckscheibenheizung: с «35.0 °C» на «38.0 °C»
+>> Heckscheibenheizung Zeitwert: с «320 с» на «640 с»
+>> Abschalttemperatur fuer Heckscheibenheizung: с «35.0 °C» на «38.0 °C»
 → Применить
 ```
 
@@ -173,8 +173,8 @@ disqus: https-mqb-readthedocs-io
 ```
 Блок 09 → Адаптация
 > Обогрев стекла
-— Frontscheibenheizung Zeitwert: «320 с» на «640 с»
-— Abschalttemperatur fuer Frontscheibenheizung: «35.0 °C» на «38.0 °C»
+>> Frontscheibenheizung Zeitwert: «320 с» на «640 с»
+>> Abschalttemperatur fuer Frontscheibenheizung: «35.0 °C» на «38.0 °C»
 → Применить
 ```
 
@@ -195,8 +195,8 @@ disqus: https-mqb-readthedocs-io
 === "Кодирование в ODIS"
     ```
     Блок 08 → кодирование
-    > [LN]_filtering_interior_air
-    выбираем [VN]_installed
+    > filtering_interior_air  
+    выбираем installed
     → Применить (с перезагрузкой блока)
     ```  
     
@@ -209,3 +209,22 @@ disqus: https-mqb-readthedocs-io
     Сохранить  
     ```  
     
+### Автоматическое закрытие люка при дожде
+:octicons-verified-24: VW Atlas
+
+```
+Блок 09 → Адаптация
+> Access control 2
+>> RegenschlieRen → permanently
+>> RegenschlieRen → активировать
+→ Применить
+```
+
+```
+Блок 09 → Кодирование
+>> подблок RLНS:
+> 00 Байт → 1 бит 2 бит → включить
+→ Применить
+```
+
+> логин-пароль 31347

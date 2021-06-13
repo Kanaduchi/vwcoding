@@ -31,6 +31,6 @@ disqus: https-mqb-readthedocs-io
 ```
 Блок 08 → Адаптация
 > Auxiliary heating run on time:
->> Auxiliary_heating_run_on_time: 10 [UN]_min
+>> Auxiliary_heating_run_on_time: 10 min
 → Применить
 ```
