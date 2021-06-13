@@ -24,11 +24,11 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 Пример для VW Tiguan:   
 ```
 Блок 5F → Кодирование
-> [LO]_byte_0_brand → _VW
-> [LO]_byte_1_Car_Class → 3
-> [LO]_byte_1_Car_Generation → 7
-> [LO]_byte_2_Car_Derivate → 6
-> [LO]_byte_2_Car_Derivate_Supplement → 0
+> byte_0_brand → _VW
+> byte_1_Car_Class → 3
+> byte_1_Car_Generation → 7
+> byte_2_Car_Derivate → 6
+> byte_2_Car_Derivate_Supplement → 0
 → Применить 
 ```
 
@@ -37,16 +37,16 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 ```
 Блок 5F → Адаптация
 > function_configuration_phone:
->> Support_second_phone: [VO]_none -> меняем
->> Support_for_response_and_hold: [VN]_off -> on
->> Dtmf_without_active_call: [VN]_off -> on
->> _user_menu_three_way_calling: [VN]_not_installed -> installed
+>> Support_second_phone: none → меняем
+>> Support_for_response_and_hold: off → on
+>> Dtmf_without_active_call: off → on
+>> _user_menu_three_way_calling: not_installed → installed
 → Применить 
 ```
 
 ```
 Блок 17 → Кодирование  
-> telephone2_BAP - no -> yes
+> telephone2_BAP - no → yes
 → Применить
 ```
 
@@ -63,7 +63,7 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 ```
 Блок 5F → Адаптация
 > Adjustment_fm_tuner_mono_stereo
->> l_hf_stereo_lower_threshold → 20 [UN]_dBµV (было 37 [UN]_dBµV)
+>> l_hf_stereo_lower_threshold → 20 dBµV (было 37 dBµV)
 → Применить 
 ```
 
@@ -74,12 +74,12 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 === "Кодирование в ODIS"
     ```
     Блок 5F → Кодирование
-    > [LO]_byte_14_AM_disable
+    > byte_14_AM_disable
     выбираем «Вкл»
     → Применить (с перезагрузкой блока)
     ```
     ```
-    ODIS E: 5F → кодирование → [LO]_byte_14_AM_disable: ативировать
+    ODIS E: 5F → кодирование → byte_14_AM_disable: ативировать
     ```
 
 === "Кодирование в VCDS"
@@ -123,7 +123,7 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 === "Кодирование в ODIS"
 	```
 	Блок 5F → Кодирование
-    > [LO]_byte_17_Skinning
+    > byte_17_Skinning
     Старое значение: Skin_1
     Новое значение: Skin_5
     → Применить (с перезагрузкой блока)
@@ -145,11 +145,11 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 ```
 Блок 5F → Адаптация
 > nhtsa_properties:
->> nhtsa_limitation_switches_for_carplay_no_softKeyboard: [VN]_activated -> _not_activated (CarPlay, возможность вызова клавиатуры в движении)
->> nhtsa_limitation_switches_for_androidauto_limit_displayed_message_length: [VN]_activated -> _not_activated (AA,отключение ограничения длины выводимого сообщения в движении)
->> nhtsa_limitation_switches_for_androidauto_no_setup_configuration: [VN]_activated -> _not_activated (AA, возможность заходить в настройки в движении)
->> nhtsa_limitation_switches_for_androidauto_no_text_input: [VN]_activated -> _not_activated (AA, отключение запрета ввода текста в движении)
->> nhtsa_limitation_switches_for_androidauto_no_video_playback: [VN]_activated -> _not_activated (АА, возможность проигрывать видео в движении)
+>> nhtsa_limitation_switches_for_carplay_no_softKeyboard: activated → _not_activated (CarPlay, возможность вызова клавиатуры в движении)
+>> nhtsa_limitation_switches_for_androidauto_limit_displayed_message_length: activated → _not_activated (AA,отключение ограничения длины выводимого сообщения в движении)
+>> nhtsa_limitation_switches_for_androidauto_no_setup_configuration: activated → _not_activated (AA, возможность заходить в настройки в движении)
+>> nhtsa_limitation_switches_for_androidauto_no_text_input: activated → _not_activated (AA, отключение запрета ввода текста в движении)
+>> nhtsa_limitation_switches_for_androidauto_no_video_playback: activated → _not_activated (АА, возможность проигрывать видео в движении)
 → Применить 
 ```
 
@@ -157,9 +157,7 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 [(Параметрия под ODIS)](../firmwares/5F_3Q0035864C_V03935274HX_VIM_MIM.xml)
     
 ### Меню в магнитоле для настройки приборной панели
-
-!!! tip ""
-    Проверено для Skoda Octavia  
+:octicons-verified-24: Skoda Octavia  
 
 ```
 Блок 5F → Адаптация
@@ -263,22 +261,22 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 ```
 Блок 5F → Адаптация
 > Navigation_GNSS_Receiver_Setting:
->> default_hw_reception: [VN]_not_activated
->> gps: [VN]_not_activated (было activated)
->> galileo: [VN]_not_activated
->> glonass: [VN]_not_activated
->> compass: [VN]_not_activated
->> external_gps_1: [VN]_activated (было not_activated)
->> external_gps_2: [VN]_not_activated
+>> default_hw_reception: not_activated
+>> gps: not_activated (было activated)
+>> galileo: not_activated
+>> glonass: not_activated
+>> compass: not_activated
+>> external_gps_1: activated (было not_activated)
+>> external_gps_2: not_activated
 → Применить
 ```
 
 ```
 Блок 75 → Адаптация
-> GPS: [VO]_internal_GPS_output_on_CAN
-> Navigation_Type: [VO]_Type_2
+> GPS: internal_GPS_output_on_CAN
+> Navigation_Type: Type_2
 >> Gnss_data_rate:
-> Data Rate: 5 [UN]_Hz (было 1)
+> Data Rate: 5 Hz (было 1)
 → Применить
 ```
 

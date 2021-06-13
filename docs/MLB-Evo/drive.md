@@ -1,4 +1,11 @@
+disqus: https-mqb-readthedocs-io
 # Движение и управление
+
+### Отключение запрета на обгон справа при активном круиз-контроле
+```
+Блок 03 → Кодирование
+> Overtaking_right_prevention: activated → deactivated
+```
 
 ### Уменьшение рывка при трогании с autohold'a
 ```

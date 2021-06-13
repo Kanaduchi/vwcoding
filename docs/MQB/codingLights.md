@@ -227,10 +227,10 @@ Lichtfunktion A, B, C, D, E, F, G, H — функции лампы в борто
 
 Например, 
 ```
-[LO]_Lichtfunktion C 6:	[VO]_nicht aktiv  
-[LO]_Lichtfunktion D 6:	[VO]_nicht aktiv  
-[LO]_Dimmwert CD 6:	0  
-[LO]_Dimming Direction CD 6: [VO]_maximize  
+> Lichtfunktion C 6:	nicht aktiv  
+> Lichtfunktion D 6:	nicht aktiv  
+> Dimmwert CD 6:	0  
+> Dimming Direction CD 6: maximize  
 ```
 
 Это означает, что для функций освещения C и D можно установить только одно направление изменения яркости и только одно значение изменения яркости.  

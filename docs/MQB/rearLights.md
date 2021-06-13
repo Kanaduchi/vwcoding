@@ -79,19 +79,19 @@ disqus: https-mqb-readthedocs-io
 Блок 09 → Адаптация
 > Leuchte23SL HLC10 (левый фонарь)
 >> Lichtfunktion D 23 → (Dauerfahrlicht) Daytime running lights (было nicht aktiv)
->> Dimmwert CD 23: 0 -> 127
+>> Dimmwert CD 23: 0 → 127
     
 > Leuchte24SL HRA65 (правый фонарь)
 >> Lichtfunktion D 24 → (Dauerfahrlicht) Daytime running lights (было nicht aktiv)
->> Dimmwert CD 23: 0 -> 127
+>> Dimmwert CD 23: 0 → 127
 
 > Leuchte16BLK SLB35BLK SL KC9 (левый фонарь на крыле)
 >> Lichtfunktion D 16 → (Dauerfahrlicht) Daytime running lights (было nicht aktiv)
->> Dimmwert CD 16: 0 -> 127
+>> Dimmwert CD 16: 0 → 127
     
 > Leuchte17TFL R BLK SRB3TFL R BLK SR KC3 (левый фонарь на крыле)
 >> Lichtfunktion C 17 → (Dauerfahrlicht) Daytime running lights (было nicht aktiv)
->> Dimmwert CD 17: 0 -> 127
+>> Dimmwert CD 17: 0 → 127
 → Применить
 ```
 

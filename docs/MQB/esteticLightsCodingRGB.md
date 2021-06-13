@@ -481,7 +481,7 @@ SC8 – предохранитель
 >> pa_lichtfunktion_gruppe_13 → Дверь
 >> pa_korrekturfaktor_gruppe_13 → 1
 
->> pa_verbauinfo_gruppe_14 → [VO]_3_not_defined
+>> pa_verbauinfo_gruppe_14 → 3_not_defined
 >> pa_lichtfunktion_gruppe_14 → Пространство для ног
 >> pa_korrekturfaktor_gruppe_14 → 1.2
 

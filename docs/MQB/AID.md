@@ -18,7 +18,7 @@ disqus: https-mqb-readthedocs-io
     → Применить (с перезагрузкой блока)
     ```
     ```
-    ODIS E: 006: 0017 → [LN]_scenering → yes
+    ODIS E: 006: 0017 → scenering → yes
     ```
 
 === "Кодирование в OBD11"

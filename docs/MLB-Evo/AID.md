@@ -9,7 +9,7 @@ disqus: https-mqb-readthedocs-io
 → Применить (с перезагрузкой блока)
 ```
 ```
-ODIS E: 006: 0017 → [LN]_refuel_volume: yes
+ODIS E: 006: 0017 → refuel_volume: yes
 ```
 
 > логин-пароль 20103
@@ -22,6 +22,7 @@ ODIS E: 006: 0017 → [LN]_refuel_volume: yes
 ```
 
 ### Добавление промежуточных шкал на спидометр
+:octicons-verified-24: Audi
 ```   
 Блок 17 → Кодирование  
 > Tachometer_erweiterte_Skalenteilung → yes
@@ -29,6 +30,7 @@ ODIS E: 006: 0017 → [LN]_refuel_volume: yes
 ```
 
 ### Отображение замера ускорения
+:octicons-verified-24: Audi
 ```   
 Блок 17 → Адаптации  
 > Displayable_content_configuration
@@ -38,7 +40,21 @@ ODIS E: 006: 0017 → [LN]_refuel_volume: yes
 
 ![Screenshot](../images/MLB/drag_info.jpeg) 
 
+### Настройка отображения текущей передачи (в обычном режиме, в S или в обоих)
+:octicons-verified-24: Audi
+```
+Блок 02 → Кодирование
+> Block 3 - Functions: → выбираем необходимое
+```
+или
+```
+Блок 02 → Адаптации  
+> Activate_gear_information_display
+>> Activate_gear_information_display: → выбираем необходимое
+```
+
 ### Отображение на проекционном дисплее
+:octicons-verified-24: Audi
 ```
 Блок 82 → Кодирование
 > Navigation System: not available → available (Отображение указаний навигационной системы)
@@ -58,13 +74,13 @@ ODIS E: 006: 0017 → [LN]_refuel_volume: yes
 → Применить (с перезагрузкой блока)
 ```
 ```
-ODIS E: 006: 0017 → [LN]_scenering → yes
+ODIS E: 006: 0017 → scenering → yes
 ```
 	
 > логин-пароль 20103
 
 ### Рекомендация переключения на более высокую передачу (при езде на "ручном" режиме)
-
+:octicons-verified-24: Audi
 ```
 Блок 17 → Адаптация 
 > Upshift_indicator_in_the_centre_display: no_display меняем на display
