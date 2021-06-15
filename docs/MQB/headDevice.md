@@ -138,9 +138,8 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
     Сохранить  
     ```
 
-### Воспроизведение видео в движении через MirrorLink
-
-Для Discover PRO
+### Видео в движении, Работа MirrorLink в движении
+:octicons-verified-24: Discover PRO
 
 ```
 Блок 5F → Адаптация
@@ -254,9 +253,7 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 > логин-пароль 31347
 
 ### Использование глонасс антенны для навигации и компаса
-
-!!! warning ""
-    Только для Discover Pro / Discover Media
+:octicons-verified-24: Discover Pro · :octicons-verified-24: Discover Media
     
 ```
 Блок 5F → Адаптация
