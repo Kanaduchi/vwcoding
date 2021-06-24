@@ -25,6 +25,14 @@ Sign Assist — Ассистент распознавания дорожных �
 
 ## Активации ассистентов
 
+### Матричные фары IQ Light
+
+```
+Блок A5 (камера ассистентов) → Кодирование 
+>> AFS_coding_Light_Assist: Matrixbeam
+→ Применить 
+```
+
 ### Активация кнопки вызова ассистентов (для 5Q0 953 502 AJ / Valeo 408 876)
 
 ```
@@ -154,6 +162,8 @@ Lane Assist с адаптивным ведением по полосе — ис�
 > Menuesteuerung Fernlichtassistent: not available → available
 → Применить 
 ```
+
+> логин-пароль 31347
 
 Включаем отображение Line Assist и дорожных знаков на приборной панели
 
@@ -336,7 +346,7 @@ HCA - Указание блоку рулевого управления о на�
 >> FLA_Additional_High_Beam: no_Additional_High_Beam
 >> FLA_Headinglight_type: LED
 >> Mains_frequency: 50_Hz
->> AFS_coding_Light_Assist: Dynamic_Light_Assist
+>> AFS_coding_Light_Assist: Dynamic_Light_Assist (или Matrixbeam для Tiguan 2021)
 >> HC_LONGPRESS: Not_Coded (only for Audi)
 → Применить 
 ```
