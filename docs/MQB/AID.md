@@ -251,7 +251,7 @@ disqus: https-mqb-readthedocs-io
 
 ### Смена скина приборной панели
 
-Вариант 1 - Стандартная схема
+Вариант 1 - Стандартная схема  
 ![Screenshot](../images/MQB/AID-themes/StandartTheme.jpg)
 ```
 Блок 17 → Адаптация  
@@ -259,7 +259,7 @@ disqus: https-mqb-readthedocs-io
 → Применить
 ```
 
-Вариант 2 - Стандартная схема c большим количеством точек
+Вариант 2 - Стандартная схема c большим количеством точек  
 ![Screenshot](../images/MQB/AID-themes/StandartThemeMoreDots.jpg)
 ```
 Блок 17 → Адаптация  
@@ -267,7 +267,7 @@ disqus: https-mqb-readthedocs-io
 → Применить
 ```
 
-Вариант 3 - Alltrack тема
+Вариант 3 - Alltrack тема  
 ![Screenshot](../images/MQB/AID-themes/AllTrackTheme.jpg)
 ```
 Блок 17 → Адаптация  
@@ -275,7 +275,7 @@ disqus: https-mqb-readthedocs-io
 → Применить
 ```
 
-Вариант 4 - GTI / GTD тема
+Вариант 4 - GTI / GTD тема  
 ![Screenshot](../images/MQB/AID-themes/GTITheme.jpg)
 ```
 Блок 17 → Адаптация  
@@ -283,7 +283,7 @@ disqus: https-mqb-readthedocs-io
 → Применить
 ```
 
-Вариант 5 - R-line тема
+Вариант 5 - R-line тема  
 ![Screenshot](../images/MQB/AID-themes/RTheme.jpg)
 ```
 Блок 17 → Адаптация  
@@ -294,7 +294,7 @@ disqus: https-mqb-readthedocs-io
 → Применить
 ```
 
-Вариант 6 - R-line тема со логотипом R-line внизу приборной панели
+Вариант 6 - R-line тема со логотипом R-line внизу приборной панели  
 ![Screenshot](../images/MQB/AID-themes/RThemeWithLogo.jpg)
 ```
 Блок 17 → Адаптация  
