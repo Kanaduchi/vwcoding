@@ -72,69 +72,12 @@ HCA - Указание блоку рулевого управления о на�
 
 Конфигурация камеры ассистентов
 ```
-Блок A5 (камера ассистентов) → Адаптация 
-> Lan_assist_system_mode (Состояние включение ассистента движение по полосе) - Selection_over_menu  
-> Lane_assist_warning_intensity (Интенсивность предупреждений ассистента движения по полосе) - Selection_over_menu 
-> Personalization of lane dept. warning Cl. 15 on (Персонализация момента вмешательство при вкл клеммы 15) - Last Setting (последняя настройка)
-→ Применить 
-```
-
-```
 Блок A5 (камера ассистентов) → Кодирование 
 > Byte 08 > Bit 5-7 - Point_of_intervention: A0 late, setting over menu
 > Byte 09 > Bit 0-1 - Configuration_for_lane_departure_warning_Kl15: 03 Last_setting
 > Byte 09 > Bit 7 - HC: 1 coded
 > Byte 09 > Bit 2-3 - Lane_assist_system_mode: 0C Selection_over_menu
-> Byte ? - HC advanced takeover request: coded
+> Byte 09 > Bit 4-5 - HC advanced takeover request: coded
 > Byte 17 > Bit 0 - HC messages: 1 coded
-> Byte 17 > Bit 1-3 - HC Warn Intensity: 02 Setting over Menu
-> Byte 17 > Bit 5-7 - HC Variant: 20 Variant 1
 → Применить 
-```
-
-> логин-пароль 20103
-
-### Полное кодирование камеры
-
-0002019801684028B0DF10001030008001210000000000000000000000000000  
-
-```
-[LO]_Brand: [VO]_Skoda
-[LO]_Country_variant: [VO]_RDW
-[LO]_Windshield: [VO]_Climate_glass
-[LO]_Traffic_side: [VO]_Right_traffic
-[LO]_PSD_Version: [VO]_PSD_15
-[LO]_Navigation: [VO]_Not_coded
-[LO]_Klr: [VO]_Not_coded
-[LO]_Rain_light_sensor: [VO]_Coded
-[LO]_AAG: [VO]_Not_coded
-[LO]_SWA: [VO]_Coded
-[LO]_ACC: [VO]_Coded
-[LO]_Blind_spot_detection: [VO]_Not_coded
-[LO]_Main_unit: [VO]_Enabled
-[LO]_PLA: [VO]_Not_coded
-[LO]_Personalized_key: [VO]_Version_1.x
-[LO]_Networking_variant: [VO]_MQB_CAN
-[LO]_Radar_interface: [VO]_Coded
-[LO]_Point_of_intervention: [VO]_late_setting_over_menu
-[LO]_Configuration_for_lane_departure_warning_Kl15: [VO]_last_setting
-[LO]_Lane_assist_system_mode: [VO]_Selection_over_menu
-[LO]_HC_advanced_takeover_request: [VO]_Coded
-[LO]_HC_mob_line: [VO]_Coded
-[LO]_HC: [VO]_Coded
-[LO]_aLDW: [VO]_not_coded
-[LO]_Lane_assist_off_text: [VO]_disabled
-[LO]_Emergency_Assist: [VO]_EA_Variant_1
-[LO]_Radar_Support_Function: [VO]_Not_coded
-[LO]_Personalized_VZE: [VO]_not_coded
-[LO]_VZE: [VO]_coded
-[LO]_FLA_Additional_High_Beam: [VO]_no_Additional_High_Beam
-[LO]_FLA_Headinglight_type: [VO]_LED_with_variable_light_distribution
-[LO]_AFS_headlamp_coding_word: 0
-[LO]_AFS_coding_Light_Assist: [VO]_Matrixbeam
-[LO]_High_Beam_Assist_behavior: [VO]_Variante_2
-[LO]_Hc_messages: [VO]_Coded
-[LO]_HC_Warn_Intensity: [VO]_No_Setting
-[LO]_Hc_variante: [VO]_Variante_1
-[LO]_Rem_data_transfer: [VO]_Inactive
 ```
