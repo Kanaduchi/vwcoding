@@ -5,14 +5,10 @@ site_author: Andrey Topchiy
 site_url: http://www.vwcoding.ru
 
 # Hot news
-hot_news_date: 13.06.2021
-hot_news_title: SWaP, TMC, динамические поворотники
+hot_news_date: 14.07.2021
+hot_news_title: Кодирование Lane Assist 2Q0* камеры ассистентов
 hot_news: >
-  1. <a href='https://vwcoding.ru/MQB/rearLights'>Задние динамические поворотники для Tiguan 2021 с фарами IQ Light</a><br>
-  1. <a href='https://vwcoding.ru/MQB/pACC'>SWaP для ACC и pACC</a><br>
-  2. <a href='https://vwcoding.ru/MQB/headDeviceTMC'>Активация TMC</a><br>
-  3. <a href='https://vwcoding.ru/MQB/headDeviceFunctions'>SWaP коды и параметрия для ГУ CM и DM (F5 блок)</a><br>
-  4. <a href='https://vwcoding.ru/MQB/headDeviceFunctionsPro'>SWaP коды и параметрия для ГУ PRO (F5 блок)</a><br>
+  1. <a href='https://vwcoding.ru/MQB/2Q0_assistants.md'>Кодирование 2Q0* камеры ассистентов</a><br>
 # Repository
 repo_name: Kanaduchi/vwcoding
 repo_url: https://github.com/Kanaduchi/vwcoding
@@ -30,16 +26,14 @@ theme:
   favicon: assets/icon.png
   palette:
     # Light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
+    - scheme: default
       primary: indigo
       accent: indigo
       toggle:
         icon: material/weather-night
         name: Тёмная сторона
     # Dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
+    - scheme: slate
       primary: indigo
       accent: indigo
       toggle:
@@ -131,7 +125,8 @@ nav:
       - Ассистенты водителя:
           - Активация ACC и pACC: MQB/pACC.md
           - Кодирование ACC: MQB/ACC_coding.md
-          - Кодирование 3Q0/3QD* камеры: MQB/assistants.md
+          - Кодирование 3Q* камеры: MQB/assistants.md
+          - Кодирование 2Q* камеры: MQB/2Q0_assistants.md
           - Прошивки камеры ассистентов: MQB/camAssistFirmwares.md
       - Системы активной безопасности: MQB/active_systems.md
       - Движение и управление: MQB/drive.md

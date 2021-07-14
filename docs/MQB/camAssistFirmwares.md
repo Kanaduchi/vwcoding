@@ -9,9 +9,9 @@ disqus: https-mqb-readthedocs-io
 Для полноценной работы камеры ассистентов нужна правильная прошивка и параметрия к ней.  
 Камеры могут быть 3 вариантов:  
 
-* 5Q0... - MFK1 (Lane Assist, Sign Assist, DLA)  
-* 3Q0/3QD... - MFK2 (Lane Assist, Sign Assist, Traffic Jam Assist, DLA)  
-* 2Q0... - MFK3 (Lane Assist, Sign Assist, Traffic Jam Assist, Pedestrian Assist, DLA)  
+* 5Q0... - MFK 1.0 (Lane Assist, Sign Assist, DLA)  
+* 3Q0/3QD... - MFK 2.0 (Lane Assist, Sign Assist, Traffic Jam Assist, DLA)  
+* 2Q0... - MFK 3.0 (Lane Assist, Sign Assist, Traffic Jam Assist, Pedestrian Assist, DLA)  
 
 ## Прошивки для камер вида MFK3
 
