@@ -1,0 +1,2578 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Основные кодировки и адаптации платформ концерна VAG. Прошивки и параметрии. SWaP коды">
+      
+      
+      
+        <meta name="author" content="Andrey Topchiy">
+      
+      
+        <link rel="canonical" href="http://www.vwcoding.ru/MQB/addons/">
+      
+      <link rel="icon" href="../../assets/icon.png">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.10">
+    
+    
+      
+        <title>Дооснащение - Кодирование автомобилей VAG</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1fe995fd.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../css/print-site.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-material.css">
+    
+      <link rel="stylesheet" href="../../assets/custom.css">
+    
+    
+      
+
+
+    
+    
+
+  <!-- Determine title -->
+  
+  
+    
+  
+
+  <!-- The image needs to have an absolute URL -->
+  
+
+  <!-- Open graph meta tags -->
+  <meta name="yandex-verification" content="45920cc0a6f67ad2" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Кодирование автомобилей VAG - Дооснащение" />
+  <meta property="og:description" content="Основные кодировки и адаптации платформ концерна VAG. Прошивки и параметрии. SWaP коды" />
+  <meta property="og:url" content="http://www.vwcoding.ru/MQB/addons/" />
+  <meta property="og:image" content="http://www.vwcoding.ru//assets/logo.png" />
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-announce">
+          <div class="md-announce__inner md-grid md-typeset">
+            
+  <style>
+
+    /* Preserve link color */
+    .md-announce a,
+    .md-announce a:focus,
+    .md-announce a:hover {
+      color: currentColor;
+    }
+
+    /* Don't wrap name of blog article */
+    .md-announce strong {
+      white-space: nowrap;
+    }
+
+    .md-announce {
+      color: #fafafa;
+      background-color: #4caf50;
+      cursor: pointer;
+    }
+
+    .md-announce:hover,
+    .md-announce:focus {
+      color: #fafafa;
+      background-color: #087f23;
+    }
+
+    /* Twitter icon */
+    .md-announce .twitter {
+      margin-left: .2em;
+      color: #00acee;
+    }
+  </style>
+  <a href="https://vwcoding.ru/main">
+      <span class="twemoji" style="">
+        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M20,4C21.11,4 22,4.89 22,6V18C22,19.11 21.11,20 20,20H4C2.89,20 2,19.11 2,18V6C2,4.89 2.89,4 4,4H20M8.5,15V9H7.25V12.5L4.75,9H3.5V15H4.75V11.5L7.3,15H8.5M13.5,10.26V9H9.5V15H13.5V13.75H11V12.64H13.5V11.38H11V10.26H13.5M20.5,14V9H19.25V13.5H18.13V10H16.88V13.5H15.75V9H14.5V14A1,1 0 0,0 15.5,15H19.5A1,1 0 0,0 20.5,14Z" />
+        </svg>
+      </span>
+    <strong>Кодирование Lane Assist 2Q0* камеры ассистентов</strong>
+  </a>
+
+          </div>
+        </aside>
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Кодирование автомобилей VAG" class="md-header__button md-logo" aria-label="Кодирование автомобилей VAG" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Кодирование автомобилей VAG
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Дооснащение
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Тёмная сторона"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Тёмная сторона" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Светлая сторона"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Светлая сторона" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/Kanaduchi/vwcoding/" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Kanaduchi/vwcoding
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        Общая информация
+      </a>
+    </li>
+  
+
+      
+        
+  
+    
+  
+    
+        
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="../main/" class="md-tabs__link md-tabs__link--active">
+        Платформа MQB
+      </a>
+    </li>
+  
+
+      
+        
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../MLB-Evo/main/" class="md-tabs__link">
+        Платформа MLB-Evo
+      </a>
+    </li>
+  
+
+      
+        
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../PQ26/main/" class="md-tabs__link">
+        Платформа PQ26
+      </a>
+    </li>
+  
+
+      
+        
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../PQ35/main/" class="md-tabs__link">
+        Платформа PQ35
+      </a>
+    </li>
+  
+
+      
+        
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../longCoding/" class="md-tabs__link">
+      Калькулятор длинного кодирования
+    </a>
+  </li>
+
+      
+        
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="https://yoomoney.ru/to/4100110582992748/100" class="md-tabs__link">
+      Поддержать проект
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Кодирование автомобилей VAG" class="md-nav__button md-logo" aria-label="Кодирование автомобилей VAG" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Кодирование автомобилей VAG
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/Kanaduchi/vwcoding/" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Kanaduchi/vwcoding
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" data-md-state="indeterminate" type="checkbox" id="__nav_1" checked>
+      
+      <label class="md-nav__link" for="__nav_1">
+        Общая информация
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Общая информация" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+      
+          Кодирование автомобилей VAG
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../main/" class="md-nav__link">
+      
+          Платформа MQB
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MLB-Evo/main/" class="md-nav__link">
+      
+          Платформа MLB-Evo
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PQ26/main/" class="md-nav__link">
+      
+          Платформа PQ26
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PQ35/main/" class="md-nav__link">
+      
+          Платформа PQ35
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../longCoding/" class="md-nav__link">
+      
+          Калькулятор длинного кодирования
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_7" data-md-state="indeterminate" type="checkbox" id="__nav_1_7" checked>
+      
+      <label class="md-nav__link" for="__nav_1_7">
+        Инструменты и адаптеры
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Инструменты и адаптеры" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_7">
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programs/" class="md-nav__link">
+      
+          Список инструментов
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../odis-e/" class="md-nav__link">
+      
+          Инструкция ODIS E
+      
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../history/" class="md-nav__link">
+      
+          История изменений
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../questions/" class="md-nav__link">
+      
+          Обратная связь
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://yoomoney.ru/to/4100110582992748/100" class="md-nav__link">
+      
+          Поддержать проект
+      
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Платформа MQB
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Платформа MQB" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../main/" class="md-nav__link">
+      
+          Информация
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" data-md-state="indeterminate" type="checkbox" id="__nav_2_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2_2">
+        Ассистенты водителя
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Ассистенты водителя" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pACC/" class="md-nav__link">
+      
+          Активация ACC и pACC
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ACC_coding/" class="md-nav__link">
+      
+          Кодирование ACC
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assistants/" class="md-nav__link">
+      
+          Кодирование 3Q* камеры
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2Q0_assistants/" class="md-nav__link">
+      
+          Кодирование 2Q* камеры
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../camAssistFirmwares/" class="md-nav__link">
+      
+          Прошивки камеры ассистентов
+      
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../active_systems/" class="md-nav__link">
+      
+          Системы активной безопасности
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../drive/" class="md-nav__link">
+      
+          Движение и управление
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parking/" class="md-nav__link">
+      
+          Парковка и маневрирование
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" data-md-state="indeterminate" type="checkbox" id="__nav_2_6" checked>
+      
+      <label class="md-nav__link" for="__nav_2_6">
+        Эстетическая подсветка
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Эстетическая подсветка" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../esteticLights/" class="md-nav__link">
+      
+          Кодирование подсветки
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../esteticLightsCoding/" class="md-nav__link">
+      
+          Кодирование зон освещения
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../esteticLightsCodingRGB/" class="md-nav__link">
+      
+          Установка RGB подсветки
+      
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wash/" class="md-nav__link">
+      
+          Зеркала и стеклоочистители
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security/" class="md-nav__link">
+      
+          Отпирание и запирание
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_9" data-md-state="indeterminate" type="checkbox" id="__nav_2_9" checked>
+      
+      <label class="md-nav__link" for="__nav_2_9">
+        Освещение
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Освещение" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_9">
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../codingLights/" class="md-nav__link">
+      
+          Кодирование фонарей
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../headLights/" class="md-nav__link">
+      
+          Передние фонари
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rearLights/" class="md-nav__link">
+      
+          Задние фонари
+      
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sound/" class="md-nav__link">
+      
+          Звук
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../climate/" class="md-nav__link">
+      
+          Климат
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AID/" class="md-nav__link">
+      
+          Приборная панель
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_13" data-md-state="indeterminate" type="checkbox" id="__nav_2_13" checked>
+      
+      <label class="md-nav__link" for="__nav_2_13">
+        Головное устройство
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Головное устройство" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_13">
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../headDevice/" class="md-nav__link">
+      
+          Кодирование
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../headDeviceTMC/" class="md-nav__link">
+      
+          Активация TMC
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../headDeviceFunctions/" class="md-nav__link">
+      
+          SWaP коды для CM и DM
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../headDeviceFunctionsPro/" class="md-nav__link">
+      
+          Снятие защиты и SWaP для Pro
+      
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_14" data-md-state="indeterminate" type="checkbox" id="__nav_2_14" checked>
+      
+      <label class="md-nav__link" for="__nav_2_14">
+        Шины
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Шины" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_14">
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tires/" class="md-nav__link">
+      
+          Кодирование
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tiresCoding/" class="md-nav__link">
+      
+          Генератор параметрии
+      
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Дооснащение
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+            Дооснащение
+        
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Камера ассистентов
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Сенсорная панель климата
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    Датчик влажности
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynaudio" class="md-nav__link">
+    DYNAUDIO
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pr-ka1-pr-ka2" class="md-nav__link">
+    [PR-KA1] [PR-KA2] Камера заднего вида
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kessy" class="md-nav__link">
+    Задние ручки kessy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#side-assist" class="md-nav__link">
+    Side Assist
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    Автосвет
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Платформа MLB-Evo
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Платформа MLB-Evo" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MLB-Evo/main/" class="md-nav__link">
+      
+          Информация
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MLB-Evo/assistants/" class="md-nav__link">
+      
+          Ассистенты водителя
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MLB-Evo/drive/" class="md-nav__link">
+      
+          Движение и управление
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MLB-Evo/security/" class="md-nav__link">
+      
+          Безопасность. Отпирание и запирание
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MLB-Evo/comfort/" class="md-nav__link">
+      
+          Комфорт
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MLB-Evo/climate/" class="md-nav__link">
+      
+          Климат
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MLB-Evo/lights/" class="md-nav__link">
+      
+          Освещение
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MLB-Evo/AID/" class="md-nav__link">
+      
+          Приборная панель
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MLB-Evo/headDevice/" class="md-nav__link">
+      
+          Головное устройство
+      
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        Платформа PQ26
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Платформа PQ26" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PQ26/main/" class="md-nav__link">
+      
+          Информация
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" data-md-state="indeterminate" type="checkbox" id="__nav_4_2" checked>
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        Освещение
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Освещение" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PQ26/lights/" class="md-nav__link">
+      
+          Управление освещением
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PQ26/extraLights/" class="md-nav__link">
+      
+          Нестандартные световые решения
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PQ26/codingLights/" class="md-nav__link">
+      
+          Обозначения ламп
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PQ26/codingLightsPictures/" class="md-nav__link">
+      
+          Обозначения ламп c картинками
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PQ26/setLED/" class="md-nav__link">
+      
+          Установка светодиодов
+      
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PQ26/wash/" class="md-nav__link">
+      
+          Стеклоочистители / Датчик дождя и света
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PQ26/climate/" class="md-nav__link">
+      
+          Климат / Обогрев зеркал и стекол
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PQ26/security/" class="md-nav__link">
+      
+          Двери, стекла, цз, брелок и штатная сигнализация
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" data-md-state="indeterminate" type="checkbox" id="__nav_4_6" checked>
+      
+      <label class="md-nav__link" for="__nav_4_6">
+        Панель приборов
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Панель приборов" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_6">
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PQ26/instrPanel/" class="md-nav__link">
+      
+          Кодирование
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PQ26/instrPanelCoding/" class="md-nav__link">
+      
+          Кривые подсветки панели приборов
+      
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PQ26/brakes/" class="md-nav__link">
+      
+          Тормоза и шины
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PQ26/drive/" class="md-nav__link">
+      
+          Динамика и управление
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PQ26/multimedia/" class="md-nav__link">
+      
+          Мультимедиа
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PQ26/addons/" class="md-nav__link">
+      
+          Дооснащение
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PQ26/german/" class="md-nav__link">
+      
+          Словарь немецких терминов
+      
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" data-md-state="indeterminate" type="checkbox" id="__nav_5" checked>
+      
+      <label class="md-nav__link" for="__nav_5">
+        Платформа PQ35
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Платформа PQ35" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PQ35/main/" class="md-nav__link">
+      
+          Информация
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PQ35/drive/" class="md-nav__link">
+      
+          Управление и динамика
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PQ35/lights/" class="md-nav__link">
+      
+          Свет
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PQ35/multimedia/" class="md-nav__link">
+      
+          Мультимедиа
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PQ35/comfort/" class="md-nav__link">
+      
+          Комфорт
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PQ35/other/" class="md-nav__link">
+      
+          Прочие функции
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_7" data-md-state="indeterminate" type="checkbox" id="__nav_5_7" checked>
+      
+      <label class="md-nav__link" for="__nav_5_7">
+        Кодирование Tiguan 1st Gen
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Кодирование Tiguan 1st Gen" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_7">
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PQ35/Tiguan/drive/" class="md-nav__link">
+      
+          Управление и динамика
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PQ35/Tiguan/comfort/" class="md-nav__link">
+      
+          Комфорт
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PQ35/Tiguan/lights/" class="md-nav__link">
+      
+          Свет
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PQ35/Tiguan/instrPanel/" class="md-nav__link">
+      
+          Приборная панель
+      
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PQ35/Tiguan/multimedia/" class="md-nav__link">
+      
+          Мультимедиа
+      
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../longCoding/" class="md-nav__link">
+      
+          Калькулятор длинного кодирования
+      
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://yoomoney.ru/to/4100110582992748/100" class="md-nav__link">
+      
+          Поддержать проект
+      
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Камера ассистентов
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Сенсорная панель климата
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    Датчик влажности
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynaudio" class="md-nav__link">
+    DYNAUDIO
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pr-ka1-pr-ka2" class="md-nav__link">
+    [PR-KA1] [PR-KA2] Камера заднего вида
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kessy" class="md-nav__link">
+    Задние ручки kessy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#side-assist" class="md-nav__link">
+    Side Assist
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    Автосвет
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset"><a class="md-content__button md-icon" download href="addons.pdf" title="PDF Export"><svg style="height: 1.2rem; width: 1.2rem;" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm76.45 211.36l-96.42 95.7c-6.65 6.61-17.39 6.61-24.04 0l-96.42-95.7C73.42 337.29 80.54 320 94.82 320H160v-80c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v80h65.18c14.28 0 21.4 17.29 11.27 27.36zM377 105L279.1 7c-4.5-4.5-10.6-7-17-7H256v128h128v-6.1c0-6.3-2.5-12.4-7-16.9z"></path></svg></a>
+              
+                
+                  <a href="https://github.com/Kanaduchi/vwcoding/edit/master/docs/MQB/addons.md" title="Редактировать страницу" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="_1">Дооснащение<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h3 id="_2">Камера ассистентов<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>Оборудование:<br />
+1. Камера ассистентов<br />
+2. Кожух<br />
+3. Безрамочное зеркало без FLA<br />
+4. Кожух для крепления зеркала<br />
+5. Проводка  </p>
+<p>Схема подключения:<br />
+1 пин камера А5 (R242) --→ 6 пин радара АСС (J428)<br />
+7 пин камера А5 (R242) --→ 5 пин радара АСС (J428)<br />
+6 пин — "+"<br />
+5 пин — "-"<br />
+2 пин — Can extended low - 8 пин в разъеме зеркала<br />
+8 пин — Can extended high - 3 пин в разъеме зеркала<br />
+4 пин — плюсовой провод обогревателя камеры<br />
+10 пин — минусовой провод обогревателя камеры  </p>
+<p>Схема:<br />
+<img alt="Screenshot" src="../../images/MQB/addons/A5-scheme.jpeg" />   </p>
+<p><a href="https://vwcoding.ru/MQB/assistants/">(Кодирование камеры)</a></p>
+<h3 id="_3">Сенсорная панель климата<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>Блок 08 → Кодирование
+&gt; Climate_style поменять с display на Anzeige Front und Heck
+→ Применить (с перезагрузкой блока)
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Блок 08 → Адаптация
+&gt; Detection_time_tap
+&gt;&gt; par_Detection_time_tap: 600 ms
+&gt; Detection_time_hold
+&gt;&gt; par_Detection_time_hold: 600 ms
+&gt; Off_time_neighbor_key_during_sliding
+&gt;&gt; par_Off_time_neighbor_key_during_sliding: 400 ms
+&gt; Sensitivity_touch
+&gt;&gt; par_Sensitivity_touch: 0
+&gt; Steps_temp_slider
+&gt;&gt; par_Steps_temp_slider: 8
+&gt; Step_size_temp_slider
+&gt;&gt; par_Step_size_temp_slider: &gt; 0.5°C
+&gt; 22_degree_jump_temp_slider
+&gt;&gt; par_22_degree_jump_temp_slider: not_active
+&gt; Flick_function_temp_slider
+&gt;&gt; par_Flick_function_temp_slider: not_active
+&gt; Profile_selection_touch
+&gt;&gt; par_Profile_selection_touch: 0
+&gt; dimming_characteristic_new_1
+&gt;&gt; X1: 0
+&gt;&gt; Y1: 16
+&gt;&gt; X2: 10
+&gt;&gt; Y2: 16
+&gt;&gt; X3: 50
+&gt;&gt; Y3: 60
+&gt;&gt; X4: 100
+&gt;&gt; Y4: 125
+&gt;&gt; X5: 150
+&gt;&gt; Y5: 500
+&gt;&gt; X6: 253
+&gt;&gt; Y6: 1,000
+&gt; dimming_characteristic_new_2
+&gt;&gt; X1: 0
+&gt;&gt; Y1: 0
+&gt;&gt; X2: 10
+&gt;&gt; Y2: 100
+&gt;&gt; X3: 25
+&gt;&gt; Y3: 250
+&gt;&gt; X4: 50
+&gt;&gt; Y4: 500
+&gt;&gt; X5: 75
+&gt;&gt; Y5: 750
+&gt;&gt; X6: 100
+&gt;&gt; Y6: 1,000
+&gt; dimming_characteristic_new_3
+&gt;&gt; X1: 0
+&gt;&gt; Y1: 6
+&gt;&gt; X2: 10
+&gt;&gt; Y2: 6
+&gt;&gt; X3: 50
+&gt;&gt; Y3: 12
+&gt;&gt; X4: 100
+&gt;&gt; Y4: 25
+&gt;&gt; X5: 150
+&gt;&gt; Y5: 100
+&gt;&gt; X6: 253
+&gt;&gt; Y6: 300
+&gt; dimming_characteristic_new_4
+&gt;&gt; X1: 0
+&gt;&gt; Y1: 20
+&gt;&gt; X2: 10
+&gt;&gt; Y2: 20
+&gt;&gt; X3: 50
+&gt;&gt; Y3: 60
+&gt;&gt; X4: 100
+&gt;&gt; Y4: 120
+&gt;&gt; X5: 150
+&gt;&gt; Y5: 800
+&gt;&gt; X6: 253
+&gt;&gt; Y6: 1,000
+&gt; dimming_characteristic_new_5
+&gt;&gt; X1: 0
+&gt;&gt; Y1: 10
+&gt;&gt; X2: 10
+&gt;&gt; Y2: 10
+&gt;&gt; X3: 50
+&gt;&gt; Y3: 50
+&gt;&gt; X4: 100
+&gt;&gt; Y4: 100
+&gt;&gt; X5: 150
+&gt;&gt; Y5: 1,000
+&gt;&gt; X6: 253
+&gt;&gt; Y6: 1,000
+&gt; dimming_characteristic_new_6
+&gt;&gt; X1: 0
+&gt;&gt; Y1: 4
+&gt;&gt; X2: 10
+&gt;&gt; Y2: 4
+&gt;&gt; X3: 50
+&gt;&gt; Y3: 15
+&gt;&gt; X4: 100
+&gt;&gt; Y4: 30
+&gt;&gt; X5: 150
+&gt;&gt; Y5: 600
+&gt;&gt; X6: 253
+&gt;&gt; Y6: 1,000
+&gt; dimming_characteristic_new_7
+&gt;&gt; X1: 0
+&gt;&gt; Y1: 20
+&gt;&gt; X2: 10
+&gt;&gt; Y2: 20
+&gt;&gt; X3: 50
+&gt;&gt; Y3: 50
+&gt;&gt; X4: 100
+&gt;&gt; Y4: 100
+&gt;&gt; X5: 150
+&gt;&gt; Y5: 800
+&gt;&gt; X6: 253
+&gt;&gt; Y6: 1,000
+&gt; dimming_characteristic_new_8
+&gt;&gt; X1: 0
+&gt;&gt; Y1: 8 
+&gt;&gt; X2: 10
+&gt;&gt; Y2: 8 
+&gt;&gt; X3: 50
+&gt;&gt; Y3: 20 
+&gt;&gt; X4: 100
+&gt;&gt; Y4: 25 
+&gt;&gt; X5: 150
+&gt;&gt; Y5: 600 
+&gt;&gt; X6: 253
+&gt;&gt; Y6: 1,000 
+&gt; dimming_characteristic_new_9
+&gt;&gt; X1: 0
+&gt;&gt; Y1: 14 
+&gt;&gt; X2: 10
+&gt;&gt; Y2: 14 
+&gt;&gt; X3: 50
+&gt;&gt; Y3: 32 
+&gt;&gt; X4: 100
+&gt;&gt; Y4: 41 
+&gt;&gt; X5: 150
+&gt;&gt; Y5: 800 
+&gt;&gt; X6: 253
+&gt;&gt; Y6: 1,000 
+&gt; dimming_characteristic_new_10
+&gt;&gt; X1: 0
+&gt;&gt; Y1: 10 
+&gt;&gt; X2: 10
+&gt;&gt; Y2: 10 
+&gt;&gt; X3: 50
+&gt;&gt; Y3: 25 
+&gt;&gt; X4: 100
+&gt;&gt; Y4: 50 
+&gt;&gt; X5: 150
+&gt;&gt; Y5: 800 
+&gt;&gt; X6: 253
+&gt;&gt; Y6: 1,000 
+&gt; damping_dimming_characteristic_01
+&gt;&gt; PWM_Daempfung_Aufdimmen: 0.2 s
+&gt;&gt; PWM_Daempfung_Abdimmen: 0.1 s
+&gt; damping_dimming_characteristic_02
+&gt;&gt; PWM_Daempfung_Aufdimmen: 0.2 s
+&gt;&gt; PWM_Daempfung_Abdimmen: 0.1 s
+&gt; damping_dimming_characteristic_03
+&gt;&gt; PWM_Daempfung_Aufdimmen: 0.2 s
+&gt;&gt; PWM_Daempfung_Abdimmen: 0.1 s
+&gt; damping_dimming_characteristic_04
+&gt;&gt; PWM_Daempfung_Aufdimmen: 0.2 s
+&gt;&gt; PWM_Daempfung_Abdimmen: 0.1 s
+&gt; Sun_sensor_supplier_differentiation
+&gt;&gt; par_Sun_sensor_supplier_differentiation: none
+→ Применить
+</code></pre></div></p>
+<h3 id="_4">Датчик влажности<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>Датчик 3Q0907643 ставится вместо штатного датчика грязного воздуха   </p>
+<p><div class="highlight"><pre><span></span><code>Блок 08 → Кодирование
+&gt; Байт 9 — Бит 4-5 (10) - Датчик влажности наружнего воздуха установлен
+→ Применить (с перезагрузкой блока)
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Блок 08 → Адаптация
+&gt; Reduction of window misting outside at high humidity (Уменьшение запотевания стёкол, кроме случаев высокой влажности)
+&gt;&gt; Matching glass temperature model (В соответствии с моделью температуры стекол)
+→ Применить
+</code></pre></div></p>
+<h3 id="dynaudio">DYNAUDIO<a class="headerlink" href="#dynaudio" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>Блок 19 → Адаптация
+Installation list: specified installations → Sound System, Not coded
+GW_Enable_CAN_Timeout_DTC - Sound System → Enabled
+→ Применить
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Блок 5F → Кодирование
+&gt; byte_4_Channel_1_HT → not_installed
+&gt; byte_4_Channel_1_TT → not_installed
+&gt; byte_4_Channel_2_HT → not_installed
+&gt; byte_4_Channel_2_TT → not_installed
+&gt; byte_4_Channel_3_HT → not_installed
+&gt; byte_4_Channel_3_TT → not_installed
+&gt; byte_4_Channel_4_HT → not_installed
+&gt; byte_4_Channel_4_TT → not_installed
+&gt; byte_5_Channel_5_HT → not_installed
+&gt; byte_5_Channel_5_TT → not_installed
+&gt; byte_5_Channel_6_HT → not_installed
+&gt; byte_5_Channel_6_TT → not_installed
+&gt; byte_5_Channel_7_HT → not_installed
+&gt; byte_5_Channel_7_TT → not_installed
+&gt; byte_5_Channel_8_HT → not_installed
+&gt; byte_5_Channel_8_TT → not_installed
+&gt; byte_6_Channel_9_HT → not_installed
+&gt; byte_6_Channel_9_TT → not_installed
+&gt; byte_6_Channel_10_HT → not_installed
+&gt; byte_6_Channel_10_TT → not_installed
+&gt; byte_6_Channel_11_HT → not_installed
+&gt; byte_6_Channel_11_TT → not_installed
+&gt; byte_6_Channel_12_HT → not_installed
+&gt; byte_6_Channel_12_TT → not_installed
+&gt; byte_7_Channel_13_HT → not_installed
+&gt; byte_7_Channel_13_TT → not_installed
+&gt; byte_7_Channel_14_HT → not_installed
+&gt; byte_7_Channel_14_TT → not_installed
+&gt; byte_7_Channel_15_HT → not_installed
+&gt; byte_7_Channel_15_TT → not_installed
+&gt; byte_7_Channel_16_HT → not_installed
+&gt; byte_7_Channel_16_TT → not_installed
+&gt; byte_11_Sound_System → Sound_System_external_MOST
+→ Применить (с перезагрузкой блока)
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Блок 5F → Адаптация
+&gt; Sound System → yes
+&gt; Startup_screen_sticker_HMI: 2
+&gt; Car_Function_List_BAP_Gen2 - Amplifier_0x2D → not activated
+&gt; Car_Function_List_BAP_Gen2 - Amplifier_0x2D_msg_bus → Databus Infotainment
+&gt; Installation list: specified installations - Digital Sound System Control Module → Yes
+→ Применить
+</code></pre></div></p>
+<blockquote>
+<p>логин-пароль 20103</p>
+</blockquote>
+<h3 id="pr-ka1-pr-ka2">[PR-KA1] [PR-KA2] Камера заднего вида<a class="headerlink" href="#pr-ka1-pr-ka2" title="Permanent link">&para;</a></h3>
+<details class="note"><summary>Подключение проводов</summary><blockquote>
+<p>Плюс клемма 30 берется в разъеме Quadlock красный или красно желтый толстый<br />
+Масса берется в разъеме Quadlock коричневый толстый<br />
+Кан шина инфотеймент — Сигнал от камеры<br />
+К пину под номером 12 должна быть подключена "оплётка"/экран видео-кабеля от камеры — черный провод<br />
+К пину под номером 6 - центральная жила того же кабеля — белый провод<br />
+Это самые крайние пины для синего разъёма.<br />
+Оранжево-фиолетовый — к оранжево-фиолетовому Quadlock — серый разъем 6 контакт<br />
+Оранжево-коричневый — к оранжевому коричневому Quadlock — серый разъем 12 контакт<br />
+ОБЯЗАТЕЛЬНО ЗАКРЫВАЙТЕ БАГАЖНИК ПРИ ПРОВЕРКЕ!  </p>
+</blockquote>
+</details>
+<p><div class="highlight"><pre><span></span><code>Блок 19 → Список оборудования
+&gt; 6C (КАМЕРА) → установлено
+→ Применить
+</code></pre></div>
+Настройка ГУ
+<div class="highlight"><pre><span></span><code>Блок 5F → Кодирование
+&gt; Байт 19 - 4 бит (byte_19_Rear_View_Low) → Выключить (not activated)
+→ Применить
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Блок 5F → Адаптация
+&gt; Car_Function_List_BAP_Gen2 - VPS_0x0B → Активирован
+&gt; Car_Function_List_BAP_Gen2 - VPS_0x0B_msg_bus  → Databus заменить на Infotainment
+→ Применить
+</code></pre></div></p>
+<blockquote>
+<p>логин-пароль 20103</p>
+</blockquote>
+<p>Настройка парковочного ассистента
+<div class="highlight"><pre><span></span><code>Блок 76 → Кодирование
+&gt; Байт 2 - Бит 4-5 → 10 Camera Type: Rear View Camera (RVC) установлена
+→ Применить (с перезагрузкой блока)
+</code></pre></div></p>
+<div class="admonition note">
+<p>Если калибровка камеры не сделана — будет висеть ошибка — отсутствуют базовые параметры.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Установка китайской камеры</p>
+<p>К ГУ можно так же подключить и китайскую камеру без поддержки траекторий. Но в этом случае необходимо будет поправить ряд кодировок:
+<div class="highlight"><pre><span></span><code>Блок 5F → Кодирование
+&gt; Байт 19 - 4 бит (byte_19_Rear_View_Low) → Вкключить (activate)
+→ Применить
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Блок 5F → Адаптация
+&gt; Car_Function_List_BAP_Gen2 - VPS_0x0B → Неактивно
+→ Применить
+</code></pre></div></p>
+</div>
+<h3 id="kessy">Задние ручки kessy<a class="headerlink" href="#kessy" title="Permanent link">&para;</a></h3>
+<p>Оборудование:<br />
+— ручки 510837205G 510837206G<br />
+— проводка от Тигуана в сборе от передних дверей<br />
+— разъём в ответную часть проводки<br />
+— пины в дверные разъёмы по 6 штук 12527545852 и 12527512135<br />
+— пины в блок kessy 6 штук N90764701  </p>
+<p>Схема подключения правой двери:<br />
+<img alt="Screenshot" src="../../images/MQB/addons/kessy-2.jpeg" />  </p>
+<p>Схема подключения левой двери:<br />
+<img alt="Screenshot" src="../../images/MQB/addons/kessy-1.jpeg" />  </p>
+<p>Принцип укладки проводки:<br />
+1. От ручек по 4 провода - 3 до блока kessy, 1 на массу.<br />
+2. Через резиновую муфту в обшивке необходимо протянуть 3 провода от ручек.<br />
+3. Далее провода идут через гофру до дверного разъема.<br />
+4. От разъема провода идут в блок kessy.  </p>
+<p>Шаги:
+1. Разобрать двери (скинуть обшивку), демонтировать старые и установить новые ручки по инструкции из ELSA, вытянуть провод из "мокрой" части двери наружу, уложив его так, чтобы его не цепляло стекло при опускании.<br />
+2. Протянуть по 3 провода из готовой проводки от ручек до разъема двери, массу примотал к массе на блоках дверей, смотать все с заводской косой и запиновать разъемы между дверью и стойкой, для этого необходимо частично демонтировать проводку из двери.<br />
+3. Пинуем провода в разъемы задних дверей.<br />
+4. Пинуем ручки в разъемы стоек.<br />
+5. По порогу и по жгуту проводки подсветки ног прокладываем провода от стойки двери до блока Kessy и пинуем блок по инструкции.  </p>
+<div class="highlight"><pre><span></span><code>Блок В7 → Кодирование
+&gt; Байт 0 - Бит 2 (Дверная ручка kessy слева на двери сзади слева, Activation of Kessy door handle, left rear door) → Поставить выбор
+&gt; Байт 0 - Бит 3 (Дверная ручка kessy слева на двери сзади справа, Activation of Kessy door handle, right rear door) → Поставить выбор
+&gt; Байт 1 - Бит 2 (Пассивный выход для двери сзади слева отключен, Passive entry left rear door handle) → Снять выбор
+&gt; Байт 1 - Бит 3 (Пассивный выход для двери сзади справа отключен, Passive entry right rear door handle) → Снять выбор
+→ Применить
+</code></pre></div>
+<h3 id="side-assist">Side Assist<a class="headerlink" href="#side-assist" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p>Существуют 2 типа радаров. С 2020 года поставляются радары, с которых не надо снимать защиту компонентов и делать калибровку</p>
+</div>
+<p><div class="highlight"><pre><span></span><code>Блок 19 → Список оборудования
+&gt; 3C (Система смены полосы движения) → установлено
+&gt; CF (Система смены полосы движения) → установлено
+&gt; Gateway_Component_List - Node_0x4E → coded
+&gt; Gateway_Component_List - Node_0x8A → coded
+→ Применить
+</code></pre></div>
+Кодирование приборной панели
+<div class="highlight"><pre><span></span><code>Блок 17 → Кодирование
+&gt; Lane_change_assistant → yes
+&gt; Lane_change_assistant_BAP → yes
+→ Применить (с перезагрузкой блока)
+</code></pre></div>
+Кодирование адаптивного круиз
+<div class="highlight"><pre><span></span><code>Блок 13 → Кодирование
+&gt; Control_module_for_lane_assistance → installed
+&gt; Lane_change_support → activated
+→ Применить (с перезагрузкой блока)
+</code></pre></div>
+Кодирование ABS
+<div class="highlight"><pre><span></span><code>Блок 03 → Кодирование
+&gt; Байт 29 → активировать бит 7 (1ХХХХХХХ)
+→ Применить (с перезагрузкой блока)
+</code></pre></div>
+Кодирование ГУ
+<div class="highlight"><pre><span></span><code>Блок 5F → Кодирование
+&gt; Car_Function_List_BAP_Gen2 - SWA_0x1A → activated
+&gt; Car_Function_List_BAP_Gen2 - SWA_0x1A_msg_bus → Дополнительная шина данных (CAN_Extended)
+&gt; Car_Function_Adaptations_Gen2 - menu_display_lane_assistant → activated
+&gt; Car_Function_Adaptations_Gen2 - menu_display_lane_assistant_over_threshold_high → activated
+</code></pre></div></p>
+<p>Кодирование системы кругового обзора (если есть)
+<div class="highlight"><pre><span></span><code>БлокБлок 6C → Кодирование
+&gt; equipment_RTA → installed
+→ Применить (с перезагрузкой блока)
+</code></pre></div>
+Парковочный ассистент
+<div class="highlight"><pre><span></span><code>БлокБлок 76 → Кодирование
+&gt; Rear_Cross_Traffic - Alert → mit RCTA
+→ Применить (с перезагрузкой блока)
+</code></pre></div>
+Камера ассистентов (если есть)
+<div class="highlight"><pre><span></span><code>БлокБлок A5 → Кодирование
+&gt; SWA → Coded
+→ Применить (с перезагрузкой блока)
+</code></pre></div>
+Ассистент смены полосы движения
+<div class="highlight"><pre><span></span><code>БлокБлок 3C → Кодирование
+&gt; Pre_Sense → without_Pre_Sense
+&gt; Rear_Cross_Traffic_Alert → with_RCTA
+&gt; ECU for draw bar → no ECU for draw bar
+&gt; steering → left-hand drive
+&gt; Rear_Axle_Steering → without_Rear_Axle_Steering
+&gt; Lane_Departure_Warning_System → with_Lane_Departure_Warning_System
+&gt; Front_Sensors_Driver_Assistance_System → with_Front_Sensors_Driver_Assistance_System
+&gt; Diagnosis_RCTA → tone_via_PLA
+→ Применить (с перезагрузкой блока)
+</code></pre></div></p>
+<h3 id="_5">Автосвет<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>Для этого необходим новый переключатель 5G0941431BD и датчик света и дождя 5Q0955547C</p>
+<p>Установка переключателя
+<div class="highlight"><pre><span></span><code>Блок 09 → Адаптация
+&gt; Aussenlicht_uebergreifend
+&gt;&gt; LDS_mit_AFL → Yes
+→ Применить
+</code></pre></div></p>
+<p>Установка датчика света и дождя
+<div class="highlight"><pre><span></span><code>Блок 09 → Адаптация
+&gt; Lighting_Assist_Adaptation
+&gt;&gt; Regen_Lichtsensor → LIN_Regen_Licht_Sensor
+&gt;&gt; Feuchtesensor → Installed (если есть датчик влажности)
+</code></pre></div></p>
+<p>После этих кодировок датчик света и дождя появляется в кодировании 9 блока.
+Прописываем в него кодировку:
+<div class="highlight"><pre><span></span><code>Блок 09 → Кодирование
+&gt;&gt; подблок RLНS:
+&gt; 3СА8DD — фары включаются не так поздно, где то при 1200lx
+&gt; 3CA8D7 — фары включаются совсем поздно, при 800lx
+</code></pre></div></p>
+<blockquote>
+<p>логин-пароль 31347</p>
+</blockquote>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../tiresCoding/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Генератор параметрии" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Назад
+              </span>
+              Генератор параметрии
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../MLB-Evo/main/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Информация" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Вперед
+              </span>
+              Информация
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2021 - vwcoding.ru (info@vwcoding.ru)
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.expand", "navigation.top"], "translations": {"clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "search.config.lang": "ru", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\u041f\u043e\u0438\u0441\u043a", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e # \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+      
+        <script src="../../js/print-site-instant-loading.js"></script>
+      
+        <script src="../../js/print-site.js"></script>
+      
+    
+  </body>
+</html>
