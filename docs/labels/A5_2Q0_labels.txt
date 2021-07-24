@@ -1,3 +1,4 @@
+01,0-7,Brand, 00 - Volkswagen; 01 - Volkswagen_N; 02 - Skoda; 03 - Seat; 04 - Audi; FF - not coded; 05 - Bentley; 06 - Lamborghini; 07 - Bugatti; 08 - Porsche; 09 - Quattro; FF - not coded
 08,5-7, Point of intervention, 00 - Early; 40 - Late; 80 - Early (via Menu); A0 - Late (via Menu)
 09,0-1, Configuration for lane departure warning Kl15, 00 - not coded; 03 - Last_setting
 09,2-3, Lane assist system mode, 00 - not coded; 0C - Selection_over_menu
