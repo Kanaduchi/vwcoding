@@ -1,12 +1,12 @@
 # Project information
 site_name: Кодирование автомобилей VAG
 site_description: Основные кодировки и адаптации платформ концерна VAG. Прошивки и параметрии. SWaP коды
-site_author: Andrey Topchiy
+site_author: Kanaduchi
 site_url: http://www.vwcoding.ru
 
 # Hot news
-hot_news_date: 14.07.2021
-hot_news_title: Кодирование Lane Assist 2Q0* камеры ассистентов
+hot_news_date: 26.07.2021
+hot_news_title: одирование Lane Assist 2Q0* камеры ассистентов
 hot_news: >
   1. <a href='https://vwcoding.ru/MQB/2Q0_assistants.md'>Кодирование 2Q0* камеры ассистентов</a><br>
 # Repository

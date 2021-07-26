@@ -233,14 +233,12 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 выбираем «Вкл»
 → Применить
 ```
-
 > логин-пароль 20103
 
 ```
 Блок 09 → Адаптация
 > Персонализация / Personalisierung
 >> Personalisierung_Profilfunkion → profiles_active
->> Profil_Variante → Konto (v. 2.x)
 >> Personalisierung_aktiv → Active
 >> Aktivierungsoption_im_HMI-Menue_sichtbar → Active
 >> Benutzerkontenverwaltung_in_HMI-Menue_sichtbar → Active
@@ -249,7 +247,28 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 >> PSO_FSG_Setup2_Bit_2 → Active
 → Применить
 ```
+> логин-пароль 31347
 
+Активация персонализации
+```
+Блок 09 → Адаптация
+> Персонализация / Personalisierung
+>> Profil_Variante → Konto (v. 1.x)
+```
+Сохраняем, клацаем, запираем авто.  
+Создаем профили и далее меняем:
+```
+Блок 09 → Адаптация
+> Персонализация / Personalisierung
+>> Profil_Variante → Konto (v. 2.x)
+```
+Сохраняем, клацаем, запираем авто.  
+Меняем:
+```
+Блок 09 → Адаптация
+> Персонализация / Personalisierung
+>> Profil_Variante → Konto (v. 1.x)
+```
 > логин-пароль 31347
 
 ### Использование глонасс антенны для навигации и компаса
