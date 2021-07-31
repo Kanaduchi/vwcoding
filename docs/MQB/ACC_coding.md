@@ -8,7 +8,7 @@ disqus: https-mqb-readthedocs-io
 
 === "Кодирование в ODIS"
     ```
-    Control Unit 13 (Adaptive Cruise Control) → Adaptation 
+    Блок 13 → Кодирование
     > Overtaking_right_prevention (Vermeidung für unzulässigen Überholvorgang)
     > Установить Deactivated [Default: Activated]
     → Применить
