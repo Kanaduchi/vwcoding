@@ -140,9 +140,7 @@ pACC (Predictive ACC) — это адаптивный круиз-контрол�
 для 3Q0.. - D2 C3 3E...  
 для 5Q0.. - "8F 51 4A...  
 ```
-
 Если все в порядке, переходим к генерации SWaP  
-
 5. Для генерирования SWaP кодов понадобится VCRN (Vehicle Component Registration Number).  
 Данный код можно вытянуть из измеряемых величин 13 блока:
 ```
@@ -210,7 +208,9 @@ pACC (Predictive ACC) — это адаптивный круиз-контрол�
 **Настройка блока адаптивного круиз-контроля** 
 ```
 Блок 13 → Кодирование
-> Initialization_concept_front_assist — 
+> Front_camera: installed - в случае наличия камеры ассистентов
+> Control_module_for_lane_assistant: installed
+> Initialization_concept_front_assist
 >> Initialization_1 — большая иконка ожидания готовности Front Assist в верхнем левом углу AID, Front Assist активируется только после начала движения, это значение стоит с завода; 
 >> Initialization_2 — маленькая иконка ожидания готовности Front Assist там же, где потом появляется иконка ACC, Front Assist активируется через пару секунд после включения зажигания и сразу видит препятствия перед машиной.
 > Automatic_driveaway_by_pretrigger → activated  
@@ -224,11 +224,13 @@ pACC (Predictive ACC) — это адаптивный круиз-контрол�
 ```
 ```
 Блок 13 → Адаптации
-> Distance_Setting - par_Distance_Setting → on
-> Adjustment_mode_time_slot_adaptive_distance_control - Adjustment_mode_time_slot_adaptive_distance_control → on
+> Distance_Setting
+>> par_Distance_Setting → on
+> Adjustment_mode_time_slot_adaptive_distance_control
+>> Adjustment_mode_time_slot_adaptive_distance_control → on
 → Применить
 ```
-> логин-пароль 14117 
+> логин-пароль 20103 
 
 **Настройка приборной панели** 
 ```
@@ -264,3 +266,25 @@ pACC (Predictive ACC) — это адаптивный круиз-контрол�
 > Adaptive_cruise_control → activated
 → Применить (с перезагрузкой блока)
 ```
+
+### Проведение кодировок и адаптаций для активации pACC
+
+```
+Блок 13 → Кодирование
+> Traffic_sign_detection: activated
+> Speed_limit_assitent: activated
+> Curve_assistent: activated
+> Kurvenassistent_CarMenu: activated
+> pACC_Regulation_on_priority: activated
+> pACC_Reaction_to_end_of_traffic_jam: with speed adaptation
+> pACC_Learning_drivers_offset: activated
+> pACC_Reaction_to_narrow_places: dynamic and static
+→ Применить (с перезагрузкой блока)
+```
+```
+Блок 13 → Адаптации
+> Predictive speed limit control
+>> par Predictive speed limit control → activated
+→ Применить
+```
+> логин-пароль 20103 
