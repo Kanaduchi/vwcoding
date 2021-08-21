@@ -55,6 +55,20 @@ theme:
     - navigation.tabs
     - navigation.expand
     - navigation.top
+    - search.share
+    - search.highlight
+    - search.suggest
+
+extra:
+  alternate:
+    # Switch to English
+    - name: English
+      link: en
+      lang: en
+    # Switch to Russian
+    - name: Русский
+      link: /
+      lang: ru
 
 extra_css:
   - assets/custom.css
@@ -125,6 +139,7 @@ nav:
           - Инструкция ODIS E: odis-e.md
       - История изменений: history.md
       - Обратная связь: questions.md
+      - English page: en.md
       - Поддержать проект: https://yoomoney.ru/to/4100110582992748/100
   - Платформа MQB:
       - Информация: MQB/main.md
