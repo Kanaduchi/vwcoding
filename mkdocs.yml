@@ -7,6 +7,7 @@ site_url: http://www.vwcoding.ru
 # Hot news
 hot_news_date: 14.08.2021
 hot_news_title: Все ваши предложения и новые идеи можно присылать на info@vwcoding.ru
+hot_news_title_en: Fill free to send all your ideas and updates to info@vwcoding.ru
 hot_news: >
   1. <a href='https://vwcoding.ru/MQB/rearLights'>Задние динамические поворотники для Tiguan 2021 с фарами IQ Light</a><br>
   2. <a href='https://vwcoding.ru/MQB/pACC'>SWaP для ACC и pACC</a><br>
@@ -59,21 +60,38 @@ theme:
     - search.highlight
     - search.suggest
 
-extra:
-  alternate:
-    # Switch to English
-    - name: English
-      link: en
-      lang: en
-    # Switch to Russian
-    - name: Русский
-      link: /
-      lang: ru
-
 extra_css:
   - assets/custom.css
 
+extra:
+  alternate:
+    - name: Русский
+      link: ./
+      lang: ru
+    - name: English
+      link: ./en/
+      lang: en
+
 plugins:
+  - i18n:
+      default_language: ru
+      languages:
+        en: English
+      nav_translations:
+        en:
+          Общая информация: Main information
+          Платформа MQB: MQB platform
+          Кодирование автомобилей VAG: Coding of VW cars
+          Платформа MLB-Evo: MLB-Evo platform
+          Платформа PQ26: PQ26 platform
+          Платформа PQ35: PQ35 platform
+          Калькулятор длинного кодирования: Long-coding calculator
+          Инструменты и адаптеры: Instruments and adapters
+          Список инструментов: Adapters
+          Инструкция ODIS E: ODIS E instruction
+          Обратная связь: Feedback
+          История изменений: History of changes
+          Поддержать проект: Support of project
   - search:
       lang:
         - en
@@ -139,7 +157,6 @@ nav:
           - Инструкция ODIS E: odis-e.md
       - История изменений: history.md
       - Обратная связь: questions.md
-      - English page: en.md
       - Поддержать проект: https://yoomoney.ru/to/4100110582992748/100
   - Платформа MQB:
       - Информация: MQB/main.md
@@ -160,16 +177,16 @@ nav:
       - Отпирание и запирание: MQB/security.md
       - Освещение:
           - Кодирование фонарей: MQB/codingLights.md
-          - Передние фонари:  MQB/headLights.md
+          - Передние фонари: MQB/headLights.md
           - Задние фонари: MQB/rearLights.md
       - Звук: MQB/sound.md
       - Климат: MQB/climate.md
       - Приборная панель: MQB/AID.md
       - Головное устройство:
-        - Кодирование: MQB/headDevice.md
-        - Активация TMC: MQB/headDeviceTMC.md
-        - SWaP коды для CM и DM: MQB/headDeviceFunctions.md
-        - Снятие защиты и SWaP для Pro: MQB/headDeviceFunctionsPro.md
+          - Кодирование: MQB/headDevice.md
+          - Активация TMC: MQB/headDeviceTMC.md
+          - SWaP коды для CM и DM: MQB/headDeviceFunctions.md
+          - Снятие защиты и SWaP для Pro: MQB/headDeviceFunctionsPro.md
       - Шины:
           - Кодирование: MQB/tires.md
           - Генератор параметрии: MQB/tiresCoding.md
