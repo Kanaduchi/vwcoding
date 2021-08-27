@@ -73,6 +73,16 @@ extra:
       lang: en
 
 plugins:
+  - search:
+      lang:
+        - en
+        - de
+        - ru
+  - pdf-export:
+      enabled_if_env: ENABLE_PDF_EXPORT
+  - print-site:
+      add_to_navigation: false
+      enumerate_headings: true
   - i18n:
       default_language: ru
       languages:
@@ -92,16 +102,6 @@ plugins:
           Обратная связь: Feedback
           История изменений: History of changes
           Поддержать проект: Support of project
-  - search:
-      lang:
-        - en
-        - de
-        - ru
-  - pdf-export:
-      enabled_if_env: ENABLE_PDF_EXPORT
-  - print-site:
-      add_to_navigation: false
-      enumerate_headings: true
 
 markdown_extensions:
   - admonition
