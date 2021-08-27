@@ -6,7 +6,7 @@ on:
 env:
   CI: true
   NODE_VERSION: 10.x
-  PYTHON_VERSION: 3.x
+  PYTHON_VERSION: 3.7
 
 # Jobs to run
 jobs:
@@ -30,7 +30,7 @@ jobs:
           pip install -r requirements.txt
           pip install .
           pip install \
-            mkdocs-minify-plugin>=0.3 \
+            mkdocs-minify-plugin>=0.4 \
             mkdocs-redirects>=1.0
 
       - name: Build documents
