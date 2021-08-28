@@ -96,6 +96,12 @@ plugins:
       lang:
         - en
         - ru
+  - pdf-export:
+      enabled_if_env: ENABLE_PDF_EXPORT
+  - print-site:
+      add_to_navigation: false
+      enumerate_headings: true
+
 markdown_extensions:
   - admonition
   - abbr
