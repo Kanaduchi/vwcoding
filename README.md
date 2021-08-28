@@ -1,26 +1,40 @@
-Данный сайт построен с использованием языка разметки markdown.
+![VW coding](docs/assets/logo.png)  
 
-Примерный шаблон:
+## ENGLISH DESCRIPTION
+
+This site is build with Markdown language. You can use the template below to add new codings
 
 ```
-    # Название раздела
-
-    ### Название кодировки/адаптации
+    ### Name of coding / adaptation
 
     !!! tip ""
-        Описание/Цель, если есть
+        Tip/info message
 
     !!! warning ""
-        Предупреждение, если есть
+        Some warning message
 
     ```
-    Блок XX → Адаптация
-    > Название адаптации → активировать
-    → Применить
+    Block XX → Adaptation
+    > Name of parameter → activate
+    → Apply
     ```
 
-    ??? note "Название раскрывающегося списка"
-        Здесь находится информация, которая по умолчанию на сайте отображается свернутой
+    ??? note "Collapsibale list"
+        This information is displayed collapsed on the site
 
-    > логин-пароль 000000 (если есть)
+    > Login-password: 000000 (if applicable)
 ```
+
+### Translation
+
+If you want to help in translating this site to English please do follow steps:  
+
+1. Copy particular file to new with en suffix. Example: drive.md -> drive.en.md  
+2. Translate text in drive.en.md to English language  
+3. Create PR and Merge it  
+4. Translation will be automatically applied to the site  
+
+
+## ОПИСАНИЕ
+
+Данный сайт построен с использованием языка разметки Markdown.
