@@ -12,7 +12,7 @@ on:
 env:
   CI: true
   NODE_VERSION: 10.x
-  PYTHON_VERSION: 3.7
+  PYTHON_VERSION: 3.x
 
 # Jobs to run
 jobs:
