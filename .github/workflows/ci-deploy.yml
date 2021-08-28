@@ -10,7 +10,6 @@ on:
 
 # Environment
 env:
-  CI: true
   NODE_VERSION: 10.x
   PYTHON_VERSION: 3.x
 
@@ -22,10 +21,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout master branch
-        uses: actions/checkout@v2.3.4
+        uses: actions/checkout@v2
           
       - name: Install Python runtime and dependencies
-        uses: actions/setup-python@v1
+        uses: actions/setup-python@v2
         with:
           python-version: ${{ env.PYTHON_VERSION }}
 
