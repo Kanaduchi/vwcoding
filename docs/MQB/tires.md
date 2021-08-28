@@ -50,7 +50,7 @@ disqus: https-mqb-readthedocs-io
 ![Screenshot](../images/MQB/odis-e-tires.png) 
 
 После загрузки данных меню настроек будет выглядеть так:  
-![Screenshot](../images/MQB/tires.jpg) 
+![Screenshot](../images/MQB/tires.png) 
     
 !!! warning
     После записи машина на некоторое время станет новогодней ёлкой - будут ошибки и отказы по всем блокам.   

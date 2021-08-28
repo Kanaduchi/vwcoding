@@ -80,25 +80,6 @@ plugins:
         - ru
   - pdf-export:
       enabled_if_env: ENABLE_PDF_EXPORT
-  - i18n:
-      default_language: ru
-      languages:
-        en: English
-      nav_translations:
-        en:
-          Общая информация: Main information
-          Платформа MQB: MQB platform
-          Кодирование автомобилей VAG: Coding of VW cars
-          Платформа MLB-Evo: MLB-Evo platform
-          Платформа PQ26: PQ26 platform
-          Платформа PQ35: PQ35 platform
-          Калькулятор длинного кодирования: Long-coding calculator
-          Инструменты и адаптеры: Instruments and adapters
-          Список инструментов: Adapters
-          Инструкция ODIS E: ODIS E instruction
-          Обратная связь: Feedback
-          История изменений: History of changes
-          Поддержать проект: Support of project
 
 markdown_extensions:
   - admonition
