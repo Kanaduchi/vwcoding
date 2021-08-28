@@ -92,7 +92,10 @@ plugins:
           Обратная связь: Feedback
           История изменений: History of changes
           Поддержать проект: Support of project
-
+  - search:
+      lang:
+        - en
+        - ru
 markdown_extensions:
   - admonition
   - abbr
