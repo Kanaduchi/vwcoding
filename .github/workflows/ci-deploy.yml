@@ -33,9 +33,6 @@ jobs:
         run: |
           pip install -r requirements.txt
           pip install .
-          pip install \
-            mkdocs-minify-plugin>=0.3 \
-            mkdocs-redirects>=1.0
 
       - name: Deploy documents
         env:
