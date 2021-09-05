@@ -156,6 +156,7 @@ Lane Assist с адаптивным ведением по полосе — ис�
 >> Fernlicht_assistent
 > Erweiterte_Fernlichtsteuerung: AFS, FLA, Fernlicht ueber AFS → AFS, FLA, Fernlicht (GLW,MDF)
 > Menuesteuerung Fernlichtassistent: not available → available
+> Fernlichtassistent Reset: active → not active
 → Применить 
 ```
 
