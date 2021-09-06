@@ -30,15 +30,29 @@ disqus: https-mqb-readthedocs-io
 
 ### TSC (Traction Control System / Компенсация увода вбок)
 
-!!! tip ""
-     В случае резкого разгона автоматически будет произведена компенсация увода автомобиля вправо.
+В случае резкого разгона автоматически будет произведена компенсация увода автомобиля вправо.   
 
-```
-Блок 44 (Усилитель рулевого управления) → Кодирование
-> Выбор активного профиля вождения
-Выбираем "активировать"
-→ Применить
-```
+!!! tip
+    Возможны следующие значения:  
+    > inactive  
+    > with learned Value active / с адапционной величиной (2 бит)  
+    > without learned Value active (3 бит)  
+
+=== "Кодирование в ODIS"
+    ```
+    Блок 44 (Усилитель рулевого управления) → Кодирование
+    > torque_steer_function / Компенсация увода в бок
+    → Применить
+    ```
+
+=== "Кодирование в VCDS"    
+    ```
+    44 — Усилитель рулевого управления
+    Кодирование - 07 → Длинное кодирование  
+    > Байт 0
+    Выход   
+    Сохранить
+    ```
 
 > логин-пароль: 19249
 
@@ -78,11 +92,11 @@ disqus: https-mqb-readthedocs-io
     02 = ESC & ASR On/Off  
     03 = ESC & ASR On + ESC SPORT  
     04 = ESC & ASR On + ESC Off  
-    05 —ESC On/Off + ASR Off  
-    06 —ESC On/Off + ESC Sport  
-    07 —ESC On/Off + ASR Off  
-    08 —ESC On/Off + ESC Sport  
-    09 —ESC On + ASR Off + ESC Sport  
+    05 = ESC On/Off + ASR Off  
+    06 = ESC On/Off + ESC Sport  
+    07 = ESC On/Off + ASR Off  
+    08 = ESC On/Off + ESC Sport  
+    09 = ESC On + ASR Off + ESC Sport  
 
 === "Кодирование в ODIS"
     ```
