@@ -215,10 +215,10 @@ SWaP файлы. Данные коды содержат в себе все су�
 
 | Тип     | Ссылка |
 |---------|------------------|
-| STD2    | [(SWaP)](../firmwares/SWAP/SWaP.zip) |
-| PQ STD2 | [(SWaP)](../firmwares/SWAP/STD2/SWaP.zip) |
-| NAV     | [(SWaP)](../firmwares/SWAP/Nav/SWaP.zip) |
-| PLUS    | [(SWaP)](../firmwares/SWAP/Plus/SWaP.zip) |
+| STD2    | [(SWaP)](../../firmwares/SWAP/SWaP.zip) |
+| PQ STD2 | [(SWaP)](../../firmwares/SWAP/STD2/SWaP.zip) |
+| NAV     | [(SWaP)](../../firmwares/SWAP/Nav/SWaP.zip) |
+| PLUS    | [(SWaP)](../../firmwares/SWAP/Plus/SWaP.zip) |
 
 Для загрузки SWaP кода необходимо взять нужный файл, а так же созданный на предыдущем шаге FEC файл и загрузить в корень флешки.
 
