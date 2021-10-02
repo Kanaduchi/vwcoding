@@ -204,13 +204,14 @@
 
 ```
 Блок 08 → Кодирование
-> Байт 9 — Бит 4-5 (10) - Датчик влажности наружнего воздуха установлен
+> Байт 9 — Бит 4-5 (10) - Датчик влажности наружнего воздуха установлен / Sensor_for_air_humidity_outside
+> Reduction of window misting outside at high humidity: close over characteristic
 → Применить (с перезагрузкой блока)
 ```
 ```
 Блок 08 → Адаптация
-> Reduction of window misting outside at high humidity (Уменьшение запотевания стёкол, кроме случаев высокой влажности)
->> Matching glass temperature model (В соответствии с моделью температуры стекол)
+> Reduction of window misting outside at high humitity
+>> param_Reduction_of_window_misting_outside_at_high_humitity: Matching coding
 → Применить
 ```
 

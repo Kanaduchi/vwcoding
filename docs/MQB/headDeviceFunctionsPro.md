@@ -4,7 +4,7 @@ disqus: https-mqb-readthedocs-io
 !!! warning 
     ВСЕ, ЧТО ВЫ БУДЕТЕ ДЕЛАТЬ — ВЫ БУДЕТЕ ДЕЛАТЬ ТОЛЬКО ПОД СВОЮ ОТВЕТСТВЕННОСТЬ! ЕСЛИ НЕТ УВЕРЕННОСТИ — НЕ НАЧИНАЙТЕ!  
   
-Все действия осуществляются только с помощью утилиты [M.I.B. bash](https://mega.nz/folder/b0NFQQ4D#AMhWbPNVPWv7geRTZIK6Xg/folder/mkcmGJba), т.е теперь для активации все опций нужна только SD карта.   
+Все действия осуществляются только с помощью утилиты [M.I.B. bash](https://wiki.mibsolution.one/en/MHI2), т.е теперь для активации все опций нужна только SD карта.   
 
 Список прошивок на которые подойдет данный патч:  
 ![Screenshot](../images/MQB/MIBII/mib2_vers.jpeg)  

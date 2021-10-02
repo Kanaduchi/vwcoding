@@ -34,9 +34,9 @@ disqus: https-mqb-readthedocs-io
 
 !!! tip
     Возможны следующие значения:  
-    > inactive  
-    > with learned Value active / с адапционной величиной (2 бит)  
-    > without learned Value active (3 бит)  
+    - inactive  
+    - with learned Value active / с адапционной величиной (2 бит)  
+    - without learned Value active (3 бит)  
 
 === "Кодирование в ODIS"
     ```
@@ -47,7 +47,7 @@ disqus: https-mqb-readthedocs-io
 
 === "Кодирование в VCDS"    
     ```
-    44 — Усилитель рулевого управления
+    Блок 44 — Усилитель рулевого управления
     Кодирование - 07 → Длинное кодирование  
     > Байт 0
     Выход   
