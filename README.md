@@ -29,7 +29,7 @@ This site is build with Markdown language. You can use the template below to add
 
 If you want to help in translating this site to English please do follow steps:  
 
-1. Copy particular file to new with en suffix. Example: drive.md -> drive.en.md  
+1. Copy particular file to new with en suffix. Example: drive.md → drive.en.md  
 2. Translate text in drive.en.md to English language  
 3. Create PR and Merge it  
 4. Translation will be automatically applied to the site  
