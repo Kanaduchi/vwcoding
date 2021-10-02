@@ -194,6 +194,7 @@ pACC (Predictive ACC) — это адаптивный круиз-контрол�
 > Байт 24 — Бит 3 → вкл. 
 → Применить (с перезагрузкой блока)
 ```
+
 **Сохранение номеров выбранных FEC кодов**  
 В FSID группы необходимо по порядку прописать последние цифры выбранных FEC кодов (1 — 90, 2 — 91, 3 — 92, 4 — 93)  
 Например, выбраны FEC коды: 10009008, 10009101, 10009204, 10009307  
@@ -238,7 +239,7 @@ pACC (Predictive ACC) — это адаптивный круиз-контрол�
 > adaptive_cruise_control → yes
 → Применить (с перезагрузкой блока)
 ```
-**Настройка гейтвея** 
+**Настройка гейтвея (для VW)** 
 ```
 Блок 19 → Кодирование
 > FPA_Funktion_ACC → включить
@@ -250,6 +251,16 @@ pACC (Predictive ACC) — это адаптивный круиз-контрол�
 >> variant → ACC-High
 → Применить
 ```
+
+**Настройка рулевой рейки (для Skoda)**  
+```
+Блок 16 (Электроника рулевой колонки) → Кодирование
+> Switch_for_cruise_control_integrated_in_turn_signal_switch: not installed
+> Switch_for_cruise_control: installed
+> Adaptive_cruise_control: installed
+→ Применить (с перезагрузкой блока)
+```
+
 **Настройка ГУ** 
 ```
 Блок 5F → Адаптация
@@ -277,10 +288,6 @@ pACC (Predictive ACC) — это адаптивный круиз-контрол�
 > Speed_limit_assitent: activated
 > Curve_assistent: activated
 > Kurvenassistent_CarMenu: activated
-> pACC_Regulation_on_priority: activated
-> pACC_Reaction_to_end_of_traffic_jam: with speed adaptation
-> pACC_Learning_drivers_offset: activated
-> pACC_Reaction_to_narrow_places: dynamic and static
 → Применить (с перезагрузкой блока)
 ```
 ```
@@ -288,5 +295,18 @@ pACC (Predictive ACC) — это адаптивный круиз-контрол�
 > Predictive speed limit control
 >> par Predictive speed limit control → activated
 → Применить
+```
+> логин-пароль 20103 
+
+### Дополнительные кодировки для радаров версии 5Q
+
+```
+Блок 13 → Кодирование
+> zul_Regelabweichung_CarMenu — large
+> pACC_Regulation_on_priority: activated
+> pACC_Reaction_to_end_of_traffic_jam: with speed adaptation
+> pACC_Learning_drivers_offset: activated
+> pACC_Reaction_to_narrow_places: dynamic and static
+→ Применить (с перезагрузкой блока)
 ```
 > логин-пароль 20103 
