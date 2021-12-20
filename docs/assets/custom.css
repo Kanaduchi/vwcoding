@@ -18,6 +18,37 @@ iframe[id*="dsq-app"][src*="comments"] {
   max-width: 1600px;
 }
 
+
+/* Preserve link color */
+.md-banner a,
+.md-banner a:focus,
+.md-banner a:hover {
+   color: currentColor;
+}
+
+/* Don't wrap name of blog article */
+.md-banner strong {
+   white-space: nowrap;
+}
+
+.md-banner {
+   color: #fafafa;
+   background-color: #4caf50;
+   cursor: pointer;
+}
+
+.md-banner:hover,
+.md-banner:focus {
+   color: #fafafa;
+   background-color: #087f23;
+}
+
+/* Twitter icon */
+.md-banner .twitter {
+   margin-left: .2em;
+   color: #00acee;
+}
+
 .md-typeset ul {
     display: block;
 }

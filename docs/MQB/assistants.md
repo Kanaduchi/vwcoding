@@ -298,8 +298,8 @@ HCA - Указание блоку рулевого управления о на�
     Для удобства можно воспользоваться [калькулятором битов](https://vwcoding.ru/longCoding) с расшифровкой А5 блока.  
     Например, готовую кодировку можно [Открыть в калькуляторе](https://vwcoding.ru/longCoding/?code=000307060007040100222346C154890098000E20004000&label=A5)
 
-```
-Блок A5 (камера ассистентов) → Кодирование 
+``` yaml
+Блок A5 (камера ассистентов) → Кодирование  
 >> Brand: VW
 >> Class: A
 >> Generation: Generation_7
@@ -311,23 +311,23 @@ HCA - Указание блоку рулевого управления о на�
 >> Steering_bar: Not_coded
 >> Windshield: Heat_protecting_glass
 >> Traffic_side: Right_traffic
->> PSD_Version: PSD_15 //Прогнозируемые данные по маршруту. Зависит от установленного ГУ (если нет навигации, то Not coded)
->> Navigation: MIB_High //Зависит от установленного ГУ
->> AAG: Coded //Если установлен фаркоп
->> SWA (Side assist): Coded //Если установлен контроль слепых зон
+>> PSD_Version: PSD_15 # (1)
+>> Navigation: MIB_High # (2)
+>> AAG: Coded # (3)
+>> SWA (Side assist): Coded # (4)
 >> ACC: Coded
 >> Pedestrian_break: Not_coded
 >> Blind_spot_detection: Not_coded
 >> Rain_light_sensor: Coded
 >> Main_unit: enabled
->> PLA: Coded //Если установлен Park Assist
+>> PLA: Coded # (5)
 >> ESP: Coded
 >> Personalize_VZE:	Not_Coded
 >> Lan_assist_system_mode: Selection_over_menu
 >> Personalized_key: Version_1.x
 >> Networking_variant: MQB
 >> Radar_interface: Coded
->> Perso_HC: Last_setting //Запоминание выбранного режима при выключении зажигания
+>> Perso_HC: Last_setting # (6)
 >> Point_of_intervention: early_setting_over_menu
 >> LaneAssist_AGW_output: disabled
 >> Lane_assist_off_text: disabled
@@ -343,10 +343,17 @@ HCA - Указание блоку рулевого управления о на�
 >> FLA_Additional_High_Beam: no_Additional_High_Beam
 >> FLA_Headinglight_type: LED
 >> Mains_frequency: 50_Hz
->> AFS_coding_Light_Assist: Dynamic_Light_Assist (или Matrixbeam для Tiguan 2021)
+>> AFS_coding_Light_Assist: Dynamic_Light_Assist (or Matrixbeam for Tiguan 2021)
 >> HC_LONGPRESS: Not_Coded (only for Audi)
 → Применить 
 ```
+
+1. Прогнозируемые данные по маршруту. Зависит от установленного ГУ (если нет навигации, то `Not coded`)
+2. Тип навигации. Зависит от установленного ГУ
+3. Если установлен фаркоп
+4. Если установлен контроль слепых зон
+5. Если установлен Park Assist
+6. Запоминание выбранного режима при выключении зажигания
 
 ```
 Блок A5 (камера ассистентов) → Адаптация 

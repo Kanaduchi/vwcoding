@@ -5,7 +5,7 @@ site_author: Kanaduchi
 site_url: http://www.vwcoding.ru
 
 # Hot news
-hot_news_date: 02.10.2021
+hot_news_date: 20.12.2021
 hot_news_title: Все ваши предложения и новые идеи можно присылать на info@vwcoding.ru
 hot_news_title_en: Fill free to send all your ideas and updates to info@vwcoding.ru
 hot_news: >
@@ -33,14 +33,16 @@ theme:
   favicon: assets/icon.png
   palette:
     # Light mode
-    - scheme: default
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
       primary: indigo
       accent: indigo
       toggle:
         icon: material/weather-night
         name: Тёмная сторона
     # Dark mode
-    - scheme: slate
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
       primary: indigo
       accent: indigo
       toggle:
@@ -53,12 +55,21 @@ theme:
     code: Roboto Mono
   logo: assets/logo.png
   features:
-    - navigation.tabs
+    - content.code.annotate
+    # - content.tabs.link
+    # - header.autohide
     - navigation.expand
+    # - navigation.indexes
+    # - navigation.instant
+    # - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
     - navigation.top
-    - search.share
+    - navigation.tracking
     - search.highlight
+    - search.share
     - search.suggest
+      # - toc.integrate
 
 extra_css:
   - assets/custom.css
@@ -101,7 +112,6 @@ plugins:
       add_to_navigation: false
       enumerate_headings: true
 
-
 markdown_extensions:
   - admonition
   - abbr
@@ -138,7 +148,8 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.tabbed
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
