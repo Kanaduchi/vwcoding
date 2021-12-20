@@ -263,10 +263,10 @@ disqus: https-mqb-readthedocs-io
 ### Светодиоды в ПТФ
 
 	Блок 09 → Адаптация
-	> Leuchte12NL LB45 → Lasttyp 12 → [VO_6-LED Lichtmodul]
+	> Leuchte12NL LB45 → Lasttyp 12 → [6-LED Lichtmodul]
 	→ Применить
 	
-	> Leuchte13NL RB5 → Lasttyp 13 → [VO_6-LED Lichtmodul]
+	> Leuchte13NL RB5 → Lasttyp 13 → [6-LED Lichtmodul]
 	→ Применить
 
 Уменьшение яркости светодиодов:

@@ -197,7 +197,7 @@ FINISHED — You can now remove SD Card
     fsc3 = "00040100" # Navigation  
     fsc4 = "00050000" # Bluetooth  
     fsc5 = "00060100" # Vehicle Data Interface  
-    fsc6 = "00060200" # Skoda/Audi Connect, VW CarNet  
+    fsc6 = "00060200" # Škoda/Audi Connect, VW CarNet  
     fsc7 = "00060300" # Mirror Link  
     fsc8 = "00060400" # Sport HMI  
     fsc9 = "00060500" # Sport Chrono  
@@ -300,6 +300,6 @@ FINISHED — You can now remove SD Card
 ## Электронный усилитель голоса ICC
 
 Для активации данного усилителя необходимо загрузить параметрию:  
-[(Параметрия под ODIS)](../firmwares/5F_ICC_ONLY.xml)
+[(Параметрия под ODIS)](../parameters/5F_ICC_ONLY.xml)
 
 После загрузки параметрии нужно ОБЯЗАТЕЛЬНО перезагрузить магнитолу долгим нажатием на кнопку включения!
