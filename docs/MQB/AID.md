@@ -251,61 +251,61 @@ disqus: https-mqb-readthedocs-io
 
 ### Смена скина приборной панели
 
-Вариант 1 - Стандартная схема  
-![Screenshot](../images/MQB/AID-themes/StandartTheme.jpg)
-```
-Блок 17 → Адаптация  
-> Tube_version - варианты 0, 5, 6, 7, 8, 9
-→ Применить
-```
+=== "Приборные панели VW 5NA920790A/B/C, 5NA920791A/B/C"
 
-Вариант 2 - Стандартная схема c большим количеством точек  
-![Screenshot](../images/MQB/AID-themes/StandartThemeMoreDots.jpg)
-```
-Блок 17 → Адаптация  
-> Tube_version - вариант 1
-→ Применить
-```
+    Вариант 1 - Стандартная схема  
+    ![Screenshot](../images/MQB/AID-themes/StandartTheme.jpg)
+    ```
+    Блок 17 → Адаптация  
+    > Tube_version - варианты 0, 5, 6, 7, 8, 9
+    → Применить
+    ```
+    Вариант 2 - Стандартная схема c большим количеством точек  
+    ![Screenshot](../images/MQB/AID-themes/StandartThemeMoreDots.jpg)
+    ```
+    Блок 17 → Адаптация  
+    > Tube_version - вариант 1
+    → Применить
+    ```
+    Вариант 3 - Alltrack тема  
+    ![Screenshot](../images/MQB/AID-themes/AllTrackTheme.jpg)
+    ```
+    Блок 17 → Адаптация  
+    > Tube_version - вариант 2
+    → Применить
+    ```
+    Вариант 4 - GTI / GTD тема  
+    ![Screenshot](../images/MQB/AID-themes/GTITheme.jpg)
+    ```
+    Блок 17 → Адаптация  
+    > Tube_version - вариант 3
+    → Применить
+    ```
+    Вариант 5 - R-line тема  
+    ![Screenshot](../images/MQB/AID-themes/RTheme.jpg)
+    ```
+    Блок 17 → Адаптация  
+    > Tube_version - вариант 4
+    → Применить
+    Блок 17 → Кодирование  
+    > Vehicle variant - варианты 2, 4
+    → Применить
+    ```
+    Вариант 6 - R-line тема со логотипом R-line внизу приборной панели  
+    ![Screenshot](../images/MQB/AID-themes/RThemeWithLogo.jpg)
+    ```
+    Блок 17 → Адаптация  
+    > Tube_version - вариант 4
+    → Применить
+    Блок 17 → Кодирование  
+    > Vehicle variant - варианты 6, 8
+    → Применить
+    ```
+    > логин-пароль 20103
 
-Вариант 3 - Alltrack тема  
-![Screenshot](../images/MQB/AID-themes/AllTrackTheme.jpg)
-```
-Блок 17 → Адаптация  
-> Tube_version - вариант 2
-→ Применить
-```
+=== "Приборные панели VW 5NA920790D"
 
-Вариант 4 - GTI / GTD тема  
-![Screenshot](../images/MQB/AID-themes/GTITheme.jpg)
-```
-Блок 17 → Адаптация  
-> Tube_version - вариант 3
-→ Применить
-```
-
-Вариант 5 - R-line тема  
-![Screenshot](../images/MQB/AID-themes/RTheme.jpg)
-```
-Блок 17 → Адаптация  
-> Tube_version - вариант 4
-→ Применить
-Блок 17 → Кодирование  
-> Vehicle variant - варианты 2, 4
-→ Применить
-```
-
-Вариант 6 - R-line тема со логотипом R-line внизу приборной панели  
-![Screenshot](../images/MQB/AID-themes/RThemeWithLogo.jpg)
-```
-Блок 17 → Адаптация  
-> Tube_version - вариант 4
-→ Применить
-Блок 17 → Кодирование  
-> Vehicle variant - варианты 6, 8
-→ Применить
-```
-
-> логин-пароль 20103
+=== "Приборные панели Seat"
 
 ### Сброс Сервисного Интервала
 
