@@ -5,7 +5,7 @@ site_author: Kanaduchi
 site_url: http://www.vwcoding.ru
 
 # Hot news
-hot_news_date: 20.12.2021
+hot_news_date: 03.01.2022
 hot_news_title: Все ваши предложения и новые идеи можно присылать на info@vwcoding.ru
 hot_news_title_en: Fill free to send all your ideas and updates to info@vwcoding.ru
 hot_news: >
@@ -22,7 +22,7 @@ repo_url: https://github.com/Kanaduchi/vwcoding
 edit_uri: https://github.com/Kanaduchi/vwcoding/edit/master/docs/
 
 # Copyright
-copyright: Copyright &copy; 2021 - vwcoding.ru (info@vwcoding.ru)
+copyright: Copyright &copy; 2022 - vwcoding.ru (info@vwcoding.ru)
 
 # Main directory
 docs_dir: docs/
@@ -104,6 +104,7 @@ plugins:
           Обратная связь: Feedback
           История изменений: History of changes
           Поддержать проект: Support of project
+          Eeprom память: Eeprom memory
   - search:
       lang:
         - en
@@ -202,6 +203,7 @@ nav:
           - Кодирование: MQB/tires.md
           - Генератор параметрии: MQB/tiresCoding.md
       - Дооснащение: MQB/addons.md
+      - Eeprom память: MQB/eeprom.md
   - Платформа MLB-Evo:
       - Информация: MLB-Evo/main.md
       - Ассистенты водителя: MLB-Evo/assistants.md
