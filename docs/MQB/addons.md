@@ -10,8 +10,8 @@
 5. Проводка  
 
 Схема подключения:  
-1 пин камера А5 (R242) --→ 6 пин радара АСС (J428)  
-7 пин камера А5 (R242) --→ 5 пин радара АСС (J428)  
+1 пин камера А5 (R242) -→ 6 пин радара АСС (J428)  
+7 пин камера А5 (R242) -→ 5 пин радара АСС (J428)  
 6 пин — "+"  
 5 пин — "-"  
 2 пин — Can extended low - 8 пин в разъеме зеркала  
@@ -26,13 +26,13 @@
 
 ### Сенсорная панель климата
 
-```
-Блок 08 → Кодирование
+``` yaml
+Блок 08 → Кодирование:
 > Climate_style поменять с display на Anzeige Front und Heck
 → Применить (с перезагрузкой блока)
 ```
-```
-Блок 08 → Адаптация
+``` yaml
+Блок 08 → Адаптация:
 > Detection_time_tap
 >> par_Detection_time_tap: 600 ms
 > Detection_time_hold
@@ -202,14 +202,14 @@
 
 Датчик 3Q0907643 ставится вместо штатного датчика грязного воздуха   
 
-```
-Блок 08 → Кодирование
-> Байт 9 — Бит 4-5 (10) - Датчик влажности наружнего воздуха установлен / Sensor_for_air_humidity_outside
+``` yaml
+Блок 08 → Кодирование:
+> Байт 9 – Бит 4-5 (10 - Датчик влажности наружнего воздуха установлен / Sensor_for_air_humidity_outside): Активировать
 > Reduction of window misting outside at high humidity: close over characteristic
 → Применить (с перезагрузкой блока)
 ```
-```
-Блок 08 → Адаптация
+``` yaml
+Блок 08 → Адаптация:
 > Reduction of window misting outside at high humitity
 >> param_Reduction_of_window_misting_outside_at_high_humitity: Matching coding
 → Применить
@@ -217,14 +217,14 @@
 
 ### DYNAUDIO 
 
-```
-Блок 19 → Адаптация
+``` yaml
+Блок 19 → Адаптация:
 Installation list: specified installations → Sound System, Not coded
 GW_Enable_CAN_Timeout_DTC - Sound System → Enabled
 → Применить
 ```
-```
-Блок 5F → Кодирование
+``` yaml
+Блок 5F → Кодирование:
 > byte_4_Channel_1_HT → not_installed
 > byte_4_Channel_1_TT → not_installed
 > byte_4_Channel_2_HT → not_installed
@@ -260,8 +260,8 @@ GW_Enable_CAN_Timeout_DTC - Sound System → Enabled
 > byte_11_Sound_System → Sound_System_external_MOST
 → Применить (с перезагрузкой блока)
 ```
-```
-Блок 5F → Адаптация
+``` yaml
+Блок 5F → Адаптация:
 > Sound System → yes
 > Startup_screen_sticker_HMI: 2
 > Car_Function_List_BAP_Gen2 - Amplifier_0x2D → not activated
@@ -284,29 +284,30 @@ GW_Enable_CAN_Timeout_DTC - Sound System → Enabled
     > Оранжево-коричневый — к оранжевому коричневому Quadlock — серый разъем 12 контакт  
     ОБЯЗАТЕЛЬНО ЗАКРЫВАЙТЕ БАГАЖНИК ПРИ ПРОВЕРКЕ!  
 
-```
+``` yaml
 Блок 19 → Список оборудования
 > 6C (КАМЕРА) → установлено
 → Применить
 ```
 Настройка ГУ
-```
-Блок 5F → Кодирование
-> Байт 19 - 4 бит (byte_19_Rear_View_Low) → Выключить (not activated)
+``` yaml
+Блок 5F → Кодирование:
+> Байт 19 – Бит 4 (byte_19_Rear_View_Low): Деактивировать
 → Применить
 ```
-```
-Блок 5F → Адаптация
-> Car_Function_List_BAP_Gen2 - VPS_0x0B → Активирован
-> Car_Function_List_BAP_Gen2 - VPS_0x0B_msg_bus  → Databus заменить на Infotainment
+``` yaml
+Блок 5F → Адаптация:
+> Car_Function_List_BAP_Gen2
+>> VPS_0x0B: Активировать
+>> VPS_0x0B_msg_bus: Databus заменить на Infotainment
 → Применить
 ```
 > логин-пароль 20103
 
 Настройка парковочного ассистента
-```
-Блок 76 → Кодирование
-> Байт 2 - Бит 4-5 → 10 Camera Type: Rear View Camera (RVC) установлена
+``` yaml
+Блок 76 → Кодирование:
+> Байт 2 – Бит 4-5 (10 - Camera Type: Rear View Camera (RVC)): Активировать
 → Применить (с перезагрузкой блока)
 ```
 
@@ -315,14 +316,14 @@ GW_Enable_CAN_Timeout_DTC - Sound System → Enabled
 
 !!! warning "Установка китайской камеры"
     К ГУ можно так же подключить и китайскую камеру без поддержки траекторий. Но в этом случае необходимо будет поправить ряд кодировок:
-    ```
-    Блок 5F → Кодирование
-    > Байт 19 - 4 бит (byte_19_Rear_View_Low) → Вкключить (activate)
+    ``` yaml
+    Блок 5F → Кодирование:
+    > Байт 19 – Бит 4 (byte_19_Rear_View_Low): Активировать
     → Применить
     ```
-    ```
-    Блок 5F → Адаптация
-    > Car_Function_List_BAP_Gen2 - VPS_0x0B → Неактивно
+    ``` yaml
+    Блок 5F → Адаптация:
+    > Car_Function_List_BAP_Gen2 - VPS_0x0B: Деактивировать
     → Применить
     ```
 
@@ -354,12 +355,12 @@ GW_Enable_CAN_Timeout_DTC - Sound System → Enabled
 4. Пинуем ручки в разъемы стоек.  
 5. По порогу и по жгуту проводки подсветки ног прокладываем провода от стойки двери до блока Kessy и пинуем блок по инструкции.  
 
-```
-Блок В7 → Кодирование
-> Байт 0 - Бит 2 (Дверная ручка kessy слева на двери сзади слева, Activation of Kessy door handle, left rear door) → Поставить выбор
-> Байт 0 - Бит 3 (Дверная ручка kessy слева на двери сзади справа, Activation of Kessy door handle, right rear door) → Поставить выбор
-> Байт 1 - Бит 2 (Пассивный выход для двери сзади слева отключен, Passive entry left rear door handle) → Снять выбор
-> Байт 1 - Бит 3 (Пассивный выход для двери сзади справа отключен, Passive entry right rear door handle) → Снять выбор
+``` yaml
+Блок В7 → Кодирование:
+> Байт 0 – Бит 2 (Дверная ручка kessy слева на двери сзади слева, Activation of Kessy door handle, left rear door): Активировать
+> Байт 0 – Бит 3 (Дверная ручка kessy слева на двери сзади справа, Activation of Kessy door handle, right rear door): Активировать
+> Байт 1 – Бит 2 (Пассивный выход для двери сзади слева отключен, Passive entry left rear door handle): Деактивировать
+> Байт 1 – Бит 3 (Пассивный выход для двери сзади справа отключен, Passive entry right rear door handle): Деактивировать
 → Применить
 ```
 
@@ -374,7 +375,7 @@ GW_Enable_CAN_Timeout_DTC - Sound System → Enabled
 |-------------------------|:----------------------------------------------------------------:|
 | 2Q0907685B / 2Q0907686B | [(Скачать)](../parameters/DB_03C_7100_2G0_MB19_VW3260EUK0BA.xml) |
 
-```
+``` yaml
 Блок 19 → Список оборудования
 > 3C (Система смены полосы движения) → установлено
 > CF (Система смены полосы движения) → установлено
@@ -383,55 +384,57 @@ GW_Enable_CAN_Timeout_DTC - Sound System → Enabled
 → Применить
 ```
 Кодирование приборной панели
-```
-Блок 17 → Кодирование
+``` yaml
+Блок 17 → Кодирование:
 > Lane_change_assistant → yes
 > Lane_change_assistant_BAP → yes
 → Применить (с перезагрузкой блока)
 ```
 Кодирование адаптивного круиз
-```
-Блок 13 → Кодирование
+``` yaml
+Блок 13 → Кодирование:
 > Control_module_for_lane_assistance → installed
 > Lane_change_support → activated
 → Применить (с перезагрузкой блока)
 ```
 Кодирование ABS
-```
-Блок 03 → Кодирование
-> Байт 29 → активировать бит 7 (1ХХХХХХХ)
+``` yaml
+Блок 03 → Кодирование:
+> Байт 29 – Бит 7: Активировать (1ХХХХХХХ)
 → Применить (с перезагрузкой блока)
 ```
 Кодирование ГУ
-```
-Блок 5F → Кодирование
-> Car_Function_List_BAP_Gen2 - SWA_0x1A → activated
-> Car_Function_List_BAP_Gen2 - SWA_0x1A_msg_bus → Дополнительная шина данных (CAN_Extended)
-> Car_Function_Adaptations_Gen2 - menu_display_lane_assistant → activated
-> Car_Function_Adaptations_Gen2 - menu_display_lane_assistant_over_threshold_high → activated
+``` yaml
+Блок 5F → Кодирование:
+> Car_Function_List_BAP_Gen2
+>> SWA_0x1A → activated
+>> SWA_0x1A_msg_bus → Дополнительная шина данных (CAN_Extended)
+> Car_Function_Adaptations_Gen2
+>> menu_display_lane_assistant → activated
+>> menu_display_lane_assistant_over_threshold_high → activated
 ```
 
 Кодирование системы кругового обзора (если есть)
-```
-БлокБлок 6C → Кодирование
+``` yaml
+БлокБлок 6C → Кодирование:
 > equipment_RTA → installed
 → Применить (с перезагрузкой блока)
 ```
 Парковочный ассистент
-```
-БлокБлок 76 → Кодирование
+``` yaml
+БлокБлок 76 → Кодирование:
 > Rear_Cross_Traffic - Alert → mit RCTA
 → Применить (с перезагрузкой блока)
 ```
 Камера ассистентов (если есть)
-```
-БлокБлок A5 → Кодирование
+``` yaml
+БлокБлок A5 → Кодирование:
 > SWA → Coded
 → Применить (с перезагрузкой блока)
 ```
 Ассистент смены полосы движения
-```
-БлокБлок 3C → Кодирование
+``` yaml
+БлокБлок 3C → Кодирование:
 > Pre_Sense → without_Pre_Sense
 > Rear_Cross_Traffic_Alert → with_RCTA
 > ECU for draw bar → no ECU for draw bar
@@ -448,16 +451,16 @@ GW_Enable_CAN_Timeout_DTC - Sound System → Enabled
 Для этого необходим новый переключатель 5G0941431BD и датчик света и дождя 5Q0955547C
 
 Установка переключателя
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > Aussenlicht_uebergreifend
 >> LDS_mit_AFL → Yes
 → Применить
 ```
 
 Установка датчика света и дождя
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > Lighting_Assist_Adaptation
 >> Regen_Lichtsensor → LIN_Regen_Licht_Sensor
 >> Feuchtesensor → Installed (если есть датчик влажности)
@@ -465,8 +468,8 @@ GW_Enable_CAN_Timeout_DTC - Sound System → Enabled
 
 После этих кодировок датчик света и дождя появляется в кодировании 9 блока.
 Прописываем в него кодировку:
-```
-Блок 09 → Кодирование
+``` yaml
+Блок 09 → Кодирование:
 >> подблок RLНS:
 > 3СА8DD — фары включаются не так поздно, где то при 1200lx
 > 3CA8D7 — фары включаются совсем поздно, при 800lx
