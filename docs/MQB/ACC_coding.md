@@ -7,26 +7,24 @@ disqus: https-mqb-readthedocs-io
     По умолчанию система ACC тормозит автомобиль, если на полосе слева едет медленный автомобиль (даже при пустой дороге).
 
 === "Кодирование в ODIS"
-    ```
-    Блок 13 → Кодирование
-    > Overtaking_right_prevention (Vermeidung für unzulässigen Überholvorgang)
-    > Установить Deactivated [Default: Activated]
+    ``` yaml
+    Блок 13 → Кодирование:
+    > Overtaking_right_prevention (Vermeidung für unzulässigen Überholvorgang): Деактивировать
     → Применить
     ```
 === "Кодирование в OBD11"
-    ```
-    Блок 13 (Адаптивный круиз контроль) → Безопасный доступ → Логин-пароль 20103
+    ``` yaml
+    Блок 13 (Адаптивный круиз контроль) → Безопасный доступ → Логин-пароль 20103:
     > Длинное кодирование
-    > Overtaking_right_prevention → Установить Deactivated [Default: Activated]
+    > Overtaking_right_prevention: Деактивировать
     → Применить
     ```
 === "Кодирование в VCDS" 
     ```
     13 Блок Adaptive Cruise Control  
-    2 Байт → 5 Бит: Overtaking_right_prevention - выключить  
-    Выход   
-    Сохранить
-    ```   
+    - Байт 2 – Бит 5 (Overtaking_right_prevention): Деактивировать  
+    Выход → Сохранить
+    ``` 
     ![Screenshot](../images/MQB/overtake.png)
 
 > логин-пароль 20103
@@ -34,18 +32,16 @@ disqus: https-mqb-readthedocs-io
 ### Активация выбора режима работы Адаптивного Круиз Контроля (АСС), независимо от выбранного Профиля езды
 
 === "Кодирование в ODIS"
-    ```
-    Блок 13 → Кодирование
+    ``` yaml
+    Блок 13 → Кодирование:
     > Drive_pmode_selection - Меню MMI Адаптивный круиз контроль (ACC)
     → Применить
     ```
 === "Кодирование в VCDS" 
-    ```
-    13 Блок Adaptive Cruise Control  
-    Кодирование - 07 → Длинное кодирование  
-    Байт 3 → бит 7: Drive_pmode_selection, 0=MMI menu ACC / 1=Driving profile selection → снимаем галочку  
-    Выход    
-    Сохранить
+    ``` yaml
+    Блок 13 Adaptive Cruise Control → Кодирование → Длинное кодирование:
+    Байт 3 – Бит 7 (Drive_pmode_selection, 0=MMI menu ACC / 1=Driving profile selection): Деактивировать 
+    Выход → Сохранить
     ``` 
     ![Screenshot](../images/MQB/acc.png)
 
@@ -59,13 +55,13 @@ disqus: https-mqb-readthedocs-io
 
 Требования к прошивкам:  
 ```
-3QF907561, 5Q0907561 - SW 0780, H10-H11  
-2Q0907561, 2Q0907572 - SW 0383, H01-H04
+3QF907561, 5Q0907561: SW 0780, H10-H11  
+2Q0907561, 2Q0907572: SW 0383, H01-H04
 ```
 
-```
-Блок 13 → Кодирование  
-> Байт 11 - бит 0: Pretriggertime_reduction - деактивировать  
+``` yaml
+Блок 13 → Кодирование:
+> Байт 11 – Бит 0 (Pretriggertime_reduction): Деактивировать  
 → Применить
 ```
 
@@ -74,26 +70,26 @@ disqus: https-mqb-readthedocs-io
 ![Screenshot](../images/MQB/pacc_offset.jpeg)  
 
 Пункт меню «Учитывать допустимую скорость» и непосредственно включает или выключает режим регулирования скорости АСС в зависимости от знаков в навигации или распознанных камерой.
-```
-Блок 13 → Кодирование  
-> Tempolimitassistent_CarMenu — активировать
+``` yaml
+Блок 13 → Кодирование:
+> Tempolimitassistent_CarMenu: Активировать
 ```
 
 Пункт настроек допустимых отклонений в меню «Адаптивного Круиз Контроля»
-```
-Блок 13 → Кодирование  
+``` yaml
+Блок 13 → Кодирование:
 > zul_Regelabweichung_CarMenu — large
 ```
 
 Выставленные Вами для того или иного знака ограничения будут сохраняться и автоматически подставляться каждый раз при распознавании этих знаков.
-```
-Блок 13 → Кодирование  
+``` yaml
+Блок 13 → Кодирование:
 > pACC_Learning_drivers_offset — activated
 ```
 
 ### Настройка предупреждения Front Assist
-```
-Блок 13 → Кодирование  
-> adjustability_awv_pre_warning — деактивировать
-> default_value_awv_pre_warning — активировать
+``` yaml
+Блок 13 → Кодирование:
+> adjustability_awv_pre_warning: Деактивировать
+> default_value_awv_pre_warning: Активировать
 ```
