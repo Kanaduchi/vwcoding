@@ -24,8 +24,8 @@
 ### Автоматическая блокировка/разблокировка дверей для комплектаций Entry/Activ без Swing/Bolero:
 ``` yaml
 Блок 09 → Адаптация:
-> Access control - automatisches Verriegeln bei Geschwindigkeit → active
-> Access control - automatisches Entriegeln → active
+> Access control - automatisches Verriegeln bei Geschwindigkeit: Активировать
+> Access control - automatisches Entriegeln: Активировать
 > Access control - Autolock Autounlock wirkt auf Heck —→ active 
 → Применить
 ```
@@ -48,8 +48,8 @@
     Individuell selective Oeffnung Kessy – отдельное открытие при использовании системы безключевого доступа  
 ``` yaml
 Блок 09 → Адаптация:
-> Access control - automatisches Verriegeln bei Geschwindigkeit → active
-> Access control - automatisches Entriegeln → active
+> Access control - automatisches Verriegeln bei Geschwindigkeit: Активировать
+> Access control - automatisches Entriegeln: Активировать
 > Access control - ZV Türentriegelung → было Clobal Entriegelung
 → Применить
 ```
@@ -58,13 +58,13 @@
 ### Работа радиоканала брелока при запущенном двигателе
 ``` yaml
 Блок 09 → Адаптация:
-> Access control - Funk bei Klemme 15 ein → active
+> Access control - Funk bei Klemme 15 ein: Активировать
 → Применить
 ```
 Для 19 м.г.
 ``` yaml
 Блок 09 → Адаптация:
-> ZV allgemein - Funk bei Klemme 15 ein → active
+> ZV allgemein - Funk bei Klemme 15 ein: Активировать
 → Применить
 ```
 > логин-пароль 31347
@@ -72,7 +72,7 @@
 ### Работа сигнала при выключенном зажигании
 ``` yaml
 Блок 09 → Адаптация:
-> Auxiliary functions - Signalhorn ohne KL15 → active
+> Auxiliary functions - Signalhorn ohne KL15: Активировать
 → Применить
 ```
 > логин-пароль 31347
@@ -112,15 +112,15 @@
 ```
 ``` yaml
 Блок 09 → Адаптация:
-> Acknowledgement signals — Akustische Rueckmeldung entriegeln → значение "Active" (звук при открытии)
-> Acknowledgement signals — Akustische Rueckmeldung verriegeln → значение "Active" (звук при закрытии)
-> Acknowledgement signals — Dauer der Akustischen Rueckmeldung vom Einfachhorn → значение kurz (kurz — короткий сигнал (по ощущениям только начинается сигнал и тут же обрывается); normal — нормальный, чуть длиннее чем короткий (звук как при обычном начатии на "бибикалку"))
+> Acknowledgement signals — Akustische Rueckmeldung entriegeln:  "Active" (звук при открытии)
+> Acknowledgement signals — Akustische Rueckmeldung verriegeln:  "Active" (звук при закрытии)
+> Acknowledgement signals — Dauer der Akustischen Rueckmeldung vom Einfachhorn:  kurz (kurz — короткий сигнал (по ощущениям только начинается сигнал и тут же обрывается); normal — нормальный, чуть длиннее чем короткий (звук как при обычном начатии на "бибикалку"))
 > Acknowledgement signals - Optical feedback during locking → Decelerate
-> Acknowledgement signals - Optische Rueckmeldung Komfortschliessen → active
+> Acknowledgement signals - Optische Rueckmeldung Komfortschliessen: Активировать
 > Acknowledgement signals - Optische Rueckmeldung 3.Bremsleuchte → not active
-> Acknowledgement signals — Menuesteuerung akustische Rueckmeldung → значение "Active" (пункт в Swing'е в разделе "отпирание/запирание…")
-> Acknowledgement signals - Akustische Rueckmeldung global → active
-> Acknowledgement signals — Akustische Rueckmeldung Signalhorn → значение "Active" (звук)
+> Acknowledgement signals — Menuesteuerung akustische Rueckmeldung:  "Active" (пункт в Swing'е в разделе "отпирание/запирание…")
+> Acknowledgement signals - Akustische Rueckmeldung global: Активировать
+> Acknowledgement signals — Akustische Rueckmeldung Signalhorn:  "Active" (звук)
 → Применить
 ```
 > логин-пароль 31347
@@ -173,7 +173,7 @@
 Для 19 м.г.:
 ``` yaml
 Блок 09 → Адаптация:
-> ZV Komfort (Fensterheber)-Freigabenachlauf FH bei Tueroeffnen → active
+> ZV Komfort (Fensterheber)-Freigabenachlauf FH bei Tueroeffnen: Активировать
 → Применить
 ```
 > логин-пароль 31347
@@ -181,13 +181,13 @@
 ### Комфортное управление стеклоподъемником двери водителя с штатного брелока
 ``` yaml
 Блок 09 → Адаптация:
-> Access control 2 - Comfort closing → active
-> Access control 2 - Comfort opening → active
-> Access control 2 - Fahrertuerbedienung Fensterheber oeffnen → active
-> Access control 2 - Fahrertuerbedienung Fensterheber schliessen → active
-> Access control 2 - Funk Komfort oeffnen → active
-> Access control 2 - Funk Komfort schliessen → active
-> Access control 2 - Komfortbedienung global → active
+> Access control 2 - Comfort closing: Активировать
+> Access control 2 - Comfort opening: Активировать
+> Access control 2 - Fahrertuerbedienung Fensterheber oeffnen: Активировать
+> Access control 2 - Fahrertuerbedienung Fensterheber schliessen: Активировать
+> Access control 2 - Funk Komfort oeffnen: Активировать
+> Access control 2 - Funk Komfort schliessen: Активировать
+> Access control 2 - Komfortbedienung global: Активировать
 > Access control 2 - Menuesteuerung Komfortbedienung einstellbar → adjustable
 → Применить
 ```
@@ -196,11 +196,11 @@
 У кого простая магнитола blues достаточно активировать:
 ``` yaml
 Блок 09 → Адаптация:
-> Access control 2 - Comfort closing → active
-> Access control 2 - Comfort opening → active
-> Access control 2 - Funk Komfort oeffnen → active
-> Access control 2 - Funk Komfort schliessen → active
-> Access control 2 - Komfortbedienung global → active
+> Access control 2 - Comfort closing: Активировать
+> Access control 2 - Comfort opening: Активировать
+> Access control 2 - Funk Komfort oeffnen: Активировать
+> Access control 2 - Funk Komfort schliessen: Активировать
+> Access control 2 - Komfortbedienung global: Активировать
 → Применить
 ```
 > логин-пароль 31347

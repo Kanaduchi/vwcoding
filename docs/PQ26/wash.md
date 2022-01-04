@@ -3,7 +3,7 @@
 ### Сервисное положение стеклоочистителей в меню Swing
 ``` yaml
 Блок 09 → Адаптация:
-> Windshield wiper - Menuesteuerung Frontwischer → active
+> Windshield wiper - Menuesteuerung Frontwischer: Активировать
 → Применить
 ```
 > логин-пароль 31347
@@ -22,8 +22,8 @@
 ### Дополнительный взмах передних стеклоочистителей (дотирка капель)
 ``` yaml
 Блок 09 → Адаптация:
-> Rear Window Wiper - Traenenwischen Heck → active
-> Windshield wiper - Traenenwischen Front Status → active
+> Rear Window Wiper - Traenenwischen Heck: Активировать
+> Windshield wiper - Traenenwischen Front Status: Активировать
 → Применить
 ```
 > логин-пароль 31347
@@ -85,7 +85,7 @@
     Задний дворник начинает срабатывать при продолжительной непрерывной работе передних дворников на 2 скорости.
 ``` yaml
 Блок 09 → Адаптация:
-> Rear Window Wiper - Automatisches Heckwischen  → active
+> Rear Window Wiper - Automatisches Heckwischen : Активировать
 → Применить
 ```
 > логин-пароль 31347

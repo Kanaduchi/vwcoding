@@ -5,7 +5,7 @@ disqus: https-mqb-readthedocs-io
 :octicons-verified-24: Audi
 ``` yaml
 Блок 46 → Кодирование:
-> central_locking_system_lock_unlock_at_engine_running: not_active → active
+> central_locking_system_lock_unlock_at_engine_running: not_active: Активировать
 → Применить
 ```
 
@@ -13,16 +13,16 @@ disqus: https-mqb-readthedocs-io
 :octicons-verified-24: Audi
 ``` yaml
 Блок 46 → Кодирование:
-> automatic_opening: not_active → active
-> automatic_closing: not_active → active
-> keyless_light_illumination: not_active → active
+> automatic_opening: not_active: Активировать
+> automatic_closing: not_active: Активировать
+> keyless_light_illumination: not_active: Активировать
 → Применить
 ```
 
 ``` yaml
 Блок 46 → Адаптация:
 > Personalized_settings_vehicle
->> Keyless_access_automatic_open: not_active → active
+>> Keyless_access_automatic_open: not_active: Активировать
 → Применить
 ```
 

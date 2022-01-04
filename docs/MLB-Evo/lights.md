@@ -19,7 +19,7 @@ disqus: https-mqb-readthedocs-io
 
 ``` yaml
 Блок 9 → Кодирование:
-> lowbeam_at_flash: not_active → active
+> lowbeam_at_flash: not_active: Активировать
 → Применить
 ``` 
 

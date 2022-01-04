@@ -116,7 +116,7 @@ Corresponding value adjust default: 00100111
 ```
 ``` yaml
 Блок 46 (Центральный модуль систем комфорта) → Кодирование:
-> central_locking_system_emergency_assist → active
+> central_locking_system_emergency_assist: Активировать
 → Применить 
 ```
 

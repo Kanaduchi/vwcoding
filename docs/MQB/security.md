@@ -127,7 +127,7 @@ disqus: https-mqb-readthedocs-io
 ``` yaml
 Блок B7 → Адаптация:
 > byte9_Vip
->> Сoding_kick and_close_function → активировать
+>> Сoding_kick and_close_function: Активировать
 → Применить
 ```
     
@@ -142,7 +142,7 @@ disqus: https-mqb-readthedocs-io
 === "Кодирование в ODIS"
     ``` yaml
     Блок 09 → Адаптация:
-    > Central Locking - Selective (Single) Door Locking → активировать
+    > Central Locking - Selective (Single) Door Locking: Активировать
     → Применить
     ```
 
@@ -162,7 +162,7 @@ disqus: https-mqb-readthedocs-io
 === "Кодирование в ODIS"
     ``` yaml
     Блок 09 → Адаптация:
-    > ZV allgemein (Access control) - Funk bei Klemme 15 ein → активировать
+    > ZV allgemein (Access control) - Funk bei Klemme 15 ein: Активировать
     → Применить
     ```
 

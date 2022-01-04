@@ -6,7 +6,7 @@ disqus: https-mqb-readthedocs-io
 === "Кодирование в ODIS"
     ``` yaml
     Блок 08 → Кодирование:
-    > Blower display during auto mode → активировать 
+    > Blower display during auto mode: Активировать 
     Байт 11 – Бит 6: Активировать (вместо значения 00001110 поставить значение 01001110)
     → Применить (с перезагрузкой блока)
     ```
@@ -37,9 +37,9 @@ disqus: https-mqb-readthedocs-io
 === "Кодирование в ODIS"
     ``` yaml
     Блок 08 → Адаптация:
-    > Speicherung der Sitzheizungsstufe Fahrer (Retention of driver’s seat heater level) → активировать 
+    > Speicherung der Sitzheizungsstufe Fahrer (Retention of driver’s seat heater level): Активировать 
     → Применить
-    > Speicherung der Sitzheizungsstufe Beifahrer активировать (Retention of passenger’s seat heater level) → активировать
+    > Speicherung der Sitzheizungsstufe Beifahrer активировать (Retention of passenger’s seat heater level): Активировать
     → Применить
     ```
     
@@ -139,7 +139,7 @@ disqus: https-mqb-readthedocs-io
     >> Convenience_consumption_mirror_heating_dependency → Independent_of_outside_temperature_without_switch
     → Применить 
     > Range_gain
-    >> Consumption_mirror_heating_in_heated_rear_window → active
+    >> Consumption_mirror_heating_in_heated_rear_window: Активировать
     ```
 === "Кодирование в OBD11"
     ``` yaml

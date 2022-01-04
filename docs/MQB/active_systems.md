@@ -106,7 +106,7 @@ disqus: https-mqb-readthedocs-io
     Чтобы, ESP не включалась обратно при скорости выше 100км/ч: 
     ``` yaml
     Блок 3-ABS/ESP → Адаптация:
-    > ESP activation depending on speed (Electronic stabilitin program) → Деактивировать
+    > ESP activation depending on speed (Electronic stabilitin program): Деактивировать
     → Применить
     ```
 

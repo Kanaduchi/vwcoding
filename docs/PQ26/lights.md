@@ -35,7 +35,7 @@ disqus: https-mqb-readthedocs-io
 Блок 09 → Адаптация:
 > Daytime running lights-Tagfahrlicht Dauerfahrlicht bei Handbremse abschalten — active
 Для 19 м.г.:
-> Aussenlicht_Front-Tagfahrlicht_Dauerfahrlicht_bei_Handbremse_abschalten → active
+> Aussenlicht_Front-Tagfahrlicht_Dauerfahrlicht_bei_Handbremse_abschalten: Активировать
 → Применить
 ```
 > логин-пароль 31347
@@ -102,8 +102,8 @@ disqus: https-mqb-readthedocs-io
 Блок 09 → Адаптация:
 > Leuchte23SL HLC7-Light_Function_D_23 → выбираем - Daytime running lights → сохранить
 > Leuchte24SL HRA69-Light_Function_D_24 → выбираем → Daytime running lights → сохранить
-> Leuchte23SL HLC7-Dimming_CD_23 → значение «75» → сохранить
-> Leuchte24SL HRA69-Dimming_CD_24 → значение «75» → сохранить
+> Leuchte23SL HLC7-Dimming_CD_23:  «75» → сохранить
+> Leuchte24SL HRA69-Dimming_CD_24:  «75» → сохранить
 → Применить
 ```
 > логин-пароль 31347

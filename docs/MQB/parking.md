@@ -6,7 +6,7 @@ disqus: https-mqb-readthedocs-io
 
 ``` yaml
 Блок 03 (Блок Электроника тормозной системы) → Адаптация:
-> Shutdown parking aid → Значение: 20km/h
+> Shutdown parking aid:  20km/h
 → Применить
 ```
 
