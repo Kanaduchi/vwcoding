@@ -14,15 +14,14 @@ disqus: https-mqb-readthedocs-io
     ```
 === "Кодирование в OBD11"
     ``` yaml
-    Блок 13 (Адаптивный круиз контроль) → Безопасный доступ → Логин-пароль 20103:
-    > Длинное кодирование
+    Блок 13 (Адаптивный круиз контроль) → Безопасный доступ → Логин-пароль 20103 > Длинное кодирование:
     > Overtaking_right_prevention: Деактивировать
     → Применить
     ```
 === "Кодирование в VCDS" 
     ```
-    13 Блок Adaptive Cruise Control  
-    - Байт 2 – Бит 5 (Overtaking_right_prevention): Деактивировать  
+    13 Блок Adaptive Cruise Control → Длинное кодирование:
+    > Байт 2 – Бит 5 (Overtaking_right_prevention): Деактивировать  
     Выход → Сохранить
     ``` 
     ![Screenshot](../images/MQB/overtake.png)
@@ -40,7 +39,7 @@ disqus: https-mqb-readthedocs-io
 === "Кодирование в VCDS" 
     ``` yaml
     Блок 13 Adaptive Cruise Control → Кодирование → Длинное кодирование:
-    Байт 3 – Бит 7 (Drive_pmode_selection, 0=MMI menu ACC / 1=Driving profile selection): Деактивировать 
+    > Байт 3 – Бит 7 (Drive_pmode_selection, 0=MMI menu ACC / 1=Driving profile selection): Деактивировать 
     Выход → Сохранить
     ``` 
     ![Screenshot](../images/MQB/acc.png)
