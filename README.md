@@ -14,8 +14,9 @@ This site is build with Markdown language. You can use the template below to add
         Some warning message
 
     ``` yaml
-    Block XX → Adaptation
-    > Name of parameter → activate
+    Block XX → Adaptation:
+    Name of volume/folder:
+    - Name of parameter: activate
     → Apply
     ```
 
@@ -51,8 +52,9 @@ If you want to help in translating this site to English please do follow steps:
         Предупреждение, если есть
 
     ``` yaml
-    Блок XX → Адаптация
-    > Название адаптации → активировать
+    Блок XX → Адаптация:
+    Название раздела:
+    - Название адаптации: Активировать
     → Применить
     ```
 
