@@ -12,28 +12,28 @@ disqus: https-mqb-readthedocs-io
 
 ### Список каналов передних фонарей VW Tiguan 2
 
-| Названия ламп                                 | BASIS LED                                 | MID LED                      |
-| --------------------------------------------- |:-----------------------------------------:| ----------------------------:|
-| Leuchte0BLK VLB36 / Leuchte1BLK VRB20         | Левый / Правый указатель поворота         |                              |
-| Leuchte2SL VLB10 / Leuchte3SL VRB21           | Левый / Правый управление ДХО             |                              |
-| Leuchte4TFL LB44 / Leuchte5TFL RB32           | Левый / Правый ДХО                        |                              |
-| Leuchte6ABL LC5 / Leuchte7ABL RB1             | Левый / Правый ближний свет               |  Левый / Правый ближний свет |
-| Leuchte8FL LB39 / Leuchte9FL RB2              | Левый / Правый дальний свет               |  Левый / Правый ДХО          |
-| Leuchte10SHUTTER LB23 / Leuchte11SHUTTER RB22 | Левый / Правый диагностика ближнего света |  Питание модуля / Пусто      |
-| Leuchte12NL LB45 / Leuchte13NL RB5            | Левый / Правый ПТФ                        |  Левый / Правый ПТФ          |
+| Названия ламп                                 |                 BASIS LED                 |                     MID LED |
+|-----------------------------------------------|:-----------------------------------------:|----------------------------:|
+| Leuchte0BLK VLB36 / Leuchte1BLK VRB20         |     Левый / Правый указатель поворота     |                             |
+| Leuchte2SL VLB10 / Leuchte3SL VRB21           |       Левый / Правый управление ДХО       |                             |
+| Leuchte4TFL LB44 / Leuchte5TFL RB32           |            Левый / Правый ДХО             |                             |
+| Leuchte6ABL LC5 / Leuchte7ABL RB1             |        Левый / Правый ближний свет        | Левый / Правый ближний свет |
+| Leuchte8FL LB39 / Leuchte9FL RB2              |        Левый / Правый дальний свет        |          Левый / Правый ДХО |
+| Leuchte10SHUTTER LB23 / Leuchte11SHUTTER RB22 | Левый / Правый диагностика ближнего света |      Питание модуля / Пусто |
+| Leuchte12NL LB45 / Leuchte13NL RB5            |            Левый / Правый ПТФ             |          Левый / Правый ПТФ |
 
 ### Список каналов задних фонарей VW Tiguan 2
 
-| Названия ламп                                                                | BASIS                                                         | HIGH                                               |
-| ---------------------------------------------------------------------------- |:-------------------------------------------------------------:| --------------------------------------------------:|
-| Leuchte16BLK SLB35BLK SL KC9 /<br/>Leuchte17TFL R BLK SRB3TFL R BLK SR KC3   |                                                               | Левый/Правый габаритный огонь                      |
-| Leuchte18BLK HLA60 / Leuchte19BLK HRC31                                      | Левый / Правый указатель поворота                             | Левый/Правый указатель поворота                    |
-| Leuchte20BR LA71 / Leuchte21BR RC8                                           | Левый / Правый тормозной сигнал на крыльях + габаритный огонь | Левый/Правый тормозной сигнал                      |
-| Leuchte22BR MA57                                                             | Центральный стоп-сигнал                                       | Центральный стоп-сигнал                            |
-| Leuchte23SL HLC10 / Leuchte24SL HRA65                                        | Левый / Правый габаритный огонь на задней двери               | Левый/Правый габаритный огонь на задней двери      |
-| Leuchte25KZL HA59                                                            | Подсветка номера                                              | Подсветка номера                                   |
-| Leuchte26NSL LA72 / Leuchte27NSL RC6                                         | Левый ПТФ / Пусто                                             | Левый ПТФ/ Cтоп-сигнал на крышке                   |
-| Leuchte28RFL LC11 / Leuchte29RFL RA64                                         | пусто / Правый задний ход                                     | Левый / Правый задний ход                          |
+| Названия ламп                                                              |                             BASIS                             |                                          HIGH |
+|----------------------------------------------------------------------------|:-------------------------------------------------------------:|----------------------------------------------:|
+| Leuchte16BLK SLB35BLK SL KC9 /<br/>Leuchte17TFL R BLK SRB3TFL R BLK SR KC3 |                                                               |                 Левый/Правый габаритный огонь |
+| Leuchte18BLK HLA60 / Leuchte19BLK HRC31                                    |               Левый / Правый указатель поворота               |               Левый/Правый указатель поворота |
+| Leuchte20BR LA71 / Leuchte21BR RC8                                         | Левый / Правый тормозной сигнал на крыльях + габаритный огонь |                 Левый/Правый тормозной сигнал |
+| Leuchte22BR MA57                                                           |                    Центральный стоп-сигнал                    |                       Центральный стоп-сигнал |
+| Leuchte23SL HLC10 / Leuchte24SL HRA65                                      |        Левый / Правый габаритный огонь на задней двери        | Левый/Правый габаритный огонь на задней двери |
+| Leuchte25KZL HA59                                                          |                       Подсветка номера                        |                              Подсветка номера |
+| Leuchte26NSL LA72 / Leuchte27NSL RC6                                       |                       Левый ПТФ / Пусто                       |              Левый ПТФ/ Cтоп-сигнал на крышке |
+| Leuchte28RFL LC11 / Leuchte29RFL RA64                                      |                   пусто / Правый задний ход                   |                     Левый / Правый задний ход |
     
 ### Список других ламп
 
@@ -52,20 +52,20 @@ Leuchte9FL RB2 - [Leuchte][9][FL] [R][B2]
 [R] - расположение - rechts (справа)/links (слева)  
 [B2] - Контакт на BCM (разъём В, пин 2)
 
-| Аббревиатура функции лампы | Немецкое название              | Русское название      |
-|:--------------------------:|:------------------------------:|:---------------------:|
+| Аббревиатура функции лампы | Немецкое название                                                                                                                    | Русское название      |
+|:---------------------------|:-------------------------------------------------------------------------------------------------------------------------------------|:----------------------|
 | ABL                        | <span style="font-weight:bold">A</span>b<span style="font-weight:bold">b</span>lend<span style="font-weight:bold">l</span>icht       | Ближний свет          |
-| AMBL                       | <span style="font-weight:bold">Amb</span>iente<span style="font-weight:bold">l</span>icht          | Атмосферная подсветка |
-| BLK                        | <span style="font-weight:bold">Bl</span>in<span style="font-weight:bold">k</span>en                | Поворотник            |
-| BR                         | <span style="font-weight:bold">Br</span>emslicht                 | Стоп-сигнал           |
-| FL                         | <span style="font-weight:bold">F</span>ern<span style="font-weight:bold">l</span>icht              | Дальний свет          |
-| FR                         | <span style="font-weight:bold">F</span>uss<span style="font-weight:bold">r</span>aumlicht          | Подсветка ног         |
-| HD                         | <span style="font-weight:bold">H</span>eck<span style="font-weight:bold">d</span>eckel             | Крышка багажника      |
+| AMBL                       | <span style="font-weight:bold">Amb</span>iente<span style="font-weight:bold">l</span>icht                                            | Атмосферная подсветка |
+| BLK                        | <span style="font-weight:bold">Bl</span>in<span style="font-weight:bold">k</span>en                                                  | Поворотник            |
+| BR                         | <span style="font-weight:bold">Br</span>emslicht                                                                                     | Стоп-сигнал           |
+| FL                         | <span style="font-weight:bold">F</span>ern<span style="font-weight:bold">l</span>icht                                                | Дальний свет          |
+| FR                         | <span style="font-weight:bold">F</span>uss<span style="font-weight:bold">r</span>aumlicht                                            | Подсветка ног         |
+| HD                         | <span style="font-weight:bold">H</span>eck<span style="font-weight:bold">d</span>eckel                                               | Крышка багажника      |
 | KZL                        | <span style="font-weight:bold">K</span>enn<span style="font-weight:bold">z</span>eichen<span style="font-weight:bold">l</span>euchte | Подсветка номера      |
-| NL                         | <span style="font-weight:bold">N</span>ebel<span style="font-weight:bold">l</span>icht             | ПТФ спереди           |
+| NL                         | <span style="font-weight:bold">N</span>ebel<span style="font-weight:bold">l</span>icht                                               | ПТФ спереди           |
 | NSL                        | <span style="font-weight:bold">N</span>ebel<span style="font-weight:bold">s</span>chluss<span style="font-weight:bold">l</span>icht  | ПТФ сзади             |
 | RFL                        | <span style="font-weight:bold">R</span>ueck<span style="font-weight:bold">f</span>ahr<span style="font-weight:bold">l</span>icht     | Задний ход            |
-| SL                         | <span style="font-weight:bold">S</span>tand<span style="font-weight:bold">l</span>icht             | Габариты              |
+| SL                         | <span style="font-weight:bold">S</span>tand<span style="font-weight:bold">l</span>icht                                               | Габариты              |
 | TFL                        | <span style="font-weight:bold">T</span>ag<span style="font-weight:bold">f</span>ahr<span style="font-weight:bold">l</span>icht       | ДХО                   |
 
 ### Тип ламп
@@ -73,8 +73,8 @@ Leuchte9FL RB2 - [Leuchte][9][FL] [R][B2]
 У каждой лампы можно указать её тип - Lasttypen
 
 ??? note "Возможные варианты ламп и их номер"
-    | Номер типа лампы | Описание типа лампы |
-    |------------------|------------------|
+    | Номер типа лампы | Описание типа лампы  |
+    |:------------------:|:------------------:|
     | 1 | LED Tagfahrlichtmodul Versorgung   |
     | 2 | Shutter; Diagnosesensierung für "LED low"   |
     | 3 | Xenon Abblendlicht   |
@@ -275,7 +275,7 @@ Lichtfunktion A, B, C, D, E, F, G, H — функции лампы в борто
 Lichtfunktion C 12 → Lichthupe generell (включается при моргании дальним)  
 Dimming direction CD 12 → maximum  (увеличение яркости)  
 Dimmwert CD 12 – 0 → 100
-```  
+```
 4. Задаем функции для правой фары: 
 ``` 
 Lichtfunktion C 13 → Lichthupe generell (включается при моргании дальним)   
@@ -286,7 +286,7 @@ Dimmwert CD 13 – 0 → 100
 ### Базовая калибровка фар 
 Проводится при наличии висящей AFS ошибки. Двигатель должен быть заведен, фары включены
 
-```
+``` yaml
 Блок 4B → Базовые установки (04) 
 > Базовая установка фар (002) → Прочитать
 > Берем руками руль (а/м заведенный, фары горят), крутим руль в левую сторону до упора и держим в таком положении руль 3с. 
