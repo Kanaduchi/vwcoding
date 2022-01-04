@@ -5,22 +5,22 @@ disqus: https-mqb-readthedocs-io
 
 Вместо эко-режима — включение кондиционера на максимум
 
-```
-Блок 08 → Кодирование
+``` yaml
+Блок 08 → Кодирование:
 > ACmax/ECO: ECO → ACmax
 → Применить (с перезагрузкой блока)
-```  
+```
 
 ### Раздельное включение подогрева булочек и подогрева спины при включении подогрева сидений
-```
-Блок 08 → Кодирование
+``` yaml
+Блок 08 → Кодирование:
 > Activation_seat_heating_and_backrest_heating: Coupled → ...
 → Применить (с перезагрузкой блока)
 ```
 
 ### Изменение длительности отображения настроек климата для задних пассажиров на MMI
-```
-Блок 08 → Адаптация
+``` yaml
+Блок 08 → Адаптация:
 > MMI display time during rear zone adjustment
 >> MMI_display_time_during_rear_zone_adjustment: 10 s → ...
 → Применить
@@ -28,8 +28,8 @@ disqus: https-mqb-readthedocs-io
 
 ### Настройка длительности работы предпускового подогревателя
 
-```
-Блок 08 → Адаптация
+``` yaml
+Блок 08 → Адаптация:
 > Auxiliary heating run on time:
 >> Auxiliary_heating_run_on_time: 10 min
 → Применить
