@@ -96,8 +96,8 @@ Fussraumbeleuchtung - подсветка ног
 Пример кодирования - активация "солнышка" и визуализации подсветки потолка  
 ![Screenshot](../images/MQB/dach.png)
 
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > Освещение салона, параметры / Interior_light_parameter
 >> p_ambientelicht_verbauinformation_HMI3 → 110
 → Применить
@@ -106,12 +106,12 @@ Fussraumbeleuchtung - подсветка ног
 Пример кодирования - активация визуализации подсветки ручек  
 ![Screenshot](../images/MQB/door.png)
 
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > Освещение салона, параметры / Interior_light_parameter
 >> p_ambientelicht_verbauinformation_HMI2 → 100
 → Применить
-```  
+```
 
 ### Установка фонаря на свободный канал
 
@@ -121,26 +121,27 @@ Fussraumbeleuchtung - подсветка ног
 
 Возможные функции:
 
-|Функция|Описание|
-|---|---|
+| Функция         | Описание               |
+|-----------------|------------------------|
 | Ambientelicht 1 | Солнышко над бардочком |
 | Ambientelicht 2 | Солнышко над бардочком |
-| Ambientelicht 3 | Солнышко двери |
-| Ambientelicht 4 | Пусто |
-| Ambientelicht 5 | Пусто |
+| Ambientelicht 3 | Солнышко двери         |
+| Ambientelicht 4 | Пусто                  |
+| Ambientelicht 5 | Пусто                  |
 
-```
+``` yaml
 Lasttyp 0 — LED Kleinleistung
 Lichtfunktion A 0 - Ambientelicht 1
 Dimmwert AB 0 — 99
-```   
+``` 
 
 ### Активация фонаря
 
 Если какое-то "солнышко" после включения не появилось, то необходимо активировать сам фонарь.   
 Например, активация фонаря подсветки ног:
 
-```
+``` yaml
+Блок 09 → Адаптация:
 > Освещение салона, конфигурация фонарей / Interior_light_lamp_configuration
 >> Fussraumbeleuchtung → installed
 ```
@@ -149,7 +150,8 @@ Dimmwert AB 0 — 99
 
 За значения яркости конкретного фонаря в 9 блоке отвечают следующие параметры:
 
-```
+``` yaml
+Блок 09 → Адаптация:
 > Освещение салона, параметры / Interior_light_parameter
 p_adaption_kundenwunsch_
 p_helligkeit_entriegelt_
@@ -173,7 +175,8 @@ p_helligkeit_Fzg_geschlossen_schluessel_ab_
 
 Яркость плафонов по умолчанию
 
-```
+``` yaml
+Блок 09 → Адаптация:
 > Освещение салона 2-го поколения / Interior_light_2nd_generation
 >> Defaultwert Ambienteprofil Mittelkonsole → 80
 >> Defaultwert Ambienteprofil Dach → 80
@@ -184,7 +187,8 @@ p_helligkeit_Fzg_geschlossen_schluessel_ab_
 
 Регулировка яркости
 
-```
+``` yaml
+Блок 09 → Адаптация:
 > Освещение салона 2-го поколения / Interior_light_2nd_generation
 >> Helligkeit Mittelkonsolenbeleuchtung nicht berechnen — не акт. (запрет на регулировку)
 >> Farbausgabe Mittelkonsolenbeleuchtung nicht berechnen — акт. (регулировка яркости)
@@ -196,8 +200,8 @@ p_helligkeit_Fzg_geschlossen_schluessel_ab_
 
 За это отвечают следующие параметры:
 
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > Освещение салона, параметры / Interior_light_parameter
 >> p_t verzoegerung einstieg innenlicht — задержка включения внутреннего освещения при входе, зажигание выключено
 >> p_t verzoegerung ausstieg innenlicht — задержка включения внутреннего освещения при выходе, зажигание выключено
@@ -214,8 +218,8 @@ p_helligkeit_Fzg_geschlossen_schluessel_ab_
 Включение для ламп двери ставим 0.8с, внутреннего освещения ставим 1.6с.   
 Подсветка ног остается так же и загорается первой, потом двери потом потолок.
 
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > Освещение салона, параметры / Interior_light_parameter
 >> p_t_verzoegerung_einstieg_fussraum:	    0,0 s
 >> p_t_verzoegerung_einstieg_tueren:	    0.8 s
@@ -226,8 +230,8 @@ p_helligkeit_Fzg_geschlossen_schluessel_ab_
 Выключения для дверей ставим так же 0.8с, для ног ставим 1.6с.   
 Свет с внутреннего освещения тухнет первым. Потом двери и потом только ноги.
 
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > Освещение салона, параметры / Interior_light_parameter
 >> p_t_verzoegerung_ausstieg_fussraum:	    1,6 s
 >> p_t_verzoegerung_ausstieg_tueren:	    0.8 s

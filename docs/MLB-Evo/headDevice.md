@@ -5,26 +5,23 @@ disqus: https-mqb-readthedocs-io
 
 Результат: слева внизу вместо ненужного "переключателя" AM/FM появляется иконка настройки радиостанций вручную
 
-```
-Блок 5F → Кодирование
+``` yaml
+Блок 5F → Кодирование:
 > byte_14_AM_disable
 выбираем «Вкл»
 → Применить (с перезагрузкой блока)
-```
-```
-ODIS E: 5F → кодирование → byte_14_AM_disable: ативировать
 ```
 
 > логин-пароль 20103
 
 ### Беспроводной Car Play
 
-```
-Блок 5F → Адаптация
+``` yaml
+Блок 5F → Адаптация:
 > Конфигурация
->> Apple_DIO_Wireless → Акт.
->> Google_GAL_Wireless → Акт.
->> wlan_5ghz_switch → Акт.
+>> Apple_DIO_Wireless: Активировать
+>> Google_GAL_Wireless: Активировать
+>> wlan_5ghz_switch: Активировать
 → Применить
 ```
 
@@ -32,8 +29,8 @@ ODIS E: 5F → кодирование → byte_14_AM_disable: ативирова
 
 ### Отключение автоматического запуска CarPlay или AndroidAuto при подключении смартфона
 :octicons-verified-24: Audi
-```
-Блок 5F - адаптация
+``` yaml
+Блок 5F → Адаптация:
 > function_configuration_media
 >> app_start_automatically_on_customer_device: on → off
 → Применить
@@ -43,8 +40,8 @@ ODIS E: 5F → кодирование → byte_14_AM_disable: ативирова
 
 ### Просмотр фото с USB или SD
 :octicons-verified-24: Audi
-```
-Блок 5F - адаптация
+``` yaml
+Блок 5F → Адаптация:
 > function_configuration_media
 >> picture_viewer: off → on
 → Применить
@@ -54,8 +51,8 @@ ODIS E: 5F → кодирование → byte_14_AM_disable: ативирова
 
 ### Активация MirrorLink (Для автомобилей, где активирован Audi Smartphone Interface)
 :octicons-verified-24: Audi
-```
-Блок 5F - адаптация
+``` yaml
+Блок 5F → Адаптация:
 > function_configuration_connectivity
 >> Mirror_link: off → on
 → Применить
@@ -65,8 +62,8 @@ ODIS E: 5F → кодирование → byte_14_AM_disable: ативирова
 
 ### Активация видео в движении
 
-```
-Блок 5F → Адаптация
+``` yaml
+Блок 5F → Адаптация:
 > Speed
 >> testmode_video_speed_off → 255.
 → Применить
@@ -83,7 +80,7 @@ ODIS E: 5F → кодирование → byte_14_AM_disable: ативирова
     Для автомобилей, оборудованных слотом под сим-карту возможность звонить с этой симки
 
 ```
-5F → Адаптация
+Блок 5F → Адаптация:
 > Vehicle_configuration
 >> Phone_module_operation_mode: data_only → voice_and_data
 >> Support_for_response_and_hold: off → on
@@ -98,7 +95,7 @@ ODIS E: 5F → кодирование → byte_14_AM_disable: ативирова
 ### Возможность подключения bluetooth-наушников к мультимедиа системе
 :octicons-verified-24: Audi
 ```
-5F → Кодирование
+Блок 5F → Кодирование:
 byte_16_Bluetooth_Headphones: off
 → Применить
 ```
@@ -106,7 +103,7 @@ byte_16_Bluetooth_Headphones: off
 ### Отключение блокировки части функций в MMI во время движения
 :octicons-verified-24: Audi
 ```
-5F → Адаптация
+Блок 5F → Адаптация:
 > Vehicle_configuration
 >> unblock_functions_while_piloted_driving: blocked
 → Применить
@@ -116,11 +113,11 @@ byte_16_Bluetooth_Headphones: off
 
 ### Отключение экрана выбора пользователя
 :octicons-verified-24: Audi
-```
-Блок 5F - адаптации
-> menu_IAA_PSO_over_threshold_high: activated → not_activated
-> menu_IAA_PSO_clamp_15_off: activated → not_activated
-> menu_IAA_PSO: activated → not_activated
+``` yaml
+Блок 5F → Адаптация:
+> menu_IAA_PSO_over_threshold_high: Деактивировать
+> menu_IAA_PSO_clamp_15_off: Деактивировать
+> menu_IAA_PSO: Деактивировать
 → Применить
 ```
 
@@ -128,8 +125,8 @@ byte_16_Bluetooth_Headphones: off
 
 ### Звук приветствия водителя
 :octicons-verified-24: Audi
-```
-Блок 5F - адаптации
+``` yaml
+Блок 5F → Адаптация:
 > function_configuration_audio
 >> welcome_sound: off → on
 → Применить и перезагрузить ГУ

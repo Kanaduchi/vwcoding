@@ -6,10 +6,10 @@ disqus: https-mqb-readthedocs-io
 !!! tip ""
     Подсветка всех кнопок в салоне загорается и гаснет плавно, смотрится очень естественно и красиво. 
     
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > Suchbeleuchtung_allgemein
->> KL58 Einschalten mit Rampe → Active
+>> KL58 Einschalten mit Rampe →  Active
 → Применить
 ```
 	
@@ -17,11 +17,11 @@ disqus: https-mqb-readthedocs-io
 
 ### Пульсация кнопки Старт-Стоп Engine
 
-```
-Блок В7 Kessy Безопасный доступ → Адаптация 
+``` yaml
+Блок В7 Kessy Безопасный доступ → Адаптация:
 > DeveloperCoding Search lights
->> ZAT_illumination_concept_mybeat_clamp58xt: activated
->> ZAT_illumination_modus_mybeat_clamp58xt: activated
+>> ZAT_illumination_concept_mybeat_clamp58xt: Активировать
+>> ZAT_illumination_modus_mybeat_clamp58xt: Активировать
 → Применить
 ```
 
@@ -32,24 +32,20 @@ disqus: https-mqb-readthedocs-io
 + [ODIS_E шкала на 30 цветов для машин без RGB для 09 блока (адаптации)](../odis-files/09 - Шкала на 30 цветов.PRE)    
 + [ODIS_E шкала на 10 цветов для машин без RGB для 09 блока (адаптации)](../odis-files/09 - Шкала на 9 цветов.PRE)
 
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > Interior_light_2nd_generation / Освещение салона 2-го поколения
 >> Mittelkonsolenbeleuchtung mehrfarbig:
 Старое значение: не акт.
 Новое значение: акт.
 → Применить
-```
-
-```	
+---
 > Interior_light_lamp_configuration / Освещение салона, конфигурация фонарей
 >> Ambientemenue mit globalem aus → акт.
 >> Ambientemenue mit alle Zonen → акт.
 >> Ambient_Farbliste_HMI → акт.
 → Применить
-```
-
-```
+---
 > Ambience_lightning_color_list / Ambientelicht Farbliste / Эстетическая подсветка
 Старое значение у всех: 0
 — Rotwert Farbe 1- 217
@@ -109,14 +105,14 @@ disqus: https-mqb-readthedocs-io
 
 Меню эстетической подсветки
 
-```
-Блок 19 → Кодирование
-> FPA_Funktion_AMB — включить
+``` yaml
+Блок 19 → Кодирование:
+> FPA_Funktion_AMB: Активировать
 → Применить (с перезагрузкой блока)
 ```
 
-```
-Блок 5F → Адаптация
+``` yaml
+Блок 5F → Адаптация:
 > Car_Function_Adaptations_Gen2
 >> Menu_display_ambient_illumination — Включ
 >> Menu_display_ambient_illumination_clamp_15_off — не активир.
@@ -126,8 +122,8 @@ disqus: https-mqb-readthedocs-io
 → Применить 
 ```
 
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > Interior_light_lamp_configuration / Освещение салона, конфигурация фонарей
 >> Ambientemenue mit globalem aus — акт.
 >> Ambientemenue mit alle Zonen — акт.
@@ -157,8 +153,8 @@ disqus: https-mqb-readthedocs-io
     Fahrprofil_10 — снег — голубой  
     Fahrprofil_11 — индивидуальный режим бездорожье  
 
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > Ambientelicht Zuordnung der Farbe zum Fahrprofi
 >> Fahrprofil_0 — 1
 >> Fahrprofil_1 — 1
@@ -180,8 +176,8 @@ disqus: https-mqb-readthedocs-io
 ```
 
 Скорость переключения профилей
-```
-Блок 19 → Адаптация
+``` yaml
+Блок 19 → Адаптация:
 > Driving Profile Selection Parameter 
 >> Driving Profile Selection Toogle Time Adaptation — вместо 2000 мс ставим 0
 → Применить
@@ -194,10 +190,10 @@ disqus: https-mqb-readthedocs-io
 !!! tip ""
     Изначально при открытии крышки багажника загорался свет не только в нем, но и в салоне
 
-```
-Блок 09 → Адаптация
-> Освещение салона 2го поколения - Innenlicht bei offenem Hechdeckei einschalten
-> Не акт.
+``` yaml
+Блок 09 → Адаптация:
+> Освещение салона 2го поколения
+> Innenlicht bei offenem Hechdeckei einschalten: Деактивировать
 → Применить
 ```
 

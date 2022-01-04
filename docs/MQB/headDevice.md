@@ -11,8 +11,8 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 ### Разблокировка инженерного меню  
 
 Перед этим возможно придется ODIS E [перевести в режим программирования](https://vwcoding.ru/odis-e/#_3)
-```
-Блок 5F → Адаптация
+``` yaml
+Блок 5F → Адаптация:
 > Режим разрабочика (Developer mode) → активировать
 ```
 
@@ -22,8 +22,8 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 Иногда при замене ГУ на другой, бывает что на нем установлен профиль другого автомобиля VW.   
 
 Пример для VW Tiguan:   
-```
-Блок 5F → Кодирование
+``` yaml
+Блок 5F → Кодирование:
 > byte_0_brand → _VW
 > byte_1_Car_Class → 3
 > byte_1_Car_Generation → 7
@@ -34,8 +34,8 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 
 ### Возможность одновременного подключения двух телефонов по bluetooth
 
-```
-Блок 5F → Адаптация
+``` yaml
+Блок 5F → Адаптация:
 > function_configuration_phone:
 >> Support_second_phone: none → меняем
 >> Support_for_response_and_hold: off → on
@@ -44,8 +44,8 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 → Применить 
 ```
 
-```
-Блок 17 → Кодирование  
+``` yaml
+Блок 17 → Кодирование:
 > telephone2_BAP - no → yes
 → Применить
 ```
@@ -60,8 +60,8 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 ### Отключение скачка громкости при старте магнитолы
 Иногда при включении ГУ громкость включается намного сильнее, чем она была задана при выключении машины.
 
-```
-Блок 5F → Адаптация
+``` yaml
+Блок 5F → Адаптация:
 > Adjustment_fm_tuner_mono_stereo
 >> l_hf_stereo_lower_threshold → 20 dBµV (было 37 dBµV)
 → Применить 
@@ -72,23 +72,18 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 ![Screenshot](../images/MQB/fm.jpg)
 
 === "Кодирование в ODIS"
-    ```
-    Блок 5F → Кодирование
-    > byte_14_AM_disable
-    выбираем «Вкл»
+    ``` yaml
+    Блок 5F → Кодирование:
+    > byte_14_AM_disable: Активировать
     → Применить (с перезагрузкой блока)
-    ```
-    ```
-    ODIS E: 5F → кодирование → byte_14_AM_disable: ативировать
     ```
 
 === "Кодирование в VCDS"
     ```
     5F - MMI / RNS  
     Кодирование - 07 → Длинное кодирование  
-    Байт 1 → Бит 1: byte_14_AM_disable  → ставим галочку  
-    Выход  
-    Сохранить
+    Байт 1 – Бит 1 (byte_14_AM_disable): Активировать  
+    Выход → Сохранить
     ```
     ![Screenshot](../images/MQB/am_radio.jpg) 
     
@@ -96,9 +91,9 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 
 ### Заставка ГУ
 
-```
-Блок 5F → Кодирование
-> 18 байт - меняем 00 на
+``` yaml
+Блок 5F → Кодирование:
+> Байт 18 – меняем 00 на
     01 — Hybrid
     02 — GTD
     03 — GTI
@@ -110,8 +105,8 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 ```
 
 Логотип музыкальной системы
-```
-Блок 5F → Адаптация
+``` yaml
+Блок 5F → Адаптация:
 > Startup_screen_sticker_hmi (по умолчанию стоит 0000) - меняем на
     1 — fender premium audio system
     2 — dynaudio
@@ -122,7 +117,7 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 
 === "Кодирование в ODIS"
 	```
-	Блок 5F → Кодирование
+	Блок 5F → Кодирование:
     > byte_17_Skinning
     Старое значение: Skin_1
     Новое значение: Skin_5
@@ -133,22 +128,21 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
     ```
     5F - MMI / RNS  
     Кодирование - 07 → Длинное кодирование  
-    Байт 17 → меняем Skin_1 на Skin_5  
-    Выход  
-    Сохранить  
+    Байт 17: меняем Skin_1 на Skin_5  
+    Выход → Сохранить  
     ```
 
 ### Видео в движении, Работа MirrorLink в движении
 :octicons-verified-24: Discover PRO
 
-```
-Блок 5F → Адаптация
+``` yaml
+Блок 5F → Адаптация:
 > nhtsa_properties:
->> nhtsa_limitation_switches_for_carplay_no_softKeyboard: activated → _not_activated (CarPlay, возможность вызова клавиатуры в движении)
->> nhtsa_limitation_switches_for_androidauto_limit_displayed_message_length: activated → _not_activated (AA,отключение ограничения длины выводимого сообщения в движении)
->> nhtsa_limitation_switches_for_androidauto_no_setup_configuration: activated → _not_activated (AA, возможность заходить в настройки в движении)
->> nhtsa_limitation_switches_for_androidauto_no_text_input: activated → _not_activated (AA, отключение запрета ввода текста в движении)
->> nhtsa_limitation_switches_for_androidauto_no_video_playback: activated → _not_activated (АА, возможность проигрывать видео в движении)
+>> nhtsa_limitation_switches_for_carplay_no_softKeyboard: Деактивировать (CarPlay, возможность вызова клавиатуры в движении)
+>> nhtsa_limitation_switches_for_androidauto_limit_displayed_message_length: Деактивировать (AA,отключение ограничения длины выводимого сообщения в движении)
+>> nhtsa_limitation_switches_for_androidauto_no_setup_configuration: Деактивировать (AA, возможность заходить в настройки в движении)
+>> nhtsa_limitation_switches_for_androidauto_no_text_input: Деактивировать (AA, отключение запрета ввода текста в движении)
+>> nhtsa_limitation_switches_for_androidauto_no_video_playback: Деактивировать (АА, возможность проигрывать видео в движении)
 → Применить 
 ```
 
@@ -158,8 +152,8 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 ### Меню в магнитоле для настройки приборной панели
 :octicons-verified-24: Skoda Octavia  
 
-```
-Блок 5F → Адаптация
+``` yaml
+Блок 5F → Адаптация:
 >> Car_function_list_bap_gen2_extended
 > display_configuration_0x45 → activate
 > display_configuration_0x45_msg_bus → CAN_Comfort
@@ -173,8 +167,8 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 !!! note ""
     На Тигуанах второго поколения работает в информационно командных системах Composition Media 6", Discover Media, Discover Pro без кодирования в 5F блоке.  
 
-```
-Блок 5F → Адаптация
+``` yaml
+Блок 5F → Адаптация:
 > Car_Function_Adaptations_Gen2
 > menu_display_compass → "active" (default not active)
 > menu_display_compass_over_threshold_high → "active" (default not active) 
@@ -191,10 +185,9 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
     После кодирования в блоке будет висеть нестираемая ошибка, никак не влияющая на функциональность
     
 === "Кодирование в ODIS"
-    ```
-    Блок 5F → Кодирование
-    > 24 байт (Navigation System)
-    > бит 02 → включить (было "02" 00000010, стало "06" 00000110)
+    ``` yaml
+    Блок 5F → Кодирование:
+    > Байт 24 – Бит 02 (Navigation System): Активировать (было "02" 00000010, стало "06" 00000110)
     → Применить (с перезагрузкой блока)
     ```
     
@@ -202,11 +195,10 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
     ```
     5F - MMI / RNS  
     Кодирование - 07 → Длинное кодирование  
-    Байт 24 → Бит 2: (Navigation System) → ставим галочку  
+    Байт 24 – Бит 2 (Navigation System): Активировать
     либо правим двоичное значение - было "02" 00000010, стало "06" 00000110  
-    Выход  
-    Сохранить
-    ```  
+    Выход → Сохранить
+    ```
     
 > логин-пароль 20103 
 
@@ -215,8 +207,8 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 !!! tip ""
     После адаптации необходимо перезагрузить магнитолу
     
-```
-Блок 5F → Адаптация
+``` yaml
+Блок 5F → Адаптация:
 >> Car_Function_Adaptations_Gen2
 > menu_display_driving_school - не активир.меняем на активир.
 > menu_display_driving_school_over_threshold_high - не активир меняем на активир.
@@ -227,16 +219,16 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 
 ### Включение персонализации
 
-```
-Блок 17 → Кодирование  
-> Байт 10 - Персонализация
+``` yaml
+Блок 17 → Кодирование:
+> Байт 10 – Персонализация
 выбираем «Вкл»
 → Применить
 ```
 > логин-пароль 20103
 
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > Персонализация / Personalisierung
 >> Personalisierung_Profilfunkion → profiles_active
 >> Personalisierung_aktiv → Active
@@ -250,22 +242,22 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 > логин-пароль 31347
 
 Активация персонализации
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > Персонализация / Personalisierung
 >> Profil_Variante → Konto (v. 1.x)
 ```
 Сохраняем, клацаем, запираем авто.  
 Создаем профили и далее меняем:
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > Персонализация / Personalisierung
 >> Profil_Variante → Konto (v. 2.x)
 ```
 Сохраняем, клацаем, запираем авто.  
 Меняем:
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > Персонализация / Personalisierung
 >> Profil_Variante → Konto (v. 1.x)
 ```
@@ -274,21 +266,21 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 ### Использование глонасс антенны для навигации и компаса
 :octicons-verified-24: Discover Pro · :octicons-verified-24: Discover Media
     
-```
-Блок 5F → Адаптация
+``` yaml
+Блок 5F → Адаптация:
 > Navigation_GNSS_Receiver_Setting:
->> default_hw_reception: not_activated
->> gps: not_activated (было activated)
->> galileo: not_activated
->> glonass: not_activated
->> compass: not_activated
->> external_gps_1: activated (было not_activated)
->> external_gps_2: not_activated
+>> default_hw_reception: Дективировать
+>> gps: Дективировать
+>> galileo: Дективировать
+>> glonass: Дективировать
+>> compass: Дективировать
+>> external_gps_1: Активировать
+>> external_gps_2: Дективировать
 → Применить
 ```
 
-```
-Блок 75 → Адаптация
+``` yaml
+Блок 75 → Адаптация:
 > GPS: internal_GPS_output_on_CAN
 > Navigation_Type: Type_2
 >> Gnss_data_rate:
