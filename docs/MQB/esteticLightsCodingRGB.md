@@ -171,8 +171,8 @@ SC8 – предохранитель
 
 ## Кодирование
 
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > Interior_light_lamp_configuration
 >> Ambiente_Applikationsleisten_in_Tuertafel → установл. (полоски в двери)
 >> Ambiente_Lautsprecher → не установл.
@@ -190,8 +190,8 @@ SC8 – предохранитель
 → Применить
 ```
 
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > Interior_light_2nd_generation
 >> Aufloesung Dimmzeit → 0.8
 >> weicher Farbwechsel → акт.
@@ -234,8 +234,8 @@ SC8 – предохранитель
 ```
 
 Яркость и плавность регулировки каналов
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > Interior_light_parameter
 >> p_adaption_kundenwunsch_tuer → 0.67 (линейность регулировки)
 >> p_helligkeit_entriegelt_tueren → 100
@@ -308,8 +308,8 @@ SC8 – предохранитель
 ```
 
 Отображение солнышек и графики на экране ГУ
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > Освещение салона, параметры / Interior_light_parameter
 >> p_ambienteumfang_mehrfarbig_HMI → 100
 >> p_ambienteumfang_mehrfarbig_HMI_2 → 100
@@ -319,8 +319,8 @@ SC8 – предохранитель
 ```
 
 Отображение солнышек и монохромной графики на экране ГУ
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > Освещение салона, параметры / Interior_light_parameter
 >> p_ambientelicht_verbauinformation_HMI → 1
 >> p_ambientelicht_verbauinformation_HMI_2 → 10001
@@ -330,16 +330,16 @@ SC8 – предохранитель
 ```
 
 Скорость смены цвета мс
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > Освещение салона, параметры / Interior_light_parameter
 >> p_t_HMI_verzoegerung_helligkeitswerte → 200
 → Применить
 ```
 
 Прописывание физических диодов
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > ambient_lighting_lin_slaves_modules
 
 >> pa_einzeladresse_slave_1 → 1
@@ -425,8 +425,8 @@ SC8 – предохранитель
 ```
 
 Прописывание групп регулировки диодов и их назначение
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > ambient_lighting_lin_slaves_groups
 
 >> pa_verbauinfo_gruppe_1 → многоцветный
@@ -492,8 +492,8 @@ SC8 – предохранитель
 ```
 
 Список базовых цветов
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > Ambience_lightning_color_list
 
 >> Rotwert Farbe 1 → 217
@@ -539,8 +539,8 @@ SC8 – предохранитель
 ```
 
 Вторая группа настраиваемых цветов
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > Ambience_lightning_color_list_2
 
 >> Rotwert Farbe 11 → 255
@@ -566,8 +566,8 @@ SC8 – предохранитель
 ```
 
 Цвета для диодов
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > Ambience_lightning_color_list_lin
 
 >> Rotwert_Farbe_1_lin → 120
@@ -613,8 +613,8 @@ SC8 – предохранитель
 ```
 
 Вторая часть цветов для диодов
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > Ambience_lightning_color_list_lin_2
 
 >> Rotwert_Farbe_11_lin → 255
@@ -640,8 +640,8 @@ SC8 – предохранитель
 ```
 
 Профили движения и номера цветов
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > Ambientelicht Zuordnung der Farbe zum Fahrprofil 
 
 >> pFahrprofil_0 → 1 профиль при заглушенной машине
@@ -663,23 +663,23 @@ SC8 – предохранитель
 → Применить
 ```
 
-```
-Блок 19 → Кодирование
-> FPA_Funktion_AMB → включить
+``` yaml
+Блок 19 → Кодирование:
+> FPA_Funktion_AMB: Активировать
 → Применить (с перезагрузкой блока)
 ```
 
 Увеличиваем скорость переключения профилей
-```
-Блок 19 → Адаптация
+``` yaml
+Блок 19 → Адаптация:
 > Driving Profile Selection Parameter 
 >> Driving Profile Selection Toogle Time Adaptation → вместо 2000 мс ставим 0
 → Применить
 ```
 
 Кодировки для подсветки карманов дверей
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > ambient_lighting_lin_slaves_groups
 >>  pa_verbauinfo_gruppe_7 → Multi_color
 >>  pa_lichtfunktion_gruppe_7 → door

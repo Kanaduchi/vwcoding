@@ -8,7 +8,7 @@ disqus: https-mqb-readthedocs-io
     
 Настройки для обычной нагрузки
 
-    Блок 65 → Адаптация
+    Блок 65 → Адаптация:
 
     > НОМ. давление для передней оси, обычный
     Старое значение: 255
@@ -61,30 +61,30 @@ disqus: https-mqb-readthedocs-io
 ![Screenshot](../images/MQB/analog_tires.png) 
 
 Активация в блоке ABS
-```
-Блок 03 → Кодирование
-> Байт 27 → включаем биты 4,5 (1-й вариант) или биты 4,5,6 (2-й вариант - для парк-пилота) 
-> Байт 28 → включаем бит 7
+``` yaml
+Блок 03 → Кодирование:
+> Байт 27: активируем биты 4,5 (1-й вариант) или биты 4,5,6 (2-й вариант - для парк-пилота) 
+> Байт 28 – Бит 7: Активировать
 → Применить (с перезагрузкой блока)
 ```
 
 Активация отображения на приборной панели
-```
-Блок 17 → Кодирование  
-> Байт 4 → включаем бит 0 - Indirect Tire Pressure Monitoring System(TPMS) installed (Индикатор контроля давления в шинах)
+``` yaml
+Блок 17 → Кодирование:
+> Байт 4 – Бит 0 (Indirect Tire Pressure Monitoring System(TPMS) installed / Индикатор контроля давления в шинах): Активировать
 → Применить (с перезагрузкой блока)
 ```
 
 Активация в меню магнитолы
-```
-Блок 5F → Адаптация
+``` yaml
+Блок 5F → Адаптация:
 > Car_Function_Adaptations_Gen2
->> menu_display_rdk → activate
->> menu_display_rdk_over_threshold_high → activate
+>> menu_display_rdk: Активировать
+>> menu_display_rdk_over_threshold_high: Активировать
 → Применить 
-
+---
 > Car_Function_List_BAP_Gen2
->> tire_pressure_system_0x07 → activate
+>> tire_pressure_system_0x07: Активировать
 >> tire_pressure_system_0x07_msg_bus → CAN_Comfort (возможно Suspension_data_bus)
 → Применить 
 ```

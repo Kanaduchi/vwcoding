@@ -1,8 +1,8 @@
 # НЕСТАНДАРТНЫЕ СВЕТОВЫЕ РЕШЕНИЯ
 
 ### ДХО (LED) совместно с фарами ближнего света
-```
-Блок 09 → Адаптация 
+``` yaml
+Блок 09 → Адаптация:
 > Leuchte4TFL LB43 - Light_Function_C_4 → Abblendlicht links
 > Leuchte4TFL LB43 - Dimming_CD_4 → 127
 > Leuchte5 TFL RB6 - Light_Function_C_5 → Abblendlicht rechts
@@ -12,17 +12,21 @@
 > логин-пароль 31347	
 
 ### Включение ДХО в режиме габаритных огней (переключатель света в положении габаритные огни, при включении света фар ДХО отключаются)
-```
-Блок 09 → Адаптация 
-> Daytime running lights - Standlicht aktiviert zusaetzlich Tagfahrlicht → active Для 19 м.г.:
->  Aussenlicht_Front — Standlicht aktiviert zusaetzlich Tagfahrlicht → акт.
+``` yaml
+Блок 09 → Адаптация:
+> Daytime running lights:
+>> Standlicht aktiviert zusaetzlich Tagfahrlicht: Активировать 
+---
+Для 19 м.г.:
+> Aussenlicht_Front:
+>> Standlicht aktiviert zusaetzlich Tagfahrlicht: Активировать
 → Применить
 ```
 > логин-пароль 31347	
 
 ### Притухание ДХО при включении указателей поворота на стороне работающего поворотника
-```
-Блок 09 → Адаптация 
+``` yaml
+Блок 09 → Адаптация:
 > Leuchte4TFL LB43 - Light_Function_G_4 → Blinken links Rampe
 > Leuchte4TFL LB43 - Dimming_GH_4 → 0 (или другое значение в %)
 > Leuchte4TFL LB43 - Dimming_Direction_GH_4 → minimize
@@ -34,8 +38,8 @@
 > логин-пароль 31347	
 
 ### Мигание ДХО вместе с поворотниками (в одной фазе)
-```
-Блок 09 → Адаптация 
+``` yaml
+Блок 09 → Адаптация:
 > Leuchte 4TFL LB43 - Lichtfunktion G 4 → Blinken links Dunkelpase
 > Leuchte 4TFL LB43 - Dimmwert GH 4 → 0
 > Leuchte 4TFL LB43 - Dimming Direction GH 4 → minimize
@@ -47,8 +51,8 @@
 > логин-пароль 31347	
 
 ### Притухание передних габаритов на стороне работающего указателя поворота
-```
-Блок 09 → Адаптация 
+``` yaml
+Блок 09 → Адаптация:
 > Leuchte2SL VLB22 - Light_Function_E_2 → Blinken links Rampe
 > Leuchte2SL VLB22 - Dimming_EF_2 → 0 (или другое значение в %)
 > Leuchte2SL VLB22 - Dimming_Direction_EF_2 → minimize
@@ -60,8 +64,8 @@
 > логин-пароль 31347	
 
 ### US-Standlicht Blinker (габаритные огни через указатели поворота вполнакала)
-```
-Блок 09 → Адаптация 
+``` yaml
+Блок 09 → Адаптация:
 > Leuchte 0 BLK VL B35 - Light_Function_C_0 → Standlicht
 > Leuchte 0 BLK VL B35 - Dimming_CD_0 → 35
 > Leuchte 0 BLK VL B35 - Dimming_Direction_CD_0 → maximize
@@ -79,8 +83,8 @@
 > логин-пароль 31347	
 
 ### US-Standlicht nur bei Standlicht (габаритные огни через указатели поворота вполнакала только в положении переключателя света – габаритные огни)
-```
-Блок 09 → Адаптация 
+``` yaml
+Блок 09 → Адаптация:
 > Leuchte 0 BLK VL B35 - Light_Function_A_0 → Standlicht Vorn
 > Leuchte 0 BLK VL B35 - Dimming_AB_0 → 35
 > Leuchte 0 BLK VL B35 - Light_Function_C_0 → Abblendlicht links
@@ -104,8 +108,8 @@
 > логин-пароль 31347	
 
 ### Гашение передних габаритов при включении ближнего/дальнего света фар
-```
-Блок 09 → Адаптация 
+``` yaml
+Блок 09 → Адаптация:
 > Leuchte2SL VLB22 - Light_Function_A_2 → Standlicht — меняем на Standlicht vorn
 > Leuchte3SL VRB36 - Light_Function_A_3 → Standlicht — меняем на Standlicht vorn
 → Применить
@@ -114,8 +118,8 @@
 
 ### Перемигивание передних габаритов в противофазе с указателями поворотов
 Вариант А - во время перемигивания на одной стороне — на другой стороне габарит погашен
-```
-Блок 09 → Адаптация 
+``` yaml
+Блок 09 → Адаптация:
 > Leuchte2SL VLB22 - Light_Function_E_2 → Blinken links Dunkelpase
 > Leuchte2SL VLB22 - Dimming_EF_2 → 100
 > Leuchte2SL VLB22 - Dimming_Direction_EF_2 → maximize
@@ -126,8 +130,8 @@
 ```
 Вариант Б - во время перемигивания на одной стороне — на другой стороне габарит горит
 * Работает только совместно с пунктом “Гашение передних габаритов при включении ближнего/дальнего света фар”
-```
-Блок 09 → Адаптация 
+``` yaml
+Блок 09 → Адаптация:
 > Leuchte2SL VLB22 - Light_Function_E_2 → Blinken links Dunkelpase
 > Leuchte2SL VLB22 - Light_Function_F_2 → Blinken rechts aktiv
 > Leuchte2SL VLB22 - Dimming_EF_2 → 100
@@ -141,16 +145,16 @@
 > логин-пароль 31347	
 
 ### Увеличение яркости ламп заднего хода
-```
-Блок 09 → Адаптация 
+``` yaml
+Блок 09 → Адаптация:
 > Leuchte28RFL C3 — Dimmer АВ 28 - 100% → меняем на 125%
 → Применить
 ```
 > логин-пароль 31347	
 
 ### Увеличение яркости ламп передних ПТФ
-```
-Блок 09 → Адаптация 
+``` yaml
+Блок 09 → Адаптация:
 > Leuchte12NL LB40 - Dimmer АВ 12 - 100% → меняем на 125%
 > Leuchte13NL RB3 - Dimmer АВ 12 - 100% → меняем на 125%
 → Применить
@@ -164,8 +168,8 @@
     Примерный вариант снижения срока службы приведен в таблице ниже.  
     ![Screenshot](../images/PQ26/lamp_table.png)  
 
-```
-Блок 09 → Адаптация 
+``` yaml
+Блок 09 → Адаптация:
 > Leuchte6ABL LB44 - Dimming_AB_6 → 100% - меняем на 120%
 > Leuchte7ABL RB5 - Dimming_AB_7 → 100% - меняем на 120%
 > Leuchte9FL RB7 - Dimming_AB_9 → 100% - меняем на 120%
@@ -175,8 +179,8 @@
 > логин-пароль 31347	
 
 ### Перемигивание ламп заднего хода с поворотниками при включении задней скорости и аварийной сигнализации
-```
-Блок 09 → Адаптация 
+``` yaml
+Блок 09 → Адаптация:
 > Leuchte28RFL C3 - Light_Function_C_28 → Blinken Links Hellphase
 > Leuchte28RFL C3 - Light_Function_D_28 → Blinken Rechts Hellphase
 > Leuchte28RFL C3 - Dimming_CD_28 → 0
@@ -186,8 +190,8 @@
 > логин-пароль 31347	
 
 ### Включение стоп-сигнала со стороны открытой двери
-```
-Блок 09 → Адаптация 
+``` yaml
+Блок 09 → Адаптация:
 > Leuchte20BR LA70 - Light_Function_C_20 → Tuerausstiegslichtv links (при откр.двери с левой стороны).
 > Leuchte20BR LA70 - Dimming_CD20 → 100
 > Leuchte20BR LA70 - Dimming_Direction_CD20 → maximize
@@ -199,8 +203,8 @@
 > логин-пароль 31347	
 
 ### Включение боковых указателей поворота при открытии багажника
-```
-Блок 09 → Адаптация 
+``` yaml
+Блок 09 → Адаптация:
 > Leuchte16BLK SLC11 - Light_Function_C_16 → Rear lid open
 > Leuchte16BLK SLC11 - Dimming_CD_16 → 50
 > Leuchte17 BLK SR A72 - Light_Function_C_17 → Rear lid open
