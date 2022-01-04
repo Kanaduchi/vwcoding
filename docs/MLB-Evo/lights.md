@@ -60,7 +60,7 @@ disqus: https-mqb-readthedocs-io
 
 ``` yaml
 Блок 9 → Кодирование:
-> drl_mmi: active
+> drl_mmi: Активировать
 → Применить
 ``` 
 
@@ -70,7 +70,7 @@ disqus: https-mqb-readthedocs-io
 
 ``` yaml
 Блок 9 → Кодирование:
-> drl_break: active
+> drl_break: Активировать
 → Применить
 ``` 
 

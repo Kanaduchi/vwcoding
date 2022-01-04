@@ -115,9 +115,11 @@ disqus: https-mqb-readthedocs-io
     
 ``` yaml
 Блок 09 → Адаптация:
-> Driving light and parking light-max_scheinwerfer_2limitieren → active – сохранить. 
+> Driving light and parking light:
+>> max_scheinwerfer_2limitieren: Активировать
 Для 19 м.г.:
-> Aussenlicht_Front-max_scheinwerfer_2limitieren → in_Betrieb_lassen изменить на акт. 
+> Aussenlicht_Front:
+>> max_scheinwerfer_2limitieren → in_Betrieb_lassen: Активировать
 → Применить
 ```
 > логин-пароль 31347
@@ -125,10 +127,10 @@ disqus: https-mqb-readthedocs-io
 ### Стробоскоп: ПТФ — дальний свет (при моргании дальним)
 ``` yaml
 Блок 09 → Адаптация:
-> Leuchte12NL LB40-Light_Function_G_12, с not active меняем на Headlamp flasher
-> Leuchte12NL LB40-Dimming_Direction_GH_12, с maximize меняем на minimize
-> Leuchte13NL RB3-Light_Function_G_13 с not active меняем на Headlamp flasher
-> Leuchte13NL RB3-Dimming_Direction_GH_13, с maximize меняем на minimize
+> Leuchte12NL LB40-Light_Function_G_12: с not active меняем на Headlamp flasher
+> Leuchte12NL LB40-Dimming_Direction_GH_12: с maximize меняем на minimize
+> Leuchte13NL RB3-Light_Function_G_13: с not active меняем на Headlamp flasher
+> Leuchte13NL RB3-Dimming_Direction_GH_13: с maximize меняем на minimize
 → Применить
 ```
 > логин-пароль 31347

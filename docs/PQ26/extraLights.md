@@ -14,8 +14,12 @@
 ### Включение ДХО в режиме габаритных огней (переключатель света в положении габаритные огни, при включении света фар ДХО отключаются)
 ``` yaml
 Блок 09 → Адаптация:
-> Daytime running lights - Standlicht aktiviert zusaetzlich Tagfahrlicht → active Для 19 м.г.:
->  Aussenlicht_Front — Standlicht aktiviert zusaetzlich Tagfahrlicht → акт.
+> Daytime running lights:
+>> Standlicht aktiviert zusaetzlich Tagfahrlicht: Активировать 
+---
+Для 19 м.г.:
+> Aussenlicht_Front:
+>> Standlicht aktiviert zusaetzlich Tagfahrlicht: Активировать
 → Применить
 ```
 > логин-пароль 31347	

@@ -193,7 +193,7 @@ disqus: https-mqb-readthedocs-io
 ``` yaml
 Блок 09 → Адаптация:
 > Освещение салона 2го поколения
-> Innenlicht bei offenem Hechdeckei einschalten: Деактивировать
+>> Innenlicht bei offenem Hechdeckei einschalten: Деактивировать
 → Применить
 ```
 

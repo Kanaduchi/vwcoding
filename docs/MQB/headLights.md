@@ -39,13 +39,13 @@ Fernlicht_assistent:
 === "Кодирование в ODIS"
     ``` yaml
     Блок 09 → Адаптация:
-    > Aussenlicht_uebergreifend:
-    >> Umfeldleuchte_als_Manoevrierleuchte: Активировать 
+    Aussenlicht_uebergreifend:
+    – Umfeldleuchte_als_Manoevrierleuchte: Активировать 
     → Применить
     ```
     ``` yaml
     Блок 6C → Кодирование:
-    - Manoeuvre_Light: Активировать
+    – Manoeuvre_Light: Активировать
     → Применить (с перезагрузкой блока)
     ```
 

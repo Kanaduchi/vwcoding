@@ -14,7 +14,8 @@
     Решает проблему с остановкой дворников на пол пути посредине стекла при выключении зажигания.
 ``` yaml
 Блок 09 → Адаптация:
-> Windshield wiper - Wischer stop bei KL15 aus → active меняем на not active
+> Windshield wiper:
+>> Wischer stop bei KL15 aus: Деактивировать
 → Применить
 ```
 > логин-пароль 31347

@@ -155,7 +155,7 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 ``` yaml
 Блок 5F → Адаптация:
 >> Car_function_list_bap_gen2_extended
-> display_configuration_0x45 → activate
+> display_configuration_0x45: Активировать
 > display_configuration_0x45_msg_bus → CAN_Comfort
 → Применить 
 ```

@@ -214,9 +214,9 @@ pACC (Predictive ACC) — это адаптивный круиз-контрол�
 > Initialization_concept_front_assist
 >> Initialization_1 — большая иконка ожидания готовности Front Assist в верхнем левом углу AID, Front Assist активируется только после начала движения, это значение стоит с завода; 
 >> Initialization_2 — маленькая иконка ожидания готовности Front Assist там же, где потом появляется иконка ACC, Front Assist активируется через пару секунд после включения зажигания и сразу видит препятствия перед машиной.
-> Automatic_driveaway_by_pretrigger → activated  
-> Automatic_driveaway_after_short_stop → activated  
-> Driveaway_by_triggerleaver → activated  
+> Automatic_driveaway_by_pretrigger: Активировать  
+> Automatic_driveaway_after_short_stop: Активировать  
+> Driveaway_by_triggerleaver: Активировать  
 > Pretriggertime_reduction → deactivated (увеличение времени ожидания при остановке до 10 секунд)  
 > FPK_functions → installed (если есть кнопка Drive Mode)
 > Overtaking_right_prevention → deactivated (обгон справа)
@@ -264,9 +264,9 @@ pACC (Predictive ACC) — это адаптивный круиз-контрол�
 **Настройка ГУ** 
 ``` yaml
 Блок 5F → Адаптация:
-> Car_Function_Adaptations_Gen2 - menu_display_ACC → activated
-> Car_Function_Adaptations_Gen2 - menu_display_ACC_over_threshold_high → activated
-> Car_Function_List_BAP_Gen2 - ACC_0x05 → activated
+> Car_Function_Adaptations_Gen2 - menu_display_ACC: Активировать
+> Car_Function_Adaptations_Gen2 - menu_display_ACC_over_threshold_high: Активировать
+> Car_Function_List_BAP_Gen2 - ACC_0x05: Активировать
 → Применить
 ```
 > логин-пароль 20103
@@ -274,7 +274,7 @@ pACC (Predictive ACC) — это адаптивный круиз-контрол�
 **Настройка парковочного ассистента** 
 ``` yaml
 Блок 76 → Кодирование:
-> Adaptive_cruise_control → activated
+> Adaptive_cruise_control: Активировать
 → Применить (с перезагрузкой блока)
 ```
 
@@ -293,7 +293,7 @@ pACC (Predictive ACC) — это адаптивный круиз-контрол�
 ``` yaml
 Блок 13 → Адаптация:
 > Predictive speed limit control
->> par Predictive speed limit control → activated
+>> par Predictive speed limit control: Активировать
 → Применить
 ```
 > логин-пароль 20103 

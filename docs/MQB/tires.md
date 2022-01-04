@@ -79,12 +79,12 @@ disqus: https-mqb-readthedocs-io
 ``` yaml
 Блок 5F → Адаптация:
 > Car_Function_Adaptations_Gen2
->> menu_display_rdk → activate
->> menu_display_rdk_over_threshold_high → activate
+>> menu_display_rdk: Активировать
+>> menu_display_rdk_over_threshold_high: Активировать
 → Применить 
 ---
 > Car_Function_List_BAP_Gen2
->> tire_pressure_system_0x07 → activate
+>> tire_pressure_system_0x07: Активировать
 >> tire_pressure_system_0x07_msg_bus → CAN_Comfort (возможно Suspension_data_bus)
 → Применить 
 ```

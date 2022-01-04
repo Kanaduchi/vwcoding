@@ -30,7 +30,7 @@ HCA - Указание блоку рулевого управления о на�
 ``` yaml
 Блок 44 (усилитель рулевого) → Кодирование:
 Ассистент движения по полосе, связ. с усилителем рул. управления
-> Heading Control Assistant: active
+> Heading Control Assistant: Активировать
  (Байт 03 – Бит 1 (heading_control_assist): Активировать)
 → Применить 
 ```
@@ -52,10 +52,10 @@ HCA - Указание блоку рулевого управления о на�
 
 ``` yaml
 Блок A5 (камера ассистентов) → Адаптация:
-> Lane_departure_warning_on_state → Selection_over_menu_default_on
+> Lane_departure_warning_on_state: Selection_over_menu_default_on
 → Применить 
 > Personalisation_for_lane_departure_warning
->> TT_activated_not_activated → activated изменить на last_setting
+>> TT_activated_not_activated: last_setting
 → Применить 
 ```
 
@@ -111,7 +111,7 @@ Corresponding value adjust default: 00100111
 
 ``` yaml
 Блок 13 (Адаптивный круиз-контроль) → Кодирование:
-> Emergency_steer_assist → activated
+> Emergency_steer_assist: Активировать
 → Применить 
 ```
 ``` yaml

@@ -27,6 +27,6 @@ disqus: https-mqb-readthedocs-io
 ``` yaml
 Блок 03 → Адаптация:
 > Straigt_line_control
->> Data: off → activated
+>> Data: Активировать
 → Применить
 ```

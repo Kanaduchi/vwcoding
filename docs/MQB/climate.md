@@ -122,12 +122,12 @@ disqus: https-mqb-readthedocs-io
 
 ``` yaml
 Блок 52 → Кодирование:
-> Байт 9 – Бит 2 (rear_window_heater_trigger): active
+> Байт 9 – Бит 2 (rear_window_heater_trigger): Активировать
 ```
 
 ``` yaml
 Блок 42 → Кодирование:
-> Байт 9 – Бит 2 (rear_window_heater_trigger): active
+> Байт 9 – Бит 2 (rear_window_heater_trigger): Активировать
 ```
 
 Отображение подогрева зеркал отдельным пунктом в меню потребителей систем комфорта:

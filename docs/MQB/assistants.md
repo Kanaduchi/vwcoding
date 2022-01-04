@@ -77,7 +77,7 @@ Sign Assist — Ассистент распознавания дорожных �
 HCA - Указание блоку рулевого управления о наличии Line Assist
 ``` yaml
 Блок 44 (усилитель рулевого) → Кодирование:
-> Heading_control_assist: active   
+> Heading_control_assist: Активировать   
  (Байт 03 – Бит 1: Активировать)   
 → Применить 
 ```
@@ -156,7 +156,7 @@ Lane Assist с адаптивным ведением по полосе — ис�
 >> Fernlicht_assistent
 > Erweiterte_Fernlichtsteuerung: AFS, FLA, Fernlicht ueber AFS → AFS, FLA, Fernlicht (GLW,MDF)
 > Menuesteuerung Fernlichtassistent: not available → available
-> Fernlichtassistent Reset: active → not active
+> Fernlichtassistent Reset: Деактивировать
 → Применить 
 ```
 
@@ -205,7 +205,7 @@ HCA - Указание блоку рулевого управления о на�
 === "Кодирование в ODIS"
     ``` yaml
     Блок 44 (усилитель рулевого) → Кодирование:
-    > Heading_control_assist: active   
+    > Heading_control_assist: Активировать   
      (Байт 03 – Бит 0: Активировать)   
     → Применить 
     ```

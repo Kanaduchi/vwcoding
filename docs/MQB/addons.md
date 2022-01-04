@@ -394,7 +394,7 @@ GW_Enable_CAN_Timeout_DTC - Sound System → Enabled
 ``` yaml
 Блок 13 → Кодирование:
 > Control_module_for_lane_assistance → installed
-> Lane_change_support → activated
+> Lane_change_support: Активировать
 → Применить (с перезагрузкой блока)
 ```
 Кодирование ABS
@@ -407,11 +407,11 @@ GW_Enable_CAN_Timeout_DTC - Sound System → Enabled
 ``` yaml
 Блок 5F → Кодирование:
 > Car_Function_List_BAP_Gen2
->> SWA_0x1A → activated
+>> SWA_0x1A: Активировать
 >> SWA_0x1A_msg_bus → Дополнительная шина данных (CAN_Extended)
 > Car_Function_Adaptations_Gen2
->> menu_display_lane_assistant → activated
->> menu_display_lane_assistant_over_threshold_high → activated
+>> menu_display_lane_assistant: Активировать
+>> menu_display_lane_assistant_over_threshold_high: Активировать
 ```
 
 Кодирование системы кругового обзора (если есть)
