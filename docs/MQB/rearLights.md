@@ -6,8 +6,8 @@ disqus: https-mqb-readthedocs-io
 !!! info ""
     Работа проверена на блоке BCM версии 5Q0937084DP H42  
 
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > Aussenlicht_Blinker
 >> PreCrash_RECAS → PreCrash_passiv меняем на PreCrash_activ
 >> Richtungs_blinken_links → не акт. в актив. - Бегущий поворотник слева.
@@ -26,8 +26,8 @@ disqus: https-mqb-readthedocs-io
 !!! tip ""
     Задние габариты, при включении поворотника отключаются, при отключении загораются обратно (каждый цикл мигания поворотника)
     
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > Leuchte16BLK SLB35BLK SL KC9
 >> Lichtfunktion G 16 — от not active до Blinken rechts Hellphase
 > Leuchte16SL HLC10
@@ -51,8 +51,7 @@ disqus: https-mqb-readthedocs-io
 
 ### Перемигивание ламп заднего хода с поворотниками при включении задней скорости и аварийки
 
-	Блок 09 → Адаптация 
-	
+	Блок 09 → Кодирование:
     > Leuchte 28RFL LC11 
     >> Lichtfunktion C → Active → меняем на → Blinken Links Hellphase
     >> Lichtfunktion D → остается → Not Active
@@ -75,8 +74,8 @@ disqus: https-mqb-readthedocs-io
     В интернете полно советов по заданию функции Tagfahrlicht.  
     Она некорректна!
 
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > Leuchte23SL HLC10 (левый фонарь)
 >> Lichtfunktion D 23 → (Dauerfahrlicht) Daytime running lights (было nicht aktiv)
 >> Dimmwert CD 23: 0 → 127
@@ -102,8 +101,8 @@ disqus: https-mqb-readthedocs-io
 ![Screenshot](../images/MQB/basicPTF.png)
 
 Фонарь на крышке левый
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > Leuchte23SL HLC10
 >> Lichtfunktion C 23 → Daytime running lights
 >> Lichtfunktion E 23 → Освещение багажного отсека или Luggage compartment light
@@ -114,8 +113,8 @@ disqus: https-mqb-readthedocs-io
 ```
 
 Фонарь на крышке правый
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > Leuchte24SL HRA65
 >> Lichtfunktion C 24 → Daytime running lights -16
 >> Lichtfunktion E 24 → Освещение багажного отсека или Luggage compartment light
@@ -126,8 +125,8 @@ disqus: https-mqb-readthedocs-io
 ```
 
 Фонарь на крыле левый
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > Leuchte20BR LA71
 >> Lichtfunktion C 20 → Daytime running lights
 >> Lichtfunktion E 20 → Стоп-сигнал или Brake light
@@ -137,8 +136,8 @@ disqus: https-mqb-readthedocs-io
 ```
 
 Фонарь на крыле правый
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > Leuchte21BR RC8
 >> Lichtfunktion C 21 → Daytime running lights
 >> Lichtfunktion E 21 → Стоп-сигнал или Brake light 
@@ -148,14 +147,14 @@ disqus: https-mqb-readthedocs-io
 ```
 
 Отключение фонарей на крышке багажника при её открытии:
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 >> Leuchte23SL HLC10
 >> Lichtfunktion G 23 → Rear lid open (было nicht aktiv)
 >> Dimming Direction GH 23 → minimize
 → Применить
 ```
-```
+``` yaml
 Блок 09 → Адаптация
 >> Leuchte24SL HLC10
 >> Lichtfunktion G 24 → Rear lid open (было nicht aktiv)
@@ -170,25 +169,25 @@ disqus: https-mqb-readthedocs-io
 ![Screenshot](../images/MQB/newPTF.png)
 
 Отключаем основную ПТФ
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > Leuchte26NSL LA72 
 >> Lichtfunktion A — nicht aktiv (было Nebelschlusslicht wenn kein Anhaenger gesteckt und Rechtsverkehr)
 → Применить
 ```
 
 Включаем секции стоп-сигналов
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > Leuchte27NSL RC6
 >> Lichtfunktion B — Nebelschlusslicht wenn kein Anhaenger gesteckt und Rechtsverkehr (было Nicht aktiv)
 >> Lichtfunktion C — Kofferraumlicht (было Nebelschlusslicht wenn kein Anhaenger gesteckt und Rechtsverkehr)
 → Применить
 ```
 
-Если надо включить еще и огни заднего хода то дополнительно:
-```
-Блок 09 → Адаптация
+Если надо включить еще и огни заднего хода
+``` yaml
+Блок 09 → Адаптация:
 > Leuchte28RFL LC11 и Leuchte29RFL RA64
 >> Lichtfunktion В — Nebelschlusslicht wenn kein Anhaenger gesteckt und Rechtsverkehr (было Nicht aktiv)
 → Применить

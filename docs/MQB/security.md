@@ -9,23 +9,22 @@ disqus: https-mqb-readthedocs-io
     При выключенном зажигании стеклоподъемники продолжают работать, но если открыли / закрыли дверь - стеклоподъемники выключаются
 
 === "Кодирование в ODIS"    
-    ```
-    Блок 09 → Адаптация
+    ``` yaml
+    Блок 09 → Адаптация:
     > Acces control (ZV Komfort)
     > Freigabenachlauf FH bei Tueroeffnen abbrechen
     → меняем Activ на NotActiv
     > FH SAD Kl15Aus Freigabezeit
     Старое значение: 600 s (10 минут после выключения зажигания)
-    Новое значение: ставите нужное значение в секундах
+    Новое значение: задать нужное значение в секундах
     → Применить
     ```
 
 === "Кодирование в OBD11"
     ```
-    09 Блок управления бортовой сети → Безопасный доступ (Логин: 31347) → Адаптация   
-    > ZV Komfort - Freigabenachlauf FH bei Tueroeffnen abbrechen  
-    Старое значение: активир.  
-    Новое значение: не активир.  
+    Блок 09 управления бортовой сети → Безопасный доступ (Логин: 31347) → Кодирование:
+    > ZV Komfort
+    >> Freigabenachlauf FH bei Tueroeffnen abbrechen: Активировать
     ```
  
 > логин-пароль 31347
@@ -35,11 +34,11 @@ disqus: https-mqb-readthedocs-io
 ### Активация функций охранной системы для а/м без сигнализации (Skoda Karoq)
 Автомобиль будет сигналить, если закрытую дверь открыть без ключа, например разбив стекло
 
-```
-Блок 09 → Адаптация 
+``` yaml
+Блок 09 → Адаптация:
 > Anti-theft device
->> Akusticher Alarm Signalhorn →  active
->> Diebstahlwarnangle →  active
+>> Akusticher Alarm Signalhorn: Активировать
+>> Diebstahlwarnangle: Активировать
 → Применить
 ```
 
@@ -47,34 +46,28 @@ disqus: https-mqb-readthedocs-io
  
 ### Активация Easy Open
 
-```
-Блок 09 → Адаптация Verdecksteuergeraet →
-> Virtuelles_Pedal_HMI_einstellba:
-Старое значение: не акт.
-Новое значение: акт.
-> Virtuelles_Pedal_Verbau:
-Старое значение: не установл.
-Новое значение: установл.
-> Virtuelles_Pedal:
-Старое значение: не акт.
-Новое значение: акт.
+``` yaml
+Блок 09 → Адаптация:
+> Verdecksteuergeraet
+>> Virtuelles_Pedal_HMI_einstellba: Активировать
+>> Virtuelles_Pedal_Verbau: Активировать
+>> Virtuelles_Pedal: Активировать
 → Применить
 ```
 
 > логин-пароль 31347
 
-```
-Блок B7 → Адаптация Byte9_VIP →
-> active_vip
-Старое значение: не активир.
-Новое значение: активир.
-> БУ откр. двери багажного отсека, датчик 1, пороговое значение 1
+``` yaml
+Блок B7 → Адаптация:
+> Byte9_VIP →
+>> active_vip: Активировать
+>> БУ откр. двери багажного отсека, датчик 1, пороговое значение 1
 Старое значение: 5
 Новое значение: 69
-> БУ откр. двери багажного отсека, датчик 1, значение таймера 3
+>> БУ откр. двери багажного отсека, датчик 1, значение таймера 3
 Старое значение: 0
 Новое значение: 9
-> БУ откр. двери багажного отсека, датчик 1, значение таймера 4
+>> БУ откр. двери багажного отсека, датчик 1, значение таймера 4
 Старое значение: 226
 Новое значение: 34
 > БУ откр. двери багажного отсека, датчик 1, значение таймера 5
@@ -101,16 +94,16 @@ disqus: https-mqb-readthedocs-io
     Автомобиль подаст звуковой сигнал закрытия
     
 === "Кодирование в ODIS"
-    ```
-    Блок B7 → Адаптация 
+    ``` yaml
+    Блок B7 → Кодирование:
     > byte9_Vip
-    >> Coding_easy close_locking → активировать
+    >> Coding_easy close_locking: Активировать
     → Применить
     ```
 
 === "Кодирование в OBD11"
     ```
-    B7 Блок санкционированного доступа → Aдаптация   
+    Блок B7 санкционированного доступа: Активировать
     > byte9_Vip - coding easy close locking  
     Старое значение: не активир.  
     Новое значение: активир.  
@@ -120,8 +113,8 @@ disqus: https-mqb-readthedocs-io
 
 ### Регулировка чувствительности датчика объема штатной сигнализации
 
-```
-Блок 09 → Адаптация
+``` yaml
+Блок 09 → Адаптация:
 > Охранная сигнализация, охрана салона/ Interior_Monitoring_Sensitivity
 >> Чувствительность / sensitivity → 70% (по умолчанию 100%)
 → Применить
@@ -131,8 +124,8 @@ disqus: https-mqb-readthedocs-io
 
 ### Открытие и закрытие багажника с кнопки пульта
 
-```
-Блок B7 → Адаптация 
+``` yaml
+Блок B7 → Адаптация:
 > byte9_Vip
 >> Сoding_kick and_close_function → активировать
 → Применить
@@ -147,8 +140,8 @@ disqus: https-mqb-readthedocs-io
     При повторном (необходимо нажать в течении 5 сек с момента первого нажатия) нажатии откроются все остальные двери.
 
 === "Кодирование в ODIS"
-    ```
-    Блок 09 → Адаптация
+    ``` yaml
+    Блок 09 → Адаптация:
     > Central Locking - Selective (Single) Door Locking → активировать
     → Применить
     ```
@@ -157,9 +150,8 @@ disqus: https-mqb-readthedocs-io
     ```
     09-Центральная электроника  
     Кодирование - 07 → Длинное кодирование  
-    Байт 0 → Бит 0: (Selective Central Locking (Single Door Locking) active) → ставим галочку  
-    Выход  
-    Сохранить  
+    Байт 0 – Бит 0 (Selective Central Locking (Single Door Locking) active): Активировать  
+    Выход → Сохранить  
     ```
     
 ### Брелок работает при включенном зажигании
@@ -168,8 +160,8 @@ disqus: https-mqb-readthedocs-io
     С этой функцией можно завести автомобиль, закрыть его и отойти, сохраняя возможность удаленно открыть его или багажник с ключа.
 
 === "Кодирование в ODIS"
-    ```
-    Блок 09 → Адаптация
+    ``` yaml
+    Блок 09 → Адаптация:
     > ZV allgemein (Access control) - Funk bei Klemme 15 ein → активировать
     → Применить
     ```
@@ -177,9 +169,7 @@ disqus: https-mqb-readthedocs-io
 === "Кодирование в OBD11" 
     ```
     09 Блок управления бортовой сети → Безопасный доступ (Логин: 31347) → Aдаптация  
-    > ZV allgemein - Funk bei Klemme 15 ein:  
-    Старое значение: не активир.  
-    Новое значение: активир. 
+    > ZV allgemein - Funk bei Klemme 15 ein: Активировать
     ``` 
 
 > логин-пароль 31347
@@ -187,8 +177,8 @@ disqus: https-mqb-readthedocs-io
 ### Ручки Kessy работают при включенном зажигании
 
 === "Кодирование в ODIS"
-    ```
-    Блок В7 → Кодирование
+    ``` yaml
+    Блок В7 → Кодирование:
     > Terminal 15 characteristics of passive entry exit function
     >> Оригинальное значение - Function only allowed for terminal 15 off
     >> Новое значение - Function only allowed for terminal 15 on or off
@@ -196,57 +186,40 @@ disqus: https-mqb-readthedocs-io
     ```
 
 === "Кодирование в VCDS" 
-    ```
+    ``` yaml
     Блок В7   
     Кодирование - 07 → Длинное кодирование → разрешить ASAM данные  
-    Байт 0 → Бит 4 (Terminal 15 characteristics of passive entry exit function) → ставим галочку  
-    Выход  
-    Сохранить
+    Байт 0 – Бит 4 (Terminal 15 characteristics of passive entry exit function): Активировать  
+    Выход → Сохранить
     ```
     
 ### Автоматическая постановка на охрану при захлопывании водительской двери
 
 === "Кодирование в ODIS"
-    ```
-    Блок В7 → Кодирование
-    > Locking for door slamming active → активировать
+    ``` yaml
+    Блок В7 → Кодирование:
+    > Locking for door slamming active: Активировать
     → Применить
     ```
 
 === "Кодирование в VCDS" 
-    ```
+    ``` yaml
     Блок В7   
     Кодирование - 07 → Длинное кодирование → разрешить ASAM данные  
-    Байт 1 → Бит 4 (Блокировка двери хлопком включена) → ставим галочку  
-    Выход  
-    Сохранить
+    Байт 1 – Бит 4 (Блокировка двери хлопком включена): Активировать  
+    Выход → Сохранить
     ```
     
 ### Звуковое сопровождение при открытии/закрытии центрального замка
 
-```
-Блок 9 → Адаптация
+``` yaml
+Блок 9 → Адаптация:
 > Ответные сигналы
->> Akustische Rueckmeldung entriegeln (открытие авто)
-Старое значение: не акт.
-Новое значение: акт.
-    
->> Akustische Rueckmeldung verriegeln (закрытие авто)
-Старое значение: не акт.
-Новое значение: акт.
-    
->> Menuesteuerung akustische Rueckmeldung
-Старое значение: не акт.
-Новое значение: акт.
-    
->> Akustische Rueckmeldung global
-Старое значение: не акт.
-Новое значение: акт.
-    
->> Akustische Rueckmeldung Signalhorn
-Старое значение: не акт.
-Новое значение: акт.
-  
+>> Akustische Rueckmeldung entriegeln (открытие авто): Активировать
+>> Akustische Rueckmeldung verriegeln (закрытие авто): Активировать
+>> Menuesteuerung akustische Rueckmeldung: Активировать
+>> Akustische Rueckmeldung global: Активировать
+>> Akustische Rueckmeldung Signalhorn: Активировать
 → Применить
 ```
 
@@ -257,19 +230,19 @@ disqus: https-mqb-readthedocs-io
 
 ### Открытие и закрытие люка при удерживании кнопок на брелке (закрытие вместе с центральным замком)
 
-```
-Блок 9 → Адаптация
+``` yaml
+Блок 9 → Адаптация:
 > Schiebedach
->> SAD Komfort schliessen: «не акт» на «акт»
->> SAD Komfort oeffnen: «не акт» на «акт»
+>> SAD Komfort schliessen: Активировать
+>> SAD Komfort oeffnen: Активировать
 → Применить
 ```
 
 Открывание люка целиком
 
 === "Кодирование в ODIS"
-    ```
-    Блок 00CA - Блок управления сдвижного люка → Адаптация
+    ``` yaml
+    Блок 00CA - Блок управления сдвижного люка → Адаптация:
     > Control_unit_for_sun_roof_convenience_functions / Power sunroof control module - convenience function
     >> Convenience_opening_target_attitude / Заданное положение при комфортном открывании
     Старое значение: Tilting_position
@@ -277,8 +250,8 @@ disqus: https-mqb-readthedocs-io
     → Применить
     ```
 === "Кодирование в OBD11"
-    ```
-    Блок 00CA - Блок управления сдвижного люка → Адаптация
+    ``` yaml
+    Блок 00CA - Блок управления сдвижного люка → Адаптация:
     > Komfortfunktionen
     >> Заданное положение при комфортном открывании
     Старое значение: Положение — подъём
@@ -291,23 +264,22 @@ disqus: https-mqb-readthedocs-io
 !!! tip ""
     Функция Easy Entry — легкая посадка, сиденье отъезжает после выключения зажигания и открытия двери и подъезжает при включении
     
-```
-Блок 36 - Блок Регулировка сиденья водителя → Кодирование
-> Байт 3 бит 1 включить (Easy_Entry_front)
-> Байт 9 бит 6 включить (Easy_Entry_front_over_MMI)
+``` yaml
+Блок 36 - Блок Регулировка сиденья водителя → Кодирование:
+> Байт 3 – Бит 1 (Easy_Entry_front): Активировать
+> Байт 9 – Бит 6 (Easy_Entry_front_over_MMI): Активировать
 → Применить (с перезагрузкой блока)
 ```
 
-```
-Блок 5F → Адаптация
-
+``` yaml
+Блок 5F → Адаптация:
 > Car_Function_Adaptations_Gen2
->> menu_display_seat_configuration — Актив
->> menu_display_seat_configuration_over_threshold_high — Актив
+>> menu_display_seat_configuration: Активировать
+>> menu_display_seat_configuration_over_threshold_high: Активировать
 → Применить 
 
 > Car_Function_List_BAP_Gen2
->> driver_seat_0x10 — Актив
+>> driver_seat_0x10: Активировать
 >> driver_seat_0x10_msg_bus — Шина Комфорт
 → Применить 
 ```
@@ -317,30 +289,29 @@ disqus: https-mqb-readthedocs-io
 !!! tip ""
     Функция Easy Entry — легкая посадка, сиденье отъезжает после выключения зажигания и открытия двери и подъезжает при включении
     
-```
-Блок 36 - Блок Регулировка сиденья водителя → Кодирование
-> Байт 9 бит 4 включить (EasyEntry_Enable_Passenger_over_DriverMMI)
+``` yaml
+Блок 36 - Блок Регулировка сиденья водителя → Кодирование:
+> Байт 9 – Бит 4 (EasyEntry_Enable_Passenger_over_DriverMMI): Активировать
 → Применить (с перезагрузкой блока)
 ```
     
-```
-Блок 6 - Блок Регулировка сиденья пассажира → Кодирование
-> Байт 3 бит 1 включить (Easy_Entry_front)
-> Байт 9 бит 6 включить (Easy_entry_front_over_MMI)
-> Байт 9 бит 4 включить (EasyEntry_Enable_Passenger_over_DriverMMI)
+``` yaml
+Блок 6 - Блок Регулировка сиденья пассажира → Кодирование:
+> Байт 3 – Бит 1 (Easy_Entry_front): Активировать
+> Байт 9 – Бит 6 (Easy_entry_front_over_MMI): Активировать
+> Байт 9 – Бит 4 (EasyEntry_Enable_Passenger_over_DriverMMI): Активировать
 → Применить (с перезагрузкой блока)
 ```
 
-```
-Блок 5F → Адаптация
-
+``` yaml
+Блок 5F → Адаптация:
 > Car_Function_Adaptations_Gen2
->> menu_display_seat_configuration — Актив
->> menu_display_seat_configuration_over_threshold_high — Актив
+>> menu_display_seat_configuration: Активировать
+>> menu_display_seat_configuration_over_threshold_high: Активировать
 → Применить 
 
 > Car_Function_List_BAP_Gen2
->> Passenger_Seat_0x20 — Актив  
+>> Passenger_Seat_0x20: Активировать
 >> Passenger_Seat_0x20_msg_bus — Шина Комфорт  
 → Применить 
 ```
