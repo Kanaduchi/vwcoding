@@ -1,7 +1,7 @@
 ---
 hide:
   - toc
-disqus: https-mqb-readthedocs-io
+
 ---
 
 # Прошивки для камеры ассистентов

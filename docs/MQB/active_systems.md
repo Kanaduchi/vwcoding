@@ -1,4 +1,4 @@
-disqus: https-mqb-readthedocs-io
+
 # Активные системы помощи при вождении
 
 ### Настройка BDW (Brake Disc Wiper / Просушка дисков)

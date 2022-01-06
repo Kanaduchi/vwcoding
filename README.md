@@ -38,9 +38,9 @@ If you want to help in translating this site to English please do follow steps:
 
 ## ОПИСАНИЕ
 
-Данный сайт построен с использованием языка разметки Markdown.
+Данный сайт построен с использованием языка разметки Markdown.  
 
-Шаблон:
+Шаблон для страниц:
 
 ```
     ### Название кодировки/адаптации
@@ -63,3 +63,10 @@ If you want to help in translating this site to English please do follow steps:
 
     > логин-пароль 000000 (если есть)
 ```
+
+Путь для хранения изображений:
+Путь до прошивок:
+Путь до параметрий:
+
+Пример вставки изображений на страницу сайта:
+

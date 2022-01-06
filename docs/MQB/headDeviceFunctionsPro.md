@@ -1,4 +1,4 @@
-disqus: https-mqb-readthedocs-io
+
 # Снятие Component Protection и SWaP коды для Discover Pro
 
 !!! warning 

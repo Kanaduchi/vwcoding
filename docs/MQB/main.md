@@ -1,7 +1,6 @@
 ---
 hide:
   - toc
-disqus: https-mqb-readthedocs-io
 ---
 
 <style>

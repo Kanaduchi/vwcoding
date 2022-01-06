@@ -1,4 +1,4 @@
-disqus: https-mqb-readthedocs-io
+
 # Безопасность
 
 ## Управление стеклоподъемниками

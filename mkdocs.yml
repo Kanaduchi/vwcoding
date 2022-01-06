@@ -75,6 +75,7 @@ extra_css:
   - assets/custom.css
 
 extra:
+  disqus: https-mqb-readthedocs-io
   alternate:
     - name: Русский
       link: ./

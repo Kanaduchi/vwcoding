@@ -2,7 +2,6 @@
 title: Long-coding calculator
 hide:
   - toc
-disqus: https-mqb-readthedocs-io
 ---
 
 # Long-coding calculator

@@ -1,4 +1,4 @@
-disqus: https-mqb-readthedocs-io
+
 # SWaP коды и параметрии для Composition Media и Discover Media
 
 !!! warning 

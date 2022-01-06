@@ -1,4 +1,4 @@
-disqus: https-mqb-readthedocs-io
+
 # Кодирование светового оборудования
 
 !!!note ""

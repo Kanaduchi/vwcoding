@@ -2,6 +2,7 @@
 title: Coding of VW cars
 hide:
   - toc
+disqus: ""
 ---
   
 <style>

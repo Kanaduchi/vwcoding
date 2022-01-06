@@ -1,4 +1,4 @@
-disqus: https-mqb-readthedocs-io
+
 # Активация ассистентов
 
 ### Активация Line Assist
@@ -89,7 +89,7 @@ HCA - Указание блоку рулевого управления о на�
 ```
 ``` yaml
 Блок A5 (камера ассистентов) → Адаптация:
-> Select : channel numbers indicate end of speed limit
+> Select: channel numbers indicate end of speed limit
 Importance to actively invest Show Valid suffix
 View Channel Valid suffix
 Corresponding value adjust default: 00100111
