@@ -87,9 +87,9 @@ HCA - Указание блоку рулевого управления о на�
 Блок A5 (камера ассистентов) → Кодирование:
 > Byte 08 > Bit 5-7 - Point_of_intervention: A0 late, setting over menu
 > Byte 09 > Bit 0-1 - Configuration_for_lane_departure_warning_Kl15: 03 Last_setting
-> Byte 09 > Bit 7 - HC: 1 coded
+> Byte 09 > Bit 7 - HC: (1) coded
 > Byte 09 > Bit 2-3 - Lane_assist_system_mode: 0C Selection_over_menu
-> Byte 09 > Bit 4-5 - HC advanced takeover request: coded
-> Byte 17 > Bit 0 - HC messages: 1 coded
+> Byte 09 > Bit 4-5 - HC advanced takeover request: (1) coded
+> Byte 17 > Bit 0 - HC messages: (1) coded
 → Применить 
 ```
