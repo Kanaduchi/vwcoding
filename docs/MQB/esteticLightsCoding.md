@@ -1,4 +1,4 @@
-disqus: https-mqb-readthedocs-io
+
 
 # Кодирование зон освещения салона
 

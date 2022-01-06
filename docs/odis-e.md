@@ -1,4 +1,4 @@
-disqus: https-mqb-readthedocs-io
+
 # Работа с ODIS ENGINEERING
 
 ### Расшифровка параметров

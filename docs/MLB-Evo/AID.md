@@ -1,4 +1,4 @@
-disqus: https-mqb-readthedocs-io
+
 # Приборная панель
 
 ### Свободное место в баке

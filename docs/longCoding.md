@@ -2,7 +2,6 @@
 title: Калькулятор длинного кодирования
 hide:
   - toc
-disqus: https-mqb-readthedocs-io
 ---
 
 # Калькулятор длинного кодирования

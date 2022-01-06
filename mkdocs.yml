@@ -11,10 +11,11 @@ hot_news_title_en: Fill free to send all your ideas and updates to info@vwcoding
 hot_news: >
   1. <a href='https://vwcoding.ru/MQB/rearLights'>Задние динамические поворотники для Tiguan 2021 с фарами IQ Light</a><br>
   2. <a href='https://vwcoding.ru/MQB/pACC'>SWaP для ACC и pACC</a><br>
-  3. <a href='https://vwcoding.ru/MQB/headDeviceTMC'>Активация TMC</a><br>
-  4. <a href='https://vwcoding.ru/MQB/headDeviceFunctions'>SWaP коды и параметрия для ГУ CM и DM (F5 блок)</a><br>
-  5. <a href='https://vwcoding.ru/MQB/headDeviceFunctionsPro'>SWaP коды и параметрия для ГУ PRO (F5 блок)</a><br>
-  6. <a href='https://vwcoding.ru/MQB/2Q0_assistants.md'>Кодирование 2Q0* камеры ассистентов</a><br>
+  3. <a href='https://vwcoding.ru/MQB/2Q0_assistants.md'>Кодирование 2Q0* камеры ассистентов</a><br>
+hot_news_en: >
+  1. <a href='https://vwcoding.ru/MQB/rearLights'>Back dynamic IQ Lights for Tiguan 2021</a><br>
+  2. <a href='https://vwcoding.ru/MQB/pACC'>SWaP for ACC & pACC</a><br>
+  3. <a href='https://vwcoding.ru/MQB/2Q0_assistants.md'>Coding of 2Q0* camera</a><br>
 
 # Repository
 repo_name: Kanaduchi/vwcoding
@@ -75,6 +76,7 @@ extra_css:
   - assets/custom.css
 
 extra:
+  disqus: https-mqb-readthedocs-io
   alternate:
     - name: Русский
       link: ./

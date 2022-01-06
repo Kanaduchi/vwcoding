@@ -1,4 +1,4 @@
-disqus: https-mqb-readthedocs-io
+
 # Передние фары
 
 ### Сохранение автодальнего режима после выключения двигателя
@@ -282,13 +282,11 @@ Leuchte13NL RB5:
 
 ### Автоматическое провожание, а не морганием дальним перед выходом из машины
 
-!!! info
-    Время свечения можно изменить в адаптации Aussenlicht_uebergreifend -Menueeinstellung Cominghome :
-
 ``` yaml
 Блок 09 → Адаптация:
 Aussenlicht_uebergreifend:
 - Coming Home Verbaustatus: Авто
+- Menueeinstellung Cominghome: # Время свечения
 → Применить
 ```
 
