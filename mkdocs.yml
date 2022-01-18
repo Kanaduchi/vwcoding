@@ -5,17 +5,13 @@ site_author: Kanaduchi
 site_url: http://www.vwcoding.ru
 
 # Hot news
-hot_news_date: 03.01.2022
+hot_news_date: 17.01.2022
 hot_news_title: Все ваши предложения и новые идеи можно присылать на info@vwcoding.ru
 hot_news_title_en: Fill free to send all your ideas and updates to info@vwcoding.ru
 hot_news: >
-  1. <a href='https://vwcoding.ru/MQB/rearLights'>Задние динамические поворотники для Tiguan 2021 с фарами IQ Light</a><br>
-  2. <a href='https://vwcoding.ru/MQB/pACC'>SWaP для ACC и pACC</a><br>
-  3. <a href='https://vwcoding.ru/MQB/2Q0_assistants.md'>Кодирование 2Q0* камеры ассистентов</a><br>
+  1. <a href='https://vwcoding.ru/xorCalculator'>Добавлен XOR калькулятор</a>
 hot_news_en: >
-  1. <a href='https://vwcoding.ru/MQB/rearLights'>Back dynamic IQ Lights for Tiguan 2021</a><br>
-  2. <a href='https://vwcoding.ru/MQB/pACC'>SWaP for ACC & pACC</a><br>
-  3. <a href='https://vwcoding.ru/MQB/2Q0_assistants.md'>Coding of 2Q0* camera</a><br>
+  1. <a href='https://vwcoding.ru/en/xorCalculator'>XOR calculator</a>
 
 # Repository
 repo_name: Kanaduchi/vwcoding
@@ -77,6 +73,12 @@ extra_css:
 
 extra:
   disqus: https-mqb-readthedocs-io
+  giscus:
+    enable: false
+    repo: Kanaduchi/vwcoding
+    repo_id: MDEwOlJlcG9zaXRvcnkyMTQ4NTE3Njk=
+    category: General
+    category_id: MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyNjYxNjIy
   alternate:
     - name: Русский
       link: ./
@@ -100,12 +102,45 @@ plugins:
           Платформа PQ26: PQ26 platform
           Платформа PQ35: PQ35 platform
           Калькулятор длинного кодирования: Long-coding calculator
+          XOR калькулятор: XOR calculator
           Инструменты и адаптеры: Instruments and adapters
           Список инструментов: Adapters
           Инструкция ODIS E: ODIS E instruction
           Обратная связь: Feedback
           История изменений: History of changes
           Поддержать проект: Support of project
+
+          Ассистенты водителя: Drive assistance
+          Активация ACC и pACC: ACC & PACC activation
+          Кодирование ACC: ACC coding
+          Кодирование 3Q* камеры: Coding of 3Q* cameras
+          Кодирование 2Q* камеры: Coding of 2Q* cameras
+          Прошивки камеры ассистентов: Assistance camera firmwares
+          Системы активной безопасности: Safety features
+          Настройка профилей движения (FPA): Configuration of FPA profiles
+          Движение и управление: Driving
+          Парковка и маневрирование: Parking
+          Эстетическая подсветка: Estetic lights
+          Кодирование подсветки: Coding of estetic lights
+          Кодирование зон освещения: Zones of estetic lights
+          Установка RGB подсветки: RGB estetic lihts
+          Зеркала и стеклоочистители: Wash and mirrors
+          Отпирание и запирание: Open and Closing
+          Освещение: Lights
+          Кодирование фонарей: General codings
+          Передние фонари: Front lights
+          Задние фонари: Rear lights
+          Звук: Sound
+          Климат: Climate
+          Приборная панель: Control panel
+          Головное устройство: Main unit
+          Кодирование: General coding
+          Активация TMC: Activation of TMC
+          SWaP коды для CM и DM: SWap for DM and CM units
+          Снятие защиты и SWaP для Pro: Unlocking and SWaP of Pro
+          Шины: Tires
+          Генератор параметрии: Parameter generation
+          Дооснащение: Addons
           Eeprom память: Eeprom memory
   - search:
       lang:
@@ -165,6 +200,7 @@ nav:
       - Платформа PQ26: PQ26/main.md
       - Платформа PQ35: PQ35/main.md
       - Калькулятор длинного кодирования: longCoding.md
+      - XOR калькулятор: xorCalculator.md
       - Инструменты и адаптеры:
           - Список инструментов: programs.md
           - Инструкция ODIS E: odis-e.md
@@ -249,4 +285,5 @@ nav:
           - Приборная панель: PQ35/Tiguan/instrPanel.md
           - Мультимедиа: PQ35/Tiguan/multimedia.md
   - Калькулятор длинного кодирования: longCoding.md
+  - XOR калькулятор: xorCalculator.md
   - Поддержать проект: https://yoomoney.ru/to/4100110582992748/100

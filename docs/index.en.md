@@ -1,8 +1,10 @@
 ---
 title: Coding of VW cars
+template: ./main.en.html
 hide:
   - toc
 disqus: ""
+giscus: ""
 ---
   
 <style>
@@ -18,7 +20,7 @@ disqus: ""
 
 !!! info "Translation is in progress"
     Currently this site is written in Russian language.  
-    It is not possible to translate whole pages it to other languages due to restrictions of MKdocs.
+    If you want to help in translating pages to English language please [follow the instructions](https://github.com/Kanaduchi/vwcoding/blob/master/CONTRIBUTING.md)
 
 !!! danger "Warning!"
     Sharing information from this site is allowed only with the copyright notice and link to this resource.  
