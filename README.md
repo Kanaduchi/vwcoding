@@ -1,41 +1,5 @@
 ![VW coding](docs/assets/logo.png)  
 
-## ENGLISH DESCRIPTION
-
-This site is build with Markdown language. You can use the template below to add new codings
-
-```
-    ### Name of coding / adaptation
-
-    !!! tip ""
-        Tip/info message
-
-    !!! warning ""
-        Some warning message
-
-    ``` yaml
-    Block XX → Adaptation:
-    Name of volume/folder:
-    - Name of parameter: activate
-    → Apply
-    ```
-
-    ??? note "Collapsibale list"
-        This information is displayed collapsed on the site
-
-    > Login-password: 000000 (if applicable)
-```
-
-### Translation
-
-If you want to help in translating this site to English please do follow steps:  
-
-1. Copy particular file to new with en suffix. Example: drive.md → drive.en.md  
-2. Translate text in drive.en.md to English language  
-3. Create PR and Merge it  
-4. Translation will be automatically applied to the site  
-
-
 ## ОПИСАНИЕ
 
 Данный сайт построен с использованием языка разметки Markdown.  
@@ -64,9 +28,12 @@ If you want to help in translating this site to English please do follow steps:
     > логин-пароль 000000 (если есть)
 ```
 
-Путь для хранения изображений:
-Путь до прошивок:
-Путь до параметрий:
+Путь для хранения изображений: `/docs/images`  
+Путь до прошивок: `/docs/firmwares`  
+Путь до параметрий: `/docs/parameters`  
 
-Пример вставки изображений на страницу сайта:
+Пример вставки изображений на страницу сайта:  
+![Screenshot](../images/MQB/odis-e-tires.png) 
 
+Пример вставки файлов на страницу сайта:  
+[(Сборка для Skoda)](../firmwares/TMC-zz.rar)  

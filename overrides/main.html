@@ -32,3 +32,49 @@
     <strong>{{ config.hot_news_title }}</strong>
   </a>
 {% endblock %}
+
+<!-- content block -->
+{% block content %}
+  {{ super() }}
+
+  <!-- Giscus -->
+  {% set giscus = config.extra.giscus %}
+  {% if page and page.meta and page.meta.giscus is string %}
+    {% set giscus = page.meta.giscus %}
+  {% endif %}
+  {% if giscus and giscus.enable %}
+    <h2 id="__comments">{{ lang.t("meta.comments") }}</h2>
+    <!-- Replace with generated snippet -->
+    <script src="https://giscus.app/client.js"
+            data-repo="{{ giscus.repo }}"
+            data-repo-id="{{ giscus.repo_id }}"
+            data-category="{{ giscus.category }}"
+            data-category-id="{{ giscus.category_id }}"
+            data-mapping="pathname"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-theme="light"
+            data-lang="{{ language }}"
+            crossorigin="anonymous"
+            async>
+    </script>
+  {% endif %}
+
+  <!-- Reload on palette change -->
+  <script>
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object")
+      if (palette.color.scheme === "slate") {
+        var giscus = document.querySelector("script[src*=giscus]")
+        giscus.setAttribute("data-theme", "dark")
+      }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        location.reload()
+      })
+    })
+  </script>
+{% endblock %}
