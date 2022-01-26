@@ -37,6 +37,43 @@
 {% block content %}
   {{ super() }}
 
+  <!-- Inject Disqus into current page -->
+  {% set disqus = config.extra.disqus %}
+  {% if page and page.meta and page.meta.disqus is string %}
+    {% set disqus = page.meta.disqus %}
+  {% endif %}
+
+  {% if not page.is_homepage and disqus %}
+    <h2 id="__comments">{{ lang.t("meta.comments") }}</h2>
+    <div id="disqus_thread"></div>
+    <script>
+      var disqus_config = function() {
+        this.page.url = "{{ page.canonical_url }}"
+        this.page.identifier =
+          "{{ page.canonical_url | replace(config.site_url, '') }}"
+
+      }
+
+      /* Set up for the first time */
+      if (typeof DISQUS === "undefined") {
+        var script = document.createElement("script")
+        script.async = true
+        script.src = "https://{{ disqus }}.disqus.com/embed.js"
+        script.setAttribute("data-timestamp", Date.now())
+
+        /* Inject script tag */
+        document.body.appendChild(script)
+
+      /* Set up on navigation (instant loading) */
+      } else {
+        DISQUS.reset({
+          reload: true,
+          config: disqus_config
+        })
+      }
+    </script>
+  {% endif %}
+
   <!-- Giscus -->
   {% set giscus = config.extra.giscus %}
   {% if page and page.meta and page.meta.giscus is string %}
@@ -73,7 +110,17 @@
     document.addEventListener("DOMContentLoaded", function() {
       var ref = document.querySelector("[data-md-component=palette]")
       ref.addEventListener("change", function() {
-        location.reload()
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
       })
     })
   </script>
