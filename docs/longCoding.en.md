@@ -16,4 +16,4 @@ Bit ordering comes from the end, for example
 00000001 - bit "0" is enabled
 00000010 - bit "1" is enabled
 
---8<-- "overrides/longCoding.en.html"
+--8<-- "overrides/pages/longCoding.en.html"

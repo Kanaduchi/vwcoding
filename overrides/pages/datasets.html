@@ -1,0 +1,498 @@
+<style>
+   table {
+   *border-collapse: collapse; /* IE7 and lower */
+   border-spacing: 0;
+   width: 100%;
+   }
+   .bordered {
+   -moz-border-radius: 6px;
+   -webkit-border-radius: 6px;
+   border-radius: 6px;
+   -webkit-box-shadow: 0 1px 1px #ccc;
+   -moz-box-shadow: 0 1px 1px #ccc;
+   box-shadow: 0 1px 1px #ccc;
+   }
+   .bordered td, .bordered th {
+   border-left: 1px solid #ccc;
+   border-top: 1px solid #ccc;
+   padding: 10px;
+   text-align: left;
+   }
+   .sub {
+   background-color: #3F51B5;
+   color: #FFFFFF;
+   }
+   .bordered th {
+   background-color: #3F51B5;
+   color: #FFFFFF;
+   -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+   -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;
+   box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+   border-top: none;
+   text-shadow: 0 1px 0 rgba(255,255,255,.5);
+   }
+   .bordered th:first-child {
+   -moz-border-radius: 6px 0 0 0;
+   -webkit-border-radius: 6px 0 0 0;
+   border-radius: 6px 0 0 0;
+   }
+   .bordered th:last-child {
+   -moz-border-radius: 0 6px 0 0;
+   -webkit-border-radius: 0 6px 0 0;
+   border-radius: 0 6px 0 0;
+   }
+   .bordered th:only-child{
+   -moz-border-radius: 6px 6px 0 0;
+   -webkit-border-radius: 6px 6px 0 0;
+   border-radius: 6px 6px 0 0;
+   }
+   .bordered tr:last-child td:first-child {
+   -moz-border-radius: 0 0 0 6px;
+   -webkit-border-radius: 0 0 0 6px;
+   border-radius: 0 0 0 6px;
+   }
+   .bordered tr:last-child td:last-child {
+   -moz-border-radius: 0 0 6px 0;
+   -webkit-border-radius: 0 0 6px 0;
+   border-radius: 0 0 6px 0;
+   }
+</style>
+<script>
+
+    function hexToString(hex) {
+       if (!hex.match(/^[0-9a-fA-F]+$/)) {
+         throw new Error('is not a hex string.');
+       }
+       if (hex.length % 2 !== 0) {
+         hex = '0' + hex;
+       }
+       var bytes = [];
+       for (var n = 0; n < hex.length; n += 2) {
+         var code = parseInt(hex.substr(n, 2), 16)
+         bytes.push(code);
+       }
+       return bytes;
+    }
+
+    function parseHexValueToString(str) {
+        var list = str.replace(/,/g, " ").replace(/[^A-Fa-f0-9 ]/g, "").split(' ');
+        var result = "";
+
+        for (var i = 0; i < list.length; i++) {
+            if (list[i].length == 0)
+                continue;
+            result += list[i].substring(1);
+        }
+        return result;
+    }
+
+    function parseHexValueToArray(str) {
+        var list = str.replace(/,/g, " ").replace(/[^A-Fa-f0-9 ]/g, "").split(' ');
+        var result = new Array();
+
+        for (var i = 0; i < list.length; i++) {
+            if (list[i].length == 0)
+                continue;
+            result.push(list[i].substring(1));
+        }
+        return parseValue(result);
+    }
+
+    function parseValueToHex(str) {
+        var matches = str.matchAll(/[^\s]{1,2}/g);
+        var result = "";
+        for (const match of matches) {
+            result += "0x" + match + ",";
+        }
+        return result.substring(0, result.length - 1);
+    }
+
+    function parseValue(byteStream) {
+        var resultValue = "";
+
+        for (var index = 0; index < byteStream.length; index++) {
+            if (((index % 16) == 0) && (index > 0)) {
+                resultValue += "\n";
+            }
+
+            var value = byteStream[index].toString(16).toUpperCase();
+            if (value.length < 2) {
+                value = '0' + value;
+            }
+            resultValue += value + " ";
+        }
+        return resultValue;
+    }
+
+    function addToDataset(dataset, info) {
+        dataset.value += info;
+    }
+
+    function generateHeader(dataset) {
+        addToDataset(dataset, "<MESSAGE DTD=\"XMLMSG\" VERSION=\"V0.1\">\n");
+        addToDataset(dataset, "	<RESULT>\n");
+        addToDataset(dataset, "		<RESPONSE NAME=\"GetParametrizeData\" DTD=\"RepairHints\" VERSION=\"1.4.0.0\" ID=\"0\">\n");
+        addToDataset(dataset, "			<DATA>\n");
+        addToDataset(dataset, "				<REQUEST_ID>000000000</REQUEST_ID>\n");
+
+        var rows = document.getElementById('paramSettings').rows;
+        if (rows.length > 3) {
+            var previousRow = "";
+            for (var i = 1; i < rows.length - 1; i++) {
+                if (rows[i].id && previousRow != rows[i].id) {
+                   previousRow = rows[i].id;
+                   addToDataset(dataset, "				<PARAMETER_DATA DIAGNOSTIC_ADDRESS=\"" + document.getElementById('diagAddr_' + previousRow).value + "\"");
+                   addToDataset(dataset, " START_ADDRESS=\"" + document.getElementById('flashOffset_' + previousRow).value + "\"");
+                   addToDataset(dataset, " PR_IDX=\"0\"");
+                   addToDataset(dataset, " ZDC_NAME=\"" + document.getElementById('datasetName_' + previousRow).value + "\"");
+                   addToDataset(dataset, " ZDC_VERSION=\"" + document.getElementById('datasetVersion_' + previousRow).value + "\"");
+                   addToDataset(dataset, " LOGIN=\"" + document.getElementById('login_' + previousRow).value + "\"");
+                   addToDataset(dataset, " LOGIN_IND=\"\"");
+                   addToDataset(dataset, " DSD_TYPE=\"" + document.getElementById('datasetType_' + previousRow).value + "\"");
+                   addToDataset(dataset, " SESSIONNAME=\"\"");
+                   addToDataset(dataset, " FILENAME=\"" + document.getElementById('fileName_' + previousRow).value + "\">");
+                   addToDataset(dataset, parseValueToHex(document.getElementById('param_' + previousRow).value));
+                   addToDataset(dataset, "</PARAMETER_DATA>\n");
+                }
+            }
+        }
+        addToDataset(dataset, "				<COMPOUNDS>\n");
+        addToDataset(dataset, "				    <COMPOUND COMPOUND_ID=\"1\">\n");
+        addToDataset(dataset, "				        <SW_NAME/>\n");
+        addToDataset(dataset, "			            <SW_VERSION/>\n");
+        addToDataset(dataset, "			            <SW_PART_NO/>\n");
+        addToDataset(dataset, "			        </COMPOUND>\n");
+        addToDataset(dataset, "			        <COMPOUND COMPOUND_ID=\"2\">\n");
+        addToDataset(dataset, "			            <SW_NAME/>\n");
+        addToDataset(dataset, "			            <SW_VERSION/>\n");
+        addToDataset(dataset, "			            <SW_PART_NO/>\n");
+        addToDataset(dataset, "			        </COMPOUND>\n");
+        addToDataset(dataset, "			        <COMPOUND COMPOUND_ID=\"3\">\n");
+        addToDataset(dataset, "			            <SW_NAME/>\n");
+        addToDataset(dataset, "			            <SW_VERSION/>\n");
+        addToDataset(dataset, "			            <SW_PART_NO/>\n");
+        addToDataset(dataset, "			        </COMPOUND>\n");
+        addToDataset(dataset, "			        <COMPOUND COMPOUND_ID=\"4\">\n");
+        addToDataset(dataset, "			            <SW_NAME/>\n");
+        addToDataset(dataset, "			            <SW_VERSION/>\n");
+        addToDataset(dataset, "			            <SW_PART_NO/>\n");
+        addToDataset(dataset, "			        </COMPOUND>\n");
+        addToDataset(dataset, "			        <COMPOUND COMPOUND_ID=\"5\">\n");
+        addToDataset(dataset, "			            <SW_NAME/>\n");
+        addToDataset(dataset, "			            <SW_VERSION/>\n");
+        addToDataset(dataset, "			            <SW_PART_NO/>\n");
+        addToDataset(dataset, "			        </COMPOUND>\n");
+        addToDataset(dataset, "			    </COMPOUNDS>\n");
+        addToDataset(dataset, "			    <INFORMATION>\n");
+        addToDataset(dataset, "			        <CODE/>\n");
+        addToDataset(dataset, "			    </INFORMATION>\n");
+    }
+
+    function generateFooter(dataset) {
+        addToDataset(dataset, "			</DATA>\n");
+        addToDataset(dataset, "      </RESPONSE>\n");
+        addToDataset(dataset, "  </RESULT>\n");
+        addToDataset(dataset, "</MESSAGE>\n");
+    }
+
+    function generateBody(dataset, data) {
+        addToDataset(dataset, "			    <DSD_DATA>\n");
+        addToDataset(dataset, "			        <COMPRESSED_DATA");
+        addToDataset(dataset, "	BYTES_COMPRESSED=\"" + document.getElementById('compressedBytes').value + "\"");
+        addToDataset(dataset, "	BYTES_UNCOMPRESSED=\"" + document.getElementById('uncompressedBytes').value + "\"");
+        addToDataset(dataset, "	CONTENT=\"" + document.getElementById('content').value + "\"");
+        addToDataset(dataset, "	CONTENT_TRANSFER_ENCODING=\"base64\"");
+        addToDataset(dataset, " CONTENT_TYPE=\"application/tar\">");
+
+        if (document.getElementById('uncompressedBytes').value != '0' &&
+                document.getElementById('compressedBytes').value != '0') {
+            addToDataset(dataset, data);
+        }
+
+        addToDataset(dataset, "</COMPRESSED_DATA>\n");
+        addToDataset(dataset, "			    </DSD_DATA>\n");
+    }
+
+    function doGenerate() {
+        doOriginal();
+        var dataset = document.getElementById('dataset');
+        dataset.value = "";
+
+        var data = document.getElementById('data');
+
+        generateHeader(dataset);
+        generateBody(dataset, data);
+        generateFooter(dataset);
+
+        var byteStream = new Uint8Array(dataset.value.length);
+        document.getElementById("generatedData").style.display = "table";
+        return byteStream;
+    }
+
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+    }
+
+    function doClearFields() {
+        while (document.getElementById('paramSettings').rows.length > 3) {
+            var rows = document.getElementById('paramSettings').rows;
+            for (var i = 0; i < rows.length; i++) {
+                if (rows[i].id) {
+                    document.getElementById('paramSettings').deleteRow(i);
+                }
+            }
+        }
+
+        document.getElementById('data').value = "";
+        document.getElementById('dataset').value = "";
+
+        document.getElementById('isCompressed').checked = false;
+        document.getElementById('content').value = '0';
+        document.getElementById('uncompressedBytes').value = '0';
+        document.getElementById('compressedBytes').value = '0';
+
+        document.getElementById("compressedData").style.display = "none";
+        document.getElementById("generatedData").style.display = "none";
+    }
+
+    function deleteRow(row, shouldBreak) {
+        var rows = document.getElementById('paramSettings').rows;
+        for (var i = 0; i < rows.length; i++) {
+            if (rows[i].id == row) {
+                document.getElementById('paramSettings').deleteRow(i);
+                if (shouldBreak) {
+                    return;
+                }
+                deleteRow(row, true);
+            }
+        }
+    }
+
+    function doCRCCalc(row) {
+        if (document.getElementById('version_' + row).value != '0' &&
+                document.getElementById('crc_' + row).value != '0') {
+            document.getElementById('crc_' + row).value = crc32(hexToString(document.getElementById('version_' + row).value +
+            parseHexValueToString(parseValueToHex(document.getElementById("param_" + row).value)))).toUpperCase();
+        }
+    }
+
+    function addNewParam() {
+        var tableRef = document.getElementById('paramSettings');
+        var newRow = tableRef.insertRow(tableRef.rows.length - 1);
+        var randomName = getRandomInt(10000);
+        var html = "<td rowspan=\"2\" colspan=\"1\" width=\"40\">" + (tableRef.rows.length - 2) / 2 + "</td>";
+        html += "<td width=\"200\"><input size=\"10\" id=\"diagAddr_" + randomName + "\"></td>";
+        html += "<td><input size=\"10\" id=\"flashOffset_" + randomName + "\"></td>";
+        html += "<td><input id=\"datasetName_" + randomName + "\"></td>";
+        html += "<td><input size=\"10\" id=\"datasetVersion_" + randomName + "\"></td>";
+        html += "<td><input size=\"10\" id=\"login_" + randomName + "\"></td>";
+        html += "<td><input size=\"10\" id=\"datasetType_" + randomName + "\"></td>";
+        html += "<td width=\"300\"><input size=\"50\" id=\"fileName_" + randomName + "\"></td>";
+        html += "<td width=\"60\"><button class=\"pure-material-button-contained\" style=\"min-width:10px\" id=\"" + randomName + "\" type=\"button\" onclick=\"deleteRow(" + randomName + ", false)\">⌫</button></td>";
+        newRow.innerHTML = html;
+        newRow.id = randomName;
+
+        var newRow = tableRef.insertRow(tableRef.rows.length - 1);
+        var html = "<td rowspan=\"1\" colspan=\"8\">";
+        html += "Версия параметров: <input size=\"10\" id=\"version_" + randomName + "\" defaultValue=\"0\" disabled><br>";
+        html += "<textarea rows=\"8\" id=\"param_" + randomName + "\" style=\"width: 100%; font-family: Courier New, Courier, monospace;\"></textarea>";
+        html += "Контрольная сумма: <input size=\"10\" id=\"crc_" + randomName + "\" defaultValue=\"0\" disabled> <button class=\"pure-material-button-contained\" style=\"min-width:10px\" type=\"button\" onclick=\"doCRCCalc(" + randomName + ")\">⟳</button><br>";
+        html += "</td>";
+        newRow.innerHTML = html;
+        newRow.id = randomName;
+
+        return randomName;
+    }
+
+    function handleUpload(evt) {
+        var files = document.getElementById('uploadBinaryButton').files;
+        var reader = new FileReader();
+        var parser = new DOMParser();
+        doClearFields();
+
+        reader.onload = function(e) {
+            var xmlDoc = parser.parseFromString(new TextDecoder().decode(reader.result), "text/xml");
+            const errorNode = xmlDoc.querySelector('parsererror');
+
+            if (errorNode) {
+                var byteStream = new Uint8Array(reader.result);
+                document.getElementById("compressedData").style.display = "table";
+                document.getElementById('data').value = parseValue(byteStream);
+            } else {
+                if (xmlDoc.querySelector('MESSAGE')) {
+                    const parameterAbstract = xmlDoc.querySelectorAll("PARAMETER_DATA");
+                    parameterAbstract.forEach(a => {
+                        var randomName = addNewParam();
+                        document.getElementById('diagAddr_' + randomName).defaultValue = a.getAttribute("DIAGNOSTIC_ADDRESS");
+                        document.getElementById('flashOffset_' + randomName).defaultValue = a.getAttribute("START_ADDRESS");
+                        document.getElementById('datasetName_' + randomName).defaultValue = a.getAttribute("ZDC_NAME");
+                        document.getElementById('datasetVersion_' + randomName).defaultValue = a.getAttribute("ZDC_VERSION");
+                        document.getElementById('login_' + randomName).defaultValue = a.getAttribute("LOGIN");
+                        document.getElementById('datasetType_' + randomName).defaultValue = a.getAttribute("DSD_TYPE");
+                        document.getElementById('fileName_' + randomName).defaultValue = a.getAttribute("FILENAME");
+                        if (a.textContent.length != 0) {
+                            document.getElementById("param_" + randomName).value = parseHexValueToArray(a.textContent.trim());
+                        }
+                    });
+
+                    if (xmlDoc.querySelector('COMPRESSED_DATA').getAttribute("BYTES_UNCOMPRESSED") != '0' &&
+                        xmlDoc.querySelector('COMPRESSED_DATA').getAttribute("BYTES_COMPRESSED") != '0') {
+                        document.getElementById("compressedData").style.display = "table";
+                        document.getElementById('isCompressed').checked = true;
+                        document.getElementById('content').value = xmlDoc.querySelector('COMPRESSED_DATA').getAttribute("CONTENT");
+                        document.getElementById('uncompressedBytes').value = xmlDoc.querySelector('COMPRESSED_DATA').getAttribute("BYTES_UNCOMPRESSED");
+                        document.getElementById('compressedBytes').value = xmlDoc.querySelector('COMPRESSED_DATA').getAttribute("BYTES_COMPRESSED");
+                        document.getElementById('data').value = xmlDoc.querySelector('COMPRESSED_DATA').textContent.trim();
+                    }
+                } else if (xmlDoc.querySelector('SW-CNT')) {
+                    document.getElementById('diagAddr').defaultValue = '';
+                    document.getElementById('flashOffset').defaultValue = xmlDoc.querySelector('START-ADR').textContent.trim();
+                    document.getElementById('datasetName').defaultValue = xmlDoc.querySelector('DATEN-NAME').textContent.trim();
+                    document.getElementById('datasetVersion').defaultValue = xmlDoc.querySelector('CNT-VERSION-INHALT').textContent.trim();
+                    document.getElementById('login').defaultValue = xmlDoc.querySelector('LOGIN').textContent.trim();
+                    document.getElementById('datasetType').defaultValue = '';
+                    document.getElementById('fileName').defaultValue = xmlDoc.querySelector('CNT-DATEI').textContent.trim();
+                    document.getElementById('data').value = xmlDoc.querySelector('DATEN').textContent.trim();
+                } else {
+                    window.alert("Загруженный файл не является файлом параметрии");
+                }
+            }
+        }
+        reader.readAsArrayBuffer(files[0]);
+    }
+
+    function doDecode() {
+        if (document.getElementById('uncompressedBytes').value != '0' &&
+                document.getElementById('compressedBytes').value != '0' &&
+                document.getElementById('isCompressed').checked) {
+           document.getElementById('data').value = atob(document.getElementById('data').value);
+           document.getElementById('isCompressed').checked = false;
+           document.getElementById('uncompressedBytes').value = document.getElementById('data').value.length;
+        }
+    }
+
+    function doOriginal() {
+        if (document.getElementById('uncompressedBytes').value != '0' &&
+                document.getElementById('compressedBytes').value != '0' &&
+                !document.getElementById('isCompressed').checked) {
+           document.getElementById('data').value = btoa(unescape(encodeURIComponent(document.getElementById('data').value)));
+           document.getElementById('isCompressed').checked = true;
+           document.getElementById('compressedBytes').value = document.getElementById('data').value.length;
+        }
+    }
+
+    function doSimplify() {
+        if (document.getElementById('uncompressedBytes').value != '0' &&
+                document.getElementById('compressedBytes').value != '0') {
+            doDecode();
+            const regexp = /<SW-CNT>[\s\S]*?<\/SW-CNT>/g;
+            const matches = document.getElementById('data').value.matchAll(regexp);
+            for (const match of matches) {
+                var xmlDoc = new DOMParser().parseFromString(match[0], "text/xml");
+                var rows = document.getElementById('paramSettings').rows;
+                if (rows.length > 3) {
+                    for (var i = 2; i < rows.length - 2; i++) {
+                        if (rows[i].innerHTML.includes(xmlDoc.querySelector('DATEN-NAME').textContent.trim())){
+                            var randomName = rows[i].id;
+                            document.getElementById('flashOffset_' + randomName).defaultValue = xmlDoc.querySelector('START-ADR').textContent.trim();
+                            document.getElementById('datasetName_' + randomName).defaultValue = xmlDoc.querySelector('DATEN-NAME').textContent.trim();
+                            var data = xmlDoc.querySelector('DATEN').textContent.trim();
+                            document.getElementById("version_" + randomName).value = data.substring(0, 8);
+                            document.getElementById("param_" + randomName).value = parseHexValueToArray(parseValueToHex(data.substring(8, data.length - 8)));
+                            document.getElementById("crc_" + randomName).value = data.substring(data.length - 8, data.length);
+                        }
+                    }
+                }
+            }
+            document.getElementById('data').value = '';
+            document.getElementById('isCompressed').checked = false;
+            document.getElementById('content').value = '0';
+            document.getElementById('uncompressedBytes').value = '0';
+            document.getElementById('compressedBytes').value = '0';
+        }
+    }
+</script>
+<section class="tx-container">
+   <form>
+      <table class="bordered">
+         <tr>
+            <th>Загрузите существующий файл с параметрией</th>
+         </tr>
+         <tr>
+            <td>
+               <input id="uploadBinaryButton" accept=".xml,.bin" type="file"/>
+               <button class="pure-material-button-contained" type="button" name="btnClearAll" id="uploadFile"
+                  onClick="handleUpload();">Загрузить файл
+               </button>
+               <button class="pure-material-button-contained" type="button" name="btnClearAll" id="idClearAll"
+                  onClick="doClearFields();">Очистить поля
+               </button>
+            </td>
+         </tr>
+      </table>
+      <br>
+      <table class="bordered" id="paramSettings">
+         <tr>
+            <th colspan="9">Параметры</th>
+         </tr>
+         <tr>
+            <td class="sub" width="40"><b>#</b></td>
+            <td class="sub" width="200"><b>Diagnostic address</b></td>
+            <td class="sub"><b>Start address</b></td>
+            <td class="sub"><b>Dataset name</b></td>
+            <td class="sub"><b>Dataset version</b></td>
+            <td class="sub"><b>Login</b></td>
+            <td class="sub"><b>Dataset type</b></td>
+            <td class="sub" width="300"><b>File name</b></td>
+            <td class="sub" width="60"></td>
+         </tr>
+         <tr>
+            <td colspan="9">
+               <button class="pure-material-button-contained" type="button" id="newParam" onclick="addNewParam()">Добаить строку с PARAMETER_DATA</button>
+            </td>
+         </tr>
+      </table>
+      <br>
+      <table id="compressedData" class="bordered" style="display: none">
+         <tr>
+            <th colspan="4">Сжатые данные</th>
+         </tr>
+         <tr>
+            <td class="sub"><b>Закодированные данные</b></td>
+            <td class="sub"><b>Тип содержимого</b></td>
+            <td class="sub"><b>Размер в декодированном виде</b></td>
+            <td class="sub"><b>Размер в сжатом виде</b></td>
+         </tr>
+         <tr>
+            <td><input type="checkbox" id="isCompressed" disabled></td>
+            <td><input id="content" value="0"></td>
+            <td><input id="uncompressedBytes" value="0"></td>
+            <td><input id="compressedBytes" value="0"></td>
+         </tr>
+         <tr>
+            <td colspan="4"><textarea id="data" rows="25" style="width: 100%;font-family: Courier New, Courier, monospace;"></textarea></td>
+         </tr>
+         <tr>
+             <td colspan="4">
+                 <button class="pure-material-button-contained" type="button" id="decode" onclick="doDecode()">Декодировать данные</button>
+                 <button class="pure-material-button-contained" type="button" id="original" onclick="doOriginal()">Оригинальное значение</button>
+                 <button class="pure-material-button-contained" type="button" id="simplify" onclick="doSimplify()">Декодировать и преобразовать в PARAMETER_DATA (упростить XML)</button>
+             </td>
+         </tr> 
+      </table>
+      <div id="buttons">
+         <br>
+         <button class="pure-material-button-contained" type="button" id="generate" onclick="doGenerate()">Создать XML dataset</button>
+         <br><br>
+      </div>
+      <table id="generatedData" class="bordered" style="display: none">
+         <tr>
+            <th>Готовый XML dataset</th>
+         </tr>
+         <tr>
+            <td><textarea id="dataset" rows="15" style="width: 100%;font-family: Courier New, Courier, monospace;"></textarea></td>
+         </tr>
+      </table>
+      <script src="https://cdn.jsdelivr.net/gh/emn178/js-crc/build/crc.min.js"></script>
+   </form>
+</section>
