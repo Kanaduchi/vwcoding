@@ -4,14 +4,16 @@ hide:
   - toc
 ---
 
-# Редактор параметрий
+# Dataset editor
 
-Данный редактор параметрий нужен для редактирования или просмотра файлов параметрий.
+This editor is used for working with dataset files
 
-Возможности редактора:
-1. Просмотр файла с параметрией
-2. Редактирование, добавление новых секций с параметрами
-3. Дешифровка base64 набора данных
-4. Преобразование base64 набора данных в секции с параметрами (упрощение файла)
+Editor possibilities: 
+- View dataset file
+- Edit, add or remove parameter sections
+- Decode base64 data content
+- Migrate base64 data content into parameter sections (dataset simplification)  
+- Calculation of CRC32 (for decoded simplified data)
+- Save dataset in simplified format
 
---8<-- "overrides/pages/datasets.html"
+--8<-- "overrides/pages/datasets.en.html"
