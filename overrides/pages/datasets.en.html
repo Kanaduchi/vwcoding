@@ -293,7 +293,7 @@
 
         var newRow = tableRef.insertRow(tableRef.rows.length - 1);
         var html = "<td rowspan=\"1\" colspan=\"8\">";
-        html += "Dataset version: <input size=\"10\" id=\"version_" + randomName + "\" defaultValue=\"0\" disabled><br>";
+        html += "Dataset version: <input size=\"10\" id=\"version_" + randomName + "\" defaultValue=\"0\"><br>";
         html += "<textarea rows=\"8\" id=\"param_" + randomName + "\" style=\"width: 100%; font-family: Courier New, Courier, monospace;\"></textarea>";
         html += "CRC32 control sum: <input size=\"10\" id=\"crc_" + randomName + "\" defaultValue=\"0\" disabled> <button class=\"pure-material-button-contained\" style=\"min-width:10px\" type=\"button\" onclick=\"doCRCCalc(" + randomName + ")\">⟳</button><br>";
         html += "</td>";
