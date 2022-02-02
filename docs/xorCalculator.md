@@ -23,4 +23,4 @@ hide:
 → Применить
 ```
 
---8<-- "overrides/xorCoding.html"
+--8<-- "overrides/pages/xorCoding.html"

@@ -5,13 +5,15 @@ site_author: Kanaduchi
 site_url: http://www.vwcoding.ru
 
 # Hot news
-hot_news_date: 17.01.2022
+hot_news_date: 01.02.2022
 hot_news_title: Все ваши предложения и новые идеи можно присылать на info@vwcoding.ru
 hot_news_title_en: Fill free to send all your ideas and updates to info@vwcoding.ru
 hot_news: >
-  1. <a href='https://vwcoding.ru/xorCalculator'>Добавлен XOR калькулятор</a>
+  1. <a href='https://vwcoding.ru/xorCalculator'>Добавлен XOR калькулятор</a><br>
+  2. <a href='https://vwcoding.ru/datasetEditor'>Редактор параметрий</a>
 hot_news_en: >
-  1. <a href='https://vwcoding.ru/en/xorCalculator'>XOR calculator</a>
+  1. <a href='https://vwcoding.ru/en/xorCalculator'>XOR calculator</a><br>
+  2. <a href='https://vwcoding.ru/datasetEditor'>Dataset editor</a>
 
 # Repository
 repo_name: Kanaduchi/vwcoding
@@ -103,6 +105,7 @@ plugins:
           Платформа PQ35: PQ35 platform
           Калькулятор длинного кодирования: Long-coding calculator
           XOR калькулятор: XOR calculator
+          Редактор параметрий: Dataset editor
           Инструменты и адаптеры: Instruments and adapters
           Список инструментов: Adapters
           Инструкция ODIS E: ODIS E instruction
@@ -199,10 +202,12 @@ nav:
       - Платформа MLB-Evo: MLB-Evo/main.md
       - Платформа PQ26: PQ26/main.md
       - Платформа PQ35: PQ35/main.md
-      - Калькулятор длинного кодирования: longCoding.md
-      - XOR калькулятор: xorCalculator.md
+
       - Инструменты и адаптеры:
-          - Список инструментов: programs.md
+          - Редактор параметрий: datasetEditor.md
+          - Калькулятор длинного кодирования: longCoding.md
+          - XOR калькулятор: xorCalculator.md
+          - Список программ и адаптеров: programs.md
           - Инструкция ODIS E: odis-e.md
       - История изменений: history.md
       - Обратная связь: questions.md

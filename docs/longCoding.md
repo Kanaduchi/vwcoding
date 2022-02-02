@@ -10,4 +10,4 @@ hide:
 00000001 - включен бит "0"  
 00000010 - включен бит "1"  
 
---8<-- "overrides/longCoding.html"
+--8<-- "overrides/pages/longCoding.html"

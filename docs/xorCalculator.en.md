@@ -29,4 +29,4 @@ To confirm changing of firmware you need to:
 → Save
 ```
 
---8<-- "overrides/xorCoding.en.html"
+--8<-- "overrides/pages/xorCoding.en.html"
