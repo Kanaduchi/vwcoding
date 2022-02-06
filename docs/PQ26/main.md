@@ -19,7 +19,7 @@ hide:
 
 !!! tip "Оффлайн версия"
     Данный файл был создан пользователем [prog-san](https://www.drive2.ru/users/prog-san) для сообщества «КОДИРОВКИ VAG» на [DRIVE2.RU](https://www.drive2.ru/communities/3868/)    
-    <button class="pure-material-button-contained" type="button" id="generate" onclick="window.location.href = '../PQ26.pdf';">Скачать (pdf)</button>
+    [Скачать PDF :material-download:](PQ26.pdf){ .md-button .md-button--primary }
        
 ### Автомобили на этой платформе
 A06 (PQ26)  

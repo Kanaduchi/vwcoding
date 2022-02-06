@@ -18,11 +18,11 @@ hide:
 !!! tip "Оффлайн версия с диагностической информацией"
     Оффлайн версия содержит в себе раздел, просвещенный диагностике неисправностей   
     Данный файл был создан пользователем [RiHard](https://www.drive2.ru/users/rihard/) для сообщества «КОДИРОВКИ VAG» на [DRIVE2.RU](https://www.drive2.ru/communities/3868/)  
-    <button class="pure-material-button-contained" type="button" id="generate" onclick="window.location.href = '../PQ35.pdf';">Скачать (pdf)</button>
+    [Скачать PDF :material-download:](PQ35.pdf){ .md-button .md-button--primary }
 
 !!! tip "Оффлайн версия для Tiguan 1st generation"
     Данный файл был создан пользователем [savafso](https://www.drive2.ru/users/savafso) для сообщества «КОДИРОВКИ VAG» на [DRIVE2.RU](https://www.drive2.ru/communities/3868/)  
-    <button class="pure-material-button-contained" type="button" id="generate" onclick="window.location.href = '../PQ35_Tiguan.pdf';">Скачать (pdf)</button>
+    [Скачать PDF :material-download:](PQ35_Tiguan.pdf){ .md-button .md-button--primary }
     
 ### Инструкция
 **В: Что нужно для применения данных кодировок?**  

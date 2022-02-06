@@ -11,7 +11,7 @@ SWaP подписывается закрытым ключом (RSA1024).
 pACC (Predictive ACC) — это адаптивный круиз-контроль, который может автоматически устанавливать скорость движения с помощью картографических данных (прогнозируемых данных, PSD) и распознаваемых дорожных знаков.  
 
 Архив с генератором SWaP, прошивками и параметриями:
-<button class="pure-material-button-contained" type="button" id="generate" onclick="window.location.href = '../../firmwares/accGenerator.zip';">Скачать (версия от 26.07.2021)</button>
+[Скачать (версия от 02.02.2022) :material-download:](../firmwares/accGenerator.zip){ .md-button .md-button--primary }
 
 === "Функциональные FEC коды для 2Q0/3QF/5Q0/5QF радаров"
     10009001	MRR-Paket 1: ACClow (Basis-ACC) + FrontAssist inkl. CityANB  
