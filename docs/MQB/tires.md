@@ -34,7 +34,7 @@
 
 ### Создание собственно профиля шин
 
-+ [Online генератор TMPS](/MQB/tiresCoding)
+[Online генератор TMPS](../utils/tiresCoding.md){ .md-button .md-button--primary }
 
 Поддерживающиеся блоки:   
 3AA907273D; 3AA907273F; 3AA907273H; 5Q0907273; 5Q0907273B; 7P6907273H; 7P6907273L.
