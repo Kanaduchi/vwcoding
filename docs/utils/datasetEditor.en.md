@@ -15,6 +15,7 @@ Editor possibilities:
 - Migrate base64 data content into parameter sections (dataset simplification)    
 - Calculation of CRC32 (for decoded simplified data)  
 - Save dataset in simplified format  
+- Detect little-endian byte order
 
 ??? note "Experimental function of dataset simplification"
     1 - Decode base64 value of <COMPRESSED_DATA> object. Value has structure of <SW-CNT>   
