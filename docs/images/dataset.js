@@ -1,20 +1,30 @@
 /**
- * Convert big-endian hex to little-endian hex
+ * Convert big-endian hex to little-endian hex and vice-versa
  */
 function setEndianConvert(value) {
+    let result = '';
     if (value.length % 2) {
         value = '0' + String(value);
     }
-
-    const len = value.length / 2;
-    let str = '';
-    for (let i = 0; i < len; i++) {
-        const count = len - i - 1;
-        str += '' + value.substring(count * 2, count * 2 + 2);
+    for (let n = 0; n < value.length; n += 4) {
+        const str = value.substring(n, n + 4);
+        result += str.replace(/(..)(..)?/g, "$2$1");
     }
+    return result;
+}
 
-    str = str.toUpperCase();
-    return str;
+/**
+ * Check if hex is little-endian. Example: 5216 = true; 1652 = false
+ */
+function isLittleEndian(value) {
+    if (value.length % 2) {
+        value = '0' + String(value);
+    }
+    let array = hexToDecimalArray(value.substring(0, 4));
+    if (array[0] === array[1]) {
+        return isLittleEndian(value.substring(4));
+    }
+    return array[0] > array[1];
 }
 
 /**
@@ -331,21 +341,28 @@ function doCreateParam(row, showDialog) {
     let raw = cleanHexValue(document.getElementById('param_' + row).value);
     if (raw) {
         doCRC16Calc(row);
-        result = parseStringValueToHex(raw +
-            asciiToHex(document.getElementById('version_' + row).value.substring(0, 2)) +
-            document.getElementById("crc16_" + row).value);
+        result = raw + asciiToHex(document.getElementById('version_' + row).value.substring(0, 2)) +
+            document.getElementById("crc16_" + row).value;
+        if (document.getElementById('littleEndian_' + row).checked && !isLittleEndian(raw)) {
+            result = setEndianConvert(result);
+        }
         if (showDialog) {
-            window.prompt("Parameter", result);
+            window.prompt("Parameter", parseStringValueToHex(result));
         }
     }
-    return result;
+    return parseStringValueToHex(result);
 }
 
 function doCRC16Calc(row) {
     let raw = cleanHexValue(document.getElementById('param_' + row).value);
     if (document.getElementById('version_' + row).value && raw) {
-        document.getElementById('crc16_' + row).value = CRC16_CCITT(hexToDecimalArray(
+        let hexValue = CRC16_CCITT(hexToDecimalArray(
             raw + asciiToHex(document.getElementById('version_' + row).value.substring(0, 2)))).toUpperCase();
+        if (isLittleEndian(raw)) {
+            hexValue = CRC16_CCITT(hexToDecimalArray(
+                raw + setEndianConvert(asciiToHex(document.getElementById('version_' + row).value.substring(0, 2))))).toUpperCase()
+        }
+        document.getElementById('crc16_' + row).value = hexValue;
     }
 }
 
@@ -369,6 +386,7 @@ function addNewParam() {
     html = "<td rowspan=\"1\" colspan=\"3\">";
     html += "<textarea rows=\"5\" cols=\"25\" id=\"param_" + randomName + "\" style=\"width: 100%; font-family: Courier New, Courier, monospace;\"></textarea>";
     html += "</td><td rowspan=\"1\" colspan=\"4\">";
+    html += "Bytes in little-endian format: <input type=\"checkbox\" id=\"littleEndian_" + randomName + "\"><br>";
     html += "Version of hex: <input size=\"2\" maxlength=\"2\" id=\"version_" + randomName + "\" defaultValue=\"0\"><br>";
     html += "CRC16 sum: <input size=\"10\" id=\"crc16_" + randomName + "\" defaultValue=\"0\" disabled> <button class=\"pure-material-button-contained\" style=\"min-width:10px\" type=\"button\" onclick=\"doCRC16Calc(" + randomName + ")\">⟳</button><br>";
     html += "<button class=\"pure-material-button-contained\" style=\"min-width:10px\" type=\"button\" onclick=\"doCreateParam(" + randomName + ", true)\">Generate</button>";
@@ -432,15 +450,21 @@ function handleUpload() {
                     document.getElementById('fileName_' + randomName).defaultValue = a.getAttribute("FILENAME");
                     if (a.textContent.length !== 0) {
                         const raw = parseHexValueToString(a.textContent.trim());
-                        document.getElementById("version_" + randomName).value = hexToAscii(raw.substring(raw.length - 8, raw.length - 4));
-                        document.getElementById("crc16_" + randomName).value = raw.substring(raw.length - 4, raw.length);
+                        if (isLittleEndian(raw)) {
+                            document.getElementById('littleEndian_' + randomName).checked = true;
+                            document.getElementById("version_" + randomName).value = hexToAscii(setEndianConvert(raw.substring(raw.length - 8, raw.length - 4)));
+                            document.getElementById("crc16_" + randomName).value = setEndianConvert(raw.substring(raw.length - 4, raw.length));
+                        } else {
+                            document.getElementById("version_" + randomName).value = hexToAscii(raw.substring(raw.length - 8, raw.length - 4));
+                            document.getElementById("crc16_" + randomName).value = raw.substring(raw.length - 4, raw.length);
+                        }
                         document.getElementById("param_" + randomName).value = parseValue(raw.substring(0, raw.length - 8));
                     }
                 });
 
                 if (xmlDoc.querySelector('COMPRESSED_DATA') &&
-                    xmlDoc.querySelector('COMPRESSED_DATA').getAttribute("BYTES_UNCOMPRESSED") != '0' &&
-                    xmlDoc.querySelector('COMPRESSED_DATA').getAttribute("BYTES_COMPRESSED") != '0') {
+                    xmlDoc.querySelector('COMPRESSED_DATA').getAttribute("BYTES_UNCOMPRESSED") !== '0' &&
+                    xmlDoc.querySelector('COMPRESSED_DATA').getAttribute("BYTES_COMPRESSED") !== '0') {
                     document.getElementById("compressedData").style.display = "table";
                     document.getElementById('isCompressed').checked = true;
                     document.getElementById('content').value = xmlDoc.querySelector('COMPRESSED_DATA').getAttribute("CONTENT");
@@ -528,7 +552,10 @@ function doSimplify() {
             document.getElementById('flashOffset_' + randomName).defaultValue = document.getElementById('parsedFlashOffset_' + rows[i].id).value;
             document.getElementById('datasetName_' + randomName).defaultValue = document.getElementById('parsedDatasetName_' + rows[i].id).value;
             document.getElementById("version_" + randomName).value = document.getElementById("parsedVersion_" + rows[i].id).value.substring(0, 2);
-            document.getElementById("param_" + randomName).value = parseValue(setEndianConvert(cleanHexValue(document.getElementById('parsedParam_' + rows[i].id).value)));
+            document.getElementById("param_" + randomName).value = document.getElementById('parsedParam_' + rows[i].id).value;
+            if (isLittleEndian(cleanHexValue(document.getElementById('parsedParam_' + rows[i].id).value))) {
+                document.getElementById('littleEndian_' + randomName).checked = true;
+            }
             doCRC16Calc(randomName);
         }
     }
