@@ -22,7 +22,7 @@
 Схема:  
 ![Screenshot](../images/MQB/addons/A5-scheme.jpeg)   
 
-[(Кодирование камеры)](https://vwcoding.ru/MQB/assistants/)
+[(Кодирование камеры)](assistants)
 
 ### Сенсорная панель климата
 
