@@ -21,6 +21,28 @@
 
 > логин-пароль 31347    
 
+### Предупреждение задними стоп-сигналами при открытии дверей
+
+!!! tip "Возможные варианты"
+    Tuerausstiegslicht hinten links/rechts - только задняя дверь  
+    Tuerausstiegslicht vorne links/rechts - только передняя дверь  
+    Tuerausstiegslicht links/rechts - передняя и задняя дверь  
+
+``` yaml
+Блок 09 → Адаптация:
+> Leuchte20BR LA71:
+>> At Lichtfunktion B 20: новое значение
+→ Применить
+```
+``` yaml
+Блок 09 → Адаптация:
+> Leuchte21BR RC8:
+>> At Lichtfunktion B 21: новое значение
+→ Применить
+```
+
+> логин-пароль 31347   
+
 ### Перемигивание задних габаритов и поворотников
 
 !!! tip ""

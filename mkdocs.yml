@@ -5,12 +5,13 @@ site_author: Kanaduchi
 site_url: http://www.vwcoding.ru
 
 # Hot news
-hot_news_date: 09.04.2022
+hot_news_date: 22.04.2022
 hot_news_title: Все ваши предложения и новые идеи можно присылать на info@vwcoding.ru
 hot_news_title_en: Fill free to send all your ideas and updates to info@vwcoding.ru
 hot_news: >
   1. <a href='https://vwcoding.ru/xorCalculator'>Добавлен XOR калькулятор</a><br>
-  2. <a href='https://vwcoding.ru/datasetEditor'>Редактор параметрий</a>
+  2. <a href='https://vwcoding.ru/datasetEditor'>Редактор параметрий</a><br>
+  3. Новые кодировки: сброс давления в салоне, стоп-сигналы при открытии задних дверей
 hot_news_en: >
   1. <a href='https://vwcoding.ru/en/xorCalculator'>XOR calculator</a><br>
   2. <a href='https://vwcoding.ru/datasetEditor'>Dataset editor</a>
