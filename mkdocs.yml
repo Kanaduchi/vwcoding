@@ -5,7 +5,7 @@ site_author: VWCODING
 site_url: http://www.vwcoding.ru
 
 # Hot news
-hot_news_date: 16.06.2022
+hot_news_date: 14.08.2022
 hot_news_title: Все ваши предложения и новые идеи можно присылать на info@vwcoding.ru
 hot_news_title_en: Fill free to send all your ideas and updates to info@vwcoding.ru
 hot_news: >
@@ -69,6 +69,7 @@ theme:
     - search.highlight
     - search.share
     - search.suggest
+    - announce.dismiss
       # - toc.integrate
 
 extra_css:
