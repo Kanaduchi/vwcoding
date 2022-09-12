@@ -1,8 +1,7 @@
 ---
 hide:
   - toc
-disqus: ""
-giscus: ""
+comments: false
 ---
   
 <style>

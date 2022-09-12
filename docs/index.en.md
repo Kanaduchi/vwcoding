@@ -3,8 +3,7 @@ title: Coding of VW cars
 template: ./main.en.html
 hide:
   - toc
-disqus: ""
-giscus: ""
+comments: false
 ---
   
 <style>

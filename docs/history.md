@@ -1,6 +1,5 @@
 ---
-disqus: ""
-giscus: ""
+comments: false
 ---
 # История изменений
 
