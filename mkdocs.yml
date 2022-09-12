@@ -76,13 +76,16 @@ extra_css:
   - assets/custom.css
 
 extra:
-  disqus: https-mqb-readthedocs-io
-  giscus:
-    enable: false
-    repo: Kanaduchi/vwcoding
-    repo_id: MDEwOlJlcG9zaXRvcnkyMTQ4NTE3Njk=
-    category: General
-    category_id: MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyNjYxNjIy
+  comments:
+      enable: true
+      # Can be disqus or giscus
+      type: disqus
+      # Url for disqus
+      disqus_url: https-mqb-readthedocs-io
+      repo: Kanaduchi/vwcoding
+      repo_id: MDEwOlJlcG9zaXRvcnkyMTQ4NTE3Njk=
+      category: General
+      category_id: MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyNjYxNjIy
   alternate:
     - name: Русский
       link: ./

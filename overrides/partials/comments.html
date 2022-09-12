@@ -1,0 +1,83 @@
+<!-- Comments -->
+{% set comments = config.extra.comments %}
+{% if comments.enable %}
+  {%if page.meta.comments or page.meta.comments == null %}
+    <h2 id="__comments">{{ lang.t("meta.comments") }}</h2>
+
+    {% if comments.type == "disqus" %}
+      <div id="disqus_thread"></div>
+      <script>
+        var disqus_config = function() {
+          this.page.url = "{{ page.canonical_url }}"
+          this.page.identifier =
+            "{{ page.canonical_url | replace(config.site_url, '') }}"
+        }
+        /* Set up for the first time */
+        if (typeof DISQUS === "undefined") {
+          var script = document.createElement("script")
+          script.async = true
+          script.src = "https://{{ comments.disqus_url }}.disqus.com/embed.js"
+          script.setAttribute("data-timestamp", Date.now())
+
+          /* Inject script tag */
+          document.body.appendChild(script)
+
+        /* Set up on navigation (instant loading) */
+        } else {
+          DISQUS.reset({
+            reload: true,
+            config: disqus_config
+          })
+        }
+      </script>
+    {% endif %}
+
+    {% if comments.type == "giscus" %}
+      <!-- Insert generated code here -->
+      <script src="https://giscus.app/client.js"
+                data-repo="{{ comments.repo }}"
+                data-repo-id="{{ comments.repo_id }}"
+                data-category="{{ comments.category }}"
+                data-category-id="{{ comments.category_id }}"
+                data-mapping="pathname"
+                data-reactions-enabled="1"
+                data-emit-metadata="0"
+                data-theme="light"
+                data-lang="{{ config.theme.language }}"
+                crossorigin="anonymous"
+                async>
+      </script>
+    {% endif %}
+
+    <!-- Synchronize Giscus theme with palette -->
+    <script>
+      var giscus = document.querySelector("script[src*=giscus]")
+        {% if giscus %}
+        /* Set palette on initial load */
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+          giscus.setAttribute("data-theme", theme)
+        }
+
+        /* Register event handlers after documented loaded */
+        document.addEventListener("DOMContentLoaded", function() {
+          var ref = document.querySelector("[data-md-component=palette]")
+          ref.addEventListener("change", function() {
+            var palette = __md_get("__palette")
+            if (palette && typeof palette.color === "object") {
+              var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+              /* Instruct Giscus to change theme */
+              var frame = document.querySelector(".giscus-frame")
+              frame.contentWindow.postMessage(
+                { giscus: { setConfig: { theme } } },
+                "https://giscus.app"
+              )
+            }
+          })
+        })
+      {% endif %}
+    </script>
+  {% endif %}
+{% endif %}
