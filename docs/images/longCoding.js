@@ -45,7 +45,7 @@ function checkOrig() {
             fillBytes();
             //Load from label file
             if (document.getElementById("langBits").value != "none"){
-               fetch('../labels/' + document.getElementById("langBits").value + '_labels.txt')
+               fetch('../../labels/' + document.getElementById("langBits").value + '_labels.txt')
                  .then(response => response.text())
                  .then(text => labelsFromFile = text.split("\n"))
                  .then(() => selByte(0));
