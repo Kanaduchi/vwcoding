@@ -1,67 +1,7 @@
 <style>
-   table {
-   *border-collapse: collapse; /* IE7 and lower */
-   border-spacing: 0;
-   width: 100%;
-   }
    .bitTable {
    padding: 0px;
    width: auto;
-   }
-   .bordered {
-   -moz-border-radius: 6px;
-   -webkit-border-radius: 6px;
-   border-radius: 6px;
-   -webkit-box-shadow: 0 1px 1px #ccc;
-   -moz-box-shadow: 0 1px 1px #ccc;
-   box-shadow: 0 1px 1px #ccc;
-   }
-   .bordered tr:hover {
-   -o-transition: all 0.1s ease-in-out;
-   -webkit-transition: all 0.1s ease-in-out;
-   -moz-transition: all 0.1s ease-in-out;
-   -ms-transition: all 0.1s ease-in-out;
-   transition: all 0.1s ease-in-out;
-   }
-   .bordered td, .bordered th {
-   border-left: 1px solid #ccc;
-   border-top: 1px solid #ccc;
-   padding: 10px;
-   text-align: left;
-   }
-   .bordered th {
-   background-color: #3F51B5;
-   color: #FFFFFF;
-   -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
-   -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;
-   box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
-   border-top: none;
-   text-shadow: 0 1px 0 rgba(255,255,255,.5);
-   }
-   .bordered th:first-child {
-   -moz-border-radius: 6px 0 0 0;
-   -webkit-border-radius: 6px 0 0 0;
-   border-radius: 6px 0 0 0;
-   }
-   .bordered th:last-child {
-   -moz-border-radius: 0 6px 0 0;
-   -webkit-border-radius: 0 6px 0 0;
-   border-radius: 0 6px 0 0;
-   }
-   .bordered th:only-child{
-   -moz-border-radius: 6px 6px 0 0;
-   -webkit-border-radius: 6px 6px 0 0;
-   border-radius: 6px 6px 0 0;
-   }
-   .bordered tr:last-child td:first-child {
-   -moz-border-radius: 0 0 0 6px;
-   -webkit-border-radius: 0 0 0 6px;
-   border-radius: 0 0 0 6px;
-   }
-   .bordered tr:last-child td:last-child {
-   -moz-border-radius: 0 0 6px 0;
-   -webkit-border-radius: 0 0 6px 0;
-   border-radius: 0 0 6px 0;
    }
    .bytes {
    padding: 0px !important;
@@ -101,7 +41,7 @@
             <td colspan="1" nowrap>
                <input type="text" id="origCode" name="origCode" value=""
                   style="height: 25px; width: 440px; color: #ffff00; font-weight: bold; background-color:#4051b5;">&nbsp;&nbsp;
-               <div id="loading" style="display: none;"><img style="vertical-align: bottom;" width="24" src="../../images/loading.gif">&nbsp;&nbsp;</div>
+               <div id="loading" style="display: none;"><img style="vertical-align: bottom;" width="24" src="../../assets/images/loading.gif">&nbsp;&nbsp;</div>
                <button class="pure-material-button-contained" type="button" name="enterOrig" onClick="checkOrig()">
                Load
                </button>
@@ -131,7 +71,7 @@
       </table>
       <div style ="margin-top: 20px;" id="bytesDescription"></div>
       <div style ="margin-top: 20px; display:none;" id="bitDescription"></div>
-      <script src="../../images/longCoding.js"></script>
-      <script src="../../images/dataset.js"></script>
+      <script src="../../assets/js/longCoding.js"></script>
+      <script src="../../assets/js/dataset.js"></script>
    </form>
 </body>

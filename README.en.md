@@ -1,4 +1,4 @@
-![VW coding](docs/assets/logo.png)
+![VW coding](docs/assets/images/logo.png)
 
 ## Description
 
