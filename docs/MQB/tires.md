@@ -1,6 +1,9 @@
 
 # Настройка профилей шин
 
+!!! note "Генератор параметрии шин"
+    [Online генератор TMPS](../utils/tiresCoding.md){ .md-button .md-button--primary }
+
 ### Настройка системы контроля давления в шинах через Individual профиль
 
 !!! tip

@@ -5,16 +5,8 @@ site_author: VWCODING
 site_url: http://www.vwcoding.ru
 
 # Hot news
-hot_news_date: 06.10.2022
 hot_news_title: Все ваши предложения и новые идеи можно присылать на info@vwcoding.ru
 hot_news_title_en: Fill free to send all your ideas and updates to info@vwcoding.ru
-hot_news: >
-  1. <a href='https://vwcoding.ru/xorCalculator'>Добавлен XOR калькулятор</a><br>
-  2. <a href='https://vwcoding.ru/datasetEditor'>Редактор параметрий</a><br>
-  3. Обновлено кодирование дотирки капель на лобовом стекле для MQB платформы
-hot_news_en: >
-  1. <a href='https://vwcoding.ru/en/xorCalculator'>XOR calculator</a><br>
-  2. <a href='https://vwcoding.ru/datasetEditor'>Dataset editor</a>
 
 # Repository
 repo_name: Kanaduchi/vwcoding
@@ -30,7 +22,7 @@ docs_dir: docs/
 theme:
   name: material
   custom_dir: overrides
-  favicon: assets/icon.png
+  favicon: assets/images/icon.png
   palette:
     # Light mode
     - media: "(prefers-color-scheme: light)"
@@ -53,7 +45,7 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  logo: assets/logo.png
+  logo: assets/images/logo.png
   features:
     - content.code.annotate
     # - content.tabs.link
@@ -111,6 +103,7 @@ plugins:
           Калькулятор длинного кодирования: Long-coding calculator
           XOR калькулятор: XOR calculator
           Редактор параметрий: Dataset editor
+          Инструменты: Coding instruments
           Инструменты и адаптеры: Instruments and adapters
           Генератор параметрии шин: Tyres parameters generator
           Список программ и адаптеров: Software and adapters
@@ -250,7 +243,6 @@ nav:
           - Снятие защиты и SWaP для Pro: MQB/headDeviceFunctionsPro.md
       - Шины:
           - Кодирование: MQB/tires.md
-          - Генератор параметрии: utils/tiresCoding.md
       - Дооснащение: MQB/addons.md
       - Eeprom память: MQB/eeprom.md
   - Платформа MLB-Evo:
@@ -295,6 +287,5 @@ nav:
           - Свет: PQ35/Tiguan/lights.md
           - Приборная панель: PQ35/Tiguan/instrPanel.md
           - Мультимедиа: PQ35/Tiguan/multimedia.md
-  - Калькулятор длинного кодирования: utils/longCoding.md
-  - XOR калькулятор: utils/xorCalculator.md
+  - Инструменты: utils/main.md
   - Поддержать проект: https://yoomoney.ru/to/4100110582992748/100
