@@ -42,30 +42,26 @@ Sign Assist — Ассистент распознавания дорожных �
 Включаем отображение Lane Assist на приборной панели
 ``` yaml
 Блок 17 (комбинация приборов/ActiveInfoDisplay) → Кодирование:
-> Lane_assist: yes
- (Байт 04 – Бит 6 (Lane_assist: no → yes)): Активировать)
-> Lane_assist_BAP: yes.
- (Байт 11 – Бит 1 (Lane_assist_BAP: no → yes)): Активировать)
+Байт 04 – Бит 6 (Lane_assist): Активировать
+Байт 11 – Бит 1 (Lane_assist_BAP): Активировать
 ```
 
 HCA - Указание блоку рулевого управления о наличии Lane Assist
-``` yaml
+``` yaml title="логин-пароль: 19249"
 Блок 44 (усилитель рулевого) → Кодирование:
-> Heading_control_assist: Spurhalteassistent auf "aktiv"   
- (Байт 03 – Бит 1: Активировать)   
+Байт 03 – Бит 1 (Heading_control_assist): Активировать
 → Применить 
 ```
-> логин-пароль 19249
 
 Включаем в меню новые функции
 ``` yaml
 Блок 5F (мультимедия) → Адаптация:
-> Car_Function_List_BAP_Gen2
->> LDW_HCA_0x19: Активировать
->> LDW_HCA_0x19_msg_bus: CAN_Extended
-> Car_Function_Adaptations_Gen2
->> menu_display_Lane_Departure_Warning: Активировать
->> menu_display_Lane_Departure_Warning_over_threshold_high: Активировать
+Car_Function_List_BAP_Gen2
+- LDW_HCA_0x19: Активировать
+- LDW_HCA_0x19_msg_bus: CAN_Extended
+Car_Function_Adaptations_Gen2
+- menu_display_Lane_Departure_Warning: Активировать
+- menu_display_Lane_Departure_Warning_over_threshold_high: Активировать
 → Применить 
 ```
 
@@ -77,19 +73,18 @@ HCA - Указание блоку рулевого управления о на�
 ``` yaml
 Блок 76 → Кодирование:
 Ассистент движения по полосе, связ. с усилителем рул. управления
-> HeadingControl Unterstutzung Auswahl: Spurhalteassistent aktiviert (Heading-Control)
-(Байт 3 – Бит 5)
+Байт 3 – Бит 5 (HeadingControl Unterstutzung Auswahl): Активировать (Spurhalteassistent aktiviert)
 → Применить 
 ```
 
 Конфигурация камеры ассистентов
 ``` yaml
-Блок A5 (камера ассистентов) → Кодирование:
-> Byte 08 > Bit 5-7 - Point_of_intervention: A0 late, setting over menu
-> Byte 09 > Bit 0-1 - Configuration_for_lane_departure_warning_Kl15: 03 Last_setting
-> Byte 09 > Bit 7 - HC: (1) coded
-> Byte 09 > Bit 2-3 - Lane_assist_system_mode: 0C Selection_over_menu
-> Byte 09 > Bit 4-5 - HC advanced takeover request: (1) coded
-> Byte 17 > Bit 0 - HC messages: (1) coded
+Блок A5 (камера ассистентов) → Кодирование:  
+Байт 08 - Бит 5-7 (Point_of_intervention): A0 late, setting over menu
+Байт 09 - Бит 0-1 (Configuration_for_lane_departure_warning_Kl15): 03 Last_setting
+Байт 09 - Бит 7 (HC): (1) coded
+Байт 09 - Бит 2-3 (Lane_assist_system_mode): 0C Selection_over_menu
+Байт 09 - Бит 4-5 (HC advanced takeover request): (1) coded
+Байт 17 - Бит 0 (HC messages): (1) coded
 → Применить 
 ```
