@@ -56,10 +56,10 @@ HCA - Указание блоку рулевого управления о на�
 Включаем в меню новые функции
 ``` yaml
 Блок 5F (мультимедия) → Адаптация:
-Car_Function_List_BAP_Gen2
+Car_Function_List_BAP_Gen2:
 - LDW_HCA_0x19: Активировать
 - LDW_HCA_0x19_msg_bus: CAN_Extended
-Car_Function_Adaptations_Gen2
+Car_Function_Adaptations_Gen2:
 - menu_display_Lane_Departure_Warning: Активировать
 - menu_display_Lane_Departure_Warning_over_threshold_high: Активировать
 → Применить 

@@ -78,9 +78,9 @@ HCA - Указание блоку рулевого управления о на�
 Включаем в меню новые функции
 ``` yaml
 Блок 5F (мультимедия) → Адаптация:
-Car_Function_List_BAP_Gen2
+Car_Function_List_BAP_Gen2:
 - LDW_HCA_0x19:  activated
-Car_Function_Adaptations_Gen2
+Car_Function_Adaptations_Gen2:
 - menu_display_Lane_Departure_Warning: Активировать
 - menu_display_Lane_Departure_Warning_over_threshold_high: Активировать
 → Применить 
@@ -140,9 +140,9 @@ Lane Assist с адаптивным ведением по полосе — ис�
 Изменение типа ассистента дальнего света с простого на MDF - маскируемый или неослепляющий дальний. Добавляем ассистент в меню
 ``` yaml title="логин-пароль: 31347"
 Блок 09 (бортовая сеть) → Адаптация:
-Aussenlicht_Blinker 
+Aussenlicht_Blinker:
 - Warnblinken_durch_Fahrerassistenz: available
-Fernlicht_assistent
+Fernlicht_assistent:
 - Erweiterte_Fernlichtsteuerung: AFS, FLA, Fernlicht ueber AFS → AFS, FLA, Fernlicht (GLW,MDF)
 - Menuesteuerung Fernlichtassistent: available
 - Fernlichtassistent Reset: Деактивировать
@@ -246,11 +246,11 @@ Lane_Departure_Warning_System:_with_Lane_Departure_Warning_System
 Включаем в меню новые функции
 ``` yaml
 Блок 5F (мультимедия) → Адаптация:
-Car_Function_List_BAP_Gen2
+Car_Function_List_BAP_Gen2:
 - LDW_HCA_0x19: Активировать
 - traffic_sign_recognition_0x21: Активировать
 - traffic_sign_recognition_0x21_msg_bus: CAN_Extended (Дополнительная шина данных)
-Car_Function_Adaptations_Gen2
+Car_Function_Adaptations_Gen2:
 - menu_display_Lane_Departure_Warning: Активировать
 - menu_display_Lane_Departure_Warning_over_threshol d_high: Активировать
 - menu_display_road_sign_identification: Активировать
@@ -333,7 +333,23 @@ HC_LONGPRESS: Not_Coded (only for Audi)
 5. Если установлен Park Assist
 6. Запоминание выбранного режима при выключении зажигания
 
-??? note "Список стран, где работает отмена знака по картам из навигации"
+!!! warning ""
+    Данные адаптации отключают отображение предупреждения о неработающих знаках
+
+``` yaml title="логин-пароль: 20103"
+Блок A5 (камера ассистентов) → Адаптация:
+Road_sign_recognition_fusion_mode (Распознавание дорожных знаков: режим Fusion): Road_Sign_Fusion
+Lane_assist_warning_intensity (Интенсивность предупреждений ассистента движения по полосе): Selection_over_menu 
+Personalisation_point_of_intervention (Персонализация момента вмешательства): Last Setting (последняя настройка)
+Adaptation_tsr:
+- Par_relevance_mode: enabled  
+- Par_country_mode: manuel  
+- Par_country_code_RSR: 172 # (1)!
+- Par_country_code_VZF: 172  
+→ Применить 
+```
+
+1. Для стран СНГ можно использовать значение от Польши. Список возможных значений:  
     57 — Чехия  
     68 — Эстония  
     73 — Финляндия  
@@ -342,21 +358,6 @@ HC_LONGPRESS: Not_Coded (only for Audi)
     118 — Латвия  
     172 — Польша  
     197 — Испания  
-
-``` yaml title="логин-пароль: 20103"
-Блок A5 (камера ассистентов) → Адаптация:
-Road_sign_recognition_fusion_mode (Распознавание дорожных знаков: режим Fusion): Road_Sign_Fusion
-Lane_assist_warning_intensity (Интенсивность предупреждений ассистента движения по полосе): Selection_over_menu 
-Personalisation_point_of_intervention (Персонализация момента вмешательства): Last Setting (последняя настройка)
-Adaptation_tsr
-- Par_relevance_mode: enabled  
-- Par_country_mode: manuel  
-- Par_country_code_RSR: 172 # (1)!
-- Par_country_code_VZF: 172  
-→ Применить 
-```
-
-1. Для стран СНГ можно использовать значение от Польши
 
 !!! note "BAP Personalization"
     BAP Personalization - персонализация программирования настроек под каждый ключ в машине. Для автомобилей Tiguan данная опция не задействована — значение ни на что не влияет. 
@@ -369,10 +370,10 @@ Adaptation_tsr
 
 ``` yaml
 Блок 5F (мультимедия) → Адаптация:
-Car_Function_List_BAP_Gen2
+Car_Function_List_BAP_Gen2:
 - traffic_sign_recognition_0x21: Деактивировать
 → Применить 
-Car_Function_Adaptations_Gen2
+Car_Function_Adaptations_Gen2:
 - menu_display_road_sign_identification: Деактивировать
 - menu_display_road_sign_identification_over_threshold_high: Деактивировать
 → Применить 

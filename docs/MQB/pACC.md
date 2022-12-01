@@ -211,7 +211,7 @@ SWaP_FSID_group_4: 7
 Блок 13 → Кодирование:
 Front_camera: installed - в случае наличия камеры ассистентов
 Control_module_for_lane_assistant: installed
-Initialization_concept_front_assist
+Initialization_concept_front_assist:
 - Initialization_1 — большая иконка ожидания готовности Front Assist в верхнем левом углу AID, Front Assist активируется только после начала движения, это значение стоит с завода; 
 - Initialization_2 — маленькая иконка ожидания готовности Front Assist там же, где потом появляется иконка ACC, Front Assist активируется через пару секунд после включения зажигания и сразу видит препятствия перед машиной.
 Automatic_driveaway_by_pretrigger: Активировать  
@@ -225,9 +225,9 @@ Drive_pmode_selection: MMI_menu_ACC (выбор режима работы в м�
 ```
 ``` yaml title="логин-пароль: 20103"
 Блок 13 → Адаптация:
-Distance_Setting
+Distance_Setting:
 - par_Distance_Setting: on
-Adjustment_mode_time_slot_adaptive_distance_control
+Adjustment_mode_time_slot_adaptive_distance_control:
 - Adjustment_mode_time_slot_adaptive_distance_control: on
 → Применить
 ```

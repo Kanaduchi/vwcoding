@@ -15,10 +15,10 @@ ALDW_lane_assist: установлено
 Включаем в меню новые функции
 ``` yaml
 Блок 5F (мультимедия) → Адаптация:
-Car_Function_List_BAP_Gen2
+Car_Function_List_BAP_Gen2:
 - LDW_HCA_0x19: Активировать
 - LDW_HCA_0x19_msg_bus: Terminal 15
-Car_Function_Adaptations_Gen2
+Car_Function_Adaptations_Gen2:
 - menu_display_Lane_Departure_Warning: Активировать
 - menu_display_Lane_Departure_Warning_over_threshold_high: Активировать
 → Применить 
@@ -49,7 +49,7 @@ Lane_assist: yes
 Блок A5 (камера ассистентов) → Адаптация:
 Lane_departure_warning_on_state: Selection_over_menu_default_on
 → Применить 
-Personalisation_for_lane_departure_warning
+Personalisation_for_lane_departure_warning:
 - TT_activated_not_activated: last_setting
 → Применить 
 ```

@@ -150,7 +150,7 @@
 Изменение температуры и времени обогрева заднего стекла
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Обогрев стекла
+Обогрев стекла:
 - Heckscheibenheizung Zeitwert: с «320 с» на «640 с»
 - Abschalttemperatur fuer Heckscheibenheizung: с «35.0 °C» на «38.0 °C»
 → Применить
@@ -159,7 +159,7 @@
 Изменение температуры и времени обогрева лобового стекла
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Обогрев стекла
+Обогрев стекла:
 - Frontscheibenheizung Zeitwert: «320 с» на «640 с»
 - Abschalttemperatur fuer Frontscheibenheizung: «35.0 °C» на «38.0 °C»
 → Применить

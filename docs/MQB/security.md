@@ -16,7 +16,7 @@
 
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Anti-theft device
+Anti-theft device:
 - Akusticher Alarm Signalhorn: Активировать
 - Diebstahlwarnangle: Активировать
 → Применить
@@ -26,7 +26,7 @@ Anti-theft device
 
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Verdecksteuergeraet
+Verdecksteuergeraet:
 - Virtuelles_Pedal_HMI_einstellba: Активировать
 - Virtuelles_Pedal_Verbau: Активировать
 - Virtuelles_Pedal: Активировать
@@ -83,7 +83,7 @@ Byte9_VIP →
 
 ``` yaml title="логин-пароль: 20103"
 Блок B7 → Адаптация:
-byte9_Vip
+byte9_Vip:
 - Сoding_kick and_close_function: Активировать
 → Применить
 ```
@@ -180,7 +180,7 @@ ZV Autolock
 
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Ответные сигналы
+Ответные сигналы:
 - Akustische Rueckmeldung entriegeln (открытие авто): Активировать
 - Akustische Rueckmeldung verriegeln (закрытие авто): Активировать
 - Menuesteuerung akustische Rueckmeldung: Активировать
@@ -196,7 +196,7 @@ ZV Autolock
 
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Schiebedach
+Schiebedach:
 - SAD Komfort schliessen: Активировать
 - SAD Komfort oeffnen: Активировать
 → Применить
@@ -233,12 +233,12 @@ Schiebedach
 
 ``` yaml
 Блок 5F → Адаптация:
-Car_Function_Adaptations_Gen2
+Car_Function_Adaptations_Gen2:
 - menu_display_seat_configuration: Активировать
 - menu_display_seat_configuration_over_threshold_high: Активировать
 → Применить 
 
-Car_Function_List_BAP_Gen2
+Car_Function_List_BAP_Gen2:
 - driver_seat_0x10: Активировать
 - driver_seat_0x10_msg_bus — Шина Комфорт
 → Применить 
@@ -265,12 +265,12 @@ Car_Function_List_BAP_Gen2
 
 ``` yaml
 Блок 5F → Адаптация:
-Car_Function_Adaptations_Gen2
+Car_Function_Adaptations_Gen2:
 - menu_display_seat_configuration: Активировать
 - menu_display_seat_configuration_over_threshold_high: Активировать
 → Применить 
 
-Car_Function_List_BAP_Gen2
+Car_Function_List_BAP_Gen2:
 - Passenger_Seat_0x20: Активировать
 - Passenger_Seat_0x20_msg_bus — Шина Комфорт  
 → Применить 

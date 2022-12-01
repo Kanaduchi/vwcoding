@@ -33,25 +33,25 @@ Climate_style → display на Anzeige Front und Heck
 ```
 ``` yaml
 Блок 08 → Адаптация:
-Detection_time_tap
+Detection_time_tap:
 - par_Detection_time_tap: 600 ms
-Detection_time_hold
+Detection_time_hold:
 - par_Detection_time_hold: 600 ms
-Off_time_neighbor_key_during_sliding
+Off_time_neighbor_key_during_sliding:
 - par_Off_time_neighbor_key_during_sliding: 400 ms
-Sensitivity_touch
+Sensitivity_touch:
 - par_Sensitivity_touch: 0
-Steps_temp_slider
+Steps_temp_slider:
 - par_Steps_temp_slider: 8
-Step_size_temp_slider
+Step_size_temp_slider:
 - par_Step_size_temp_slider: 0.5°C
-22_degree_jump_temp_slider
+22_degree_jump_temp_slider:
 - par_22_degree_jump_temp_slider: not_active
-Flick_function_temp_slider
+Flick_function_temp_slider:
 - par_Flick_function_temp_slider: not_active
-Profile_selection_touch
+Profile_selection_touch:
 - par_Profile_selection_touch: 0
-dimming_characteristic_new_1
+dimming_characteristic_new_1:
 - X1: 0
 - Y1: 16
 - X2: 10
@@ -64,7 +64,7 @@ dimming_characteristic_new_1
 - Y5: 500
 - X6: 253
 - Y6: 1,000
-dimming_characteristic_new_2
+dimming_characteristic_new_2:
 - X1: 0
 - Y1: 0
 - X2: 10
@@ -77,7 +77,7 @@ dimming_characteristic_new_2
 - Y5: 750
 - X6: 100
 - Y6: 1,000
-dimming_characteristic_new_3
+dimming_characteristic_new_3:
 - X1: 0
 - Y1: 6
 - X2: 10
@@ -90,7 +90,7 @@ dimming_characteristic_new_3
 - Y5: 100
 - X6: 253
 - Y6: 300
-dimming_characteristic_new_4
+dimming_characteristic_new_4:
 - X1: 0
 - Y1: 20
 - X2: 10
@@ -103,7 +103,7 @@ dimming_characteristic_new_4
 - Y5: 800
 - X6: 253
 - Y6: 1,000
-dimming_characteristic_new_5
+dimming_characteristic_new_5:
 - X1: 0
 - Y1: 10
 - X2: 10
@@ -116,7 +116,7 @@ dimming_characteristic_new_5
 - Y5: 1,000
 - X6: 253
 - Y6: 1,000
-dimming_characteristic_new_6
+dimming_characteristic_new_6:
 - X1: 0
 - Y1: 4
 - X2: 10
@@ -129,7 +129,7 @@ dimming_characteristic_new_6
 - Y5: 600
 - X6: 253
 - Y6: 1,000
-dimming_characteristic_new_7
+dimming_characteristic_new_7:
 - X1: 0
 - Y1: 20
 - X2: 10
@@ -142,7 +142,7 @@ dimming_characteristic_new_7
 - Y5: 800
 - X6: 253
 - Y6: 1,000
-dimming_characteristic_new_8
+dimming_characteristic_new_8:
 - X1: 0
 - Y1: 8 
 - X2: 10
@@ -155,7 +155,7 @@ dimming_characteristic_new_8
 - Y5: 600 
 - X6: 253
 - Y6: 1,000 
-dimming_characteristic_new_9
+dimming_characteristic_new_9:
 - X1: 0
 - Y1: 14 
 - X2: 10
@@ -168,7 +168,7 @@ dimming_characteristic_new_9
 - Y5: 800 
 - X6: 253
 - Y6: 1,000 
-dimming_characteristic_new_10
+dimming_characteristic_new_10:
 - X1: 0
 - Y1: 10 
 - X2: 10
@@ -181,19 +181,19 @@ dimming_characteristic_new_10
 - Y5: 800 
 - X6: 253
 - Y6: 1,000 
-damping_dimming_characteristic_01
+damping_dimming_characteristic_01:
 - PWM_Daempfung_Aufdimmen: 0.2 s
 - PWM_Daempfung_Abdimmen: 0.1 s
-damping_dimming_characteristic_02
+damping_dimming_characteristic_02:
 - PWM_Daempfung_Aufdimmen: 0.2 s
 - PWM_Daempfung_Abdimmen: 0.1 s
-damping_dimming_characteristic_03
+damping_dimming_characteristic_03:
 - PWM_Daempfung_Aufdimmen: 0.2 s
 - PWM_Daempfung_Abdimmen: 0.1 s
-damping_dimming_characteristic_04
+damping_dimming_characteristic_04:
 - PWM_Daempfung_Aufdimmen: 0.2 s
 - PWM_Daempfung_Abdimmen: 0.1 s
-Sun_sensor_supplier_differentiation
+Sun_sensor_supplier_differentiation:
 - par_Sun_sensor_supplier_differentiation: none
 → Применить
 ```
@@ -299,7 +299,7 @@ Car_Function_List_BAP_Gen2
 ```
 ``` yaml title="логин-пароль: 20103"
 Блок 5F → Адаптация:
-Car_Function_List_BAP_Gen2
+Car_Function_List_BAP_Gen2:
 - VPS_0x0B: Активировать
 - VPS_0x0B_msg_bus: Databus заменить на Infotainment
 → Применить
@@ -410,10 +410,10 @@ Lane_change_support: Активировать
 Кодирование ГУ
 ``` yaml
 Блок 5F → Кодирование:
-Car_Function_List_BAP_Gen2
+Car_Function_List_BAP_Gen2:
 - SWA_0x1A: Активировать
 - SWA_0x1A_msg_bus → Дополнительная шина данных (CAN_Extended)
-Car_Function_Adaptations_Gen2
+Car_Function_Adaptations_Gen2:
 - menu_display_lane_assistant: Активировать
 - menu_display_lane_assistant_over_threshold_high: Активировать
 ```
@@ -457,7 +457,7 @@ Diagnosis_RCTA: tone_via_PLA
 Установка переключателя
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Aussenlicht_uebergreifend
+Aussenlicht_uebergreifend:
 - LDS_mit_AFL: Yes
 → Применить
 ```
@@ -465,7 +465,7 @@ Aussenlicht_uebergreifend
 Установка датчика света и дождя
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Lighting_Assist_Adaptation
+Lighting_Assist_Adaptation:
 - Regen_Lichtsensor: LIN_Regen_Licht_Sensor
 - Feuchtesensor: Installed (если есть датчик влажности)
 ```

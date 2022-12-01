@@ -60,7 +60,7 @@ telephone2_BAP: no → yes
 
 ``` yaml
 Блок 5F → Адаптация:
-Adjustment_fm_tuner_mono_stereo
+Adjustment_fm_tuner_mono_stereo:
 - l_hf_stereo_lower_threshold: 20 dBµV (было 37 dBµV)
 → Применить 
 ```
@@ -148,7 +148,7 @@ nhtsa_properties:
 
 ``` yaml
 Блок 5F → Адаптация:
-Car_function_list_bap_gen2_extended
+Car_function_list_bap_gen2_extended:
 - display_configuration_0x45: Активировать
 - display_configuration_0x45_msg_bus: CAN_Comfort
 → Применить 
@@ -201,10 +201,10 @@ compass_0x15 "active" (default not active)
     
 ``` yaml
 Блок 5F → Адаптация:
-Car_Function_Adaptations_Gen2
+Car_Function_Adaptations_Gen2:
 - menu_display_driving_school - не активир.меняем на активир.
 - menu_display_driving_school_over_threshold_high - не активир меняем на активир.
-Car_Function_List_CAN_Gen2
+Car_Function_List_CAN_Gen2:
 - Driving_school - недоступ. меняем на доступен
 → Применить
 ```

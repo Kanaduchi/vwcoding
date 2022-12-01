@@ -102,6 +102,6 @@ Automatic parking brake: акт.
 :octicons-verified-24: Audi
 ``` yaml
 Блок CA → Адаптация:
-Control_unit_for_sun_roof_convenience_functions
+Control_unit_for_sun_roof_convenience_functions:
 - Convenience_opening_target_attitude: Tilting_position → sliding
 ```

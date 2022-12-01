@@ -173,7 +173,7 @@ SC8 – предохранитель
 
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Interior_light_lamp_configuration
+Interior_light_lamp_configuration:
 - Ambiente_Applikationsleisten_in_Tuertafel: установл. (полоски в двери)
 - Ambiente_Lautsprecher: не установл.
 - Ambiente_Applikationsleisten_in_Instrumententafel: не установл.
@@ -192,7 +192,7 @@ Interior_light_lamp_configuration
 
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Interior_light_2nd_generation
+Interior_light_2nd_generation:
 - Aufloesung Dimmzeit: 0.8
 - weicher Farbwechsel: акт.
 - Tuertafelbeleuchtung mehrfarbig: акт. (полоска в дверях цветная)
@@ -236,7 +236,7 @@ Interior_light_2nd_generation
 Яркость и плавность регулировки каналов
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Interior_light_parameter
+Interior_light_parameter:
 - p_adaption_kundenwunsch_tuer: 0.67 (линейность регулировки)
 - p_helligkeit_entriegelt_tueren: 100
 - p_helligkeit_max_tueren: 100
@@ -332,7 +332,7 @@ Interior_light_parameter
 Скорость смены цвета мс
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Освещение салона, параметры / Interior_light_parameter
+Освещение салона, параметры / Interior_light_parameter:
 - p_t_HMI_verzoegerung_helligkeitswerte: 200
 → Применить
 ```
@@ -340,7 +340,7 @@ Interior_light_parameter
 Прописывание физических диодов
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-ambient_lighting_lin_slaves_modules
+ambient_lighting_lin_slaves_modules:
 - pa_einzeladresse_slave_1: 1
 - pa_verbauinfo_slave_1: установл.
 - pa_fehlerort_slave_1: 0
@@ -426,8 +426,7 @@ ambient_lighting_lin_slaves_modules
 Прописывание групп регулировки диодов и их назначение
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-ambient_lighting_lin_slaves_groups
-
+ambient_lighting_lin_slaves_groups:
 - pa_verbauinfo_gruppe_1: многоцветный
 - pa_lichtfunktion_gruppe_1: Дверь
 - pa_korrekturfaktor_gruppe_1: 1
@@ -493,8 +492,7 @@ ambient_lighting_lin_slaves_groups
 Список базовых цветов
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Ambience_lightning_color_list
-
+Ambience_lightning_color_list:
 - Rotwert Farbe 1: 217
 - Gruenwert Farbe 1: 221
 - Blauwert Farbe 1: 235
@@ -540,8 +538,7 @@ Ambience_lightning_color_list
 Вторая группа настраиваемых цветов
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Ambience_lightning_color_list_2
-
+Ambience_lightning_color_list_2:
 - Rotwert Farbe 11: 255
 - Gruenwert Farbe 11: 255
 - Blauwert Farbe 11: 0
@@ -567,8 +564,7 @@ Ambience_lightning_color_list_2
 Цвета для диодов
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Ambience_lightning_color_list_lin
-
+Ambience_lightning_color_list_lin:
 - Rotwert_Farbe_1_lin: 120
 - Gruenwert_Farbe_1_lin: 231
 - Blauwert_Farbe_1_lin: 71
@@ -614,8 +610,7 @@ Ambience_lightning_color_list_lin
 Вторая часть цветов для диодов
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Ambience_lightning_color_list_lin_2
-
+Ambience_lightning_color_list_lin_2:
 - Rotwert_Farbe_11_lin: 255
 - Gruenwert_Farbe_11_lin: 255
 - Blauwert_Farbe_11_lin: 0
@@ -641,8 +636,7 @@ Ambience_lightning_color_list_lin_2
 Профили движения и номера цветов
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Ambientelicht Zuordnung der Farbe zum Fahrprofil 
-
+Ambientelicht Zuordnung der Farbe zum Fahrprofil:
 - pFahrprofil_0: 1 профиль при заглушенной машине
 - pFahrprofil_1: 1
 - pFahrprofil_2: 7 обычный
@@ -679,7 +673,7 @@ Driving Profile Selection Parameter
 Кодировки для подсветки карманов дверей
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-ambient_lighting_lin_slaves_groups
+ambient_lighting_lin_slaves_groups:
 -  pa_verbauinfo_gruppe_7: Multi_color
 -  pa_lichtfunktion_gruppe_7: door
 -  pa_korrekturfaktor_gruppe_7: 1.00

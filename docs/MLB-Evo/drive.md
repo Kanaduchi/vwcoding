@@ -10,7 +10,7 @@ Overtaking_right_prevention: Деактивировать
 ### Уменьшение рывка при трогании с autohold'a
 ``` yaml
 Блок 03 → Адаптация:
-Treshold_for_drive_away_assist
+Treshold_for_drive_away_assist:
 - Data: normal → early
 → Применить
 ```
@@ -26,7 +26,7 @@ brake disk wiper
 ### Включение системы компенсации бокового увода при разгоне
 ``` yaml
 Блок 03 → Адаптация:
-Straigt_line_control
+Straigt_line_control:
 - Data: Активировать
 → Применить
 ```

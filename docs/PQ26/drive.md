@@ -66,7 +66,7 @@ Driving Profile switchover (Переключение профиля вожден
 ### Деактивация функции старт-стоп
 ``` yaml title="логин-пароль: 20103"
 Блок 19 → Адаптация:
-EM_start_stop_requirement_ambient_temperature
+EM_start_stop_requirement_ambient_temperature:
 - Minimum_temperature → -50.0 °C меняем значение на 50.
 Или по напряжению:
 - Start Stop voltage limit → 7,6В меняем на 12,1В

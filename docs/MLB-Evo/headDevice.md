@@ -16,7 +16,7 @@ byte_14_AM_disable
 
 ``` yaml title="логин-пароль: 20103"
 Блок 5F → Адаптация:
-Конфигурация
+Конфигурация:
 - Apple_DIO_Wireless: Активировать
 - Google_GAL_Wireless: Активировать
 - wlan_5ghz_switch: Активировать
@@ -27,7 +27,7 @@ byte_14_AM_disable
 :octicons-verified-24: Audi
 ``` yaml title="логин-пароль: 20103"
 Блок 5F → Адаптация:
-function_configuration_media
+function_configuration_media:
 - app_start_automatically_on_customer_device: on → off
 → Применить
 ```
@@ -36,7 +36,7 @@ function_configuration_media
 :octicons-verified-24: Audi
 ``` yaml title="логин-пароль: 20103"
 Блок 5F → Адаптация:
-function_configuration_media
+function_configuration_media:
 - picture_viewer: off → on
 → Применить
 ```
@@ -45,7 +45,7 @@ function_configuration_media
 :octicons-verified-24: Audi
 ``` yaml title="логин-пароль: 20103"
 Блок 5F → Адаптация:
-function_configuration_connectivity
+function_configuration_connectivity:
 - Mirror_link: off → on
 → Применить
 ```
@@ -54,7 +54,7 @@ function_configuration_connectivity
 
 ``` yaml title="логин-пароль: 20103"
 Блок 5F → Адаптация:
-Speed
+Speed:
 - testmode_video_speed_off → 255.
 → Применить
 ```
@@ -69,7 +69,7 @@ Speed
 
 ``` yaml title="логин-пароль: 20103"
 Блок 5F → Адаптация:
-Vehicle_configuration
+Vehicle_configuration:
 - Phone_module_operation_mode: data_only → voice_and_data
 - Support_for_response_and_hold: off → on
 - Support_of_threeway_calling: off → on
@@ -90,7 +90,7 @@ byte_16_Bluetooth_Headphones: off
 :octicons-verified-24: Audi
 ``` title="логин-пароль: 20103"
 Блок 5F → Адаптация:
-Vehicle_configuration
+Vehicle_configuration:
 - unblock_functions_while_piloted_driving: blocked
 → Применить
 ```
@@ -109,7 +109,7 @@ menu_IAA_PSO: Деактивировать
 :octicons-verified-24: Audi
 ``` yaml
 Блок 5F → Адаптация:
-function_configuration_audio
+function_configuration_audio:
 - welcome_sound: off → on
 → Применить и перезагрузить ГУ
 ```

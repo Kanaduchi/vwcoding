@@ -28,7 +28,7 @@ Tachometer_erweiterte_Skalenteilung → yes
 :octicons-verified-24: Audi
 ``` 
 Блок 17 → Адаптация:
-Displayable_content_configuration
+Displayable_content_configuration:
 - Drag_indicator: no_display → readout
 → Применить
 ```
@@ -44,7 +44,7 @@ Block 3 - Functions: → выбираем необходимое
 или
 ``` yaml
 Блок 02 → Адаптация:
-Activate_gear_information_display
+Activate_gear_information_display:
 - Activate_gear_information_display: → выбираем необходимое
 ```
 

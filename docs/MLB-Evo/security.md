@@ -21,7 +21,7 @@ keyless_light_illumination: not_active: Активировать
 
 ``` yaml
 Блок 46 → Адаптация:
-Personalized_settings_vehicle
+Personalized_settings_vehicle:
 - Keyless_access_automatic_open: not_active: Активировать
 → Применить
 ```
@@ -46,7 +46,7 @@ Personalized_settings_vehicle
 ```
 ``` yaml
 Блок 46 → Адаптация:
-Sounder_settings
+Sounder_settings:
 - Beeptime_opening_central_locking → double_beep
 → Применить
 ```

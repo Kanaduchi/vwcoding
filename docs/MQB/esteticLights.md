@@ -8,7 +8,7 @@
     
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Suchbeleuchtung_allgemein
+Suchbeleuchtung_allgemein:
 - KL58 Einschalten mit Rampe →  Active
 → Применить
 ```
@@ -105,7 +105,7 @@ FPA_Funktion_AMB: Активировать
 
 ``` yaml
 Блок 5F → Адаптация:
-Car_Function_Adaptations_Gen2
+Car_Function_Adaptations_Gen2:
 - Menu_display_ambient_illumination — Включ
 - Menu_display_ambient_illumination_clamp_15_off — не активир.
 - Menu_display_ambient_illumination_over_threshold_high — Включ.
