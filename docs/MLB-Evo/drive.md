@@ -4,29 +4,29 @@
 ### Отключение запрета на обгон справа при активном круиз-контроле
 ``` yaml
 Блок 03 → Кодирование:
-> Overtaking_right_prevention: Деактивировать
+Overtaking_right_prevention: Деактивировать
 ```
 
 ### Уменьшение рывка при трогании с autohold'a
 ``` yaml
 Блок 03 → Адаптация:
-> Treshold_for_drive_away_assist
->> Data: normal → early
+Treshold_for_drive_away_assist
+- Data: normal → early
 → Применить
 ```
 
 ### Настройка системы просушки дисков
 ``` yaml
 Блок 03 → Адаптация:
-> brake disk wiper
->> Param to DOP: normal → strong
+brake disk wiper
+- Param to DOP: normal → strong
 → Применить
 ```
 
 ### Включение системы компенсации бокового увода при разгоне
 ``` yaml
 Блок 03 → Адаптация:
-> Straigt_line_control
->> Data: Активировать
+Straigt_line_control
+- Data: Активировать
 → Применить
 ```

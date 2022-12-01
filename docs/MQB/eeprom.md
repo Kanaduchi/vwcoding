@@ -7,8 +7,8 @@
 За это отвечают адаптации в BCM блоке (09): 
 ``` yaml
 Parameter Write Adaptation:
-- parameter address: FExxxx # (1)
-- parameter value: yyy # (2)
+- parameter address: FExxxx # (1)!
+- parameter value: yyy # (2)!
 
 Parameter Read Adaptation:
 - parameter address: FExxxx

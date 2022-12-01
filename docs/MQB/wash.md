@@ -5,12 +5,12 @@
 
 ``` yaml
 Блок 52 → Кодирование:
-> Байт 1 – Бит 5 (turn_off_front_light_with_folded_mirror): not_active (было active)
+Байт 1 – Бит 5 (turn_off_front_light_with_folded_mirror): not_active (было active)
 ```
 
 ``` yaml
 Блок 42 → Кодирование:
-> Байт 1 – Бит 5 (turn_off_front_light_with_folded_mirror): not_active (было active)
+Байт 1 – Бит 5 (turn_off_front_light_with_folded_mirror): not_active (было active)
 ```
 
 ### Опускание правого зеркала при движении задним ходом (если не активировано с завода)
@@ -30,18 +30,16 @@
 
 ``` yaml
 Блок 52 → Кодирование:
-> Байт 4 – Бит 2 и 3 (mirror_lowering_with_rear_gear): Активировать
+Байт 4 – Бит 2 и 3 (mirror_lowering_with_rear_gear): Активировать
 ```
 
-``` yaml
-Блок 9 → Адаптация:
->  Spiegelverstellung (Access control для OBD11)
->> Spiegelabsenkung bei Rueckwaertsfahrt: Активировать
->> Menuesteuerung Spigelabsenkung: Активировать
+``` yaml title="логин-пароль: 31347"
+Блок 09 → Адаптация:
+ Spiegelverstellung (Access control для OBD11)
+- Spiegelabsenkung bei Rueckwaertsfahrt: Активировать
+- Menuesteuerung Spigelabsenkung: Активировать
 → Применить
 ```
-
-> логин-пароль 31347
 
 ### Раскладывание зеркал при включении двигателя
 
@@ -52,42 +50,36 @@
     Данная адаптация работает только на VW Tiguan
 
 === "Кодирование в ODIS" 
-    ``` yaml
-    Блок 9 → Адаптация:
-    > Spiegelverstellung (Access control для OBD11)
-    >> Signalisierung_Spiegelanklappung: Не активировано
+    ``` yaml title="логин-пароль: 31347"
+    Блок 09 → Адаптация:
+    Spiegelverstellung
+    - Signalisierung_Spiegelanklappung: Не активировано
     → Применить
     ```
 
 === "Кодирование в OBD11" 
-    ``` yaml
+    ``` yaml title="логин-пароль: 31347"
     Блок 09 управления бортовой сети → Безопасный доступ (Логин: 31347) → Кодирование:
-    > Access control
-    >> Signalisierung_Spiegelanklappung: Активировать
+    Access control
+    - Signalisierung_Spiegelanklappung: Активировать
     ```
-
-> логин-пароль 31347
 
 ### Cкладывание боковых зеркал удержанием кнопки закрытия дверей или кнопкой закрытия оригинального брелка
 
-``` yaml
-Блок 9 → Адаптация:
-> Spiegelverstellung - Funk Spiegelanklappung Modus
-Старое значение: by look command via remote control key
-Новое значение: by convenience operation via remote control key
+``` yaml title="логин-пароль: 31347"
+Блок 09 → Адаптация:
+Spiegelverstellung 
+- Funk Spiegelanklappung Modus: by look command via remote control key → by convenience operation via remote control key
 → Применить
 ```
-
-> логин-пароль 31347
 
 ### Настройка омывателя фар
 
 Отключение срабатывания омывателей фар при каждом 10 включении омывателей ветрового стекла
-``` yaml
+``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-> Scheinwerferreinigung - Anzahl Betaetigungen Frontwaschanlage pro SRA Aktivierung
-Старое значение: 10
-Новое значение: 0
+Scheinwerferreinigung 
+- Anzahl Betaetigungen Frontwaschanlage pro SRA Aktivierung: 10 → 0
 → Применить
 ```
 
@@ -95,87 +87,75 @@
 ```Scheinwerferreinigunglage → неактив```
     
 Cрабатывание после долгого удержания рычага омывания стекла
-``` yaml
+``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-> Scheinwerferreinigung - SRA Verzoegerungszeit
-Старое значение: 0 мс
-Новое значение: 2500 мс
+Scheinwerferreinigung 
+- SRA Verzoegerungszeit: 0 → 2500 (мс)
 → Применить
 ```
 
 Отключение второго "пшика" на фары (не рекомендуется)
-``` yaml
+``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-> Scheinwerferreinigung - SRA Nachwaschzeit
-Старое значение: 10
-Новое значение: 0 ms
+Scheinwerferreinigung 
+- SRA Nachwaschzeit: 10 → 0 (мс)
 → Применить
 ```
-
-> логин-пароль 31347
 
 ### Сервисное положение дворников
 
 !!! note ""
     Service position: по умолчанию 166.505329 градусов, меняем в меньшую сторону.  
     
-``` yamlz
+``` yaml title="логин-пароль: 31347"
 Блок 09  → Адаптация:
-> Service position → вводим нужное значение
+Service position: вводим нужное значение
 → Применить
-> Alternative position 2 (позиция дворников при выключенном зажигании)
+Alternative position 2 (позиция дворников при выключенном зажигании)
 → Применить
 ```
 
 ### Сервисное положение дворников — меню в магнитоле
 :octicons-verified-24: Skoda · :octicons-verified-24: Автомобили с MIB3
-``` yaml
+``` yaml title="логин-пароль: 31347"
 Блок 09  → Адаптация:
-> Front wiper
-> Menuesteuerung Frontwischer — active
+Front wiper
+- Menuesteuerung Frontwischer: active
 → Применить
 ```
 
-> логин-пароль 31347
-
 ### Отключение задержки включения насоса омывателя (щетки не будут елозить по сухому стеклу)
 
-``` yaml
+``` yaml title="логин-пароль: 31347"
 Блок 09  → Адаптация:
-> Front wiper
->> Mindestwaschzeit_Frontwischer: 0 ms → 300 ms
->> Timer_DWP_SRA_delay: 300 ms → 0 ms
+Front wiper
+- Mindestwaschzeit_Frontwischer: 0 ms → 300 ms
+- Timer_DWP_SRA_delay: 300 ms → 0 ms
 ```
-
-> логин-пароль 31347
 
 ### Дотирка капель – Лобовое стекло
 
 !!! note ""
     В холодное время года функция не работает (от 5,5 С)
 
-``` yaml
+``` yaml title="логин-пароль: 31347"
 Блок 09 → Кодирование → Подблок 1:
-> 04EDFD (старое значение 04EDDD)
+04EDFD (старое значение 04EDDD)
 → Применить
 ```
 
-``` yaml
+``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-> Front_wiper 
-> Traenenwischen Front Status: Активировать
+Front_wiper 
+Traenenwischen Front Status: Активировать
 → Применить
 ```
-
-> логин-пароль 31347
 
 ### Работа заднего дворника во время дождя
 
-``` yaml
+``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-> Задний стеклоочиститель (Rear Wiper / Heckwischersteuerung)
-> Automatisches Heckwischen: Активировать
+Задний стеклоочиститель (Rear Wiper / Heckwischersteuerung)
+Automatisches Heckwischen: Активировать
 → Применить
 ```
-	
-> логин-пароль 31347

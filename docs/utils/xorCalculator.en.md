@@ -19,13 +19,13 @@ To confirm changing of firmware you need to:
 1. Read current value from adaptation channel:
 ``` yaml
 Блок 5F → Adaptation:
-- Confirmation of installation change
+Confirmation of installation change
 ```
 2. Copy this value to calculator below and generate confirmation key
 3. Write confirmation key to the adaptation:
 ``` yaml
 Блок 5F → Adaptation:
-- Confirmation of installation change: confirmation key
+Confirmation of installation change: confirmation key
 → Save
 ```
 

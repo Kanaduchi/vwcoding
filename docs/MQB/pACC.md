@@ -185,13 +185,13 @@ pACC (Predictive ACC) — это адаптивный круиз-контрол�
 **Настройка электроники двигателя**  
 ``` yaml
 Блок 01 → Кодирование:
-> Байт 5 – Бит 6: Активировать
+Байт 5 – Бит 6: Активировать
 → Применить (с перезагрузкой блока)
 ```
 **Настройка тормозной системы**  
 ``` yaml
 Блок 03 → Кодирование:
-> Байт 24 – Бит 3: Активировать
+Байт 24 – Бит 3: Активировать
 → Применить (с перезагрузкой блока)
 ```
 
@@ -200,81 +200,79 @@ pACC (Predictive ACC) — это адаптивный круиз-контрол�
 Например, выбраны FEC коды: 10009008, 10009101, 10009204, 10009307  
 ``` yaml
 Блок 13 → Кодирование:
-> SWaP_FSID_group_1: 8
-> SWaP_FSID_group_2: 1
-> SWaP_FSID_group_3: 4
-> SWaP_FSID_group_4: 7
+SWaP_FSID_group_1: 8
+SWaP_FSID_group_2: 1
+SWaP_FSID_group_3: 4
+SWaP_FSID_group_4: 7
 → Применить (с перезагрузкой блока)
 ```
 **Настройка блока адаптивного круиз-контроля** 
 ``` yaml
 Блок 13 → Кодирование:
-> Front_camera: installed - в случае наличия камеры ассистентов
-> Control_module_for_lane_assistant: installed
-> Initialization_concept_front_assist
->> Initialization_1 — большая иконка ожидания готовности Front Assist в верхнем левом углу AID, Front Assist активируется только после начала движения, это значение стоит с завода; 
->> Initialization_2 — маленькая иконка ожидания готовности Front Assist там же, где потом появляется иконка ACC, Front Assist активируется через пару секунд после включения зажигания и сразу видит препятствия перед машиной.
-> Automatic_driveaway_by_pretrigger: Активировать  
-> Automatic_driveaway_after_short_stop: Активировать  
-> Driveaway_by_triggerleaver: Активировать  
-> Pretriggertime_reduction → deactivated (увеличение времени ожидания при остановке до 10 секунд)  
-> FPK_functions → installed (если есть кнопка Drive Mode)
-> Overtaking_right_prevention → deactivated (обгон справа)
-> Drive_pmode_selection → MMI_menu_ACC (выбор режима работы в меню ассистентов на магнитоле) 
+Front_camera: installed - в случае наличия камеры ассистентов
+Control_module_for_lane_assistant: installed
+Initialization_concept_front_assist
+- Initialization_1 — большая иконка ожидания готовности Front Assist в верхнем левом углу AID, Front Assist активируется только после начала движения, это значение стоит с завода; 
+- Initialization_2 — маленькая иконка ожидания готовности Front Assist там же, где потом появляется иконка ACC, Front Assist активируется через пару секунд после включения зажигания и сразу видит препятствия перед машиной.
+Automatic_driveaway_by_pretrigger: Активировать  
+Automatic_driveaway_after_short_stop: Активировать  
+Driveaway_by_triggerleaver: Активировать  
+Pretriggertime_reduction: deactivated (увеличение времени ожидания при остановке до 10 секунд)  
+FPK_functions: installed (если есть кнопка Drive Mode)
+Overtaking_right_prevention: deactivated (обгон справа)
+Drive_pmode_selection: MMI_menu_ACC (выбор режима работы в меню ассистентов на магнитоле) 
 → Применить (с перезагрузкой блока)
 ```
-``` yaml
+``` yaml title="логин-пароль: 20103"
 Блок 13 → Адаптация:
-> Distance_Setting
->> par_Distance_Setting → on
-> Adjustment_mode_time_slot_adaptive_distance_control
->> Adjustment_mode_time_slot_adaptive_distance_control → on
+Distance_Setting
+- par_Distance_Setting: on
+Adjustment_mode_time_slot_adaptive_distance_control
+- Adjustment_mode_time_slot_adaptive_distance_control: on
 → Применить
 ```
-> логин-пароль 20103 
 
 **Настройка приборной панели** 
 ``` yaml
 Блок 17 → Кодирование:
-> adaptive_cruise_control → yes
+adaptive_cruise_control: yes
 → Применить (с перезагрузкой блока)
 ```
 **Настройка гейтвея (для VW)** 
 ``` yaml
 Блок 19 → Кодирование:
-> FPA_Funktion_ACC: Активировать
+FPA_Funktion_ACC: Активировать
 → Применить (с перезагрузкой блока)
 ```
 ``` yaml
 Блок 19 → Адаптация:
-> Multi_function_steering_wheel_control_module Coding Value
->> variant → ACC-High
+Multi_function_steering_wheel_control_module Coding Value
+- variant: ACC-High
 → Применить
 ```
 
 **Настройка рулевой рейки (для Skoda)**  
 ``` yaml
 Блок 16 (Электроника рулевой колонки) → Кодирование:
-> Switch_for_cruise_control_integrated_in_turn_signal_switch: not installed
-> Switch_for_cruise_control: installed
-> Adaptive_cruise_control: installed
+Switch_for_cruise_control_integrated_in_turn_signal_switch: not installed
+Switch_for_cruise_control: installed
+Adaptive_cruise_control: installed
 → Применить (с перезагрузкой блока)
 ```
 
 **Настройка ГУ** 
-``` yaml
+``` yaml title="логин-пароль: 20103"
 Блок 5F → Адаптация:
-> Car_Function_Adaptations_Gen2 - menu_display_ACC: Активировать
-> Car_Function_Adaptations_Gen2 - menu_display_ACC_over_threshold_high: Активировать
-> Car_Function_List_BAP_Gen2 - ACC_0x05: Активировать
+Car_Function_Adaptations_Gen2 - menu_display_ACC: Активировать
+Car_Function_Adaptations_Gen2 - menu_display_ACC_over_threshold_high: Активировать
+Car_Function_List_BAP_Gen2 - ACC_0x05: Активировать
 → Применить
 ```
-> логин-пароль 20103
 
 **Настройка парковочного ассистента** 
 ``` yaml
 Блок 76 → Кодирование:
-> Adaptive_cruise_control: Активировать
+Adaptive_cruise_control: Активировать
 → Применить (с перезагрузкой блока)
 ```
 
@@ -284,29 +282,27 @@ pACC (Predictive ACC) — это адаптивный круиз-контрол�
 
 ``` yaml
 Блок 13 → Кодирование:
-> Traffic_sign_detection: Активировать
-> Speed_limit_assitent: Активировать
-> Curve_assistent: Активировать
-> Kurvenassistent_CarMenu: Активировать
+Traffic_sign_detection: Активировать
+Speed_limit_assitent: Активировать
+Curve_assistent: Активировать
+Kurvenassistent_CarMenu: Активировать
 → Применить (с перезагрузкой блока)
 ```
-``` yaml
+``` yaml title="логин-пароль: 20103"
 Блок 13 → Адаптация:
-> Predictive speed limit control
->> par Predictive speed limit control: Активировать
+Predictive speed limit control
+- par Predictive speed limit control: Активировать
 → Применить
 ```
-> логин-пароль 20103 
 
 ### Дополнительные кодировки для радаров версии 5Q
 
-``` yaml
+``` yaml title="логин-пароль: 20103"
 Блок 13 → Кодирование:
-> zul_Regelabweichung_CarMenu — large
-> pACC_Regulation_on_priority: Активировать
-> pACC_Reaction_to_end_of_traffic_jam: with speed adaptation
-> pACC_Learning_drivers_offset: Активировать
-> pACC_Reaction_to_narrow_places: dynamic and static
+zul_Regelabweichung_CarMenu — large
+pACC_Regulation_on_priority: Активировать
+pACC_Reaction_to_end_of_traffic_jam: with speed adaptation
+pACC_Learning_drivers_offset: Активировать
+pACC_Reaction_to_narrow_places: dynamic and static
 → Применить (с перезагрузкой блока)
 ```
-> логин-пароль 20103 

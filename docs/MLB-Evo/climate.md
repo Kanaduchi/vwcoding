@@ -7,22 +7,22 @@
 
 ``` yaml
 Блок 08 → Кодирование:
-> ACmax/ECO: ECO → ACmax
+ACmax/ECO: ECO → ACmax
 → Применить (с перезагрузкой блока)
 ```
 
 ### Раздельное включение подогрева булочек и подогрева спины при включении подогрева сидений
 ``` yaml
 Блок 08 → Кодирование:
-> Activation_seat_heating_and_backrest_heating: Coupled → ...
+Activation_seat_heating_and_backrest_heating: Coupled → ...
 → Применить (с перезагрузкой блока)
 ```
 
 ### Изменение длительности отображения настроек климата для задних пассажиров на MMI
 ``` yaml
 Блок 08 → Адаптация:
-> MMI display time during rear zone adjustment
->> MMI_display_time_during_rear_zone_adjustment: 10 s → ...
+MMI display time during rear zone adjustment
+- MMI_display_time_during_rear_zone_adjustment: 10 s → ...
 → Применить
 ```
 
@@ -30,7 +30,7 @@
 
 ``` yaml
 Блок 08 → Адаптация:
-> Auxiliary heating run on time:
->> Auxiliary_heating_run_on_time: 10 min
+Auxiliary heating run on time:
+- Auxiliary_heating_run_on_time: 10 min
 → Применить
 ```

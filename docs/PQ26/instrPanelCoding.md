@@ -2,7 +2,7 @@
 
 ![Screenshot](../images/PQ26/instr_main.png)  
 Итак, все мы видели эти каналы в 17 блоке (далее рассказывать буду на примере 5JA-920-740-A, можно распространять на 5JA 920 7XX):   
-> ENG105831-ENG101574-dimming_characteristic_curve_adjustment_clock_dial_day-X1,00 …   
+ENG105831-ENG101574-dimming_characteristic_curve_adjustment_clock_dial_day-X1,00 …   
 ENG105831-ENG99777-dimming_characteristic_curve_adjustment_clock_dial_day-Y1,00 …   
 ENG105832-ENG101574-dimming_characteristic_curve_adjustment_clock_dial_night-X1,00 …   
 ENG105832-ENG99777-dimming_characteristic_curve_adjustment_clock_dial_night-Y1,02 …   
@@ -52,7 +52,7 @@ dimming_characteristic_curve_adjustment_internal_phototransistor
 ![Screenshot](../images/PQ26/chart_table4.png)   
 Как известно, приборка настроена так, чтобы уведомлять отключением подсветки шкал о забытом включенном ближнем в сумерках.   
 Многим такой алгоритм работы не по душе — решение:   
-> ENG105831-ENG99777-dimming_characteristic_curve_adjustment_clock_dial_day-Y1,03   
+ENG105831-ENG99777-dimming_characteristic_curve_adjustment_clock_dial_day-Y1,03   
 ENG105831-ENG100480-dimming_characteristic_curve_adjustment_clock_dial_day-Y2,05   
 ENG105831-ENG100773-dimming_characteristic_curve_adjustment_clock_dial_day-Y3,08   
 

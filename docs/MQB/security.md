@@ -14,58 +14,40 @@
 :octicons-verified-24: Skoda Karoq  
 Автомобиль будет сигналить, если закрытую дверь открыть без ключа, например разбив стекло
 
-``` yaml
+``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-> Anti-theft device
->> Akusticher Alarm Signalhorn: Активировать
->> Diebstahlwarnangle: Активировать
+Anti-theft device
+- Akusticher Alarm Signalhorn: Активировать
+- Diebstahlwarnangle: Активировать
 → Применить
 ```
-
-> логин-пароль 31347
  
 ### Активация Easy Open
 
-``` yaml
+``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-> Verdecksteuergeraet
->> Virtuelles_Pedal_HMI_einstellba: Активировать
->> Virtuelles_Pedal_Verbau: Активировать
->> Virtuelles_Pedal: Активировать
+Verdecksteuergeraet
+- Virtuelles_Pedal_HMI_einstellba: Активировать
+- Virtuelles_Pedal_Verbau: Активировать
+- Virtuelles_Pedal: Активировать
 → Применить
 ```
 
-> логин-пароль 31347
-
-``` yaml
+``` yaml title="логин-пароль: 20103"
 Блок B7 → Адаптация:
-> Byte9_VIP →
->> active_vip: Активировать
->> БУ откр. двери багажного отсека, датчик 1, пороговое значение 1
-Старое значение: 5
-Новое значение: 69
->> БУ откр. двери багажного отсека, датчик 1, значение таймера 3
-Старое значение: 0
-Новое значение: 9
->> БУ откр. двери багажного отсека, датчик 1, значение таймера 4
-Старое значение: 226
-Новое значение: 34
-> БУ откр. двери багажного отсека, датчик 1, значение таймера 5
-Старое значение: 255
-Новое значение: 34
-> БУ откр. двери багажного отсека, датчик 2, значение таймера 5
-Старое значение: 108
-Новое значение: 24
-> БУ открывания двери багажного отсека, модель автомобиля
-Старое значение: fe
-Новое значение: 22
+Byte9_VIP →
+- active_vip: Активировать
+- БУ откр. двери багажного отсека, датчик 1, пороговое значение 1: 5 → 69
+- БУ откр. двери багажного отсека, датчик 1, значение таймера 3: 0 → 9
+- БУ откр. двери багажного отсека, датчик 1, значение таймера 4: 226 → 34
+- БУ откр. двери багажного отсека, датчик 1, значение таймера 5: 255 → 34
+- БУ откр. двери багажного отсека, датчик 2, значение таймера 5: 108 → 24
+- БУ открывания двери багажного отсека, модель автомобиля: fe → 22
 ```
-
-> логин-пароль 20103
 
 !!! warning ""
 	После кодирования необходимо провести Тест исполнителей
-	> Control_supply_voltage_vip
+	Control_supply_voltage_vip
 	
 ### Постановка на охрану при закрытии двери багажника кнопкой Easy Close
 
@@ -74,44 +56,37 @@
     Автомобиль подаст звуковой сигнал закрытия
     
 === "Кодирование в ODIS"
-    ``` yaml
+    ``` yaml title="логин-пароль: 20103"
     Блок B7 → Кодирование:
-    > byte9_Vip
-    >> Coding_easy close_locking: Активировать
+    byte9_Vip
+    - Coding_easy close_locking: Активировать
     → Применить
     ```
 
 === "Кодирование в OBD11"
-    ```
+    ``` yaml title="логин-пароль: 20103"
     Блок B7 санкционированного доступа: Активировать
-    > byte9_Vip - coding easy close locking  
-    Старое значение: не активир.  
-    Новое значение: активир.  
+    byte9_Vip 
+    - coding easy close locking: активир.
     ```
-
-> логин-пароль 20103
 
 ### Регулировка чувствительности датчика объема штатной сигнализации
 
-``` yaml
+``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-> Охранная сигнализация, охрана салона/ Interior_Monitoring_Sensitivity
->> Чувствительность / sensitivity → 70% (по умолчанию 100%)
+Охранная сигнализация, охрана салона/ Interior_Monitoring_Sensitivity
+- Чувствительность / sensitivity: 70% (по умолчанию 100%)
 → Применить
 ```
-
-> логин-пароль 31347
 
 ### Открытие и закрытие багажника с кнопки пульта
 
-``` yaml
+``` yaml title="логин-пароль: 20103"
 Блок B7 → Адаптация:
-> byte9_Vip
->> Сoding_kick and_close_function: Активировать
+byte9_Vip
+- Сoding_kick and_close_function: Активировать
 → Применить
 ```
-    
-> логин-пароль 20103    
 
 ### Избирательное открытие дверей
 
@@ -120,14 +95,15 @@
     При повторном (необходимо нажать в течении 5 сек с момента первого нажатия) нажатии откроются все остальные двери.
 
 === "Кодирование в ODIS"
-    ``` yaml
+    ``` yaml title="логин-пароль: 31347"
     Блок 09 → Адаптация:
-    > Central Locking - Selective (Single) Door Locking: Активировать
+    Central Locking 
+    - Selective (Single) Door Locking: Активировать
     → Применить
     ```
 
 === "Кодирование в VCDS" 
-    ```
+    ```yaml title="логин-пароль: 31347"
     09-Центральная электроника  
     Кодирование - 07 → Длинное кодирование:
     Байт 0 – Бит 0 (Selective Central Locking (Single Door Locking) active): Активировать  
@@ -136,15 +112,13 @@
 
 ### Автозакрытие дверей при начале движения и автооткрытие при вытаскивании ключа
 
-``` yaml
+``` yaml title="логин-пароль: 20103"
 Блок B7 → Адаптация:
-> ZV Autolock
->> Automatisches Entriegeln: Деактивировать (Отключение разблокировки)
->> Automatisches Verriegeln bei Geschwindigkeit: Деактивировать (Отключение блокировки)
+ZV Autolock
+- Automatisches Entriegeln: Деактивировать (Отключение разблокировки)
+- Automatisches Verriegeln bei Geschwindigkeit: Деактивировать (Отключение блокировки)
 → Применить
 ```
-    
-> логин-пароль 20103   
     
 ### Брелок работает при включенном зажигании
 
@@ -152,28 +126,28 @@
     С этой функцией можно завести автомобиль, закрыть его и отойти, сохраняя возможность удаленно открыть его или багажник с ключа.
 
 === "Кодирование в ODIS"
-    ``` yaml
+    ``` yaml title="логин-пароль: 31347"
     Блок 09 → Адаптация:
-    > ZV allgemein (Access control) - Funk bei Klemme 15 ein: Активировать
+    ZV allgemein (Access control) 
+    - Funk bei Klemme 15 ein: Активировать
     → Применить
     ```
 
 === "Кодирование в OBD11" 
-    ```
+    ``` yaml title="логин-пароль: 31347"
     09 Блок управления бортовой сети → Безопасный доступ (Логин: 31347) → Aдаптация  
-    > ZV allgemein - Funk bei Klemme 15 ein: Активировать
+    ZV allgemein 
+    - Funk bei Klemme 15 ein: Активировать
     ``` 
 
-> логин-пароль 31347
->
 ### Ручки Kessy работают при включенном зажигании
 
 === "Кодирование в ODIS"
     ``` yaml
     Блок В7 → Кодирование:
-    > Terminal 15 characteristics of passive entry exit function
-    >> Оригинальное значение - Function only allowed for terminal 15 off
-    >> Новое значение - Function only allowed for terminal 15 on or off
+    Terminal 15 characteristics of passive entry exit function
+    - Оригинальное значение - Function only allowed for terminal 15 off
+    - Новое значение - Function only allowed for terminal 15 on or off
     → Применить
     ```
 
@@ -190,7 +164,7 @@
 === "Кодирование в ODIS"
     ``` yaml
     Блок В7 → Кодирование:
-    > Locking for door slamming active: Активировать
+    Locking for door slamming active: Активировать
     → Применить
     ```
 
@@ -204,29 +178,27 @@
     
 ### Звуковое сопровождение при открытии/закрытии центрального замка
 
-``` yaml
-Блок 9 → Адаптация:
-> Ответные сигналы
->> Akustische Rueckmeldung entriegeln (открытие авто): Активировать
->> Akustische Rueckmeldung verriegeln (закрытие авто): Активировать
->> Menuesteuerung akustische Rueckmeldung: Активировать
->> Akustische Rueckmeldung global: Активировать
->> Akustische Rueckmeldung Signalhorn: Активировать
+``` yaml title="логин-пароль: 31347"
+Блок 09 → Адаптация:
+Ответные сигналы
+- Akustische Rueckmeldung entriegeln (открытие авто): Активировать
+- Akustische Rueckmeldung verriegeln (закрытие авто): Активировать
+- Menuesteuerung akustische Rueckmeldung: Активировать
+- Akustische Rueckmeldung global: Активировать
+- Akustische Rueckmeldung Signalhorn: Активировать
 → Применить
 ```
 
 !!! warning ""
     После кодирования необходимо поставить галочку в меню магнитолы
 
-> логин-пароль 31347
-
 ### Открытие и закрытие люка при удерживании кнопок на брелке (закрытие вместе с центральным замком)
 
-``` yaml
-Блок 9 → Адаптация:
-> Schiebedach
->> SAD Komfort schliessen: Активировать
->> SAD Komfort oeffnen: Активировать
+``` yaml title="логин-пароль: 31347"
+Блок 09 → Адаптация:
+Schiebedach
+- SAD Komfort schliessen: Активировать
+- SAD Komfort oeffnen: Активировать
 → Применить
 ```
 
@@ -235,19 +207,15 @@
 === "Кодирование в ODIS"
     ``` yaml
     Блок 00CA - Блок управления сдвижного люка → Адаптация:
-    > Control_unit_for_sun_roof_convenience_functions / Power sunroof control module - convenience function
-    >> Convenience_opening_target_attitude / Заданное положение при комфортном открывании
-    Старое значение: Tilting_position
-    Новое значение: Sliding_position
+    Control_unit_for_sun_roof_convenience_functions / Power sunroof control module - convenience function
+    - Convenience_opening_target_attitude / Заданное положение при комфортном открывании: Tilting_position → Sliding_position
     → Применить
     ```
 === "Кодирование в OBD11"
     ``` yaml
     Блок 00CA - Блок управления сдвижного люка → Адаптация:
-    > Komfortfunktionen
-    >> Заданное положение при комфортном открывании
-    Старое значение: Положение — подъём
-    Новое значение: Положение сдвиг
+    Komfortfunktionen
+    - Заданное положение при комфортном открывании: Положение подъём → Положение сдвиг
     → Применить
     ```
 
@@ -258,21 +226,21 @@
     
 ``` yaml
 Блок 36 - Блок Регулировка сиденья водителя → Кодирование:
-> Байт 3 – Бит 1 (Easy_Entry_front): Активировать
-> Байт 9 – Бит 6 (Easy_Entry_front_over_MMI): Активировать
+Байт 3 – Бит 1 (Easy_Entry_front): Активировать
+Байт 9 – Бит 6 (Easy_Entry_front_over_MMI): Активировать
 → Применить (с перезагрузкой блока)
 ```
 
 ``` yaml
 Блок 5F → Адаптация:
-> Car_Function_Adaptations_Gen2
->> menu_display_seat_configuration: Активировать
->> menu_display_seat_configuration_over_threshold_high: Активировать
+Car_Function_Adaptations_Gen2
+- menu_display_seat_configuration: Активировать
+- menu_display_seat_configuration_over_threshold_high: Активировать
 → Применить 
 
-> Car_Function_List_BAP_Gen2
->> driver_seat_0x10: Активировать
->> driver_seat_0x10_msg_bus — Шина Комфорт
+Car_Function_List_BAP_Gen2
+- driver_seat_0x10: Активировать
+- driver_seat_0x10_msg_bus — Шина Комфорт
 → Применить 
 ```
 
@@ -283,28 +251,28 @@
     
 ``` yaml
 Блок 36 - Блок Регулировка сиденья водителя → Кодирование:
-> Байт 6 – Бит 4 (EasyEntry_Enable_Passenger_over_DriverMMI): Активировать
+Байт 6 – Бит 4 (EasyEntry_Enable_Passenger_over_DriverMMI): Активировать
 → Применить (с перезагрузкой блока)
 ```
     
 ``` yaml
 Блок 6 - Блок Регулировка сиденья пассажира → Кодирование:
-> Байт 3 – Бит 1 (Easy_Entry_front): Активировать
-> Байт 9 – Бит 6 (Easy_entry_front_over_MMI): Активировать
-> Байт 6 – Бит 4 (EasyEntry_Enable_Passenger_over_DriverMMI): Активировать
+Байт 3 – Бит 1 (Easy_Entry_front): Активировать
+Байт 9 – Бит 6 (Easy_entry_front_over_MMI): Активировать
+Байт 6 – Бит 4 (EasyEntry_Enable_Passenger_over_DriverMMI): Активировать
 → Применить (с перезагрузкой блока)
 ```
 
 ``` yaml
 Блок 5F → Адаптация:
-> Car_Function_Adaptations_Gen2
->> menu_display_seat_configuration: Активировать
->> menu_display_seat_configuration_over_threshold_high: Активировать
+Car_Function_Adaptations_Gen2
+- menu_display_seat_configuration: Активировать
+- menu_display_seat_configuration_over_threshold_high: Активировать
 → Применить 
 
-> Car_Function_List_BAP_Gen2
->> Passenger_Seat_0x20: Активировать
->> Passenger_Seat_0x20_msg_bus — Шина Комфорт  
+Car_Function_List_BAP_Gen2
+- Passenger_Seat_0x20: Активировать
+- Passenger_Seat_0x20_msg_bus — Шина Комфорт  
 → Применить 
 ```
 
@@ -317,13 +285,13 @@
     При закрытии передних дверей стекло опускается на 1 см для понижения давления в салоне
 ``` yaml
 Блок 42 → Кодирование:
-> Short_drop: Активировать
+Short_drop: Активировать
 → Применить
 ```
 
 ``` yaml
 Блок 52 → Кодирование:
-> Short_drop: Активировать
+Short_drop: Активировать
 → Применить
 ```
 
@@ -335,20 +303,15 @@
 === "Кодирование в ODIS"    
     ``` yaml
     Блок 09 → Адаптация:
-    > Acces control (ZV Komfort)
-    > Freigabenachlauf FH bei Tueroeffnen abbrechen
-    → меняем Activ на NotActiv
-    > FH SAD Kl15Aus Freigabezeit
-    Старое значение: 600 s (10 минут после выключения зажигания)
-    Новое значение: задать нужное значение в секундах
+    Acces control (ZV Komfort)
+    - Freigabenachlauf FH bei Tueroeffnen abbrechen: Activ на NotActiv
+    - FH SAD Kl15Aus Freigabezeit: 600 s (10 минут после выключения зажигания) поменять на любое другое в секундах
     → Применить
     ```
 
 === "Кодирование в OBD11"
-    ```
+    ``` yaml title="логин-пароль: 31347"
     Блок 09 управления бортовой сети → Безопасный доступ (Логин: 31347) → Кодирование:
-    > ZV Komfort
-    >> Freigabenachlauf FH bei Tueroeffnen abbrechen: Активировать
+    ZV Komfort
+    - Freigabenachlauf FH bei Tueroeffnen abbrechen: Активировать
     ```
- 
-> логин-пароль 31347
