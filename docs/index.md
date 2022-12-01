@@ -12,14 +12,15 @@ comments: false
   }
   
 .frame {
-    width: 500px;
+    width: 1600px;
+    max-width: none !important;
     height: auto;
     border: 0;
-    -ms-transform: scale(0.5);
-    -moz-transform: scale(0.5);
-    -o-transform: scale(0.5);
-    -webkit-transform: scale(0.5);
-    transform: scale(0.72);
+    -ms-transform: scale(0.65);
+    -moz-transform: scale(0.65);
+    -o-transform: scale(0.65);
+    -webkit-transform: scale(0.65);
+    transform: scale(0.65);
     
     -ms-transform-origin: 0 0;
     -moz-transform-origin: 0 0;
@@ -28,10 +29,8 @@ comments: false
     transform-origin: 0 0;
 }
 .wrap {
-    width: 500px;
+    width: auto;
     height: 35px;
-    padding: 0;
-    overflow: hidden;
 }
 </style>
 
