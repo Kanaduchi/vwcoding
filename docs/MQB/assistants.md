@@ -172,8 +172,8 @@ Fernlicht_assistent:
 === "Кодирование в ODIS"
     ``` yaml
     Блок 19 (гейтвэй) → Адаптация:
-    Gateway_Component_List: Node_0x30: not_coded; 
-    Gateway_Component_List: Node_0x4F: coded. 
+    Gateway_Component_List: Node_0x30: not_coded
+    Gateway_Component_List: Node_0x4F: coded
     → Применить 
     ```
 === "Кодирование в OBD11"
