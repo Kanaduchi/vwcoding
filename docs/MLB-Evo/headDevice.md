@@ -12,8 +12,24 @@ byte_14_AM_disable
 → Применить (с перезагрузкой блока)
 ```
 
-### Беспроводной Car Play
+### Включение камеры 360 в режиме помощи при парковке
+:octicons-verified-24: Audi e-tron с камерой 360
+``` yaml title="логин-пароль: 20103"
+Блок 5F → Адаптация:
+Visual display for park assist: OPS display → with OPS 360°
+→ Применить
+```
 
+### Включение камеры заднего вида при скорости > 30 км/ч
+:octicons-verified-24: Audi e-tron
+``` yaml title="логин-пароль: 20103"
+Блок 5F → Адаптация:
+Switch-off speed for parking assist: 150 → 140
+→ Применить
+```
+
+### Беспроводной Car Play
+:octicons-verified-24: Audi
 ``` yaml title="логин-пароль: 20103"
 Блок 5F → Адаптация:
 Конфигурация:
@@ -61,6 +77,15 @@ Speed:
 
 !!! note ""
     Необходимо использовать development mode  
+
+### Активация работы с навигацией во время движения
+
+``` yaml title="логин-пароль: 20103"
+Блок 5F → Адаптация:
+locked menu contents:
+- FB_NAV_3: non_blocked
+→ Применить
+```
 
 ### Возможность звонков с сим-карты
 :octicons-verified-24: Audi
