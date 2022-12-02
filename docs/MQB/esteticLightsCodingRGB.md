@@ -674,16 +674,16 @@ Driving Profile Selection Parameter :
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
 ambient_lighting_lin_slaves_groups:
--  pa_verbauinfo_gruppe_7: Multi_color
--  pa_lichtfunktion_gruppe_7: door
--  pa_korrekturfaktor_gruppe_7: 1.00
--  pa_verbauinfo_gruppe_8: Multi_color
--  pa_lichtfunktion_gruppe_8: door
--  pa_korrekturfaktor_gruppe_8: 1.00
--  pa_verbauinfo_gruppe_9: Multi_color
--  pa_lichtfunktion_gruppe_9: door
--  pa_korrekturfaktor_gruppe_9: 1.00
--  pa_verbauinfo_gruppe_10: Multi_color
--  pa_lichtfunktion_gruppe_10: door
+- pa_verbauinfo_gruppe_7: Multi_color
+- pa_lichtfunktion_gruppe_7: door
+- pa_korrekturfaktor_gruppe_7: 1.00
+- pa_verbauinfo_gruppe_8: Multi_color
+- pa_lichtfunktion_gruppe_8: door
+- pa_korrekturfaktor_gruppe_8: 1.00
+- pa_verbauinfo_gruppe_9: Multi_color
+- pa_lichtfunktion_gruppe_9: door
+- pa_korrekturfaktor_gruppe_9: 1.00
+- pa_verbauinfo_gruppe_10: Multi_color
+- pa_lichtfunktion_gruppe_10: door
 → Применить
 ```

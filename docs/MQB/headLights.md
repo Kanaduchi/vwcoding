@@ -266,7 +266,7 @@ Aussenlicht_uebergreifend:
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
 Static AFS light (Система статического адаптивного освещения):
--  Bei Rueckwaertsfahrt: double sided (С обеих сторон)
+- Bei Rueckwaertsfahrt: double sided (С обеих сторон)
 → Применить
 ```
 

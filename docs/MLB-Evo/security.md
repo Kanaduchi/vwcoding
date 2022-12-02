@@ -5,7 +5,7 @@
 :octicons-verified-24: Audi
 ``` yaml
 Блок 46 → Кодирование:
-central_locking_system_lock_unlock_at_engine_running: not_active: Активировать
+central_locking_system_lock_unlock_at_engine_running: Активировать
 → Применить
 ```
 
@@ -47,7 +47,7 @@ Personalized_settings_vehicle:
 ``` yaml
 Блок 46 → Адаптация:
 Sounder_settings:
-- Beeptime_opening_central_locking → double_beep
+- Beeptime_opening_central_locking: double_beep
 → Применить
 ```
 

@@ -106,15 +106,15 @@ Access control - DWA Alarmverzoegerung → меняем с "immidiat_driver_door
 ```
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Acknowledgement signals — Akustische Rueckmeldung entriegeln:  "Active" (звук при открытии)
-Acknowledgement signals — Akustische Rueckmeldung verriegeln:  "Active" (звук при закрытии)
-Acknowledgement signals — Dauer der Akustischen Rueckmeldung vom Einfachhorn:  kurz (kurz — короткий сигнал (по ощущениям только начинается сигнал и тут же обрывается); normal — нормальный, чуть длиннее чем короткий (звук как при обычном начатии на "бибикалку"))
+Acknowledgement signals — Akustische Rueckmeldung entriegeln: "Active" (звук при открытии)
+Acknowledgement signals — Akustische Rueckmeldung verriegeln: "Active" (звук при закрытии)
+Acknowledgement signals — Dauer der Akustischen Rueckmeldung vom Einfachhorn: kurz (kurz — короткий сигнал (по ощущениям только начинается сигнал и тут же обрывается); normal — нормальный, чуть длиннее чем короткий (звук как при обычном начатии на "бибикалку"))
 Acknowledgement signals - Optical feedback during locking → Decelerate
 Acknowledgement signals - Optische Rueckmeldung Komfortschliessen: Активировать
 Acknowledgement signals - Optische Rueckmeldung 3.Bremsleuchte → not active
-Acknowledgement signals — Menuesteuerung akustische Rueckmeldung:  "Active" (пункт в Swing'е в разделе "отпирание/запирание…")
+Acknowledgement signals — Menuesteuerung akustische Rueckmeldung: "Active" (пункт в Swing'е в разделе "отпирание/запирание…")
 Acknowledgement signals - Akustische Rueckmeldung global: Активировать
-Acknowledgement signals — Akustische Rueckmeldung Signalhorn:  "Active" (звук)
+Acknowledgement signals — Akustische Rueckmeldung Signalhorn: "Active" (звук)
 → Применить
 ```
 

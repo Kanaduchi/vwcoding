@@ -55,7 +55,7 @@ function_configuration_connectivity:
 ``` yaml title="логин-пароль: 20103"
 Блок 5F → Адаптация:
 Speed:
-- testmode_video_speed_off → 255.
+- testmode_video_speed_off: 255
 → Применить
 ```
 

@@ -127,7 +127,7 @@
 === "Кодирование в ODIS"
     ``` yaml
     Блок 19 → Адаптация:
-    Efficiency_display  
+    Efficiency_display:  
     - Convenience_consumption_mirror_heating_dependency → Independent_of_outside_temperature_without_switch
     Range_gain
     - Consumption_mirror_heating_in_heated_rear_window: Активировать
@@ -136,9 +136,9 @@
 === "Кодирование в OBD11"
     ``` yaml
     Блок 19 → Адаптация:
-    Показ программы эффективности  
+    Показ программы эффективности:  
     - Потребление систем комфорта, обогрев наружных зеркал заднего вида, зависимость → Независимо от наружней температуры без выключателя  
-    Увеличение запаса хода  
+    Увеличение запаса хода:  
     - Потребление обогрева наружных зеркал в обогреве заднего стекла: Активировать
     ```
 

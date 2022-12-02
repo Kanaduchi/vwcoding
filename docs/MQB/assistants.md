@@ -79,7 +79,7 @@ HCA - Указание блоку рулевого управления о на�
 ``` yaml
 Блок 5F (мультимедия) → Адаптация:
 Car_Function_List_BAP_Gen2:
-- LDW_HCA_0x19:  activated
+- LDW_HCA_0x19: activated
 Car_Function_Adaptations_Gen2:
 - menu_display_Lane_Departure_Warning: Активировать
 - menu_display_Lane_Departure_Warning_over_threshold_high: Активировать
@@ -261,7 +261,7 @@ Car_Function_Adaptations_Gen2:
 Даем указание блоку проекции (если есть)
 ``` yaml
 Блок 82 → Кодирование:
-Road_sign_detection:  available
+Road_sign_detection: available
 Lane_departure_warning: available
 → Применить 
 ```

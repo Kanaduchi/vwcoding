@@ -82,10 +82,8 @@ Vehicle menu operation:
 ```
 ``` yaml title="логин-пароль: 20103"
 Блок A5 (камера ассистентов) → Адаптация:
-Select: channel numbers indicate end of speed limit
-Importance to actively invest Show Valid suffix
-View Channel Valid suffix
-Corresponding value adjust default: 00100111
+Display end of speed limit symbol: active
+Display valid additional signs: 00100111
 → Применить 
 ```
 
@@ -96,7 +94,7 @@ Corresponding value adjust default: 00100111
     
 ``` yaml title="логин-пароль: 20103"
 Блок A5 (камера ассистентов) → Адаптация:
-EA_emergency_assist → Variant_2
+EA_emergency_assist: Variant_2
 → Применить 
 ```
 ``` yaml

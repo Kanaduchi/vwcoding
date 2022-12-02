@@ -8,7 +8,7 @@
     
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Window heater - Heckscheibenheizung Zeitwert:  600 s (10 мин) – меняем на 1200 s (20 мин)
+Window heater - Heckscheibenheizung Zeitwert: 600 s (10 мин) – меняем на 1200 s (20 мин)
 → Применить
 ```
 

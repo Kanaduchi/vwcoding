@@ -57,20 +57,20 @@ Driving light and parking light - Nebelschlusslicht Warngeschwindigkeit:
 ### Сброс напоминания о прохождении ТО
 ``` yaml title="логин-пароль: 25327 (для старых 20103)"
 Блок 17 (5JA 920 7XX) → Адаптация:
-SIE -  time from inspection → вместо пробега в днях задаем значение 0
-SIE -  distance from inspection → вместо пробега в км задаем значение 0
+SIE - time from inspection → вместо пробега в днях задаем значение 0
+SIE - distance from inspection → вместо пробега в км задаем значение 0
 → Применить
-ESI -  Resetting ESI → выбираем Reset
+ESI - Resetting ESI → выбираем Reset
 → Применить
 ```
 
 ### Изменение интервала ТО (по пробегу и по времени)
 ``` yaml title="логин-пароль: 25327 (для старых 20103)"
 Блок 17 (5JA 920 7XX) → Адаптация:
-ESI -  maximum value km-driving distance/inspection → 30000 km - меняем на нужное, например 15000
-ESI -  minimum value km-driving distance/inspection → 15000 km - меняем на нужное, например 7500
-ESI -  maximum value of time between inspections → 730 d - меняем на нужное
-ESI -  minimum value of time between inspections → 365 d - меняем на нужное
+ESI - maximum value km-driving distance/inspection → 30000 km - меняем на нужное, например 15000
+ESI - minimum value km-driving distance/inspection → 15000 km - меняем на нужное, например 7500
+ESI - maximum value of time between inspections → 730 d - меняем на нужное
+ESI - minimum value of time between inspections → 365 d - меняем на нужное
 → Применить
 ```
 
