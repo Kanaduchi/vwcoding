@@ -21,7 +21,7 @@ Activation_seat_heating_and_backrest_heating: Coupled → ...
 ### Изменение длительности отображения настроек климата для задних пассажиров на MMI
 ``` yaml
 Блок 08 → Адаптация:
-MMI display time during rear zone adjustment
+MMI display time during rear zone adjustment:
 - MMI_display_time_during_rear_zone_adjustment: 10 s → ...
 → Применить
 ```

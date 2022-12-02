@@ -35,7 +35,7 @@ Verdecksteuergeraet:
 
 ``` yaml title="логин-пароль: 20103"
 Блок B7 → Адаптация:
-Byte9_VIP →
+Byte9_VIP:
 - active_vip: Активировать
 - БУ откр. двери багажного отсека, датчик 1, пороговое значение 1: 5 → 69
 - БУ откр. двери багажного отсека, датчик 1, значение таймера 3: 0 → 9
@@ -114,7 +114,7 @@ byte9_Vip:
 
 ``` yaml title="логин-пароль: 20103"
 Блок B7 → Адаптация:
-ZV Autolock
+ZV Autolock:
 - Automatisches Entriegeln: Деактивировать (Отключение разблокировки)
 - Automatisches Verriegeln bei Geschwindigkeit: Деактивировать (Отключение блокировки)
 → Применить

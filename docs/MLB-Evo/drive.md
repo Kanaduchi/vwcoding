@@ -18,7 +18,7 @@ Treshold_for_drive_away_assist:
 ### Настройка системы просушки дисков
 ``` yaml
 Блок 03 → Адаптация:
-brake disk wiper
+brake disk wiper:
 - Param to DOP: normal → strong
 → Применить
 ```

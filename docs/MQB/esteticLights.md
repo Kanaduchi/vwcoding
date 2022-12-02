@@ -17,7 +17,7 @@ Suchbeleuchtung_allgemein:
 
 ``` yaml title="логин-пароль: 20103"
 Блок В7 Kessy Безопасный доступ → Адаптация:
-DeveloperCoding Search lights
+DeveloperCoding Search lights:
 - ZAT_illumination_concept_mybeat_clamp58xt: Активировать
 - ZAT_illumination_modus_mybeat_clamp58xt: Активировать
 → Применить
@@ -30,11 +30,11 @@ DeveloperCoding Search lights
 
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Interior_light_2nd_generation / Освещение салона 2-го поколения
+Interior_light_2nd_generation / Освещение салона 2-го поколения:
 - Mittelkonsolenbeleuchtung mehrfarbig: акт
 → Применить
 ---
-Interior_light_lamp_configuration / Освещение салона, конфигурация фонарей
+Interior_light_lamp_configuration / Освещение салона, конфигурация фонарей:
 - Ambientemenue mit globalem aus: акт.
 - Ambientemenue mit alle Zonen: акт.
 - Ambient_Farbliste_HMI: акт.
@@ -116,7 +116,7 @@ Car_Function_Adaptations_Gen2:
 
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Interior_light_lamp_configuration / Освещение салона, конфигурация фонарей
+Interior_light_lamp_configuration / Освещение салона, конфигурация фонарей:
 - Ambientemenue mit globalem aus — акт.
 - Ambientemenue mit alle Zonen — акт.
 - Ambient_Farbliste_HMI — акт.
@@ -125,7 +125,7 @@ Interior_light_lamp_configuration / Освещение салона, конфи�
 - Farbwahl ueber Fahrprofil — не акт.
 → Применить
 
-Interior_light_2nd_generation / Освещение салона 2-го поколения
+Interior_light_2nd_generation / Освещение салона 2-го поколения:
 - Ambiente_Fahrprofil_Individual — 7
 - Ambiente_Farbwahl_FPA_waehlbare_Kopplung — active
 - Ambiente_Farbwahl_FPA_waehlbare_Kopplung_Status_hmi_default — сопряжены (coupled)
@@ -147,7 +147,7 @@ Interior_light_2nd_generation / Освещение салона 2-го поко�
 
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Ambientelicht Zuordnung der Farbe zum Fahrprofi
+Ambientelicht Zuordnung der Farbe zum Fahrprofi:
 - Fahrprofil_0 — 1
 - Fahrprofil_1 — 1
 - Fahrprofil_2 — 7
@@ -170,7 +170,7 @@ Ambientelicht Zuordnung der Farbe zum Fahrprofi
 Скорость переключения профилей
 ``` yaml title="логин-пароль: 31347"
 Блок 19 → Адаптация:
-Driving Profile Selection Parameter 
+Driving Profile Selection Parameter :
 - Driving Profile Selection Toogle Time Adaptation — вместо 2000 мс ставим 0
 → Применить
 ```

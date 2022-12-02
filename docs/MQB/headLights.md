@@ -166,7 +166,7 @@ Leuchte1BLK VRB20:
 
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Leuchte2SL VLB10:  
+Leuchte2SL VLB10:
 - Lichtfunktion G 2: Blinken links Hellphase  
 - Dimmwert GH 2: 0  
 - Dimming Direction GH 2: minimize  

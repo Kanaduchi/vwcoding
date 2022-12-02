@@ -198,7 +198,7 @@ Aussenlicht_uebergreifend — lho_zeit – 10 s
     
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Aussenlicht_Blinker 
+Aussenlicht_Blinker:
 - Komfortblinken_Blinkzyklen – выбрать значение от 1 до 5 (с завода по умолчанию – 3)
 → Применить
 ```

@@ -114,15 +114,15 @@ Lower_beam_lamp_typ - GDL
 ```
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Leuchte 0 BLK VL B35 — оно же левый передний поворотник
+Leuchte 0 BLK VL B35 — оно же левый передний поворотник:
 - Dimming_AB_0 — 128
 - Light_Function_A_0 — Blinken links Hellphase
 - Type_Of_Load_0 — LED Blinkleuchten
-Leuchte 1 BLK VR B23 — оно же правый передний поворотник
+Leuchte 1 BLK VR B23 — оно же правый передний поворотник:
 - Dimming_AB_1 — 128
 - Light_Function_A_1 — Blinken rechts Hellphase
 - Type_Of_Load_1 — LED Blinkleuchten
-Leuchte2SL VL B22 — оно же передний левый габарит
+Leuchte2SL VL B22 — оно же передний левый габарит:
 - Dimming_AB_2 — 100
 - Dimming_CD_2 — 30
 - Dimming_Direction_CD_2 — maximize
@@ -133,7 +133,7 @@ Leuchte2SL VL B22 — оно же передний левый габарит
 - Light_Function_D_2 — Parking light left
 - Light_Function_E_2 — Blinken links Hellphase
 - Type_Of_Load_2 — LED Tagfahrlichtmodul Signal
-Leuchte3SL VR B36 — оно же передний правый габарит
+Leuchte3SL VR B36 — оно же передний правый габарит:
 - Dimming_AB_3 — 100
 - Dimming_CD_3 — 30
 - Dimming_Direction_CD_3 — maximize
@@ -144,7 +144,7 @@ Leuchte3SL VR B36 — оно же передний правый габарит
 - Light_Function_D_3 — Parking light right
 - Light_Function_E_3 — Blinken rechts Hellphase
 - Type_Of_Load_3 — LED Tagfahrlichtmodul Signal
-Leuchte4TFL LB43 — оно же левый ДХО
+Leuchte4TFL LB43 — оно же левый ДХО:
 - Dimming_AB_4 — 127
 - Dimming_CD_4 — 127
 - Dimming_Direction_CD_4 — maximize
@@ -155,7 +155,7 @@ Leuchte4TFL LB43 — оно же левый ДХО
 - Light_Function_D_4 — Parking light left
 - Light_Function_E_4 — Blinken links aktiv
 - Type_Of_Load_4 — LED Tagfahrlichtmodul Versorgung
-Leuchte5 TFL RB6— оно же правый ДХО
+Leuchte5 TFL RB6— оно же правый ДХО:
 - Dimming_AB_5 — 127
 - Dimming_CD_5 — 127
 - Dimming_Direction_CD_5 — maximize
@@ -166,7 +166,7 @@ Leuchte5 TFL RB6— оно же правый ДХО
 - Light_Function_D_5 — Parking light right
 - Light_Function_E_5 — Blinken rechts aktiv
 - Type_Of_Load_5 — LED Tagfahrlichtmodul Versorgung
-Leuchte6ABL LB44 — оно же ближний левый
+Leuchte6ABL LB44 — оно же ближний левый:
 - Dimming_AB_6 — 100
 - Dimming_CD_6 — 100
 - Dimming_Direction_CD_6 — maximize
@@ -175,7 +175,7 @@ Leuchte6ABL LB44 — оно же ближний левый
 - Light_Function_C_6 — Left high beam
 - Light_Function_D_6 — Headlamp flasher
 - Type_Of_Load_6 — Xenon Abblendlicht
-Leuchte7ABL RB5 — оно же правый ближний
+Leuchte7ABL RB5 — оно же правый ближний:
 - Dimming_AB_7 — 100
 - Dimming_CD_7 — 100
 - Dimming_Direction_CD_7 — maximize
@@ -184,12 +184,12 @@ Leuchte7ABL RB5 — оно же правый ближний
 - Light_Function_C_7 — Right high beam
 - Light_Function_D_7 — Headlamp flasher
 - Type_Of_Load_7 — Xenon Abblendlicht
-Leuchte8FL LB42 — оно же дальний левый
+Leuchte8FL LB42 — оно же дальний левый:
 - Dimming_AB_8 — 100
 - Light_Function_A_8 — Left high beam
 - Light_Function_B_8 — Headlamp flasher
 - Type_Of_Load_8 — Shutter
-Leuchte9FL RB7 — оно же дальний правый
+Leuchte9FL RB7 — оно же дальний правый:
 - Dimming_AB_9 — 100
 - Light_Function_A_9 — Right high beam
 - Light_Function_B_9 — Headlamp flasher

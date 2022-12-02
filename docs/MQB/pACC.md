@@ -246,7 +246,7 @@ FPA_Funktion_ACC: Активировать
 ```
 ``` yaml
 Блок 19 → Адаптация:
-Multi_function_steering_wheel_control_module Coding Value
+Multi_function_steering_wheel_control_module Coding Value:
 - variant: ACC-High
 → Применить
 ```
@@ -290,7 +290,7 @@ Kurvenassistent_CarMenu: Активировать
 ```
 ``` yaml title="логин-пароль: 20103"
 Блок 13 → Адаптация:
-Predictive speed limit control
+Predictive speed limit control:
 - par Predictive speed limit control: Активировать
 → Применить
 ```

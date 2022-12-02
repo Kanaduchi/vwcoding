@@ -665,7 +665,7 @@ FPA_Funktion_AMB: Активировать
 Увеличиваем скорость переключения профилей
 ``` yaml
 Блок 19 → Адаптация:
-Driving Profile Selection Parameter 
+Driving Profile Selection Parameter :
 - Driving Profile Selection Toogle Time Adaptation: вместо 2000 мс ставим 0
 → Применить
 ```

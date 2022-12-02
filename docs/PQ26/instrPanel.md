@@ -31,7 +31,7 @@
 ### Предупреждение о включенных задних противотуманных фонарях при превышении порога скорости
 ``` yaml title="логин-пароль: 31347 (для старых 20103)"
 Блок 09 → Адаптация:
-Driving light and parking light - Nebelschlusslicht Warngeschwindigkeit → 
+Driving light and parking light - Nebelschlusslicht Warngeschwindigkeit: 
 - 0 — предупреждение отключено.
 - 1 … 255 — скоростной лимит срабатывания предупреждения (рекомендуется 60)
 → Применить

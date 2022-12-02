@@ -68,7 +68,7 @@
 
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Spiegelverstellung 
+Spiegelverstellung:
 - Funk Spiegelanklappung Modus: by look command via remote control key → by convenience operation via remote control key
 → Применить
 ```
@@ -78,7 +78,7 @@ Spiegelverstellung
 Отключение срабатывания омывателей фар при каждом 10 включении омывателей ветрового стекла
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Scheinwerferreinigung 
+Scheinwerferreinigung:
 - Anzahl Betaetigungen Frontwaschanlage pro SRA Aktivierung: 10 → 0
 → Применить
 ```
@@ -89,7 +89,7 @@ Scheinwerferreinigung
 Cрабатывание после долгого удержания рычага омывания стекла
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Scheinwerferreinigung 
+Scheinwerferreinigung:
 - SRA Verzoegerungszeit: 0 → 2500 (мс)
 → Применить
 ```
@@ -97,7 +97,7 @@ Scheinwerferreinigung
 Отключение второго "пшика" на фары (не рекомендуется)
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Scheinwerferreinigung 
+Scheinwerferreinigung:
 - SRA Nachwaschzeit: 10 → 0 (мс)
 → Применить
 ```
@@ -119,7 +119,7 @@ Alternative position 2 (позиция дворников при выключе�
 :octicons-verified-24: Skoda · :octicons-verified-24: Автомобили с MIB3
 ``` yaml title="логин-пароль: 31347"
 Блок 09  → Адаптация:
-Front wiper
+Front wiper:
 - Menuesteuerung Frontwischer: active
 → Применить
 ```
@@ -128,7 +128,7 @@ Front wiper
 
 ``` yaml title="логин-пароль: 31347"
 Блок 09  → Адаптация:
-Front wiper
+Front wiper:
 - Mindestwaschzeit_Frontwischer: 0 ms → 300 ms
 - Timer_DWP_SRA_delay: 300 ms → 0 ms
 ```

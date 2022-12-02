@@ -63,9 +63,9 @@ Personalisation_for_lane_departure_warning:
 
 ``` yaml
 Блок 5F (мультимедия) → Адаптация:
-Vehicle function list BAP
+Vehicle function list BAP:
 - traffic_sign_recognition_0x21: Активировать
-Vehicle menu operation
+Vehicle menu operation:
 - menu_display_road_sign_identification: Активировать
 - menu_display_road_sign_identification_over_threshold_high: Активировать
 → Применить 

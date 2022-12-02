@@ -197,7 +197,7 @@
 
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Access control 2
+Access control 2:
 - RegenschlieRen: permanently
 - RegenschlieRen: Активировать
 → Применить

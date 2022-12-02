@@ -271,7 +271,7 @@ Navigation_GNSS_Receiver_Setting:
 ``` yaml
 Блок 75 → Адаптация:
 GPS: internal_GPS_output_on_CAN
-Navigation_Type: Type_2
+Navigation_Type: Type_2:
 - Gnss_data_rate:
 Data Rate: 5 Hz (было 1)
 → Применить

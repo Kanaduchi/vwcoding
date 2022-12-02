@@ -210,7 +210,7 @@ Reduction of window misting outside at high humidity: Matching glass temperature
 ```
 ``` yaml
 Блок 08 → Адаптация:
-Reduction of window misting outside at high humitity
+Reduction of window misting outside at high humitity:
 - param_Reduction_of_window_misting_outside_at_high_humitity: Matching coding
 → Применить
 ```
@@ -219,10 +219,10 @@ Reduction of window misting outside at high humitity
 
 ``` yaml
 Блок 19 → Адаптация:
-Installation list - specified installations
+Installation list - specified installations:
 - Sound System: Not coded
 - Digital Sound System Control Module: Yes
-GW_Enable_CAN_Timeout_DTC 
+GW_Enable_CAN_Timeout_DTC:
 - Sound System: Enabled
 → Применить
 ```
@@ -267,7 +267,7 @@ byte_11_Sound_System: Sound_System_external_MOST
 Блок 5F → Адаптация:
 Sound System: yes
 Startup_screen_sticker_HMI: 2
-Car_Function_List_BAP_Gen2 
+Car_Function_List_BAP_Gen2:
 - Amplifier_0x2D: not activated
 - Amplifier_0x2D_msg_bus: Databus Infotainment
 → Применить
@@ -382,7 +382,7 @@ Car_Function_List_BAP_Gen2:
 Блок 19 → Список оборудования:
 3C (Система смены полосы движения): установлено
 CF (Система смены полосы движения): установлено
-Gateway_Component_List 
+Gateway_Component_List:
 - Node_0x4E: coded
 - Node_0x8A: coded
 → Применить
