@@ -13,9 +13,9 @@ You can use the template below to add new codings
     !!! warning ""
         Some warning message
 
-    ``` yaml title="логин-пароль: 00000 (if applicable)"
+    ``` yaml title="логин-пароль: XXXXX (if applicable)"
     Block XX → Adaptation/Coding:
-    Byte 00 – Bit 4 (name): Active
+    Byte XX – Bit X (name): Active
     Name of volume/folder:
     - Name of parameter: activate
     → Apply
