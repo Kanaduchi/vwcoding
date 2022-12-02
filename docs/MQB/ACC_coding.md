@@ -9,42 +9,38 @@
 === "Кодирование в ODIS"
     ``` yaml
     Блок 13 → Кодирование:
-    - Overtaking_right_prevention (Vermeidung für unzulässigen Überholvorgang): Деактивировать
+    Overtaking_right_prevention (Vermeidung für unzulässigen Überholvorgang): Деактивировать
     → Применить
     ```
 === "Кодирование в OBD11"
-    ``` yaml
-    Блок 13 (Адаптивный круиз контроль) → Безопасный доступ → Логин-пароль 20103 > Длинное кодирование:
-    - Overtaking_right_prevention: Деактивировать
+    ``` yaml title="логин-пароль: 20103"
+    Блок 13 (Адаптивный круиз контроль) → Безопасный доступ → Логин-пароль 20103 → Длинное кодирование:
+    Overtaking_right_prevention: Деактивировать
     → Применить
     ```
 === "Кодирование в VCDS" 
-    ```
+    ``` yaml title="логин-пароль: 20103"
     13 Блок Adaptive Cruise Control → Длинное кодирование:
-    - Байт 2 – Бит 5 (Overtaking_right_prevention): Деактивировать  
+    Байт 2 – Бит 5 (Overtaking_right_prevention): Деактивировать  
     Выход → Сохранить
     ``` 
     ![Screenshot](../images/MQB/overtake.png)
-
-> логин-пароль 20103
    
 ### Активация выбора режима работы Адаптивного Круиз Контроля (АСС), независимо от выбранного Профиля езды
 
 === "Кодирование в ODIS"
-    ``` yaml
+    ``` yaml title="логин-пароль: 20103"
     Блок 13 → Кодирование:
-    - Drive_pmode_selection: Меню MMI Адаптивный круиз контроль (ACC)
+    Drive_pmode_selection: Меню MMI Адаптивный круиз контроль (ACC)
     → Применить
     ```
 === "Кодирование в VCDS" 
-    ``` yaml
+    ``` yaml title="логин-пароль: 20103"
     Блок 13 Adaptive Cruise Control → Кодирование → Длинное кодирование:
-    - Байт 3 – Бит 7 (Drive_pmode_selection, 0=MMI menu ACC / 1=Driving profile selection): Деактивировать 
+    Байт 3 – Бит 7 (Drive_pmode_selection, 0=MMI menu ACC / 1=Driving profile selection): Деактивировать 
     Выход → Сохранить
     ``` 
     ![Screenshot](../images/MQB/acc.png)
-
-> логин-пароль 20103 
 
 ### Увеличение времени ожидания трогания Адаптивного Круиз Контроля (АСС)
 
@@ -60,7 +56,7 @@
 
 ``` yaml
 Блок 13 → Кодирование:
-- Байт 11 – Бит 0 (Pretriggertime_reduction): Деактивировать  
+Байт 11 – Бит 0 (Pretriggertime_reduction): Деактивировать  
 → Применить
 ```
 
@@ -71,24 +67,24 @@
 Пункт меню «Учитывать допустимую скорость» и непосредственно включает или выключает режим регулирования скорости АСС в зависимости от знаков в навигации или распознанных камерой.
 ``` yaml
 Блок 13 → Кодирование:
-- Tempolimitassistent_CarMenu: Активировать
+Tempolimitassistent_CarMenu: Активировать
 ```
 
 Пункт настроек допустимых отклонений в меню «Адаптивного Круиз Контроля»
 ``` yaml
 Блок 13 → Кодирование:
-- zul_Regelabweichung_CarMenu: large
+zul_Regelabweichung_CarMenu: large
 ```
 
 Выставленные Вами для того или иного знака ограничения будут сохраняться и автоматически подставляться каждый раз при распознавании этих знаков.
 ``` yaml
 Блок 13 → Кодирование:
-- pACC_Learning_drivers_offset: Активировать
+pACC_Learning_drivers_offset: Активировать
 ```
 
 ### Настройка предупреждения Front Assist
 ``` yaml
 Блок 13 → Кодирование:
-- adjustability_awv_pre_warning: Деактивировать
-- default_value_awv_pre_warning: Активировать
+adjustability_awv_pre_warning: Деактивировать
+default_value_awv_pre_warning: Активировать
 ```

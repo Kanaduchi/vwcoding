@@ -6,15 +6,15 @@
 
 ``` yaml
 Блок 5F → Длинное кодирование:
-> Байт 11 – Бит 2 (пункты Skoda Surround и Virtual Subwoofer): Активировать
-> Байт 08 – Бит 6 (VDA Low Frequency Input): Активировать
+Байт 11 – Бит 2 (пункты Skoda Surround и Virtual Subwoofer): Активировать
+Байт 08 – Бит 6 (VDA Low Frequency Input): Активировать
 → Применить
 ```
 
 ### Изменение стартовой заставки Swing/Bolero
 ``` yaml
 Блок 5F → Длинное кодирование:
-> Байт 18: меняем значение 00 на предпочтительное
+Байт 18: меняем значение 00 на предпочтительное
 01-vRS
 02-SCOUT
 03-Laurin & Klement
@@ -29,13 +29,13 @@
 ### Деактивация AM диапазона в ГУ Swing/Bolero
 ``` yaml
 Блок 5F → Длинное кодирование:
-> Байт 14 – Бит 1: Активировать
+Байт 14 – Бит 1: Активировать
 ```
 
 ### Изменение вида отображения автомобиля в меню «Состояние автомобиля»
 ``` yaml
 Блок 5F → Длинное кодирование:
-> Байт 01 – Биты 0~23:
+Байт 01 – Биты 0~23:
 – 035201, модель: Skoda Rapid
 – 035203, модель: Skoda Rapid Spaceback
 - 035331, модель: Skoda Rapid FL (NH3)
@@ -49,15 +49,15 @@
 ### Изменение времени отображения заставки при включении магнитолы
 ``` yaml
 Блок 5F → Адаптация:
-> Time display for start screen → 2.0 s - выставляем нужное
+Time display for start screen → 2.0 s - выставляем нужное
 → Применить
 ```
-> 20103
+20103
 
 ### Активация динамиков задних дверей после самостоятельной доустановки (Swing/Bolero/Amundsen)
 ``` yaml
 Блок 5F → Длинное кодирование:
-> Байт 04 – Биты 0~31 → выбираем
+Байт 04 – Биты 0~31 → выбираем
 - ВЕ000000 (4 канала / 6 пассивных динамиков)
 Если в задние двери установлена 2-х компонентная акустика с твитерами, соответственно выбираем:
 — FF000000 (4 канала / 8 пассивных динамиков).
@@ -67,7 +67,7 @@
 ### Активация низкочастотного аналогового входа AUX-IN
 ``` yaml
 Блок 5F → Длинное кодирование:
-> Байт 8 – Бит 4: Активировать
+Байт 8 – Бит 4: Активировать
 → Применить
 ```
 
@@ -83,40 +83,40 @@
 ### Изменение чувствительности микрофона
 ``` yaml
 Блок 5F → Адаптация:
-> Microphone sensitivity → 0 dB – выставить необходимое значение.
+Microphone sensitivity → 0 dB – выставить необходимое значение.
 → Применить
 ```
 * Отрицательное значение установленное в этом параметре будет увеличивать громкость сигнала с микрофона. Чем меньше отрицательное значение, тем больше усиление.
-> 20103
+20103
 
 ### Показания БК при выключенном зажигании
 ``` yaml
 Блок 5F → Адаптация:
-> Car_Function_Adaptations_Gen2-menu_display_board_computer_clamp_15_off → переключить с not activated, на activated
+Car_Function_Adaptations_Gen2-menu_display_board_computer_clamp_15_off → переключить с not activated, на activated
 → Применить
 ```
-> 20103
+20103
 
 ### Режим автошколы на Swing/Bolero
 ``` yaml
 Блок 5F → Адаптация:
-> Car_Function_Adaptations_Gen2-menu_display_driving_school → переключить с not activated на activated
-> Car_Function_Adaptations_Gen2-menu_display_driving_school_over_threshold_high → переключить с not activated на activated
-> Car_Function_List_CAN_Gen2-Driving_school → переключить с Not available на available
-> Car_Function_List_CAN_Gen2-Driving_school_msg_bus → переключить с Not available на Comfort data bus
+Car_Function_Adaptations_Gen2-menu_display_driving_school → переключить с not activated на activated
+Car_Function_Adaptations_Gen2-menu_display_driving_school_over_threshold_high → переключить с not activated на activated
+Car_Function_List_CAN_Gen2-Driving_school → переключить с Not available на available
+Car_Function_List_CAN_Gen2-Driving_school_msg_bus → переключить с Not available на Comfort data bus
 → Применить
 ```
-> 20103
+20103
 
 ### Активация режима «Бездорожье» Swing 3
 ``` yaml
 Блок 5F → Адаптация:
-> Car_Function_Adaptations_Gen2 - menu_display_compass_clamp_15_off → активир.
-> Car_Function_Adaptations_Gen2 - menu_display_compass_over_threshold_high → активир.
-> Car_Function_Adaptations_Gen2 - menu_display_compass → активир.
+Car_Function_Adaptations_Gen2 - menu_display_compass_clamp_15_off: активир.
+Car_Function_Adaptations_Gen2 - menu_display_compass_over_threshold_high: активир.
+Car_Function_Adaptations_Gen2 - menu_display_compass: активир.
 → Применить
 ```
-> 20103
+20103
 
 ### Активация Инженерного меню (Engineering Testmode) Swing 2
 Только с использованием VAS5054 и ODIS-E
@@ -145,10 +145,10 @@ Developer mode (режим разработчика) → вводим значе
 
 ``` yaml
 Блок 5F → Адаптация:
-- Summertime: automatic, manual изменить на Europe
+Summertime: automatic, manual изменить на Europe
 → Применить
 ```
-> 20103
+20103
 
 ### Подключение второго телефона. Swing 3
 
@@ -156,15 +156,15 @@ Developer mode (режим разработчика) → вводим значе
 
 ``` yaml
 Блок 5F → Адаптация:
-- Dtmf_without_active_call: Активировать
-- Support_second_phone: Активировать
-- Support_for_response_and_hold: Активировать
+Dtmf_without_active_call: Активировать
+Support_second_phone: Активировать
+Support_for_response_and_hold: Активировать
 → Применить
 ```
-> 20103
+20103
 
 ``` yaml
 Блок 17 (5JA 920 7XX) → Длинное кодирование:
-> Байт 11 – Бит 6: Активировать (telephone2_BAP)
+Байт 11 – Бит 6: Активировать (telephone2_BAP)
 → Применить
 ```

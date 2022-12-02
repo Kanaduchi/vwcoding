@@ -199,7 +199,7 @@ Lampendefektbitposition и Fehlerort mittleres Byte DTC-DFCC — два поля
     | beidseitiges Dauerparklicht | Both sides permanent parking light |
     | Blinken links aktiv (beide Phasen); Auf- und Abdimmend mit p_t_blinken_rampe | Flashing left active (both phases);Dimming up and down with p_t_ flash ramp |
     | Blinken rechts aktiv (beide Phasen); Auf- und Abdimmend mit p_t_blinken_rampe | Flashing right active (both phases);Dimming up and down with p_t_ flash ramp |
-    | Schlusslicht aktiv ohne Bremslicht aktiv;ist deaktiviert;wenn Bremslicht aktiv ist !!! | Taillight active  without stop light; disabled if the brake light is active !!! |
+    | Schlusslicht aktiv ohne Bremslicht aktiv;ist deaktiviert;wenn Bremslicht aktiv ist !!! | Taillight active without stop light; disabled if the brake light is active !!! |
     | Aktive Blinkfunktion hat ein auf 1 gesetztes zugeordnetes Bit in pa_dynamisch_blinken | Active flashing function Bit1 is set t associated in pa_ dynamic_flash  |
     | Motorraumlicht| Загорается при открытие моторного отсека (капота) |
     | Fahrzeug ist nicht fahrbereit (Motor läuft nicht; Elektroantrieb nicht aktiv o.ä.) | Vehicle is not roadworthy (electric drive not active or similar, engine is not running) |
@@ -227,10 +227,10 @@ Lichtfunktion A, B, C, D, E, F, G, H — функции лампы в борто
 
 Например, 
 ```
-> Lichtfunktion C 6:	nicht aktiv  
-> Lichtfunktion D 6:	nicht aktiv  
-> Dimmwert CD 6:	0  
-> Dimming Direction CD 6: maximize  
+Lichtfunktion C 6:	nicht aktiv  
+Lichtfunktion D 6:	nicht aktiv  
+Dimmwert CD 6:	0  
+Dimming Direction CD 6: maximize  
 ```
 
 Это означает, что для функций освещения C и D можно установить только одно направление изменения яркости и только одно значение изменения яркости.  
@@ -272,26 +272,24 @@ Lichtfunktion A, B, C, D, E, F, G, H — функции лампы в борто
 2. Находим свободную группу функций освещения. В нашем случае это CD
 3. Задаем функции для левой фары:  
 ```
-Lichtfunktion C 12 → Lichthupe generell (включается при моргании дальним)  
-Dimming direction CD 12 → maximum  (увеличение яркости)  
-Dimmwert CD 12 – 0 → 100
+Lichtfunktion C 12: Lichthupe generell (включается при моргании дальним)  
+Dimming direction CD 12: maximum  (увеличение яркости)  
+Dimmwert CD 12: 0 → 100
 ```
 4. Задаем функции для правой фары: 
 ``` 
-Lichtfunktion C 13 → Lichthupe generell (включается при моргании дальним)   
-Dimming direction CD 13 → maximum  (увеличение яркости)  
-Dimmwert CD 13 – 0 → 100  
+Lichtfunktion C 13: Lichthupe generell (включается при моргании дальним)   
+Dimming direction CD 13: maximum  (увеличение яркости)  
+Dimmwert CD 13: 0 → 100  
 ```
 
 ### Базовая калибровка фар 
 Проводится при наличии висящей AFS ошибки. Двигатель должен быть заведен, фары включены
 
-``` yaml
+``` yaml title="логин-пароль: 20103"
 Блок 4B → Базовые установки (04) 
-> Базовая установка фар (002) → Прочитать
-> Берем руками руль (а/м заведенный, фары горят), крутим руль в левую сторону до упора и держим в таком положении руль 3с. 
-> Крутим руль в правую сторону то же до упора и держим те же 3с. далее ставим руль прямо, ждем 3с → Сохранить
-> Подтверждение базовой установки (003) → Применить
+Базовая установка фар (002) → Прочитать
+Берем руками руль (а/м заведенный, фары горят), крутим руль в левую сторону до упора и держим в таком положении руль 3с. 
+Крутим руль в правую сторону то же до упора и держим те же 3с. далее ставим руль прямо, ждем 3с → Сохранить
+Подтверждение базовой установки (003) → Применить
 ```
-
-> логин-пароль 20103

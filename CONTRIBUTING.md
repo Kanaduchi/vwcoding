@@ -13,8 +13,9 @@ You can use the template below to add new codings
     !!! warning ""
         Some warning message
 
-    ``` yaml
-    Block XX → Adaptation:
+    ``` yaml title="логин-пароль: XXXXX (if applicable)"
+    Block XX → Adaptation/Coding:
+    Byte XX – Bit X (name): Active
     Name of volume/folder:
     - Name of parameter: activate
     → Apply
@@ -22,8 +23,6 @@ You can use the template below to add new codings
 
     ??? note "Collapsibale list"
         This information is displayed collapsed on the site
-
-    > Login-password: 000000 (if applicable)
 ```
 
 Path for images: `/docs/images`  
@@ -34,7 +33,7 @@ Insert image to the page:
 ![Screenshot](../images/MQB/odis-e-tires.png) 
 
 Insert file to the page:  
-[(Сборка для Skoda)](../firmwares/TMC-zz.rar)  
+[(Applicable for Skoda)](../firmwares/TMC-zz.rar)  
 
 ## Adding localizations
 

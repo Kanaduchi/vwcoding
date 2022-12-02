@@ -2,19 +2,42 @@
 hide:
   - toc
 comments: false
+ᴴₒᴴₒᴴₒ: true
 ---
-  
+<script src="https://www.moneybutton.com/moneybutton.js"></script>
 <style>
   .md-typeset h1,
   .md-content__button {
     display: none;
+  }
+  
+.frame {
+    width: 1600px;
+    max-width: none !important;
+    height: auto;
+    border: 0;
+    -ms-transform: scale(0.65);
+    -moz-transform: scale(0.65);
+    -o-transform: scale(0.65);
+    -webkit-transform: scale(0.65);
+    transform: scale(0.65);
+    
+    -ms-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+.wrap {
+    width: auto;
+    height: 35px;
+}
 </style>
 
 !!! give-money inline end "Помощь проекту"
-    Если вам понравился этот проект и вы хотели бы его поддержать для дальнейшего развития, то вы можете это сделать 
-    с помощью Яндекс-перевода  
-    <iframe src="https://yoomoney.ru/quickpay/button-widget?targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0%20vwcoding.ru&default-sum=100&button-text=11&yoomoney-payment-type=on&button-size=s&button-color=orange&successURL=vwcoding.ru&quickpay=small&account=4100110582992748&" width="127" height="25" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
-
+    Если вам понравился этот проект и вы готовы его поддержать для дальнейшего развития, то вы можете это сделать с российских карт
+    с помощью Яндекс-перевода в рублях:  
+    <div class="wrap"><iframe class="frame" src="https://yoomoney.ru/quickpay/fundraise/button?billNumber=szaulwUCpas.221202&" frameborder="0" allowtransparency="true"></iframe></div>
 !!! danger "Внимание!"
     Копирование информации с сайта допускается только с указанием ссылки на данный ресурс
 

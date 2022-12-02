@@ -1,100 +1,90 @@
 # СТЕКЛООЧИСТИТЕЛИ / ДАТЧИК ДОЖДЯ И СВЕТА
 
 ### Сервисное положение стеклоочистителей в меню Swing
-``` yaml
+``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-> Windshield wiper - Menuesteuerung Frontwischer: Активировать
+Windshield wiper - Menuesteuerung Frontwischer: Активировать
 → Применить
 ```
-> логин-пароль 31347
 
 ### Парковка дворников при выключенном зажигании
 
 !!! note ""
     Решает проблему с остановкой дворников на пол пути посредине стекла при выключении зажигания.
-``` yaml
+``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-> Windshield wiper:
->> Wischer stop bei KL15 aus: Деактивировать
+Windshield wiper:
+- Wischer stop bei KL15 aus: Деактивировать
 → Применить
 ```
-> логин-пароль 31347
 
 ### Дополнительный взмах передних стеклоочистителей (дотирка капель)
-``` yaml
+``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-> Rear Window Wiper - Traenenwischen Heck: Активировать
-> Windshield wiper - Traenenwischen Front Status: Активировать
+Rear Window Wiper - Traenenwischen Heck: Активировать
+Windshield wiper - Traenenwischen Front Status: Активировать
 → Применить
 ```
-> логин-пароль 31347
 
 ### Изменение чувствительности датчика света
-``` yaml
+``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-> Assistance light functions-Lichtsensorempfindlichkeit → normal (нормально) изменить на "non sensitive" (не чувствителен)
+Assistance light functions-Lichtsensorempfindlichkeit → normal (нормально) изменить на "non sensitive" (не чувствителен)
 → Применить
 ```
-> логин-пароль 31347
 
 ### Отключение омывателя фар
-``` yaml
+``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-> Windshield wiper-SRA Waschzeit → 2300 ms заменить на 0
+Windshield wiper-SRA Waschzeit → 2300 ms заменить на 0
 → Применить
 ```
-> логин-пароль 31347
 
 ### Увеличение интервала и времени срабатывания омывателей фар
 
 Параметр, отвечающий на какой раз омывания стекла сработают фароомыватели.  
 Если сменить стандартные “9” на 1 - то сработают каждый раз.  
-``` yaml
+``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-> Windshield wiper-Anzahl Betaetigungen Frontwaschanlage pro SRA Aktivierung → вводим «15»
+Windshield wiper-Anzahl Betaetigungen Frontwaschanlage pro SRA Aktivierung → вводим «15»
 → Применить
 ```
 
 Параметр, отвечающий за время удержания подрулевого рычажка омывания лобового стекла, чтобы сработали омыватели фар
-``` yaml
+``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-> Windshield wiper — SRA Verzoegerungszeit → меняем стандартные 0 мс на, к примеру, 1500 мс (1,5 сек)
+Windshield wiper — SRA Verzoegerungszeit → меняем стандартные 0 мс на, к примеру, 1500 мс (1,5 сек)
 → Применить
 ```
 
 Сколько секунд будут работать фароомыватели
-``` yaml
+``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-> Windshield wiper — SRA Waschzeit → стандартное значение 600 мс.
+Windshield wiper — SRA Waschzeit → стандартное значение 600 мс.
 → Применить
 ```
-> логин-пароль 31347
 
 ### Отключение срабатывания заднего стеклоочистителя при включении заднего хода
-``` yaml
+``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-> Rear Window Wiper-Komfortwischen Heck → not active
+Rear Window Wiper-Komfortwischen Heck → not active
 → Применить
 ```
 либо посредством меню магнитолы
-
-> логин-пароль 31347
 
 ### Автоматическое включение заднего дворника
 
 !!! note ""
     Задний дворник начинает срабатывать при продолжительной непрерывной работе передних дворников на 2 скорости.
-``` yaml
+``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-> Rear Window Wiper - Automatisches Heckwischen: Активировать
+Rear Window Wiper - Automatisches Heckwischen: Активировать
 → Применить
 ```
-> логин-пароль 31347
 
 ### Положение размораживания дворников
-``` yaml
+``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-> Windshield wiper - Frontwischer Abtauposition → Abtauposition temperaturunabhaengig Referenzwischen 
+Windshield wiper - Frontwischer Abtauposition → Abtauposition temperaturunabhaengig Referenzwischen 
 → Применить
 ```
-> логин-пароль 31347

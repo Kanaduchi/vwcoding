@@ -11,12 +11,10 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 ### Разблокировка инженерного меню  
 
 Перед этим возможно придется ODIS E [перевести в режим программирования](../../utils/odis-e/#_4)
-``` yaml
+``` yaml title="логин-пароль: 12345"
 Блок 5F → Адаптация:
-> Режим разрабочика (Developer mode): Активировать
+Режим разрабочика (Developer mode): Активировать
 ```
-
-> логин-пароль 12345
 
 ### Смена скина автомобиля
 Иногда при замене ГУ на другой, бывает что на нем установлен профиль другого автомобиля VW.   
@@ -24,11 +22,11 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 Пример для VW Tiguan:   
 ``` yaml
 Блок 5F → Кодирование:
-> byte_0_brand → _VW
-> byte_1_Car_Class → 3
-> byte_1_Car_Generation → 7
-> byte_2_Car_Derivate → 6
-> byte_2_Car_Derivate_Supplement → 0
+byte_0_brand: _VW
+byte_1_Car_Class: 3
+byte_1_Car_Generation: 7
+byte_2_Car_Derivate: 6
+byte_2_Car_Derivate_Supplement: 0
 → Применить 
 ```
 
@@ -36,17 +34,17 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 
 ``` yaml
 Блок 5F → Адаптация:
-> function_configuration_phone:
->> Support_second_phone: none → меняем
->> Support_for_response_and_hold: off → on
->> Dtmf_without_active_call: off → on
->> _user_menu_three_way_calling: not_installed → installed
+function_configuration_phone:
+- Support_second_phone: none → меняем
+- Support_for_response_and_hold: off → on
+- Dtmf_without_active_call: off → on
+- _user_menu_three_way_calling: not_installed → installed
 → Применить 
 ```
 
 ``` yaml
 Блок 17 → Кодирование:
-> telephone2_BAP - no → yes
+telephone2_BAP: no → yes
 → Применить
 ```
 
@@ -62,8 +60,8 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 
 ``` yaml
 Блок 5F → Адаптация:
-> Adjustment_fm_tuner_mono_stereo
->> l_hf_stereo_lower_threshold → 20 dBµV (было 37 dBµV)
+Adjustment_fm_tuner_mono_stereo:
+- l_hf_stereo_lower_threshold: 20 dBµV (было 37 dBµV)
 → Применить 
 ```
 
@@ -72,28 +70,26 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 ![Screenshot](../images/MQB/fm.jpg)
 
 === "Кодирование в ODIS"
-    ``` yaml
+    ``` yaml title="логин-пароль: 20103"
     Блок 5F → Кодирование:
-    > byte_14_AM_disable: Активировать
+    byte_14_AM_disable: Активировать
     → Применить (с перезагрузкой блока)
     ```
 
 === "Кодирование в VCDS"
-    ```
+    ``` yaml title="логин-пароль: 20103"
     5F - MMI / RNS  
     Кодирование - 07 → Длинное кодирование:
     Байт 1 – Бит 1 (byte_14_AM_disable): Активировать  
     Выход → Сохранить
     ```
-    ![Screenshot](../images/MQB/am_radio.jpg) 
-    
-> логин-пароль 20103
+    ![Screenshot](../images/MQB/am_radio.jpg)
 
 ### Заставка ГУ
 
 ``` yaml
 Блок 5F → Кодирование:
-> Байт 18 – меняем 00 на
+Байт 18 – меняем 00 на
     01 — Hybrid
     02 — GTD
     03 — GTI
@@ -107,7 +103,7 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 Логотип музыкальной системы
 ``` yaml
 Блок 5F → Адаптация:
-> Startup_screen_sticker_hmi (по умолчанию стоит 0000) - меняем на
+Startup_screen_sticker_hmi (по умолчанию стоит 0000) - меняем на
     1 — fender premium audio system
     2 — dynaudio
 → Применить 
@@ -118,9 +114,7 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 === "Кодирование в ODIS"
 	```
 	Блок 5F → Кодирование:
-    > byte_17_Skinning
-    Старое значение: Skin_1
-    Новое значение: Skin_5
+    byte_17_Skinning: Skin_1 → Skin_5
     → Применить (с перезагрузкой блока)
     ```
     
@@ -128,7 +122,7 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
     ```
     5F - MMI / RNS  
     Кодирование - 07 → Длинное кодирование:
-    Байт 17: меняем Skin_1 на Skin_5  
+    Байт 17: Skin_1 → Skin_5 
     Выход → Сохранить  
     ```
 
@@ -137,12 +131,12 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 
 ``` yaml
 Блок 5F → Адаптация:
-> nhtsa_properties:
->> nhtsa_limitation_switches_for_carplay_no_softKeyboard: Деактивировать (CarPlay, возможность вызова клавиатуры в движении)
->> nhtsa_limitation_switches_for_androidauto_limit_displayed_message_length: Деактивировать (AA,отключение ограничения длины выводимого сообщения в движении)
->> nhtsa_limitation_switches_for_androidauto_no_setup_configuration: Деактивировать (AA, возможность заходить в настройки в движении)
->> nhtsa_limitation_switches_for_androidauto_no_text_input: Деактивировать (AA, отключение запрета ввода текста в движении)
->> nhtsa_limitation_switches_for_androidauto_no_video_playback: Деактивировать (АА, возможность проигрывать видео в движении)
+nhtsa_properties:
+- nhtsa_limitation_switches_for_carplay_no_softKeyboard: Деактивировать (CarPlay, возможность вызова клавиатуры в движении)
+- nhtsa_limitation_switches_for_androidauto_limit_displayed_message_length: Деактивировать (AA,отключение ограничения длины выводимого сообщения в движении)
+- nhtsa_limitation_switches_for_androidauto_no_setup_configuration: Деактивировать (AA, возможность заходить в настройки в движении)
+- nhtsa_limitation_switches_for_androidauto_no_text_input: Деактивировать (AA, отключение запрета ввода текста в движении)
+- nhtsa_limitation_switches_for_androidauto_no_video_playback: Деактивировать (АА, возможность проигрывать видео в движении)
 → Применить 
 ```
 
@@ -154,9 +148,9 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 
 ``` yaml
 Блок 5F → Адаптация:
->> Car_function_list_bap_gen2_extended
-> display_configuration_0x45: Активировать
-> display_configuration_0x45_msg_bus → CAN_Comfort
+Car_function_list_bap_gen2_extended:
+- display_configuration_0x45: Активировать
+- display_configuration_0x45_msg_bus: CAN_Comfort
 → Применить 
 ```
     
@@ -169,14 +163,14 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
 
 ``` yaml
 Блок 5F → Адаптация:
-> Car_Function_Adaptations_Gen2
-> menu_display_compass → "active" (default not active)
-> menu_display_compass_over_threshold_high → "active" (default not active) 
-> menu_display_compass_clamp_15_off  → "active" (default not active)
+Car_Function_Adaptations_Gen2
+menu_display_compass → "active" (default not active)
+menu_display_compass_over_threshold_high → "active" (default not active) 
+menu_display_compass_clamp_15_off  → "active" (default not active)
 → Применить  
     
-> Car_Function_List_BAP_Gen2
-> compass_0x15 "active" (default not active)
+Car_Function_List_BAP_Gen2
+compass_0x15 "active" (default not active)
 → Применить 
 ``` 
     
@@ -185,22 +179,20 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
     После кодирования в блоке будет висеть нестираемая ошибка, никак не влияющая на функциональность
     
 === "Кодирование в ODIS"
-    ``` yaml
+    ``` yaml title="логин-пароль: 20103"
     Блок 5F → Кодирование:
-    > Байт 24 – Бит 02 (Navigation System): Активировать (было "02" 00000010, стало "06" 00000110)
+    Байт 24 – Бит 02 (Navigation System): Активировать (было "02" 00000010, стало "06" 00000110)
     → Применить (с перезагрузкой блока)
     ```
     
 === "Кодирование в VCDS"
-    ```
+    ``` yaml title="логин-пароль: 20103"
     5F - MMI / RNS  
     Кодирование - 07 → Длинное кодирование:
     Байт 24 – Бит 2 (Navigation System): Активировать
     либо правим двоичное значение - было "02" 00000010, стало "06" 00000110  
     Выход → Сохранить
     ```
-    
-> логин-пароль 20103 
 
 ### Режим автошкола
 
@@ -209,82 +201,79 @@ menu_display_xxx_after_disclaimer - работа после какой-то фи
     
 ``` yaml
 Блок 5F → Адаптация:
->> Car_Function_Adaptations_Gen2
-> menu_display_driving_school - не активир.меняем на активир.
-> menu_display_driving_school_over_threshold_high - не активир меняем на активир.
->> Car_Function_List_CAN_Gen2
->> Driving_school - недоступ. меняем на доступен
+Car_Function_Adaptations_Gen2:
+- menu_display_driving_school - не активир.меняем на активир.
+- menu_display_driving_school_over_threshold_high - не активир меняем на активир.
+Car_Function_List_CAN_Gen2:
+- Driving_school - недоступ. меняем на доступен
 → Применить
 ```
 
 ### Включение персонализации
 
-``` yaml
+``` yaml title="логин-пароль: 20103"
 Блок 17 → Кодирование:
-> Байт 10 – Персонализация
+Байт 10 – Персонализация
 выбираем «Вкл»
 → Применить
 ```
-> логин-пароль 20103
 
-``` yaml
+``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-> Персонализация / Personalisierung
->> Personalisierung_Profilfunkion → profiles_active
->> Personalisierung_aktiv → Active
->> Aktivierungsoption_im_HMI-Menue_sichtbar → Active
->> Benutzerkontenverwaltung_in_HMI-Menue_sichtbar → Active
->> Personalisierungsfunktionen_in_HMI-Menue_sichtbar → Active
->> PSO_FSG_Setup2_Bit_1 → Active
->> PSO_FSG_Setup2_Bit_2 → Active
+Персонализация / Personalisierung:
+- Personalisierung_Profilfunkion → profiles_active
+- Personalisierung_aktiv → Active
+- Aktivierungsoption_im_HMI-Menue_sichtbar → Active
+- Benutzerkontenverwaltung_in_HMI-Menue_sichtbar → Active
+- Personalisierungsfunktionen_in_HMI-Menue_sichtbar → Active
+- PSO_FSG_Setup2_Bit_1 → Active
+- PSO_FSG_Setup2_Bit_2 → Active
 → Применить
 ```
-> логин-пароль 31347
 
 Активация персонализации
-``` yaml
+``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-> Персонализация / Personalisierung
->> Profil_Variante → Konto (v. 1.x)
+Персонализация / Personalisierung
+- Profil_Variante: Konto (v. 1.x)
 ```
 Сохраняем, клацаем, запираем авто.  
 Создаем профили и далее меняем:
-``` yaml
+``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-> Персонализация / Personalisierung
->> Profil_Variante → Konto (v. 2.x)
+Персонализация / Personalisierung
+- Profil_Variante: Konto (v. 2.x)
 ```
 Сохраняем, клацаем, запираем авто.  
 Меняем:
-``` yaml
+``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-> Персонализация / Personalisierung
->> Profil_Variante → Konto (v. 1.x)
+Персонализация / Personalisierung
+- Profil_Variante: Konto (v. 1.x)
 ```
-> логин-пароль 31347
 
 ### Использование глонасс антенны для навигации и компаса
 :octicons-verified-24: Discover Pro · :octicons-verified-24: Discover Media
     
 ``` yaml
 Блок 5F → Адаптация:
-> Navigation_GNSS_Receiver_Setting:
->> default_hw_reception: Дективировать
->> gps: Дективировать
->> galileo: Дективировать
->> glonass: Дективировать
->> compass: Дективировать
->> external_gps_1: Активировать
->> external_gps_2: Дективировать
+Navigation_GNSS_Receiver_Setting:
+- default_hw_reception: Дективировать
+- gps: Дективировать
+- galileo: Дективировать
+- glonass: Дективировать
+- compass: Дективировать
+- external_gps_1: Активировать
+- external_gps_2: Дективировать
 → Применить
 ```
 
 ``` yaml
 Блок 75 → Адаптация:
-> GPS: internal_GPS_output_on_CAN
-> Navigation_Type: Type_2
->> Gnss_data_rate:
-> Data Rate: 5 Hz (было 1)
+GPS: internal_GPS_output_on_CAN
+Navigation_Type: Type_2:
+- Gnss_data_rate:
+Data Rate: 5 Hz (было 1)
 → Применить
 ```
 

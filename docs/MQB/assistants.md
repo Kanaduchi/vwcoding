@@ -25,20 +25,19 @@ Sign Assist — Ассистент распознавания дорожных �
 
 ``` yaml
 Блок A5 (камера ассистентов) → Кодирование:
->> AFS_coding_Light_Assist: Matrixbeam
+AFS_coding_Light_Assist: Matrixbeam
 → Применить 
 ```
 
 ### Активация кнопки вызова ассистентов (для 5Q0 953 502 AJ / Valeo 408 876)
 
-``` yaml
+``` yaml title="логин-пароль: 20103"
 Блок 16 → Адаптация:
-> Электроника рулевой колонки
-> Клавиша вспомогательных систем водителя
-> Установл.
+Электроника рулевой колонки
+Клавиша вспомогательных систем водителя
+Установл.
 → Применить
 ```
-> логин-пароль 20103
 
 ### Активация Lane Assist без адаптивного ведения по полосе
 
@@ -48,10 +47,8 @@ Sign Assist — Ассистент распознавания дорожных �
 Включаем отображение Lane Assist на приборной панели
 ``` yaml
 Блок 17 (комбинация приборов/ActiveInfoDisplay) → Кодирование:
-> Lane_assist: yes
- (Байт 04 – Бит 6 (Lane_assist: no → yes)): Активировать)
-> Lane_assist_BAP: yes.
- (Байт 11 – Бит 1 (Lane_assist_BAP: no → yes)): Активировать)
+Байт 04 – Бит 6 (Lane_assist): Активировать
+Байт 11 – Бит 1 (Lane_assist_BAP): Активировать
 ```
 
 Конфигурация камеры ассистентов   
@@ -63,32 +60,29 @@ Sign Assist — Ассистент распознавания дорожных �
 Байт 16 – Бит 7: Активировать (либо меняем значение байта на 90/98)
 ```
 
-``` yaml
+``` yaml title="логин-пароль: 20103"
 Блок A5 (камера ассистентов) → Адаптация:
-> Lan_assist_system_mode (Состояние включение ассистента движение по полосе) - Selection_over_menu  
-> Lane_assist_warning_intensity (Интенсивность предупреждений ассистента движения по полосе) - Selection_over_menu 
-> Personalization of lane dept. warning Cl. 15 on (Персонализация момента вмешательство при вкл клеммы 15) - Last Setting (последняя настройка)
+Lan_assist_system_mode (Состояние включение ассистента движение по полосе) - Selection_over_menu  
+Lane_assist_warning_intensity (Интенсивность предупреждений ассистента движения по полосе) - Selection_over_menu 
+Personalization of lane dept. warning Cl. 15 on (Персонализация момента вмешательство при вкл клеммы 15) - Last Setting (последняя настройка)
 → Применить 
 ```
-> логин-пароль 20103
 
 HCA - Указание блоку рулевого управления о наличии Lane Assist
-``` yaml
+``` yaml title="логин-пароль: 19249"
 Блок 44 (усилитель рулевого) → Кодирование:
-> Heading_control_assist: Активировать   
- (Байт 03 – Бит 1: Активировать)   
+Байт 03 – Бит 1 (Heading_control_assist): Активировать
 → Применить 
 ```
-> логин-пароль 19249
 
 Включаем в меню новые функции
 ``` yaml
 Блок 5F (мультимедия) → Адаптация:
-> Car_Function_List_BAP_Gen2
->> LDW_HCA_0x19:  activated
-> Car_Function_Adaptations_Gen2
->> menu_display_Lane_Departure_Warning: Активировать
->> menu_display_Lane_Departure_Warning_over_threshold_high: Активировать
+Car_Function_List_BAP_Gen2:
+- LDW_HCA_0x19: activated
+Car_Function_Adaptations_Gen2:
+- menu_display_Lane_Departure_Warning: Активировать
+- menu_display_Lane_Departure_Warning_over_threshold_high: Активировать
 → Применить 
 ```
 
@@ -100,8 +94,7 @@ HCA - Указание блоку рулевого управления о на�
 ``` yaml
 Блок 76 → Кодирование:
 Ассистент движения по полосе, связ. с усилителем рул. управления
-> HeadingControl Unterstutzung Auswahl: Spurhalteassistent aktiviert (Heading-Control)
-(Байт 3 – Бит 5)
+Байт 3 – Бит 5 (HeadingControl Unterstutzung Auswahl): Активировать (Spurhalteassistent aktiviert)
 → Применить 
 ```
 
@@ -121,14 +114,13 @@ Lane Assist с адаптивным ведением по полосе — ис�
 === "Кодирование в ODIS"
     ``` yaml
     Блок 08 → Кодирование:    
-    > Camera heating: installed
-    (Байт 08 – Бит 0 (Camera heating: not installed → installed)): Активировать)
+    Байт 08 – Бит 0 (Camera heating): Установлено
     → Применить 
     ```
 === "Кодирование в OBD11"
     ``` yaml
     Блок 08 - Длинное кодирование:
-    > Нагревательный элемент камеры: не установл.→ установл.
+    Нагревательный элемент камеры: не установл.→ установл.
     ```
 
 Указание радару ACC, что, установлена камера  
@@ -136,49 +128,43 @@ Lane Assist с адаптивным ведением по полосе — ис�
 === "Кодирование в ODIS"
     ``` yaml
     Блок 13 (адаптивный круиз) → Кодирование:
-    > Front_camera: installed
-    (Байт 03 – Бит 6 (>> Front_camera: not_installed → installed)): Активировать)
+    Байт 03 – Бит 6 (Front_camera): Установлена
     → Применить 
     ```
 === "Кодирование в OBD11"
     ``` yaml
     Блок 13 → Длинное кодирование:
-    > Front_camera: не установл.→ установл.
+    Front_camera: не установл.→ установл.
     ```
 
 Изменение типа ассистента дальнего света с простого на MDF - маскируемый или неослепляющий дальний. Добавляем ассистент в меню
-``` yaml
+``` yaml title="логин-пароль: 31347"
 Блок 09 (бортовая сеть) → Адаптация:
->> Aussenlicht_Blinker 
-> Warnblinken_durch_Fahrerassistenz → available
->> Fernlicht_assistent
-> Erweiterte_Fernlichtsteuerung: AFS, FLA, Fernlicht ueber AFS → AFS, FLA, Fernlicht (GLW,MDF)
-> Menuesteuerung Fernlichtassistent: not available → available
-> Fernlichtassistent Reset: Деактивировать
+Aussenlicht_Blinker:
+- Warnblinken_durch_Fahrerassistenz: available
+Fernlicht_assistent:
+- Erweiterte_Fernlichtsteuerung: AFS, FLA, Fernlicht ueber AFS → AFS, FLA, Fernlicht (GLW,MDF)
+- Menuesteuerung Fernlichtassistent: available
+- Fernlichtassistent Reset: Деактивировать
 → Применить 
 ```
-
-> логин-пароль 31347
 
 Включаем отображение Lane Assist и дорожных знаков на приборной панели
 
 === "Кодирование в ODIS"
     ``` yaml
     Блок 17 (комбинация приборов/ActiveInfoDisplay) → Кодирование:
-    > Lane_assist: yes 
-     (Байт 04 – Бит 6 (Lane_assist: no → yes)): Активировать)
-    > Lane_assist_BAP: yes (Добавить лайн ассист в меню ассистентов приборной панели)
-     (Байт 11 – Бит 1 (Lane_assist_BAP: no → yes)): Активировать)
-    > traffic_sign_display: yes.
-     (Байт 05 – Бит 2 (traffic_sign_display: no → yes)): Активировать)
+    Байт 04 – Бит 6 (Lane_assist): Активировать
+    Байт 11 – Бит 1 (Lane_assist_BAP): Активировать (Добавить лайн ассист в меню ассистентов приборной панели)
+    Байт 05 – Бит 2 (traffic_sign_display): Активировать
     → Применить 
     ```
 === "Кодирование в OBD11"
     ``` yaml
     Блок 17 → Длинное кодирование:
-    > Ассистент движения по полосе: Нет → Да
-    > Распознавание дорожных знаков: Нет → Да
-    > Ассистент движения по полосе, BAP, путь: Нет → Да
+    Ассистент движения по полосе: Нет → Да
+    Распознавание дорожных знаков: Нет → Да
+    Ассистент движения по полосе, BAP, путь: Нет → Да
     ```
 
 Активация установленных блоков. Нужно добавить A5 (передние датчики вспомогательных систем) и убрать блок 20 (зеркало с камерой FLA)
@@ -186,34 +172,30 @@ Lane Assist с адаптивным ведением по полосе — ис�
 === "Кодирование в ODIS"
     ``` yaml
     Блок 19 (гейтвэй) → Адаптация:
-    > Gateway_Component_List: Node_0x30:coded → not_coded; 
-    > Gateway_Component_List: Node_0x4F: not_coded → coded. 
+    Gateway_Component_List: Node_0x30: not_coded
+    Gateway_Component_List: Node_0x4F: coded
     → Применить 
     ```
 === "Кодирование в OBD11"
     ``` yaml
     Блок 19 → Адаптация:
-    >> Перечень элементов, которые должны быть установлены
-    > Ассистент дальнего света: Закодирован→ Не закодир.
-    > Передние датчики вспомогательных систем для водителя: Не закодир.→ Закодирован
+    Ассистент дальнего света: Не закодир.
+    Передние датчики вспомогательных систем для водителя: Закодирован
     ```
 
 HCA - Указание блоку рулевого управления о наличии Lane Assist
 
 === "Кодирование в ODIS"
-    ``` yaml
+    ``` yaml title="логин-пароль: 19249"
     Блок 44 (усилитель рулевого) → Кодирование:
-    > Heading_control_assist: Активировать   
-     (Байт 03 – Бит 0: Активировать)   
+    Байт 03 – Бит 0 (Heading_control_assist): Активировать
     → Применить 
     ```
 === "Кодирование в OBD11"
-    ``` yaml
+    ``` yaml title="логин-пароль: 19249"
     Блок 44 → Длинное кодирование:
-    > Ассистент движения по полосе: Не акт. → акт.
+    Ассистент движения по полосе: акт.
     ```
-
-> логин-пароль 19249
 
 Настройка блока фар
 
@@ -223,30 +205,28 @@ HCA - Указание блоку рулевого управления о на�
 === "Кодирование в ODIS"
     ``` yaml
     Блок 4B (многофункциональный модуль) → Кодирование:
-    > mdf_activation: Активировать
-     (Байт 10 – Бит 6 (>> mdf_activation: not_enabled → enabled)): Активировать)
-    > headlamp_coding_word: 1
+    Байт 10 – Бит 6 (mdf_activation): Активировать
+    headlamp_coding_word: 1
     → Применить 
     ```
 === "Кодирование в OBD11"
     ``` yaml
     Блок 4B → кодирование: 
-    > headlamp_coding_word: 0 → 1
-    > mdf_activation: не разблокирован → разблокирован
+    headlamp_coding_word: 0 → 1
+    mdf_activation: не разблокирован → разблокирован
     ```
 
 Указание блоку ABS об возможности экстренной остановки
 ``` yaml
 Блок 03 (ABS) → Кодирование:
-> Electromechanical parking brake: emergenay braking
-  (Байт 29 – Бит 5: Активировать)
+Байт 29 – Бит 5 (Electromechanical parking brake): активировать (emergenay braking)
 → Применить 
 ```
 
 Настройка блока 3С (Ассистент смены полосы движения)
 ``` yaml
 Блок 3С → Кодирование:
-> Lane_Departure_Warning_System:_with_Lane_Departure_Warning_System
+Lane_Departure_Warning_System:_with_Lane_Departure_Warning_System
 Ю Front_Sensors_Driver_Assistance_System:_with_Front_Sensors_Driver_Assistance_System
 → Применить 
 ```
@@ -259,38 +239,37 @@ HCA - Указание блоку рулевого управления о на�
 ``` yaml
 Блок 76 → Кодирование:
 Ассистент движения по полосе, связ. с усилителем рул. управления
-> HeadingControl Unterstutzung Auswahl: Spurhalteassistent aktiviert (Heading-Control)
-(Байт 3 – Бит 5)
+Байт 3 – Бит 5 (HeadingControl Unterstutzung Auswahl): Активировать (Spurhalteassistent aktiviert)
 → Применить 
 ```
 
 Включаем в меню новые функции
 ``` yaml
 Блок 5F (мультимедия) → Адаптация:
-> Car_Function_List_BAP_Gen2
->> LDW_HCA_0x19: Активировать
->> traffic_sign_recognition_0x21: Активировать
->> traffic_sign_recognition_0x21_msg_bus: CAN_Extended (Дополнительная шина данных)
-> Car_Function_Adaptations_Gen2
->> menu_display_Lane_Departure_Warning: Активировать
->> menu_display_Lane_Departure_Warning_over_threshol d_high: Активировать
->> menu_display_road_sign_identification: Активировать
->> menu_display_road_sign_identification_over_threshold_high: Активировать
+Car_Function_List_BAP_Gen2:
+- LDW_HCA_0x19: Активировать
+- traffic_sign_recognition_0x21: Активировать
+- traffic_sign_recognition_0x21_msg_bus: CAN_Extended (Дополнительная шина данных)
+Car_Function_Adaptations_Gen2:
+- menu_display_Lane_Departure_Warning: Активировать
+- menu_display_Lane_Departure_Warning_over_threshol d_high: Активировать
+- menu_display_road_sign_identification: Активировать
+- menu_display_road_sign_identification_over_threshold_high: Активировать
 → Применить 
 ```
 
 Даем указание блоку проекции (если есть)
 ``` yaml
 Блок 82 → Кодирование:
-> Road_sign_detection:  available
-> Lane_departure_warning: available
+Road_sign_detection: available
+Lane_departure_warning: available
 → Применить 
 ```
 
 Конфигурация камеры ассистентов. 
 
 !!! note "Готовое кодирование"
-    ```
+    ```yaml
     000307060007040100222346C154890098000E20004000
     ```
     Данную кодировку нужно очень внимательно проверить относительно того, какие опции имеются в машине.  
@@ -299,51 +278,51 @@ HCA - Указание блоку рулевого управления о на�
 
 ``` yaml
 Блок A5 (камера ассистентов) → Кодирование:
->> Brand: VW
->> Class: A
->> Generation: Generation_7
->> Bodystyle: Suv
->> Expansion: Not_coded
->> Production_region: EU
->> Country_variant: Europe
->> Chassis: Steel_springs
->> Steering_bar: Not_coded
->> Windshield: Heat_protecting_glass
->> Traffic_side: Right_traffic
->> PSD_Version: PSD_15 # (1)
->> Navigation: MIB_High # (2)
->> AAG: Coded # (3)
->> SWA (Side assist): Coded # (4)
->> ACC: Coded
->> Pedestrian_break: Not_coded
->> Blind_spot_detection: Not_coded
->> Rain_light_sensor: Coded
->> Main_unit: enabled
->> PLA: Coded # (5)
->> ESP: Coded
->> Personalize_VZE:	Not_Coded
->> Lan_assist_system_mode: Selection_over_menu
->> Personalized_key: Version_1.x
->> Networking_variant: MQB
->> Radar_interface: Coded
->> Perso_HC: Last_setting # (6)
->> Point_of_intervention: early_setting_over_menu
->> LaneAssist_AGW_output: disabled
->> Lane_assist_off_text: disabled
->> Emergency_Assist: EA_Variant_2
->> Traffic Sign Recognition (TSR/VZE): coded
->> HC_mob_line: Not_coded
->> HC: Coded
->> FCWP_default_on_prewarning: last_mode
->> FCWP_delivery_status_prewarning: off
->> FCWP_extended_prewarning_settings: Not_coded
->> FCWP_warning_indicator: Not_coded
->> FCWP: Not_coded
->> FLA_Additional_High_Beam: no_Additional_High_Beam
->> FLA_Headinglight_type: LED
->> Mains_frequency: 50_Hz
->> AFS_coding_Light_Assist: Dynamic_Light_Assist (or Matrixbeam for Tiguan 2021)
->> HC_LONGPRESS: Not_Coded (only for Audi)
+Brand: VW
+Class: A
+Generation: Generation_7
+Bodystyle: Suv
+Expansion: Not_coded
+Production_region: EU
+Country_variant: Europe
+Chassis: Steel_springs
+Steering_bar: Not_coded
+Windshield: Heat_protecting_glass
+Traffic_side: Right_traffic
+PSD_Version: PSD_15 # (1)!
+Navigation: MIB_High # (2)!
+AAG: Coded # (3)!
+SWA (Side assist): Coded # (4)!
+ACC: Coded
+Pedestrian_break: Not_coded
+Blind_spot_detection: Not_coded
+Rain_light_sensor: Coded
+Main_unit: enabled
+PLA: Coded # (5)!
+ESP: Coded
+Personalize_VZE:	Not_Coded
+Lan_assist_system_mode: Selection_over_menu
+Personalized_key: Version_1.x
+Networking_variant: MQB
+Radar_interface: Coded
+Perso_HC: Last_setting # (6)!
+Point_of_intervention: early_setting_over_menu
+LaneAssist_AGW_output: disabled
+Lane_assist_off_text: disabled
+Emergency_Assist: EA_Variant_2
+Traffic Sign Recognition (TSR/VZE): coded
+HC_mob_line: Not_coded
+HC: Coded
+FCWP_default_on_prewarning: last_mode
+FCWP_delivery_status_prewarning: off
+FCWP_extended_prewarning_settings: Not_coded
+FCWP_warning_indicator: Not_coded
+FCWP: Not_coded
+FLA_Additional_High_Beam: no_Additional_High_Beam
+FLA_Headinglight_type: LED
+Mains_frequency: 50_Hz
+AFS_coding_Light_Assist: Dynamic_Light_Assist (or Matrixbeam for Tiguan 2021)
+HC_LONGPRESS: Not_Coded (only for Audi)
 → Применить 
 ```
 
@@ -354,40 +333,55 @@ HCA - Указание блоку рулевого управления о на�
 5. Если установлен Park Assist
 6. Запоминание выбранного режима при выключении зажигания
 
-``` yaml
+!!! warning ""
+    Данные адаптации отключают отображение предупреждения о неработающих знаках
+
+``` yaml title="логин-пароль: 20103"
 Блок A5 (камера ассистентов) → Адаптация:
-> Road_sign_recognition_fusion_mode (Распознавание дорожных знаков: режим Fusion) → Road_Sign_Recognition
-> Lane_assist_warning_intensity (Интенсивность предупреждений ассистента движения по полосе) → Selection_over_menu 
-> Personalisation_point_of_intervention (Персонализация момента вмешательства) → Last Setting (последняя настройка)
+Road_sign_recognition_fusion_mode (Распознавание дорожных знаков: режим Fusion): Road_Sign_Fusion
+Lane_assist_warning_intensity (Интенсивность предупреждений ассистента движения по полосе): Selection_over_menu 
+Personalisation_point_of_intervention (Персонализация момента вмешательства): Last Setting (последняя настройка)
+Adaptation_tsr:
+- Par_relevance_mode: enabled  
+- Par_country_mode: manuel  
+- Par_country_code_RSR: 172 # (1)!
+- Par_country_code_VZF: 172  
 → Применить 
 ```
-> логин-пароль 20103
+
+1. Для стран СНГ можно использовать значение от Польши. Список возможных значений:  
+    57 — Чехия  
+    68 — Эстония  
+    73 — Финляндия  
+    74 — Франция  
+    82 — Германия  
+    118 — Латвия  
+    172 — Польша  
+    197 — Испания  
 
 !!! note "BAP Personalization"
     BAP Personalization - персонализация программирования настроек под каждый ключ в машине. Для автомобилей Tiguan данная опция не задействована — значение ни на что не влияет. 
 
-### Чтение дорожных знаков (Fusion Mode)
+### Разделение дорожных знаков
 Существует возможность добавить на головное устройство отображение дорожных знаков из базы навигации (Sat Nav Speed Limits),  
 а на AID (Virtual Cockpit) — отображение знаков с камеры ассистентов.  
- 
-Если вдруг камера в засаде, то можно на всякий случай скинуть скорость до того значения, которое имеет наименьшее значение.   
 
 ![Screenshot](../images/MQB/VZA.png)
 
 ``` yaml
 Блок 5F (мультимедия) → Адаптация:
-> Car_Function_List_BAP_Gen2
->> traffic_sign_recognition_0x21: Деактивировать
+Car_Function_List_BAP_Gen2:
+- traffic_sign_recognition_0x21: Деактивировать
 → Применить 
-> Car_Function_Adaptations_Gen2
->> menu_display_road_sign_identification: Деактивировать
->> menu_display_road_sign_identification_over_threshold_high: Деактивировать
+Car_Function_Adaptations_Gen2:
+- menu_display_road_sign_identification: Деактивировать
+- menu_display_road_sign_identification_over_threshold_high: Деактивировать
 → Применить 
 ```
 
 ``` yaml
 Блок 5F (мультимедия) → Кодирование:
->> byte_24_vza: Активировать
+byte_24_vza: Активировать
 ```
 
 ### Подсветка перекрестков при приближении к ним
