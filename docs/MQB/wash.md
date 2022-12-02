@@ -35,7 +35,7 @@
 
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
- Spiegelverstellung (Access control для OBD11)
+ Spiegelverstellung (Access control для OBD11):
 - Spiegelabsenkung bei Rueckwaertsfahrt: Активировать
 - Menuesteuerung Spigelabsenkung: Активировать
 → Применить

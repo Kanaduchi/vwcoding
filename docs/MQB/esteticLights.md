@@ -170,7 +170,7 @@ Ambientelicht Zuordnung der Farbe zum Fahrprofi:
 Скорость переключения профилей
 ``` yaml title="логин-пароль: 31347"
 Блок 19 → Адаптация:
-Driving Profile Selection Parameter :
+Driving Profile Selection Parameter:
 - Driving Profile Selection Toogle Time Adaptation — вместо 2000 мс ставим 0
 → Применить
 ```
@@ -182,7 +182,7 @@ Driving Profile Selection Parameter :
 
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Освещение салона 2го поколения
+Освещение салона 2го поколения:
 - Innenlicht bei offenem Hechdeckei einschalten: Деактивировать
 → Применить
 ```

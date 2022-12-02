@@ -310,7 +310,7 @@ Interior_light_parameter:
 Отображение солнышек и графики на экране ГУ
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Освещение салона, параметры / Interior_light_parameter
+Освещение салона, параметры / Interior_light_parameter:
 - p_ambienteumfang_mehrfarbig_HMI: 100
 - p_ambienteumfang_mehrfarbig_HMI_2: 100
 - p_ambienteumfang_mehrfarbig_HMI_3: 0
@@ -321,7 +321,7 @@ Interior_light_parameter:
 Отображение солнышек и монохромной графики на экране ГУ
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Освещение салона, параметры / Interior_light_parameter
+Освещение салона, параметры / Interior_light_parameter:
 - p_ambientelicht_verbauinformation_HMI: 1
 - p_ambientelicht_verbauinformation_HMI_2: 10001
 - p_ambientelicht_verbauinformation_HMI_3: 10
@@ -665,7 +665,7 @@ FPA_Funktion_AMB: Активировать
 Увеличиваем скорость переключения профилей
 ``` yaml
 Блок 19 → Адаптация:
-Driving Profile Selection Parameter :
+Driving Profile Selection Parameter:
 - Driving Profile Selection Toogle Time Adaptation: вместо 2000 мс ставим 0
 → Применить
 ```

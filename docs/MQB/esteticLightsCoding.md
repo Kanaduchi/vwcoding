@@ -98,7 +98,7 @@ Fussraumbeleuchtung - подсветка ног
 
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Освещение салона, параметры / Interior_light_parameter
+Освещение салона, параметры / Interior_light_parameter:
 - p_ambientelicht_verbauinformation_HMI3: 110
 → Применить
 ```
@@ -108,7 +108,7 @@ Fussraumbeleuchtung - подсветка ног
 
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Освещение салона, параметры / Interior_light_parameter
+Освещение салона, параметры / Interior_light_parameter:
 - p_ambientelicht_verbauinformation_HMI2: 100
 → Применить
 ```
@@ -152,7 +152,7 @@ Dimmwert AB 0 — 99
 
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Освещение салона, параметры / Interior_light_parameter
+Освещение салона, параметры / Interior_light_parameter:
 p_adaption_kundenwunsch_
 p_helligkeit_entriegelt_
 p_helligkeit_max_
@@ -202,7 +202,7 @@ p_helligkeit_Fzg_geschlossen_schluessel_ab_
 
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Освещение салона, параметры / Interior_light_parameter
+Освещение салона, параметры / Interior_light_parameter:
 - p_t verzoegerung einstieg innenlicht — задержка включения внутреннего освещения при входе, зажигание выключено
 - p_t verzoegerung ausstieg innenlicht — задержка включения внутреннего освещения при выходе, зажигание выключено
 - p_t verzoegerung oeffnen innenlicht — задержка включения внутреннего освещения при открытии двери, зажигание включено
@@ -220,7 +220,7 @@ p_helligkeit_Fzg_geschlossen_schluessel_ab_
 
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Освещение салона, параметры / Interior_light_parameter
+Освещение салона, параметры / Interior_light_parameter:
 - p_t_verzoegerung_einstieg_fussraum: 0,0 s
 - p_t_verzoegerung_einstieg_tueren: 0.8 s
 - p_t_verzoegerung_einstieg_innenlicht: 1,6 s
@@ -232,7 +232,7 @@ p_helligkeit_Fzg_geschlossen_schluessel_ab_
 
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Освещение салона, параметры / Interior_light_parameter
+Освещение салона, параметры / Interior_light_parameter:
 - p_t_verzoegerung_ausstieg_fussraum: 1,6 s
 - p_t_verzoegerung_ausstieg_tueren: 0.8 s
 - p_t_verzoegerung_ausstieg_innenlicht: 0,0 s

@@ -220,7 +220,7 @@ Car_Function_List_CAN_Gen2:
 
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Персонализация / Personalisierung
+Персонализация / Personalisierung:
 - Personalisierung_Profilfunkion → profiles_active
 - Personalisierung_aktiv → Active
 - Aktivierungsoption_im_HMI-Menue_sichtbar → Active

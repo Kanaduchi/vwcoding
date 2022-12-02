@@ -74,7 +74,7 @@ Byte9_VIP:
 
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Охранная сигнализация, охрана салона/ Interior_Monitoring_Sensitivity
+Охранная сигнализация, охрана салона/ Interior_Monitoring_Sensitivity:
 - Чувствительность / sensitivity: 70% (по умолчанию 100%)
 → Применить
 ```
