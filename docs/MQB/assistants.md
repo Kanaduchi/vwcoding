@@ -336,7 +336,7 @@ HC_LONGPRESS: Not_Coded (only for Audi)
 !!! warning ""
     Данные адаптации отключают отображение предупреждения о неработающих знаках
 
-``` yaml title="логин-пароль: 20103"
+``` yaml title="в ODIS в блок А5 нужно войти в режиме разработчика, логин 89687"
 Блок A5 (камера ассистентов) → Адаптация:
 Road_sign_recognition_fusion_mode (Распознавание дорожных знаков: режим Fusion): Road_Sign_Fusion
 Lane_assist_warning_intensity (Интенсивность предупреждений ассистента движения по полосе): Selection_over_menu 
