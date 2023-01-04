@@ -14,7 +14,7 @@ repo_url: https://github.com/Kanaduchi/vwcoding
 edit_uri: https://github.com/Kanaduchi/vwcoding/edit/master/docs/
 
 # Copyright
-copyright: Copyright &copy; 2022 - vwcoding.ru (info@vwcoding.ru)
+copyright: Copyright &copy; 2023 - vwcoding.ru (info@vwcoding.ru)
 
 # Main directory
 docs_dir: docs/
@@ -47,10 +47,14 @@ theme:
     code: Roboto Mono
   logo: assets/images/logo.png
   features:
+    - content.action.edit
+    - content.action.view
     - content.code.annotate
+    - content.code.copy
     # - content.tabs.link
     # - header.autohide
     - navigation.expand
+    - navigation.footer
     # - navigation.indexes
     # - navigation.instant
     # - navigation.sections
