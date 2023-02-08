@@ -37,6 +37,24 @@ Sign Assist — Ассистент распознавания дорожных �
 
 ## Активации ассистентов
 
+### Активация Light Assist — ассистент дальнего света
+``` yaml title="логин-пароль: 31347"
+Блок 09 (бортовая сеть) → Адаптация:
+Fernlicht_assistent:
+- Erweiterte_Fernlichtsteuerung: "AFS: FLA: BCM-Fernlicht" или "AFS: FLA: Fernlicht ueber AFS"
+- Menuesteuerung Fernlichtassistent Werkseinstellung: available
+- Menuesteuerung Fernlichtassistent: available
+- Fernlichtassistent Reset: Деактивировать
+→ Применить 
+```
+``` yaml
+Блок A5 (камера ассистентов) → Кодирование:  
+Байт 15 - Бит 5-7: (20) AFS_coding_Light_Assist,High_Beam_Assist
+→ Применить 
+```
+
+Установите STG A5 > Кодирование > Байт 15 > Бит 5-7 на «20 AFS_coding_Light_Assist,High_Beam_Assist».
+
 ### Активация помощника удержания в полосе (Lane Assist) 
 
 Включаем отображение Lane Assist на приборной панели

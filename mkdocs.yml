@@ -220,7 +220,7 @@ nav:
       - Ассистенты водителя:
           - Активация ACC и pACC: MQB/pACC.md
           - Кодирование ACC: MQB/ACC_coding.md
-          - Кодирование 3Q* камеры: MQB/assistants.md
+          - Кодирование 3Q* камеры: MQB/3Q0_assistants.md
           - Кодирование 2Q* камеры: MQB/2Q0_assistants.md
           - Прошивки камеры ассистентов: MQB/camAssistFirmwares.md
       - Системы активной безопасности: MQB/active_systems.md
@@ -251,7 +251,7 @@ nav:
       - Eeprom память: MQB/eeprom.md
   - Платформа MLB/MLB-Evo:
       - Информация: MLB-Evo/main.md
-      - Ассистенты водителя: MLB-Evo/assistants.md
+      - Ассистенты водителя: MLB-Evo/3Q0_assistants.md
       - Движение и управление: MLB-Evo/drive.md
       - Безопасность. Отпирание и запирание: MLB-Evo/security.md
       - Комфорт: MLB-Evo/comfort.md
