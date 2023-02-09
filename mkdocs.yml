@@ -251,7 +251,7 @@ nav:
       - Eeprom память: MQB/eeprom.md
   - Платформа MLB/MLB-Evo:
       - Информация: MLB-Evo/main.md
-      - Ассистенты водителя: MLB-Evo/3Q0_assistants.md
+      - Ассистенты водителя: MLB-Evo/assistants.md
       - Движение и управление: MLB-Evo/drive.md
       - Безопасность. Отпирание и запирание: MLB-Evo/security.md
       - Комфорт: MLB-Evo/comfort.md

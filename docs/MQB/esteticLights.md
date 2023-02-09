@@ -183,6 +183,6 @@ Driving Profile Selection Parameter:
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
 Освещение салона 2го поколения:
-- Innenlicht bei offenem Hechdeckei einschalten: Деактивировать
+- Innenlicht bei offenem Heckdeckel einschalten: Деактивировать
 → Применить
 ```
