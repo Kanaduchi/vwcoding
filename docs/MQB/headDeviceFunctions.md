@@ -207,6 +207,8 @@ FINISHED — You can now remove SD Card
 
 ### Активация SWaP кодов 
 
+Новый генератор SWAP кодов: https://mst2fecgen.mibsolution.one/
+
 SWaP файлы. Данные коды содержат в себе все существующие SWaP коды для ГУ  
 
 | Тип     | Ссылка                                   |
