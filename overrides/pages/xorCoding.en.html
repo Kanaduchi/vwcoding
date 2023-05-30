@@ -1,0 +1,32 @@
+<body onload="init()">
+   <form name="coding" id="coding">
+      <table class="bordered">
+         <tr>
+            <th colspan="2">XOR calculator</th>
+         </tr>
+         <tr>
+            <td colspan="1" nowrap>Original code:&nbsp;</td>
+            <td colspan="1" nowrap>
+               <input type="text" id="origCode" name="origCode" value=""
+                  style="height: 25px; width: 440px; color: #ffff00; font-weight: bold; background-color:#4051b5;">&nbsp;&nbsp;
+               <div id="loading" style="display: none;"><img style="vertical-align: bottom;" width="24" src="../../assets/images/loading.gif">&nbsp;&nbsp;</div>
+               <button class="pure-material-button-contained" type="button" name="enterOrig" onClick="calculateXor()">
+               Generate
+               </button>
+               <button class="pure-material-button-contained" type="button" name="btnClearAll" id="idClearAll"
+                  onClick="clearAll();">Clear
+               </button>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1" nowrap>Confirmation key:&nbsp;</td>
+            <td colspan="1" nowrap>
+               <input type="text" id="calcCode" name="calcCode" value=""
+                  style="height: 25px; width: 440px; color: #FF3333; font-weight: bold; background-color:#4051b5;"
+                  readonly>
+            </td>
+         </tr>
+      </table>
+   </form>
+   <script src="../../assets/js/xor.js"></script>
+</body>

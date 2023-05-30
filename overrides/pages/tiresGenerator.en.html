@@ -1,0 +1,80 @@
+<body onload="createTireSets()">
+   <form>
+      <table class="bordered">
+         <tr>
+            <th>Settings</th>
+            <th>
+               <button class="pure-material-button-contained" type="button" onclick="loadConfig();">Load settings</button>
+               <button class="pure-material-button-contained" type="button" onclick="saveConfig();">Save settings</button>
+            </th>
+         </tr>
+         <tr>
+            <td>Dataset type</td>
+            <td>
+               <select id="docType" size="1">
+                  <option value="vcp">VCP</option>
+                  <option value="odis">ODIS</option>
+                  <option value="binary">Binary</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>RDKS ECU</td>
+            <td>
+               <select id="ecuModel" size="1">
+                  <option ecuOffset="0x7FC000" ecuVersion="2B" ecuType="74">3AA907273D</option>
+                  <option ecuOffset="0x7E0800" ecuVersion="24" ecuType="A2">3AA907273F</option>
+                  <option ecuOffset="0x7E0800" ecuVersion="2B" ecuType="74">3AA907273H</option>
+                  <option ecuOffset="0x7E0800" ecuVersion="25" ecuType="22">5Q0907273B</option>
+                  <option ecuOffset="0x7E0800" ecuVersion="25" ecuType="22">5Q0907273D</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Number of tire sets</td>
+            <td>
+               <select id="numTireSets" size="1" onchange="updateTireSets()">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Enable individual tire set</td>
+            <td>
+               <input type="checkbox" id="enableIndividual" onchange="updateTireSets()">
+            </td>
+         </tr>
+         <tr>
+            <td>Enable comfort pressure</td>
+            <td>
+               <input type="checkbox" id="enableComfort" onchange="updateTireSets()">
+            </td>
+         </tr>
+      </table>
+      <br>
+      <div id="tireSetList"></div>
+      <div id="buttons">
+         <button class="pure-material-button-contained" type="button" id="generate" onclick="doGenerate();">Generate dataset</button>
+         <button class="pure-material-button-contained" type="button" id="generateDl" onclick="doGenerateDl();">Generate & download dataset</button>
+         <br><br>
+      </div>
+      <table class="bordered">
+         <tr>
+            <th>Dataset</th>
+         </tr>
+         <tr>
+            <td><textarea id="dataset" rows="25" style="width: 100%;font-family: Courier New, Courier, monospace;"></textarea></td>
+         </tr>
+      </table>
+   </form>
+   <script src="../../assets/js/tiresGenerator.js"></script>
+</body>
