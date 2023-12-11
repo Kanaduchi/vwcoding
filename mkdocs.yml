@@ -225,6 +225,7 @@ nav:
           - Генератор параметрии шин: utils/tiresCoding.md
           - Список программ и адаптеров: utils/programs.md
           - Инструкция ODIS E: utils/odis-e.md
+          - FEC Generator: utils/fec.md
       - История изменений: history.md
       - Обратная связь: questions.md
       - Поддержать проект: https://yoomoney.ru/to/4100110582992748/100
