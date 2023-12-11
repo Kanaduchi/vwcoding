@@ -1,14 +1,9 @@
 ---
-title: Long-coding calculator
 template: ./main.en.html
 hide:
   - toc
 ---
-  
-<style>
-  .md-typeset h1 {
-    display: none;
-</style>
+# Long-coding calculator
 
 Numeration of Bytes and bits are always starting with 0. Bits can be manually set to "1" to enable a specific bit in binary code.  
 

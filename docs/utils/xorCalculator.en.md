@@ -1,15 +1,8 @@
 ---
 template: ./main.en.html
-title: Coding of VW cars
 hide:
   - toc
 ---
-  
-<style>
-  .md-typeset h1 {
-    display: none;
-</style>
-
 # XOR Calculator
 
 After changing firmware of Main Unit you can get `1555 / B201A Checking Software Version Management` fault code in the 5F control module.

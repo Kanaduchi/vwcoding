@@ -1,9 +1,8 @@
 ---
-title: Dataset editor
+template: ./main.en.html
 hide:
   - toc
 ---
-
 # Dataset editor
 
 This editor is used for working with dataset files

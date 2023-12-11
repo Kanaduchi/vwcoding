@@ -24,6 +24,11 @@ theme:
   custom_dir: overrides
   favicon: assets/images/icon.png
   palette:
+    # Automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Светлая сторона
     # Light mode
     - media: "(prefers-color-scheme: light)"
       scheme: slate
@@ -51,6 +56,7 @@ theme:
     - content.action.view
     - content.code.annotate
     - content.code.copy
+    - content.tooltips
     # - content.tabs.link
     # - header.autohide
     - navigation.expand
@@ -122,6 +128,7 @@ plugins:
             Редактор параметрий: Dataset editor
             Инструменты: Coding instruments
             Инструменты и адаптеры: Instruments and adapters
+            FEC генератор: FEC generator
             Генератор параметрии шин: Tyres parameters generator
             Список программ и адаптеров: Software and adapters
             Инструкция ODIS E: ODIS E instruction
@@ -168,6 +175,9 @@ plugins:
   - print-site:
       add_to_navigation: false
       enumerate_headings: true
+  - git-revision-date-localized:
+      type: date
+      enable_creation_date: true
 
 markdown_extensions:
   - admonition
@@ -207,6 +217,9 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
@@ -221,11 +234,11 @@ nav:
       - Инструменты и адаптеры:
           - Редактор параметрий: utils/datasetEditor.md
           - Калькулятор длинного кодирования: utils/longCoding.md
+          - FEC генератор: utils/fec.md
           - XOR калькулятор: utils/xorCalculator.md
           - Генератор параметрии шин: utils/tiresCoding.md
           - Список программ и адаптеров: utils/programs.md
           - Инструкция ODIS E: utils/odis-e.md
-          - FEC Generator: utils/fec.md
       - История изменений: history.md
       - Обратная связь: questions.md
       - Поддержать проект: https://yoomoney.ru/to/4100110582992748/100
