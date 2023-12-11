@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><PresetAdaption id="09 - Эстетическая подсветка активация" sgnr="9" uds="true">
+<Channel id="IDE09732" nameArea="KDREFTABLE" nameKey="IDE09732">
+<Param name="[LO]_Ambientemenue mit globalem aus" wert="акт."/>
+<Param name="[LO]_Ambientemenue mit alle Zonen" wert="акт."/>
+<Param name="[LO]_Ambient_Farbliste_HMI" wert="акт."/>
+<Param name="[LO]_Ambience_light_colorlist_default" wert="1"/>
+</Channel>
+<Channel id="IDE09731" nameArea="KDREFTABLE" nameKey="IDE09731">
+<Param name="[LO]_Cockpitbeleuchtung mehrfarbig" wert="акт."/>
+</Channel>
+</PresetAdaption>

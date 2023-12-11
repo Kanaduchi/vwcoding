@@ -1,0 +1,79 @@
+<style>
+   .bitTable {
+   padding: 0px;
+   width: auto;
+   }
+   .bytes {
+   padding: 0px !important;
+   text-align: center !important;
+   }
+   .fillBytes {
+   background: #4051b5;
+   padding: 0px !important;
+   text-align: center !important;
+   }
+   .inputBytes {
+   background: #4051b5;
+   color: #ffff00;
+   text-align: center;
+   }
+   .byteSelected {
+   color:#ffff00;
+   background-color:#4051b5;
+   text-align: center;
+   width: 100%;
+   }
+   .byteNotSelected {
+   color: #00ff00;
+   background-color:#4051b5;
+   text-align: center;
+   width: 100%;
+   }
+</style>
+<body onload="init()">
+   <form name="coding" id="coding">
+      <table class="bordered">
+         <tr>
+            <th colspan="2"></th>
+         </tr>
+         <tr>
+            <td colspan="1" nowrap>Original code:&nbsp;</td>
+            <td colspan="1" nowrap>
+               <input type="text" id="origCode" name="origCode" value=""
+                  style="height: 25px; width: 440px; color: #ffff00; font-weight: bold; background-color:#4051b5;">&nbsp;&nbsp;
+               <div id="loading" style="display: none;"><img style="vertical-align: bottom;" width="24" src="../../assets/images/loading.gif">&nbsp;&nbsp;</div>
+               <button class="pure-material-button-contained" type="button" name="enterOrig" onClick="checkOrig()">
+               Load
+               </button>
+               <button class="pure-material-button-contained" type="button" name="btnClearAll" id="idClearAll"
+                  onClick="clearAll();">Clear
+               </button>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1" nowrap>Modified code:&nbsp;</td>
+            <td colspan="1" nowrap>
+               <input type="text" id="calcCode" name="calcCode" value=""
+                  style="height: 25px; width: 440px; color: #FF3333; font-weight: bold; background-color:#4051b5;"
+                  readonly>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1" nowrap>Bit labels:&nbsp;</td>
+             <td colspan="1" nowrap>
+                <select name="langBits" id="langBits" onchange="clearLabels()">
+                   <option value="none">Block is not set</option>
+                   <option value="A5_3Q0">Block A5 3Q0*</option>
+                   <option value="A5_2Q0">Block A5 2Q0*</option>
+                   <option value="4B_3Q0-907-338_EN">4B 3Q0907338</option>
+                   <option value="56_RCD_330-410">56 RCD Noname 330-360-PRO-410-440</option>
+                </select>
+            </td>
+         </tr>
+      </table>
+      <div style ="margin-top: 20px;" id="bytesDescription"></div>
+      <div style ="margin-top: 20px; display:none;" id="bitDescription"></div>
+      <script src="../../assets/js/longCoding.js"></script>
+      <script src="../../assets/js/dataset.js"></script>
+   </form>
+</body>

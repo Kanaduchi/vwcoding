@@ -1,0 +1,106 @@
+<style>
+   .sub {
+      background-color: #3F51B5;
+      color: #FFFFFF;
+   }
+</style>
+<section class="tx-container">
+   <form>
+      <table class="bordered">
+         <tr>
+            <th>Загрузите существующий файл с параметрией</th>
+         </tr>
+         <tr>
+            <td>
+               <input id="uploadBinaryButton" accept=".xml,.bin" type="file"/>
+               <button class="pure-material-button-contained" type="button" name="btnClearAll" id="uploadFile"
+                  onClick="handleUpload();">Загрузить файл
+               </button>
+               <button class="pure-material-button-contained" type="button" name="btnClearAll" id="idClearAll"
+                  onClick="doClearFields();">Очистить поля
+               </button>
+            </td>
+         </tr>
+      </table>
+      <br>
+      <table class="bordered" id="dataParams">
+         <tr>
+            <th colspan="9">Параметры</th>
+         </tr>
+         <tr>
+            <td class="sub" width="40"><b>#</b></td>
+            <td class="sub" width="200"><b>Diagnostic address</b></td>
+            <td class="sub"><b>Start address</b></td>
+            <td class="sub"><b>Dataset name</b></td>
+            <td class="sub"><b>Dataset version</b></td>
+            <td class="sub"><b>Login</b></td>
+            <td class="sub"><b>Dataset type</b></td>
+            <td class="sub" width="300"><b>File name</b></td>
+            <td class="sub" width="60"></td>
+         </tr>
+         <tr>
+            <td colspan="9">
+               <button class="pure-material-button-contained" type="button" id="newParam" onclick="addNewParam()">Добавить строку с PARAMETER_DATA</button>
+            </td>
+         </tr>
+      </table>
+      <br>
+      <table id="compressedData" class="bordered" style="display: none">
+         <tr>
+            <th colspan="4">Сжатые данные</th>
+         </tr>
+         <tr>
+            <td class="sub"><b>Закодированные данные</b></td>
+            <td class="sub"><b>Тип содержимого</b></td>
+            <td class="sub"><b>Размер в декодированном виде</b></td>
+            <td class="sub"><b>Размер в сжатом виде</b></td>
+         </tr>
+         <tr>
+            <td><input type="checkbox" id="isCompressed" disabled></td>
+            <td><input id="content" value="0"></td>
+            <td><input id="uncompressedBytes" value="0"></td>
+            <td><input id="compressedBytes" value="0"></td>
+         </tr>
+         <tr>
+            <td colspan="4"><textarea id="data" rows="25" style="width: 100%;font-family: Courier New, Courier, monospace;"></textarea></td>
+         </tr>
+         <tr>
+             <td colspan="4">
+                 <button class="pure-material-button-contained" type="button" id="decode" onclick="doParseUncompressed()">Декодировать данные</button>
+                 <button class="pure-material-button-contained" type="button" id="original" onclick="doOriginal()">Оригинальное значение</button>
+             </td>
+         </tr>
+      </table>
+            <br>
+      <table id="parsedCompressedParams" class="bordered" style="display: none">
+         <tr>
+            <th colspan="5">Параметры</th>
+         </tr>
+         <tr>
+            <td class="sub" width="40"><b>#</b></td>
+            <td class="sub"><b>Start address</b></td>
+            <td class="sub"><b>Dataset name</b></td>
+            <td class="sub"><b>Dataset version</b></td>
+            <td class="sub" width="300"><b>File name</b></td>
+         </tr>
+         <tr>
+            <td colspan="5"><button class="pure-material-button-contained" type="button" id="simplify" onclick="doSimplify()">Преобразовать в PARAMETER_DATA (экспериментальная функция)</button></td>
+         </tr>
+      </table>
+      <div id="buttons" style="hidden: true">
+         <br>
+         <button class="pure-material-button-contained" type="button" id="generate" onclick="doGenerate()">Создать XML dataset</button>
+         <br><br>
+      </div>
+      <table id="generatedData" class="bordered" style="display: none">
+         <tr>
+            <th>Готовый XML dataset</th>
+         </tr>
+         <tr>
+            <td><textarea id="dataset" rows="15" style="width: 100%;font-family: Courier New, Courier, monospace;"></textarea></td>
+         </tr>
+      </table>
+      <script src="../../assets/js/crc.min.js"></script>
+      <script src="../../assets/js/dataset.js"></script>
+   </form>
+</section>

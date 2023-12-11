@@ -1,0 +1,323 @@
+# Project information
+site_name: Кодирование автомобилей VAG
+site_description: Основные кодировки и адаптации платформ концерна VAG. Прошивки и параметрии. SWaP коды
+site_author: VWCODING
+site_url: http://www.vwcoding.ru
+
+# Hot news
+hot_news_title: Все ваши предложения и новые идеи можно присылать на info@vwcoding.ru
+hot_news_title_en: Fill free to send all your ideas and updates to info@vwcoding.ru
+
+# Repository
+repo_name: Kanaduchi/vwcoding
+repo_url: https://github.com/Kanaduchi/vwcoding
+edit_uri: https://github.com/Kanaduchi/vwcoding/edit/master/docs/
+
+# Copyright
+copyright: Copyright &copy; 2023 - vwcoding.ru (info@vwcoding.ru)
+
+# Main directory
+docs_dir: docs/
+
+theme:
+  name: material
+  custom_dir: overrides
+  favicon: assets/images/icon.png
+  palette:
+    # Automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Светлая сторона
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Тёмная сторона
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Светлая сторона
+  highlightjs: false
+  language: ru
+  font:
+    text: Roboto
+    code: Roboto Mono
+  logo: assets/images/logo.png
+  features:
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - content.tooltips
+    # - content.tabs.link
+    # - header.autohide
+    - navigation.expand
+    - navigation.footer
+    # - navigation.prune
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - announce.dismiss
+    # - toc.integrate
+    - toc.follow
+
+extra_css:
+  - assets/custom.css
+
+extra:
+  status:
+    updated: New codings were added to this page
+  comments:
+    enable: true
+    # Can be disqus or giscus
+    type: disqus
+    # Url for disqus
+    disqus_url: https-mqb-readthedocs-io
+    repo: Kanaduchi/vwcoding
+    repo_id: MDEwOlJlcG9zaXRvcnkyMTQ4NTE3Njk=
+    category: General
+    category_id: MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyNjYxNjIy
+  alternate:
+    - name: Русский
+      link: ./
+      lang: ru
+    - name: English
+      link: ./en/
+      lang: en
+
+plugins:
+  - i18n:
+      docs_structure: suffix
+      fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: ru
+          name: Русский
+          default: true
+        - locale: en
+          default: false
+          name: English
+          build: true
+          site_name: "VAG platforms coding"
+          nav_translations:
+            Общая информация: Main information
+            Платформа MQB: MQB platform
+            Информация: Information
+            Кодирование автомобилей VAG: Coding of VW cars
+            Платформа MLB/MLB-Evo: MLB/MLB-Evo platform
+            Платформа PQ26: PQ26 platform
+            Платформа PQ35: PQ35 platform
+            Калькулятор длинного кодирования: Long-coding calculator
+            XOR калькулятор: XOR calculator
+            Редактор параметрий: Dataset editor
+            Инструменты: Coding instruments
+            Инструменты и адаптеры: Instruments and adapters
+            FEC генератор: FEC generator
+            Генератор параметрии шин: Tyres parameters generator
+            Список программ и адаптеров: Software and adapters
+            Инструкция ODIS E: ODIS E instruction
+            Обратная связь: Feedback
+            История изменений: History of changes
+            Поддержать проект: Support of project
+
+            Ассистенты водителя: Drive assistance
+            Активация ACC и pACC: ACC & PACC activation
+            Кодирование ACC: ACC coding
+            Кодирование 3Q* камеры: Coding of 3Q* cameras
+            Кодирование 2Q* камеры: Coding of 2Q* cameras
+            Прошивки камеры ассистентов: Assistance camera firmwares
+            Системы активной безопасности: Safety features
+            Настройка профилей движения (FPA): Configuration of FPA profiles
+            Движение и управление: Driving
+            Парковка и маневрирование: Parking
+            Эстетическая подсветка: Estetic lights
+            Кодирование подсветки: Coding of estetic lights
+            Кодирование зон освещения: Zones of estetic lights
+            Установка RGB подсветки: RGB estetic lihts
+            Зеркала и стеклоочистители: Wash and mirrors
+            Отпирание и запирание: Open and Closing
+            Освещение: Lights
+            Кодирование фонарей: General codings
+            Передние фонари: Front lights
+            Задние фонари: Rear lights
+            Звук: Sound
+            Климат: Climate
+            Приборная панель: Control panel
+            Головное устройство: Main unit
+            Кодирование: General coding
+            Активация TMC: Activation of TMC
+            SWaP коды для CM и DM: SWap for DM and CM units
+            Снятие защиты и SWaP для Pro: Unlocking and SWaP of Pro
+            Шины: Tires
+            Генератор параметрии: Parameter generation
+            Дооснащение: Addons
+            Eeprom память: Eeprom memory
+  - search:
+      lang:
+        - en
+        - ru
+  - print-site:
+      add_to_navigation: false
+      enumerate_headings: true
+  - git-revision-date-localized:
+      type: date
+      enable_creation_date: true
+
+markdown_extensions:
+  - admonition
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+nav:
+  - Общая информация:
+      - Кодирование автомобилей VAG: index.md
+      - Платформа MQB: MQB/main.md
+      - Платформа MLB/MLB-Evo: MLB-Evo/main.md
+      - Платформа PQ26: PQ26/main.md
+      - Платформа PQ35: PQ35/main.md
+      - Инструменты и адаптеры:
+          - Редактор параметрий: utils/datasetEditor.md
+          - Калькулятор длинного кодирования: utils/longCoding.md
+          - FEC генератор: utils/fec.md
+          - XOR калькулятор: utils/xorCalculator.md
+          - Генератор параметрии шин: utils/tiresCoding.md
+          - Список программ и адаптеров: utils/programs.md
+          - Инструкция ODIS E: utils/odis-e.md
+      - История изменений: history.md
+      - Обратная связь: questions.md
+      - Поддержать проект: https://yoomoney.ru/to/4100110582992748/100
+  - Платформа MQB:
+      - Информация: MQB/main.md
+      - Ассистенты водителя:
+          - Активация ACC и pACC: MQB/pACC.md
+          - Кодирование ACC: MQB/ACC_coding.md
+          - Кодирование 3Q* камеры: MQB/3Q0_assistants.md
+          - Калибровка 3Q* камеры: MQB/3Q0_calibration.md
+          - Кодирование 2Q* камеры: MQB/2Q0_assistants.md
+          - Прошивки камеры ассистентов: MQB/camAssistFirmwares.md
+      - Системы активной безопасности: MQB/active_systems.md
+      - Настройка профилей движения (FPA): MQB/fpaCoding.md
+      - Движение и управление: MQB/drive.md
+      - Парковка и маневрирование: MQB/parking.md
+      - Эстетическая подсветка:
+          - Кодирование подсветки: MQB/esteticLights.md
+          - Кодирование зон освещения: MQB/esteticLightsCoding.md
+          - Установка RGB подсветки: MQB/esteticLightsCodingRGB.md
+      - Зеркала и стеклоочистители: MQB/wash.md
+      - Отпирание и запирание: MQB/security.md
+      - Освещение:
+          - Кодирование фонарей: MQB/codingLights.md
+          - Передние фонари: MQB/headLights.md
+          - Задние фонари: MQB/rearLights.md
+      - Звук: MQB/sound.md
+      - Климат: MQB/climate.md
+      - Приборная панель: MQB/AID.md
+      - Головное устройство:
+          - Кодирование: MQB/headDevice.md
+          - Активация TMC: MQB/headDeviceTMC.md
+          - SWaP коды для CM и DM: MQB/headDeviceFunctions.md
+          - Снятие защиты и SWaP для Pro: MQB/headDeviceFunctionsPro.md
+      - Шины:
+          - Кодирование: MQB/tires.md
+      - Дооснащение: MQB/addons.md
+      - Eeprom память: MQB/eeprom.md
+  - Платформа MLB/MLB-Evo:
+      - Информация: MLB-Evo/main.md
+      - Ассистенты водителя: MLB-Evo/assistants.md
+      - Движение и управление: MLB-Evo/drive.md
+      - Безопасность. Отпирание и запирание: MLB-Evo/security.md
+      - Комфорт: MLB-Evo/comfort.md
+      - Климат: MLB-Evo/climate.md
+      - Освещение: MLB-Evo/lights.md
+      - Приборная панель: MLB-Evo/AID.md
+      - Головное устройство: MLB-Evo/headDevice.md
+  - Платформа PQ26:
+      - Информация: PQ26/main.md
+      - Освещение:
+          - Управление освещением: PQ26/lights.md
+          - Нестандартные световые решения: PQ26/extraLights.md
+          - Обозначения ламп: PQ26/codingLights.md
+          - Обозначения ламп c картинками: PQ26/codingLightsPictures.md
+          - Установка светодиодов: PQ26/setLED.md
+      - Стеклоочистители / Датчик дождя и света: PQ26/wash.md
+      - Климат / Обогрев зеркал и стекол: PQ26/climate.md
+      - Двери, стекла, цз, брелок и штатная сигнализация: PQ26/security.md
+      - Панель приборов:
+          - Кодирование: PQ26/instrPanel.md
+          - Кривые подсветки панели приборов: PQ26/instrPanelCoding.md
+      - Тормоза и шины: PQ26/brakes.md
+      - Динамика и управление: PQ26/drive.md
+      - Мультимедиа: PQ26/multimedia.md
+      - Дооснащение: PQ26/addons.md
+      - Словарь немецких терминов: PQ26/german.md
+  - Платформа PQ35:
+      - Информация: PQ35/main.md
+      - Управление и динамика: PQ35/drive.md
+      - Свет: PQ35/lights.md
+      - Мультимедиа: PQ35/multimedia.md
+      - Комфорт: PQ35/comfort.md
+      - Прочие функции: PQ35/other.md
+      - Кодирование Tiguan 1st Gen:
+          - Управление и динамика: PQ35/Tiguan/drive.md
+          - Комфорт: PQ35/Tiguan/comfort.md
+          - Свет: PQ35/Tiguan/lights.md
+          - Приборная панель: PQ35/Tiguan/instrPanel.md
+          - Мультимедиа: PQ35/Tiguan/multimedia.md
+  - Инструменты: utils/main.md
+  - Поддержать проект: https://yoomoney.ru/to/4100110582992748/100

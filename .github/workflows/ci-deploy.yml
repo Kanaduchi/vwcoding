@@ -1,0 +1,41 @@
+name: deploy
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+    types: [closed]
+
+# Environment
+env:
+  NODE_VERSION: 10.x
+  PYTHON_VERSION: 3.x
+
+# Jobs to run
+jobs:
+
+  # Build and deploy documentation site
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout master branch
+        uses: actions/checkout@v2
+          
+      - name: Install Python runtime and dependencies
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Install theme and dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install .
+
+      - name: Deploy documents
+        env:
+          ENABLE_PDF_EXPORT: 1
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdocs gh-deploy --clean --force

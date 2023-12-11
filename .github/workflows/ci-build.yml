@@ -1,0 +1,34 @@
+name: build
+on:
+  push
+
+# Environment
+env:
+  NODE_VERSION: 10.x
+  PYTHON_VERSION: 3.x
+
+# Jobs to run
+jobs:
+
+  # Build documentation
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source form GitHub
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: Install Python runtime and dependencies
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Install theme and dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install .
+
+      - name: Build documents
+        run: |
+          mkdocs build --clean
