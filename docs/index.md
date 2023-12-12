@@ -1,43 +1,28 @@
 ---
+title: Кодирование автомобилей VAG
 hide:
   - toc
 comments: false
 ᴴₒᴴₒᴴₒ: true
 ---
-<script src="https://www.moneybutton.com/moneybutton.js"></script>
 <style>
   .md-typeset h1,
   .md-content__button {
     display: none;
   }
-  
-.frame {
-    width: 1600px;
-    max-width: none !important;
-    height: auto;
-    border: 0;
-    -ms-transform: scale(0.65);
-    -moz-transform: scale(0.65);
-    -o-transform: scale(0.65);
-    -webkit-transform: scale(0.65);
-    transform: scale(0.65);
-    
-    -ms-transform-origin: 0 0;
-    -moz-transform-origin: 0 0;
-    -o-transform-origin: 0 0;
-    -webkit-transform-origin: 0 0;
-    transform-origin: 0 0;
-}
-.wrap {
-    width: auto;
-    height: 35px;
-}
 </style>
 
 !!! give-money inline end "Помощь проекту"
     Если вам понравился этот проект и вы готовы его поддержать для дальнейшего развития, то вы можете это сделать с российских карт
-    с помощью Яндекс-перевода в рублях:  
-    <div class="wrap"><iframe class="frame" src="https://yoomoney.ru/quickpay/fundraise/button?billNumber=szaulwUCpas.221202&" frameborder="0" allowtransparency="true"></iframe></div>
+    с помощью Яндекс-перевода в рублях:
+    [Поддержать :fontawesome-solid-paper-plane:](https://yoomoney.ru/to/4100110582992748/100){ .md-button }
+
+    либо с помощью 
+
+    ![BTC wallet](images/btc.png){ width="100" align=left }
+    
+    BTC Wallet: `1BKR5d91YUic3aqwc6nTGTMLkGBBrZkkcj`
+
 !!! danger "Внимание!"
     Копирование информации с сайта допускается только с указанием ссылки на данный ресурс
 

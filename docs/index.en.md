@@ -13,13 +13,15 @@ comments: false
 </style>
 
 !!! give-money inline end "Support VWCoding"
-    If you like this project you can support it by online transfer to our wallet using Yandex transfer system:   
-    Currently unavailable
-
+    If you liked this project and are ready to support it for further development, you can do so using:  
+    
+    ![BTC wallet](images/btc.png){ width="100" align=left }
+    
+    BTC Wallet: `1BKR5d91YUic3aqwc6nTGTMLkGBBrZkkcj`
 
 !!! info "Translation is in progress"
     Currently this site is written in Russian language.  
-    If you want to help in translating pages to English language please [follow the instructions](https://github.com/Kanaduchi/vwcoding/blob/master/CONTRIBUTING.md)
+    If you want to help in translating pages to English language please [follow the instructions](support/#adding-localizations)
 
 !!! danger "Warning!"
     Sharing information from this site is allowed only with the copyright notice and link to this resource.  
