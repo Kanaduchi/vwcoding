@@ -1,0 +1,48 @@
+00,0,Seat Backrest Fan 1 Rear Left - installed
+00,1,Seat Backrest Fan 1 Rear Right - installed
+00,2,Seat Cushion Fan 1 Rear Left - installed
+00,3,Seat Cushion Fan 1 Rear Right - installed
+01,0-7,Light control module (LCM), 00 - AFS powermodule - not installed; 01 - AFS powermodule - Automatic high beam assist; 02 - AFS powermodule - Power module; 03 - AFS powermodule - Light Control Plus
+03,2,LED headlight - Enabled [PR-8IT]
+04,0,Function activation of AFS - activated [STANDARD]
+06,0-7,Model, 03 - VW Passat (3G) / Skoda Kodiaq (NS); 04 - VW Arteon (3H) / Skoda Octavia (5E); 05 - Skoda Karoq (NU); 06 - Skoda Superb (3V); 07 - VW Touran (5T); 08 - VW Tiguan (AD); 09 - Seat Leon (5F); 13 - Audi Q2 (CA) / Audi A3 e-tron (8V) / VW Atlas (CA); 14 - Audi A3 (8V); 16 - VW Golf 7 (BQ); 19 - VW Golf 7 Variant (BV) / Skoda Octavia (5E); 20 - Model: VW T-Roc (A1); 1D - VW Tiguan USA (BW2)
+07,0,ESP not installed (0 = ESP installed)
+07,1,Rain/Light Sensor installed
+07,2,Left-Hand-Drive/Traffic Switch-Over [PR-L0L/AV1] (0 = Right side drive [PR-L0L/AV1]
+07,3-4,Rear Axle, 00 - Twist Link Rear Axle/Suspension; 08 - Multi-Link Rear Axle/Suspension Front-Wheel-Drive [PR-1X0] [PR-0N4]; 10 - Multi-Link Rear Axle/Suspension All-Wheel-Drive [PR-1X1] [PR-0N4]
+07,5,Disable AFS: AFS III disable via LDS (0 = AFS III disable via MFA+)
+07,6,Start-Stop installed [PR-7L6]
+07,7,Multi function camera not installed (0 = Multi function camera installed)
+08,0,Steering curve: MQB direct steering (0 = Normal)
+08,1,LWR sensors: 2 sensors (0 = 1 sensor)
+08,2,Source height value: DCC (0 = BCM)
+09,0,Market: North America (NAR) (0 = Rest of the world (ECE))
+09,4-7,Headlight Type, 00 - Variant 0 (LED LOW: VW Passat/Seat Leon/Tiguan/Atlas); 10 - Variant 1 (MID LED EU: Taos/Tiguan/Allspace); 20 - Headlight Type: Variant 2 (MID LED NAR: Tiguan); 30 - Headlight Type: Variant 3 (MID LED: Arteon); 40 - Headlight Type: Variant 4 (Golf GTE BQ); 70 - Headlight Type: Variant 7 (Golf R BQ)
+10,0,Headlight Regulation active/enabled [PR-8Q3]
+10,1,Dynamic AFS light active/enabled
+10,2,City light active/enabled
+10,3,Highway light active/enabled
+10,4,Rain light active/enabled
+10,5,All weather lights active/enabled
+10,6,Dynamic Light Assist (DLA) - Masked daylight (MDF) activation active/enabled
+10,7,GLW activation active/enabled
+11,0,Predictive route data active/enabled
+11,1,Intersection light with route data active/enabled
+11,2,Predictive AFS active/enabled
+11,3,Marking light active/enabled
+11,4,Matrix head lamp active/enabled [PR-8G4]
+11,5,Dynamical Low Beam Light active/enabled
+11,6,High Beam Assistance active/enabled
+11,7,GLW with LWR activation active/enabled
+12,0-2,Static AFS light type: (LCM), 00 - Deactivated; 01 - ECE R48; 02 - ECE R119; 03 - FMVSS; 04 - SAE J582
+12,3,Offroad light - Enabled
+12,4,Eco mode - Enabled
+12,5,Segmented cornering light - Enabled
+12,6,Highway light - Enabled
+12,7,Race light - Enabled
+13,0,NFC TGS mounted - Dedicated Short Range Communication Aerial
+13,1,NFC miko mounted - Antenna 2 for short-range communication
+14,0-1,Motor variant (LCM), 00 - Combustion engine; 01 - Electric vehicle; 02 - Hybrid vehicle
+15,0,RTM DTC - activated
+15,1,RTM data set - activated
+15,2,RTM charge DTC selection: Battery Charger Control Module (0 = High Voltage Battery Charge Management)
