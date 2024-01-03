@@ -14,7 +14,7 @@ repo_url: https://github.com/Kanaduchi/vwcoding
 edit_uri: https://github.com/Kanaduchi/vwcoding/edit/master/docs/
 
 # Copyright
-copyright: Copyright &copy; 2023 - vwcoding.ru (info@vwcoding.ru)
+copyright: Copyright &copy; 2024 - vwcoding.ru (info@vwcoding.ru)
 
 # Main directory
 docs_dir: docs/
@@ -78,6 +78,7 @@ extra_css:
 extra:
   status:
     updated: New codings were added to this page
+    new: New codings were added
   comments:
     enable: true
     # Can be disqus or giscus
@@ -138,6 +139,7 @@ plugins:
             Кодирование ACC: ACC coding
             Кодирование 3Q* камеры: Coding of 3Q* cameras
             Кодирование 2Q* камеры: Coding of 2Q* cameras
+            Кодирование камеры ассистентов: Assistance camera coding
             Прошивки камеры ассистентов: Assistance camera firmwares
             Системы активной безопасности: Safety features
             Настройка профилей движения (FPA): Configuration of FPA profiles
@@ -155,6 +157,7 @@ plugins:
             Задние фонари: Rear lights
             Звук: Sound
             Климат: Climate
+            Комфорт: Driver's comfort
             Приборная панель: Control panel
             Головное устройство: Main unit
             Кодирование: General coding
@@ -225,7 +228,7 @@ nav:
   - Общая информация:
       - index.md
       - Платформа MQB: MQB/index.md
-      # - Платформа MQB-Evo: index.md
+      - <img src='images/zap.svg'> Платформа MQB-Evo: MQB-Evo/index.md
       - Платформа MLB/MLB-Evo: MLB-Evo/index.md
       - Платформа PQ26: PQ26/index.md
       - Платформа PQ35: PQ35/index.md
@@ -285,12 +288,24 @@ nav:
           - Кодирование: MQB/tires.md
       - Дооснащение: MQB/addons.md
       - Eeprom память: MQB/eeprom.md
-  # - MQB-Evo: index.md
+  - MQB-Evo:
+      - MQB-Evo/index.md
+      - Ассистенты водителя:
+          - Кодирование ACC: MQB-Evo/acc.md
+          - Кодирование камеры ассистентов: MQB-Evo/headCameraUnit.md
+      - Движение и управление: MQB-Evo/drive.md
+      - Климат: MQB-Evo/climate.md
+      - Комфорт: MQB-Evo/comfort.md
+      - Освещение: MQB-Evo/lights.md
+      - Эстетическая подсветка: MQB-Evo/aestheticLights.md
+      - Приборная панель: MQB-Evo/AID.md
+      - Головное устройство: MQB-Evo/headControlUnit.md
+      - Отпирание и запирание: MQB-Evo/security.md
   - MLB/MLB-Evo:
       - MLB-Evo/index.md
       - Ассистенты водителя: MLB-Evo/assistants.md
       - Движение и управление: MLB-Evo/drive.md
-      - Безопасность. Отпирание и запирание: MLB-Evo/security.md
+      - Отпирание и запирание: MLB-Evo/security.md
       - Комфорт: MLB-Evo/comfort.md
       - Климат: MLB-Evo/climate.md
       - Освещение: MLB-Evo/lights.md
