@@ -146,6 +146,8 @@ Fernlicht_assistent:
 - Erweiterte_Fernlichtsteuerung: AFS, FLA, Fernlicht ueber AFS → AFS, FLA, Fernlicht (GLW,MDF)
 - Menuesteuerung Fernlichtassistent: available
 - Fernlichtassistent Reset: Деактивировать
+- Menuesteuerung Fernlichtassistent Werkseinstellung: available
+- Assistance_lighting_sensitivity_adjustable: detected
 → Применить 
 ```
 
@@ -207,6 +209,7 @@ HCA - Указание блоку рулевого управления о на�
     Блок 4B (многофункциональный модуль) → Кодирование:
     Байт 10 – Бит 6 (mdf_activation): Активировать
     headlamp_coding_word: 1
+    multi_function_camera: installed
     → Применить 
     ```
 === "Кодирование в OBD11"

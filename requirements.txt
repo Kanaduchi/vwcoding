@@ -1,4 +1,4 @@
-mkdocs-material==9.5.3
-mkdocs-print-site-plugin==2.3.6
-mkdocs-static-i18n==1.2.0
-mkdocs-git-revision-date-localized-plugin==1.2.2
+mkdocs-material==9.5.18
+mkdocs-print-site-plugin==2.4.0
+mkdocs-static-i18n==1.2.2
+mkdocs-git-revision-date-localized-plugin==1.2.4
