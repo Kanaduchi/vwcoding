@@ -241,6 +241,7 @@ nav:
           - Генератор параметрии шин: utils/tiresCoding.md
           - Список программ и адаптеров: utils/programs.md
           - Инструкция ODIS E: utils/odis-e.md
+          - Toolbox: utils/toolBox.md
       - История изменений: history.md
       - Обратная связь: questions.md
       - Поддержка и развитие проекта: support.md
