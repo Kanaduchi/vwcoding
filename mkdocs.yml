@@ -254,6 +254,7 @@ nav:
       - Генератор параметрии шин: utils/tiresCoding.md
       - Список программ и адаптеров: utils/programs.md
       - Инструкция ODIS E: utils/odis-e.md
+      - Toolbox: utils/toolBox.md
   - MQB:
       - MQB/index.md
       - Ассистенты водителя:
