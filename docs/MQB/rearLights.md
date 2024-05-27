@@ -49,7 +49,7 @@ Leuchte21BR RC8:
 Leuchte16BLK SLB35BLK SL KC9:
 - Lichtfunktion G 16: от not active до Blinken rechts Hellphase
 Leuchte16SL HLC10:
-- Dimming Direction GH 1: от maximize до minimize
+- Dimming Direction GH 16: от maximize до minimize
 ---
 Leuchte17TFL R BLK SRB3TFL R BLK SR KC3:
 - Lichtfunktion G 17: от not active до Blinken links Hellphase
