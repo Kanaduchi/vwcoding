@@ -137,8 +137,9 @@ plugins:
             Ассистенты водителя: Drive assistance
             Активация ACC и pACC: ACC & PACC activation
             Кодирование ACC: ACC coding
-            Кодирование 3Q* камеры: Coding of 3Q* cameras
-            Кодирование 2Q* камеры: Coding of 2Q* cameras
+            Кодирование 3Q* камеры: Coding of 3Q* camera
+            Калибровка 3Q* камеры: Calibration of 3Q* camera
+            Кодирование 2Q* камеры: Coding of 2Q* camera
             Кодирование камеры ассистентов: Assistance camera coding
             Прошивки камеры ассистентов: Assistance camera firmwares
             Системы активной безопасности: Safety features
