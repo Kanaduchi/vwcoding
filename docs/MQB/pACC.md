@@ -283,7 +283,7 @@ Adaptive_cruise_control: Активировать
 ``` yaml
 Блок 13 → Кодирование:
 Traffic_sign_detection: Активировать
-Speed_limit_assitent: Активировать
+Speed_limit_assistent: Активировать
 Curve_assistent: Активировать
 Kurvenassistent_CarMenu: Активировать
 → Применить (с перезагрузкой блока)
@@ -291,7 +291,7 @@ Kurvenassistent_CarMenu: Активировать
 ``` yaml title="логин-пароль: 20103"
 Блок 13 → Адаптация:
 Predictive speed limit control:
-- par Predictive speed limit control: Активировать
+- par_Predictive_speed_limit_control: Активировать
 → Применить
 ```
 
