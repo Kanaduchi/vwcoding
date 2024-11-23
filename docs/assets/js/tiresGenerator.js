@@ -168,6 +168,13 @@ function generateBody(dataset, ecuName, ecuType, ecuVersion, tireSets) {
 }
 
 function doGenerate() {
+
+    var numTireSets = document.getElementById("numTireSets").value;
+    if (numTireSets < 1) {
+        window.alert("Количество комплектов шин должно быть больше 0.\nNumber of tire sets should be greater than 0.");
+        return;
+    }
+
     var dataset = document.getElementById('dataset');
     dataset.value = "";
 
@@ -197,7 +204,7 @@ function doGenerate() {
         } else {
             var value = document.getElementById("t" + index + "name").value;
             if (!/^[a-zA-Z]+$/.test(value)) {
-                window.alert("Имя конфигурации может содержать только латинские буквы.\nConfiguration name should have only latin symbols.");
+                window.alert("Имя конфигурации #" + index + " может содержать только латинские буквы.\nConfiguration name should have only latin symbols.");
                 return;
             }
             var set = {
