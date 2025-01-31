@@ -28,6 +28,7 @@ Dashboard_Display_Configuration:
 ```
 
 ### Driving instructor mode
+
 :octicons-verified-24: SFD: yes :octicons-verified-24: Tested SW: 1803-1941
 
 ![Screenshot](../images/MQB-Evo/MIB3_driver.png) 
@@ -37,6 +38,20 @@ Control unit 5F → Adjustments:
 Car_Function_Adaptations:
 - menu_display_driving_school_over_threshold_high: activated
 - menu_display_driving_school: activated
+→ Apply
+```
+
+### Disable login screen/user functions from the HMI
+
+:octicons-verified-24: SFD: yes :octicons-verified-24: Tested SW: 1803-1941
+
+!!! note ""
+    All user functions will be deactivated, no shop, no updates.
+
+``` yaml 
+Control unit 5F → Adjustments:
+function_configuration_pso:
+- iaa_function: not activated
 → Apply
 ```
 
@@ -86,6 +101,9 @@ Summer_Time_Shift_Method:
 
 :octicons-verified-24: SFD: ??? :octicons-verified-24: Tested SW: 1941
 
+!!! Note ""
+    Whether the sound quality is truly better here is debatable
+
 ``` yaml 
 Control unit 5F → Adjustments:
 function_configuration_sound:
@@ -108,7 +126,7 @@ Startup_Screen_Sticker_HMI:
 
 ### Allow connecting multiple smartphones
 
-:octicons-verified-24: SFD: ??? :octicons-verified-24: Tested SW: 1941
+:octicons-verified-24: SFD: yes :octicons-verified-24: Tested SW: 1941
 
 ``` yaml 
 Control unit 5F → Adjustments:
@@ -117,9 +135,37 @@ function_configuration_phone:
 → Apply
 ```
 
+### Disable restrictions with Android Auto
+
+:octicons-verified-24: SFD: yes :octicons-verified-24: Tested SW: 1941
+
+``` yaml 
+Control unit 5F → Adjustments:
+nhtsa_properties:
+- nhtsa_limitation_switches_for_androidauto_no_video_playback: not activated
+- nhtsa_limitation_switches_for_androidauto_no_text_input: not activated
+- nhtsa_limitation_switches_for_androidauto_no_setup_configuration: not activated
+- nhtsa_limitation_switches_for_androidauto_limit_displayed_message_length: not activated
+→ Apply
+```
+
+### Activate hybrid radio
+
+:octicons-verified-24: SFD: yes :octicons-verified-24: Tested SW: 1983
+
+``` yaml 
+Control unit 5F → Adjustments:
+function_configuration_radio:
+- Hybrid_Radio_additional_online_data activated
+→ Apply
+```
+
 ### Adjust MIB3 boot logo
 
 :octicons-verified-24: SFD: ??? :octicons-verified-24: Tested SW: 1941
+
+!!! Note
+    (0 = VW, 2 = GTD, 3 = GTI, 6 = R, 7 = R-Line, 8 = Alltrack, 18 = Peak Edition)
 
 ![Screenshot](../images/MQB-Evo/MIB3_boot_logo.png)  
 
@@ -164,7 +210,7 @@ Car_Function_List_BAP:
 
 ### Welcome tone
 
-:octicons-verified-24: SFD: yes :octicons-verified-24:
+:octicons-verified-24: SFD: yes
 
 !!! error ""
     No changes recognizable, maybe linked in the dataset
@@ -197,5 +243,19 @@ function_configuration_audio:
 Control unit 5F → Adjustments:
 function_configuration_connectivity:
 - Bluetooth_Headphones: available
+→ Apply
+```
+
+### Disable user selection
+
+:octicons-verified-24: SFD: yes :octicons-verified-24: Tested SW: 1941
+
+!!! error ""
+    It shows only a globe in the menu bar; the second icon no longer appears. No idea what else is happening in the background.
+
+``` yaml 
+Control unit 5F → Adjustments:
+privacy_mode:
+- supress_privacy_mode: active
 → Apply
 ```

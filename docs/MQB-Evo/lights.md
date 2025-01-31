@@ -1,5 +1,23 @@
 # Light management
 
+### IQ-Light presentation on engine start
+
+:octicons-verified-24: SFD: yes :octicons-verified-24: Tested SW: 1447
+
+!!! warning ""
+    Only for vehicles equipped with IQ-Light.
+
+``` yaml 
+Control unit 4B [Tested SW: 1447]
+Adjustments:
+Präsentationslauf_dynamisches_Kurvenlicht:
+- Präsentationslauf_dynamisches_Kurvenlicht: aktiv
+Reference_Run_Start_Condition:
+- Reference_Run_Start_Condition: Motorstart / “Klemme 15” when turning on the ignition
+Reference_Run_Activation_Effect:
+- par_Reference_Run_Activation_Effect: Activation effect enabled by mtor start
+```
+
 ### Change light functions based on light sensitivity
 
 :octicons-verified-24: SFD: yes :octicons-verified-24: Tested SW: 0159-0161
@@ -208,5 +226,16 @@ Leuchte 31 AMBL 1 C61:
 Leuchte 32 AMBL 2 C35:
 - Lichtfunktion A 32: not_active
 - Lichtfunktion D 32: not_active
+→ Apply
+```
+
+### Parking lights on both sides
+
+:octicons-verified-24: SFD: yes :octicons-verified-24: Tested SW: 0159-0161
+
+``` yaml 
+Control unit 09 → Adjustments:
+Standlicht:
+- Parklicht ueber LSS aktiviert: dual sided
 → Apply
 ```

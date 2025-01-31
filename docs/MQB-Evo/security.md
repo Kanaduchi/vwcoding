@@ -108,16 +108,31 @@ ZV allgemein:
 → Apply
 ```
 
-### Automatic locking (if forgetting to lock the car)
+### Automatic locking when walking away (if forgetting to lock the car)
 
-:octicons-verified-24: SFD: yes :octicons-verified-24: Tested SW: 0161
+:octicons-verified-24: SFD: yes :octicons-verified-24: Tested SW: 0174 - 0183
 
 !!! error ""
-    No changes recognizable, maybe linked in the dataset
+    Only possible from software version 0174 onwards. Not possible with versions below 0174.  
+    Does not work when moving away from the tailgate sideways.
 
 ``` yaml 
 Control unit 09 → Adjustments:
 Automatische_Funktionen:
 - Automatisches_Verriegeln_aktiv: activated
+DevCod_IDGeber_Suche:
+- Unterdrueckung_zyklischer _Suchen_bei_entriegeltem_Fahrzeug_aktiv: not_activated
+DevCod_Nutzerkonfigurationen:
+- HMIMenue_Aktivierung_Nah_Mittel_Fern_aktiv: activated
+→ Apply
+```
+
+``` yaml title="Login code: 10587"
+Control unit B7 → Adjustments:
+Passive_Komfort:
+- Passive_Komfort_Oeffnen_aktiv: activated
+- Passive_Komfort_Togglen_aktiv: activated
+DevCod_AutomatischeFunktionen:
+- Slowpolling_Rechtecksignal_Aktiv: activated
 → Apply
 ```
