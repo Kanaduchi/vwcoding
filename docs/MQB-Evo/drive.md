@@ -13,3 +13,13 @@ Break disk drying:
 - Break disk drying: medium (light, medium, strong)
 → Apply
 ```
+
+### Change steering characteristics without drive mode selection
+
+:octicons-verified-24: SFD: no :octicons-verified-24: Tested SW: 1040
+
+``` yaml 
+Control unit 44 → Adjustments:
+- Steering_support_characteristic_line: dynamic
+→ Apply
+```

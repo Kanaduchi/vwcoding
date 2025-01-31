@@ -15,6 +15,7 @@ Blower display during auto mode: activated
 ```
 
 ### Save AirCare setting
+
 :octicons-verified-24: SFD: no :octicons-verified-24: Tested SW: 0440-0531
 
 ``` yaml
@@ -25,6 +26,7 @@ Filtering_interior_air_saving:
 ```
 
 ### Automatically reduce seat heating to a lower level after a certain time
+
 :octicons-verified-24: SFD: no :octicons-verified-24: Tested SW: 0440-0531
 
 ``` yaml
@@ -37,6 +39,7 @@ Time for seat heating power reduction Level 2 to level 1:
 ```
 
 ### Save recirculation setting
+
 :octicons-verified-24: SFD: no :octicons-verified-24: Tested SW: 0440-0531
 
 ``` yaml
@@ -83,6 +86,7 @@ Seat_Heating_Level_Adaptation:
 ```
 
 ### Save seat heating settings
+
 :octicons-verified-24: SFD: no :octicons-verified-24: Tested SW: 0440-0531
 
 ``` yaml
@@ -96,5 +100,15 @@ Seat heating level driver side, saving condition:
 Control unit 08 → Adjustments:
 Seat heating level passenger side, saving condition:
 - param_Seat_heating_level_passenger_side,_saving_condition: not_active, 10_minutes_activ, active (Last configuration will be stored)
+→ Apply
+```
+
+### Deactivate steering wheel heater permanently
+
+:octicons-verified-24: SFD: no :octicons-verified-24: Tested SW: 0440-0531
+
+``` yaml
+Control unit 08 → Adjustments:
+- Heated_steering_wheel_and_Heated_steering_wheel_automatic_mode: not_installed
 → Apply
 ```

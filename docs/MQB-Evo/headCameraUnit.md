@@ -1,8 +1,20 @@
 # Front assistance camera (A5)
 
+### Steering resistance adjustable via the Car Menu while Travel-Assist is active
+
+:octicons-verified-24: SFD: no :octicons-verified-24: Tested SW: 3129-3405
+
+![Screenshot](../images/MQB-Evo/travel_assist_setting.png)
+
+``` yaml 
+Control unit A5 → Coding:
+HC_Warn_Intensity: Setting_over_menu
+→ Apply
+```
+
 ### Adjust lane-keeping assistant intervention point
 
-:octicons-verified-24: SFD: no :octicons-verified-24: Tested SW: 3129-3403
+:octicons-verified-24: SFD: no :octicons-verified-24: Tested SW: 3129-3405
 
 ``` yaml 
 Control unit A5 → Coding:
@@ -12,7 +24,7 @@ Point_of_intervention: early (intervenes early), late (intervenes late), early_s
 
 ### Save lane-keeping assistant settings (on ignition change)
 
-:octicons-verified-24: SFD: no :octicons-verified-24: Tested SW: 3129-3403
+:octicons-verified-24: SFD: no :octicons-verified-24: Tested SW: 3129-3405
 
 ``` yaml 
 Control unit A5 → Coding:
@@ -22,14 +34,11 @@ Configuration_for_lane_departure_warning_Kl15: last_setting
 
 ### Lane-keeping assist intervention point adjustable in the car menu
 
-:octicons-verified-24: SFD: no :octicons-verified-24: Tested SW: 3129-3303
-
-!!! error ""
-    No changes recognizable, maybe linked in the dataset
+:octicons-verified-24: SFD: no :octicons-verified-24: Tested SW: 3129-3405
 
 ``` yaml 
 Control unit A5  → Coding:
-Point_of_intervention: early_setting_over_menu
+Point_of_intervention: early, late, early_setting_over_menu, late_setting_over_menu
 → Apply
 ```
 

@@ -233,7 +233,7 @@ Logo_5 = GTD
 
 ### Deactivate seatbelt warning
 
-:octicons-verified-24: SFD: yes :octicons-verified-24: Tested SW: 3460-3470
+:octicons-verified-24: SFD: yes :octicons-verified-24: Tested SW: 1400-7380
 
 ``` yaml 
 Control unit 17 → Adjustments:
@@ -241,6 +241,31 @@ Deactivate_belt_warning:
 - State: yes
 → Apply
 ```
+
+### Change the startup screen of the dashboard
+
+:octicons-verified-24: SFD: yes :octicons-verified-24: Tested SW: 7360-7380
+
+``` yaml 
+Control unit 17 → Coding:
+derivative: derivative_1 (normal Golf), derivative_3 (Golf R)
+→ Apply
+```
+
+### Change the color of the RPM display in Golf R view
+
+:octicons-verified-24: SFD: no :octicons-verified-24: Tested SW: 7360-7380
+
+``` yaml 
+Control unit 17 → Adjustments:
+Adjustments:
+- tachometer_colour: Rot 0, Grün 0, Blau 0
+→ Apply
+```
+
+Examples:  
+Violet: 127, 0, 255  
+Blue: 0, 0, 255  
 
 ### Change outside temperature warning threshold in the AID (Active Info Display)
 
@@ -251,6 +276,7 @@ Control unit 17 → Adjustments:
 outside_temperature:
 - p_ice_warning_exit_temperature: 6° (Adjust as desired, maximum 10°C)
 - p_ice_warning_entry_temperature: 4° (Adjust as desired, maximum 10°C)
+- p_storage_time_engine_off: 180 (Adjust as desired, Warning appears again after restarting the engine)  
 → Apply
 ```
 
@@ -366,18 +392,6 @@ Displayable_content_configuration:
 ``` yaml 
 Control unit 17 → Coding:
 Tachometer_erweiterte_Skalenteilung: yes
-→ Apply
-```
-
-### Travel-Assist steering intervention, which is necessary to make the message "Take over steering" disappear, adjustable via Car-Menu
-
-:octicons-verified-24: SFD: no :octicons-verified-24: Tested SW: 3129-3403
-
-![Screenshot](../images/MQB-Evo/travel_assist_setting.png)
-
-``` yaml 
-Control unit A5 → Coding:
-HC_Warn_Intensity: Setting_over_menu
 → Apply
 ```
 
