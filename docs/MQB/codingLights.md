@@ -8,7 +8,7 @@
 
 ![Screenshot](../images/MQB/light_scheme.jpg)
 
-У разных машин (Tiguan, Skoda, Golf, Passat) могут быть разные привязки ламп к каналам. 
+У разных машин (Tiguan, Škoda, Golf, Passat) могут быть разные привязки ламп к каналам. 
 
 ### Список каналов передних фонарей VW Tiguan 2
 

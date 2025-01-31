@@ -63,4 +63,4 @@
 ```![Screenshot](../images/MQB/odis-e-tires.png)```
 
 Пример вставки файлов на страницу сайта:  
-```[(Сборка для Skoda)](../firmwares/TMC-zz.rar)```
+```[(Сборка для Škoda)](../firmwares/TMC-zz.rar)```

@@ -19,8 +19,7 @@ comments: false
     
     BTC Wallet: `1BKR5d91YUic3aqwc6nTGTMLkGBBrZkkcj`
 
-!!! info "Translation is in progress"
-    Currently this site is written in Russian language.  
+!!! info "Translation to English is in progress"
     If you want to help in translating pages to English language please [follow the instructions](support/#adding-localizations)
 
 !!! danger "Warning!"

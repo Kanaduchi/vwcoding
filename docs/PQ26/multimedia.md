@@ -6,7 +6,7 @@
 
 ``` yaml
 Блок 5F → Длинное кодирование:
-Байт 11 – Бит 2 (пункты Skoda Surround и Virtual Subwoofer): Активировать
+Байт 11 – Бит 2 (пункты Škoda Surround и Virtual Subwoofer): Активировать
 Байт 08 – Бит 6 (VDA Low Frequency Input): Активировать
 → Применить
 ```
@@ -36,13 +36,13 @@
 ``` yaml
 Блок 5F → Длинное кодирование:
 Байт 01 – Биты 0~23:
-– 035201, модель: Skoda Rapid
-– 035203, модель: Skoda Rapid Spaceback
-- 035331, модель: Skoda Rapid FL (NH3)
-– 036200, модель: Skoda Fabia
-– 036202, модель: Skoda Fabia Combi
-– 037301, модель: Skoda Octavia лифтбек
-– 038401, модель: Skoda Superb лифтбек
+– 035201, модель: Škoda Rapid
+– 035203, модель: Škoda Rapid Spaceback
+- 035331, модель: Škoda Rapid FL (NH3)
+– 036200, модель: Škoda Fabia
+– 036202, модель: Škoda Fabia Combi
+– 037301, модель: Škoda Octavia лифтбек
+– 038401, модель: Škoda Superb лифтбек
 → Применить
 ```
 

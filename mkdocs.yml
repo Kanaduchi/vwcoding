@@ -146,10 +146,10 @@ plugins:
             Настройка профилей движения (FPA): Configuration of FPA profiles
             Движение и управление: Driving
             Парковка и маневрирование: Parking
-            Эстетическая подсветка: Estetic lights
-            Кодирование подсветки: Coding of estetic lights
-            Кодирование зон освещения: Zones of estetic lights
-            Установка RGB подсветки: RGB estetic lihts
+            Эстетическая подсветка: Aesthetic lights
+            Кодирование подсветки: Coding of aesthetic lights
+            Кодирование зон освещения: Zones of aesthetic lights
+            Установка RGB подсветки: RGB aesthetic lights
             Зеркала и стеклоочистители: Wash and mirrors
             Отпирание и запирание: Open and Closing
             Освещение: Lights
@@ -229,7 +229,7 @@ nav:
   - Общая информация:
       - index.md
       - Платформа MQB: MQB/index.md
-      - <img src='images/zap.svg'> Платформа MQB-Evo: MQB-Evo/index.md
+      - Платформа MQB-Evo: MQB-Evo/index.md
       - Платформа MLB/MLB-Evo: MLB-Evo/index.md
       - Платформа PQ26: PQ26/index.md
       - Платформа PQ35: PQ35/index.md

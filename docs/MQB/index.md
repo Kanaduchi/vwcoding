@@ -16,7 +16,7 @@ hide:
         - открыт капот  
         - включен ручной тормоз   
 
-!!! tip "Оффлайн версия для Skoda Octavia A7"
+!!! tip "Оффлайн версия для Škoda Octavia A7"
     Данный файл был создан пользователем [SunLionn](https://www.drive2.ru/users/sunlionn) для сообщества «КОДИРОВКИ VAG» на [DRIVE2.RU](https://www.drive2.ru/communities/3868/)    
     [Скачать PDF :material-download:](MQB - Skoda Octavia A7 - v1.118.8.pdf){ .md-button .md-button--primary }
 
