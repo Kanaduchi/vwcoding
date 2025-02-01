@@ -16,7 +16,7 @@
 ## Установка
 
 Установка проходит в несколько этапов с помощью модифицированной утилиты mib2-toolbox (утилиту предоставил https://www.drive2.ru/users/kisyabrus/)  
-[(Сборка для Skoda)](../firmwares/TMC-zz.rar)  
+[(Сборка для Škoda)](../firmwares/TMC-zz.rar)  
 [(Сборка для Volkswagen)](../firmwares/TMC-vw.rar)  
 
 Установка утилиты mib2-toolbox со встроенными скриптами для поддержки регионов:   

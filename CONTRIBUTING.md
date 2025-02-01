@@ -33,7 +33,7 @@ Insert image to the page:
 ![Screenshot](../images/MQB/odis-e-tires.png) 
 
 Insert file to the page:  
-[(Applicable for Skoda)](../firmwares/TMC-zz.rar)  
+[(Applicable for Škoda)](../firmwares/TMC-zz.rar)  
 
 ## Adding localizations
 

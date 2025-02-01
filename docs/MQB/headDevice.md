@@ -144,7 +144,7 @@ nhtsa_properties:
 [(Параметрия под ODIS)](../parameters/5F_3Q0035864C_V03935274HX_VIM_MIM.xml)
     
 ### Меню в магнитоле для настройки приборной панели
-:octicons-verified-24: Skoda Octavia  
+:octicons-verified-24: Škoda Octavia  
 
 ``` yaml
 Блок 5F → Адаптация:
