@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><PresetCoding id="36 - Easy Entry" sgnr="54" uds="true">
+<CodingEntry bytecoding="00 10 00 02 00 00 04 00 81 C2 81 80 81 81 00 00 00 00 81 81 00 00 00 F4 00" index="1" systemname="Sitzmemory   ">
+<Parameter name="Easy_Entry_front" value="active"/>
+<Parameter name="Func_key_memory_personalization" value="Personalization_active"/>
+<Parameter name="easy_entry_front_over_MMI" value="active"/>
+<Parameter name="automatic_func_key_memory_over_MMI" value="active"/>
+<Parameter name="Personalization_1_1_or_2_0" value="Personalization_1_1"/>
+</CodingEntry>
+</PresetCoding>
