@@ -341,9 +341,9 @@ function createTireSets() {
         html += "            <tr>";
 
         if (index == 11)
-            html += "              <th colspan=\"3\">Индивидуальная настройка давления в шинах. Tire set Individual</th>";
+            html += "              <th colspan=\"3\">Индивидуальная настройка давления в шинах / Tire set Individual</th>";
         else
-            html += "              <th colspan=\"3\">Настройка давления в шинах. Tire set: #" + index + "</th>";
+            html += "              <th colspan=\"3\">Настройка давления в шинах / Tire set: #" + index + "</th>";
 
         html += "            </tr>";
         html += "            <tr>";
@@ -351,22 +351,22 @@ function createTireSets() {
         html += "              <td colspan=\"2\"><input id=\"t" + index + "name\" style=\"height: 25px; color: #ffff00; font-weight: bold; background-color:#4051b5; width: 100%;\"></td>";
         html += "            </tr>";
         html += "            <tr>";
-        html += "              <td class=\"sub\"><b>Тип загрузки машины. Situation</b></td>";
-        html += "              <td class=\"sub\"><b>Передние колеса. Front</b></td>";
-        html += "              <td class=\"sub\"><b>Задние колеса. Rear</b></td>";
+        html += "              <td class=\"sub\"><b>Тип загрузки машины / Load situation</b></td>";
+        html += "              <td class=\"sub\"><b>Передние колеса / Front wheels</b></td>";
+        html += "              <td class=\"sub\"><b>Задние колеса / Rear wheels</b></td>";
         html += "            </tr>";
         html += "            <tr>";
-        html += "              <td>Полная загрузка. Fully loaded</td>";
+        html += "              <td>Полная загрузка / Full load</td>";
         html += "              <td>" + generatePD("t" + index + "pff") + "</td>";
         html += "              <td>" + generatePD("t" + index + "prf") + "</td>";
         html += "            </tr>";
         html += "            <tr>";
-        html += "              <td>Стандартная загрузка. Standard load</td>";
+        html += "              <td>Стандартная загрузка / Standard load</td>";
         html += "              <td>" + generatePD("t" + index + "pfp") + "</td>";
         html += "              <td>" + generatePD("t" + index + "prp") + "</td>";
         html += "            </tr>";
         html += "            <tr id=\"trcomfort" + index + "\">";
-        html += "              <td>Комфортная загрузка. Comfort load</td>";
+        html += "              <td>Комфортная загрузка / Comfort load</td>";
         html += "              <td>" + generatePD("t" + index + "pfc") + "</td>";
         html += "              <td>" + generatePD("t" + index + "prc") + "</td>";
         html += "            </tr>";
@@ -436,4 +436,8 @@ function saveConfig() {
     }
 
     var result = window.prompt("Сохранить настройки. Save configuration\n\nПожалуйста, сохраните код, приведённый ниже. Он может быть использован для восстановления настроек в любое время.\nPlease backup the configuration code below, it can be used to restore the current configuration at a later point in time.", window.btoa(code));
+}
+
+window.onload = function() {
+ createTireSets();
 }
