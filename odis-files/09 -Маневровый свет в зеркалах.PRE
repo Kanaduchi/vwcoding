@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><PresetAdaption id="09 - Маневровый свет в зеркалах" sgnr="9" uds="true">
+<Channel id="[VO]_Aussenlicht_uebergreifend" nameArea="DONT_TRANSLATE_AREA" nameKey="[VO]_Aussenlicht_uebergreifend">
+<Param name="[LO]_Umfeldleuchte als Manoevrierleuchte" wert="акт."/>
+</Channel>
+</PresetAdaption>

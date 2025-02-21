@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?><PresetAdaption id="09 - LIN RGB Passat B8 2020 в моей редакции" sgnr="9" uds="true">
+<Channel id="[VO]_Ambience_lightning_color_list_2" nameArea="DONT_TRANSLATE_AREA" nameKey="[VO]_Ambience_lightning_color_list_2">
+<Param name="[LO]_Rotwert Farbe 11" wert="60"/>
+<Param name="[LO]_Gruenwert Farbe 11" wert="255"/>
+<Param name="[LO]_Blauwert Farbe 11" wert="30"/>
+<Param name="[LO]_Rotwert Farbe 12" wert="0"/>
+<Param name="[LO]_Gruenwert Farbe 12" wert="235"/>
+<Param name="[LO]_Blauwert Farbe 12" wert="30"/>
+<Param name="[LO]_Rotwert Farbe 13" wert="0"/>
+<Param name="[LO]_Gruenwert Farbe 13" wert="235"/>
+<Param name="[LO]_Blauwert Farbe 13" wert="110"/>
+<Param name="[LO]_Rotwert Farbe 14" wert="50"/>
+<Param name="[LO]_Gruenwert Farbe 14" wert="255"/>
+<Param name="[LO]_Blauwert Farbe 14" wert="140"/>
+<Param name="[LO]_Rotwert Farbe 15" wert="0"/>
+<Param name="[LO]_Gruenwert Farbe 15" wert="225"/>
+<Param name="[LO]_Blauwert Farbe 15" wert="160"/>
+<Param name="[LO]_Rotwert Farbe 16" wert="0"/>
+<Param name="[LO]_Gruenwert Farbe 16" wert="225"/>
+<Param name="[LO]_Blauwert Farbe 16" wert="200"/>
+<Param name="[LO]_Rotwert Farbe 17" wert="0"/>
+<Param name="[LO]_Gruenwert Farbe 17" wert="200"/>
+<Param name="[LO]_Blauwert Farbe 17" wert="255"/>
+<Param name="[LO]_Rotwert Farbe 18" wert="0"/>
+<Param name="[LO]_Gruenwert Farbe 18" wert="160"/>
+<Param name="[LO]_Blauwert Farbe 18" wert="255"/>
+<Param name="[LO]_Rotwert Farbe 19" wert="0"/>
+<Param name="[LO]_Gruenwert Farbe 19" wert="120"/>
+<Param name="[LO]_Blauwert Farbe 19" wert="255"/>
+<Param name="[LO]_Rotwert Farbe 20" wert="10"/>
+<Param name="[LO]_Gruenwert Farbe 20" wert="90"/>
+<Param name="[LO]_Blauwert Farbe 20" wert="255"/>
+<Param name="[LO]_Rotwert_Farbe_21" wert="30"/>
+<Param name="[LO]_Gruenwert_Farbe_21" wert="40"/>
+<Param name="[LO]_Blauwert_Farbe_21" wert="255"/>
+<Param name="[LO]_Rotwert_Farbe_22" wert="65"/>
+<Param name="[LO]_Gruenwert_Farbe_22" wert="30"/>
+<Param name="[LO]_Blauwert_Farbe_22" wert="255"/>
+<Param name="[LO]_Rotwert_Farbe_23" wert="120"/>
+<Param name="[LO]_Gruenwert_Farbe_23" wert="30"/>
+<Param name="[LO]_Blauwert_Farbe_23" wert="255"/>
+<Param name="[LO]_Rotwert_Farbe_24" wert="195"/>
+<Param name="[LO]_Gruenwert_Farbe_24" wert="30"/>
+<Param name="[LO]_Blauwert_Farbe_24" wert="255"/>
+<Param name="[LO]_Rotwert_Farbe_25" wert="220"/>
+<Param name="[LO]_Gruenwert_Farbe_25" wert="0"/>
+<Param name="[LO]_Blauwert_Farbe_25" wert="255"/>
+<Param name="[LO]_Rotwert_Farbe_26" wert="255"/>
+<Param name="[LO]_Gruenwert_Farbe_26" wert="0"/>
+<Param name="[LO]_Blauwert_Farbe_26" wert="255"/>
+<Param name="[LO]_Rotwert_Farbe_27" wert="255"/>
+<Param name="[LO]_Gruenwert_Farbe_27" wert="0"/>
+<Param name="[LO]_Blauwert_Farbe_27" wert="115"/>
+<Param name="[LO]_Rotwert_Farbe_28" wert="255"/>
+<Param name="[LO]_Gruenwert_Farbe_28" wert="40"/>
+<Param name="[LO]_Blauwert_Farbe_28" wert="90"/>
+<Param name="[LO]_Rotwert_Farbe_29" wert="255"/>
+<Param name="[LO]_Gruenwert_Farbe_29" wert="90"/>
+<Param name="[LO]_Blauwert_Farbe_29" wert="70"/>
+<Param name="[LO]_Rotwert_Farbe_30" wert="240"/>
+<Param name="[LO]_Gruenwert_Farbe_30" wert="110"/>
+<Param name="[LO]_Blauwert_Farbe_30" wert="100"/>
+</Channel>
+<Channel id="IDE11714" nameArea="KDREFTABLE" nameKey="IDE11714">
+<Param name="[LO]_Rotwert Farbe 1" wert="175"/>
+<Param name="[LO]_Gruenwert Farbe 1" wert="255"/>
+<Param name="[LO]_Blauwert Farbe 1" wert="64"/>
+<Param name="[LO]_Rotwert Farbe 2" wert="230"/>
+<Param name="[LO]_Gruenwert Farbe 2" wert="0"/>
+<Param name="[LO]_Blauwert Farbe 2" wert="0"/>
+<Param name="[LO]_Rotwert Farbe 3" wert="242"/>
+<Param name="[LO]_Gruenwert Farbe 3" wert="80"/>
+<Param name="[LO]_Blauwert Farbe 3" wert="10"/>
+<Param name="[LO]_Rotwert Farbe 4" wert="230"/>
+<Param name="[LO]_Gruenwert Farbe 4" wert="100"/>
+<Param name="[LO]_Blauwert Farbe 4" wert="30"/>
+<Param name="[LO]_Rotwert Farbe 5" wert="230"/>
+<Param name="[LO]_Gruenwert Farbe 5" wert="160"/>
+<Param name="[LO]_Blauwert Farbe 5" wert="30"/>
+<Param name="[LO]_Rotwert Farbe 6" wert="255"/>
+<Param name="[LO]_Gruenwert Farbe 6" wert="190"/>
+<Param name="[LO]_Blauwert Farbe 6" wert="0"/>
+<Param name="[LO]_Rotwert Farbe 7" wert="230"/>
+<Param name="[LO]_Gruenwert Farbe 7" wert="230"/>
+<Param name="[LO]_Blauwert Farbe 7" wert="0"/>
+<Param name="[LO]_Rotwert Farbe 8" wert="210"/>
+<Param name="[LO]_Gruenwert Farbe 8" wert="238"/>
+<Param name="[LO]_Blauwert Farbe 8" wert="11"/>
+<Param name="[LO]_Rotwert Farbe 9" wert="210"/>
+<Param name="[LO]_Gruenwert Farbe 9" wert="255"/>
+<Param name="[LO]_Blauwert Farbe 9" wert="0"/>
+<Param name="[LO]_Rotwert Farbe 10" wert="170"/>
+<Param name="[LO]_Gruenwert Farbe 10" wert="255"/>
+<Param name="[LO]_Blauwert Farbe 10" wert="20"/>
+</Channel>
+<Channel id="IDE09731" nameArea="KDREFTABLE" nameKey="IDE09731">
+<Param name="[LO]_Aufloesung Dimmzeit" wert="0.4"/>
+<Param name="[LO]_Ambiente_Farbliste_HMI_mit_Farbtransformation" wert="акт."/>
+<Param name="[LO]_Ambiente_Fahrprofil_Individual" wert="1"/>
+</Channel>
+<Channel id="[VO]_Ambience_lightning_color_list_lin_2" nameArea="DONT_TRANSLATE_AREA" nameKey="[VO]_Ambience_lightning_color_list_lin_2">
+<Param name="[LO]_Rotwert_Farbe_11_lin" wert="59"/>
+<Param name="[LO]_Gruenwert_Farbe_11_lin" wert="255"/>
+<Param name="[LO]_Blauwert_Farbe_11_lin" wert="3"/>
+<Param name="[LO]_Rotwert_Farbe_12_lin" wert="6"/>
+<Param name="[LO]_Gruenwert_Farbe_12_lin" wert="255"/>
+<Param name="[LO]_Blauwert_Farbe_12_lin" wert="2"/>
+<Param name="[LO]_Rotwert_Farbe_13_lin" wert="24"/>
+<Param name="[LO]_Gruenwert_Farbe_13_lin" wert="255"/>
+<Param name="[LO]_Blauwert_Farbe_13_lin" wert="27"/>
+<Param name="[LO]_Rotwert_Farbe_14_lin" wert="70"/>
+<Param name="[LO]_Gruenwert_Farbe_14_lin" wert="255"/>
+<Param name="[LO]_Blauwert_Farbe_14_lin" wert="17"/>
+<Param name="[LO]_Rotwert_Farbe_15_lin" wert="19"/>
+<Param name="[LO]_Gruenwert_Farbe_15_lin" wert="255"/>
+<Param name="[LO]_Blauwert_Farbe_15_lin" wert="60"/>
+<Param name="[LO]_Rotwert_Farbe_16_lin" wert="3"/>
+<Param name="[LO]_Gruenwert_Farbe_16_lin" wert="255"/>
+<Param name="[LO]_Blauwert_Farbe_16_lin" wert="43"/>
+<Param name="[LO]_Rotwert_Farbe_17_lin" wert="1"/>
+<Param name="[LO]_Gruenwert_Farbe_17_lin" wert="255"/>
+<Param name="[LO]_Blauwert_Farbe_17_lin" wert="125"/>
+<Param name="[LO]_Rotwert_Farbe_18_lin" wert="32"/>
+<Param name="[LO]_Gruenwert_Farbe_18_lin" wert="255"/>
+<Param name="[LO]_Blauwert_Farbe_18_lin" wert="200"/>
+<Param name="[LO]_Rotwert_Farbe_19_lin" wert="20"/>
+<Param name="[LO]_Gruenwert_Farbe_19_lin" wert="146"/>
+<Param name="[LO]_Blauwert_Farbe_19_lin" wert="255"/>
+<Param name="[LO]_Rotwert_Farbe_20_lin" wert="9"/>
+<Param name="[LO]_Gruenwert_Farbe_20_lin" wert="65"/>
+<Param name="[LO]_Blauwert_Farbe_20_lin" wert="255"/>
+<Param name="[LO]_Rotwert_Farbe_21_lin" wert="1"/>
+<Param name="[LO]_Gruenwert_Farbe_21_lin" wert="20"/>
+<Param name="[LO]_Blauwert_Farbe_21_lin" wert="255"/>
+<Param name="[LO]_Rotwert_Farbe_22_lin" wert="28"/>
+<Param name="[LO]_Gruenwert_Farbe_22_lin" wert="3"/>
+<Param name="[LO]_Blauwert_Farbe_22_lin" wert="255"/>
+<Param name="[LO]_Rotwert_Farbe_23_lin" wert="63"/>
+<Param name="[LO]_Gruenwert_Farbe_23_lin" wert="38"/>
+<Param name="[LO]_Blauwert_Farbe_23_lin" wert="247"/>
+<Param name="[LO]_Rotwert_Farbe_24_lin" wert="142"/>
+<Param name="[LO]_Gruenwert_Farbe_24_lin" wert="60"/>
+<Param name="[LO]_Blauwert_Farbe_24_lin" wert="255"/>
+<Param name="[LO]_Rotwert_Farbe_25_lin" wert="188"/>
+<Param name="[LO]_Gruenwert_Farbe_25_lin" wert="30"/>
+<Param name="[LO]_Blauwert_Farbe_25_lin" wert="255"/>
+<Param name="[LO]_Rotwert_Farbe_26_lin" wert="255"/>
+<Param name="[LO]_Gruenwert_Farbe_26_lin" wert="32"/>
+<Param name="[LO]_Blauwert_Farbe_26_lin" wert="244"/>
+<Param name="[LO]_Rotwert_Farbe_27_lin" wert="255"/>
+<Param name="[LO]_Gruenwert_Farbe_27_lin" wert="8"/>
+<Param name="[LO]_Blauwert_Farbe_27_lin" wert="42"/>
+<Param name="[LO]_Rotwert_Farbe_28_lin" wert="255"/>
+<Param name="[LO]_Gruenwert_Farbe_28_lin" wert="34"/>
+<Param name="[LO]_Blauwert_Farbe_28_lin" wert="19"/>
+<Param name="[LO]_Rotwert_Farbe_29_lin" wert="255"/>
+<Param name="[LO]_Gruenwert_Farbe_29_lin" wert="79"/>
+<Param name="[LO]_Blauwert_Farbe_29_lin" wert="19"/>
+<Param name="[LO]_Rotwert_Farbe_30_lin" wert="255"/>
+<Param name="[LO]_Gruenwert_Farbe_30_lin" wert="138"/>
+<Param name="[LO]_Blauwert_Farbe_30_lin" wert="42"/>
+</Channel>
+<Channel id="[VO]_Ambientelicht Zuordnung der Farbe zum Fahrprofil" nameArea="DONT_TRANSLATE_AREA" nameKey="[VO]_Ambientelicht Zuordnung der Farbe zum Fahrprofil">
+<Param name="[LO]_Fahrprofil_0" wert="1"/>
+<Param name="[LO]_Fahrprofil_1" wert="7"/>
+<Param name="[LO]_Fahrprofil_2" wert="19"/>
+<Param name="[LO]_Fahrprofil_3" wert="2"/>
+<Param name="[LO]_Fahrprofil_4" wert="6"/>
+<Param name="[LO]_Fahrprofil_5" wert="12"/>
+<Param name="[LO]_Fahrprofil_6" wert="8"/>
+<Param name="[LO]_Fahrprofil_7" wert="25"/>
+<Param name="[LO]_Fahrprofil_8" wert="9"/>
+<Param name="[LO]_Fahrprofil_9" wert="9"/>
+<Param name="[LO]_Fahrprofil_10" wert="17"/>
+<Param name="[LO]_Fahrprofil_11" wert="4"/>
+<Param name="[LO]_Fahrprofil_12" wert="1"/>
+<Param name="[LO]_Fahrprofil_13" wert="1"/>
+<Param name="[LO]_Fahrprofil_14" wert="1"/>
+<Param name="[LO]_Fahrprofil_15" wert="1"/>
+<Param name="[LO]_Ambiente" wert="[VO]_Keine_Spannungsanforderung"/>
+</Channel>
+<Channel id="IDE12412" nameArea="KDREFTABLE" nameKey="IDE12412">
+<Param name="[LO]_Rotwert_Farbe_1_lin" wert="175"/>
+<Param name="[LO]_Gruenwert_Farbe_1_lin" wert="255"/>
+<Param name="[LO]_Blauwert_Farbe_1_lin" wert="64"/>
+<Param name="[LO]_Rotwert_Farbe_2_lin" wert="255"/>
+<Param name="[LO]_Gruenwert_Farbe_2_lin" wert="3"/>
+<Param name="[LO]_Blauwert_Farbe_2_lin" wert="1"/>
+<Param name="[LO]_Rotwert_Farbe_3_lin" wert="225"/>
+<Param name="[LO]_Gruenwert_Farbe_3_lin" wert="25"/>
+<Param name="[LO]_Blauwert_Farbe_3_lin" wert="3"/>
+<Param name="[LO]_Rotwert_Farbe_4_lin" wert="255"/>
+<Param name="[LO]_Gruenwert_Farbe_4_lin" wert="88"/>
+<Param name="[LO]_Blauwert_Farbe_4_lin" wert="4"/>
+<Param name="[LO]_Rotwert_Farbe_5_lin" wert="255"/>
+<Param name="[LO]_Gruenwert_Farbe_5_lin" wert="178"/>
+<Param name="[LO]_Blauwert_Farbe_5_lin" wert="5"/>
+<Param name="[LO]_Rotwert_Farbe_6_lin" wert="255"/>
+<Param name="[LO]_Gruenwert_Farbe_6_lin" wert="198"/>
+<Param name="[LO]_Blauwert_Farbe_6_lin" wert="0"/>
+<Param name="[LO]_Rotwert_Farbe_7_lin" wert="182"/>
+<Param name="[LO]_Gruenwert_Farbe_7_lin" wert="255"/>
+<Param name="[LO]_Blauwert_Farbe_7_lin" wert="4"/>
+<Param name="[LO]_Rotwert_Farbe_8_lin" wert="149"/>
+<Param name="[LO]_Gruenwert_Farbe_8_lin" wert="255"/>
+<Param name="[LO]_Blauwert_Farbe_8_lin" wert="3"/>
+<Param name="[LO]_Rotwert_Farbe_9_lin" wert="114"/>
+<Param name="[LO]_Gruenwert_Farbe_9_lin" wert="255"/>
+<Param name="[LO]_Blauwert_Farbe_9_lin" wert="3"/>
+<Param name="[LO]_Rotwert_Farbe_10_lin" wert="78"/>
+<Param name="[LO]_Gruenwert_Farbe_10_lin" wert="255"/>
+<Param name="[LO]_Blauwert_Farbe_10_lin" wert="3"/>
+</Channel>
+</PresetAdaption>
