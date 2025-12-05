@@ -71,7 +71,7 @@ Personalization of lane dept. warning Cl. 15 on (Персонализация м
 HCA - Указание блоку рулевого управления о наличии Lane Assist
 ``` yaml title="логин-пароль: 19249"
 Блок 44 (усилитель рулевого) → Кодирование:
-Байт 03 – Бит 1 (Heading_control_assist): Активировать
+Байт 01 – Бит 3 (Heading_control_assist): Активировать
 → Применить 
 ```
 
