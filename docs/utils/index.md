@@ -19,7 +19,7 @@ hide:
     Подтверждение прошивки ГУ (F5) на автомобилях VW
 
     ---
-    [:octicons-arrow-right-24: Open](./datasetEditor)
+    [:octicons-arrow-right-24: Open](./xorCalculator)
 
 -   :material-text-box-edit:{ .lg .middle } __Редактор параметрий__
 
