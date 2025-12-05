@@ -16,13 +16,13 @@ Calibration target position-Target 1: calibration mark 1: x-coordinate, Passat 2
 Calibration target position-Target 1: calibration mark 1: y-coordinate, Passat 745 mm (Tiguan 735 mm)
 Calibration target position-Target 1: calibration mark 1: z-coordinate, Passat 1506 mm (Tiguan 1694 mm)
 Calibration target position-Target 1: calibration mark 2: x-coordinate, Passat 2400 mm (Tiguan 2541 mm)
-Calibration target position-Target 1: calibration mark 2: y-coordinate, Passat -745 mm (Tiguan 735 mm)
+Calibration target position-Target 1: calibration mark 2: y-coordinate, Passat -745 mm (Tiguan -735 mm)
 Calibration target position-Target 1: calibration mark 2: z-coordinate, Passat 1506 mm (Tiguan 1694 mm)
 Calibration target position-Target 1: calibration mark 3: x-coordinate, Passat 2400 mm (Tiguan 2541 mm)
 Calibration target position-Target 1: calibration mark 3: y-coordinate, Passat 745 mm (Tiguan 735 mm)
 Calibration target position-Target 1: calibration mark 3: z-coordinate, Passat 846 mm (Tiguan 1106 mm)
 Calibration target position-Target 1: calibration mark 4: x-coordinate, Passat 2400 mm (Tiguan 2541 mm)
-Calibration target position-Target 1: calibration mark 4: y-coordinate, Passat -745 mm (Tiguan 735 mm)
+Calibration target position-Target 1: calibration mark 4: y-coordinate, Passat -745 mm (Tiguan -735 mm)
 Calibration target position-Target 1: calibration mark 4: z-coordinate, Passat 846 mm (Tiguan 1106 mm)
 ```
 Координата X — расстояние от глазка камеры до калибровочного поля (продольная ось),  
