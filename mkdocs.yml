@@ -154,7 +154,7 @@ plugins:
             Отпирание и запирание: Open and Closing
             Освещение: Lights
             Кодирование фонарей: General codings
-            Передние фонари: Front lights
+            Передние фары: Front lights
             Задние фонари: Rear lights
             Звук: Sound
             Климат: Climate
@@ -277,7 +277,7 @@ nav:
       - Отпирание и запирание: MQB/security.md
       - Освещение:
           - Кодирование фонарей: MQB/codingLights.md
-          - Передние фонари: MQB/headLights.md
+          - Передние фары: MQB/headLights.md
           - Задние фонари: MQB/rearLights.md
       - Звук: MQB/sound.md
       - Климат: MQB/climate.md
