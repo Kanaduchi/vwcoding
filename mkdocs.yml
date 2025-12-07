@@ -56,6 +56,8 @@ theme:
     - content.action.view
     - content.code.annotate
     - content.code.copy
+    - content.code.select
+    - content.tabs.link
     - content.tooltips
     - navigation.expand
     - navigation.footer
@@ -63,6 +65,7 @@ theme:
     - navigation.instant
     - navigation.instant.progress
     - navigation.path
+    - navigation.prune
     - navigation.tabs
     - navigation.top
     - navigation.tracking
