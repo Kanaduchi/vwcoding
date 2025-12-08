@@ -29,7 +29,7 @@ Lighting_Assist_Adaptation:
 → Apply
 ```
 
-### Save high beam assistant settings (on ignition change)
+### Save high-beam assistant settings (on ignition change)
 
 :octicons-verified-24: SFD: yes :octicons-verified-24: Tested SW: 0159-0161
 
@@ -198,7 +198,7 @@ Leuchte 32 AMBL 2 C35:
 → Apply
 ```
 
-### Deactivate light strip (between the headlights)
+### Deactivate the light strip (between the headlights)
 
 :octicons-verified-24: SFD: yes :octicons-verified-24: Tested SW: 0159-0161
 

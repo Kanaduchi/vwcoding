@@ -24,8 +24,8 @@ hide:
 
 -   :material-text-box-edit:{ .lg .middle } __Dataset editor__
 
-    Experimental tool for working with dataset files. May works incorrectly
-    
+    Experimental tool for working with dataset files. May work incorrectly
+  
     ---
     [:octicons-arrow-right-24: Open](./datasetEditor)
 

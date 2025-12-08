@@ -20,7 +20,7 @@ Codings were provided by **n3oka**
 
 !!! tip "Offline version"
     [Download offline version :material-download:](https://drive.google.com/file/d/1Ybj7CvYJjE81WpjKkBgFsONvx6q1fgpP/view?fbclid=IwAR0uK9Rusg_bGJ96JcGQRc2-WJEMXpSc92RvgYhZRa6SplEh9w-iSXs1qj4){ .md-button .md-button--primary }
-       
+  
 ### Автомобили на этой платформе
 Audi A3 Mk4 (2020–present)  
 Audi Q6 (2022–present)  

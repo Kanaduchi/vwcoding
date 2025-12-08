@@ -10,13 +10,14 @@ comments: false
   .md-typeset h1,
   .md-content__button {
     display: none;
+  }
 </style>
 
 !!! give-money inline end "Support VWCoding"
     If you liked this project and are ready to support it for further development, you can do so using:  
-    
+  
     ![BTC wallet](images/btc.png){ width="100" align=left }
-    
+  
     BTC Wallet: `1BKR5d91YUic3aqwc6nTGTMLkGBBrZkkcj`
 
 !!! info "Translation to English is in progress"
@@ -24,7 +25,7 @@ comments: false
 
 !!! danger "Warning!"
     Sharing information from this site is allowed only with the copyright notice and link to this resource.  
-    
+  
     All changes you make at your own risk! We are not responsible for your actions!
 
 * [x] There is a commenting system at most of the pages where you can ask questions both in English and Russian languages.  
@@ -33,6 +34,6 @@ comments: false
 
 * [x] Coding steps do not affect the warranty.  
 
-* [x] Some of your changes can be possible reverted to default during visiting your official dealership. Please make a backup of all changes to restore them in case of such situation.  
+* [x] Some of your changes can be possibly reverted to default during visiting your official dealership. Please make a backup of all changes to restore them in case of such a situation.  
 
-* [x] Before doing any codings we recommend creating a backup of particular hardware part.  
+* [x] Before doing any codings we recommend creating a backup of a particular hardware part.  

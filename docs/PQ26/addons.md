@@ -101,15 +101,15 @@ Windshield wiper — Regensensor aktivieren – акт.
 ```
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Leuchte6ABL LB44 - Type_Of_Load_6 – выбираем Xenon Abblendlicht
-Leuchte7ABL RB5 - Type_Of_Load_7 – выбираем Xenon Abblendlicht
+Leuchte6ABL LB44 – Type_Of_Load_6 – выбираем Xenon Abblendlicht
+Leuchte7ABL RB5 – Type_Of_Load_7 – выбираем Xenon Abblendlicht
 → Применить 
 ```
 
 ### [PR-PXE] Установка би-ксенона
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Кодирование:
-Lower_beam_lamp_typ - GDL
+Lower_beam_lamp_typ – GDL
 → Применить (с перезагрузкой блока)
 ```
 ``` yaml title="логин-пароль: 31347"
@@ -285,10 +285,10 @@ Leuchte9FL RB7-Type_Of_Load_9 → Shutter (Camera lock)
 ### Замена задних фонарей на LED
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Leuchte23SL HLC7 - Type_Of_Load_23 → Allgemeine LED mit Open Load Diagnose 
-Leuchte23SL HLC7 - Dimming_AB_23 → 100
-Leuchte24SL HRA69 - Type_Of_Load_24 → Allgemeine LED mit Open Load Diagnose 
-Leuchte24SL HRA69 - Dimming_AB_24 → 100
+Leuchte23SL HLC7 – Type_Of_Load_23 → Allgemeine LED mit Open Load Diagnose 
+Leuchte23SL HLC7 – Dimming_AB_23 → 100
+Leuchte24SL HRA69 – Type_Of_Load_24 → Allgemeine LED mit Open Load Diagnose 
+Leuchte24SL HRA69 – Dimming_AB_24 → 100
 ```
 
 ### Замена аккумуляторной батареи
@@ -302,7 +302,7 @@ Leuchte24SL HRA69 - Dimming_AB_24 → 100
 ``` yaml
 Блок 19 → Адаптация:
 Battery Adaption – Battery capacity – вписываем нужное значение
-Battery Adaption – Battery serial number - значение увеличением на 1.
+Battery Adaption – Battery serial number – значение увеличением на 1.
 → Применить (с перезагрузкой блока)
 ```
 
@@ -311,7 +311,7 @@ Battery Adaption – Battery serial number - значение увеличени
 Номер пина — А 018 545 8626  
 Плафон подсветки отсека в центральной консоли - 7P6 919 390 A KT1  
 Корпус разъема - 8K0 973 754  
-Пины для разъема - N907 647 01  
+Пины для разъема – N907 647 01  
 Плафон подсветки ног - 8J0947409А  
 Разъем на плафон подсветки ног - 4B0 971 832  
 
@@ -323,16 +323,16 @@ Battery Adaption – Battery serial number - значение увеличени
 ```
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Leuchte10SHUTTER LRB45 - Dimming_AB_10 - 100
-Leuchte10SHUTTER LRB45 - Fehlerort_mittleres_Byte_DTC-DFCC_10 - 03
-Leuchte10SHUTTER LRB45 - Light_Function_A_10 - Ambientelicht 1
-Leuchte10SHUTTER LRB45 - Type_Of_Load_10 - LED Kleinleistung ohne Open Load Diagnose.
+Leuchte10SHUTTER LRB45 – Dimming_AB_10 – 100
+Leuchte10SHUTTER LRB45 – Fehlerort_mittleres_Byte_DTC-DFCC_10 – 03
+Leuchte10SHUTTER LRB45 – Light_Function_A_10 – Ambientelicht 1
+Leuchte10SHUTTER LRB45 – Type_Of_Load_10 – LED Kleinleistung ohne Open Load Diagnose.
 → Применить 
 ```
 Яркость по умолчанию задается в канале:
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Ambient lighting - Defaultwert Ambienteprofil Vorn - 80%
+Ambient lighting – Defaultwert Ambienteprofil Vorn – 80%
 → Применить 
 ```
 
@@ -376,7 +376,7 @@ T4/4pin — к сигналу включения задней скорости (
 ```
 
 ### [PR-XXX +4LB, 4LC] Многофункциональное рулевое колесо
-4LB Элемент управления для магнитолы    
+4LB Элемент управления для магнитолы  
 4LC Элемент управления для магнитолы и телефона  
 Варианты рулей (для информации):  
 565064241B CXA. Многофункц. рул. колесо (кожа) черный/черный.  
@@ -393,8 +393,8 @@ T4/4pin — к сигналу включения задней скорости (
 ```
 ``` yaml title="логин-пароль: 20103"
 Блок 5F → Адаптация:
-Car_Function_List_CAN_Gen2 - MFL — available
-Car_Function_List_BAP_Gen2 - MFA_0x0F — activated
+Car_Function_List_CAN_Gen2 – MFL — available
+Car_Function_List_BAP_Gen2 – MFA_0x0F — activated
 → Применить
 ```
 
@@ -406,8 +406,8 @@ Car_Function_List_BAP_Gen2 - MFA_0x0F — activated
 5. Разъем: 8K0 973 754B  
 6. Пины для разъема: N 907 647 01 – 2 шт.  
 7. Провода около 3 м.  
-Подключение в районе блока предохранителей.   
-Минус – к болту. Плюс - к свободному предохранителю (можно к постоянно подключенному, можно к работающему при включенном зажигании).
+Подключение в районе блока предохранителей.  
+Минус – к болту. Плюс – к свободному предохранителю (можно к постоянно подключенному, можно к работающему при включенном зажигании).
 
 ### Активация эстетической подсветки салона после самостоятельной доустановки (19 м.г.)
 ``` yaml title="логин-пароль: 31347"
@@ -453,8 +453,8 @@ Leuchte32AMBL 2C64-Type_Of_Load_32 → LED Kleinleistung ohne Open Load Diagnose
 ```
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Assistance light functions - Menuesteuerung Fernlichtassistent, adjustable 
-Assistance light functions - Menuesteuerung Fernlichtassistent Werkseinstellung, adjustable 
+Assistance light functions – Menuesteuerung Fernlichtassistent, adjustable 
+Assistance light functions – Menuesteuerung Fernlichtassistent Werkseinstellung, adjustable 
 → Применить 
 ```
 

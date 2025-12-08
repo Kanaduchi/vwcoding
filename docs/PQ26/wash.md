@@ -3,7 +3,7 @@
 ### Сервисное положение стеклоочистителей в меню Swing
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Windshield wiper - Menuesteuerung Frontwischer: Активировать
+Windshield wiper – Menuesteuerung Frontwischer: Активировать
 → Применить
 ```
 
@@ -21,8 +21,8 @@ Windshield wiper:
 ### Дополнительный взмах передних стеклоочистителей (дотирка капель)
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Rear Window Wiper - Traenenwischen Heck: Активировать
-Windshield wiper - Traenenwischen Front Status: Активировать
+Rear Window Wiper – Traenenwischen Heck: Активировать
+Windshield wiper – Traenenwischen Front Status: Активировать
 → Применить
 ```
 
@@ -42,8 +42,8 @@ Windshield wiper-SRA Waschzeit → 2300 ms заменить на 0
 
 ### Увеличение интервала и времени срабатывания омывателей фар
 
-Параметр, отвечающий на какой раз омывания стекла сработают фароомыватели.  
-Если сменить стандартные “9” на 1 - то сработают каждый раз.  
+Параметр, отвечающий, на какой раз омывания стекла сработают фароомыватели.  
+Если сменить стандартные “9” на 1 — то сработают каждый раз.  
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
 Windshield wiper-Anzahl Betaetigungen Frontwaschanlage pro SRA Aktivierung → вводим «15»
@@ -57,7 +57,7 @@ Windshield wiper — SRA Verzoegerungszeit → меняем стандартны
 → Применить
 ```
 
-Сколько секунд будут работать фароомыватели
+Сколько секунд будут работать фаро-омыватели
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
 Windshield wiper — SRA Waschzeit → стандартное значение 600 мс.
@@ -78,13 +78,13 @@ Rear Window Wiper-Komfortwischen Heck → not active
     Задний дворник начинает срабатывать при продолжительной непрерывной работе передних дворников на 2 скорости.
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Rear Window Wiper - Automatisches Heckwischen: Активировать
+Rear Window Wiper – Automatisches Heckwischen: Активировать
 → Применить
 ```
 
 ### Положение размораживания дворников
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Windshield wiper - Frontwischer Abtauposition → Abtauposition temperaturunabhaengig Referenzwischen 
+Windshield wiper – Frontwischer Abtauposition → Abtauposition temperaturunabhaengig Referenzwischen 
 → Применить
 ```

@@ -4,7 +4,7 @@
 ### Отключение освещения номерного знака при открытии багажника
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Leuchte 25KZL HA60-Light_Control_HD_AB_25 - вместо «Always» выбираем значение «Only if closed»
+Leuchte 25KZL HA60-Light_Control_HD_AB_25 – вместо «Always» выбираем значение «Only if closed»
 → Применить
 ```
 
@@ -92,7 +92,7 @@ Aussenlicht_Front-Tagfahrlicht-Dauerfahrlicht aktiviert zusaetzlich Standlicht: 
 ### Включение задних габаритов в режиме ДХО (без подсветки номера и приборки)
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Leuchte23SL HLC7-Light_Function_D_23 → выбираем - Daytime running lights → сохранить
+Leuchte23SL HLC7-Light_Function_D_23 → выбираем – Daytime running lights → сохранить
 Leuchte24SL HRA69-Light_Function_D_24 → выбираем → Daytime running lights → сохранить
 Leuchte23SL HLC7-Dimming_CD_23:  «75» → сохранить
 Leuchte24SL HRA69-Dimming_CD_24:  «75» → сохранить
@@ -103,7 +103,7 @@ Leuchte24SL HRA69-Dimming_CD_24:  «75» → сохранить
 
 !!! warning "" 
     При такой кодировке невозможно использовать дальний вместе с противотуманками.
-    
+  
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
 Driving light and parking light:
@@ -137,12 +137,12 @@ Leuchte7ABL RB5-Dimming_Direction_CD_7, “с maximize” меняем на mini
 ### Стробоскоп: ДХО LED – Дальний свет
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
-Leuchte4TFL LB43-Light_Function_G_4 - Lichthupe (Headlamp flasher)*
+Leuchte4TFL LB43-Light_Function_G_4 – Lichthupe (Headlamp flasher)*
 Leuchte4TFL LB43-Dimming_GH_4 → 0
-Leuchte4TFL LB43-Dimming_Direction_GH_4 - minimize
-Leuchte5 TFL RB6-Light_Function_G_5 - Lichthupe (Headlamp flasher)*
-Leuchte5 TFL RB6-Dimming_GH_5 - 0
-Leuchte5 TFL RB6-Dimming_Direction_GH_5 - minimize
+Leuchte4TFL LB43-Dimming_Direction_GH_4 – minimize
+Leuchte5 TFL RB6-Light_Function_G_5 – Lichthupe (Headlamp flasher)*
+Leuchte5 TFL RB6-Dimming_GH_5 – 0
+Leuchte5 TFL RB6-Dimming_Direction_GH_5 – minimize
 → Применить
 ```
 
@@ -195,7 +195,7 @@ Aussenlicht_uebergreifend — lho_zeit – 10 s
 
 !!! note ""
     Возможные названия для поиска: Au?enlicht_Blinker, Komfortblinken, Blinkzyklen.
-    
+  
 ``` yaml title="логин-пароль: 31347"
 Блок 09 → Адаптация:
 Aussenlicht_Blinker:

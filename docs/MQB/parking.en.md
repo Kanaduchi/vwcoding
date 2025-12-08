@@ -11,6 +11,6 @@ Shutdown parking aid: 20km/h
 ### 3D Area View for the rearview camera
 
 ``` yaml
-Block 6C - Rear View Camera System → Coding:
+Block 6C – Rear View Camera System → Coding:
 3D_Presentation: Activate
 ```

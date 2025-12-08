@@ -86,7 +86,7 @@ function_configuration_radio:
 → Apply
 ```
 
-### Enable summer time setting in the HMI
+### Enable summer setting in the HMI
 
 :octicons-verified-24: SFD: ??? :octicons-verified-24: Tested SW: 1941
 
@@ -115,7 +115,7 @@ function_configuration_sound:
 
 :octicons-verified-24: SFD: ??? :octicons-verified-24: Tested SW: 1941
 
-![Screenshot](../images/MQB-Evo/MIB3_harman_logo.png)   
+![Screenshot](../images/MQB-Evo/MIB3_harman_logo.png)  
 
 ``` yaml 
 Control unit 5F → Adjustments:
@@ -176,7 +176,7 @@ function_configuration_hmi:
 → Apply
 ```
 
-### Display images from USB stick
+### Display images from a USB stick
 
 :octicons-verified-24: SFD: yes :octicons-verified-24: Tested SW: 1899-1941
 

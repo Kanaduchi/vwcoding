@@ -110,7 +110,7 @@ ZV allgemein:
 
 ### Automatic locking when walking away (if forgetting to lock the car)
 
-:octicons-verified-24: SFD: yes :octicons-verified-24: Tested SW: 0174 - 0183
+:octicons-verified-24: SFD: yes :octicons-verified-24: Tested SW: 0174 – 0183
 
 !!! error ""
     Only possible from software version 0174 onwards. Not possible with versions below 0174.  
