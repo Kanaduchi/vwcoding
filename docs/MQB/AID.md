@@ -8,7 +8,7 @@
     Приборные панели второго типа (5NA920790D) не поддерживаются
 
 !!! warning ""
-    Кодирование выполняется только при включенном зажигании и не запущенном двигателе
+    Кодирование выполняется только при включенном зажигании и незапущенном двигателе
   
 === "Кодирование в ODIS"
     ``` yaml title="логин-пароль: 20103"
@@ -29,7 +29,7 @@
     Байт 1 – Бит 0 (Gauge test/ Needle Sweep / Staging): Активировать
     Выход → Сохранить  
     ```
-    ![Screenshot](../images/MQB/staging.jpg)
+    ![Screenshot](../images/MQB/AID/staging.jpg)
 
 ### Отключение звукового и визуального предупреждения, если при заведенном автомобиле ключ оказался вне салона
 ``` yaml
@@ -70,7 +70,7 @@ Picture_Upload_Download: Активировать
     Байт 10 – Бит 4 (Volume to be Replenished): Активировать  
     Выход → Сохранить  
     ```
-    ![Screenshot](../images/MQB/refill.jpg)
+    ![Screenshot](../images/MQB/AID/refill.jpg)
 
 !!! tip ""
     Шаг показаний сколько заливать топлива кратен 5 литрам т.е. 5-10-15-20 и т.д  
@@ -79,7 +79,7 @@ Picture_Upload_Download: Активировать
 ### Таймер круга
 
 !!! warning ""
-    Кодирование выполняется только при включенном зажигании и не запущенном двигателе
+    Кодирование выполняется только при включенном зажигании и незапущенном двигателе
 
 === "Кодирование в ODIS"
     ``` yaml title="логин-пароль: 20103"
@@ -94,7 +94,7 @@ Picture_Upload_Download: Активировать
     Байт 1 – Бит 3 (Lap Timer active): Активировать  
     Выход → Сохранить  
     ```
-    ![Screenshot](../images/MQB/staging.jpg)
+    ![Screenshot](../images/MQB/AID/staging.jpg)
 
 ### Отображение мгновенного расхода
 
@@ -129,8 +129,30 @@ Ignition active message; trigger (Сообщение Поджиг активен
 ### Активация промежуточных значений спидометра
 
 !!! note ""
-    Работает только на приборных панелях AID нового образца с 2019 года. В любом варианте 100 км/ч всегда стрелка вертикально вверх.  
-    Исполнение_4 - максимальная скорость 260 и промежуточные значения.  
+    Работает только на приборных панелях AID нового образца с 2019 года.  
+    В любом варианте 100 км/ч всегда вверху.
+
+??? Variants
+    Variant_0
+    ![Screenshot](../images/MQB/AID/speed_variant_0.png)
+    Variant_1
+    ![Screenshot](../images/MQB/AID/speed_variant_1.png)
+    Variant_2
+    ![Screenshot](../images/MQB/AID/speed_variant_2.png)
+    Variant_3
+    ![Screenshot](../images/MQB/AID/speed_variant_3.png)
+    Variant_4
+    ![Screenshot](../images/MQB/AID/speed_variant_4.png)
+    Variant_5
+    ![Screenshot](../images/MQB/AID/speed_variant_5.png)
+    Variant_6
+    ![Screenshot](../images/MQB/AID/speed_variant_6.png)
+    Variant_7
+    ![Screenshot](../images/MQB/AID/speed_variant_7.png)
+    Variant_8
+    ![Screenshot](../images/MQB/AID/speed_variant_8.png)    
+    Variant_9
+    ![Screenshot](../images/MQB/AID/speed_variant_9.png)  
 
 ``` yaml title="логин-пароль: 20103"
 Блок 17 → Адаптация:
@@ -183,25 +205,27 @@ R_Logo: выбрать нужное
     Байт 3 – Бит 0-2: Исполнение 3
     Выход → Сохранить  
     ```
-    ![Screenshot](../images/MQB/speed.png)
+    ![Screenshot](../images/MQB/AID/speed.png)
 
 ### Смена вида отображаемого автомобиля
 
 !!! warning
     не работает, если включена Эстетическая подсветка
 
-``` yaml title="логин-пароль: 20103"
-Блок 17 → Кодирование:
-Vehicle variant: варианты 2, 4, 6, 8
-→ Применить
-```
-
 ### Смена скина приборной панели
 
 === "Приборные панели VW 5NA920790A/B/C, 5NA920791A/B/C"
 
+    Темы задаются путем изменения комбинаций 2-х параметров
+    ``` yaml title="логин-пароль: 20103"
+    Блок 17 → Кодирование:
+    Tube_version: 0..9
+    Vehicle variant: 0..9
+    → Применить
+    ```
+
     Вариант 1 – Стандартная схема  
-    ![Screenshot](../images/MQB/AID-themes/StandartTheme.jpg)
+    ![Screenshot](../images/MQB/AID/themes/StandartTheme.jpg)
     ``` yaml title="логин-пароль: 20103"
     Блок 17 → Адаптация:
     Tube_version: варианты 0, 5, 6, 7, 8, 9
@@ -209,7 +233,7 @@ Vehicle variant: варианты 2, 4, 6, 8
     ```
 
     Вариант 2 – Стандартная схема c большим количеством точек  
-    ![Screenshot](../images/MQB/AID-themes/StandartThemeMoreDots.jpg)
+    ![Screenshot](../images/MQB/AID/themes/StandartThemeMoreDots.jpg)
     ``` yaml title="логин-пароль: 20103"
     Блок 17 → Адаптация:
     Tube_version: вариант 1
@@ -217,7 +241,7 @@ Vehicle variant: варианты 2, 4, 6, 8
     ```
 
     Вариант 3 – Alltrack тема  
-    ![Screenshot](../images/MQB/AID-themes/AllTrackTheme.jpg)
+    ![Screenshot](../images/MQB/AID/themes/AllTrackTheme.jpg)
     ``` yaml title="логин-пароль: 20103"
     Блок 17 → Адаптация:
     Tube_version: вариант 2
@@ -225,7 +249,7 @@ Vehicle variant: варианты 2, 4, 6, 8
     ```
 
     Вариант 4 – GTI / GTD тема  
-    ![Screenshot](../images/MQB/AID-themes/GTITheme.jpg)
+    ![Screenshot](../images/MQB/AID/themes/GTITheme.jpg)
     ``` yaml title="логин-пароль: 20103"
     Блок 17 → Адаптация:
     Tube_version: вариант 3
@@ -233,7 +257,7 @@ Vehicle variant: варианты 2, 4, 6, 8
     ```
 
     Вариант 5 – R-line тема  
-    ![Screenshot](../images/MQB/AID-themes/RTheme.jpg)
+    ![Screenshot](../images/MQB/AID/themes/RTheme.jpg)
     ``` yaml title="логин-пароль: 20103"
     Блок 17 → Адаптация: 
     Tube_version: вариант 4
@@ -244,7 +268,7 @@ Vehicle variant: варианты 2, 4, 6, 8
     ```
 
     Вариант 6 – R-line тема со логотипом R-line внизу приборной панели  
-    ![Screenshot](../images/MQB/AID-themes/RThemeWithLogo.jpg)
+    ![Screenshot](../images/MQB/AID/themes/RThemeWithLogo.jpg)
     ``` yaml title="логин-пароль: 20103"
     Блок 17 → Адаптация:
     Tube_version: вариант 4
@@ -255,6 +279,34 @@ Vehicle variant: варианты 2, 4, 6, 8
     ```
 
 === "Приборные панели VW 5NA920790D"
+
+    ``` yaml title="логин-пароль: 20103"
+    Блок 17 → Кодирование:
+    Tube_version
+    - Skinning: 0..9
+    → Применить
+    ```
+
+    variant 0  
+    ![Screenshot](../images/MQB/AID/themes_D/variant_0.png)  
+    variant 1  
+    ![Screenshot](../images/MQB/AID/themes_D/variant_1.png)  
+    variant 2  
+    ![Screenshot](../images/MQB/AID/themes_D/variant_2.png)  
+    variant 3  
+    ![Screenshot](../images/MQB/AID/themes_D/variant_3.png)  
+    variant 4  
+    ![Screenshot](../images/MQB/AID/themes_D/variant_4.png)  
+    variant 5  
+    ![Screenshot](../images/MQB/AID/themes_D/variant_5.png)  
+    variant 6  
+    ![Screenshot](../images/MQB/AID/themes_D/variant_6.png)  
+    variant 7  
+    ![Screenshot](../images/MQB/AID/themes_D/variant_7.png)  
+    variant 8  
+    ![Screenshot](../images/MQB/AID/themes_D/variant_8.png)  
+    variant 9  
+    ![Screenshot](../images/MQB/AID/themes_D/variant_9.png)
 
 === "Приборные панели Seat"
 
