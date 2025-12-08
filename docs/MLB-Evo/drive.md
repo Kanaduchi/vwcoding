@@ -7,7 +7,7 @@
 Overtaking_right_prevention: Деактивировать
 ```
 
-### Уменьшение рывка при трогании с autohold'a
+### Уменьшение рывка при трогании с autohold
 ``` yaml
 Блок 03 → Адаптация:
 Treshold_for_drive_away_assist:

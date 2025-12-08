@@ -14,16 +14,16 @@
 7 пин камера А5 (R242) -→ 5 пин радара АСС (J428)  
 6 пин — "+"  
 5 пин — "-"  
-2 пин — Can extended low - 8 пин в разъеме зеркала  
-8 пин — Can extended high - 3 пин в разъеме зеркала  
+2 пин — Can extended low – 8 пин в разъеме зеркала  
+8 пин — Can extended high – 3 пин в разъеме зеркала  
 4 пин — плюсовой провод обогревателя камеры  
-10 пин — минусовой провод обогревателя камеры  
+10 пин — минусовый провод обогревателя камеры  
   
 Схема  
-![Screenshot](../images/MQB/addons/A5-scheme.jpeg)   
+![Screenshot](../images/MQB/addons/A5-scheme.jpeg)  
 
 Макет для калибровки  
-![Screenshot](../images/MQB/addons/Front_maket.jpg)   
+![Screenshot](../images/MQB/addons/Front_maket.jpg)  
 
 [(Кодирование камеры)](3Q0_assistants)
 [(Калибровка камеры)](3Q0_calibration)
@@ -204,11 +204,11 @@ Sun_sensor_supplier_differentiation:
 
 ### Датчик влажности
 
-Датчик 3Q0907643 ставится вместо штатного датчика грязного воздуха   
+Датчик 3Q0907643 ставится вместо штатного датчика грязного воздуха  
 
 ``` yaml
 Блок 08 → Кодирование:
-Байт 9 – Бит 4-5 (10 - Датчик влажности наружнего воздуха установлен / Sensor_for_air_humidity_outside): Активировать
+Байт 9 – Бит 4-5 (10 – Датчик влажности наружнего воздуха установлен / Sensor_for_air_humidity_outside): Активировать
 Reduction of window misting outside at high humidity: Matching glass temperature model
 → Применить (с перезагрузкой блока)
 ```
@@ -223,7 +223,7 @@ Reduction of window misting outside at high humitity:
 
 ``` yaml
 Блок 19 → Адаптация:
-Installation list - specified installations:
+Installation list – specified installations:
 - Sound System: Not coded
 - Digital Sound System Control Module: Yes
 GW_Enable_CAN_Timeout_DTC:
@@ -277,14 +277,14 @@ Car_Function_List_BAP_Gen2:
 → Применить
 ```
 
-### [PR-KA1] [PR-KA2] Камера заднего вида
+### [PR-KA1] Камера заднего вида
 
 ??? note "Подключение проводов" 
     1. Плюс клемма 30 берется в разъеме Quadlock красный или красно желтый толстый  
     2. Масса берется в разъеме Quadlock коричневый толстый  
     3. Кан шина инфотеймент — Сигнал от камеры  
     - К пину под номером 12 должна быть подключена "оплётка"/экран видео-кабеля от камеры — черный провод  
-    - К пину под номером 6 - центральная жила того же кабеля — белый провод  
+    - К пину под номером 6 – центральная жила того же кабеля — белый провод  
     4. Это самые крайние пины для синего разъёма.  
     - Оранжево-фиолетовый — к оранжево-фиолетовому Quadlock — серый разъем 6 контакт  
     - Оранжево-коричневый — к оранжевому коричневому Quadlock — серый разъем 12 контакт  
@@ -312,7 +312,7 @@ Car_Function_List_BAP_Gen2:
 Настройка парковочного ассистента
 ``` yaml
 Блок 76 → Кодирование:
-Байт 2 – Бит 4-5 (10 - Camera Type: Rear View Camera (RVC)): Активировать
+Байт 2 – Бит 4-5 (10 – Camera Type: Rear View Camera (RVC)): Активировать
 → Применить (с перезагрузкой блока)
 ```
 
@@ -334,7 +334,7 @@ Car_Function_List_BAP_Gen2:
     ```
 
 Макет для калибровки  
-![Screenshot](../images/MQB/addons/Rear_maket.jpg)   
+![Screenshot](../images/MQB/addons/Rear_maket.jpg)  
 
 ### Задние ручки kessy
 
@@ -373,7 +373,7 @@ Car_Function_List_BAP_Gen2:
 → Применить
 ```
 
-### [PR-7Y1,7Y5] Side Assist - система контроля слепых зон
+### [PR-7Y1,7Y5] Side Assist – система контроля слепых зон
 
 !!! note ""
     Существуют 2 типа радаров. С 2020 года поставляются радары, с которых не надо снимать защиту компонентов и делать калибровку
@@ -485,7 +485,7 @@ Lighting_Assist_Adaptation:
 - 3CA8D7 — фары включаются совсем поздно, при 800lx
 ```
 
-### [PR-7K3] [PR-7K3] Direct RDKS/TPMS - система прямого контроля давния в шинах
+### [PR-7K3] Direct RDKS/TPMS – система прямого контроля давления в шинах
 
 RDKS (Reifen Druck Kontrolle System) или TPMS (Tires Pressure Monitoring System)
 
@@ -534,7 +534,7 @@ CAN шина находится в районе ручки открытия ка
 ``` yaml
 Блок 17 → Кодирование:
 Байт 3 – Бит 7 (Direct Tire Pressure Monitoring System(TPMS) installed / Индикатор контроля давления в шинах): Активировать
-Байт 11 - Бит 2 (Direct Tire Pressure Monitoring System(TPMS) BAP installed): Активировать
+Байт 11 – Бит 2 (Direct Tire Pressure Monitoring System(TPMS) BAP installed): Активировать
 → Применить (с перезагрузкой блока)
 ```
 

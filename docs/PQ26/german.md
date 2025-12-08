@@ -6,11 +6,11 @@
 * Bedienfolge — последовательность операций
 * Begrenzungslicht — габаритный фонарь
 * beidseitiges — односторонний
-* Betaetigungen - запуск, включение, приведение в действие
+* Betaetigungen – запуск, включение, приведение в действие
 * Bremslicht — стоп-сигнал
 * dauer — продолжительность
 * Dauerfahrlicht — ДХО
-* Defaultwert - значение по умолчанию
+* Defaultwert – значение по умолчанию
 * Einschaltgrenze — предел включения
 * Einschaltereignis — событие срабатывания
 * Fahrt — поездка, езда
@@ -20,25 +20,25 @@
 * Freigabezeit — период разблокировки
 * Fernlichtassistent — помощник управления дальним светом
 * Freischaltung — активация
-* Frontwischer - передний стеклоочиститель
+* Frontwischer – передний стеклоочиститель
 * Funk — радио
-* Fussraum - для ног
+* Fussraum – для ног
 * grenze — предел
 * Handbremse — ручник
 * Heck — задняя часть кузова
-* Heckwischer - стеклоочиститель заднего стекла
+* Heckwischer – стеклоочиститель заднего стекла
 * Helligkeitsschwelle — порог яркости
 * Hinweis — индикатор
-* Innenbeleuchtung - внутреннее освещение
-* Innenlichtinszenierung - атмосферная подсветка интерьера
+* Innenbeleuchtung – внутреннее освещение
+* Innenlichtinszenierung – атмосферная подсветка интерьера
 * kontrollleuchte — индикатор
 * Komfortbedienung — функции комфорта
 * Lichthupe — вспышка
 * Lichtwarnungsverhalten — поведение предупреждения о забытом включенном свете
 * Menuesteuerung — управление с помощью меню
-* Nachwischen - протирать
+* Nachwischen – протирать
 * Nebelschlusslicht — задние противотуманные фонари
-* Notlaufprogramm - аварийная программа
+* Notlaufprogramm – аварийная программа
 * Regenschliessen — закрытие при дожде
 * Richtung — направление
 * Rueckmeldung — обратная связь
@@ -52,7 +52,7 @@
 * Tag — день
 * Tagfahrlicht — ДХО
 * Tagfahrlichtkontrollleuchte — индикатор работы ДХО
-* Traenenwischen - дотирка капель
+* Traenenwischen – дотирка капель
 * Vorn — впереди
 * Warngeschwindigkeit — скорость предупреждения
 * Warnung — предупреждение

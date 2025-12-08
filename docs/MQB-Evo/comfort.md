@@ -1,6 +1,6 @@
 # Comfort
 
-### Deactivate rear windows wiper intermittent wipe function
+### Deactivate the rear windows wiper intermittent wipe function
 
 :octicons-verified-24: SFD: yes :octicons-verified-24: Tested SW: 0161
 
@@ -30,7 +30,7 @@ Geschwindigkeit, anpassen wie gewünscht:
 → Apply
 ```
 
-### Automatic opening/closing of windows when opening/closing door
+### Automatic opening/closing of windows when opening/closing a door
 
 :octicons-verified-24: SFD: no
 
@@ -86,7 +86,7 @@ Speed_dependent_control:
 → Apply
 ```
 
-### Adjust or deactivate engine sound generator
+### Adjust or deactivate the engine sound generator
 
 :octicons-verified-24: SFD: no :octicons-verified-24: Tested SW: 0001
 

@@ -1,6 +1,6 @@
 # Front assistance camera (A5)
 
-### Steering resistance adjustable via the Car Menu while Travel-Assist is active
+### Steering resistance is adjustable via the Car Menu while Travel-Assist is active
 
 :octicons-verified-24: SFD: no :octicons-verified-24: Tested SW: 3129-3405
 

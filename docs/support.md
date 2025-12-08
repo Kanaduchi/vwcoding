@@ -10,7 +10,7 @@
 -   :fontawesome-solid-money-bill:{ .lg .middle } __Перевод с российских карт__
 
     ---
-    Перевод в рублях c помощью карты или кошелька Яндекс  
+    Перевод в рублях с помощью карты или кошелька Яндекс  
 
     [Поддержать :fontawesome-solid-paper-plane:](https://yoomoney.ru/to/4100110582992748/100){ .md-button }
 
@@ -18,7 +18,7 @@
 
     ---
     ![BTC wallet](./images/btc.png){ width="100" align=left }  
-    
+  
     Перевод на BTC кошелек: `1BKR5d91YUic3aqwc6nTGTMLkGBBrZkkcj`
 
 </div>

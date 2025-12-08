@@ -55,7 +55,7 @@ iframe[id*="dsq-app"][src*="comments"] {
 
 .md-header-nav__title {
     padding-top: 1px;
-    padding-left: 0px;
+    padding-left: 0;
 }
 
 .md-nav__item:hover {
@@ -99,7 +99,7 @@ iframe[id*="dsq-app"][src*="comments"] {
     color: rgb(var(--pure-material-onprimary-rgb, 255, 255, 255)) !important;
     background-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
     box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-    font-family: var(--pure-material-font, "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system);
+    font-family: var(--pure-material-font, "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system), serif;
     font-size: 14px;
     font-weight: 500;
     line-height: 30px;
@@ -191,7 +191,6 @@ iframe[id*="dsq-app"][src*="comments"] {
     margin-top: 0 !important;
 }
 
-//New admonition give-money
 .md-typeset .admonition.give-money,
 .md-typeset details.give-money {
   border-color: #448aff;
@@ -199,7 +198,7 @@ iframe[id*="dsq-app"][src*="comments"] {
 
 .md-typeset .give-money > .admonition-title,
 .md-typeset .give-money > summary {
-  background-color: background-color: rgba(68,138,255,.1);
+  background-color: rgba(68,138,255,.1);
 }
 
 .md-typeset .give-money > .admonition-title::before,

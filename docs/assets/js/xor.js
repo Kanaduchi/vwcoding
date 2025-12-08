@@ -1,5 +1,5 @@
-   var decodeString = "c9d2";
-   var codeLength = 4;
+   let decodeString = "c9d2";
+   let codeLength = 4;
 
    function init() {
 
@@ -16,13 +16,13 @@
    }
 
    function calculateXor() {
-      var input = document.getElementById("origCode").value;
-      var result = ''
-      if (input.length % 2 != 0) {
+      let input = document.getElementById("origCode").value;
+      let result = ''
+      if (input.length % 2 !== 0) {
          alert("Вводимое значение должно содержать четное количество символов.\nInput HEX value should have odd count of symbols");
          return
       }
-      if (input.length != codeLength) {
+      if (input.length !== codeLength) {
         alert("Длина вводимого значения должна быть " + codeLength + " символа.\nInput HEX value should be no longer than " + codeLength + " characters.");
         return
       }

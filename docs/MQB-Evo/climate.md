@@ -59,7 +59,7 @@ Climate_style:
 → Apply
 ```
 
-![Screenshot](../images/MQB-Evo/climate_settings.png)   
+![Screenshot](../images/MQB-Evo/climate_settings.png)  
 
 ### Adjust seat heating temperatures
 
@@ -103,7 +103,7 @@ Seat heating level passenger side, saving condition:
 → Apply
 ```
 
-### Deactivate steering wheel heater permanently
+### Deactivate the steering wheel heater permanently
 
 :octicons-verified-24: SFD: no :octicons-verified-24: Tested SW: 0440-0531
 

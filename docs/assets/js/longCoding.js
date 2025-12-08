@@ -1,6 +1,6 @@
-var curSelectedByte = -1;
-var defaultByteSize = 30;
-var labelsFromFile;
+let curSelectedByte = -1;
+let defaultByteSize = 30;
+let labelsFromFile;
 
 function init() {
    //Read variables and put them to fields
@@ -28,8 +28,8 @@ function activateFields() {
 }
 
 function checkOrig() {
-    var filter = /^[A-F0-9]+$/
-    var orig = document.getElementById("origCode").value;
+    let filter = /^[A-F0-9]+$/
+    let orig = document.getElementById("origCode").value;
     orig = orig.toUpperCase();
     orig = cleanHexValue(orig);
     document.getElementById("origCode").value = orig;
@@ -37,14 +37,14 @@ function checkOrig() {
     //Hide bits after load new set of bytes
     document.getElementById("bitDescription").style.display = "none";
 
-    if (orig.length % 2 == 0) {
+    if (orig.length % 2 === 0) {
         if (orig.match(filter)) {
             //Show loader
             document.getElementById("loading").style.display = "inline-block";
-            //Add bytes to table
+            //Add bytes to a table
             fillBytes();
-            //Load from label file
-            if (document.getElementById("langBits").value != "none"){
+            //Load from a label file
+            if (document.getElementById("langBits").value !== "none"){
                fetch('../../labels/' + document.getElementById("langBits").value + '_labels.txt')
                  .then(response => response.text())
                  .then(text => labelsFromFile = text.split("\n"))
@@ -70,26 +70,25 @@ function trim(str) {
 
 function initArray() {
     this.length = initArray.arguments.length;
-    for (var i = 0; i < this.length; i++) {
+    for (let i = 0; i < this.length; i++) {
         this[i] = initArray.arguments[i];
     }
 }
 
 function hexToBin(value){
-    var bitValueBin;
-
-    dezVal = parseInt(value, 16);
+    let bitValueBin;
+    let dezVal = parseInt(value, 16);
     bitValueBin = from10toradix(dezVal, 2);
 
     return addLeadingZeros(bitValueBin);
 }
 
 function from10toradix(value, radix) {
-    var retval = '';
-    var ConvArray = new initArray(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F');
-    var intnum;
-    var tmpnum;
-    var i = 0;
+    let retval = '';
+    let ConvArray = new initArray(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F');
+    let intnum;
+    let tmpnum;
+    let i = 0;
 
     intnum = parseInt(value, 10);
     if (isNaN(intnum)) {
@@ -99,7 +98,7 @@ function from10toradix(value, radix) {
             i++;
             tmpnum = intnum;
 
-            // concat ret string with new digit
+            // concat ret string with a new digit
             retval = ConvArray[tmpnum % radix] + retval;
             intnum = Math.floor(tmpnum / radix);
             if (i > 100) {
@@ -113,7 +112,7 @@ function from10toradix(value, radix) {
 }
 
 function calculateByteIdFromNumber(num) {
-    var byteId = num;
+    let byteId = num;
     if (num < 10) {
         byteId = "0" + num;
     }
@@ -121,48 +120,48 @@ function calculateByteIdFromNumber(num) {
 }
 
 function fillBytes() {
-    var orig = document.getElementById("origCode").value;
-    var newNum = orig.toString().match(/.{1,2}/g)
+    let orig = document.getElementById("origCode").value;
+    let newNum = orig.toString().match(/.{1,2}/g)
 
     //Set new length
     if (newNum.length > defaultByteSize) {
         defaultByteSize = newNum.length;
-        //Recreate byte table with new size
+        //Recreate byte table with a new size
         createByteDescription(defaultByteSize);
     }
 
     //Fill bytes to table
-    for (var i = 0; i < newNum.length; i++) {
+    for (let i = 0; i < newNum.length; i++) {
         document.getElementById("byte" + calculateByteIdFromNumber(i)).value = newNum[i];
     }
 
-    //Fill calculated field
+    //Fill a calculated field
     document.getElementById("calcCode").value = orig;
 
-    //Select 0 byte by default
+    //Select byte 0 by default
     curSelectedByte = 0;
 }
 
 function addLeadingZeros(binVal) {
-    var anz;
-    var retString = binVal;
+    let anz;
+    let retString = binVal;
 
     anz = 8 - binVal.length;
-    for (var i = 0; i < anz; i++) {
+    for (let i = 0; i < anz; i++) {
         retString = "0" + retString;
     }
     return retString;
 }
 
 function fillDezAndBits(bin) {
-    for (var i = 0; i < 8; i++) {
+    for (let i = 0; i < 8; i++) {
         document.getElementById("bit" + i).value = bin.substr(7 - i, 1);
     }
 }
 
 function comparingOfBits(bin1, bin2) {
    //return if values are equal
-   if (bin1 == bin2) {
+   if (bin1 === bin2) {
       return true;
    }
 
@@ -171,9 +170,9 @@ function comparingOfBits(bin1, bin2) {
    let bin2a = bin2.split('').map(Number);
 
    let equal = false;
-   for (var i = 0; i < bin2a.length; i++) {
-      if (bin2a[i] == 1){
-         if (bin2a[i] == bin1a[i]) {
+   for (let i = 0; i < bin2a.length; i++) {
+      if (bin2a[i] === 1){
+         if (bin2a[i] === bin1a[i]) {
             equal = true;
          } else {
             return false;
@@ -186,16 +185,16 @@ function comparingOfBits(bin1, bin2) {
 
 function calculateBitValue(binOld, binNew) {
    //return if values are equal
-   if (binNew == binOld) {
+   if (binNew === binOld) {
       return binNew;
    }
 
    let binNewAr = binNew.split('').map(Number);
    let binOldAr = binOld.split('').map(Number);
 
-   for (var i = 0; i < binNewAr.length; i++) {
-      if (binNewAr[i] != binOldAr[i]) {
-        if (binNewAr[i] == 0)
+   for (let i = 0; i < binNewAr.length; i++) {
+      if (binNewAr[i] !== binOldAr[i]) {
+        if (binNewAr[i] === 0)
             document.getElementById("setModifiedBits" + (7 - i)).checked = false;
         else
             document.getElementById("setModifiedBits" + (7 - i)).checked = true;
@@ -205,8 +204,8 @@ function calculateBitValue(binOld, binNew) {
 }
 
 function fillBitCheckBoxes(bin, reduced) {
-    for (var i = 0; i < 8; i++) {
-        if (bin.substr(i, 1) == 0)
+    for (let i = 0; i < 8; i++) {
+        if (bin.substr(i, 1) === 0)
             document.getElementById("setModifiedBits" + (7 - i)).checked = false;
         else
             document.getElementById("setModifiedBits" + (7 - i)).checked = true;
@@ -218,16 +217,16 @@ function fillBitCheckBoxes(bin, reduced) {
          if (!isNaN(label.bit)) {
             document.getElementById("setModifiedBitsLabel" + label.bit).innerHTML = " " + label.description;
          } else {
-            //Create select box
-            var selectElement = document.createElement("select");
+            //Create a select box
+            let selectElement = document.createElement("select");
             selectElement.id = "select" + label.bit;
-            var variants = label.variants.split(';');
-            for (var i = 0; i < variants.length; i++)
+            let variants = label.variants.split(';');
+            for (let i = 0; i < variants.length; i++)
             {
-               var variant = variants[i].split('-');
-               var currentOption = comparingOfBits(bin, hexToBin(trim(variant[0])));
-               var option = new Option (trim(variants[i]), trim(variant[0]), currentOption, currentOption);
-               selectElement.options[selectElement.options.length] = option;
+               let variant = variants[i].split('-');
+               let currentOption = comparingOfBits(bin, hexToBin(trim(variant[0])));
+               selectElement.options[selectElement.options.length] =
+                   new Option (trim(variants[i]), trim(variant[0]), currentOption, currentOption);
             }
             document.getElementById("bitVariants").innerHTML = document.getElementById("bitVariants").innerHTML + label.description + " (bits " + label.bit + "): ";
             document.getElementById("bitVariants").appendChild (selectElement);
@@ -235,12 +234,12 @@ function fillBitCheckBoxes(bin, reduced) {
 
             let previous;
             document.addEventListener('click', (event) => {
-               if (event.target && event.target.id == "select" + label.bit) {
+               if (event.target && event.target.id === "select" + label.bit) {
                   previous = event.target.value;
                }
             });
             document.addEventListener('change', (event) => {
-               if (event.target && event.target.id == "select" + label.bit && previous != event.target.value) {
+               if (event.target && event.target.id === "select" + label.bit && previous !== event.target.value) {
                    calculateBitValue(hexToBin(previous), hexToBin(event.target.value));
                }
             });
@@ -252,7 +251,7 @@ function fillBitCheckBoxes(bin, reduced) {
 
 function setByte(ctrl, byteName) {
     //Check value
-    var regexp = /^[0-9a-fA-F]+$/;
+    let regexp = /^[0-9a-fA-F]+$/;
     if(regexp.test(ctrl.value)) {
     } else {
       alert(ctrl.value + ' - неверный формат введенного значения! Incorrect value!');
@@ -266,18 +265,18 @@ function selByte(noByte) {
 
     document.getElementById("Byte").innerHTML = "(Byte " + noByte + ")";
 
-    var bitValueHex = "";
-    var fullBitString = "";
-    var startPos = noByte * 2;
+    let bitValueHex;
+    let fullBitString = "";
+    let startPos = noByte * 2;
 
     curSelectedByte = noByte;
 
     bitValueHex = document.getElementById("calcCode").value.substr(startPos, 2);
 
-    if (bitValueHex == "") {
+    if (bitValueHex === "") {
         //Clean bits and buttons
         clearBits();
-        for (var i = 0; i < 8; i++) {
+        for (let i = 0; i < 8; i++) {
             document.getElementById("bit" + i).value = "0";
         }
         return false;
@@ -287,11 +286,12 @@ function selByte(noByte) {
     fullBitString = hexToBin(bitValueHex);
 
     //Find labels
+    let reduced
     if (labelsFromFile != null) {
-        var reduced = labelsFromFile.reduce(function(filtered, option) {
+        reduced = labelsFromFile.reduce(function(filtered, option) {
           let opt = option.split(',');
-          if (opt[0] == noByte) {
-             var labelValue = { byte: opt[0], bit: opt[1], description: opt[2], variants: opt[3] }
+          if (opt[0] === noByte) {
+             let labelValue = { byte: opt[0], bit: opt[1], description: opt[2], variants: opt[3] }
              filtered.push(labelValue);
           }
           return filtered;
@@ -300,7 +300,7 @@ function selByte(noByte) {
 
     //Reset all labels in checkboxes
     document.getElementById("bitVariants").innerHTML = "";
-    for (var i = 0; i < 8; i++) {
+    for (let i = 0; i < 8; i++) {
         document.getElementById("setModifiedBitsLabel" + i).innerHTML = " Bit " + i;
     }
 
@@ -322,8 +322,8 @@ function chgBit(no) {
 }
 
 function resetCalcCode() {
-    var tmpVal = "";
-    for (var i = 0; i < defaultByteSize; i++) {
+    let tmpVal = "";
+    for (let i = 0; i < defaultByteSize; i++) {
         tmpVal += document.getElementById("byte" + calculateByteIdFromNumber(i)).value;
     }
     document.getElementById("calcCode").value = trim(tmpVal);
@@ -336,21 +336,21 @@ function resetByteHex(hexVal) {
 
 
 function setBits() {
-    var tmpBitStr = "";
-    for (var i = 7; i >= 0; i--) {
+    let tmpBitStr = "";
+    for (let i = 7; i >= 0; i--) {
         tmpBitStr += document.getElementById("bit" + i).value;
     }
 
-    var tmpVal;
-    var hexValue;
+    let tmpVal;
+    let hexValue;
 
-    if (tmpBitStr == "") {
+    if (tmpBitStr === "") {
         return false;
     } else {
         tmpVal = parseInt(tmpBitStr, 2);
         hexValue = from10toradix(tmpVal, 16)
 
-        if (hexValue.length == 1) {
+        if (hexValue.length === 1) {
             hexValue = "0" + hexValue;
         } else if (hexValue.length < 1) {
             hexValue = "00";
@@ -364,17 +364,17 @@ function setBits() {
 
 function clearBits() {
     //Clear bits fields
-    for (var i = 0; i < 8; i++) {
+    for (let i = 0; i < 8; i++) {
         document.getElementById("bit" + i).value = "";
     }
 
     //Clear checkboxes
-    for (var i = 0; i < 8; i++) {
+    for (let i = 0; i < 8; i++) {
         document.getElementById("setModifiedBits" + i).checked = false;
     }
 
     //Reset all labels in checkboxes
-    for (var i = 0; i < 8; i++) {
+    for (let i = 0; i < 8; i++) {
         document.getElementById("setModifiedBitsLabel" + i).innerHTML = " Bit " + i;
     }
     document.getElementById("bitVariants").innerHTML = "";
@@ -386,7 +386,7 @@ function clearFields() {
     document.getElementById("Byte").innerHTML = "";
 
     //Clear bytes fields
-    for (var i = 0; i < defaultByteSize; i++) {
+    for (let i = 0; i < defaultByteSize; i++) {
         document.getElementById("byte" + calculateByteIdFromNumber(i)).value = "";
     }
 
@@ -408,8 +408,8 @@ function clearLabels() {
 }
 
 function toggleSelectedByteColor(noByte) {
-    for (i = 0; i < defaultByteSize; i++) {
-        if (i != noByte) {
+    for (let i = 0; i < defaultByteSize; i++) {
+        if (i !== noByte) {
             document.getElementById('byte' + calculateByteIdFromNumber(i)).className = 'byteNotSelected';
         } else {
             document.getElementById('byte' + calculateByteIdFromNumber(i)).className = 'byteSelected';
@@ -423,10 +423,10 @@ function selectAll(ctrl) {
 }
 
 function isBinary(event) {
-    var charCode = (event.which) ? event.which : event.keyCode
+    let charCode = (event.which) ? event.which : event.keyCode
     //0 = 48, 1 = 49
-    if (charCode == 48 || charCode == 49 || charCode == 13) {
-        if (charCode == 13)
+    if (charCode === 48 || charCode === 49 || charCode === 13) {
+        if (charCode === 13)
             setBits();
         return true;
     } else
@@ -434,23 +434,23 @@ function isBinary(event) {
 }
 
 function createByteDescription(countOfBytes) {
-    var bytesPerLine = 30;
-    var html = "<table class=\"bordered\">";
+    let bytesPerLine = 30;
+    let html = "<table class=\"bordered\">";
     html += "<tr>";
     html += "<th colspan=\"" + countOfBytes + "\">Байты / Bytes</th>"
     html += "</tr>";
 
     //Lines can be several
-    for (var line = 0; line < Math.ceil(countOfBytes/bytesPerLine); line++){
+    for (let line = 0; line < Math.ceil(countOfBytes/bytesPerLine); line++){
         html += "<tr>";
-        for (var i = 0; i < bytesPerLine; i++) {
-            var current = bytesPerLine * line + i;
+        for (let i = 0; i < bytesPerLine; i++) {
+            let current = bytesPerLine * line + i;
             html += "<td width=\"20\" class=\"bytes\" nowrap>" + calculateByteIdFromNumber(current) + "</td>";
         }
         html += "</tr><tr>";
-        for (var i = 0; i < bytesPerLine; i++) {
-            var current = bytesPerLine * line + i;
-            var byteName = calculateByteIdFromNumber(current);
+        for (let i = 0; i < bytesPerLine; i++) {
+            let current = bytesPerLine * line + i;
+            let byteName = calculateByteIdFromNumber(current);
             html += "<td class=\"fillBytes\">";
             html += "<input type=\"text\" name=\"byte" + byteName + "\" id=\"byte" + byteName + "\" value=\"\" size=\"1\"";
             html += " onClick=\"selByte(" + byteName + ")\" onChange=\"setByte(this, " + byteName + ")\"";
@@ -464,7 +464,7 @@ function createByteDescription(countOfBytes) {
 }
 
 function createBitDescription() {
-    var html = "<table class=\"bordered\" style=\"table-layout: fixed;\">";
+    let html = "<table class=\"bordered\" style=\"table-layout: fixed;\">";
     html += "<tr colspan=2>";
     html += "   <th colspan=2>";
     html += "      Bits <div id=\"Byte\" name=\"Byte\" style=\"display: inline;\"></div>";
@@ -475,14 +475,14 @@ function createBitDescription() {
     html += "      <table class=\"bordered\">";
     html += "      <tr>";
 
-    for (var i = 7; i >= 0; i--) {
+    for (let i = 7; i >= 0; i--) {
         html += "<td class=\"bytes\" nowrap>" + i + "</td>";
     }
 
     html += "      </tr>";
     html += "      <tr>";
 
-    for (var i = 7; i >= 0; i--) {
+    for (let i = 7; i >= 0; i--) {
         html += "<td class=\"fillBytes\"><input type=\"text\" name=\"bit" + i + "\" id=\"bit" + i + "\" value=\"\" size=\"1\"";
         html += " class=\"inputBytes\"";
         html += " onKeyDown=\"return isBinary(event)\" onClick=\"selectAll(this)\"";
@@ -492,7 +492,7 @@ function createBitDescription() {
     html += "</tr></table></td></tr>";
     html += "<tr colspan=2><td>";
 
-    for (var i = 0; i < 8; i++) {
+    for (let i = 0; i < 8; i++) {
         html += "<input type=\"checkbox\" value=\"\" name=\"setModifiedBits" + i + "\" id=\"setModifiedBits" + i + "\" onClick=\"chgBit(" + i + ");\">";
         html += "<label for=\"setModifiedBits" + i + "\" id=\"setModifiedBitsLabel" + i + "\"> Bit " + i + "</label><br>";
     }

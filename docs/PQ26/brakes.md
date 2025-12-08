@@ -108,9 +108,9 @@ Overboost in brake system → стандартно значение 6 — (вы�
 
 ``` yaml title="логин-пароль: 20103"
 Блок 5F → Адаптация:
-Car_Function_List_BAP_Gen2 - tire_pressure_system_0x07 → изменить с «не активир.» на "«активир.»
-Car_Function_List_BAP_Gen2 - tire_pressure_system_0x07_msg_bus → изменить с «Шина данных Привод» на «Шина данных Комфорт»
-Car_Function_Adaptations_Gen2 - menu_display_rdk → изменить с «не активир.» на «активир»
+Car_Function_List_BAP_Gen2 – tire_pressure_system_0x07 → изменить с «не активир.» на "«активир.»
+Car_Function_List_BAP_Gen2 – tire_pressure_system_0x07_msg_bus → изменить с «Шина данных Привод» на «Шина данных Комфорт»
+Car_Function_Adaptations_Gen2 – menu_display_rdk → изменить с «не активир.» на «активир»
 → Применить
 ```
 
@@ -129,6 +129,6 @@ Car_Function_Adaptations_Gen2 - menu_display_rdk → изменить с «не 
 Включение отображения конкретного колеса:
 ``` yaml title="логин-пароль: 40168"
 Блок 03 → Длинное кодирование:  
-Байт 15 – Бит 3: Активировать (вместо 61 - 69)
+Байт 15 – Бит 3: Активировать (вместо 61 – 69)
 → Применить
 ```

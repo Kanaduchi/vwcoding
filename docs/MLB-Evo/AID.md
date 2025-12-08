@@ -28,7 +28,7 @@ Tachometer_erweiterte_Skalenteilung: yes
 :octicons-verified-24: Audi + e-tron
 ``` 
 Блок 17 → Кодирование:
-Байт 1 - Бит 3 (lap timer active): yes
+Байт 1 – Бит 3 (lap timer active): yes
 → Применить (с перезагрузкой блока)
 ```
 В некоторых моделях данная кодировка может называться "Lap counter"
@@ -59,7 +59,7 @@ Displayable_content_configuration:
 :octicons-verified-24: Audi
 ``` yaml
 Блок 02 → Кодирование:
-Block 3 - Functions: → выбираем необходимое
+Block 3 – Functions: → выбираем необходимое
 ```
 или
 ``` yaml

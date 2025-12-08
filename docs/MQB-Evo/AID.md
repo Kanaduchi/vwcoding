@@ -1,6 +1,6 @@
 # Instrument cluster Active Info Display (AID)
 
-### Change max speed of the speedometer
+### Change the max speed of the speedometer
 
 :octicons-verified-24: SFD: yes :octicons-verified-24: Tested SW: 3460-3470
 
@@ -26,14 +26,14 @@ Unlock_views:
 - view_6: active
 → Apply
 ```
-![Screenshot](../images/MQB-Evo/AID_additional.png)   
+![Screenshot](../images/MQB-Evo/AID_additional.png)  
 
 ### Style of AID
 
 :octicons-verified-24: SFD: no :octicons-verified-24: Tested SW: 3460-3470
 
 Golf 8 GTE (Hybrid) view in the AID
-![Screenshot](../images/MQB-Evo/AID_view_7.png)   
+![Screenshot](../images/MQB-Evo/AID_view_7.png)  
 ``` yaml 
 Control unit 17 → Adjustments:
 Unlock_views:
@@ -42,7 +42,7 @@ Unlock_views:
 ```
 
 Golf 8 GTI view in the AID
-![Screenshot](../images/MQB-Evo/AID_view_8.png)   
+![Screenshot](../images/MQB-Evo/AID_view_8.png)  
 ``` yaml 
 Control unit 17 → Adjustments:
 Unlock_views:
@@ -51,7 +51,7 @@ Unlock_views:
 ```
 
 Golf 8 R view in the AID
-![Screenshot](../images/MQB-Evo/AID_view_9.png)   
+![Screenshot](../images/MQB-Evo/AID_view_9.png)  
 ``` yaml 
 Control unit 17 → Adjustments:
 unlock_views:
@@ -63,7 +63,7 @@ unlock_views:
 
 :octicons-verified-24: SFD: no :octicons-verified-24: Tested SW: 3460-3470
 
-![Screenshot](../images/MQB-Evo/AID_offroad.png)   
+![Screenshot](../images/MQB-Evo/AID_offroad.png)  
 
 ``` yaml 
 Control unit 17 → Adjustments:
@@ -72,11 +72,11 @@ Unlock_views:
 → Apply
 ```
 
-### Activate steering angle display in the AID info window
+### Activate the steering angle display in the AID info window
 
 :octicons-verified-24: SFD: yes :octicons-verified-24: Tested SW: 3460-3470
 
-![Screenshot](../images/MQB-Evo/AID_steering_angle.png)   
+![Screenshot](../images/MQB-Evo/AID_steering_angle.png)  
 
 !!! note ""
     May need to be activated in the AID menu
@@ -104,11 +104,11 @@ Displayable_content_configuration:
 → Apply
 ```
 
-### Activate G-force display in the AID info display window
+### Activate the G-force display in the AID info display window
 
 :octicons-verified-24: SFD: no :octicons-verified-24: Tested SW: 3460-3470
 
-![Screenshot](../images/MQB-Evo/AID_g-force.png)   
+![Screenshot](../images/MQB-Evo/AID_g-force.png)  
 
 !!! note ""
     May need to be activated in the AID menu
@@ -120,11 +120,11 @@ Displayable_content_configuration:
 → Apply
 ```
 
-### Activate torque display in the AID info display window
+### Activate the torque display in the AID info display window
 
 :octicons-verified-24: SFD: yes :octicons-verified-24: Tested SW: 3460-3470 (none GTE)
 
-![Screenshot](../images/MQB-Evo/AID_torque.png)   
+![Screenshot](../images/MQB-Evo/AID_torque.png)  
 
 !!! note ""
     May need to be activated in the AID menu
@@ -136,11 +136,11 @@ Displayable_content_configuration:
 → Apply
 ```
 
-### Activate engine power display in the AID info display
+### Activate the engine power display in the AID info display
 
 :octicons-verified-24: SFD: yes :octicons-verified-24: Tested SW: 3460-3470 (none GTE)
 
-![Screenshot](../images/MQB-Evo/AID_engine_power.png)   
+![Screenshot](../images/MQB-Evo/AID_engine_power.png)  
 
 !!! note ""
     May need to be activated in the AID menu
@@ -152,11 +152,11 @@ Displayable_content_configuration:
 → Apply
 ```
 
-### Activate transmission temperature display in the AID info window
+### Activate the transmission temperature display in the AID info window
 
 :octicons-verified-24: SFD: yes :octicons-verified-24: Tested SW: 3460-3470
 
-![Screenshot](../images/MQB-Evo/AID_transmission_temp.png)   
+![Screenshot](../images/MQB-Evo/AID_transmission_temp.png)  
 
 !!! note ""
     May need to be activated in the AID menu
@@ -175,7 +175,7 @@ Displayable_content_configuration:
 !!! note ""
     May need to be activated in the AID menu
 
-![Screenshot](../images/MQB-Evo/lap_timer_1.png)   
+![Screenshot](../images/MQB-Evo/lap_timer_1.png)  
 
 ``` yaml 
 Control unit 17 → Coding:
@@ -209,7 +209,7 @@ Refuel_volume: yes
 → Apply
 ```
 
-### Customize logo in the AID (Active Info Display)
+### Customize the logo in the AID (Active Info Display)
 
 :octicons-verified-24: SFD: no :octicons-verified-24: Tested SW: 3460-3470
 
@@ -335,7 +335,7 @@ Acceleration_measurement: display
 
 :octicons-verified-24: SFD: ??? :octicons-verified-24: Tested SW: 3470
 
-![Screenshot](../images/MQB-Evo/AID_compass.png)   
+![Screenshot](../images/MQB-Evo/AID_compass.png)  
 
 ``` yaml 
 Control unit 17 → Coding:
@@ -354,7 +354,7 @@ Service_early_warning_in_days:
 → Apply
 ```
 
-### Torque distribution display in the AID info window
+### Torque distribution is displayed in the AID info window
 
 :octicons-verified-24: SFD: yes :octicons-verified-24: Tested SW: 3460-3470
 
@@ -403,7 +403,7 @@ Tachometer_erweiterte_Skalenteilung: yes
     1. DO NOT CODE, otherwise you will have a blank display and won't be able to exit the menu!
     2. Tested with an AID 5H0920340A SW 3470
 
-!!! tip "How revert this coding"
+!!! tip "How to revert this coding"
     If you have coded it despite the warning, the automatic key assignment must be deactivated. 
     To do this, go to the infotainment system, select "User -> Setup -> Automatic Key Assignment," and disable this feature. 
     After that, restart the MIB, either by holding the "Power" button for about 20 seconds or locking the vehicle and waiting for 15 minutes.

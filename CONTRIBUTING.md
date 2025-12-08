@@ -37,16 +37,16 @@ Insert file to the page:
 
 ## Adding localizations
 
-If you want to help in translating this site to English language, please contribute a localization!   
+If you want to help in translating this site to the English language, please contribute a localization!  
 
-Follow these steps to add a localization:
-1. Copy particular file in /docs directory to new with lang suffix. Example: drive.md → drive.en.md 
+Follow these steps to add localization:
+1. Copy a particular file in the /docs directory to new with lang suffix. Example: drive.md → drive.en.md 
 2. Start translating the strings
 3. Edit mkdocs.yaml and edit the following variables:
 Make sure that all navigation items translated correctly
-```yaml
-nav_translations:
-    en:
-```
-5. Create a PR with your localization updates.
+    ```yaml
+    nav_translations:
+        en:
+    ```
+4. Create a PR with your localization updates.
 

@@ -8,20 +8,20 @@
     Byte 11 – Bit 6 (Blower display during auto mode): Activate (replace value 00001110 with 01001110) 
     → Apply (with block reboot)
     ```
-    
+  
 === "Coding in OBD11"
     ```yaml
     Block 08 – Heater and climate control electronics → Long coding: 
     Indication of fan mode in automatic mode: Activate
     ```
-    
+  
 === "Coding in VCDS"
     ```yaml
-    08 - Climate control Coding - 07 → Long coding: 
-    Byte 11 – Bit 6: Activate If there is no 6th bit, you can only change the code itself - replace value 00001110 with 01001110 
+    08 – Climate control Coding – 07 → Long coding: 
+    Byte 11 – Bit 6: Activate If there is no 6th bit, you can only change the code itself – replace value 00001110 with 01001110 
     Exit → Save 
     ```
-    ![Screenshot](../images/MQB/climate.jpg)      
+    ![Screenshot](../images/MQB/climate.jpg)  
 
 ### Retention of the Last Heating Stage for Front Seats
 
@@ -36,14 +36,14 @@
     Speicherung der Sitzheizungsstufe Beifahrer (Retention of passenger’s seat heater level): Activate
     → Apply
     ```
-    
+  
 === "Coding in OBD11"
     ```yaml
     08 Heater and climate control electronics → Adaptation  
     Retention of driver’s seat heater level: Activate (was Activate for 10 minutes)
     Retention of passenger’s seat heater level: Activate
     ```
-    
+  
 ### Automatic Steering Wheel Heating Based on Outside Air Temperature
 
 !!! warning "Important Information"
@@ -54,10 +54,10 @@
 
 !!! tip ""
      There are 2 modes:  
-     Lenkradtemperatur - based on the sensor in the steering wheel
-     Aussentemperatur - based on the outside temperature sensor
-     Lenkradtemperatur - activates when the ignition is on if the steering wheel has a low temperature. Relevant for highway driving
-     Aussentemperatur - always works
+     Lenkradtemperatur – based on the sensor in the steering wheel
+     Aussentemperatur – based on the outside temperature sensor
+     Lenkradtemperatur – activates when the ignition is on if the steering wheel has a low temperature. Relevant for highway driving
+     Aussentemperatur – always works
 
 === "Coding in ODIS"
     ``` yaml
@@ -66,23 +66,23 @@
     - Steering wheel heating, automatic mode: set to desired value
     → Apply
     ```
-    
+  
 === "Coding in OBD11"
     ```yaml
     08 Heater and climate control electronics → Long coding:
     Steering wheel heating, automatic mode
     ```
-    
+  
 === "Coding in VCDS"
     ```yaml
-    08 Climate control → Coding - 07 → Long coding:  
+    08 Climate control → Coding – 07 → Long coding:  
     Byte 13 – Bit 2: based on the sensor in the steering wheel  
     Byte 13 – Bit 3: based on outside temperature  
     Do not activate both bits simultaneously!
     If there is no bit selection, change the byte value itself: 14 (based on the sensor in the steering wheel) or 18 (based on outside temperature)  
     Exit → Save 
     ``` 
-    ![Screenshot](../images/MQB/wheel.png)    
+    ![Screenshot](../images/MQB/wheel.png)  
 
 ### Mirror Heating Along with Rear Window (not for Tiguan)
 
@@ -95,11 +95,11 @@
     Mirror heating on while rear window heater on: Activate
     → Apply (with block reboot)
     ```
-    
+  
 === "Coding in VCDS" 
     ```yaml title="login-password: 31347"
-    09 - Onboard network electronics  
-    Coding - 07 → Long coding:
+    09 – Onboard network electronics  
+    Coding – 07 → Long coding:
     Byte 15 – Bit 3 (Mirror Heating ON while Rear Window Heater ON): Activate
     Exit → Save  
     ```
@@ -140,7 +140,7 @@ Display of mirror heating as a separate item in the comfort systems consumers me
 ### Increase of Temperature and Heating Time for Front and Rear Windows
 
 !!! note ""
-    The input value is measured in seconds, for example 1200 / 60 = 20 (minutes)
+    The input value is measured in seconds, for example, 1200 / 60 = 20 (minutes)
 
 Change in temperature and heating time for the rear window
 
@@ -181,12 +181,12 @@ Window heating:
     → Apply (with block reboot)```
 
 === "Coding in VCDS"
-    ```yaml 08 - Climate control 
-    Coding - 07 → Long coding: 
-    Byte 15 – Bits 5-6 (20 - Interior air filtration): Activate 
+    ```yaml 08 – Climate control 
+    Coding – 07 → Long coding: 
+    Byte 15 – Bits 5-6 (20 – Interior air filtration): Activate 
     Exit → Save```
 
-    
+  
 ### Automatic Closing of Sunroof in Rain
 :octicons-verified-24: VW Atlas
 
