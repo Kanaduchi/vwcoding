@@ -1,39 +1,44 @@
-   let decodeString = "c9d2";
-   let codeLength = 4;
+let decodeString = "c9d2";
+let codeLength = 4;
 
-   function init() {
+function init() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const codeParam = urlParams.get('code');
 
-      //Read variables
-      const urlParams = new URLSearchParams(window.location.search);
+  if (codeParam) {
+    document.getElementById("origCode").value = codeParam;
+    calculateXor();
+  }
+}
 
-      //Read parameter
-      const codeParam = urlParams.get('code');
+function calculateXor() {
+  let input = document.getElementById("origCode").value.trim();
+  let result = '';
 
-      if (codeParam != null) {
-         document.getElementById("origCode").value = codeParam;
-         calculateXor();
-      }
-   }
+  if (input.length !== codeLength) {
+    alert(
+      "Длина вводимого значения должна быть " + codeLength + " символа.\n" +
+      "Input HEX value must be exactly " + codeLength + " characters long."
+    );
+    return;
+  }
 
-   function calculateXor() {
-      let input = document.getElementById("origCode").value;
-      let result = ''
-      if (input.length % 2 !== 0) {
-         alert("Вводимое значение должно содержать четное количество символов.\nInput HEX value should have odd count of symbols");
-         return
-      }
-      if (input.length !== codeLength) {
-        alert("Длина вводимого значения должна быть " + codeLength + " символа.\nInput HEX value should be no longer than " + codeLength + " characters.");
-        return
-      }
-      for (let index = 0; index < 4; index++) {
-       const temp = (parseInt(input.charAt(index), 16) ^ parseInt(decodeString.charAt(index), 16)).toString(16).toUpperCase()
-       result += temp
-      }
-      document.getElementById("calcCode").value = result;
-   }
+  if (!/^[0-9a-fA-F]+$/.test(input)) {
+    alert("Допустимы только HEX символы (0-9, A-F).\nOnly HEX characters (0-9, A-F) are allowed.");
+    return;
+  }
 
-   function clearAll() {
-      document.getElementById("origCode").value = "";
-      document.getElementById("calcCode").value = "";
-   }
+  for (let index = 0; index < codeLength; index++) {
+    const a = parseInt(input.charAt(index), 16);
+    const b = parseInt(decodeString.charAt(index), 16);
+    const temp = (a ^ b).toString(16).toUpperCase();
+    result += temp;
+  }
+
+  document.getElementById("calcCode").value = result;
+}
+
+function clearAll() {
+  document.getElementById("origCode").value = "";
+  document.getElementById("calcCode").value = "";
+}

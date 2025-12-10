@@ -1,441 +1,524 @@
+"use strict";
+
 function addToDataset(dataset, info) {
-    dataset.value += info;
+  dataset.value += info;
 }
 
 function generateHeader(dataset, docType, ecuName, ecuOffset) {
-    if (docType === "vcp") {
-        addToDataset(dataset, "<ZDC>\n");
-        addToDataset(dataset, "<IDENT>\n");
-        addToDataset(dataset, "<DATEIID></DATEIID>\n");
-        addToDataset(dataset, "<VERSION-TYP></VERSION-TYP>\n");
-        addToDataset(dataset, "<VERSION-INHALT></VERSION-INHALT>\n");
-        addToDataset(dataset, "<LOGIN>20103</LOGIN>\n");
-        addToDataset(dataset, "<ALFID>24</ALFID>\n");
-        addToDataset(dataset, "<PRNRREF></PRNRREF>\n");
-        addToDataset(dataset, "</IDENT>\n");
-        addToDataset(dataset, "<DATENBEREICHE>\n");
-        addToDataset(dataset, "<DATENBEREICH>\n");
-        addToDataset(dataset, "<DATEN-NAME>" + ecuName + "</DATEN-NAME>\n");
-        addToDataset(dataset, "<DATEN-FORMAT-NAME>DFN_HEX</DATEN-FORMAT-NAME>\n");
-        addToDataset(dataset, "<START-ADR>" + ecuOffset + "</START-ADR>\n");
-        addToDataset(dataset, "<GROESSE-DEKOMPRIMIERT>0x0800</GROESSE-DEKOMPRIMIERT>\n");
-        addToDataset(dataset, "<DATEN>");
-    } else if (docType === "odis") {
-        addToDataset(dataset, "<MESSAGE DTD=\"XMLMSG\" VERSION=\"V0.1\">\n");
-        addToDataset(dataset, "<RESULT>\n");
-        addToDataset(dataset, "<RESPONSE NAME=\"GetParametrizeData\" DTD=\"RepairHints\" VERSION=\"1.4.0.0\" ID=\"0\">\n");
-        addToDataset(dataset, "<DATA>\n");
-        addToDataset(dataset, "<PARAMETER_DATA DIAGNOSTIC_ADDRESS=\"0x65\" START_ADDRESS=\"" + ecuOffset + "\" PR_IDX=\"0\" ZDC_NAME=\"v09600047P6\" ZDC_VERSION=\"0204\" LOGIN=\"20103\" LOGIN_IND=\"\">");
-    } else {
-        addToDataset(dataset, "\n\nERROR! Unknown docType (" + docType + ")\n\n");
-    }
+  if (docType === "vcp") {
+    addToDataset(dataset, "<ZDC>\n");
+    addToDataset(dataset, "<IDENT>\n");
+    addToDataset(dataset, "<DATEIID></DATEIID>\n");
+    addToDataset(dataset, "<VERSION-TYP></VERSION-TYP>\n");
+    addToDataset(dataset, "<VERSION-INHALT></VERSION-INHALT>\n");
+    addToDataset(dataset, "<LOGIN>20103</LOGIN>\n");
+    addToDataset(dataset, "<ALFID>24</ALFID>\n");
+    addToDataset(dataset, "<PRNRREF></PRNRREF>\n");
+    addToDataset(dataset, "</IDENT>\n");
+    addToDataset(dataset, "<DATENBEREICHE>\n");
+    addToDataset(dataset, "<DATENBEREICH>\n");
+    addToDataset(dataset, "<DATEN-NAME>" + ecuName + "</DATEN-NAME>\n");
+    addToDataset(dataset, "<DATEN-FORMAT-NAME>DFN_HEX</DATEN-FORMAT-NAME>\n");
+    addToDataset(dataset, "<START-ADR>" + ecuOffset + "</START-ADR>\n");
+    addToDataset(dataset, "<GROESSE-DEKOMPRIMIERT>0x0800</GROESSE-DEKOMPRIMIERT>\n");
+    addToDataset(dataset, "<DATEN>");
+  } else if (docType === "odis") {
+    addToDataset(dataset, "<MESSAGE DTD=\"XMLMSG\" VERSION=\"V0.1\">\n");
+    addToDataset(dataset, "<RESULT>\n");
+    addToDataset(dataset, "<RESPONSE NAME=\"GetParametrizeData\" DTD=\"RepairHints\" VERSION=\"1.4.0.0\" ID=\"0\">\n");
+    addToDataset(dataset, "<DATA>\n");
+    addToDataset(
+      dataset,
+      "<PARAMETER_DATA " +
+        "DIAGNOSTIC_ADDRESS=\"0x65\" " +
+        "START_ADDRESS=\"" + ecuOffset + "\" " +
+        "PR_IDX=\"0\" " +
+        "ZDC_NAME=\"v09600047P6\" " +
+        "ZDC_VERSION=\"0204\" " +
+        "LOGIN=\"20103\" LOGIN_IND=\"\">"
+    );
+  } else {
+    addToDataset(dataset, "\n\nERROR! Unknown docType (" + docType + ")\n\n");
+  }
 }
 
 function generateFooter(dataset, docType) {
-    if (docType === "vcp") {
-        addToDataset(dataset, "</DATEN>\n");
-        addToDataset(dataset, "</DATENBEREICH>\n");
-        addToDataset(dataset, "</DATENBEREICHE>\n");
-        addToDataset(dataset, "</ZDC>\n");
-    } else if (docType === "odis") {
-        addToDataset(dataset, "</PARAMETER_DATA>\n");
-        addToDataset(dataset, "</DATA>\n");
-        addToDataset(dataset, "</RESPONSE>\n");
-        addToDataset(dataset, "</RESULT>\n");
-        addToDataset(dataset, "</MESSAGE>\n");
-    } else {
-        addToDataset(dataset, "\n\nERROR! Unknown docType\n\n");
-    }
+  if (docType === "vcp") {
+    addToDataset(dataset, "</DATEN>\n");
+    addToDataset(dataset, "</DATENBEREICH>\n");
+    addToDataset(dataset, "</DATENBEREICHE>\n");
+    addToDataset(dataset, "</ZDC>\n");
+  } else if (docType === "odis") {
+    addToDataset(dataset, "</PARAMETER_DATA>\n");
+    addToDataset(dataset, "</DATA>\n");
+    addToDataset(dataset, "</RESPONSE>\n");
+    addToDataset(dataset, "</RESULT>\n");
+    addToDataset(dataset, "</MESSAGE>\n");
+  } else {
+    addToDataset(dataset, "\n\nERROR! Unknown docType\n\n");
+  }
 }
 
 function appendType(byteStream, ecuType) {
-    let type = parseInt(ecuType, 16);
-
-    byteStream.push(type);
+  const type = parseInt(ecuType, 16);
+  byteStream.push(Number.isNaN(type) ? 0x00 : type);
 }
 
 function appendSetName(byteStream, setName) {
-    byteStream.push(setName.length);
+  let name = String(setName || "");
+  let length = name.length;
 
-    for (let index = 0; index < setName.length; index++)
-        byteStream.push(setName.charCodeAt(index));
+  if (length > 60) {
+    name = name.substring(0, 60);
+    length = name.length;
+  }
 
-    for (let index = setName.length; index < 61; index++)
-        byteStream.push(0x00);
+  byteStream.push(length);
+
+  for (let i = 0; i < length; i++) {
+    byteStream.push(name.charCodeAt(i));
+  }
+
+  for (let i = length; i < 61; i++) {
+    byteStream.push(0x00);
+  }
 }
 
 function calcPressureValue(pressureStr) {
-    if (pressureStr.length === 0)
-        return 0xFF;
+  let trimmed = (pressureStr || "").trim();
+  if (trimmed.length === 0) return 0xFF;
 
-    return Math.round(parseFloat(pressureStr) * 10);
+  trimmed = trimmed.replace(",", ".");
+  const val = parseFloat(trimmed);
+
+  if (Number.isNaN(val)) return 0xFF;
+
+  let scaled = Math.round(val * 10);
+  if (scaled < 0) scaled = 0;
+  if (scaled > 0xFF) scaled = 0xFF;
+  return scaled;
 }
 
 function appendSetPressure(byteStream, ecuName, pressureValues) {
-    if (ecuName === "3AA907273H") {
-        byteStream.push(calcPressureValue(pressureValues.frontPartial));
-        byteStream.push(calcPressureValue(pressureValues.frontFull));
-        byteStream.push(calcPressureValue(pressureValues.frontComfort));
-        byteStream.push(calcPressureValue(pressureValues.rearPartial));
-        byteStream.push(calcPressureValue(pressureValues.rearFull));
-        byteStream.push(calcPressureValue(pressureValues.rearComfort));
-    } else {
-        byteStream.push(calcPressureValue(pressureValues.frontFull));
-        byteStream.push(calcPressureValue(pressureValues.frontPartial));
-        byteStream.push(calcPressureValue(pressureValues.frontComfort));
-        byteStream.push(calcPressureValue(pressureValues.rearFull));
-        byteStream.push(calcPressureValue(pressureValues.rearPartial));
-        byteStream.push(calcPressureValue(pressureValues.rearComfort));
-    }
+  if (ecuName === "3AA907273H") {
+    byteStream.push(calcPressureValue(pressureValues.frontPartial));
+    byteStream.push(calcPressureValue(pressureValues.frontFull));
+    byteStream.push(calcPressureValue(pressureValues.frontComfort));
+    byteStream.push(calcPressureValue(pressureValues.rearPartial));
+    byteStream.push(calcPressureValue(pressureValues.rearFull));
+    byteStream.push(calcPressureValue(pressureValues.rearComfort));
+  } else {
+    byteStream.push(calcPressureValue(pressureValues.frontFull));
+    byteStream.push(calcPressureValue(pressureValues.frontPartial));
+    byteStream.push(calcPressureValue(pressureValues.frontComfort));
+    byteStream.push(calcPressureValue(pressureValues.rearFull));
+    byteStream.push(calcPressureValue(pressureValues.rearPartial));
+    byteStream.push(calcPressureValue(pressureValues.rearComfort));
+  }
 }
 
 function appendTireSet(byteStream, ecuName, tireSet) {
-    for (let index = 0; index < 61; index++)
-        byteStream.push(0x00);
+  for (let i = 0; i < 61; i++) {
+    byteStream.push(0x00);
+  }
 
-    appendSetName(byteStream, tireSet.name);
-    appendSetPressure(byteStream, ecuName, tireSet);
+  appendSetName(byteStream, tireSet.name);
+  appendSetPressure(byteStream, ecuName, tireSet);
 
-    for (let index = 0; index < 6; index++)
-        byteStream.push(0x00);
+  for (let i = 0; i < 6; i++) {
+    byteStream.push(0x00);
+  }
 }
 
 function appendVersion(byteStream, ecuVersion) {
-    let version1 = ecuVersion.charCodeAt(0);
-    let version2 = ecuVersion.charCodeAt(1);
+  const v = String(ecuVersion || "");
+  const version1 = v.charCodeAt(0) || 0x00;
+  const version2 = v.charCodeAt(1) || 0x00;
 
-    byteStream.push(version1);
-    byteStream.push(version2);
+  byteStream.push(version1);
+  byteStream.push(version2);
 }
 
 function appendCRC(byteStream) {
-    let lookupTable = [];
+  const lookupTable = [];
 
-    for (let index = 0; index < 256; index++) {
-        let c = index;
+  for (let i = 0; i < 256; i++) {
+    let c = i;
 
-        for (let k = 0; k < 8; k++)
-            c = (c & 1) ? (0xEDB88320 ^ (c >>> 1)) : (c >>> 1);
-
-        lookupTable[index] = c;
+    for (let k = 0; k < 8; k++) {
+      c = (c & 1) ? (0xEDB88320 ^ (c >>> 1)) : (c >>> 1);
     }
 
-    let crc = 0xFFFFFFFF;
+    lookupTable[i] = c;
+  }
 
-    for (let index = 0; index < byteStream.length; index++)
-        crc = (crc >>> 8) ^ lookupTable[(crc ^ byteStream[index]) & 0xFF];
+  let crc = 0xFFFFFFFF;
 
-    crc = crc ^ 0xFFFFFFFF;
+  for (let i = 0; i < byteStream.length; i++) {
+    crc = (crc >>> 8) ^ lookupTable[(crc ^ byteStream[i]) & 0xFF];
+  }
 
-    byteStream.push((crc >>> 24) & 0xFF);
-    byteStream.push((crc >>> 16) & 0xFF);
-    byteStream.push((crc >>> 8) & 0xFF);
-    byteStream.push(crc & 0xFF);
+  crc = crc ^ 0xFFFFFFFF;
+
+  byteStream.push((crc >>> 24) & 0xFF);
+  byteStream.push((crc >>> 16) & 0xFF);
+  byteStream.push((crc >>> 8) & 0xFF);
+  byteStream.push(crc & 0xFF);
 }
 
 function generateDataset(ecuName, ecuType, ecuVersion, tireSets) {
-    let byteStream = [];
+  const byteStream = [];
 
-    appendType(byteStream, ecuType);
-    byteStream.push(0x00);
+  appendType(byteStream, ecuType);
+  byteStream.push(0x00);
 
-    for (let index = 0; index < 11; index++)
-        appendTireSet(byteStream, ecuName, tireSets[index]);
+  for (let i = 0; i < 11; i++) {
+    appendTireSet(byteStream, ecuName, tireSets[i]);
+  }
 
-    for (let index = 0; index < 555; index++)
-        byteStream.push(0xFF);
+  for (let i = 0; i < 555; i++) {
+    byteStream.push(0xFF);
+  }
 
-    appendVersion(byteStream, ecuVersion);
-    appendCRC(byteStream);
+  appendVersion(byteStream, ecuVersion);
+  appendCRC(byteStream);
 
-    return byteStream;
+  return byteStream;
 }
 
 function generateBody(dataset, ecuName, ecuType, ecuVersion, tireSets) {
-    let byteStream = generateDataset(ecuName, ecuType, ecuVersion, tireSets);
+  const byteStream = generateDataset(ecuName, ecuType, ecuVersion, tireSets);
 
-    for (let index = 0; index < byteStream.length; index++) {
-        let str = byteStream[index].toString(16).toUpperCase();
+  for (let i = 0; i < byteStream.length; i++) {
+    let str = byteStream[i].toString(16).toUpperCase();
 
-        if (str.length < 2)
-            str = '0' + str;
-
-        if (index > 0)
-            addToDataset(dataset, ",0x" + str);
-        else
-            addToDataset(dataset, "0x" + str);
+    if (str.length < 2) {
+      str = "0" + str;
     }
+
+    if (i > 0) {
+      addToDataset(dataset, ",0x" + str);
+    } else {
+      addToDataset(dataset, "0x" + str);
+    }
+  }
 }
 
 function doGenerate() {
+  const numTireSetsRaw = document.getElementById("numTireSets").value;
+  let numTireSets = parseInt(numTireSetsRaw, 10);
+  if (Number.isNaN(numTireSets)) numTireSets = 0;
 
-    let numTireSets = document.getElementById("numTireSets").value;
-    if (numTireSets < 1) {
-        window.alert("Количество комплектов шин должно быть больше 0.\nNumber of tire sets should be greater than 0.");
-        return;
-    }
+  if (numTireSets < 1) {
+    window.alert("Количество комплектов шин должно быть больше 0.\nNumber of tire sets should be greater than 0.");
+    return;
+  }
 
-    let dataset = document.getElementById('dataset');
-    dataset.value = "";
+  const dataset = document.getElementById("dataset");
+  dataset.value = "";
 
-    let docType = document.getElementById('docType').value;
-    let ecuObj = document.getElementById('ecuModel');
-    let ecuOptions = ecuObj.options[ecuObj.selectedIndex];
-    let ecuName = ecuOptions.text;
-    let ecuOffset = ecuOptions.getAttribute('ecuOffset');
-    let ecuVersion = ecuOptions.getAttribute('ecuVersion');
-    let ecuType = ecuOptions.getAttribute('ecuType');
+  const docType = document.getElementById("docType").value;
+  const ecuObj = document.getElementById("ecuModel");
+  const ecuOptions = ecuObj.options[ecuObj.selectedIndex];
+  const ecuName = ecuOptions.text;
+  const ecuOffset = ecuOptions.getAttribute("ecuOffset");
+  const ecuVersion = ecuOptions.getAttribute("ecuVersion");
+  const ecuType = ecuOptions.getAttribute("ecuType");
 
-    let tireSets = [];
+  const tireSets = [];
 
-    for (let index = 1; index <= 11; index++) {
-        if (document.getElementById("t" + index).hasAttribute("hidden")) {
-            let set = {
-                name: "",
-                frontFull: "",
-                rearFull: "",
-                frontPartial: "",
-                rearPartial: "",
-                frontComfort: "",
-                rearComfort: ""
-            };
+  for (let index = 1; index <= 11; index++) {
+    const table = document.getElementById("t" + index);
+    const isHidden = table.hasAttribute("hidden");
 
-            tireSets.push(set);
-        } else {
-            let value = document.getElementById("t" + index + "name").value;
-            if (!/^[a-zA-Z]+$/.test(value)) {
-                window.alert("Имя конфигурации #" + index + " может содержать только латинские буквы.\nConfiguration name should have only latin symbols.");
-                return;
-            }
-            let set = {
-                name: value,
-                frontFull: document.getElementById("t" + index + "pff").value,
-                rearFull: document.getElementById("t" + index + "prf").value,
-                frontPartial: document.getElementById("t" + index + "pfp").value,
-                rearPartial: document.getElementById("t" + index + "prp").value,
-                frontComfort: document.getElementById("trcomfort" + index).hasAttribute("hidden") ? "" : document.getElementById("t" + index + "pfc").value,
-                rearComfort: document.getElementById("trcomfort" + index).hasAttribute("hidden") ? "" : document.getElementById("t" + index + "prc").value
-            };
-
-            tireSets.push(set);
-        }
-    }
-
-    if (docType === "binary") {
-        let byteStream = generateDataset(ecuName, ecuType, ecuVersion, tireSets);
-
-        for (let index = 0; index < byteStream.length; index++) {
-            if ((index % 16) === 0) {
-                if (index > 0)
-                    addToDataset(dataset, "\n");
-
-                let offset = index.toString(16).toUpperCase();
-
-                while (offset.length < 4)
-                    offset = '0' + offset;
-
-                addToDataset(dataset, offset + " ");
-            }
-
-            let value = byteStream[index].toString(16).toUpperCase();
-
-            if (value.length < 2)
-                value = '0' + value;
-
-            addToDataset(dataset, value + " ");
-        }
-
-        return new Uint8Array(byteStream);
+    if (isHidden) {
+      tireSets.push({
+        name: "",
+        frontFull: "",
+        rearFull: "",
+        frontPartial: "",
+        rearPartial: "",
+        frontComfort: "",
+        rearComfort: ""
+      });
     } else {
-        generateHeader(dataset, docType, ecuName, ecuOffset);
-        generateBody(dataset, ecuName, ecuType, ecuVersion, tireSets);
-        generateFooter(dataset, docType);
+      const nameValue = document.getElementById("t" + index + "name").value;
 
-        let byteStream = new Uint8Array(dataset.value.length);
+      if (!/^[a-zA-Z]+$/.test(nameValue)) {
+        window.alert(
+          "Имя конфигурации #" + index + " может содержать только латинские буквы.\n" +
+          "Configuration name should have only latin symbols."
+        );
+        return;
+      }
 
-        Array.prototype.forEach.call(dataset.value, function(character, index) {
-            byteStream[index] = character.charCodeAt(0);
-        });
+      const comfortHidden = document.getElementById("trcomfort" + index).hasAttribute("hidden");
 
-        return byteStream;
+      const set = {
+        name: nameValue,
+        frontFull: document.getElementById("t" + index + "pff").value,
+        rearFull: document.getElementById("t" + index + "prf").value,
+        frontPartial: document.getElementById("t" + index + "pfp").value,
+        rearPartial: document.getElementById("t" + index + "prp").value,
+        frontComfort: comfortHidden ? "" : document.getElementById("t" + index + "pfc").value,
+        rearComfort: comfortHidden ? "" : document.getElementById("t" + index + "prc").value
+      };
+
+      tireSets.push(set);
     }
+  }
+
+  if (docType === "binary") {
+    const byteStream = generateDataset(ecuName, ecuType, ecuVersion, tireSets);
+
+    for (let i = 0; i < byteStream.length; i++) {
+      if ((i % 16) === 0) {
+        if (i > 0) addToDataset(dataset, "\n");
+
+        let offset = i.toString(16).toUpperCase();
+        while (offset.length < 4) offset = "0" + offset;
+        addToDataset(dataset, offset + " ");
+      }
+
+      let value = byteStream[i].toString(16).toUpperCase();
+      if (value.length < 2) value = "0" + value;
+
+      addToDataset(dataset, value + " ");
+    }
+
+    return new Uint8Array(byteStream);
+  } else {
+    generateHeader(dataset, docType, ecuName, ecuOffset);
+    generateBody(dataset, ecuName, ecuType, ecuVersion, tireSets);
+    generateFooter(dataset, docType);
+
+    const text = dataset.value;
+    const byteStreamXml = new Uint8Array(text.length);
+
+    for (let i = 0; i < text.length; i++) {
+      byteStreamXml[i] = text.charCodeAt(i);
+    }
+
+    return byteStreamXml;
+  }
 }
 
 function doGenerateDl() {
-    let content = doGenerate();
-    let blob = new Blob([content], {
-        type: "application/octet-stream"
-    });
+  const content = doGenerate();
+  if (!content) return;
 
-    let element = window.document.createElement('a');
+  const blob = new Blob([content], { type: "application/octet-stream" });
+  const element = window.document.createElement("a");
 
-    if ('download' in element) {
-        let docType = document.getElementById('docType').value;
-        let ecuObj = document.getElementById('ecuModel');
-        let ecuOptions = ecuObj.options[ecuObj.selectedIndex];
-        let ecuName = ecuOptions.text;
-        let ext = (docType === "binary") ? ".bin" : ".xml";
+  if ("download" in element) {
+    const docType = document.getElementById("docType").value;
+    const ecuObj = document.getElementById("ecuModel");
+    const ecuOptions = ecuObj.options[ecuObj.selectedIndex];
+    const ecuName = ecuOptions.text;
+    const ext = (docType === "binary") ? ".bin" : ".xml";
 
-        element.href = window.URL.createObjectURL(blob);
-        element.download = ecuName + ext;
-        document.body.appendChild(element);
-        element.click();
-        document.body.removeChild(element);
-    } else {
-        let fileReader = new FileReader();
-
-        fileReader.onload = function() {
-            location.href = this.result;
-        };
-
-        fileReader.readAsDataURL(blob);
-    }
+    element.href = window.URL.createObjectURL(blob);
+    element.download = ecuName + ext;
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  } else {
+    const fileReader = new FileReader();
+    fileReader.onload = function () {
+      location.href = this.result;
+    };
+    fileReader.readAsDataURL(blob);
+  }
 }
 
 function generatePD(id) {
-    let html = "";
+  let html = "";
 
-    html += "<select id=\"" + id + "\" size=\"1\">";
-    html += "<option></option>";
+  html += "<select id=\"" + id + "\" size=\"1\">";
+  html += "<option></option>";
 
-    for (let index = 0; index < 36; index++)
-        html += "<option>" + (1.5 + 0.1 * index).toFixed(1) + "</option>";
+  for (let index = 0; index < 36; index++) {
+    html += "<option>" + (1.5 + 0.1 * index).toFixed(1) + "</option>";
+  }
 
-    html += "</select>";
+  html += "</select>";
 
-    return html;
+  return html;
 }
 
 function updateTireSets() {
-    let numTireSets = document.getElementById("numTireSets").value;
-    let enableIndividual = document.getElementById("enableIndividual").checked;
-    let enableComfort = document.getElementById("enableComfort").checked;
+  const numTireSetsRaw = document.getElementById("numTireSets").value;
+  let numTireSets = parseInt(numTireSetsRaw, 10);
+  if (Number.isNaN(numTireSets)) numTireSets = 0;
 
-    for (let index = 1; index <= 11; index++) {
-        let table = document.getElementById("t" + index);
-        let br1 = document.getElementById("br1" + index);
-        let trcomfort = document.getElementById("trcomfort" + index);
+  const enableIndividual = document.getElementById("enableIndividual").checked;
+  const enableComfort = document.getElementById("enableComfort").checked;
 
-        if ((!((index === 11) && (enableIndividual))) && (index > numTireSets)) {
-            table.setAttribute("hidden", "");
-            br1.setAttribute("hidden", "");
-        } else {
-            table.removeAttribute("hidden");
-            br1.removeAttribute("hidden");
-        }
+  for (let index = 1; index <= 11; index++) {
+    const table = document.getElementById("t" + index);
+    const br1 = document.getElementById("br1" + index);
+    const trcomfort = document.getElementById("trcomfort" + index);
 
-        if (enableComfort)
-            trcomfort.removeAttribute("hidden");
-        else
-            trcomfort.setAttribute("hidden", "");
+    const shouldShowThisSet =
+      ((index === 11) && enableIndividual) ||
+      (index <= numTireSets);
+
+    if (shouldShowThisSet) {
+      table.removeAttribute("hidden");
+      br1.removeAttribute("hidden");
+    } else {
+      table.setAttribute("hidden", "");
+      br1.setAttribute("hidden", "");
     }
+
+    if (enableComfort) {
+      trcomfort.removeAttribute("hidden");
+    } else {
+      trcomfort.setAttribute("hidden", "");
+    }
+  }
 }
 
 function createTireSets() {
-    let html = "";
+  let html = "";
 
-    for (let index = 1; index <= 11; index++) {
-        html += "          <table id=\"t" + index + "\" class=\"bordered\">";
-        html += "            <tr>";
+  for (let index = 1; index <= 11; index++) {
+    html += "          <table id=\"t" + index + "\" class=\"bordered\">";
+    html += "            <tr>";
 
-        if (index === 11)
-            html += "              <th colspan=\"3\">Индивидуальная настройка давления в шинах / Tire set Individual</th>";
-        else
-            html += "              <th colspan=\"3\">Настройка давления в шинах / Tire set: #" + index + "</th>";
-
-        html += "            </tr>";
-        html += "            <tr>";
-        html += "              <td>Имя</td>";
-        html += "              <td colspan=\"2\"><input id=\"t" + index + "name\" style=\"height: 25px; color: #ffff00; font-weight: bold; background-color:#4051b5; width: 100%;\"></td>";
-        html += "            </tr>";
-        html += "            <tr>";
-        html += "              <td class=\"sub\"><b>Тип загрузки машины / Load situation</b></td>";
-        html += "              <td class=\"sub\"><b>Передние колеса / Front wheels</b></td>";
-        html += "              <td class=\"sub\"><b>Задние колеса / Rear wheels</b></td>";
-        html += "            </tr>";
-        html += "            <tr>";
-        html += "              <td>Полная загрузка / Full load</td>";
-        html += "              <td>" + generatePD("t" + index + "pff") + "</td>";
-        html += "              <td>" + generatePD("t" + index + "prf") + "</td>";
-        html += "            </tr>";
-        html += "            <tr>";
-        html += "              <td>Стандартная загрузка / Standard load</td>";
-        html += "              <td>" + generatePD("t" + index + "pfp") + "</td>";
-        html += "              <td>" + generatePD("t" + index + "prp") + "</td>";
-        html += "            </tr>";
-        html += "            <tr id=\"trcomfort" + index + "\">";
-        html += "              <td>Комфортная загрузка / Comfort load</td>";
-        html += "              <td>" + generatePD("t" + index + "pfc") + "</td>";
-        html += "              <td>" + generatePD("t" + index + "prc") + "</td>";
-        html += "            </tr>";
-        html += "          </table>";
-        html += "          <br id=\"br1" + index + "\">";
+    if (index === 11) {
+      html += "              <th colspan=\"3\">Индивидуальная настройка давления в шинах / Tire set Individual</th>";
+    } else {
+      html += "              <th colspan=\"3\">Настройка давления в шинах / Tire set: #" + index + "</th>";
     }
 
-    document.getElementById("tireSetList").innerHTML = html;
-    updateTireSets();
+    html += "            </tr>";
+    html += "            <tr>";
+    html += "              <td>Имя</td>";
+    html += "              <td colspan=\"2\"><input id=\"t" + index + "name\" style=\"height: 25px; color: #ffff00; font-weight: bold; background-color:#4051b5; width: 100%;\"></td>";
+    html += "            </tr>";
+    html += "            <tr>";
+    html += "              <td class=\"sub\"><b>Тип загрузки машины / Load situation</b></td>";
+    html += "              <td class=\"sub\"><b>Передние колеса / Front wheels</b></td>";
+    html += "              <td class=\"sub\"><b>Задние колеса / Rear wheels</b></td>";
+    html += "            </tr>";
+    html += "            <tr>";
+    html += "              <td>Полная загрузка / Full load</td>";
+    html += "              <td>" + generatePD("t" + index + "pff") + "</td>";
+    html += "              <td>" + generatePD("t" + index + "prf") + "</td>";
+    html += "            </tr>";
+    html += "            <tr>";
+    html += "              <td>Стандартная загрузка / Standard load</td>";
+    html += "              <td>" + generatePD("t" + index + "pfp") + "</td>";
+    html += "              <td>" + generatePD("t" + index + "prp") + "</td>";
+    html += "            </tr>";
+    html += "            <tr id=\"trcomfort" + index + "\">";
+    html += "              <td>Комфортная загрузка / Comfort load</td>";
+    html += "              <td>" + generatePD("t" + index + "pfc") + "</td>";
+    html += "              <td>" + generatePD("t" + index + "prc") + "</td>";
+    html += "            </tr>";
+    html += "          </table>";
+    html += "          <br id=\"br1" + index + "\">";
+  }
+
+  document.getElementById("tireSetList").innerHTML = html;
+  updateTireSets();
 }
 
 let configVersion = "1.0";
 
-let configFields = [
-    "docType", "ecuModel", "numTireSets", "@enableIndividual", "@enableComfort",
-    "t1name", "t1pff", "t1prf", "t1pfp", "t1prp", "t1pfc", "t1prc",
-    "t2name", "t2pff", "t2prf", "t2pfp", "t2prp", "t2pfc", "t2prc",
-    "t3name", "t3pff", "t3prf", "t3pfp", "t3prp", "t3pfc", "t3prc",
-    "t4name", "t4pff", "t4prf", "t4pfp", "t4prp", "t4pfc", "t4prc",
-    "t5name", "t5pff", "t5prf", "t5pfp", "t5prp", "t5pfc", "t5prc",
-    "t6name", "t6pff", "t6prf", "t6pfp", "t6prp", "t6pfc", "t6prc",
-    "t7name", "t7pff", "t7prf", "t7pfp", "t7prp", "t7pfc", "t7prc",
-    "t8name", "t8pff", "t8prf", "t8pfp", "t8prp", "t8pfc", "t8prc",
-    "t9name", "t9pff", "t9prf", "t9pfp", "t9prp", "t9pfc", "t9prc",
-    "t10name", "t10pff", "t10prf", "t10pfp", "t10prp", "t10pfc", "t10prc",
-    "t11name", "t11pff", "t11prf", "t11pfp", "t11prp", "t11pfc", "t11prc"
+const configFields = [
+  "docType", "ecuModel", "numTireSets", "@enableIndividual", "@enableComfort",
+  "t1name", "t1pff", "t1prf", "t1pfp", "t1prp", "t1pfc", "t1prc",
+  "t2name", "t2pff", "t2prf", "t2pfp", "t2prp", "t2pfc", "t2prc",
+  "t3name", "t3pff", "t3prf", "t3pfp", "t3prp", "t3pfc", "t3prc",
+  "t4name", "t4pff", "t4prf", "t4pfp", "t4prp", "t4pfc", "t4prc",
+  "t5name", "t5pff", "t5prf", "t5pfp", "t5prp", "t5pfc", "t5prc",
+  "t6name", "t6pff", "t6prf", "t6pfp", "t6prp", "t6pfc", "t6prc",
+  "t7name", "t7pff", "t7prf", "t7pfp", "t7prp", "t7pfc", "t7prc",
+  "t8name", "t8pff", "t8prf", "t8pfp", "t8prp", "t8pfc", "t8prc",
+  "t9name", "t9pff", "t9prf", "t9pfp", "t9prp", "t9pfc", "t9prc",
+  "t10name", "t10pff", "t10prf", "t10pfp", "t10prp", "t10pfc", "t10prc",
+  "t11name", "t11pff", "t11prf", "t11pfp", "t11prp", "t11pfc", "t11prc"
 ];
 
 function loadConfig() {
+  const result = window.prompt(
+    "Восстановление конфигурации. Load configuration\n\n" +
+    "Пожалуйста введите код, созданный ранее в данном приложении.\n" +
+    "Please enter configuration code, created earlier with this tool",
+    ""
+  );
 
-    let result = window.prompt("Восстановление конфигурации. Load configuration\n\nПожалуйста введите код, созданный ранее в данном приложении.\nPlease enter configuration code, created earlier with this tool", "");
+  if (result === null) return;
 
-    if (result === null)
+  let code;
+  try {
+    code = window.atob(result);
+  } catch (e) {
+    window.alert("Введён некорректный код конфигурации (не base64).\nInvalid configuration code.");
+    return;
+  }
+
+  const keyValue = code.split("&");
+
+  for (let i = 0; i < keyValue.length; i++) {
+    const data = keyValue[i].split("=");
+
+    if (data.length !== 2) continue;
+
+    if (data[0] === "configVersion") {
+      if (data[1] !== configVersion) {
+        window.alert(
+          "Введенный код конфигурации не может может быть восстановлен\n" +
+          "Configuration was created using an incompatible version of this tool and can not be restored\n\n" +
+          "Created version: " + data[1] + "\nCurrent version: " + configVersion
+        );
         return;
-
-    let code = window.atob(result);
-    let keyValue = code.split("&");
-
-    for (let index = 0; index < keyValue.length; index++) {
-        let data = keyValue[index].split("=");
-
-        if (data.length !== 2)
-            continue;
-
-        if (data[0] === "configVersion") {
-            if (data[1] !== configVersion) {
-                window.alert("Введенный код конфигурации не может может быть восстановлен\nConfiguration was created using an incompatible version of this tool and can not be restored\n\nCreated version: " + data[1] + "\nCurrent version: " + configVersion);
-                return;
-            }
-        } else if (data[0].charAt(0) === '@')
-            document.getElementById(data[0].substr(1)).checked = (data[1] === "true");
-        else
-            document.getElementById(data[0]).value = data[1];
+      }
+    } else if (data[0].charAt(0) === "@") {
+      const idCheck = data[0].substr(1);
+      const elCheck = document.getElementById(idCheck);
+      if (elCheck) {
+        elCheck.checked = (data[1] === "true");
+      }
+    } else {
+      const el = document.getElementById(data[0]);
+      if (el) {
+        el.value = data[1];
+      }
     }
+  }
 
-    updateTireSets();
+  updateTireSets();
 }
 
 function saveConfig() {
-    let code = "configVersion=" + configVersion + "&";
+  let code = "configVersion=" + configVersion + "&";
 
-    for (let index = 0; index < configFields.length; index++) {
-        if (configFields[index].charAt(0) === '@')
-            code += configFields[index] + "=" + document.getElementById(configFields[index].substr(1)).checked + "&";
-        else
-            code += configFields[index] + "=" + document.getElementById(configFields[index]).value + "&";
+  for (let i = 0; i < configFields.length; i++) {
+    const fieldName = configFields[i];
+
+    if (fieldName.charAt(0) === "@") {
+      const idCheck = fieldName.substr(1);
+      const elCheck = document.getElementById(idCheck);
+      code += fieldName + "=" + (elCheck ? elCheck.checked : false) + "&";
+    } else {
+      const el = document.getElementById(fieldName);
+      code += fieldName + "=" + (el ? el.value : "") + "&";
     }
+  }
 
-    window.prompt("Сохранить настройки. Save configuration\n\nПожалуйста, сохраните код, приведённый ниже. Он может быть использован для восстановления настроек в любое время.\nPlease backup the configuration code below, it can be used to restore the current configuration at a later point in time.", window.btoa(code));
+  const encoded = window.btoa(code);
+
+  window.prompt(
+    "Сохранить настройки. Save configuration\n\n" +
+    "Пожалуйста, сохраните код, приведённый ниже. Он может быть использован для восстановления настроек в любое время.\n" +
+    "Please backup the configuration code below, it can be used to restore the current configuration at a later point in time.",
+    encoded
+  );
 }
 
-window.onload = function() {
- createTireSets();
-}
+window.onload = function () {
+  createTireSets();
+};
