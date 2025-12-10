@@ -1,61 +1,152 @@
-var e = Math.floor((new Date).getTime() / 1e3),
-    t = [],
-    s = 0,
-    n = "<div class='form-group'><label class='font-weight-bold'>",
-    a = "</label><textarea class='form-control h-100' readonly='readonly' onclick='this.select()' onfocus='this.select()'>1102",
-    l =
-        "0000000000000000003B0FC769BFFF15ECD445B8196D2203D6D56BD8F22748B37D68F863DAC57E23C90A5FEEF0C06394C8D48A2EAA4F0FB658557400E66441DDC7D5AC3610AA4D45056C0C6E17C7E4B60C40E52FFA891938AF186ED20AE83A99EB10F3088479E6CBD2770C1563B5AE235B440BEF16EBE696576E108F2F9F897D963DEFBAD3ABDF2FFE",
-    o = "</textarea></div>";
+const TRAILER_HEX = "0000000000000000003B0FC769BFFF15ECD445B8196D2203D6D56BD8F22748B37D68F863DAC57E23C90A5FEEF0C06394C8D48A2EAA4F0FB658557400E66441DDC7D5AC3610AA4D45056C0C6E17C7E4B60C40E52FFA891938AF186ED20AE83A99EB10F3088479E6CBD2770C1563B5AE235B440BEF16EBE696576E108F2F9F897D963DEFBAD3ABDF2FFE";
 
-function r(e, t, s, n) {
-    e === t ? $("#" + s).removeClass("alert-danger").addClass("alert-success").html(n + " status: <b>OK</b>") : e > 0 && e < t ? $("#" + s).removeClass("alert-success").addClass("alert-danger").html(n + " should be " + t + " length size! <b>" + e +
-        "/" + t + "</b>").show() : $("#" + s).removeClass("alert-success").addClass("alert-danger").html(n + " input could not be empty!").show()
+let codes = [];
+let selectedCount = 0;
+
+function $(selector) {
+  return document.querySelector(selector);
 }
 
-function i() {
-    for (let s = 0; s < t.length; s++) t[s].visible && $("#codes").append(n + t[s].name + a + t[s].code + "03" + t[s].vcrn.toUpperCase() + h(t[s].vin).toUpperCase() + "00" + e.toString(16).toUpperCase() + l + o)
+function $all(selector) {
+  return document.querySelectorAll(selector);
 }
 
-function c(e, t) {
-    for (let s = 0; s < e.length; s++)
-        if (e[s].code === t) return !0;
-    return !1
+function validateLength(actual, expected, alertId, label) {
+  const el = document.getElementById(alertId);
+  if (!el) return;
+
+  el.classList.remove('alert-success', 'alert-danger');
+
+  if (actual === 0) {
+    el.classList.add('alert-danger');
+    el.innerHTML = `${label} input cannot be empty!`;
+    el.style.display = '';
+  } else if (actual !== expected) {
+    el.classList.add('alert-danger');
+    el.innerHTML = `${label} should be ${expected} characters long! <b>${actual}/${expected}</b>`;
+    el.style.display = '';
+  } else {
+    el.classList.add('alert-success');
+    el.innerHTML = `${label} status: <b>OK</b>`;
+    el.style.display = '';
+  }
 }
 
-function h(e) {
-    let t = [];
-    let n = e.length;
-    let s = 0;
-    for (; s < n; s++) {
-        const a = Number(e.charCodeAt(s)).toString(16);
-        t.push(a)
-    }
-    return t.join("")
+function stringToHex(str) {
+  return Array.from(str)
+    .map(ch => ch.charCodeAt(0).toString(16))
+    .join("");
 }
 
-$("#vin").keyup(function () {
-    $("#codes").html("");
-    for (var e = 0; e < t.length; e++) t[e].vin = this.value;
-    r(this.value.length, 17, "avin", "VIN"), i()
-}), $("#vcrn").keyup(function () {
-    $("#codes").html("");
-    for (var e = 0; e < t.length; e++) t[e].vcrn = this.value;
-    r(this.value.length, 10, "avcrn", "VCRN"), i()
-}), $(".checkbox input").change(function () {
-    if ($("#codes").html(""), this.checked) {
-        if (c(t, this.value))
-            for (var e = 0; e < t.length; e++) t[e].code === this.value && (t[e].visible = !0);
-        else t.push({
-            code: this.value,
-            vcrn: $("#vcrn").val(),
-            vin: $("#vin").val(),
-            visible: !0,
-            name: this.name
+function hasCode(list, code) {
+  return list.some(item => item.code === code);
+}
+
+function renderCodes() {
+  const codesContainer = document.getElementById("codes");
+  const vinInput = document.getElementById("vin");
+  const vcrnInput = document.getElementById("vcrn");
+  const jumbotron = document.querySelector(".jumbotron");
+
+  if (!codesContainer || !vinInput || !vcrnInput) return;
+
+  codesContainer.innerHTML = "";
+
+  const vin = vinInput.value;
+  const vcrn = vcrnInput.value;
+
+  const timestampHex = Math.floor(Date.now() / 1000)
+    .toString(16)
+    .toUpperCase();
+
+  codes.forEach(item => {
+    if (!item.visible) return;
+
+    const hexVin = stringToHex(vin).toUpperCase();
+    const finalCode = `1102${item.code}03${vcrn.toUpperCase()}${hexVin}00${timestampHex}${TRAILER_HEX}`;
+
+    const wrapper = document.createElement("div");
+    wrapper.className = "form-group";
+
+    const label = document.createElement("label");
+    label.className = "font-weight-bold";
+    label.textContent = item.name;
+
+    const textarea = document.createElement("textarea");
+    textarea.className = "form-control h-100";
+    textarea.readOnly = true;
+    textarea.value = finalCode;
+
+    // Выделять текст при клике/фокусе
+    textarea.addEventListener("click", function () {
+      this.select();
+    });
+    textarea.addEventListener("focus", function () {
+      this.select();
+    });
+
+    wrapper.appendChild(label);
+    wrapper.appendChild(textarea);
+    codesContainer.appendChild(wrapper);
+  });
+
+  if (jumbotron) {
+    jumbotron.style.display = selectedCount > 0 ? "none" : "";
+  }
+}
+
+const vinEl = document.getElementById("vin");
+if (vinEl) {
+  vinEl.addEventListener("keyup", function () {
+    const value = this.value;
+    codes.forEach(item => (item.vin = value));
+
+    validateLength(value.length, 17, "avin", "VIN");
+    renderCodes();
+  });
+}
+
+const vcrnEl = document.getElementById("vcrn");
+if (vcrnEl) {
+  vcrnEl.addEventListener("keyup", function () {
+    const value = this.value;
+    codes.forEach(item => (item.vcrn = value));
+
+    validateLength(value.length, 10, "avcrn", "VCRN");
+    renderCodes();
+  });
+}
+
+$all(".checkbox input").forEach(input => {
+  input.addEventListener("change", function () {
+    const codeValue = this.value;
+    const name = this.name;
+
+    if (this.checked) {
+      if (hasCode(codes, codeValue)) {
+        codes.forEach(item => {
+          if (item.code === codeValue) item.visible = true;
         });
-        s++
+      } else {
+        const vinVal = vinEl ? vinEl.value : "";
+        const vcrnVal = vcrnEl ? vcrnEl.value : "";
+
+        codes.push({
+          code: codeValue,
+          vcrn: vcrnVal,
+          vin: vinVal,
+          visible: true,
+          name: name
+        });
+      }
+      selectedCount++;
     } else {
-        for (e = 0; e < t.length; e++) t[e].code === this.value && (t[e].visible = !1);
-        s--
+      codes.forEach(item => {
+        if (item.code === codeValue) item.visible = false;
+      });
+      selectedCount--;
     }
-    s > 0 ? $(".jumbotron").hide() : $(".jumbotron").show(), i()
+
+    renderCodes();
+  });
 });
