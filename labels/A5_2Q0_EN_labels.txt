@@ -1,0 +1,37 @@
+01,0-7,Brand, 00 - Volkswagen; 01 - Volkswagen Commercial; 02 - Skoda; 03 - Seat; 04 - Audi; 05 - Bentley; 06 - Lamborghini; 07 - Bugatti; 08 - Porsche; 09 - Quattro; FF - not coded
+02,0-7,Region, 00 - Control Module NOT coded; 01 - Rest of World (RoW); 05 - Japan (JP); 06 - China (CHN); 07 - Korea (ROK); 08 - Europe (EU); 09 - Great Britain (GB); 0A - United States of America (USA); 0B - Canada (CAN); 0C - Australia (AUS); 0D - South African Region (SAR); 0E - Gulf
+03,3-6,Windshield Type, 00 - Module NOT coded; 08 - Heat Protecting Glass; 10 - Clear Glass; 18 - Climate Glass
+03,7,Right Hand Drive (RHD) [PR-L0R]
+04,0-3, Predictive Route Data (RRD/PSD), 00 - Module NOT coded; 01 - Version 1.5; 02 - Version 2.0
+04,4-7, Navigation Type, 00 - Module NOT coded; 10 - MIB Standard; 20 - MIB High
+05,1, Adaptive Cruise Control active
+05,2,KLR active
+05,3,Rain Light Sensor (RLS) active
+05,4,Trailer Control Module (AAG) installed
+05,5,Lane Change Assist (LCA/SWA) installed
+05,6,Front Radar installed
+05,7,Blind Spot Detection active
+06,6,Main Unit active
+06,7,Park Steer Assist (PLA) installed
+07,2-4,Key Personalization, 00 - Module NOT coded; 04 - Version 0.1; 08 - Version 1.x; 0C - Version 2.x
+07,5-7,Network Type, 00 - Module NOT coded; 20 - MQB CAN; 40 - MQB_CAN-FD; 60 - MQB_Ethernet; 80 - MQB FlexRay; A0 - PQ
+08,3-4,Radar Interface, 00 - Inactive; 08 - SF-CAN/Ethernet; 10 - E-CAN/FAS-CAN
+08,5-7,Point of Intervention, 00 - Early; 40 - Late; 80 - Early Setting via Menu; A0 - Late Setting via Menu
+09,0-1,Lane Departure Warning Configuration Kl15, 00 - Module NOT coded; 01 - NOT active; 02 - active; 03 - Last Setting
+09,2-3,Lane Assist System Mode, 00 - Module NOT coded; 04 - Steering Wheel Vibration NOT active; 08 - Steering Wheel Vibration active; 0C - Selection via Menu
+09,4-5,Heading Control (HC) Advanced Takeover Request, 00 - NOT active; 10 - active
+09,6,Heading Control (HC) Mob Line active
+09,7,Heading Control (HC) active
+10,2,Advanced Lane Departure Warning (aLDW) active
+10,3,Lane Assist 'Off-Text' active
+10,4-6,Network Type, 00 - Module NOT coded; 10 - Variant 1; 20 - Variant 2; 30 - Variant 3; 40 - Variant 4
+11,7,Radar Support Function active
+12,3,Personalized Traffic Sign Recognition active
+12,4-7,Traffic Sign Recognition, 00 - Module NOT coded; 10 - active; 20 - hidden
+13,0-3,High Beam type, 00 - w/o additional High Beams; 01 - with Halogen High Beams; 02 - with Xenon High Beams; 03 - with LED High Beams; 04 - with Laser High Beams
+13,4-7,Headlight Type, 00 - Halogen; 10 - Xenon; 20 - LED; 30 - LED with DLA\Matrixbeam
+15,5-7,Front Light Assist FLA type, 00 - NOT installed; 20 - HBA High Beam Assist; 40 - DLA Dynamic Light Assist; 60 - Adaptive Headlight Range Control; 80 - Matrix Beam
+16,0-7,High Beam Assist behavior, 00 - Type 1; 01 - Type 2; 02 - Type 3; 03 - Type 4; 04 - Type 5; 05 - Type 6; 06 - Type 7; 07 - Type 8
+17,0,Heading Control (HC) active
+17,1-3,(HC) Lane crossing Warn Intensity, 00 - Not Set; 02 - Setting via Menu; 04 - Weak; 06 - Medium; 08 - Strong
+17,5-7,Heading Control (HC) type, 00 - Type 0; 20 - Type 1; 40 - Type 2; 60 - Type 3; 80 - Type 4; A0 - Type 5; C0 - Type 6; E0 - Type 7

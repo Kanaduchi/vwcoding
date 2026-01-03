@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><PresetAdaption id="30 цветов не для RGB" sgnr="9" uds="true">
+<Channel id="[VO]_Ambience_lightning_color_list_2" nameArea="DONT_TRANSLATE_AREA" nameKey="[VO]_Ambience_lightning_color_list_2">
+<Param name="[LO]_Rotwert Farbe 11" wert="30"/>
+<Param name="[LO]_Gruenwert Farbe 11" wert="255"/>
+<Param name="[LO]_Blauwert Farbe 11" wert="30"/>
+<Param name="[LO]_Rotwert Farbe 12" wert="30"/>
+<Param name="[LO]_Gruenwert Farbe 12" wert="255"/>
+<Param name="[LO]_Blauwert Farbe 12" wert="100"/>
+<Param name="[LO]_Rotwert Farbe 13" wert="30"/>
+<Param name="[LO]_Gruenwert Farbe 13" wert="255"/>
+<Param name="[LO]_Blauwert Farbe 13" wert="130"/>
+<Param name="[LO]_Rotwert Farbe 14" wert="30"/>
+<Param name="[LO]_Gruenwert Farbe 14" wert="255"/>
+<Param name="[LO]_Blauwert Farbe 14" wert="160"/>
+<Param name="[LO]_Rotwert Farbe 15" wert="30"/>
+<Param name="[LO]_Gruenwert Farbe 15" wert="255"/>
+<Param name="[LO]_Blauwert Farbe 15" wert="190"/>
+<Param name="[LO]_Rotwert Farbe 16" wert="30"/>
+<Param name="[LO]_Gruenwert Farbe 16" wert="255"/>
+<Param name="[LO]_Blauwert Farbe 16" wert="255"/>
+<Param name="[LO]_Rotwert Farbe 17" wert="30"/>
+<Param name="[LO]_Gruenwert Farbe 17" wert="190"/>
+<Param name="[LO]_Blauwert Farbe 17" wert="255"/>
+<Param name="[LO]_Rotwert Farbe 18" wert="30"/>
+<Param name="[LO]_Gruenwert Farbe 18" wert="160"/>
+<Param name="[LO]_Blauwert Farbe 18" wert="255"/>
+<Param name="[LO]_Rotwert Farbe 19" wert="30"/>
+<Param name="[LO]_Gruenwert Farbe 19" wert="130"/>
+<Param name="[LO]_Blauwert Farbe 19" wert="255"/>
+<Param name="[LO]_Rotwert Farbe 20" wert="30"/>
+<Param name="[LO]_Gruenwert Farbe 20" wert="100"/>
+<Param name="[LO]_Blauwert Farbe 20" wert="255"/>
+<Param name="[LO]_Rotwert_Farbe_21" wert="30"/>
+<Param name="[LO]_Gruenwert_Farbe_21" wert="30"/>
+<Param name="[LO]_Blauwert_Farbe_21" wert="255"/>
+<Param name="[LO]_Rotwert_Farbe_22" wert="100"/>
+<Param name="[LO]_Gruenwert_Farbe_22" wert="30"/>
+<Param name="[LO]_Blauwert_Farbe_22" wert="255"/>
+<Param name="[LO]_Rotwert_Farbe_23" wert="130"/>
+<Param name="[LO]_Gruenwert_Farbe_23" wert="30"/>
+<Param name="[LO]_Blauwert_Farbe_23" wert="255"/>
+<Param name="[LO]_Rotwert_Farbe_24" wert="160"/>
+<Param name="[LO]_Gruenwert_Farbe_24" wert="30"/>
+<Param name="[LO]_Blauwert_Farbe_24" wert="255"/>
+<Param name="[LO]_Rotwert_Farbe_25" wert="190"/>
+<Param name="[LO]_Gruenwert_Farbe_25" wert="30"/>
+<Param name="[LO]_Blauwert_Farbe_25" wert="255"/>
+<Param name="[LO]_Rotwert_Farbe_26" wert="255"/>
+<Param name="[LO]_Gruenwert_Farbe_26" wert="30"/>
+<Param name="[LO]_Blauwert_Farbe_26" wert="255"/>
+<Param name="[LO]_Rotwert_Farbe_27" wert="255"/>
+<Param name="[LO]_Gruenwert_Farbe_27" wert="30"/>
+<Param name="[LO]_Blauwert_Farbe_27" wert="190"/>
+<Param name="[LO]_Rotwert_Farbe_28" wert="255"/>
+<Param name="[LO]_Gruenwert_Farbe_28" wert="30"/>
+<Param name="[LO]_Blauwert_Farbe_28" wert="160"/>
+<Param name="[LO]_Rotwert_Farbe_29" wert="255"/>
+<Param name="[LO]_Gruenwert_Farbe_29" wert="30"/>
+<Param name="[LO]_Blauwert_Farbe_29" wert="130"/>
+<Param name="[LO]_Rotwert_Farbe_30" wert="255"/>
+<Param name="[LO]_Gruenwert_Farbe_30" wert="30"/>
+<Param name="[LO]_Blauwert_Farbe_30" wert="100"/>
+</Channel>
+<Channel id="IDE11714" nameArea="KDREFTABLE" nameKey="IDE11714">
+<Param name="[LO]_Rotwert Farbe 1" wert="255"/>
+<Param name="[LO]_Gruenwert Farbe 1" wert="30"/>
+<Param name="[LO]_Blauwert Farbe 1" wert="30"/>
+<Param name="[LO]_Rotwert Farbe 2" wert="255"/>
+<Param name="[LO]_Gruenwert Farbe 2" wert="100"/>
+<Param name="[LO]_Blauwert Farbe 2" wert="30"/>
+<Param name="[LO]_Rotwert Farbe 3" wert="255"/>
+<Param name="[LO]_Gruenwert Farbe 3" wert="130"/>
+<Param name="[LO]_Blauwert Farbe 3" wert="30"/>
+<Param name="[LO]_Rotwert Farbe 4" wert="255"/>
+<Param name="[LO]_Gruenwert Farbe 4" wert="160"/>
+<Param name="[LO]_Blauwert Farbe 4" wert="30"/>
+<Param name="[LO]_Rotwert Farbe 5" wert="255"/>
+<Param name="[LO]_Gruenwert Farbe 5" wert="190"/>
+<Param name="[LO]_Blauwert Farbe 5" wert="30"/>
+<Param name="[LO]_Rotwert Farbe 6" wert="255"/>
+<Param name="[LO]_Gruenwert Farbe 6" wert="255"/>
+<Param name="[LO]_Blauwert Farbe 6" wert="30"/>
+<Param name="[LO]_Rotwert Farbe 7" wert="190"/>
+<Param name="[LO]_Gruenwert Farbe 7" wert="255"/>
+<Param name="[LO]_Blauwert Farbe 7" wert="30"/>
+<Param name="[LO]_Rotwert Farbe 8" wert="160"/>
+<Param name="[LO]_Gruenwert Farbe 8" wert="255"/>
+<Param name="[LO]_Blauwert Farbe 8" wert="30"/>
+<Param name="[LO]_Rotwert Farbe 9" wert="130"/>
+<Param name="[LO]_Gruenwert Farbe 9" wert="255"/>
+<Param name="[LO]_Blauwert Farbe 9" wert="30"/>
+<Param name="[LO]_Rotwert Farbe 10" wert="100"/>
+<Param name="[LO]_Gruenwert Farbe 10" wert="255"/>
+<Param name="[LO]_Blauwert Farbe 10" wert="30"/>
+</Channel>
+</PresetAdaption>
