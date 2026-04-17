@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><PresetAdaption id="ест" sgnr="9" uds="true">
+<Channel id="IDE09732" nameArea="KDREFTABLE" nameKey="IDE09732">
+<Param name="[LO]_Ambientemenue mit globalem aus" wert="акт."/>
+<Param name="[LO]_Ambientemenue mit alle Zonen" wert="акт."/>
+<Param name="[LO]_Ambient_Farbliste_HMI" wert="акт."/>
+<Param name="[LO]_Ambience_light_colorlist_default" wert="1"/>
+</Channel>
+<Channel id="IDE09731" nameArea="KDREFTABLE" nameKey="IDE09731">
+<Param name="[LO]_Cockpitbeleuchtung mehrfarbig" wert="акт."/>
+</Channel>
+<Channel id="IDE11714" nameArea="KDREFTABLE" nameKey="IDE11714">
+<Param name="[LO]_Rotwert Farbe 1" wert="217"/>
+<Param name="[LO]_Gruenwert Farbe 1" wert="221"/>
+<Param name="[LO]_Blauwert Farbe 1" wert="235"/>
+<Param name="[LO]_Rotwert Farbe 2" wert="255"/>
+<Param name="[LO]_Gruenwert Farbe 2" wert="172"/>
+<Param name="[LO]_Blauwert Farbe 2" wert="5"/>
+<Param name="[LO]_Rotwert Farbe 3" wert="253"/>
+<Param name="[LO]_Gruenwert Farbe 3" wert="108"/>
+<Param name="[LO]_Blauwert Farbe 3" wert="55"/>
+<Param name="[LO]_Rotwert Farbe 4" wert="222"/>
+<Param name="[LO]_Gruenwert Farbe 4" wert="70"/>
+<Param name="[LO]_Blauwert Farbe 4" wert="20"/>
+<Param name="[LO]_Rotwert Farbe 5" wert="252"/>
+<Param name="[LO]_Gruenwert Farbe 5" wert="116"/>
+<Param name="[LO]_Blauwert Farbe 5" wert="240"/>
+<Param name="[LO]_Rotwert Farbe 6" wert="132"/>
+<Param name="[LO]_Gruenwert Farbe 6" wert="76"/>
+<Param name="[LO]_Blauwert Farbe 6" wert="222"/>
+<Param name="[LO]_Rotwert Farbe 7" wert="0"/>
+<Param name="[LO]_Gruenwert Farbe 7" wert="102"/>
+<Param name="[LO]_Blauwert Farbe 7" wert="225"/>
+<Param name="[LO]_Rotwert Farbe 8" wert="1"/>
+<Param name="[LO]_Gruenwert Farbe 8" wert="192"/>
+<Param name="[LO]_Blauwert Farbe 8" wert="255"/>
+<Param name="[LO]_Rotwert Farbe 9" wert="0"/>
+<Param name="[LO]_Gruenwert Farbe 9" wert="204"/>
+<Param name="[LO]_Blauwert Farbe 9" wert="0"/>
+<Param name="[LO]_Rotwert Farbe 10" wert="182"/>
+<Param name="[LO]_Gruenwert Farbe 10" wert="255"/>
+<Param name="[LO]_Blauwert Farbe 10" wert="57"/>
+</Channel>
+</PresetAdaption>

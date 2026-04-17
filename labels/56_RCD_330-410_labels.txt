@@ -1,0 +1,14 @@
+00,0,AUX-IN Controls active
+00,1,CD-Changer/iPod/USB Connection Monitoring active
+00,2,AUX-IN Connection Monitoring active
+00,3,Parking Aid installed
+01,0-7,Amplifier settings, 00 - Sound System not installed; 01 - Volkswagen Sound System OR Dynaudio Sound System; 02 - Skoda Soundsystem; 05 - Dynaudio Sound System (Coding may be incorrect / see TPI 2019755) 
+02,0-7,Speaker Configuration, 00 - Sound System (active Speakers); 02 - 2 Speaker Channels (2 passive Front Speakers); 04 - 4 Speaker Channels (2 passive Speakers each Front and Rear) 
+03,0,Shortpress Steering Wheel Buttons installed
+03,1,Telephone OR Telephone Preparation (CAN) installed
+03,3,Navigation Preparation (Maps && More / PR-7UE)
+03,6,Back-Up Camera installed
+04,0-7,Speaker Fault Monitoring, 00 - Monitoring DISABLED; 01 - Treble Speaker Monitoring deactivated (Sound System); 02 - Treble Speaker Monitoring for Front Speakers active; 03 - Treble Speaker Monitoring for Rear Speakers active; 04 - Treble Speaker Monitoring for Front & Rear Speakers active
+05,0-7,Frequency Response, 00 - Linear; 01 - Skoda Octavia (1Z) / Skoda Yeti (5L / PR-8AG/8DN); 03 - Skoda Yeti (5L / PR-8YF); 04 - Skoda Superb (3T); 06 - Skoda Fabia/Roomster (5J); 07 - Skoda Rapid (NH)
+06,0-7,Optical Park System & Interior Graphics, 00 - Standard (via CAN); 01 - VW Polo (6R1); 02 - VW Beetle (5C1); 03 - VW Beetle Cabrio (5C7); 04 - VW Scirocco (137); 05 - VW Golf (5K1); 06 - VW Jetta (162); 07 - VW Golf Variant/Wagon (AJ5); 0C - VW Tiguan (5N2); 0D - VW Sharan (7N1); 10 - VW Passat (362); 11 - VW Passat Variant/Wagon (365); 13 - VW Caddy (2CA); 14 - VW Transporter/Multivan (7E/7F); 15 - VW Amarok (2HA) Single Cab; 16 - VW Amarok (2HB) Double Cab; 24 - Seat Alhambra (710)
+

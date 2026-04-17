@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><PresetAdaption id="5F - Эстетическая подсветка" sgnr="95" uds="true">
+<Channel id="[VO]_Car_Function_Adaptations_Gen2" nameArea="DONT_TRANSLATE_AREA" nameKey="[VO]_Car_Function_Adaptations_Gen2">
+<Param name="[LO]_menu_display_ambient_illumination" wert="Включ."/>
+<Param name="[LO]_menu_display_ambient_illumination_clamp_15_off" wert="не активир."/>
+<Param name="[LO]_menu_display_ambient_illumination_over_threshold_high" wert="Включ."/>
+<Param name="[LO]_menu_display_ambient_illumination_standstill" wert="не активир."/>
+<Param name="[LO]_menu_display_ambient_illumination_after_disclaimer" wert="не активир."/>
+</Channel>
+</PresetAdaption>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><PresetAdaption id="5F - Меню сидения" sgnr="95" uds="true">
+<Channel id="[VO]_Car_Function_List_BAP_Gen2" nameArea="DONT_TRANSLATE_AREA" nameKey="[VO]_Car_Function_List_BAP_Gen2">
+<Param name="[LO]_driver_seat_0x10" wert="Включ."/>
+<Param name="[LO]_driver_seat_0x10_msg_bus" wert="Шина данных Комфорт"/>
+</Channel>
+<Channel id="[VO]_Car_Function_Adaptations_Gen2" nameArea="DONT_TRANSLATE_AREA" nameKey="[VO]_Car_Function_Adaptations_Gen2">
+<Param name="[LO]_menu_display_seat_configuration" wert="Включ."/>
+<Param name="[LO]_menu_display_seat_configuration_clamp_15_off" wert="не активир."/>
+<Param name="[LO]_menu_display_seat_configuration_over_threshold_high" wert="Включ."/>
+<Param name="[LO]_menu_display_seat_configuration_standstill" wert="не активир."/>
+<Param name="[LO]_menu_display_seat_configuration_after_disclaimer" wert="не активир."/>
+</Channel>
+</PresetAdaption>

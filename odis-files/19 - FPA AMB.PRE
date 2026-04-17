@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><PresetCoding id="19 - FPA Function AMB" sgnr="25" uds="true">
+<CodingEntry bytecoding="09 05 00 08 28 08 59 00 DB 07 22 9A 1E 0F 00 00 00 01 07 00 00 00 00 00 00 00 00 00 00 00" index="1" systemname="GW MQB High  ">
+<Parameter name="FPA_Funktion_AMB" value="active"/>
+</CodingEntry>
+</PresetCoding>

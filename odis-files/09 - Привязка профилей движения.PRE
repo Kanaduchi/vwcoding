@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><PresetAdaption id="09 - Привязка профилей для 30 цветов" sgnr="9" uds="true">
+<Channel id="IDE09731" nameArea="KDREFTABLE" nameKey="IDE09731">
+<Param name="[LO]_Ambiente_Farbwahl_FPA_waehlbare_Kopplung" wert="акт."/>
+<Param name="[LO]_Ambiente_Fahrprofil_Individual" wert="7"/>
+<Param name="[LO]_Ambiente_Farbwahl_FPA_waehlbare_Kopplung_Status_hmi_default" wert="сопряжены"/>
+</Channel>
+<Channel id="[VO]_Ambientelicht Zuordnung der Farbe zum Fahrprofil" nameArea="DONT_TRANSLATE_AREA" nameKey="[VO]_Ambientelicht Zuordnung der Farbe zum Fahrprofil">
+<Param name="[LO]_Fahrprofil_0" wert="1"/>
+<Param name="[LO]_Fahrprofil_1" wert="2"/>
+<Param name="[LO]_Fahrprofil_2" wert="20"/>
+<Param name="[LO]_Fahrprofil_3" wert="5"/>
+<Param name="[LO]_Fahrprofil_4" wert="5"/>
+<Param name="[LO]_Fahrprofil_5" wert="11"/>
+<Param name="[LO]_Fahrprofil_6" wert="7"/>
+<Param name="[LO]_Fahrprofil_7" wert="25"/>
+<Param name="[LO]_Fahrprofil_8" wert="1"/>
+<Param name="[LO]_Fahrprofil_9" wert="1"/>
+<Param name="[LO]_Fahrprofil_10" wert="16"/>
+<Param name="[LO]_Fahrprofil_11" wert="1"/>
+<Param name="[LO]_Fahrprofil_12" wert="1"/>
+<Param name="[LO]_Fahrprofil_13" wert="1"/>
+<Param name="[LO]_Fahrprofil_14" wert="1"/>
+<Param name="[LO]_Fahrprofil_15" wert="1"/>
+<Param name="[LO]_Ambiente" wert="[VO]_Keine_Spannungsanforderung"/>
+</Channel>
+</PresetAdaption>
