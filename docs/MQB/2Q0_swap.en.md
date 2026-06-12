@@ -1,3 +1,6 @@
+---
+status: new
+---
 # SWaP for 2Q0980653 camera (MFK 3.0)
 
 Full guide to unlocking **SWaP** on the **2Q0980653×** front assistance camera (**classic MQB**, MFK 3.0).  

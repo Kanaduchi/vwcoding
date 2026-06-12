@@ -1,6 +1,7 @@
 ---
 template: ./main.en.html
 title: Coding of VW cars
+status: new
 ---
 # SFD and SFD2 — VAG diagnostic protection
 

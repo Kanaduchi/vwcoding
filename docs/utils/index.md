@@ -2,6 +2,7 @@
 comments: false
 hide:
   - toc
+status: new
 ---
 
 <style>
@@ -48,5 +49,12 @@ hide:
 
     ---
     [:octicons-arrow-right-24: Open](./fec)
+
+-   :fontawesome-solid-gears:{ .lg .middle } __FPA editor__
+
+    Утилита для редактирования FPA (Driving Profiles) датасетов
+
+    ---
+    [:octicons-arrow-right-24: Open](./fpaEditor)
 
 </div>

@@ -1,3 +1,6 @@
+---
+status: new
+---
 # SFD и SFD2 — защита диагностики VAG
 
 !!! warning "Важно"
