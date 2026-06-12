@@ -28,6 +28,9 @@ Parameters for firmware L and H with increased warning time (60s) for different 
     - Pick Evo parameters by **VIN / HW / SW** in ODIS or [mibsolution.one](https://mibsolution.one) (MEB/MQB Evo → A5).  
     - Flash A5 on Evo only via **ODIS online** + SFD; wrong parameters can disable assistants until backup restore.
 
+!!! tip "2Q0 (MFK 3.0) — Sign Assist and SWaP"
+    **Sign Assist (VZE)** on **2Q0980653** requires the SWaP procedure — see [2Q0 camera SWaP](2Q0_swap.en.md). TJA uses datasets from the table below.
+
 ## Firmware for cameras like MFK3
 
 | Equipment ID                 |                         Firmware                          |                                  Parameter<br/>(ODIS XML)                                  | Notes |

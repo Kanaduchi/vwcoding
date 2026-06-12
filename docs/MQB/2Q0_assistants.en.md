@@ -14,7 +14,7 @@ If the driver does not want or cannot take part in driving the car, then the car
 If the person continues to not take control, the car turns on the emergency lights and stops.
 
 Sign Assist - Traffic sign recognition assistant. Shows the signs that the camera reads.  
-A SWaP code is required for activation.
+A SWaP code is required for activation. Step-by-step guide: [2Q0 camera SWaP](2Q0_swap.en.md).
 
 ## SWaP functionality extension codes
 
