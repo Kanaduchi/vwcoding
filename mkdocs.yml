@@ -185,9 +185,6 @@ plugins:
   - git-revision-date-localized:
       type: date
       enable_creation_date: true
-  - print-site:
-      add_to_navigation: false
-      enumerate_headings: true
 
 markdown_extensions:
   - admonition
