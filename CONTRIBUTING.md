@@ -64,7 +64,7 @@ Inserting file to the page:
 - [ ] Added/updated `nav` entry in `mkdocs.yml` if this is a new page
 - [ ] Added/updated `nav_translations` if this is a new menu item
 - [ ] Ran `mkdocs build` locally
-- [ ] If you changed docs, updated both `page.md` and `page.en.md` in the same PR
+- [ ] If you changed **Russian** `page.md`, update matching `page.en.md` in the same PR (EN-only translation edits are OK when RU is unchanged)
 
 ## Adding a new page
 

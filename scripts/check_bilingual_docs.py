@@ -76,11 +76,12 @@ def changed_files(base_ref: str) -> set[Path]:
 
 
 def check_changed_pairs(base_ref: str) -> list[str]:
+    """Require EN updates when RU changes; allow EN-only edits if RU pair exists."""
     errors: list[str] = []
     changed = changed_files(base_ref)
     touched: set[str] = set()
     for path in changed:
-        if not path.exists() or not is_doc(path):
+        if not is_doc(path):
             continue
         key = stem_key(path)
         if key in SKIP_STEMS:
@@ -92,15 +93,19 @@ def check_changed_pairs(base_ref: str) -> list[str]:
         en = en_path(ru)
         ru_changed = ru in changed
         en_changed = en in changed
-        if ru_changed ^ en_changed:
-            if ru_changed:
+
+        if ru_changed and not en_changed:
+            errors.append(
+                f"{rel(ru)} changed without matching update to {rel(en)}"
+            )
+            continue
+
+        if en_changed and not ru_changed:
+            if not ru.exists():
                 errors.append(
-                    f"{rel(ru)} changed without matching update to {rel(en)}"
+                    f"{rel(en)} changed but Russian pair {rel(ru)} is missing"
                 )
-            else:
-                errors.append(
-                    f"{rel(en)} changed without matching update to {rel(ru)}"
-                )
+            # EN-only change while RU exists: OK (translation / initial .en.md rollout)
     return errors
 
 
@@ -114,7 +119,7 @@ def main() -> int:
     parser.add_argument(
         "--changed",
         metavar="BASE_REF",
-        help="Verify PR/commit changes touch both language files (e.g. origin/master)",
+        help="On PRs: fail if Russian docs changed without English; EN-only OK if RU pair exists",
     )
     args = parser.parse_args()
 

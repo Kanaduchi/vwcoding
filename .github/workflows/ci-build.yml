@@ -42,7 +42,7 @@ jobs:
       - name: Verify language pairs exist
         run: python scripts/check_bilingual_docs.py --all
 
-      - name: Verify changed docs update both languages
+      - name: Verify Russian doc changes include English
         if: github.event_name == 'pull_request'
         run: python scripts/check_bilingual_docs.py --changed origin/${{ github.base_ref }}
 
