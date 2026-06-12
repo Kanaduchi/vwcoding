@@ -166,4 +166,4 @@ Passive_Komfort:
 - Passive_Komfort_Oeffnen_aktiv: activated
 - Passive_Komfort_Togglen_aktiv: activated
 → Apply
-``` yaml 
+```

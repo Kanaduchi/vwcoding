@@ -16,7 +16,8 @@ status: new
 
 !!! note "Важная информация"
     1. Кодировки проверялись в основной своей массе на Golf MK8 
-    2. Если пункт помечен, как невозможный к кодированию, значит об успешном применении кодировки не известно.
+    2. Если пункт помечен как «невозможно закодировать», значит об успешном применении кодировки не известно.
+    3. Перед кодированием на Evo/MEB см. [SFD и SFD2](../sfd.md). Travel Assist — [отдельная инструкция](travelAssist.md), доп. ассистенты — [EA, TJA, 44](driverAssistExtras.md).
 
 !!! tip "Оффлайн версия"
     [Скачать PDF :material-download:](https://drive.google.com/file/d/1Ybj7CvYJjE81WpjKkBgFsONvx6q1fgpP/view?fbclid=IwAR0uK9Rusg_bGJ96JcGQRc2-WJEMXpSc92RvgYhZRa6SplEh9w-iSXs1qj4){ .md-button .md-button--primary }

@@ -6,7 +6,7 @@
 
 | Автомобиль   | Параметрия<br/>(ODIS XML)                | Примечания               |
 |:-------------|:-----------------------------------------|:-------------------------|
-| Все марки    | [(Скачать)](../parameters/6D.zip)        | Все возможные параметрии |
+| Все марки    | [(Скачать)](../parameters/6D.ZIP)        | Все возможные параметрии |
 
 
 ### Kick Close – закрытие багажника движением ноги
@@ -101,7 +101,7 @@ Byte9_VIP:
 ``` yaml title="логин-пароль: 20103"
 Блок B7 → Адаптация:
 byte9_Vip:
-- Сoding_kick and_close_function: Активировать
+- Coding_kick and_close_function: Активировать
 → Применить
 ```
 
@@ -161,7 +161,7 @@ ZV Autolock:
 
 === "Кодирование в ODIS"
     ``` yaml
-    Блок В7 → Кодирование:
+    Блок B7 → Кодирование:
     Terminal 15 characteristics of passive entry exit function
     - Оригинальное значение – Function only allowed for terminal 15 off
     - Новое значение – Function only allowed for terminal 15 on or off
@@ -170,7 +170,7 @@ ZV Autolock:
 
 === "Кодирование в VCDS" 
     ``` yaml
-    Блок В7  
+    Блок B7  
     Кодирование - 07 → Длинное кодирование → разрешить ASAM данные:
     Байт 0 – Бит 4 (Terminal 15 characteristics of passive entry exit function): Активировать  
     Выход → Сохранить
@@ -180,14 +180,14 @@ ZV Autolock:
 
 === "Кодирование в ODIS"
     ``` yaml
-    Блок В7 → Кодирование:
+    Block B7 → Кодирование:
     Locking for door slamming active: Активировать
     → Применить
     ```
 
 === "Кодирование в VCDS" 
     ``` yaml
-    Блок В7  
+    Block B7  
     Кодирование - 07 → Длинное кодирование → разрешить ASAM данные:
     Байт 1 – Бит 4 (Блокировка двери хлопком включена): Активировать  
     Выход → Сохранить

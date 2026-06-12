@@ -60,7 +60,28 @@
 ```
 
 Пример вставки изображений на страницу сайта:  
-```![Screenshot](../images/MQB/odis-e-tires.png)```
+```
+![Screenshot](../images/MQB/odis-e-tires.png)```
 
 Пример вставки файлов на страницу сайта:  
-```[(Сборка для Škoda)](../firmwares/TMC-zz.rar)```
+```
+[(Сборка для Škoda)](../firmwares/TMC-zz.rar)```
+
+### Двуязычный контент
+
+Сайт поддерживает русский и английский языки. Каждая страница существует в двух файлах:
+
+- `page.md` — русская версия (язык по умолчанию)
+- `page.en.md` — английская версия
+
+**При добавлении или изменении кодировок и адаптаций правки нужно вносить сразу в оба файла** и отправлять один pull request.
+
+1. Найдите нужную страницу в `/docs`, например `docs/MQB/drive.md`.
+2. Внесите изменение в русскую версию.
+3. Внесите эквивалентное изменение в `docs/MQB/drive.en.md`.
+4. Если создаётся новая страница — добавьте оба файла и пункт в `nav` файла `mkdocs.yml`.
+5. Для нового пункта меню добавьте перевод в `nav_translations` (секция `locale: en`).
+6. Проверьте сборку: `mkdocs build`.
+7. Создайте pull request.
+
+Подробнее — в [README.md](https://github.com/Kanaduchi/vwcoding/blob/master/README.md) и [CONTRIBUTING.md](https://github.com/Kanaduchi/vwcoding/blob/master/CONTRIBUTING.md).

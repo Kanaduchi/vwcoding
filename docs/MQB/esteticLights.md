@@ -16,7 +16,7 @@ Suchbeleuchtung_allgemein:
 ### Пульсация кнопки Старт-Стоп Engine
 
 ``` yaml title="логин-пароль: 20103"
-Блок В7 Kessy Безопасный доступ → Адаптация:
+Блок B7 Kessy Безопасный доступ → Адаптация:
 DeveloperCoding Search lights:
 - ZAT_illumination_concept_mybeat_clamp58xt: Активировать
 - ZAT_illumination_modus_mybeat_clamp58xt: Активировать

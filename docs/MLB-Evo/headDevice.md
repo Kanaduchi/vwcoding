@@ -113,7 +113,7 @@ byte_16_Bluetooth_Headphones: off
 
 ### Отключение блокировки части функций в MMI во время движения
 :octicons-verified-24: Audi
-``` title="логин-пароль: 20103"
+``` yaml title="логин-пароль: 20103"
 Блок 5F → Адаптация:
 Vehicle_configuration:
 - unblock_functions_while_piloted_driving: blocked
