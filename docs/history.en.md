@@ -15,6 +15,8 @@ comments: false
 7. MQB-Evo: additional assistants (EA, TJA, ECU 44, V2X/TA 2024+)
 8. MQB: Evo A5 camera firmware table (5WA 980 653); fixed Octavia A7 PDF link (hyphen filename)
 9. Renamed odis-file 6С → 6C (cornering light)
+10. MQB: full 2Q0980653 camera SWaP guide (`2Q0_swap.md`, methods A/B as tabs)
+11. utils: ODIS E manual moved from PDF to markdown (`odis-e.md`)
 
 ### 01/03/2026
 1. Fixed an error when loading js scripts

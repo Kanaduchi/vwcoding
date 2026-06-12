@@ -141,6 +141,7 @@ plugins:
             Кодирование 3Q* камеры: Coding of 3Q* camera
             Калибровка 3Q* камеры: Calibration of 3Q* camera
             Кодирование 2Q* камеры: Coding of 2Q* camera
+            SWaP камеры 2Q0: 2Q0 camera SWaP
             Кодирование камеры ассистентов: Assistance camera coding
             Прошивки камеры ассистентов: Assistance camera firmwares
             Системы активной безопасности: Safety features
@@ -262,6 +263,7 @@ nav:
           - Кодирование 3Q* камеры: MQB/3Q0_assistants.md
           - Калибровка 3Q* камеры: MQB/3Q0_calibration.md
           - Кодирование 2Q* камеры: MQB/2Q0_assistants.md
+          - SWaP камеры 2Q0: MQB/2Q0_swap.md
           - Прошивки камеры ассистентов: MQB/camAssistFirmwares.md
       - Системы активной безопасности: MQB/active_systems.md
       - Настройка профилей движения (FPA): MQB/fpaCoding.md

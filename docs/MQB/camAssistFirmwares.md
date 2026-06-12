@@ -29,6 +29,9 @@ hide:
     - Параметрии для Evo выбирайте по **VIN / HW / SW** в ODIS или на [mibsolution.one](https://mibsolution.one) (раздел MEB/MQB Evo → A5).  
     - Flash камеры A5 на Evo только через **ODIS online** + SFD; ошибка параметрии = потеря ассистентов до восстановления backup.
 
+!!! tip "2Q0 (MFK 3.0) — Sign Assist и SWaP"
+    Для **Sign Assist (VZE)** на камере **2Q0980653** нужна процедура SWaP — см. [SWaP камеры 2Q0](2Q0_swap.md). TJA — параметрия из таблицы ниже.
+
 ## Прошивки для камер вида MFK3
 
 | ID оборудования              |                         Прошивка                         |                                 Параметрия<br/>(ODIS XML)                                 | Примечания |
