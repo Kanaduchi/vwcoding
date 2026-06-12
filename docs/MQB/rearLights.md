@@ -72,14 +72,14 @@ Leuchte24SL HRA65:
 Leuchte 28RFL LC11:
 - Lichtfunktion C: Active меняем на Blinken Links Hellphase
 - Lichtfunktion D: остается Not Active
-- Dimmwert СD: остается «0»
+- Dimmwert CD: остается «0»
 - Dimming Direction CD: maximize меняем на minimize
 → Применить
 ---
 Leuchte 29RFL RA64:
 - Lichtfunktion C: Active меняем на Blinken Rechts Hellphase
 - Lichtfunktion D: остается Not Active
-- Dimmwert СD: остается «0»
+- Dimmwert CD: остается «0»
 - Dimming Direction CD: maximize меняем на minimize
 → Применить
 ```

@@ -4,10 +4,6 @@ site_description: Основные кодировки и адаптации пл
 site_author: VWCODING
 site_url: https://vwcoding.ru/
 
-# Hot news
-hot_news_title: Все ваши предложения и новые идеи можно присылать на info@vwcoding.ru
-hot_news_title_en: Fill free to send all your ideas and updates to info@vwcoding.ru
-
 # Repository
 repo_name: Kanaduchi/vwcoding
 repo_url: https://github.com/Kanaduchi/vwcoding
@@ -79,13 +75,15 @@ extra_css:
   - assets/custom.css
 
 extra:
+  hot_news_title: Все ваши предложения и новые идеи можно присылать на info@vwcoding.ru
+  hot_news_title_en: Fill free to send all your ideas and updates to info@vwcoding.ru
   status:
     updated: New codings were added to this page
     new: New codings were added
   comments:
     enable: true
     # Can be disqus or giscus
-    type: disqus
+    type: giscus
     # Url for disqus
     disqus_url: https-mqb-readthedocs-io
     repo: Kanaduchi/vwcoding
@@ -172,13 +170,18 @@ plugins:
             Генератор параметрии: Parameter generation
             Дооснащение: Addons
             Eeprom память: Eeprom memory
+            Защита SFD и SFD2: SFD and SFD2
+            Travel Assist: Travel Assist
+            EA, TJA, блок 44: EA, TJA, ECU 44
+            Дооснащение (retrofit): Retrofit
+            Платформа MEB: MEB platform
+            Головное устройство MEB: MEB head unit
+            Зарядка и HV: Charging and HV
+            BCM / комфорт: BCM and comfort
   - search:
       lang:
         - en
         - ru
-  - print-site:
-      add_to_navigation: false
-      enumerate_headings: true
   - git-revision-date-localized:
       type: date
       enable_creation_date: true
@@ -231,9 +234,11 @@ markdown_extensions:
 nav:
   - Общая информация:
       - index.md
+      - Защита SFD и SFD2: sfd.md
       - Платформа MQB: MQB/index.md
       - Платформа MQB-Evo: MQB-Evo/index.md
       - Платформа MLB/MLB-Evo: MLB-Evo/index.md
+      - Платформа MEB: MEB/index.md
       - Платформа PQ26: PQ26/index.md
       - Платформа PQ35: PQ35/index.md
       - Инструменты и адаптеры:
@@ -249,16 +254,6 @@ nav:
       - История изменений: history.md
       - Обратная связь: questions.md
       - Поддержка и развитие проекта: support.md
-  - Инструменты и адаптеры:
-      - utils/index.md
-      - Редактор параметрий: utils/datasetEditor.md
-      - Калькулятор длинного кодирования: utils/longCoding.md
-      - FEC генератор: utils/fec.md
-      - XOR калькулятор: utils/xorCalculator.md
-      - Генератор параметрии шин: utils/tiresCoding.md
-      - Список программ и адаптеров: utils/programs.md
-      - Инструкция ODIS E: utils/odis-e.md
-      - Toolbox: utils/toolBox.md
   - MQB:
       - MQB/index.md
       - Ассистенты водителя:
@@ -297,6 +292,8 @@ nav:
   - MQB-Evo:
       - MQB-Evo/index.md
       - Ассистенты водителя:
+          - Travel Assist: MQB-Evo/travelAssist.md
+          - EA, TJA, блок 44: MQB-Evo/driverAssistExtras.md
           - Кодирование ACC: MQB-Evo/acc.md
           - Кодирование камеры ассистентов: MQB-Evo/headCameraUnit.md
       - Движение и управление: MQB-Evo/drive.md
@@ -307,6 +304,14 @@ nav:
       - Приборная панель: MQB-Evo/AID.md
       - Головное устройство: MQB-Evo/headControlUnit.md
       - Отпирание и запирание: MQB-Evo/security.md
+      - Дооснащение: MQB-Evo/retrofit.md
+  - MEB:
+      - MEB/index.md
+      - Ассистенты водителя: MEB/assistants.md
+      - Климат: MEB/climate.md
+      - Зарядка и HV: MEB/charging.md
+      - BCM / комфорт: MEB/bcm.md
+      - Головное устройство: MEB/headUnit.md
   - MLB/MLB-Evo:
       - MLB-Evo/index.md
       - Ассистенты водителя: MLB-Evo/assistants.md

@@ -1,3 +1,7 @@
+---
+template: ./main.en.html
+title: Coding of VW cars
+---
 # Support and contributing
 
 ## Donation and support
@@ -41,7 +45,9 @@ You can use the template below to add new codings
     !!! warning ""
         Some warning message
 
-    ``` yaml title="логин-пароль: XXXXX (if applicable)"
+    ```
+
+    ``` yaml title="Login code: XXXXX (if applicable)"
     Block XX → Adaptation/Coding:
     Byte XX – Bit X (name): Active
     Name of volume/folder:
@@ -53,23 +59,34 @@ You can use the template below to add new codings
         This information is displayed collapsed on the site
 ```
 
+
 Inserting image to the page:  
-```![Screenshot](../images/***/imageName.png)```
+```
+![Screenshot](../images/***/imageName.png)
+```
+
 
 Inserting file to the page:  
-```[(Name of file)](LinkToFile)```
+```
+[(Name of file)](LinkToFile)
+```
 
-### Adding localizations
 
-If you want to help in translating this site to the English language, please contribute localization!
+### Bilingual content
 
-Follow these steps to add localization:
+The site supports Russian and English. Every page exists as two files:
 
-1. Copy a particular file in the /docs directory to new with lang suffix. Example: drive.md → drive.en.md
-2. Start translating the strings
-3. Edit mkdocs.yaml and edit the following variables. Make sure that all navigation items translated correctly
-    ```yaml
-    nav_translations:
-        Name in Russian: Name in English
-    ```
-4. Create a PR with your localization updates.
+- `page.md` — Russian (default language)
+- `page.en.md` — English
+
+**When adding or changing codings and adaptations, update both files in the same pull request.**
+
+1. Find the target page in `/docs`, for example `docs/MQB/drive.md`.
+2. Apply the change to the Russian version.
+3. Apply the equivalent change to `docs/MQB/drive.en.md`.
+4. If you add a new page, create both files and add it to `nav` in `mkdocs.yml`.
+5. For a new menu item, add a label to `nav_translations` (under `locale: en`).
+6. Verify the build: `mkdocs build`.
+7. Open a pull request.
+
+See also [README.en.md](https://github.com/Kanaduchi/vwcoding/blob/master/README.en.md) and [CONTRIBUTING.md](https://github.com/Kanaduchi/vwcoding/blob/master/CONTRIBUTING.md).

@@ -30,7 +30,7 @@ Discover Media также может быть устройством Technisat P
 
 ![Screenshot](../images/MQB/MIBII/2.png)
 
-(Delphi) SW Train Version (MST2_ЕС_VW_P0891D) - формируются следующим образом:  
+(Delphi) SW Train Version (MST2_EC_VW_P0891D) – формируются следующим образом:  
 
 ```
 MST2 = MIB2 стандартного устройство  

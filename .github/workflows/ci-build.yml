@@ -1,34 +1,70 @@
 name: build
+
 on:
-  push
+  push:
+  pull_request:
 
-# Environment
 env:
-  NODE_VERSION: 10.x
-  PYTHON_VERSION: 3.x
+  PYTHON_VERSION: "3.12"
 
-# Jobs to run
 jobs:
-
-  # Build documentation
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout source form GitHub
-        uses: actions/checkout@v2
+      - name: Checkout source from GitHub
+        uses: actions/checkout@v4
         with:
+          fetch-depth: 0
           persist-credentials: false
 
       - name: Install Python runtime and dependencies
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
           python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
 
-      - name: Install theme and dependencies
+      - name: Install dependencies
         run: |
+          python -m pip install --upgrade pip
           pip install -r requirements.txt
-          pip install .
 
       - name: Build documents
+        run: mkdocs build --clean
+
+  bilingual:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source from GitHub
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Verify language pairs exist
+        run: python scripts/check_bilingual_docs.py --all
+
+      - name: Verify Russian doc changes include English
+        if: github.event_name == 'pull_request'
+        run: python scripts/check_bilingual_docs.py --changed origin/${{ github.base_ref }}
+
+  strict:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source from GitHub
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Install Python runtime and dependencies
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+
+      - name: Install dependencies
         run: |
-          mkdocs build --clean
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Strict build with warning whitelist
+        run: python scripts/check_mkdocs_strict.py

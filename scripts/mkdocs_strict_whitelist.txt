@@ -1,0 +1,16 @@
+# Regex patterns for known MkDocs WARNING lines allowed in --strict CI.
+# One pattern per line. Empty lines and lines starting with # are ignored.
+
+# External/binary assets not stored in the docs tree
+contains a link.*odis-files/
+contains a link.*\.pdf'
+contains a link.*images/MQB/AID/
+contains a link '\.\./firmwares/
+contains a link '\.\./images/\*\*\*/
+
+# Template/placeholder links in support pages
+contains a link '\.\./images/\*\*\*/imageName\.png'
+
+# Known plugin/theme limitations with current configuration
+^\[mkdocs-print-site\]
+^mkdocs_static_i18n: mkdocs-material language switcher

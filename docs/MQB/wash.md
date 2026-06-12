@@ -84,7 +84,9 @@ Scheinwerferreinigung:
 ```
 
 Аналог:
-```Scheinwerferreinigunglage → неактив```
+```
+Scheinwerferreinigunglage → неактив
+```
   
 Срабатывание после долгого удержания рычага омывания стекла
 ``` yaml title="логин-пароль: 31347"

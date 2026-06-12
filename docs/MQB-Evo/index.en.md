@@ -15,13 +15,14 @@ status: new
 Codings were provided by **n3oka**  
 
 !!! note "Important information"
-    1. These codings were verified only on Golf MK8 
-    2. If coding is marked as "Cannot be successfully coded", it means that there is no public-known successful activation.
+    1. These codings were verified mainly on Golf MK8 
+    2. If an item is marked as impossible to code, no successful application is publicly known.
+    3. Before coding on Evo/MEB see [SFD and SFD2](../sfd.en.md). Travel Assist — [dedicated guide](travelAssist.en.md); EA, TJA, ECU 44 — [additional assistants](driverAssistExtras.en.md).
 
 !!! tip "Offline version"
     [Download offline version :material-download:](https://drive.google.com/file/d/1Ybj7CvYJjE81WpjKkBgFsONvx6q1fgpP/view?fbclid=IwAR0uK9Rusg_bGJ96JcGQRc2-WJEMXpSc92RvgYhZRa6SplEh9w-iSXs1qj4){ .md-button .md-button--primary }
   
-### Автомобили на этой платформе
+### Cars on this platform
 Audi A3 Mk4 (2020–present)  
 Audi Q6 (2022–present)  
 Cupra Formentor (2021–present)  
