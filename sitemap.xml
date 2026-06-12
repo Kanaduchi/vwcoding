@@ -155,6 +155,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://vwcoding.ru/en/MQB/2Q0_assistants/"/>
     </url>
     <url>
+        <loc>https://vwcoding.ru/MQB/2Q0_swap/</loc>
+        <lastmod>2026-06-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://vwcoding.ru/MQB/2Q0_swap/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://vwcoding.ru/en/MQB/2Q0_swap/"/>
+    </url>
+    <url>
         <loc>https://vwcoding.ru/MQB/3Q0_assistants/</loc>
         <lastmod>2026-06-12</lastmod>
         <changefreq>daily</changefreq>
@@ -846,6 +853,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://vwcoding.ru/en/MQB/2Q0_assistants/"/>
         <xhtml:link rel="alternate" hreflang="ru" href="https://vwcoding.ru/MQB/2Q0_assistants/"/>
+    </url>
+    <url>
+        <loc>https://vwcoding.ru/en/MQB/2Q0_swap/</loc>
+        <lastmod>2026-06-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://vwcoding.ru/en/MQB/2Q0_swap/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://vwcoding.ru/MQB/2Q0_swap/"/>
     </url>
     <url>
         <loc>https://vwcoding.ru/en/MQB/3Q0_assistants/</loc>
