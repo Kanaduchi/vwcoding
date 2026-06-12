@@ -3,6 +3,7 @@ comments: false
 template: ./main.en.html
 hide:
   - toc
+status: new
 ---
 
 <style>
@@ -49,5 +50,12 @@ hide:
 
     ---
     [:octicons-arrow-right-24: Open](./fec)
+
+-   :fontawesome-solid-square-binary:{ .lg .middle } __FPA editor__
+
+    External tool for editing FPA (Driving Profiles) datasets
+
+    ---
+    [:octicons-arrow-right-24: Open](./fpaEditor)
 
 </div>
