@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="ru" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -12,35 +12,35 @@
         <meta name="author" content="VWCODING">
       
       
-        <link rel="canonical" href="https://vwcoding.ru/MQB/2Q0_assistants/">
+        <link rel="canonical" href="https://vwcoding.ru/en/utils/fpaEditor/">
       
       
-        <link rel="prev" href="../3Q0_calibration/">
+        <link rel="prev" href="../datasetEditor/">
       
       
-        <link rel="next" href="../2Q0_swap/">
+        <link rel="next" href="../longCoding/">
       
       
         
-          <link rel="alternate" href="./" hreflang="ru">
+          <link rel="alternate" href="../../../utils/fpaEditor/" hreflang="ru">
         
-          <link rel="alternate" href="../../en/MQB/2Q0_assistants/" hreflang="en">
+          <link rel="alternate" href="./" hreflang="en">
         
       
       
-      <link rel="icon" href="../../assets/images/icon.png">
+      <link rel="icon" href="../../../assets/images/icon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Кодирование 2Q* камеры - Кодирование автомобилей VAG</title>
+        <title>FPA Editor - VAG platforms coding</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -59,9 +59,9 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/custom.css">
+      <link rel="stylesheet" href="../../../assets/custom.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,9 +80,9 @@
   <!-- Open graph meta tags -->
   <meta name="yandex-verification" content="45920cc0a6f67ad2" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Кодирование автомобилей VAG - Кодирование 2Q* камеры" />
+  <meta property="og:title" content="VAG platforms coding - FPA Editor" />
   <meta property="og:description" content="Основные кодировки и адаптации платформ концерна VAG. Прошивки и параметрии. SWaP коды" />
-  <meta property="og:url" content="https://vwcoding.ru/MQB/2Q0_assistants/" />
+  <meta property="og:url" content="https://vwcoding.ru/en/utils/fpaEditor/" />
   <meta property="og:image" content="https://vwcoding.ru//assets/images/logo.png" />
 
   </head>
@@ -104,8 +104,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#2q0-mfk-30" class="md-skip">
-          Перейти к содержанию
+        <a href="#fpa-editor" class="md-skip">
+          Skip to content
         </a>
       
     </div>
@@ -114,7 +114,7 @@
         <aside class="md-banner">
           <div class="md-banner__inner md-grid md-typeset">
             
-              <button class="md-banner__button md-icon" aria-label="Больше не показывать">
+              <button class="md-banner__button md-icon" aria-label="Don't show this again">
                 
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
               </button>
@@ -126,7 +126,7 @@
           <path fill="currentColor" d="M20,4C21.11,4 22,4.89 22,6V18C22,19.11 21.11,20 20,20H4C2.89,20 2,19.11 2,18V6C2,4.89 2.89,4 4,4H20M8.5,15V9H7.25V12.5L4.75,9H3.5V15H4.75V11.5L7.3,15H8.5M13.5,10.26V9H9.5V15H13.5V13.75H11V12.64H13.5V11.38H11V10.26H13.5M20.5,14V9H19.25V13.5H18.13V10H16.88V13.5H15.75V9H14.5V14A1,1 0 0,0 15.5,15H19.5A1,1 0 0,0 20.5,14Z" />
         </svg>
       </span>
-    <strong>Все ваши предложения и новые идеи можно присылать на info@vwcoding.ru</strong>
+    <strong>Fill free to send all your ideas and updates to info@vwcoding.ru</strong>
   </a>
 
           </div>
@@ -141,10 +141,10 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
-    <a href="../.." title="Кодирование автомобилей VAG" class="md-header__button md-logo" aria-label="Кодирование автомобилей VAG" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../" title="VAG platforms coding" class="md-header__button md-logo" aria-label="VAG platforms coding" data-md-component="logo">
       
-  <img src="../../assets/images/logo.png" alt="logo">
+  <img src="../../../assets/images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -155,13 +155,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Кодирование автомобилей VAG
+            VAG platforms coding
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Кодирование 2Q* камеры
+              FPA Editor
             
           </span>
         </div>
@@ -211,20 +211,20 @@
       <div class="md-header__option">
   <div class="md-select">
     
-    <button class="md-header__button md-icon" aria-label="Выберите язык">
+    <button class="md-header__button md-icon" aria-label="Select language">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
     </button>
     <div class="md-select__inner">
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="./" hreflang="ru" class="md-select__link">
+            <a href="../../../utils/fpaEditor/" hreflang="ru" class="md-select__link">
               Русский
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="../../en/MQB/2Q0_assistants/" hreflang="en" class="md-select__link">
+            <a href="./" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -245,21 +245,21 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Поиск">
+      <nav class="md-search__options" aria-label="Search">
         
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Поделиться" aria-label="Поделиться" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
             
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
           </a>
         
-        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -272,7 +272,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Инициализация поиска
+            Initializing search
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -284,7 +284,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/Kanaduchi/vwcoding" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+        <a href="https://github.com/Kanaduchi/vwcoding" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
@@ -305,31 +305,9 @@
         
           
             
-<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../.." class="md-tabs__link">
-          
-  
-  
-    
-  
-  Общая информация
-
-        </a>
-      </li>
-    
-  
-
       
         
   
@@ -341,7 +319,29 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Main information
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../MQB/" class="md-tabs__link">
           
   
   
@@ -477,7 +477,7 @@
   
     
   
-  Поддержка и развитие проекта
+  Support and contributing
 
       </a>
     </li>
@@ -495,6 +495,8 @@
           
             
               
+                
+              
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -504,18 +506,18 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навигация" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Кодирование автомобилей VAG" class="md-nav__button md-logo" aria-label="Кодирование автомобилей VAG" data-md-component="logo">
+    <a href="../../" title="VAG platforms coding" class="md-nav__button md-logo" aria-label="VAG platforms coding" data-md-component="logo">
       
-  <img src="../../assets/images/logo.png" alt="logo">
+  <img src="../../../assets/images/logo.png" alt="logo">
 
     </a>
-    Кодирование автомобилей VAG
+    VAG platforms coding
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/Kanaduchi/vwcoding" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+      <a href="https://github.com/Kanaduchi/vwcoding" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
@@ -532,85 +534,6 @@
       
   
   
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-  
-    <a href="../.." class="md-nav__link">
-      
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Общая информация
-  
-
-    
-  </span>
-  
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
     
   
   
@@ -620,16 +543,6 @@
       
         
           
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
         
       
         
@@ -670,18 +583,62 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
     
   
-    MQB
+    Main information
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Main information
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sfd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SFD and SFD2
   
 
     
@@ -697,26 +654,202 @@
 
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    MQB
+      </a>
+    </li>
   
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+              
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MQB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MQB platform
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--new" title="New codings were added">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MQB-Evo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MQB-Evo platform
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--new" title="New codings were added">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MLB-Evo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MLB/MLB-Evo platform
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MEB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MEB platform
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--new" title="New codings were added">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PQ26/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PQ26 platform
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PQ35/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PQ35 platform
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -729,6 +862,14 @@
   
     
     
+      
+        
+          
+        
+      
+        
+      
+        
       
         
       
@@ -757,65 +898,54 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9" checked>
         
           
-          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
-            
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
     
   
-    Ассистенты водителя
+    Instruments and adapters
   
 
     
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--new" title="New codings were added">
+    </span>
+  
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1_9" id="__nav_1_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_9">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Ассистенты водителя
+    Instruments and adapters
   
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../pACC/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Активация ACC и pACC
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -824,70 +954,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../ACC_coding/" class="md-nav__link">
+      <a href="../datasetEditor/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Кодирование ACC
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../3Q0_assistants/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Кодирование 3Q* камеры
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../3Q0_calibration/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Калибровка 3Q* камеры
+    Dataset editor
   
 
     
@@ -917,24 +991,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Кодирование 2Q* камеры
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -942,116 +998,7 @@
   <span class="md-ellipsis">
     
   
-    Кодирование 2Q* камеры
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Содержание">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Содержание
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#swap" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        SWaP коды расширения функционала
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Прошивка камеры ассистентов
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Активации ассистентов
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Активации ассистентов">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#light-assist" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Активация Light Assist — ассистент дальнего света
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lane-assist" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Активация помощника удержания в полосе (Lane Assist)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../2Q0_swap/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    SWaP 2Q* камеры
+    FPA Editor
   
 
     
@@ -1068,6 +1015,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1080,14 +1028,182 @@
   
   
     <li class="md-nav__item">
-      <a href="../camAssistFirmwares/" class="md-nav__link">
+      <a href="../longCoding/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Прошивки камеры ассистентов
+    Long-coding calculator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FEC generator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xorCalculator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    XOR calculator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tiresCoding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tyres parameters generator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../programs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software and adapters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../odis-e/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ODIS E instruction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../toolBox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Toolbox
   
 
     
@@ -1116,14 +1232,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../active_systems/" class="md-nav__link">
+      <a href="../../history/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Системы активной безопасности
+    History of changes
   
 
     
@@ -1144,14 +1260,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../fpaCoding/" class="md-nav__link">
+      <a href="../../questions/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Настройка профилей движения (FPA)
+    Feedback
   
 
     
@@ -1172,476 +1288,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../drive/" class="md-nav__link">
+      <a href="../../support/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Движение и управление
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../parking/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Парковка и маневрирование
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-  
-    <a href="../esteticLights/" class="md-nav__link">
-      
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Эстетическая подсветка
-  
-
-    
-  </span>
-  
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../wash/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Зеркала и стеклоочистители
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../security/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Отпирание и запирание
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-  
-    <a href="../codingLights/" class="md-nav__link">
-      
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Освещение
-  
-
-    
-  </span>
-  
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../sound/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Звук
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../climate/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Климат
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../AID/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Приборная панель
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-  
-    <a href="../headDevice/" class="md-nav__link">
-      
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Головное устройство
-  
-
-    
-  </span>
-  
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-    
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-  
-    <a href="../tires/" class="md-nav__link">
-      
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Шины
-  
-
-    
-  </span>
-  
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../addons/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Дооснащение
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../eeprom/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Eeprom память
+    Support and contributing
   
 
     
@@ -1657,6 +1311,95 @@
             
           </ul>
         </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../MQB/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MQB
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
       
     </li>
   
@@ -2039,7 +1782,7 @@
   <span class="md-ellipsis">
     
   
-    Поддержка и развитие проекта
+    Support and contributing
   
 
     
@@ -2060,86 +1803,19 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
     
   
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Содержание
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#swap" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        SWaP коды расширения функционала
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Прошивка камеры ассистентов
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Активации ассистентов
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Активации ассистентов">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#light-assist" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Активация Light Assist — ассистент дальнего света
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lane-assist" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Активация помощника удержания в полосе (Lane Assist)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -2152,22 +1828,24 @@
               
                 
 
+  
+
 
 
   
 
 
-  <nav class="md-path" aria-label="Навигация" >
+  <nav class="md-path" aria-label="Navigation" >
     <ol class="md-path__list">
       
         
   
   
     <li class="md-path__item">
-      <a href="../.." class="md-path__link">
+      <a href="../../" class="md-path__link">
         
   <span class="md-ellipsis">
-    Кодирование автомобилей VAG
+    Coding of VW cars
   </span>
 
       </a>
@@ -2182,10 +1860,10 @@
     
     
       <li class="md-path__item">
-        <a href="../" class="md-path__link">
+        <a href="../../" class="md-path__link">
           
   <span class="md-ellipsis">
-    MQB
+    Main information
   </span>
 
         </a>
@@ -2200,10 +1878,10 @@
     
     
       <li class="md-path__item">
-        <a href="../pACC/" class="md-path__link">
+        <a href="../" class="md-path__link">
           
   <span class="md-ellipsis">
-    Ассистенты водителя
+    Instruments and adapters
   </span>
 
         </a>
@@ -2220,10 +1898,12 @@
                 
   
                   
+  
+
 
 
   
-    <a href="https://github.com/Kanaduchi/vwcoding/edit/master/docs/MQB/2Q0_assistants.md" title="Редактировать страницу" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/Kanaduchi/vwcoding/edit/master/docs/utils/fpaEditor.en.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -2232,91 +1912,33 @@
     
       
     
-    <a href="https://github.com/Kanaduchi/vwcoding/raw/master/docs/MQB/2Q0_assistants.md" title="Посмотреть исходный код страницы" class="md-content__button md-icon">
+    <a href="https://github.com/Kanaduchi/vwcoding/raw/master/docs/utils/fpaEditor.en.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
   
 
 
-<h1 id="2q0-mfk-30">Кодирование 2Q0* (MFK 3.0) камеры ассистентов<a class="headerlink" href="#2q0-mfk-30" title="Permanent link">&para;</a></h1>
-<p><strong>Данная инструкция подходит только для камер 2Q0980653</strong>  </p>
-<p>Lane Assist с адаптивным ведением по полосе — адаптивное ведение исключает "пинг-понг" от полосы к полосе.<br />
-Опция отличная, позволяет расслабиться за рулем и не вылавливать центр полосы, по трассе просто незаменима. </p>
-<p>Traffic Jam Assist — Ассистент движения в пробке.<br />
-Это расширение работы Lane Assist для работы с 0 км/ч. В пробке машина подруливает, разгоняется и тормозит сама, без участия водителя. При остановке более 3 секунд для старта нужно нажать RES или нажать педаль газа.<br />
-Для активации требуется параметрия.  </p>
-<p>Emergency Assist — Ассистент экстренной остановки.<br />
-Если водитель не желает или не может принимать участие в управлении автомобилем, то машина начинает его будить сначала звуком, потом резким схватыванием тормозов,<br />
-если и далее человек не принимает управление, то машина сама включает аварийку и останавливается.</p>
-<p>Sign Assist — Ассистент распознавания дорожных знаков. Показывает знаки, которые считывает камера.<br />
-Для активации необходим SWaP код. Пошаговая инструкция: <a href="../2Q0_swap/">SWaP камеры 2Q0</a>.</p>
-<h2 id="swap">SWaP коды расширения функционала<a class="headerlink" href="#swap" title="Permanent link">&para;</a></h2>
-<p>100E1000 — Улучшенное ведение по полосе (aLDW)<br />
-100E1100<br />
-100E1200<br />
-100E1300<br />
-100E1400<br />
-100E1500<br />
-100E1600 — Распознавание предметов на пути<br />
-100E1700 — Распознавание пешеходов (FCPW)<br />
-100E0F00 — Распознавание знаков (TSR/VZE)  </p>
-<h2 id="_1">Прошивка камеры ассистентов<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>Расположены тут: <a href="../camAssistFirmwares/">Прошивки и параметрия</a></p>
-<h2 id="_2">Активации ассистентов<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h3 id="light-assist">Активация Light Assist — ассистент дальнего света<a class="headerlink" href="#light-assist" title="Permanent link">&para;</a></h3>
-<p><div class="highlight"><span class="filename">логин-пароль: 31347</span><pre><span></span><code><span class="nt">Блок 09 (бортовая сеть) → Адаптация</span><span class="p">:</span>
-<span class="nt">Fernlicht_assistent</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Erweiterte_Fernlichtsteuerung</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;AFS:</span><span class="nv"> </span><span class="s">FLA:</span><span class="nv"> </span><span class="s">BCM-Fernlicht&quot;</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">или &quot;AFS</span><span class="nt">: FLA</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Fernlicht ueber AFS&quot;</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Menuesteuerung Fernlichtassistent Werkseinstellung</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">available</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Menuesteuerung Fernlichtassistent</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">available</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Fernlichtassistent Reset</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Деактивировать</span>
-<span class="l l-Scalar l-Scalar-Plain">→ Применить</span><span class="w"> </span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="nt">Блок A5 (камера ассистентов) → Кодирование</span><span class="p">:</span><span class="w">  </span>
-<span class="nt">Байт 15 – Бит 5-7</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(20) AFS_coding_Light_Assist,High_Beam_Assist</span>
-<span class="l l-Scalar l-Scalar-Plain">→ Применить</span><span class="w"> </span>
-</code></pre></div></p>
-<h3 id="lane-assist">Активация помощника удержания в полосе (Lane Assist)<a class="headerlink" href="#lane-assist" title="Permanent link">&para;</a></h3>
-<p>Включаем отображение Lane Assist на приборной панели
-<div class="highlight"><pre><span></span><code><span class="nt">Блок 17 (комбинация приборов/ActiveInfoDisplay) → Кодирование</span><span class="p">:</span>
-<span class="nt">Байт 04 – Бит 6 (Lane_assist)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Активировать</span>
-<span class="nt">Байт 11 – Бит 1 (Lane_assist_BAP)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Активировать</span>
-</code></pre></div></p>
-<p>HCA – Указание блоку рулевого управления о наличии Lane Assist
-<div class="highlight"><span class="filename">логин-пароль: 19249</span><pre><span></span><code><span class="nt">Блок 44 (усилитель рулевого) → Кодирование</span><span class="p">:</span>
-<span class="nt">Байт 03 – Бит 1 (Heading_control_assist)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Активировать</span>
-<span class="l l-Scalar l-Scalar-Plain">→ Применить</span><span class="w"> </span>
-</code></pre></div></p>
-<p>Включаем в меню новые функции
-<div class="highlight"><pre><span></span><code><span class="nt">Блок 5F (мультимедия) → Адаптация</span><span class="p">:</span>
-<span class="nt">Car_Function_List_BAP_Gen2</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">LDW_HCA_0x19</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Активировать</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">LDW_HCA_0x19_msg_bus</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CAN_Extended</span>
-<span class="nt">Car_Function_Adaptations_Gen2</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">menu_display_Lane_Departure_Warning</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Активировать</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">menu_display_Lane_Departure_Warning_over_threshold_high</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Активировать</span>
-<span class="l l-Scalar l-Scalar-Plain">→ Применить</span><span class="w"> </span>
-</code></pre></div></p>
-<p>Указание блоку парковочного ассистента о наличии Lane Assist (У кого PLA3.0 12 Датчиков)</p>
-<div class="admonition note">
-<p>PLA3.0 может стоять в системе как 10 блок, а не 76</p>
+<h1 id="fpa-editor">FPA Editor<a class="headerlink" href="#fpa-editor" title="Permanent link">&para;</a></h1>
+<p>Editor for driving profile (FPA) datasets on Gateway <strong>3Q0907530Q</strong> and newer. Supports raw binary files (4352 bytes) and XML in VCP or ODIS format.</p>
+<p><a href="https://mqbtools.nl/fpa/" rel="noopener" target="_blank">Open FPA Editor on mqbtools.nl</a></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The author recommends a desktop or tablet. On a phone, it is easier to <a href="https://mqbtools.nl/fpa/" target="_blank">open the tool in a new tab</a>.</p>
 </div>
-<div class="highlight"><pre><span></span><code><span class="nt">Блок 76 → Кодирование</span><span class="p">:</span>
-<span class="l l-Scalar l-Scalar-Plain">Ассистент движения по полосе, связ. с усилителем рул. управления</span>
-<span class="nt">Байт 3 – Бит 5 (HeadingControl Unterstutzung Auswahl)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Активировать (Spurhalteassistent aktiviert)</span>
-<span class="l l-Scalar l-Scalar-Plain">→ Применить</span><span class="w"> </span>
-</code></pre></div>
-<p>Конфигурация камеры ассистентов
-<div class="highlight"><pre><span></span><code><span class="nt">Блок A5 (камера ассистентов) → Кодирование</span><span class="p">:</span><span class="w">  </span>
-<span class="nt">Байт 08 – Бит 5-7 (Point_of_intervention)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A0 late, setting over menu</span>
-<span class="nt">Байт 09 – Бит 0-1 (Configuration_for_lane_departure_warning_Kl15)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">03 Last_setting</span>
-<span class="nt">Байт 09 – Бит 7 (HC)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(1) coded</span>
-<span class="nt">Байт 09 – Бит 2-3 (Lane_assist_system_mode)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0C Selection_over_menu</span>
-<span class="nt">Байт 09 – Бит 4-5 (HC advanced takeover request)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(1) coded</span>
-<span class="nt">Байт 17 – Бит 0 (HC messages)</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(1) coded</span>
-<span class="l l-Scalar l-Scalar-Plain">→ Применить</span><span class="w"> </span>
-</code></pre></div></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Third-party service, not affiliated with vwcoding.ru. For flashing FPA datasets, see <a href="../../MQB/fpaCoding/">FPA profile configuration</a>.</p>
+</div>
+<section class="tx-container fpa-editor-embed">
+  <iframe
+    src="https://mqbtools.nl/fpa/"
+    title="FPA Editor"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    style="width:100%;height:85vh;min-height:600px;border:1px solid var(--md-default-fg-color--lighter);border-radius:6px;"
+  ></iframe>
+</section>
 
 
 
@@ -2336,20 +1958,20 @@
     
       
   <span class="md-source-file__fact">
-    <span class="md-icon" title="Последнее обновление">
+    <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="12 июня 2026 г. 15:25:37 UTC">12 июня 2026 г.</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 12, 2026 19:13:53 UTC">June 12, 2026</span>
   </span>
 
     
     
       
   <span class="md-source-file__fact">
-    <span class="md-icon" title="Дата создания">
+    <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="11 декабря 2023 г. 12:16:45 UTC">11 декабря 2023 г.</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 12, 2026 19:13:53 UTC">June 12, 2026</span>
   </span>
 
     
@@ -2359,12 +1981,14 @@
 
 
 
+  
+
 
 <!-- Comments -->
 
 
   
-    <h2 id="__comments">Комментарии</h2>
+    <h2 id="__comments">Comments</h2>
 
     
 
@@ -2379,7 +2003,7 @@
                 data-reactions-enabled="1"
                 data-emit-metadata="0"
                 data-theme="light"
-                data-lang="ru"
+                data-lang="en"
                 crossorigin="anonymous"
                 async>
       </script>
@@ -2406,7 +2030,7 @@
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  К началу
+  Back to top
 </button>
         
       </main>
@@ -2415,33 +2039,35 @@
   
     
       
-      <nav class="md-footer__inner md-grid" aria-label="Нижний колонтитул" >
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../3Q0_calibration/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Калибровка 3Q* камеры">
+          <a href="../datasetEditor/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Dataset editor">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
-                Назад
+                Previous
               </span>
               <div class="md-ellipsis">
-                Калибровка 3Q* камеры
+                Dataset editor
               </div>
             </div>
           </a>
         
         
           
-          <a href="../2Q0_swap/" class="md-footer__link md-footer__link--next" aria-label="Вперед: SWaP 2Q* камеры">
+          <a href="../longCoding/" class="md-footer__link md-footer__link--next" aria-label="Next: Long-coding calculator">
             <div class="md-footer__title">
               <span class="md-footer__direction">
-                Вперед
+                Next
               </span>
               <div class="md-ellipsis">
-                SWaP 2Q* камеры
+                Long-coding calculator
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2484,10 +2110,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.code.select", "content.tabs.link", "content.tooltips", "navigation.expand", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.path", "navigation.prune", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "announce.dismiss", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.code.select", "content.tabs.link", "content.tooltips", "navigation.expand", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.path", "navigation.prune", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "announce.dismiss", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

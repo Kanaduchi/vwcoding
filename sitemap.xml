@@ -659,6 +659,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://vwcoding.ru/en/utils/fec/"/>
     </url>
     <url>
+        <loc>https://vwcoding.ru/utils/fpaEditor/</loc>
+        <lastmod>2026-06-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://vwcoding.ru/utils/fpaEditor/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://vwcoding.ru/en/utils/fpaEditor/"/>
+    </url>
+    <url>
         <loc>https://vwcoding.ru/utils/longCoding/</loc>
         <lastmod>2026-06-12</lastmod>
         <changefreq>daily</changefreq>
@@ -1357,6 +1364,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://vwcoding.ru/en/utils/fec/"/>
         <xhtml:link rel="alternate" hreflang="ru" href="https://vwcoding.ru/utils/fec/"/>
+    </url>
+    <url>
+        <loc>https://vwcoding.ru/en/utils/fpaEditor/</loc>
+        <lastmod>2026-06-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://vwcoding.ru/en/utils/fpaEditor/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://vwcoding.ru/utils/fpaEditor/"/>
     </url>
     <url>
         <loc>https://vwcoding.ru/en/utils/longCoding/</loc>
