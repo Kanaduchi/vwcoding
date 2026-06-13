@@ -47,9 +47,3 @@ SEAT/Cupra Born
 - [Зарядка и HV-батарея](charging.md)
 - [BCM — свет и комфорт](bcm.md)
 - [Головное устройство](headUnit.md)
-
-## См. также
-
-- [Ассистенты водителя](assistants.md)
-- [Головное устройство](headUnit.md)
-- [MQB-Evo](../MQB-Evo/index.md) — близкая архитектура Infotainment и SFD

@@ -47,9 +47,3 @@ SEAT/Cupra Born
 - [Charging and HV battery](charging.en.md)
 - [BCM — lights and comfort](bcm.en.md)
 - [Head unit](headUnit.en.md)
-
-## See also
-
-- [Driver assistance](assistants.en.md)
-- [Head unit](headUnit.en.md)
-- [MQB-Evo](../MQB-Evo/index.en.md) — similar infotainment and SFD architecture

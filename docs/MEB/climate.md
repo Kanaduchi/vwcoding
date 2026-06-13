@@ -49,9 +49,3 @@ Time for seat heating power reduction Level 2 to level 1:
 Штатный **departure timer** и прогрев через **We Connect / MyŠkoda** настраиваются в меню авто и приложении. Отдельная адаптация в 08 для этого обычно не требуется.
 
 Для **прогрева HV-батареи** перед DC-зарядкой см. [Зарядка и HV](charging.md) — это другой контур (блок **8C**), не климат 08.
-
-## См. также
-
-- [MQB-Evo / Климат](../MQB-Evo/climate.md) — похожие каналы 08
-- [Зарядка и HV](charging.md)
-- [BCM](bcm.md)

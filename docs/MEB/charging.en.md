@@ -50,9 +50,3 @@ Factory **navigation preconditioning** is safer and needs no development mode.
 - Bidirectional charging (V2H) — PR, SW, and market specific
 
 If charging power drops, check **C5/8C DTCs**, **12V** supply (weak AUX → wakeups), and **SW updates** via ODIS first.
-
-## See also
-
-- [SFD and SFD2](../sfd.en.md)
-- [Climate](climate.en.md)
-- [Head unit](headUnit.en.md) — departure timer in ICAS

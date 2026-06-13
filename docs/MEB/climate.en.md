@@ -49,9 +49,3 @@ Time for seat heating power reduction Level 2 to level 1:
 Factory **departure timer** and heating via **We Connect / MyŠkoda** are configured in the car menu and app. Block 08 usually does not need a separate adaptation for this.
 
 For **HV battery preconditioning** before DC charging see [Charging and HV](charging.en.md) — different path (ECU **8C**), not climate 08.
-
-## See also
-
-- [MQB-Evo / Climate](../MQB-Evo/climate.en.md) — similar ECU 08 channels
-- [Charging and HV](charging.en.md)
-- [BCM](bcm.en.md)

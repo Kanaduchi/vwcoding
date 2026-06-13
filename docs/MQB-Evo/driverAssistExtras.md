@@ -120,11 +120,3 @@ Login **19249** — типичный для блока 44; уточняйте в
 2. Каналы `Travel_Assist`, `KLR_installed` в 13 — см. [Travel Assist](travelAssist.md).  
 3. Наличие **ёмкостного руля (KLR)** для полного TA (не workaround).  
 4. На **2024+** — **SFD2** для любой записи.
-
-## См. также
-
-- [Travel Assist](travelAssist.md)
-- [Кодирование ACC](acc.md)
-- [Камера A5](headCameraUnit.md)
-- [Прошивки камеры Evo](../MQB/camAssistFirmwares.md#mqb-evo-kamera-a5-5wa-980-653)
-- [SFD](../sfd.md)

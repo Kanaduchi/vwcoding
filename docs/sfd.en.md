@@ -109,10 +109,3 @@ See [MQB / General information](MQB/index.md).
 2. Check the **SFD: yes/no** label on MQB-Evo pages.
 3. For newer cars, allow time for an **online ODIS session**.
 4. Do not rely on old VCDS-only guides for Evo and MEB without checking SFD requirements.
-
-## See also
-
-- [Software and adapters](utils/programs.md)
-- [ODIS E instruction](utils/odis-e.md)
-- [MQB-Evo](MQB-Evo/index.md)
-- [MEB](MEB/index.md)

@@ -46,8 +46,3 @@ Comfort_close:
 ### Эстетическая подсветка (если установлена)
 
 Кодирование зон ambient на MEB близко к [MQB-Evo / aestheticLights](../MQB-Evo/aestheticLights.md). Сверяйте PR ambient package.
-
-## См. также
-
-- [MQB-Evo / Освещение](../MQB-Evo/lights.md)
-- [MQB / Отпирание и запирание](../MQB/security.md) — классический MQB, часть логики схожа
