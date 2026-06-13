@@ -120,11 +120,3 @@ From **~2024 MY** VW extended Travel Assist:
 2. Channels `Travel_Assist`, `KLR_installed` in 13 — see [Travel Assist](travelAssist.en.md).  
 3. **Capacitive steering wheel (KLR)** for full TA (not the workaround).  
 4. On **2024+** — **SFD2** for any write.
-
-## See also
-
-- [Travel Assist](travelAssist.en.md)
-- [ACC coding](acc.en.md)
-- [A5 camera](headCameraUnit.en.md)
-- [Evo camera firmware](../MQB/camAssistFirmwares.en.md#mqb-evo-camera-a5-5wa-980-653)
-- [SFD](../sfd.en.md)

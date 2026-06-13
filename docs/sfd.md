@@ -107,10 +107,3 @@ VW Golf 8 (с 04.2024), Polo AE1, T-Roc, Tiguan Allspace, Touran, Taigo, ID.3/ID
 2. Проверяйте метку **SFD: yes/no** на страницах MQB-Evo.
 3. Для новых машин закладывайте время на **online-сессию ODIS**.
 4. Не полагайтесь на старые инструкции VCDS-only для Evo и MEB без проверки SFD.
-
-## См. также
-
-- [Список программ и адаптеров](utils/programs.md)
-- [Инструкция ODIS E](utils/odis-e.md)
-- [MQB-Evo](MQB-Evo/index.md)
-- [MEB](MEB/index.md)

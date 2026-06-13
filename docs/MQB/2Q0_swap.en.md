@@ -207,12 +207,3 @@ Same sequence for radar **13** — [pACC, step 8](pACC.en.md#firmware-and-swap-c
 | **MQB-Evo 5WA 980 653** | Different camera/SW — **not covered here**                                                          |
 | **SFD / SFD2**          | Usually not required for classic MQB **2Q0**; verify on newer cars                                  |
 | **Dataset**             | Use verified parametrization only; broken XML from editors often kills VZE                          |
-
----
-
-## See also
-
-- [2Q0 camera coding](2Q0_assistants.en.md) — FEC table and assistant coding  
-- [ACC / pACC radar SWaP](pACC.en.md) — SWaP theory and `afcg.exe`  
-- [A5 firmwares and datasets](camAssistFirmwares.en.md)  
-- [ODIS E guide](../utils/odis-e.en.md) — menus 005, 007, 042  

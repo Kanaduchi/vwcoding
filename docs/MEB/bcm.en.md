@@ -46,8 +46,3 @@ Comfort_close:
 ### Ambient lighting (if fitted)
 
 Ambient zone coding on MEB is similar to [MQB-Evo / aestheticLights](../MQB-Evo/aestheticLights.en.md). Verify ambient PR codes.
-
-## See also
-
-- [MQB-Evo / Lights](../MQB-Evo/lights.en.md)
-- [MQB / Security](../MQB/security.en.md) — classic MQB; similar logic in places

@@ -125,11 +125,3 @@ Verify compatibility by VIN and PR codes — market and factory equipment vary.
 !!! tip ""
     On some cars BCM uses **Flashing function — Travel Assist → Active** instead of `Travel_Assist_Blinken`.  
     The feature usually works **from ~90 km/h** on motorways. PLA **12K** may need separate coding of ECU **76** — check SW and PR codes.
-
-## See also
-
-- [Additional assistants (EA, TJA, ECU 44)](driverAssistExtras.en.md)
-- [ACC / pACC MQB](../MQB/pACC.en.md)
-- [ACC coding MQB-Evo](acc.en.md)
-- [Assistance camera MQB-Evo](headCameraUnit.en.md)
-- [SFD and SFD2](../sfd.en.md)
